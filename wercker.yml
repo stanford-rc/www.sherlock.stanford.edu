@@ -1,0 +1,21 @@
+box: python:2
+
+build:
+  steps:
+    - pip-install
+    - script:
+        name: mkdocs build
+        code: |
+          mkdocs build --clean
+
+deploy:
+  steps:
+    - pip-install
+    - script:
+        name: mkdocs deploy to gh-pages
+        code: |
+          git config user.name  "Kilian Cavalotti"
+          git config user.email "kilian@stanford.edu"
+          git remote add gh-token "https://${GH_TOKEN}@github.com/stanford-rc/sherlock.git"
+          git fetch gh-token && git fetch gh-token gh-pages:gh-pages
+          mkdocs gh-deploy -v --clean --remote-name gh-token

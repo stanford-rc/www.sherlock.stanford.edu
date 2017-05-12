@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sherlock</title>
+
+    <link rel="icon" href="img/logo_small.png" type="image/x-icon">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" 
+          integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link href="css/shweb.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="https://www.stanford.edu/su-identity/css/su-identity.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if IE 8]>
+      <link rel="stylesheet" type="text/css" href="https://www.stanford.edu/su-identity/css/ie/ie8.css" />
+    <![endif]-->
+    <!--[if IE 7]>
+      <link rel="stylesheet" type="text/css" href="https://www.stanford.edu/su-identity/css/ie/ie7.css" />
+    <![endif]-->
+
+    <!-- HeadwayApp widget (Changelog) - http://headwayapp.co -->
+	<script>
+	  var HW_config = {
+		selector: ".changelog", // CSS selector where to inject the badge
+		account: "JrZ9XJ" 		// your account ID
+	  };
+	</script>
+	<script async src="//cdn.headwayapp.co/widget.js"></script>
+
+	<!-- UserVoice widget -->
+	<script>
+	  // Include the UserVoice JavaScript SDK (only needed once on a page)
+	  UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/4a4IvDVZKokz6bHpdbN6Q.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+	  UserVoice.push(['set', {
+		accent_color: '#8C1515',
+		ticket_custom_fields: {
+		  'System': 'Sherlock'
+		},
+		strings: {
+		  contact_message_placeholder: 'How could we help you?'
+		}
+	  }]);
+	  var mesg_tmpl = 'I\'d like to request an account on Sherlock. My name is [insert name here] and I work in the [insert group name here] lab. I understand that my PI\'s approval will be required.'
+	  for (i=1; i<=3; i++) {
+		  UserVoice.push(['addTrigger', '#account_request'+i, {
+			position: 'top',
+			width: '300px',
+			height: '350px',
+			screenshot_enabled: false,
+			ticket_custom_fields: {
+			  'System': 'Sherlock'
+			},
+			strings: {
+			  contact_title: 'Sherlock account request',
+			  contact_message_placeholder: mesg_tmpl
+			}
+		  }]);
+	  }
+	</script>
+
+</head>
+
+<body id="page-top" class="index">
+
+ <div id="su-wrap"> <!-- #su-wrap start -->
+   <div id="su-content"> <!-- #su-content start -->
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+		<img src="img/logo_small.png" height="30" alt="">
+		Sherlock</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#info">Info</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll changelog" href="http://sherlock-news.stanford.edu">News</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/docs">Docs</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="" data-uv-trigger>Support</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="http://srcc.stanford.edu">SRCC</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <img height="180" src="img/logo.png" alt="">
+		<div class="intro-heading">Sherlock</div>
+                <div class="intro-subtitle">The HPC cluster for all your computing needs at Stanford</div>
+                <div class="intro-content">Need to access computing resources to support your sponsored or departmental research? You may want to try out the Stanford Sherlock cluster! Purchased and supported with seed funding from the Provost, Sherlock is a shared computing cluster available for use by all Stanford faculty and their research teams.</div>
+
+                <a href="#services" class="page-scroll btn btn-xl">Really? Tell me more</a>
+                <a id="account_request1" href="" class="page-scroll btn btn-xl">Request an account</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Services</h2>
+                    <h3 class="section-subheading text-muted">A one-stop shop for your scientific computing needs</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-server fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Compute</h4>
+                    <p class="text-muted">All your computing needs in a single place. Compute nodes, GPU accelerators, large memory nodes, blazing fast interconnect, parallel filesystem and more</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-search fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Explore</h4>
+                    <p class="text-muted">Sherlock provides all the software tools and storage resources you'll need to explore and analyze your research data</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-flask fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Discover</h4>
+                    <p class="text-muted">With a whole range of computational tools at your fingertips, scientific breakthroughs will just be a step away</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="info" class="bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">In a nutshell</h2>
+                    <h3 class="section-subheading text-muted">All about Sherlock</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 id="why-use-sherlock" class="airy">Why use Sherlock?</h3>
+                        <p class="text-muted">Using Sherlock for your work provides many advantages over your own individual solution: hosted in an on-premises, state-of-the-art datacenter, the Sherlock cluster is powered and cooled by installations that are optimized for scientific computing. On Sherlock, simulations and workloads benefit from performance levels that only large scale HPC systems can offer: high-performance I/O infrastructure, petabytes of storage, large variety of hardware configurations, GPU accelerators, centralized system administration and management provided by the <a href="srcc.stanford.edu">Stanford Research Computing Center</a> (SRCC).</p>
+                        <p class="text-muted">Such features are not easily accessible at the departmental level, and oftem require significant initial investments and recurring costs. Joining Sherlock allows researchers and faculty members to avoid those costs and benefit from economies of scale, as well as to be able to access larger, professionally managed resources that what would not be available on an individual basis.</p>
+
+                    <h3 id="cost" class="airy">How much does it cost?</h3>
+                        <p class="text-muted">Sherlock is free to use for anyone doing sponsored research at Stanford. Any faculty member can request access for research purposes, and get an account with a base storage allocation and unlimited compute time on the global pool of resources.</p>
+                        <p class="text-muted">Stanford Research Computing provides faculty with the opportunity to purchase from recommended nodes and standard storage building blocks, for the use of their research teams. Using a traditional compute cluster condominium model, participating faculty and their research teams have priority use of the resources they purchase; when those resources are not in use, other "owners" can use them. When the purchasing owner wants to use his/her resources, other jobs will be killed. Participating owner PIs also have shared access to the original base Sherlock nodes, along with everyone else.</p>
+
+                    <h3 id="size" class="airy">How big is it?</h3>
+                        <p class="text-muted">There are 127 shared compute nodes available to all researchers, and more than 600 additional nodes available to Sherlock <i>owners</i>, faculty who have augmented the cluster with their own purchases.</p>
+                        <p class="text-muted">Sherlock currently features close to 750 compute nodes, more than 12000 CPU cores, 65 TB of RAM, and 360 GPUs, for a total of 532 TFlops. That would put it in the Top500 list of the 500 most powerful computer systems in the world.</p>
+
+                    <h3 id="start" class="airy">Ok, how do I start?</h3>
+                        <p class="text-muted">You can <a id="account_request2" href="">request an account</a> right now, and take a look at the <a href="docs/">documentation</a>.</p>
+    	      </div>
+	    </div>
+	</div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About</h2>
+                    <h3 class="section-subheading text-muted">A little bit about Sherlock's history</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/SRCF.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2012-2014</h4>
+                                    <h4 class="subheading">Research Computing early days</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">With very limited physical space for server hosting, no shared campus HPC resources, and only 3 staff members, Research Computing took off. Construction of our dedicated research datacenter started in July.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/sherlock.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>January 2014</h4>
+                                    <h4 class="subheading">Sherlock is born</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">With an initial seed of 120 nodes funded by the University Provost, Sherlock opened for production and started running its first jobs. More than 11 million jobs have been executed since then!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/expansion.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>December 2014</h4>
+                                    <h4 class="subheading">First major expansion</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">During the first year, more than 200 nodes have been added to Sherlock, funded by several PIs from many different Schools and Departments</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/sherlock2.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>December 2016</h4>
+                                    <h4 class="subheading">Sherlock 2.0</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Sherlock reached 850 compute nodes, which maxed out its initial Infiniband fabriccapacity. As demand for more compute power continues increasing, a new fabric has been started to continue growing. A new Sherlock is coming!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image" id="account_request3" style="cursor:pointer">
+                                <h4>Come
+                                    <br>join us
+                                    <br>today!</h4>
+				
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" 
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" 
+            integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/shweb.min.js"></script>
+
+
+  </div> <!-- #su-content end -->
+ </div> <!-- #su-wrap end -->
+
+ <!-- Global footer snippet start -->
+ <div id="global-footer">
+   <div class="container">
+     <div class="row">
+       <div id="bottom-logo" class="span2">
+         <a href="http://www.stanford.edu">
+           <img src="https://www.stanford.edu/su-identity/images/footer-stanford-logo@2x.png" alt="Stanford University" width="105" height="49"/>
+         </a>
+       </div>
+       <!-- #bottom-logo end -->
+       <div id="bottom-text" class="span10">
+         <ul>
+           <li class="home"><a href="http://www.stanford.edu">SU Home</a></li>
+           <li class="maps alt"><a href="http://visit.stanford.edu/plan/maps.html">Maps &amp; Directions</a></li>
+           <li class="search-stanford"><a href="http://www.stanford.edu/search/">Search Stanford</a></li>
+           <li class="terms alt"><a href="http://www.stanford.edu/site/terms.html">Terms of Use</a></li>
+           <li class="emergency-info"><a href="http://emergency.stanford.edu">Emergency Info</a></li>
+         </ul>
+       </div> <!-- .bottom-text end -->
+       <div class="clear"></div>
+       <p class="copyright vcard">&copy; <span class="fn org">Stanford University</span>, <span class="adr"> <span class="locality">Stanford</span>, <span class="region">California</span> <span class="postal-code">94305</span></span>.&nbsp;&nbsp;
+       <span id="copyright-complaint"><a href="https://uit.stanford.edu/security/copyright-infringement" class="copyright-complaint" >Copyright Complaints</a></span>
+       </p>
+     </div> <!-- .row end --> 
+   </div> <!-- .container end --> 
+ </div> <!-- global-footer end -->
+ <!-- Global footer snippet end -->
+
+</body>
+
+</html>
