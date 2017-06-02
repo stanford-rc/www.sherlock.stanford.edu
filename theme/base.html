@@ -23,7 +23,7 @@
       {% else %}
         <link rel="shortcut icon" href="{{ base_url }}/assets/images/favicon.png">
       {% endif %}
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-1.6.4">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-1.7.1">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta.title %}
@@ -38,9 +38,9 @@
       <script src="{{ base_url }}/assets/javascripts/modernizr-1df76c4e58.js"></script>
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-e2807e330f.css">
+      <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-f98ca285f9.css">
       {% if config.extra.palette %}
-        <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-94f29f4f0d.palette.css">
+        <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-507c8ee6cc.palette.css">
       {% endif %}
     {% endblock %}
     {% block fonts %}
@@ -48,7 +48,7 @@
         {% set text = config.extra.get("font", {}).text | default("Roboto") %}
         {% set code = config.extra.get("font", {}).code
                     | default("Roboto Mono") %}
-        {% set font = text + ':300,400,400i,700|' + code | replace(' ', '+') %}
+        {% set font = text + ":300,400,400i,700|" + code | replace(" ", "+") %}
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ font }}">
         <style>body,input{font-family:"{{ text }}","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"{{ code }}","Courier New",Courier,monospace}</style>
       {% endif %}
@@ -124,7 +124,7 @@
                 {{ page.content }}
                 {% block source %}
                   {% if page.meta.source %}
-                    <h2 id="__source">{{ lang.t('meta.source') }}</h2>
+                    <h2 id="__source">{{ lang.t("meta.source") }}</h2>
                     {% set path = (page.meta.path | default([""]) | first) %}
                     {% for file in page.meta.source %}
                       <a href="{{ [config.repo_url, path, file] | join('/') }}" title="{{ file }}" class="md-source-file">
@@ -136,7 +136,7 @@
               {% endblock %}
               {% block disqus %}
                 {% if config.extra.disqus and not page.is_homepage %}
-                  <h2 id="__comments">{{ lang.t('meta.comments') }}</h2>
+                  <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
                   {% include "partials/disqus.html" %}
                 {% endif %}
               {% endblock %}
@@ -149,7 +149,20 @@
       {% endblock %}
     </div>
     {% block scripts %}
-      <script src="{{ base_url }}/assets/javascripts/application-06a3e72efd.js"></script>
+      <script src="{{ base_url }}/assets/javascripts/application-e3caa82af6.js"></script>
+      {% set languages = lang.t("search.languages").split(",") %}
+      {% if languages | length and languages[0] != "" %}
+        {% set path = base_url + "/assets/javascripts/lunr" %}
+        <script src="{{ path }}/lunr.stemmer.support.js"></script>
+        {% for language in languages | map("trim") %}
+          {% if language != "en" %}
+            <script src="{{ path }}/lunr.{{ language }}.js"></script>
+          {% endif %}
+        {% endfor %}
+        {% if languages | length > 1 %}
+          <script src="{{ path }}/lunr.multi.js"></script>
+        {% endif %}
+      {% endif %}
       <script>app.initialize({url:{base:"{{ base_url }}"}})</script>
       {% for path in extra_javascript %}
         <script src="{{ path }}"></script>
