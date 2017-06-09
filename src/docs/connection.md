@@ -1,2 +1,0 @@
-
-## Infos about connection
