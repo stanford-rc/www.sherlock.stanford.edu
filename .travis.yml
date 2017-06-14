@@ -1,0 +1,69 @@
+# ----------------------------------------------------------------------------
+#
+# config
+#
+# ----------------------------------------------------------------------------
+
+sudo: false
+language: python
+
+# we only care about the web_docs branch
+branches:
+    only:
+        - web_docs
+
+# notify srcc#github
+notifications:
+    slack:
+        secure: "5LH3JMgre8bvoyVXvZs/TF5oWUiAAUTiRrLJ9g+2D63QlXtDt82PCf/wnzx16xiIaNk26IzmEs5McvDSoAH2eaHxOBa20zlHqxnZiy0nqQTP1QT6yxVMBXt95FaEbvptqmsD60PovacY563o5Cmp0JfhdHuJAy/kE+oNkgzYbiuliLTx1qJAidIvKaEaglVMQG9UzKk+5mtW33K/a2EKMI8I45whmloEnBjHjkhAqBA93nn6l6f+HAfLSsVGjxL4p95Nvi/Te9q/4VTmPleZLQoXDTKF9/IaASu1wBEZPkF1R5/sdtYxsp9UZv/G63aPwBQ7ZvpzuRDU/Hs40R3LFUW2mbYgTPloUpOygnVRxFIpiVYFDQs/HvcILN2d21+9yCn0Kb2Xbqk1l43hh9I0VkSSRnJx6whPZ3yBepbJusQq0nQGe+VET8sL38zsCBc2d3DnEK1vYgwohe3tMEpu/BXFcL7+rHHQAj/+XOwsDZdRO+uGfL+Eb52286tsSxlA3BcM7TX2BGwdSAQOX+fJQ9QHRcN0oB3KUcXCydgEJwi7uVuU6LTcvdvb1oa7jdFqvNkdqOtHtom03gdsNxhK7d0rD+pKS0y0htR/mfcbMlreFfQ35fzX//C+QQI6lYioc/uPVutjJ5QZKwy4Bsf6yL90jeSNpzgb/NcTx/Y0BV4="
+
+
+# ----------------------------------------------------------------------------
+#
+# build
+#
+# ----------------------------------------------------------------------------
+
+# limit clone depth to 5, to speed up build
+git:
+    depth: 5
+
+before_install:
+    - |
+      # check that we actually need to build anything
+      if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+          TRAVIS_COMMIT_RANGE="FETCH_HEAD...$TRAVIS_BRANCH"
+      fi
+      git diff --name-only $TRAVIS_COMMIT_RANGE | grep -qvE '(^(\.git|site|README.md))/' || {
+          echo "Only non-source files were updated, no need to trigger a build."
+          exit
+      }
+
+# install dependencies
+install:
+    - pip install mkdocs
+
+# build
+script:
+    - mkdocs build --verbose --clean --strict
+
+# ----------------------------------------------------------------------------
+#
+# deployment
+#
+# ----------------------------------------------------------------------------
+
+# deploy
+#   fetch web_docs and copy contents of material/ there, then commit and push
+
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: $DEPLOY_KEY # Set in travis-ci.com dashboard
+    local_dir: site
+    target_branch: gh-pages   # that's the default, but just to make sure
+    #fqdn: www.sherlock.stanford.edu
+    fqdn: 117f8628f187c24bbe15febead3046fa.sherlock.stanford.edu # temporary stealthy URL
+    project_name: "Sherlock documentation"
+    on:
+        branch: web_docs
