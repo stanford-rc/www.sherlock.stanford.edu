@@ -14,7 +14,7 @@ programs. Modern processors typically have multiple cores.
 ##### Socket
 
 : A socket is the connector that houses the microprocessor. By extension, it
-represents the physical packag of a processor, that typically contains multiple
+represents the physical package of a processor, that typically contains multiple
 cores.
 
 ##### Node
@@ -58,7 +58,7 @@ double-precision: 64 bits).
 ##### GPU
 
 : A Graphical Processing Unit (GPU) is a specialized device initially designed
-to generate graphical output.  On modern conputing architecture, they are used
+to generate graphical output.  On modern computing architecture, they are used
 to accelerate certain types of computation, which they are much faster than
 CPUs at. GPUs have their own memory, and are attached to CPUs, within a node.
 Each compute node can host one or more GPUs.
@@ -134,7 +134,7 @@ to same owner,  could form a partition.
 ##### QOS
 
 : A Quality Of Service (QOS) is the set of rules and limitations that apply to
-a catgeories of job. The combination of a partition (set of machines where a
+a categories of job. The combination of a partition (set of machines where a
 job can run) and QOS (set of rules that applies to that job) makes what is
 often referred to as a scheduler *queue*.
 
