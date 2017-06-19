@@ -17,6 +17,10 @@
   width: 12px;
   border-radius: 12px;
 }
+.status-widget__issue__title,
+.status-widget__issue__body {
+  padding: 5px 0;
+}
 </style>
 
 ## Components and services
