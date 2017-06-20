@@ -1,3 +1,26 @@
+## What's a cluster?
+
+A computing cluster is a federation of multiple compute nodes (independent
+computers), most commonly linked together through a high-performance
+interconnect network.
+
+What makes it a "super-computer" is the ability for a program to address
+resources (such as memory, CPU cores) located in different compute nodes,
+through the high-performance interconnect network.
+
+![overview](./img/cluster_overview.png)
+
+On a computing cluster, users typically connect to [login nodes][g_login],
+using a secure remote login protocol such as [SSH][g_ssh]. Unlike in
+traditional interactive environments, users then need to prepare [compute
+jobs][g_jobs] to submit to the [resource scheduler][g_scheduler]. Based on a
+
+
+
+[g_login]: glossary#login-nodes
+
+## Sherlock, a shared resource
+
 Sherlock is a shared compute cluster available for use by all Stanford faculty
 members and their research teams to support sponsored research.
 
@@ -9,15 +32,12 @@ It is open to the Stanford community as a computing resource to support
 departmental or sponsored research, thus a faculty member's sponsorship is
 required for all user accounts.
 
-!!! danger "Moderate/high risk data"
-	Sherlock is **NOT** HIPAA[^HIPAA] compliant and shouldn't be used to
-	process PHI[^PHI] nor PII[^PII]. The system is approved for computing with
-	low risk data only, not moderate nor high risk data.
-	For more information about data risk classifications, see the [Information
-	Security Risk Classification page][url_risk].
+!!! danger "Moderate/high risk data" Sherlock is **NOT** [HIPAA][url_HIPAA]
+compliant and shouldn't be used to process [PHI][url_PHI] nor [PII][url_PII].
+The system is approved for computing with low risk data only, not moderate nor
+high risk data.  For more information about data risk classifications, see the
+[Information Security Risk Classification page][url_risk].
 
-
-## Shared resource
 
 Sherlock has been designed, deployed, and is maintained and operated by
 [SRCC][url_srcc] staff. The Stanford Research Computing Center (SRCC) is a
@@ -32,8 +52,7 @@ servers, as well as the associated networking equipment and storage.  These
 resources can be used to run computational codes and programs, and are managed
 through a job scheduler using a [fair-share algorithm][url_fairshare].
 
-
-## Condominium
+## The condominium model
 
 For users who need more than casual access to a shared computing environment,
 SRCC also offers faculty members the possibility to purchase additional
@@ -144,6 +163,36 @@ of Sherlock.
 
 
 
+## Credits
+
+We would like to thank the following projects and companies, that generously
+sponsored us by providing services and resources that help us manage Sherlock
+every day:
+
+<style>
+img[alt="favicon"] {
+    height: 20px;
+    position:relative;
+</style>
+
+|     |     |     |
+| :---: | :--- | :--- |
+| ![favicon](https://github.com/favicon.ico) | [GitHub](https://github.com) | code management, issue tracking |
+| ![favicon](https://hund.io/favicon.ico) | [Hund](https://hund.io) | status dashboard |
+| ![favicon](https://travis-ci.com/images/favicon.png) | [Travis](https://travis-ci.com) | automated builds and deployments |
+| ![favicon](https://updown.io/favicon.ico) | [updown.io](https://updown.io/) | server monitoring |
+| ![favicon](https://zenhub.com/favicon.ico) | [ZenHub](https://zenhub.com) | project management |
+
+as well as the following projects, which helped create this website:
+
+* [MkDocs](https://mkdocs.org)
+* [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
+* [Agency Bootstrap](https://startbootstrap.com/template-overviews/agency/)
+
+
+
+
+
 [comment]: #  (link URLs -----------------------------------------------------)
 [email]:          mailto:research-computing-support@stanford.edu
 [url_provost]: 	  https://provost.stanford.edu/
@@ -155,8 +204,6 @@ of Sherlock.
 [url_fairshare]:  /docs/advanced-topics/scheduler#fair-share
 [url_transition]: /docs/user-guide/transition
 
-
-[comment]: # (footnodes ------------------------------------------------------)
-[^HIPAA]: [Health Insurance Portability and Accountability Act](https://en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act)
-[^PHI]:   [Protected Health Information](https://en.wikipedia.org/wiki/Protected_health_information)
-[^PII]:   [Personally Identifiable Information](https://en.wikipedia.org/wiki/Personally_identifiable_information)
+[url_HIPAA]: https://en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act
+[url_PHI]:   https://en.wikipedia.org/wiki/Protected_health_information
+[url_PII]:   https://en.wikipedia.org/wiki/Personally_identifiable_information
