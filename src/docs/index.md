@@ -24,8 +24,6 @@ Sherlock is a High-Performance Computing (HPC) cluster, operated by the
 to the Stanford community at large. You'll find all the documentation, tips,
 FAQs and information about Sherlock among these pages.
 
-<!-- just in case -->
-
 !!! note "Sherlock 1.0"
 
     These pages refer to Sherlock 2.0, the new iteration of the Sherlock
@@ -42,17 +40,15 @@ FAQs and information about Sherlock among these pages.
 Feel free to explore the different sections. If some information is missing,
 please [contact us][url_contact] to suggest additions or modifications.
 
-[url_wiki]:     http://sherlock.stanford.edu
-[url_srcc]:     http://srcc.stanford.edu
-[url_contact]:  mailto:research-computing-support@stanford.edu
-
 ## Getting Started
 
 You can first take a look at the [concepts][url_concepts] and
 [definitions][url_glossary] of terms to get familiar with the terminology used
-throughout those pages.
+throughout those pages. You can also take a look at Sherlock's
+[changelog][url_news] for news and updates, and at the [status
+dashboard][url_status] to see the status of Sherlock's components and services.
 
-Then, you can check the following sections to get started on Sherlock:
+Then, the following sections will you get started on Sherlock:
 
 * [Prerequisites][url_prereq]
 * [Connecting to the cluster][url_connect]
@@ -92,9 +88,18 @@ Here's what it looks like in motion:
 </script>
 
 [comment]: #  (link URLs -----------------------------------------------------)
+
+[url_wiki]:     http://sherlock.stanford.edu
+[url_srcc]:     http://srcc.stanford.edu
+[url_contact]:  mailto:research-computing-support@stanford.edu
+[url_news]:     http://news.sherlock.stanford.edu
+[url_status]:   http://status.sherlock.stanford.edu
+
 [url_concepts]:   /docs/overview/concepts
 [url_glossary]:   /docs/overview/glossary
 [url_prereq]:     /docs/getting-started/prerequisites
 [url_connect]:    /docs/getting-started/connecting
 [url_submit]:     /docs/getting-started/submitting
 [url_transition]: /docs/user-guide/transition
+
+
