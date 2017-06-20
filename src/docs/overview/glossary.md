@@ -14,8 +14,8 @@ programs. Modern processors typically have multiple cores.
 ##### Socket
 
 : A socket is the connector that houses the microprocessor. By extension, it
-represents the physical package of a processor, that typically contains multiple
-cores.
+represents the physical package of a processor, that typically contains
+multiple cores.
 
 ##### Node
 
@@ -39,12 +39,41 @@ To make this documentation more accessible, we try to explain key terms in a
 non-technical way. When reading these pages, please keep in mind the following
 definitions, presented in alphabetical order:
 
+##### Application
+
+: An application is a computer program designed to perform a group of
+coordinated functions, tasks, or activities for the benefit of the user. In the
+context of scientific computing, an application typically performs computations
+related to a scientific goal (molecular dynamics simulations, genome assembly,
+compuational fluid dynamics simulations, etc).
+
 ##### Backfill
 
 : Backfill scheduling is a method that a scheduler can use in order to maximize
 utilization. It allows smaller (both in terms of size and time requirements),
 lower priority jobs to start before larger, higher priority ones, as long as
 doing so doesn't push back the higher-priority jobs expected start time.
+
+##### Executable
+
+: A binary (or executable) program refers to the machine-code compiled version
+of an application. This is  which is a binary file that a computer can execute
+directly. As opposed to the application source code, which is the
+human-readable version of the application internal instructions, and which
+needs to be compiled by a compiler to produce the executable binary.
+
+##### Fairshare
+
+: A resource scheduler ranks jobs by priority for execution. Each job's
+priority in queue is determined by multiple factors, among which
+one being the user's fairshare score.  A user's fairshare score is computed
+based on a target (the given portion of the resources that this user should be
+able to use) and the user's effetive usage, *ie* the amount of resources (s)he
+effectively used in the past.  As a result, the more resources past jobs have
+used, the lower the priority of the next jobs will be.  Past usage is computed
+based on a sliding window and progressively forgotten over time.  This enables
+all users on a shared resource to get a fair portion of it for their own use,
+by giving higher priorty to users who have been underserved in the past.
 
 ##### FLOPS
 
@@ -88,7 +117,6 @@ requested resources based on jobs’ priority.
 ##### Job step
 
 : Job steps are sets of (possibly parallel) tasks within a job
-
 
 ##### Login nodes
 
