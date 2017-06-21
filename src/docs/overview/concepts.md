@@ -25,18 +25,29 @@ Sherlock is a shared compute cluster available for use by all Stanford faculty
 members and their research teams to support sponsored research.
 
 !!! warning "Sherlock is a resource for research"
-	Sherlock is not for course work, class assignments or general-use training
+
+    Sherlock is not for course work, class assignments or general-use training
 	sessions.
 
 It is open to the Stanford community as a computing resource to support
 departmental or sponsored research, thus a faculty member's sponsorship is
 required for all user accounts.
 
-!!! danger "Moderate/high risk data" Sherlock is **NOT** [HIPAA][url_HIPAA]
-compliant and shouldn't be used to process [PHI][url_PHI] nor [PII][url_PII].
-The system is approved for computing with low risk data only, not moderate nor
-high risk data.  For more information about data risk classifications, see the
-[Information Security Risk Classification page][url_risk].
+!!! danger "Moderate/high risk data"
+
+    Sherlock is **NOT** [HIPAA][url_HIPAA] compliant and shouldn't be used to
+    process [PHI][url_PHI] nor [PII][url_PII].  The system is approved for
+    computing with Low Risk data only, and is not suitable to process Moderate
+    nor High Risk data.  For more information about data risk classifications,
+    see the [Information Security Risk Classification page][url_risk].
+
+!!! danger "Usage policy"
+
+    Please note that your use of this system falls under the "Computer and
+    Network Usage Policy", as described in the [Stanford Administrative
+    Guide][url_admin]. In particular, sharing authentication credentials is
+    strictly prohibited.  Violation of this policy will result in termination
+    of access to Sherlock.
 
 
 Sherlock has been designed, deployed, and is maintained and operated by
@@ -163,36 +174,6 @@ of Sherlock.
 
 
 
-## Credits
-
-We would like to thank the following projects and companies, that generously
-sponsored us by providing services and resources that help us manage Sherlock
-every day:
-
-<style>
-img[alt="favicon"] {
-    height: 20px;
-    position:relative;
-</style>
-
-|     |     |     |
-| :---: | :--- | :--- |
-| ![favicon](https://github.com/favicon.ico) | [GitHub](https://github.com) | code management, issue tracking |
-| ![favicon](https://hund.io/favicon.ico) | [Hund](https://hund.io) | status dashboard |
-| ![favicon](https://travis-ci.com/images/favicon.png) | [Travis](https://travis-ci.com) | automated builds and deployments |
-| ![favicon](https://updown.io/favicon.ico) | [updown.io](https://updown.io/) | server monitoring |
-| ![favicon](https://zenhub.com/favicon.ico) | [ZenHub](https://zenhub.com) | project management |
-
-as well as the following projects, which helped create this website:
-
-* [MkDocs](https://mkdocs.org)
-* [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
-* [Agency Bootstrap](https://startbootstrap.com/template-overviews/agency/)
-
-
-
-
-
 [comment]: #  (link URLs -----------------------------------------------------)
 [email]:          mailto:research-computing-support@stanford.edu
 [url_provost]: 	  https://provost.stanford.edu/
@@ -201,6 +182,7 @@ as well as the following projects, which helped create this website:
 [url_srcc]:    	  https://srcc.stanford.edu/
 [url_orders]:	  https://srcc.stanford.edu/private/sherlock-qtr-order
 [url_risk]:  	  https://uit.stanford.edu/guide/riskclassifications
+[url_admin]:  	  https://adminguide.stanford.edu
 [url_fairshare]:  /docs/advanced-topics/scheduler#fair-share
 [url_transition]: /docs/user-guide/transition
 
