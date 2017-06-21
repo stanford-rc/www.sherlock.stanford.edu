@@ -173,7 +173,6 @@ full again, and the same process will happen again to start the next generation
 of Sherlock.
 
 
-
 [comment]: #  (link URLs -----------------------------------------------------)
 [email]:          mailto:research-computing-support@stanford.edu
 [url_provost]: 	  https://provost.stanford.edu/

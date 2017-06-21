@@ -5,6 +5,7 @@
     {% block site_meta %}
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
       {% if page and page.meta.description %}
         <meta name="description" content="{{ page.meta.description | first }}">
       {% elif config.site_description %}
@@ -23,7 +24,7 @@
       {% else %}
         <link rel="shortcut icon" href="{{ base_url }}/assets/images/favicon.png">
       {% endif %}
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-1.7.2">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-1.7.4">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta.title %}
@@ -38,9 +39,9 @@
       <script src="{{ base_url }}/assets/javascripts/modernizr-1df76c4e58.js"></script>
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-acc56dad49.css">
+      <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-769c285a91.css">
       {% if config.extra.palette %}
-        <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-507c8ee6cc.palette.css">
+        <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-9460e9b681.palette.css">
       {% endif %}
     {% endblock %}
     {% block fonts %}
@@ -149,13 +150,16 @@
       {% endblock %}
     </div>
     {% block scripts %}
-      <script src="{{ base_url }}/assets/javascripts/application-b30566c560.js"></script>
+      <script src="{{ base_url }}/assets/javascripts/application-c35428f87f.js"></script>
       {% set languages = lang.t("search.languages").split(",") %}
       {% if languages | length and languages[0] != "" %}
         {% set path = base_url + "/assets/javascripts/lunr" %}
         <script src="{{ path }}/lunr.stemmer.support.js"></script>
         {% for language in languages | map("trim") %}
           {% if language != "en" %}
+            {% if language == "jp" %}
+              <script src="{{ path }}/tinyseg.js"></script>
+            {% endif %}
             <script src="{{ path }}/lunr.{{ language }}.js"></script>
           {% endif %}
         {% endfor %}
