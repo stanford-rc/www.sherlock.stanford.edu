@@ -165,7 +165,7 @@ of Sherlock.
 
 ## Credits
 
-We would like to thank the following projects and companies, that generously
+We would like to thank the following companies, that generously
 sponsored us by providing services and resources that help us manage Sherlock
 every day:
 
