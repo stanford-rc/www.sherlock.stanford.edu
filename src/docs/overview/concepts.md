@@ -26,8 +26,8 @@ members and their research teams to support sponsored research.
 
 !!! warning "Sherlock is a resource for research"
 
-    Sherlock is not for course work, class assignments or general-use training
-	sessions.
+    Sherlock is not suitable for course work, class assignments or general-use
+    training sessions.
 
 It is open to the Stanford community as a computing resource to support
 departmental or sponsored research, thus a faculty member's sponsorship is
