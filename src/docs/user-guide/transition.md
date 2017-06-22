@@ -86,31 +86,48 @@ Quite a lot!
 As part of our documentation and communication effort, we're announcing
 three new web resources for Sherlock:
 
-* a [changelog][url_changelog] for news and updates,
-* a [status dashboard][url_status],
+* a [changelog][url_changelog] for news and updates, to get a better sense of
+  what's happening on Sherlock, beyond general email announces,
+* a [status dashboard][url_status], where you'll find up-to-date information
+  about the status of the main Sherlock components and services. You could also
+  subscribe to receive notification in case of events or outages,
 * and of course the very [documentation][url_docs] you're reading right now.
+
 
 ### Login
 
+
 The most notable changes are visible right from the connection process.
 
-* **a new login hostname**: Sherlock 2.0 uses a new set of login nodes, under a
-  different load-balanced hostname. To connect,
-  you'll need to use:
+| Main changes            | Sherlock 1.0  | Sherlock 2.0  |
+| ---                     | ------------- | ------------- |
+| **Login nodes**         | `sherlock.stanford.edu` | `login.sherlock.stanford.edu` |
+| **Authentication scheme** | GSSAPI (Kerberos) | SUNet ID password or GSSAPI |
+| **Two-step authentication** | no | yes |
+
+
+**New login hostname**
+
+: Sherlock 2.0 uses a new set of login nodes, under a different load-balanced
+  hostname. To connect, you'll need to use:
   ```
   $ ssh <sunet>@login.sherlock.stanford.edu
   ```
   (note the `login` part of the hostname)
 
-* **password authentication for SSH**: GSSAPI is not required anymore. To
-  make up for the next item, we relaxed the requirement on Kerberos
-  authentication for Sherlock 2.0. Meaning that you will now be able to connect
-  using your SUNet ID password, without having to get a Kerberos ticket via
-  `kinit` first.  We hope this will also ease the connection process from clients
-  and OS which don't correctly support GSSAPI. And please note that if you
-  still want to use Kerberos for authentication, you can.
+**New authentication scheme**
 
-* **two-factor authentication (2FA)**: this is now a requirement in
+: GSSAPI (Kerberos) is not required anymore. To make up for the next item, we
+  relaxed the requirement on Kerberos authentication for Sherlock 2.0. Meaning
+  that you will now be able to connect using your SUNet ID password, without
+  having to get a Kerberos ticket via `kinit` first.  We hope this will also
+  ease the connection process from clients and OS which don't correctly support
+  GSSAPI. And please note that if you still want to use Kerberos for
+  authentication, you can.
+
+**Two-step authentication**
+
+: Two-step (or two-factor) authentication (2FA) this is now a requirement in
   the [Minimum Security Standards][url_minsec] mandated by the [Information
   Security Office][url_iso], and that we're implementing on Sherlock. Upon
   connection, you will be prompted for your password (if you're not using
@@ -138,44 +155,90 @@ page.
 
 A number of changes differentiate Sherlock 2.0 from the first generation:
 technology has evolved and those changes are reflected in the new hardware
-specifications.
+specifications. Here are the main changes on typical compute nodes:
 
-| Main changes            | Sherlock 1.0  | Sherlock 2.0 |
-| ---                     | ------------- | ------------ |
-| **CPU**[^cpu]           | 2x 8-core (Ivy-Bridge/Haswell) | 2x 10-core (Broadwell) |
-| **Node**[^node]         | 1U Dell R630 servers  | 0.5U C6320 servers in a 2U chassis |
-| **Interconnect**[^ib]   | 56G FDR Infiniband    | 100G EDR Infiniband |
-| **Local storage**[^ssd] | 200G SSD (+ 500G HDD) | 200G SSD |
-| **Memory**[^mem]        | 64G (base node)       | 128G (base node) |
+| Main changes      | Sherlock 1.0  | Sherlock 2.0 |
+| ---               | ------------- | ------------ |
+| **Nodes**         | 1U Dell R630 servers  | 0.5U C6320 servers in a 2U chassis |
+| **CPUs**          | 2x 8-core (Ivy-Bridge/Haswell) | 2x 10-core (Broadwell) |
+| **Memory**        | 64G (base node)       | 128G (base node) |
+| **Local storage** | 200G SSD (+ 500G HDD) | 200G SSD |
+| **Interconnect**  | 56G FDR Infiniband    | 100G EDR Infiniband |
+
+**Nodes**
+
+: Base node model moves from the Dell R630 1U server to the Dell C6320
+  system. More servers will fit in a single rack, which is essential for us to
+  accommodate the ever-increasing demand for servers.  Another change is that
+  the new model provides redundant power supplies, in case one fails. Each
+  C6320 chassis houses four independent servers in only two rack units of
+  space.
+
+**CPUs**
+
+: Upgrade from Intel(r) Xeon(r) E5-2640v3 (8-core, 2.6GHz) to E5-2640v4
+  (10-core, 2.4GHz), meaning that each CPU gets two additional cores, and that
+  to maintain a 90W power envelope, the clock speed changed from 2.6GHz to
+  2.4GHz.
+
+**Memory**
+
+: Because of the 2 additional cores per CPU, a total for 4 more per node,
+  having a 64GB minimum RAM requirement was no longer deemed to be a good fit.
+  Originally, 64GB for 16 cores gave a ratio of 4GB/core. With the same 64GB
+  per node, the memory per core ratio on Sherlock 2.0 would have dropped to
+  3.2GB/core.  Usage statistics showed that more RAM per core has been needed
+  for a wide range of applications.  So for Sherlock 2.0, the minimum memory
+  amount per node has be set to 128GB, or 6.4GB/core, a much more appropriate
+  ratio for the typical user’s needs.
+
+**Local storage**
+
+: The slightly smaller form factor of each node has prompted
+  elimination of the 500G spinning hard drive, keeping the 200G SSD.  Sherlock
+  statistics showed that the hard drive was rarely used, as users favored use
+  of the very fast Lustre /scratch file system available to all nodes.
+
+**Interconnect**
+
+: Substantial network improvement by way of an almost 2x increase in
+  Infiniband (IB) speed. Sherlock 1.0 uses the FDR IB speed of 56Gbps, while
+  Sherlock 2.0 uses EDR IB at 100Gbps.
 
 
-#### General partitions
+### Slurm partitions
 
 The same organization of compute nodes will be used on Sherlock 2.0, with the
 same partition nomenclature, although different hardware characteristics:
 
+| Main changes   | Sherlock 1.0 | Sherlock 2.0 |
+| -------------  | ------------ | ------------ |
+| `normal`       | 116x 16c/64GB nodes | 56x 20c/128GB nodes |
+| `dev`          | 2x 16c/64GB nodes   | 2x 20c/128GB nodes |
+| `bigmem`       | 2x 32c/1.5TB nodes  | 1x 56c/3.0TB node<br/> 1x 32c/1.5TB node |
+| `gpu`          | 6x 16c/256GB nodes <br/> w/ 8x K20/K80/TITAN Black | 2x 20c/256GB nodes <br/> w/ 4x P40/P100 |
 
-| Partition name | Nodes | Cores/node | Memory/node | Other |
-| -------------- | ----: | ---------: | ----------- | ----- |
-| `normal`       | 56    | 20         | 128GB       | -      |
-| `dev`          | 2     | 20         | 128GB       | -      |
-| `bigmem`       | 2     | 32 / 56    | 512GB / 3.0TB | -      |
-| `gpu`          | 2     | 20         | 256GB       | 4xP100 / 4xP40 |
+
+After the first coexistence phase of the [transition](#transition-process),
+Sherlock 1.0 nodes will be merged in Sherlock 2.0 partitions, and the resulting
+general partitions will be the combination of both. For instance, the `normal`
+partition will feature 172 nodes.
 
 
 ### Software
 
-Sherlock 2.0 runs an update software stack, from the kernel to user-space
-applications, including the management software. Most user-facing applications
+Sherlock 2.0 runs an updated software stack, from kernel to user-space
+applications, including management software. Most user-facing applications
 are new version of the same software, while the management stack has been
 completely overhauled and redesigned from scratch.
 
 Changes include:
 
-| Main changes            | Sherlock 1.0  | Sherlock 2.0 |
-| ---                     | ------------- | ------------ |
-| **OS**                  | CentOS 6.x    | CentOS 7.x   |
-| **Scheduler**           | Slurm 16.05.x | Slurm 17.02.x|
+| Main changes            | Sherlock 1.0  | Sherlock 2.0  |
+| ---                     | ------------- | ------------- |
+| **OS**                  | CentOS 6.x    | CentOS 7.x    |
+| **Scheduler**           | Slurm 16.05.x | Slurm 17.02.x |
+
 
 !!! attention "Changes required"
 
@@ -215,7 +278,7 @@ uploaded through the DTN will be immediately available on Sherlock 2.0.
 
 For more information, see the [Data transfer][url_transfer] page.
 
-### Scheduler configuration
+### Scheduler
 
 In terms of scheduling, the same principles users are already familiar
 with on Sherlock 1.0 are conserved:
@@ -230,7 +293,7 @@ with on Sherlock 1.0 are conserved:
 For more details, see the [Scheduler][url_scheduler] page.
 
 
-### Software
+### Software modules
 
 Part of the current Sherlock user software stack has been ported over to
 Sherlock 2.0, with a refreshed but similar [modules][url_modules] system.
@@ -267,33 +330,4 @@ have. Feel free to contact us by email at research-computing-support@stanford.ed
 
 [comment]: # (footnodes ------------------------------------------------------)
 
-[^cpu]: Upgrade from Intel(r) Xeon(r) E5-2640v3 (8-core, 2.6GHz) to E5-2640v4
-  (10-core, 2.4GHz), meaning that each CPU gets two additional cores, and that
-  to maintain a 90W power envelope, the clock speed changed from 2.6GHz to
-  2.4GHz.
-
-[^node]: Base node model moves from the Dell R630 1U server to the Dell C6320
-  system. More servers will fit in a single rack, which is essential for us to
-  accommodate the ever-increasing demand for servers.  Another change is that
-  the new model provides redundant power supplies, in case one fails. Each
-  C6320 chassis houses four independent servers in only two rack units of
-  space.
-
-[^ib]: Substantial network improvement by way of an almost 2x increase in
-  Infiniband (IB) speed. Sherlock 1.0 uses the FDR IB speed of 56Gbps, while
-  Sherlock 2.0 uses EDR IB at 100Gbps.
-
-[^ssd]: The slightly smaller form factor of each node has prompted
-  elimination of the 500G spinning hard drive, keeping the 200G SSD.  Sherlock
-  statistics showed that the hard drive was rarely used, as users favored use
-  of the very fast Lustre /scratch file system available to all nodes.
-
-[^mem]: Because of the 2 additional cores per CPU, a total for 4 more per node,
-  having a 64GB minimum RAM requirement was no longer deemed to be a good fit.
-  Originally, 64GB for 16 cores gave a ratio of 4GB/core. With the same 64GB
-  per node, the memory per core ratio on Sherlock 2.0 would have dropped to
-  3.2GB/core.  Usage statistics showed that more RAM per core has been needed
-  for a wide range of applications.  So for Sherlock 2.0, the minimum memory
-  amount per node has be set to 128GB, or 6.4GB/core, a much more appropriate
-  ratio for the typical user’s needs.
 
