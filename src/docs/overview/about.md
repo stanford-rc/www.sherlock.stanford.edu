@@ -34,6 +34,11 @@ day:
 img[alt="favicon"] {
     height: 20px;
     position:relative;
+}
+img[alt="screencap"] {
+    width: 320px;
+    margin: 5px;
+}
 </style>
 
 |       |       |       |       |       |
@@ -46,3 +51,21 @@ The Sherlock website and documentation also rely on the following projects:
 * [MkDocs](//mkdocs.org)
 * [Material for MkDocs](//squidfunk.github.io/mkdocs-material/)
 * [Agency Bootstrap](//startbootstrap.com/template-overviews/agency/)
+
+
+## Sherlock, of HBO fame
+
+And finally, we couldn't resist to the pleasure of citing the most
+prestigious accomplishment of Sherlock to date: a mention in [HBO's Silicon
+Valley][url_sv] [Season 4 finale][url_ep38]!
+
+![screencap](/img/richard.png)
+![screencap](/img/bighead.png)
+
+Yep, you got that right, [Richard Hendricks][url_richard] wanted to use our
+very Sherlock. Kudos to the show's crew and whomever did the research and got
+it right, you made our day.
+
+[url_sv]:       http://www.hbo.com/silicon-valley/episodes/4/38-server-error
+[url_ep38]:     http://www.hbo.com/silicon-valley
+[url_richard]:  http://www.hbo.com/silicon-valley/cast-and-crew/thomas-middleditch
