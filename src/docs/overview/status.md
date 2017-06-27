@@ -23,6 +23,22 @@
 }
 </style>
 
+## Scheduled maintenances
+
+!!! important "Next Maintenance"
+    As needed to patch severe security vulnerabilities.
+
+Monthly full-day maintenance returns in July 2017 with the "go live" of Sherlock 2.0
+
+See [this page](concepts#maintenances-and-upgrades) for more information about
+maintenances and upgrades. Per the University's [Minimum Security
+policies][url_minsec], we deploy security patches on Sherlock as required for
+compliance.
+
+
+[url_minsec]:  https://uit.stanford.edu/guide/securitystandards
+
+
 ## Components and services
 
 Sherlock status is <span id="sh_status"></span>
