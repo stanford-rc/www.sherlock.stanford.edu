@@ -173,7 +173,7 @@ full again, and the same process will happen again to start the next generation
 of Sherlock.
 
 
-## Maintenances and updates
+## Maintenances and upgrades
 
 The SRCC institutes a monthly scheduled maintenance window on Sherlock, to
 ensure optimal operation, avoid potential issues and prepare for future
