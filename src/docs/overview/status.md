@@ -25,15 +25,18 @@
 
 ## Scheduled maintenances
 
+[Maintenance operations and upgrades](concepts#maintenances-and-upgrades) are
+scheduled on Sherlock on a regular basis.  Per the University's [Minimum
+Security policies][url_minsec], we deploy security patches on Sherlock as
+required for compliance.
+
 !!! important "Next Maintenance"
+
     As needed to patch severe security vulnerabilities.
 
-Monthly full-day maintenance returns in July 2017 with the "go live" of Sherlock 2.0
+Monthly full-day maintenance will return in July 2017 with the opening of
+Sherlock 2.0
 
-See [this page](concepts#maintenances-and-upgrades) for more information about
-maintenances and upgrades. Per the University's [Minimum Security
-policies][url_minsec], we deploy security patches on Sherlock as required for
-compliance.
 
 
 [url_minsec]:  https://uit.stanford.edu/guide/securitystandards
@@ -46,15 +49,9 @@ Sherlock status is <span id="sh_status"></span>
 For more details about Sherlock components and services, see the [status
 dashboard][url_status].
 
-<iframe src="https://status.sherlock.stanford.edu"
-  width="100%" height="200" frameborder="0">
-</iframe>
-
 [url_status]:  http://status.sherlock.stanford.edu
 
-
-
-## Usage
+## Current usage
 
 <iframe
   src="https://srcc-lookout.stanford.edu/public/dashboard-solo/db/sherlock-public-dashboard?panelId=3&edit&theme=light"
