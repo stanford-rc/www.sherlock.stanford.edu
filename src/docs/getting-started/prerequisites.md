@@ -10,7 +10,7 @@ To start using Sherlock, you will need:
         page][url_sponsor] for more information.
 
 - [x] a [Sherlock account][url_request]
-- [x] a [SSH client][url_ssh][^ssh]
+- [x] a [SSH client][url_ssh]
 - [x] good understanding of the [concepts][url_concepts] and
   [terms][url_glossary] used throughout that documentation.
 - [x] some [familiarity with command-line environments, especially
@@ -88,7 +88,7 @@ A few tutorials we recommend are:
 * [Introduction to Unix][url_tuto_2] (Imperial College, London)
 * [The Unix Shell][url_tuto_3] (Software Carpentry)
 
-More specifically about HPC[^hpc]:
+More specifically about HPC:
 
 * [HPC in a day][url_tuto_4] (Software Carpentry}
 
@@ -118,7 +118,7 @@ For an introduction to shell scripting, you can refer to:
 
 [url_request]:      #how-to-request-an-account
 [url_ssh]:          #ssh-clients
-[url_unix]:         #unix-linux-resources
+[url_unix]:         #unixlinux-resources
 [url_bash]:         #shell-scripting
 [url_concepts]:     /docs/overview/concepts
 [url_glossary]:     /docs/overview/glossary
@@ -129,10 +129,3 @@ For an introduction to shell scripting, you can refer to:
 [url_tuto_3]:       https://swcarpentry.github.io/shell-novice/
 [url_tuto_4]:       https://psteinb.github.io/hpc-in-a-day/
 
-[comment]: #  (footnotes -----------------------------------------------------)
-
-[^ssh]: [Secure SHell](https://en.wikipedia.org/wiki/Secure_Shell): a
-  cryptographic network protocol for operating network services securely over
-  an unsecured network, for instance, remote login to computer systems by users.
-
-[^hpc]: High-Performance Computing
