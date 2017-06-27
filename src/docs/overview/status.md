@@ -1,4 +1,4 @@
-<script src="//libraries.hund.io/status-js/status-2.1.1.js"></script>
+<script src="//libraries.hund.io/status-js/status-2.2.1-compat.js"></script>
 <script>
   var statusWidget = new Status.Widget({
     hostname: "status.sherlock.stanford.edu",
@@ -46,7 +46,12 @@ Sherlock status is <span id="sh_status"></span>
 For more details about Sherlock components and services, see the [status
 dashboard][url_status].
 
+<iframe src="https://status.sherlock.stanford.edu"
+  width="100%" height="200" frameborder="0">
+</iframe>
+
 [url_status]:  http://status.sherlock.stanford.edu
+
 
 
 ## Usage
