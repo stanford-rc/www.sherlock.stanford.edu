@@ -173,6 +173,61 @@ full again, and the same process will happen again to start the next generation
 of Sherlock.
 
 
+## Maintenances and updates
+
+The SRCC institutes a monthly scheduled maintenance window on Sherlock, to
+ensure optimal operation, avoid potential issues and prepare for future
+expansions.  This window will be used to make hardware repairs, software and
+firmware updates, and perform general manufacturer recommended maintenance on
+our environment.
+
+!!! note "Maintenance schedule"
+
+     As often as possible, maintenances will take place on the **first Tuesday
+     of every month, from 8am to 12am**, and will be announced 2 weeks in
+     advance, through the usual communication channels.
+
+In case an exceptional amount of work is required, the maintenance window could
+be extended to 10 hours (from 8am to 6pm).
+
+During these times, access to Sherlock will be unavailable, login will be
+disabled and jobs won't run. A reservation will be placed in the scheduler so
+running jobs can finish before the maintenance, and jobs that wouldn't finish
+by the maintenance window would be pushed after it.
+
+
+### Common questions
+
+Why doing maintenances at all?
+
+: Due to growth in our compute environment and the increasing complexity of the
+systems we deploy, we felt it prudent to arrange for a regular time when we
+could comfortably and without pressure fix problems or update facilities with
+minimal impact to our customers. Most, if not all, major HPC centers have
+regular maintenance schedules.  We also need to enforce the [Minimum
+Security][url_minsec] rules edicted by the Stanford Information Security
+Office, which mandate deployment of security patches in a timely manner.
+
+Why Tuesdays 8am-12am? Why not do this late at night?
+
+: We have observed that the least busy time for our services is at the
+beginning of the week in the morning hours. Using this time period should not
+interrupt most of our users. If the remote possibility of a problem that
+extends past the scheduled downtime occurs, we would have our full staff fresh
+and available to assist in repairs and quickly restore service.
+
+I have a job currently running that has been active for XX days. Since the
+compute nodes will be unavailable, what will happen to all that work?
+
+: For long-running jobs, we strongly recommend checkpointing your results on a
+periodic basis. Besides, we will place a reservation in the scheduler for each
+maintenance that would prevent jobs to run past it. This means that the
+scheduler will only allow jobs to run if they can finish by the time the
+maintenance starts. If you submit a long job soon before the maintenance, it
+will be delayed until after the maintenance.
+
+
+
 [comment]: #  (link URLs -----------------------------------------------------)
 [email]:          mailto:research-computing-support@stanford.edu
 [url_provost]: 	  https://provost.stanford.edu/
@@ -181,6 +236,7 @@ of Sherlock.
 [url_srcc]:    	  https://srcc.stanford.edu/
 [url_orders]:	  https://srcc.stanford.edu/private/sherlock-qtr-order
 [url_risk]:  	  https://uit.stanford.edu/guide/riskclassifications
+[url_minsec]:     https://uit.stanford.edu/guide/securitystandards
 [url_admin]:  	  https://adminguide.stanford.edu
 [url_fairshare]:  /docs/advanced-topics/scheduler#fair-share
 [url_transition]: /docs/user-guide/transition
