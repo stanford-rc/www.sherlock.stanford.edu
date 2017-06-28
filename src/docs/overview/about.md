@@ -58,6 +58,13 @@ do so. This mailing-list is moderated.
 
 ### Office hours
 
+!!! warning "We can't accommodate walk-ins"
+
+    We're unfortunately not staffed to accommodate walk-ins, so please make
+    sure that you're planning to stop by **during** office hours. We may not be
+    able to help you otherwise.
+
+
 The SRCC holds office hours twice a week, in [Polya Hall][url_polya], room
 261-262 (2nd floor):
 
@@ -66,7 +73,6 @@ The SRCC holds office hours twice a week, in [Polya Hall][url_polya], room
 
 Please feel free to stop by if you have any question or trouble using Sherlock,
 we'll be happy to help you.
-
 
 [url_shu_ml]: https://mailman.stanford.edu/mailman/listinfo/sherlock-users
 [url_polya]:  https://campus-map.stanford.edu/?id=14-160&lat=37.42898333&lng=-122.17752929&zoom=17&srch=polya%20hall
