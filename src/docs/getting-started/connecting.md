@@ -20,48 +20,36 @@ page.
 
 !!! important "Resetting passwords"
 
-    Sherlock does not store your SUNet ID password and we are unable to reset
-    your password. If you require password assistance, please see the [SUNet
-    Account page][url_suaccounts].
+    Sherlock does **not** store your SUNet ID password. As a consequence, we
+    are unable to reset your password. If you require password assistance,
+    please see the [SUNet Account page][url_suaccounts].
 
-## Login
+## Connection
 
 Access to Sherlock is provided via Secure Shell (SSH) login. Most Unix-like
 operating systems provide an SSH client by default that can be accessed by
 typing the `ssh` command in a terminal window.
 
 To login to Sherlock, open a terminal and type the following command, where
-`<SUNet ID>` should be replaced by your *actual* SUNet ID:
+`<sunetid>` should be replaced by your *actual* SUNet ID:
 
 ```bash
-$ ssh <SUNet ID>@login.sherlock.stanford.edu
+$ ssh <sunetid>@login.sherlock.stanford.edu
 ```
 
-Upon logging in, you will be connected to one of SHerlock's load-balanced login
+Upon logging in, you will be connected to one of Sherlock's load-balanced login
 node. You should be automatically directed to the least-loaded login node at
 the moment of your connection, which should give you the best possible
 environment to work.
-
-!!! tip "Connecting to a specific login node"
-
-    If for any reason, you want to directly connect to a specific login node
-    and bypass the automatic load-balanced dispatching of new connections
-    (which we don't recommend), you can use that login node's hostname
-    explicitely. For instance:
-    ```
-    $ ssh <SUNet ID>@ln0X.sherlock.stanford.edu
-    ```
 
 ### Host keys
 
 Upon your very first connection to Sherlock, you will be greeted by a warning
 such as :
 
-```
-The authenticity of host 'login.sherlock.stanford.edu (171.66.97.102)' can't be established.
-ECDSA key fingerprint is SHA256:eB0bODKdaCWtPgv0pYozsdC5ckfcBFVOxeMwrNKdkmg.
-Are you sure you want to continue connecting (yes/no)?
-```
+    The authenticity of host 'login.sherlock.stanford.edu' can't be established.
+    ECDSA key fingerprint is SHA256:eB0bODKdaCWtPgv0pYozsdC5ckfcBFVOxeMwrNKdkmg.
+    Are you sure you want to continue connecting (yes/no)?
 
 
 This warning is normal: your SSH client warns you that it is the first time it
@@ -69,40 +57,169 @@ sees that new computer. To make sure you are actually connecting to the right
 machine, you should compare the ECDSA key fingerprint shown in the message with
 one of the fingerprints below:
 
-RSA
-: `SHA256:T1q1Tbq8k5XBD5PIxvlCfTxNMi1ORWwKNRPeZPXUfJA`
-
-ECDSA
-: `SHA256:eB0bODKdaCWtPgv0pYozsdC5ckfcBFVOxeMwrNKdkmg`
-
-ED25519
-: `SHA256:vVk4tXswI9gtDO0FZ+YaZZYFZoG42l2ZD2XVQKoKZms`
+Key type | Key Fingerprint
+---------|----------------
+RSA      | `SHA256:T1q1Tbq8k5XBD5PIxvlCfTxNMi1ORWwKNRPeZPXUfJA`
+ECDSA    | `SHA256:eB0bODKdaCWtPgv0pYozsdC5ckfcBFVOxeMwrNKdkmg`
+ED25519  | `SHA256:vVk4tXswI9gtDO0FZ+YaZZYFZoG42l2ZD2XVQKoKZms`
 
 If they match, you can proceed and type ‘yes’. Your SSH program will then store
-that key and will check it for every subsequent SSH connection, so you'll be sure that the server to
-which you connect is indeed Sherlock.
+that key and will verify it for every subsequent SSH connection, to make sure
+that the server you're connecting to is indeed Sherlock.
 
 
 
 ### Authentication
 
 #### Password
-#### Kerberos
+
+To ease access and increase compatibility[^krb_legacy] with different
+platforms, Sherlock allows a simple password-based authentication mechanism for
+SSH.[^auth_methods].
+
+Upon connection, you will be asked for your SUNet ID password with the
+following prompt:
+
+    <sunetid>@login.sherlock.stanford.edu's password:
+
+Enter your password, and if it's correct, you should see the following line:
+
+    Authenticated with partial success.
 
 
-### Duo
+!!! warning "Excessive authentication failures"
+
+    Entering an invalid password multiple times will result in a (temporary)
+    ban of your IP address. This is to prevent brute-force password guessing
+    attacks on Sherlock login nodes.
 
 
-### Tips
-#### ControlPersist
+#### Second factor (2FA)
+
+Sherlock implements Stanford's [Minimum Security Standards][url_minsec]
+policies which mandate two-step authentication to access the cluster.
+
+Two-step authentication protects your personal information and credentials by
+combining something only you *know* (your password) with something only you
+*have* (your phone, tablet or token). This prevents an attacker who would steal
+your password to actually use it to impersonate you. For more details about
+two-step authentication at Stanford, please refer to the [University IT
+two-step][url_twostep] page.
 
 
+After successfully entering your password, you'll be prompted for your second
+authentication factor with a message like this:
+
+    Duo two-factor login for <sunetid>
+
+    Enter a passcode or select one of the following options:
+
+     1. Duo Push to XXX-XXX-9999
+     2. Phone call to XXX-XXX-9999
+     3. SMS passcodes to XXX-XXX-9999 (next code starts with: 9)
+
+    Passcode or option (1-3):
+
+
+!!! tip "Avoiding two-factor prompt on each connection"
+
+    If you routinely open multiple sessions to Sherlock, having to confirm each
+    one of them with a second authentication factor could rapidely become
+    cumbersome. To work around this, the OpenSSH client allows multiplexing
+    channels and re-using existing authenticated for opening new sessions.
+    Please see the [Advanced Connection Options][url_adv_conn] page for more
+    details.
+
+If your second factor is accepted, you'll see the following message:
+
+    Success. Logging you in...
+
+
+## Login
+
+Congratulations! You've successfully connected to Sherlock. You'll be greeted
+by the following *message of the day*:
+
+```
+
+             --*-*- Stanford Research Computing Center -*-*--
+                ____  _               _            _
+               / ___|| |__   ___ _ __| | ___   ___| | __
+               \___ \| '_ \ / _ \ '__| |/ _ \ / __| |/ /
+                ___) | | | |  __/ |  | | (_) | (__|   <
+               |____/|_| |_|\___|_|  |_|\___/ \___|_|\_\ 2.0
+
+-----------------------------------------------------------------------------
+  This system is for authorized users only and you are expected to comply
+  with all Stanford computing, network and research policies.
+  For more info, see http://acomp.stanford.edu/about/policy and
+  http://doresearch.stanford.edu/policies/research-policy-handbook
+-----------------------------------------------------------------------------
+  This system is *NOT* HIPAA compliant and shouldn't be used to process PHI
+  See https://privacy.stanford.edu/faqs/hipaa-faqs for more information.
+-----------------------------------------------------------------------------
+
+  Support           email: research-computing-support@stanford.edu
+  ========   office hours: Tuesdays 10-11am, Thursdays 3-4pm,
+                           room 261-262 @ Polya Hall
+
+  Web                 www: http://www.sherlock.stanford.edu
+  ========           news: http://news.sherlock.stanford.edu
+                   status: http://status.sherlock.stanford.edu
+
+-----------------------------------------------------------------------------
+```
+
+Once authenticated to Sherlock, you'll see the following prompt:
+
+<!-- manual coloring -->
+<pre style="padding: 10.5px 12px">
+[<font color=lawngreen>&lt;sunetid&gt;</font>@sh-ln01 <font color=red>login!</font> ~]$
+</pre>
+
+It indicates the name of the login node you've been connected to, and a
+reminder that you're actually connected to a [login node][url_login], not a
+compute node.
+
+!!! danger "Login nodes are not for computing"
+
+    Login nodes are usually shared among many users and therefore must not be
+    used to run computationally intensive tasks. Those should be submitted to
+    the scheduler which will dispatch them on compute nodes.
+
+By contrast, the shell prompt on a login node looks like this:
+
+<!-- manual coloring -->
+<pre style="padding: 10.5px 12px">
+[<font color=lawngreen>&lt;sunetid&gt;</font>@sh-101-01 ~]$
+</pre>
+
+
+## Start computing
+
+To start computing, there's still a extra step required, which is requesting
+resources to run your application. It's all described in the [next
+section][url_submit].
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_prereq]:       /docs/getting-started/prerequisites
 [url_account]:      /docs/getting-started/prerequisites#how-to-request-an-account
+[url_adv_conn]:     /docs/advanced-topics/connection
 [url_suaccounts]:   https://accounts.stanford.edu/
 [url_sunet]:        https://uit.stanford.edu/service/accounts/sunetids
+[url_minsec]:       https://uit.stanford.edu/guide/securitystandards
+[url_twostep]:      https://uit.stanford.edu/service/webauth/twostep
+[url_login]:        http://localhost:8000/docs/overview/glossary/#login-nodes
+[url_submit]:       /docs/getting-started/submitting
 
 [comment]: #  (footnotes -----------------------------------------------------)
+
+[^krb_legacy]: On Sherlock 1.0, GSSAPI tokens (based on Kerberos tickets)
+were the only allowed authentication method, which could cause some
+interoperability with third-party SSH clients.
+
+[^auth_methods]: For other methods of authentication, see the [Advanced
+ Connection Options][url_adv_conn] page.
+
+
