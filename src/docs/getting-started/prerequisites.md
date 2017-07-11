@@ -92,7 +92,17 @@ More specifically about HPC:
 
 * [HPC in a day][url_tuto_4] (Software Carpentry}
 
-## Shell scripting
+### Text editors
+
+Multiple text editors are available on Sherlock. For beginners, we recommend
+the use of `nano`. And for more advanced uses, you'll also find below some
+resources about using `vim`
+
+* [Nano guide][url_nano] (Gentoo wiki)
+* [Vim guide][url_vim] (Gentoo wiki)
+
+
+### Shell scripting
 
 Compute jobs launched on Sherlock are most often initialized by user-written
 shell scripts. Beyond that, many common operations can be simplified and
@@ -100,7 +110,7 @@ automated using shell scripts.
 
 For an introduction to shell scripting, you can refer to:
 
-* [BASH Programming - Introduction HOW-TO][url_scripting]
+* [Bash Programming - Introduction HOWTO][url_scripting]
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
@@ -129,3 +139,5 @@ For an introduction to shell scripting, you can refer to:
 [url_tuto_3]:       https://swcarpentry.github.io/shell-novice/
 [url_tuto_4]:       https://psteinb.github.io/hpc-in-a-day/
 
+[url_nano]:         https://wiki.gentoo.org/wiki/Nano/Basics_Guide
+[url_vim]:          https://wiki.gentoo.org/wiki/Vim/Guide
