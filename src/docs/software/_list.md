@@ -2,13 +2,13 @@
 * [`biology`](#biology): neurology
 * [`chemistry`](#chemistry): computational chemistry, molecular dynamics
 * [`devel`](#devel): build, compiler, data, language, libs, mpi
-* [`math`](#math): deep-learning, language, numerical anaylsis, numerical library, statistics
+* [`math`](#math): deep-learning, language, numerical analysis, numerical library, statistics
 * [`system`](#system): compression, containers, file transfer, libs, scm, tools
 * [`viz`](#viz): remote display
 
 ### Biology
-Category | Module | Version | URL  | Description
-:------  | :----- | ------: | :--- | :----------
+Field  | Module | Version | URL  | Description
+:----- | :----- | ------: | :--- | :----------
 **neurology** | `fsl` | `5.0.10` | [Link](https://fsl.fmrib.ox.ac.uk/fsl) | FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data.
 **neurology** | `spm` | `12` | [Link](http://www.fil.ion.ucl.ac.uk/spm/) | The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject.
 **neurology** | `mrtrix` | `0.3.16` | [Link](http://www.mrtrix.org) | MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses.
@@ -17,14 +17,14 @@ Category | Module | Version | URL  | Description
 **neurology** | `afni` | `17.1.03` | [Link](https://afni.nimh.nih.gov) | AFNI (Analysis of Functional NeuroImages) is a set of C programs for processing, analyzing, and displaying functional MRI (FMRI) data - a technique for mapping human brain activity.
 
 ### Chemistry
-Category | Module | Version | URL  | Description
-:------  | :----- | ------: | :--- | :----------
+Field  | Module | Version | URL  | Description
+:----- | :----- | ------: | :--- | :----------
 **computational chemistry** | `vasp` | `5.4.1` | [Link](https://www.vasp.at) | The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic scale materials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics, from first principles.
 **molecular dynamics** | `gromacs` | `2016.3` | [Link](http://www.gromacs.org) | GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles.
 
 ### Devel
-Category | Module | Version | URL  | Description
-:------  | :----- | ------: | :--- | :----------
+Field  | Module | Version | URL  | Description
+:----- | :----- | ------: | :--- | :----------
 **build** | `scons` | `2.5.1_py36`, `2.5.1_py27` | [Link](http://www.scons.org) | SCons is an Open Source software construction tool.
 **build** | `cmake` | `3.8.1` | [Link](https://www.cmake.org) | CMake is an extensible, open-source system that manages the build process in an operating system and in a compiler-independent manner.
 **compiler** | `gcc` | `7.1.0`, `6.3.0` | [Link](http://gcc.gnu.org) | The GNU Compiler Collection includes front ends for C, C++, Fortran, Java, and Go, as well as libraries for these languages (libstdc++, libgcj,...).
@@ -47,11 +47,11 @@ Category | Module | Version | URL  | Description
 **mpi** | `impi` | `2017.u2` | [Link](https://software.intel.com/en-us/intel-mpi-library) | Intel® MPI Library is a multi-fabric message passing library that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification.
 
 ### Math
-Category | Module | Version | URL  | Description
-:------  | :----- | ------: | :--- | :----------
+Field  | Module | Version | URL  | Description
+:----- | :----- | ------: | :--- | :----------
 **deep-learning** | `cudnn` | `5.1`, `6.0` | [Link](https://developer.nvidia.com/cudnn) | NVIDIA cuDNN is a GPU-accelerated library of primitives for deep neural networks.
 **language** | `py-scipystack` | `1.0_py36`, `1.0_py27` | [Link](https://www.scipy.org) | The SciPy Stack is a collection of open source software for scientific computing in Python. It provides the following packages: numpy, scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.
-**numerical anaylsis** | `matlab` | `R2017a` | [Link](https://www.mathworks.com/products/matlab.html) | MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment and fourth-generation programming language.
+**numerical analysis** | `matlab` | `R2017a` | [Link](https://www.mathworks.com/products/matlab.html) | MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment and fourth-generation programming language.
 **numerical library** | `gsl` | `1.16`, `2.3` | [Link](https://www.gnu.org/software/gsl) | The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers. The library provides a wide range of mathematical routines such as random number generators, special functions and least-squares fitting.
 **numerical library** | `imkl` | `2017.u2` | [Link](https://software.intel.com/en-us/intel-mkl) | Intel Math Kernel Library (Intel MKL) is a library of optimized math routines for science, engineering, and financial applications. Core math functions include BLAS, LAPACK, ScaLAPACK, sparse solvers, fast Fourier transforms, and vector math.[3] The routines in MKL are hand-optimized specifically for Intel processors
 **numerical library** | `fftw` | `3.3.6` | [Link](http://www.fftw.org/) | The Fastest Fourier Transform in the West (FFTW) is a software library for computing discrete Fourier transforms (DFTs).
@@ -59,8 +59,8 @@ Category | Module | Version | URL  | Description
 **statistics** | `R` | `3.4.0` | [Link](http://r-project.org) | R is a free software environment for statistical computing and graphics.
 
 ### System
-Category | Module | Version | URL  | Description
-:------  | :----- | ------: | :--- | :----------
+Field  | Module | Version | URL  | Description
+:----- | :----- | ------: | :--- | :----------
 **compression** | `xz` | `5.2.3` | [Link](http://tukaani.org/xz/) | XZ Utils is free general-purpose data compression software with a high compression ratio.
 **compression** | `szip` | `2.1.1` | [Link](https://support.hdfgroup.org/doc_resource/SZIP) | Szip compression software, providing lossless compression of scientific data, is an implementation of the extended-Rice lossless compression algorithm.
 **compression** | `zlib` | `1.2.11` | [Link](http://zlib.net) | zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system.
@@ -78,6 +78,6 @@ Category | Module | Version | URL  | Description
 **tools** | `curl` | `7.54.0` | [Link](https://curl.haxx.se/) | curl is an open source command line tool and library for transferring data with URL syntax.
 
 ### Viz
-Category | Module | Version | URL  | Description
-:------  | :----- | ------: | :--- | :----------
+Field  | Module | Version | URL  | Description
+:----- | :----- | ------: | :--- | :----------
 **remote display** | `virtualgl` | `2.5.2` | [Link](http://www.virtualgl.org) | VirtualGL is an open source toolkit that gives any Unix or Linux remote display software the ability to run OpenGL applications with full 3D hardware acceleration.
