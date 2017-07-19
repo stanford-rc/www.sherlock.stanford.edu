@@ -1,6 +1,7 @@
+
 To start using Sherlock, you will need:
 
-- [x] an active [SUNet ID][url_sunet]
+* an active [SUNet ID][url_sunet],
 
     !!! information "SUNet ID [service levels][url_level] and external collaborators"
 
@@ -9,13 +10,12 @@ To start using Sherlock, you will need:
         get a sponsored SUNet ID at no cost. Please see the [sponsorship
         page][url_sponsor] for more information.
 
-- [x] a [Sherlock account][url_request]
-- [x] a [SSH client][url_ssh]
-- [x] good understanding of the [concepts][url_concepts] and
-  [terms][url_glossary] used throughout that documentation.
-- [x] some [familiarity with command-line environments, especially
-  UNIX/Linux][url_unix]
-- [x] notions of [shell scripting][url_bash]
+* a [Sherlock account][url_request],
+* a [SSH client][url_ssh],
+* good understanding of the [concepts][url_concepts] and [terms][url_glossary]
+  used throughout that documentation,
+* some familiarity with [UNIX/Linux command-line environments][url_unix], and
+  notions of [shell scripting][url_bash].
 
 
 
