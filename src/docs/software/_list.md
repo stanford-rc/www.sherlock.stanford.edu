@@ -1,10 +1,10 @@
 ## Categories
 * [`biology`](#biology): neurology
-* [Chemistry](#chemistry): computational chemistry, molecular dynamics
-* [Devel](#devel): build, compiler, data, language, libs, mpi
-* [Math](#math): deep-learning, language, numerical anaylsis, numerical library, statistics
-* [System](#system): compression, containers, file transfer, libs, scm, tools
-* [Viz](#viz): remote display
+* [`chemistry`](#chemistry): computational chemistry, molecular dynamics
+* [`devel`](#devel): build, compiler, data, language, libs, mpi
+* [`math`](#math): deep-learning, language, numerical anaylsis, numerical library, statistics
+* [`system`](#system): compression, containers, file transfer, libs, scm, tools
+* [`viz`](#viz): remote display
 
 ### Biology
 Category | Module | Version | URL  | Description
