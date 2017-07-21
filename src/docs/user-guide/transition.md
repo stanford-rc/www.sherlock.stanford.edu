@@ -5,7 +5,7 @@ conditions, etc.
 !!! tip "Sherlock 2.0 orders"
 
     If you are looking to buy into Sherlock 2.0, please see the [Sherlock
-    Quarterly Order][url_orders] page (*SUNetID required*).
+    Quarterly Order][url_orders] page (*SUNet ID required*).
 
 
 ## Why Sherlock 2.0?
@@ -20,7 +20,7 @@ initial base.
 However, the Infiniband fabric (the supporting network that interconnects all
 of the nodes and storage) eventually reached capacity, effectively putting a
 halt to Sherlock's growth. With the help of new recurring funding from the
-University, a new, completely separate cluster has been kickstarted, with its
+University, a new, completely separate cluster has been kick-started, with its
 own Infiniband fabric, new management servers, and a set of more
 capable compute nodes. These new nodes, along with an updated software
 environment, forms the basis of Sherlock 2.0.
@@ -65,7 +65,7 @@ the general nodes from the public partitions.
 **Phase 3**: retirement
 
 : As they age out, compute nodes older than 5 years will be retired, to
-comply with the datacenter usage guidelines. When all the remaining Sherlock
+comply with the data center usage guidelines. When all the remaining Sherlock
 1.0 nodes have been merged into Sherlock 2.0, the Sherlock 1.0 and 2.0
 distinction will disappear, and Sherlock will be a single system again.
 
@@ -190,7 +190,7 @@ specifications. Here are the main changes on typical compute nodes:
   3.2GB/core.  Usage statistics showed that more RAM per core has been needed
   for a wide range of applications.  So for Sherlock 2.0, the minimum memory
   amount per node has be set to 128GB, or 6.4GB/core, a much more appropriate
-  ratio for the typical user’s needs.
+  ratio for the typical user needs.
 
 **Local storage**
 
@@ -224,6 +224,17 @@ Sherlock 1.0 nodes will be merged in Sherlock 2.0 partitions, and the resulting
 general partitions will be the combination of both. For instance, the `normal`
 partition will feature 172 nodes.
 
+#### Job submission parameters
+
+QOS and limits are slightly different too, because of the different
+characteristics of Sherlock 2.0, and the new version of Slurm (cf. below).
+
+The main change will be that your jobs won't generally need to specify any QOS,
+except for the *long* one. or in other words, `--qos=long` is the only QOS
+option you will need to specify in your jobs. `bigmem` and `gpu` are not used
+anymore for job submission, and will lead to errors if used. The goal is to
+simplify job submission for new users and limit the number of parameters to
+specify when submitting jobs.
 
 ### Software
 
@@ -285,9 +296,9 @@ with on Sherlock 1.0 are conserved:
 
 * a set of general partitions, available to all users: `normal`, `bigmem`,
   `gpu`, `dev`
-* owner-specific partitions, regrouping nodes boughts by PI groups
+* owner-specific partitions, regrouping nodes bought by PI groups
 * a global `owners` partition, to allow other owners to use idle nodes.
-* same backfilling and fairshare scheduling rules
+* same backfilling and fair share scheduling rules
 * similar limits on most partitions
 
 For more details, see the [Scheduler][url_scheduler] page.
@@ -304,9 +315,9 @@ to add new applications over the coming days and weeks.
 
 ## Feedback and support
 
-Your feedback is very important to us, especially in the early statges of a new
-system. So please tell us about any issues you run into and successes you
-have. Feel free to contact us by email at research-computing-support@stanford.edu.
+Your feedback is very important to us, especially in the early stages of a new
+system. So please tell us about any issues you run into and successes you have.
+Feel free to contact us by email at research-computing-support@stanford.edu.
 
 
 
