@@ -89,6 +89,7 @@ and then should not be typed in).
     * [WinSCP][url_winscp] :fa-windows:
     * [FileZilla][url_filezilla] :fa-windows:, :fa-apple:, :fa-linux:
     * [Fetch][url_fetch][^fetch_su] :fa-apple:
+    * [CyberDuck][url_cyberduck] :fa-apple:
 
     When setting up your connection to Sherlock in the above programs, use the
     following information:
@@ -250,7 +251,8 @@ through a computer whose sole purpose is to move data around.
 
 It supports:
 
-* SSH-based protocols (such as the ones [described above](#ssh-based protocols)
+* SSH-based protocols (such as the ones [described above](#ssh-based
+  protocols))
 * [BBCP][url_bbcp]
 * [Globus](#globus)
 
@@ -333,6 +335,7 @@ documentation][url_rclone].
 
 [url_winscp]:       https://winscp.net/eng/docs/introduction
 [url_filezilla]:    https://filezilla-project.org/
+[url_cyberduck]:    http://cyberduck.io/
 [url_fetch]:        http://fetchsoftworks.com/
 [url_fetch_su]:     https://uit.stanford.edu/software/fetch
 [url_sftp_tuto]:    https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server
@@ -357,5 +360,5 @@ documentation][url_rclone].
 
 [^ssh]: For more details, see the [SSH clients page][url_ssh_clients].
 [^fetch_su]: Fetch is a commercial program, and is available as part of
-  the (Essential Stanford Software)[url_fetch_su] bundle.
+  the [Essential Stanford Software][url_fetch_su] bundle.
 
