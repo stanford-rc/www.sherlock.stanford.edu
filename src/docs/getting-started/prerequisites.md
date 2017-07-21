@@ -29,10 +29,10 @@ Sherlock is open to the Stanford community as a computing resource to support
 departmental or sponsored research, thus a faculty member's explicit consent is
 required for account requests.
 
-!!! warning "Sherlock is a resource for research"
+!!! danger "Sherlock is a resource for research"
 
-    Sherlock is not suitable for course work, class assignments or general-use
-    training sessions.
+    Sherlock is a resource to help and support research, and is not suitable
+    for course work, class assignments or general-use training sessions.
 
 There is no fee associated with using Sherlock, and no limit in the amount of
 accounts each faculty member can request. We will periodically ensure that all
@@ -61,15 +61,19 @@ already installed. So no additional software installation is required
 Microsoft Windows doesn't provide any SSH client by default. To install one,
 you have several options, depending on the version of Windows.
 
-* **Preferred option**: Windows 10 provides a feature called the ["Windows
-  Subsystem for Linux"][url_wsl] (WSL). Please refer to the [official
-  documentation][url_wsl_doc] or [this howto][url_wsl_howto] for installation
-  instructions. Once installed, you'll be able to use the `ssh` command from a
-  Windows terminal to connect to Sherlock.
+* **WSL <small>recommended</small>**
 
-* The [Cygwin project][url_cygwin] predates WSL and provides similar features,
-  which among other things, allow users to install a command-line SSH client on
-  their Windows machines.
+    Windows 10 provides a feature called the ["Windows
+    Subsystem for Linux"][url_wsl] (WSL). Please refer to the [official
+    documentation][url_wsl_doc] or [this howto][url_wsl_howto] for installation
+    instructions. Once installed, you'll be able to use the `ssh` command from a
+    Windows terminal to connect to Sherlock.
+
+* Cygwin
+
+    The [Cygwin project][url_cygwin] predates WSL and provides similar features,
+    which among other things, allow users to install a command-line SSH client on
+    their Windows machines.
 
 The two options above will ensure the best compatibility with the Sherlock
 environment. If you'd like to explore other avenues, many [other SSH client
