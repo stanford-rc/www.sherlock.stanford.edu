@@ -268,8 +268,8 @@ change it all: we kept the best parts as they are.
 
 ### Storage
 
-All the storage systems (including `$HOME`, `$PI_HOME`, `$SCRATCH` and
-`$PI_SCRATCH`) are shared between Sherlock 1.0 and Sherlock 2.0. So all the
+All the storage systems (including `$HOME`, `$PI_HOME`, `$SCRATCH`, `$PI_SCRATCH`
+and `$OAK`) are shared between Sherlock 1.0 and Sherlock 2.0. So all the
 files and folders available on Sherlock 1.0 will be available on Sherlock 2.0.
 
 !!! caution "Path changes"
