@@ -106,6 +106,12 @@ to 100 Gbits/sec with less than a microsecond latency. As of this writing, the
 popular Infiniband versions are FDR (Fourteen Data Rate) with 56 Gbits/sec and
 EDR (Enhanced Data Rate) with 100 Gbits/sec.
 
+##### IOPS
+
+: Input/output operations per second (IOPS, pronounced eye-ops) is an
+input/output performance measurement used to characterize computer storage
+system performance.
+
 ##### Job
 
 : A job, or batch job, is the scheduler’s base unit of computing by which
