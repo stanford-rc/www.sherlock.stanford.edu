@@ -293,11 +293,12 @@ services, we also provide a set of utilities that can help.
 
 ### Google Drive
 
-!!! tip "Google Drive storage for @stanford.edu users"
+!!! tip "Google Drive storage for Stanford users"
 
     Google Drive is free for educational institutions. Meaning you can get
     **free** and **unlimited** storage on Google Drive using your @stanford.edu
-    account.
+    account. See the [University IT Google Drive page][url_uit_gdrive] for more
+    details.
 
 We provide the `gdrive` tool on Sherlock to interact with Google Drive. You'll
 just need to load the `gdrive` module to be able to use it to move your
@@ -353,7 +354,7 @@ documentation][url_rclone].
 [url_bbcp]:         https://www.slac.stanford.edu/~abh/bbcp
 [url_rclone]:       https://rclone.org/
 [url_gdrive]:       https://github.com/prasmussen/gdrive
-
+[url_uit_gdrive]:   https://uit.stanford.edu/service/googleapps/drive
 
 
 [comment]: #  (footnotes -----------------------------------------------------)
