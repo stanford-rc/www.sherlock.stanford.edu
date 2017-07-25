@@ -517,13 +517,81 @@ failure of the whole system or datacenter-level disaster.
 
 :construction:
 
-ACLs can be used to allow users from other groups to access your files on
-Sherlock. More details to come.
+Traditional UNIX file protection are supported on Sherlock and provides read,
+write, and execute permissions for the three classes: file owner, group, and
+other. Those are not enough if you want to share files with a specific set of
+users or from other groups. Access Control Lists (ACLs) can be used to do that.
+
+There are two type of ACLs supported on Sherlock depending on the underlying
+filesystem.
+
+| Type of ACLs   |  Filesystems |
+| -------------- |  ------------ |
+| NFSv4 ACLs     |  `$HOME` and `$PI_HOME` |
+| POSIX ACLs     |  `$SCRATCH`, `$PI_SCRATCH`, `$L_SCRATCH` and `$OAK` |
+
+
+### POSIX ACLs
+
+POSIX ACLs allows you to grant or deny access to different users or groups even
+though they do not correspond to the original owner or the owning group.
+
+You can set two types of POSIX ACLs:
+
+* **Access ACLs**: grant permission for a specific file or directory.
+* **Default ACLs**: for directory only, if a file or directory inside that directory
+does not have an ACL, it inherits the permissions of the default ACLs of the
+directory.
+
+For more information about POSIX ACLs, please read
+[this documentation][url_rhel_posix_acl].
+
+In the example below, we allow two users to access a restricted directory located at
+`$PI_SCRATCH/restricted-dir/`:
+
+```
+$ cd $PI_SCRATCH
+
+# Create new directory
+$ mkdir restricted-dir
+
+# Remove 'group' and 'other' access
+$ chmod g-rwx,o-rwx restricted-dir
+
+# Give user bob read access to the directory
+$ setfacl -m u:bob:rX restricted-dir
+
+# Use default ACLs (-d) to give user bob read access to all new
+# files and sub-directories
+$ setfacl -d -m u:bob:rX restricted-dir
+
+# Give user jane read and write access to the directory
+$ setfacl -d -m u:jane:rwX restricted-dir
+
+# Use default ACLs (-d) to give user jane read and write access to all
+# new files and sub-directories
+$ setfacl -d -m u:jane:rwX restricted-dir
+
+# Show ACLs
+$ getfacl restricted-dir
+```
+
+!!! danger "Default permissions on `$PI_SCRATCH`"
+
+    By default, the UNIX permissions on the root directory `$PI_SCRATCH` don't
+    allow any _other_ users to access or cross it. If you plan to use ACLs to
+    share files there with other groups, please be sure _other_ users cannot
+    cross your sub-directories (o-x) and then contact us at
+    research-computing-support@stanford.edu so we can authorize _other_ users
+    to cross your `$PI_SCRATCH` (we'll add the o+x permission bit, or `0001`).
+
+    For `$SCRATCH`, you're the owner of the directory and so you can change the
+    permissions yourself.
+
+
+### NFSv4 ACLs
 
 :construction:
-
-
-
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
@@ -531,6 +599,7 @@ Sherlock. More details to come.
 [url_lustre]:   https://en.wikipedia.org/wiki/Lustre_(file_system)
 [url_oak]:      https://oak-storage.stanford.edu
 [url_oak_snap]: https://srcc.stanford.edu/oak-rsnapshot
+[url_rhel_posix_acl]: https://access.redhat.com/documentation/en-US/Red_Hat_Storage/2.0/html/Administration_Guide/ch09s05.html
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
@@ -540,4 +609,5 @@ Sherlock. More details to come.
   the storage system usage conditions evolve.
 [^oak_snap]: Snapshots on `$OAK` require additional storage space. Please see
   [the Oak Snapshots Feature page][url_oak_snap] for details.
+
 
