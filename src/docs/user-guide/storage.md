@@ -204,7 +204,7 @@ Retention types:
 | Quota         | 20 TB per user (based on file ownership) |
 | Snapshots     | **NO** |
 | Backups       | **NO** |
-| Purge policy  | data not accessed in the last 6 months are automatically purged |
+| Purge policy  | data not modified in the last 6 months are automatically purged |
 | Scope  | all login and compute nodes |
 
 
