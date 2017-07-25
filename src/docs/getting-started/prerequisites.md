@@ -14,7 +14,7 @@ To start using Sherlock, you will need:
 * a [SSH client][url_ssh],
 * good understanding of the [concepts][url_concepts] and [terms][url_glossary]
   used throughout that documentation,
-* some familiarity with [UNIX/Linux command-line environments][url_unix], and
+* some familiarity with [Unix/Linux command-line environments][url_unix], and
   notions of [shell scripting][url_bash].
 
 
@@ -81,10 +81,10 @@ implementations][url_ssh_clients] are available, but have not necessarily been t
 with Sherlock, so your mileage may vary.
 
 
-## UNIX/Linux resources
+## Unix/Linux resources
 
-A full tutorial on using UNIX/Linux is beyond the scope of this documentation.
-However, there are many tutorials for beginning to use UNIX/Linux on the web.
+A full tutorial on using Unix/Linux is beyond the scope of this documentation.
+However, there are many tutorials for beginning to use Unix/Linux on the web.
 
 A few tutorials we recommend are:
 
