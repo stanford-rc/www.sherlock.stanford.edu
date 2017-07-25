@@ -1,3 +1,5 @@
+# Sherlock <small>documentation</small>
+
 <!-- HTML interlude for the main page logo -->
 <style>
 @media only screen and (max-width: 720px) {
@@ -5,13 +7,14 @@
         display: none;
     }
 }
+#logo_head {
+    margin-top: -50px;
+}
 </style>
 <img id="logo_head" align="right" width="220px"
      alt="Sherlock" src="/img/logo.png">
-
 <!-- resuming normal Markdown operations -->
 
-# Sherlock <small>documentation</small>
 
 !!! warning
     This guide is a work in progress and is not complete yet. We are actively
