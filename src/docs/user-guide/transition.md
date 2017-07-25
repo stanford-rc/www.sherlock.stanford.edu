@@ -317,7 +317,7 @@ to add new applications over the coming days and weeks.
 
 Your feedback is very important to us, especially in the early stages of a new
 system. So please tell us about any issues you run into and successes you have.
-Feel free to contact us by email at research-computing-support@stanford.edu.
+Feel free to contact us by email at srcc-support@stanford.edu.
 
 
 

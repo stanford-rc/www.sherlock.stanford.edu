@@ -23,7 +23,7 @@ offers training and learning opportunities around HPC tools and technologies.
 
 For more information, please see the [SRCC website][url_srcc]
 
-[email]:          mailto:research-computing-support@stanford.edu
+[email]:          mailto:srcc-support@stanford.edu
 [url_provost]:    //provost.stanford.edu/
 [url_dor]:        //doresearch.stanford.edu/research-offices/dor-office-vice-provost-and-dean-research
 [url_uit]:        //uit.stanford.edu
@@ -49,7 +49,7 @@ performed on Sherlock acknowledge this. The following wording is suggested:
 ### Email
 
 Research Computing support can be reached by sending an email to
-research-computing-support@stanford.edu and mentioning *Sherlock*.
+srcc-support@stanford.edu and mentioning *Sherlock*.
 
 To ensure a timely and relevant response, please make sure to include some
 additional details, such as job ids, commands executed and error messages

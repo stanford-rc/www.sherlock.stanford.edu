@@ -159,7 +159,7 @@ by the following *message of the day*:
   See https://privacy.stanford.edu/faqs/hipaa-faqs for more information.
 -----------------------------------------------------------------------------
 
-  Support           email: research-computing-support@stanford.edu
+  Support           email: srcc-support@stanford.edu
   ========   office hours: Tuesdays 10-11am, Thursdays 3-4pm,
                            room 261-262 @ Polya Hall
 

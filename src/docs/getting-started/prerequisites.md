@@ -22,7 +22,7 @@ To start using Sherlock, you will need:
 ## How to request an account
 
 To request an account, the sponsoring Stanford faculty member should email
-research-computing-support@stanford.edu, specifying the names and SUNet IDs of
+srcc-support@stanford.edu, specifying the names and SUNet IDs of
 his/her research team members needing an account.
 
 Sherlock is open to the Stanford community as a computing resource to support

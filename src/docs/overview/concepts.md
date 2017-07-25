@@ -229,7 +229,7 @@ will be delayed until after the maintenance.
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
-[email]:          mailto:research-computing-support@stanford.edu
+[email]:          mailto:srcc-support@stanford.edu
 [url_provost]: 	  https://provost.stanford.edu/
 [url_dor]:     	  https://doresearch.stanford.edu/research-offices/dor-office-vice-provost-and-dean-research
 [url_uit]:	   	  https://uit.stanford.edu

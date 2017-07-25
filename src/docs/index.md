@@ -100,7 +100,7 @@ Here's what it looks like in motion:
 
 [url_wiki]:     http://sherlock.stanford.edu
 [url_srcc]:     http://srcc.stanford.edu
-[url_contact]:  mailto:research-computing-support@stanford.edu
+[url_contact]:  mailto:srcc-support@stanford.edu
 [url_news]:     http://news.sherlock.stanford.edu
 [url_status]:   http://status.sherlock.stanford.edu
 

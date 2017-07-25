@@ -3,7 +3,7 @@
 ## How to submit a successful support request
 
 If you're facing issues you can't figure out, we're here to help. Feel free to
-email us at research-computing-support@stanford.edu, but please keep the
+email us at srcc-support@stanford.edu, but please keep the
 following points in mind to ensure a timely and relevant response to your
 support requests.
 
