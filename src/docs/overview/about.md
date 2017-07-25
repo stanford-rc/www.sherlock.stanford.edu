@@ -1,6 +1,12 @@
 # About us
 
-## SRCC
+<style>
+img[alt="logo"] {
+    width: 400px;
+}
+</style>
+
+![logo](img/srcc.png)
 
 The Stanford Research Computing Center ([SRCC][url_srcc]) is a joint effort of
 the [Dean of Research]() and [IT Services][url_uit] to build and support a
@@ -83,6 +89,7 @@ We would like to thank the following companies for their generous sponsorship,
 and for providing services and resources that help us manage Sherlock every
 day:
 
+<!-- HTML styles for icons, pics and tables -->
 <style>
 img[alt="favicon"] {
     bottom: -3px;
@@ -93,13 +100,14 @@ img[alt="screencap"] {
     width: 320px;
     margin: 5px;
 }
+.md-typeset__table{
+    width: 100%;
+}
 </style>
 
-* ![favicon](//github.com/favicon.ico) [GitHub](https://github.com)
-* ![favicon](//hund.io/favicon.ico) [Hund](https://hund.io)
-* ![favicon](//travis-ci.com/images/favicon.png) [Travis CI](https://travis-ci.com)
-* ![favicon](//updown.io/favicon.ico) [updown.io](https://updown.io/)
-* ![favicon](//zenhub.com/favicon.ico) [ZenHub](https://zenhub.com)
+|       |       |       |       |       |
+| :---: | :---: | :---: | :---: | :---: |
+| ![favicon](//github.com/favicon.ico) [GitHub](https://github.com) | ![favicon](//hund.io/favicon.ico) [Hund](https://hund.io) | ![favicon](//travis-ci.com/images/favicon.png) [Travis CI](https://travis-ci.com) | ![favicon](//updown.io/favicon.ico) [updown.io](https://updown.io/) | ![favicon](//zenhub.com/favicon.ico) [ZenHub](https://zenhub.com) |
 
 
 The Sherlock website and documentation also rely on the following projects:
