@@ -42,6 +42,12 @@ please [contact us][url_contact] to suggest additions or modifications.
 
 ## Getting Started
 
+!!! tip "Searching the docs"
+
+    If you're looking for information on a specific topic, the Search feature
+    of this site will allow you to quickly find the page you're looking for.
+    Just press ++s++ or ++f++ to open the Search bar and start typing.
+
 You can first take a look at the [concepts][url_concepts] and
 [definitions][url_glossary] of terms to get familiar with the terminology used
 throughout those pages. You can also take a look at Sherlock's
