@@ -123,7 +123,7 @@ time, though.
 
 If you are interested in becoming an owner, you can find the latest information
 about ordering Sherlock nodes on the [Sherlock ordering page][url_orders]
-(SUNetID login required), and feel free to [contact us][email].
+(SUNet ID login required), and feel free to [contact us][email].
 
 
 ## Cluster generations
