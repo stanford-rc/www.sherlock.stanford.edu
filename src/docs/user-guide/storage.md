@@ -56,8 +56,8 @@ same PI group. User locations are only accessible by the user.
 | -------------- | ---------: | ----------: | --------- |
 |`$HOME`         | user       |       15 GB | $\infty$  |
 |`$PI_HOME`      | group      |        1 TB | $\infty$  |
-|`$SCRATCH`      | user       |       20 TB | limited   |
-|`$PI_SCRATCH`   | group      |       30 TB | limited   |
+|`$SCRATCH`      | user       |       20 TB | time limited   |
+|`$PI_SCRATCH`   | group      |       30 TB | time limited   |
 |`$L_SCRATCH`| n/a        |         n/a | job       |
 |`$OAK`          | group      | amount purchased | $\infty$ |
 
@@ -73,10 +73,10 @@ Quota types:
 Retention types:
 
 * **$\infty$**: files are kept as long as the user account exists on Sherlock.
-* **limited**: files are kept for a fixed length of time after they've been
-  last modified.
-* **job**: files are only kept for the duration of the job and are automatically
-  purged when the job ends.
+* **time limited**: files are kept for a fixed length of time after they've
+  been last modified.
+* **job**: files are only kept for the duration of the job and are
+  automatically purged when the job ends.
 
 
 ### Features and purpose
