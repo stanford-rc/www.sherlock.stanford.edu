@@ -38,18 +38,17 @@ $ echo $SCRATCH
 
 ### List
 
-| Name           |  Availability | Shared | Access | Cost |
+| Name           |  Scope | Access type | Cost |
 | -------------- |  ------------ | ------ | ------ | ---- |
-|`$HOME`         |  all cluster  | no     | user   | Free |
-|`$PI_HOME`      |  all cluster  | yes    | group  | Free |
-|`$SCRATCH`      |  all cluster  | no     | user   | Free |
-|`$PI_SCRATCH`   |  all cluster  | yes    | group  | Free |
-|`$L_SCRATCH`|  single compute node | no | user | Free |
-|`$OAK`          |  optional (purchase required) | yes | group | Yes[^oak_sd] |
+|`$HOME`         |  cluster  | user   | Free |
+|`$PI_HOME`      |  cluster  | group  | Free |
+|`$SCRATCH`      |  cluster  | user   | Free |
+|`$PI_SCRATCH`   |  cluster  | group  | Free |
+|`$L_SCRATCH`    |  compute node | user | Free |
+|`$OAK`          |  cluster (optional, purchase required) | group | Yes[^oak_sd] |
 
-Shared storage locations are typically shared between all the
-  members of the same PI group. Non-shared locations are only accessible by the
-  user.
+Group storage locations are typically shared between all the members of the
+same PI group. User locations are only accessible by the user.
 
 ### Quotas and limits
 
@@ -120,7 +119,7 @@ Retention types:
 | Snapshots     | yes *(cf. [Snapshots](#snapshots) for more info)* |
 | Backups       | off-site replication |
 | Purge policy  | not purged |
-| Availability  | all login and compute nodes |
+| Scope  | all login and compute nodes |
 
 **Recommended usage**
 
@@ -164,7 +163,7 @@ Retention types:
 | Snapshots     | yes *(cf. [Snapshots](#snapshots) for more info)* |
 | Backups       | off-site replication |
 | Purge policy  | not purged |
-| Availability  | all login and compute nodes |
+| Scope  | all login and compute nodes |
 
 **Recommended usage**
 
@@ -206,7 +205,7 @@ Retention types:
 | Snapshots     | **NO** |
 | Backups       | **NO** |
 | Purge policy  | data not accessed in the last 6 months are automatically purged |
-| Availability  | all login and compute nodes |
+| Scope  | all login and compute nodes |
 
 
 **Recommended usage**
@@ -279,7 +278,7 @@ Retention types:
 | Snapshots     | **NO** |
 | Backups       | **NO** |
 | Purge policy  | data not accessed in the last 6 months are automatically purged |
-| Availability  | all login and compute nodes |
+| Scope  | all login and compute nodes |
 
 
 **Recommended usage**
@@ -332,7 +331,7 @@ your group  quota usage in `$SCRATCH`:
 | Snapshots     | **NO** |
 | Backups       | **NO** |
 | Purge policy  | data immediately purged at the end of the job |
-| Availability  | locally on each node, not shared across nodes |
+| Scope  | locally on each node, not shared across nodes |
 
 **Recommended usage**
 
@@ -374,7 +373,7 @@ page][url_oak].
 | Snapshots     | optional[^oak_snap] |
 | Backups       | **NO** |
 | Purge policy  | not purged |
-| Availability  | all login and compute nodes <br/>*(also available through gateways outside of Sherlock)* |
+| Scope  | all login and compute nodes <br/>*(also available through gateways outside of Sherlock)* |
 
 
 **Recommended usage**
