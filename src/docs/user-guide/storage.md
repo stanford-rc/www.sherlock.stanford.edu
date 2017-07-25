@@ -530,6 +530,7 @@ Sherlock. More details to come.
 [url_NFS]:      https://en.wikipedia.org/wiki/Network_File_System
 [url_lustre]:   https://en.wikipedia.org/wiki/Lustre_(file_system)
 [url_oak]:      https://oak-storage.stanford.edu
+[url_oak_snap]: https://srcc.stanford.edu/oak-rsnapshot
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
@@ -537,6 +538,6 @@ Sherlock. More details to come.
   please see the [Oak Service Description page][url_oak].
 [^snap_policy]: The snapshot policy is subject to change and may be adjusted as
   the storage system usage conditions evolve.
-[^oak_snap]: Snapshots on `$OAK` are based on clone and incremental snapshots
-  and require additional storage space.
+[^oak_snap]: Snapshots on `$OAK` require additional storage space. Please see
+  [the Oak Snapshots Feature page][url_oak_snap] for details.
 
