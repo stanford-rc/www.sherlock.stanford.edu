@@ -49,7 +49,7 @@ resources permit[^install_req].
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_contact]: srcc-support@stanford.edu
+[url_contact]:      srcc-support@stanford.edu
 [url_software_lic]: https://uit.stanford.edu/service/softwarelic
 
 [comment]: #  (footnotes -----------------------------------------------------)
