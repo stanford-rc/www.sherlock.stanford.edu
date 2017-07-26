@@ -37,7 +37,7 @@ simplify the use of their own custom software installations.
     see the [Software Installation page](installation).
 
 If the software you need is not in the [list of available software](list), and
-you hav etrouble installing it on your own, please [contact us][url_contact]
+you have trouble installing it on your own, please [contact us][url_contact]
 with ^^complete details about the package^^, and we will try to help you
 install it.
 
