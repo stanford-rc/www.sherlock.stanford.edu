@@ -13,7 +13,7 @@ Software Licensing office][url_software_lic].
 
 ## Installation requests
 
-!!! warning "Custom software installations"
+!!! warning "Installation requests"
 
     The SRCC team installs, for general use, a set of libraries, tools and
     software applications that are commonly used across many research groups.
@@ -23,17 +23,23 @@ Software Licensing office][url_software_lic].
 
 We strongly encourage users to build custom and field- or domain-specific
 software themselves, and install it in their own [personal or group shared
-directories](../storage). That way, they can share the software installations with the
-rest of the users in their group, if necessary.
+directories](../storage). That way, they can share the software installations
+with the rest of the users in their group, if necessary.
 
 Users may even maintain and publish their own [local module
 files](modules#custom-modules) to dynamically configure a running environment
 to use the software. They could share those modules with other users to
 simplify the use of their own custom software installations.
 
-If the software you need is not in the [list of available software](list),
-please [contact us][url_contact] with **complete details about the package**,
-and we will try to help you install it.
+!!! tip "Installing your own software"
+
+    For more information about building your own software on Sherlock, please
+    see the [Software Installation page](installation).
+
+If the software you need is not in the [list of available software](list), and
+you hav etrouble installing it on your own, please [contact us][url_contact]
+with ^^complete details about the package^^, and we will try to help you
+install it.
 
 If it's a widely used software that could benefit multiple users across
 different scientific communities, we will consider install it globally as
