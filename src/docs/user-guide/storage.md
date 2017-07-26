@@ -634,7 +634,7 @@ default:mask::rwx
 default:other::---
 ```
 
-!!! danger "Default permissions on `$PI_SCRATCH` don't allow sharing outside of your group"
+!!! warning "Default permissions on `$PI_SCRATCH` don't allow sharing outside of your group"
 
     By default, the Unix permissions on the root directory `$PI_SCRATCH` don't
     allow read nor traversal access for *otheris* (*ie.* any user no part of

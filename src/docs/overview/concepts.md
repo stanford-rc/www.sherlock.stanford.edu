@@ -224,7 +224,8 @@ periodic basis. Besides, we will place a reservation in the scheduler for each
 maintenance that would prevent jobs to run past it. This means that the
 scheduler will only allow jobs to run if they can finish by the time the
 maintenance starts. If you submit a long job soon before the maintenance, it
-will be delayed until after the maintenance.
+will be delayed until after the maintenance. That will ensure that no work is
+lost when the maintence starts.
 
 
 
@@ -239,7 +240,7 @@ will be delayed until after the maintenance.
 [url_minsec]:     https://uit.stanford.edu/guide/securitystandards
 [url_admin]:  	  https://adminguide.stanford.edu
 [url_fairshare]:  /docs/advanced-topics/scheduler#fair-share
-[url_transition]: /docs/user-guide/transition
+[url_transition]: /docs/overview/transition
 
 [url_HIPAA]: https://en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act
 [url_PHI]:   https://en.wikipedia.org/wiki/Protected_health_information

@@ -168,10 +168,10 @@ Here's what it looks like in motion:
 
 [url_concepts]:   /docs/overview/concepts
 [url_glossary]:   /docs/overview/glossary
+[url_transition]: /docs/overview/transition
 [url_prereq]:     /docs/getting-started/prerequisites
 [url_connect]:    /docs/getting-started/connecting
 [url_submit]:     /docs/getting-started/submitting
-[url_transition]: /docs/user-guide/transition
 
 [url_shu_ml]:   //mailman.stanford.edu/mailman/listinfo/sherlock-users
 [url_sha_ml]:   //mailman.stanford.edu/mailman/listinfo/sherlock-announce
