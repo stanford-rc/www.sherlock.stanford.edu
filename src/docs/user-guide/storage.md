@@ -53,7 +53,7 @@ same PI group. User locations are only accessible by the user.
 ### Quotas and limits
 
 | Name           | Quota type | Quota value | Retention |
-| -------------- | ---------: | ----------: | --------- |
+| -------------- | ---------- | ----------: | --------- |
 |`$HOME`         | user       |       15 GB | $\infty$  |
 |`$PI_HOME`      | group      |        1 TB | $\infty$  |
 |`$SCRATCH`      | user       |       20 TB | time limited   |
