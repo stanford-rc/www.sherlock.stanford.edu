@@ -161,7 +161,7 @@ Here's what it looks like in motion:
 
 [url_old_wiki]:     //sherlock.stanford.edu
 [url_srcc]:         //srcc.stanford.edu
-[url_contact]:      srcc-support@stanford.edu
+[url_contact]:      mailto:srcc-support@stanford.edu
 [url_docs]:         //www.sherlock.stanford.edu/docs
 [url_news]:         //news.sherlock.stanford.edu
 [url_status]:       //status.sherlock.stanford.edu
