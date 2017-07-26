@@ -1,4 +1,4 @@
-<script src="//libraries.hund.io/status-js/status-2.2.1-compat.js"></script>
+<script src="//libraries.hund.io/status-js/status-2.3.5-compat.js"></script>
 <script>
   var statusWidget = new Status.Widget({
     hostname: "status.sherlock.stanford.edu",
