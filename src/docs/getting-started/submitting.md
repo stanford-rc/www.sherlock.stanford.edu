@@ -38,25 +38,28 @@ clusters][url_top500].
 Slurm supports a variety of job submission techniques. By accurately requesting
 the resources you need, you’ll be able to get your work done.
 
-
-## How to submit a job
-
-A job consists in two parts: resource requests and job steps.
-
-: **Resource requests** describe the amount of computing resource (CPUs, GPUs,
-memory, expected run time, etc.) that the job will need to successfully
-execute.
-
-: **Job steps** describe tasks that must be executed.
-
-
 !!! tip "Wait times in queue"
 
     As a quick rule of thumb, it's important to keep in mind that the more
     resources your job requests (CPUs, GPUs, memory, nodes, and time), the
     longer it may have to wait in queue before it could start.
 
-### Write a batch script
+    In other words:
+    accurately requesting resources to match your job's needs will minimize
+    your wait times.
+
+
+## How to submit a job
+
+A job consists in two parts: resource requests and job steps.
+
+: **Resource requests** describe the amount of computing resource (CPUs, GPUs,
+memory, expected run time, etc.) that the job will need to successfully run.
+
+: **Job steps** describe tasks that must be executed.
+
+
+### Batch scripts
 
 The typical way of creating a job is to write a job submission script. A
 submission script is a shell script (e.g. a Bash script) whose first comments,
@@ -102,7 +105,7 @@ Once the submission script is written properly, you can submit it to the
 scheduler with the `sbatch` command. Upon success, `sbatch` will return the ID
 it has assigned to the job (the jobid).
 
-```bash
+```
 $ sbatch submit.sh
 Submitted batch job 1377
 ```
@@ -117,7 +120,7 @@ goes to the `COMPLETED` state, otherwise, its state is set to `FAILED`.
 You'll be able to check the status of your job and follow its evolution with
 the `squeue -u $USER` command:
 
-```bash
+```
 $ squeue -u $USER
      JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
       1377    normal     test   kilian  R       0:12      1 sh-101-01
@@ -129,12 +132,12 @@ result of the commands run in the script file. That output file is names
 In the above example, you can list the contents of that output file with the
 following commands:
 
-```bash
+```
 $ cat slurm-1377.out
 sh-101-01
 ```
 
-Congratulations, you've submitted a batch job on Sherlock!
+Congratulations, you've submitted your first batch job on Sherlock!
 
 
 ##  What's next?
