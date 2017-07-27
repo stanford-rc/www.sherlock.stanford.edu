@@ -17,7 +17,7 @@ This typically involves providing the following information:
 * the command(s) you ran, and/or the job submission script(s) you used
 * the **exact**, **full** error message (or trace) you received.
 
-    !!! bug "Error messages are critical"
+    !!! danger "Error messages are critical"
 
         This is very important. Without proper error messages, there is nothing we
         can do to help. And *it doesn't work* is not a proper error message.
