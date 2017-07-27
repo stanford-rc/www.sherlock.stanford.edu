@@ -6,15 +6,18 @@
 If the software package or version you need is not available in the [list of
 provided software][url_sw_list], you may compile and install it yourself. The
 recommended location for user-installed software is the
-[`$PI_HOME`][url_pi_home] group shared directory, which is snapshotted and
+`$PI_HOME` [group shared directory][url_pi_home], which is snapshotted and
 replicated off-site, and can easily be shared with members of a research group.
 
-:construction:
-More details to come
-:construction:
+!!! bug ":construction: Work in progress :construction:"
+
+    More details to come
+
+[comment]: #  (TODO: info about compilers, prefix, cmake, `system` module category, custom modules)
+
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_sw_overview]:  /docs/software/overview
-[url_sw_list]:  /docs/software/list
-[url_pi_home]:  /docs/user-guide/storage#pi_home
+[url_sw_list]:      /docs/software/list
+[url_pi_home]:      /docs/user-guide/storage#pi_home
