@@ -8,12 +8,14 @@ modules*.
     The use of a module system means that most software is not accessible by
     default and has to be loaded using the `module` command. This mechanism
     allows us to provide multiple versions of the same software concurrently,
-    and gives users the possibility to easily switch between versions of the
-    same software
+    and gives users the possibility to easily switch between software versions.
 
 Sherlock uses [Lmod][url_lmod] to manage software installations. The modules
 system helps setting up the user's shell environment to give access to
-applications, and make running and compiling software easier.
+applications, and make running and compiling software easier. It also allows us
+to provide multiple versions of the same software, that would otherwise
+conflict with each other, and abstract things from the OS sometimes rigid
+versions and dependencies.
 
 When you first log into Sherlock, you'll be presented with a default, bare bone
 environment with minimal software available. The module system is used to
@@ -218,7 +220,7 @@ the modules you have loaded, and restore the original state where only the
 If you want to remove *all* modules from your environment, including the
 default `math` and `devel` modules, you can use `ml --force purge`.
 
-### Loading modules in Slurm jobs
+### Loading modules in jobs
 
 In order for an application running in a Slurm job to have access to any
 necessary module-provided software packages, we recommend loading those modules
