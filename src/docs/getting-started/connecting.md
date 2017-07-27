@@ -183,9 +183,9 @@ compute node.
 
 !!! danger "Login nodes are not for computing"
 
-    Login nodes are usually shared among many users and therefore must not be
-    used to run computationally intensive tasks. Those should be submitted to
-    the scheduler which will dispatch them on compute nodes.
+    Login nodes are shared among many users and therefore must not be used to
+    run computationally intensive tasks. Those should be submitted to the
+    scheduler which will dispatch them on compute nodes.
 
 By contrast, the shell prompt on a login node looks like this:
 
