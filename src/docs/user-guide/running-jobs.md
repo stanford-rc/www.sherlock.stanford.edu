@@ -33,6 +33,17 @@ Acceptable use of login nodes include:
     CPU time, memory and run time) exceed those limits.
 
 
+## Slurm commands
+
+Slurm allows requesting resources and submitting jobs in a variety of ways. The
+main Slurm commands to submit jobs are listed in the table below:
+
+| Command  | Description | Behavior |
+| -------- | ----------- | -------- |
+| `salloc` | Request resources and allocates them to a job | Starts a new shell, but does not execute anything |
+| `srun`   | Request resources and runs a command on the allocated compute node(s) | Blocking command: will not return until the job ends |
+| `sbatch` | Request resources and runs a script on the allocated compute node(s) | Asynchronous command: will return as soon as the job is submitted |
+
 ## Interactive jobs
 
 ### Dedicated nodes
@@ -77,18 +88,31 @@ Usage: sdev [OPTIONS]
         -q      quality of service to request for the job (default: normal)
 
 ```
-If you prefer to submit an existing job script or other executable as an
-interactive job, you can use the `salloc` command:
+
+Another way to get an interactive session on a compute node is to use `srun` to
+execute a shell through the scheduler. For instance, to start a `bash` session
+on a compute node, with the default resource requirements (one core for 2
+hours), you can run:
+
+```
+$ srun --pty bash
+```
+
+The main advantage of this approach is that it will allow you to specify the
+whole range of submission options that `sdev` may not support.
+
+Finally, if you prefer to submit an existing job script or other executable as
+an interactive job, you can use the `salloc` command:
 
 ```
 $ salloc script.sh
 ```
 
-If you don't provide a command to execute, `salloc` wil start a Slurm job and
+If you don't provide a command to execute, `salloc` will start a Slurm job and
 allocate resources for it, but it will not automatically connect you to the
 allocated node(s). It will only start a new shell on the same node you launched
-`salloc` from, and set up the appropriate `$SLURM_*` [environment
-variables][url_slurm_env]. So you will typically need to look at them to see
+`salloc` from, and set up the appropriate `$SLURM_*` environment
+variables. So you will typically need to look at them to see
 what nodes have been assigned to your job. For instance:
 
 ```
@@ -101,7 +125,7 @@ $ ssh sh-101-55
 sh-101-55 ~ $
 ```
 
-#### Connecting to compute nodes
+#### Connecting to nodes
 
 !!! warning "Login to compute nodes"
 
