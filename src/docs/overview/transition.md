@@ -1,3 +1,5 @@
+# Sherlock 2.0 <small>transition guide</small>
+
 This transition guide is intended for users already familiar with Sherlock, to
 help them moving to Sherlock 2.0: differences with the existing, temporary
 conditions, etc.
@@ -295,13 +297,26 @@ In terms of scheduling, the same principles users are already familiar
 with on Sherlock 1.0 are conserved:
 
 * a set of general partitions, available to all users: `normal`, `bigmem`,
-  `gpu`, `dev`
-* owner-specific partitions, regrouping nodes bought by PI groups
-* a global `owners` partition, to allow other owners to use idle nodes.
-* same backfilling and fair share scheduling rules
-* similar limits on most partitions
+  `gpu`, `dev`,
+* owner-specific partitions, regrouping nodes bought by PI groups,
+* a global `owners` partition, to allow other owners to use idle nodes,
+* same backfilling and fair share scheduling rules,
+* similar limits on most partitions,
 
-For more details, see the [Scheduler][url_scheduler] page.
+!!! warning "Owners' partition on Sherlock 2.0"
+
+    While the two clusters operate as separate entities (phase 1 of the
+    [transition process](#transition-process)), owners on Sherlock 1.0 and
+    Sherlock 2.0 will be considered two distinct groups. Meaning that Sherlock
+    1.0 owners won't be able to use the `owners` partition on Sherlock 2.0, and
+    vice-versa.
+
+    As we move through [Phase 2](#transition-process), and as Sherlock 1.0
+    owners nodes are folded into Sherlock 2.0, Sherlock 1.0 owners will gain
+    access to the `owners` partition on Sherlock 2.0.
+
+
+For more details about the scheduler, see the [Running Jobs][url_jobs] page.
 
 
 ### Software modules
@@ -335,7 +350,7 @@ Feel free to contact us by email at srcc-support@stanford.edu.
 
 [url_docs]:         /docs
 [url_modules]:      /docs/software/modules
-[url_scheduler]:    /docs/advanced-topics/scheduler
+[url_jobs]:         /docs/user-guide/running
 [url_login]:        /docs/getting-started/connecting
 [url_transfer]:     /docs/user-guide/data-transfer
 
