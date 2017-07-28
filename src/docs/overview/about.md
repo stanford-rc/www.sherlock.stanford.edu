@@ -70,6 +70,28 @@ The Sherlock website and documentation also rely on the following projects:
 * [Agency Bootstrap](//startbootstrap.com/template-overviews/agency/)
 
 
+## Why the Sherlock name?
+
+If you're curious about where the *Sherlock* name came from, we always
+considered that computing resources in general and HPC clusters in particular
+should be the catalyst of innovation, be ahead of their time, and spur new
+discoveries.
+
+And what better account of what's happening on a high-performance computing
+cluster than Benedict Cumberbatch describing his role as Sherlock Holmes in
+the BBC's modern adaptation of Arthur Conan Doyle's classic?
+
+!!! quote ""
+
+    There's a great charge you get from playing him, because of the volume of
+    words in your head and the speed of thought – you really have to make your
+    connections incredibly fast. He is one step ahead of the audience, and of
+    anyone around him with normal intellect. They can't quite fathom where his
+    leaps are taking him.
+
+Yes, exactly. That's Sherlock.
+
+
 ## Sherlock, of HBO fame
 
 And finally, we couldn't resist to the pleasure of citing the most
