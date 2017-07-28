@@ -318,7 +318,7 @@ before the actual executable calls. For instance:
 ml reset
 ml load gromacs/2016.3
 
-srun mdrun_mpi ...
+srun gmx_mpi ...
 ```
 
 ## Custom modules
