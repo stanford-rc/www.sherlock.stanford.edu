@@ -34,7 +34,7 @@ There currently are two types of GPUs available in the `gpu` partition:
 
 
 
-### Submitting a GPU job
+## Submitting a GPU job
 
 To submit a GPU job, you'll need to use the `--gres` option in your batch script
 or command line submission options.
@@ -134,7 +134,7 @@ table
 | `GPU_SKU`      | GPU model | `TESLA_P100_PCIE`<br/>`TESLA_P40` | `#SBATCH -C GPU_SKU:TESLA_P40` |
 
 Depending on the partitions you have access to, more features may be available
-and could be requested in your jobs.
+to be requested in your jobs.
 
 
 ## Environment and diagnostic tools
