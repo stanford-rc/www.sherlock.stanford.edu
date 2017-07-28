@@ -82,6 +82,7 @@ semantics.
 | --------------- | -------------- | -------------- |
 | `module avail` | `ml av` | List\ available\ software[^missing_mod] |
 | `module spider gromacs` | `ml spider gromacs` | Search for particular software|
+| `module keyword blas` | `ml key blas` | Search for `blas` in module names and descriptions|
 | `module whatis gcc` | `ml whatis gcc` | Display information about the `gcc` module |
 | `module help gcc` | `ml help gcc` | Display module specific help |
 | `module load gcc` | `ml gcc` | Load a module to use the associated software |
@@ -118,9 +119,33 @@ properties are:
 * `g`: GPU-accelerated software, will only run on GPU nodes
 * `m`: Software supports parallel execution using MPI
 
+
+### Searching for modules
+
+You can search through all the available modules for either:
+
+* a module name (if you already know it), using `module spider`
+* any string within modules names and descriptions, using `module keyword`
+
+For instance, if you want to know how to load the `gromacs` module, you can do:
+```
+$ module spider gromacs
+```
+
+If you don't know the module name, or want to list all the modules that contain
+a specific string of characters in their name or description, you can use
+`module keyword`. For instance, the following command will list all the modules
+providing a BLAS library:
+```
+$ module keyword blas
+```
+
+
 ### Examples
 
-List modules that can be loaded
+#### Listing
+
+To list all the modules that can be loaded, you can do:
 
 ```
 $ ml av
@@ -158,7 +183,56 @@ Use "module keyword key1 key2 ..." to search for all possible modules matching
 any of the "keys".
 ```
 
-Get information about a module, and see how to load it:
+#### Searching
+
+To search for a specific string in modules names and descriptions, you can run:
+
+```
+$ module keyword numpy
+---------------------------------------------------------------------------
+
+The following modules match your search criteria: "numpy"
+---------------------------------------------------------------------------
+
+  py-scipystack: py-scipystack/1.0_py27, py-scipystack/1.0_py36
+    The SciPy Stack is a collection of open source software for scientific
+    computing in Python. It provides the following packages: numpy, scipy,
+    matplotlib, ipython, jupyter, pandas, sympy and nose.
+
+---------------------------------------------------------------------------
+[...]
+$ ml key compiler
+---------------------------------------------------------------------------
+
+The following modules match your search criteria: "compiler"
+---------------------------------------------------------------------------
+
+  cmake: cmake/3.8.1
+    CMake is an extensible, open-source system that manages the build
+    process in an operating system and in a compiler-independent manner.
+
+  gcc: gcc/6.3.0, gcc/7.1.0
+    The GNU Compiler Collection includes front ends for C, C++, Fortran,
+    Java, and Go, as well as libraries for these languages (libstdc++,
+    libgcj,...).
+
+  icc: icc/2017.u2
+    Intel C++ Compiler, also known as icc or icl, is a group of C and C++
+    compilers from Intel
+
+  ifort: ifort/2017.u2
+    Intel Fortran Compiler, also known as ifort, is a group of Fortran
+    compilers from Intel
+
+  llvm: llvm/4.0.0
+    The LLVM Project is a collection of modular and reusable compiler and
+    toolchain technologies. Clang is an LLVM native C/C++/Objective-C
+    compiler,
+
+---------------------------------------------------------------------------
+```
+To get information about a specific module, especially how to load it, the
+following command can be used:
 ```
 $ module spider gromacs
 
@@ -179,7 +253,9 @@ $ module spider gromacs
       chemistry
 ```
 
-Loading a category module to get access to field-specific software
+#### Loading
+
+Loading a category module allows to get access to field-specific software:
 
 ```
 $ ml chemistry
