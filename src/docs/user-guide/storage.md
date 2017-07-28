@@ -534,14 +534,14 @@ The access classes are defined as follows:
 
 The following permissions apply to each class:
 
-* The *read* permission grants the ability to read a file. When set for a
+* The `read` permission grants the ability to read a file. When set for a
   directory, this permission grants the ability to read the names of files in
   the directory, but not to find out any further information about them such as
   contents, file type, size, ownership, permissions.
-* The *write* permission grants the ability to modify a file. When set for a
+* The `write` permission grants the ability to modify a file. When set for a
   directory, this permission grants the ability to modify entries in the
   directory. This includes creating files, deleting files, and renaming files.
-* The *execute* permission grants the ability to execute a file. This
+* The `execute` permission grants the ability to execute a file. This
   permission must be set for executable programs, including shell scripts, in
   order to allow the operating system to run them. When set for a directory,
   this permission grants the ability to access file contents and
