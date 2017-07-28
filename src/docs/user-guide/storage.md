@@ -609,7 +609,7 @@ $ setfacl -m u:bob:rX restricted-dir
 $ setfacl -d -m u:bob:rX restricted-dir
 
 ### Give user alice read, write and traversal permissions for the directory
-$ setfacl -d -m u:alice:rwX restricted-dir
+$ setfacl -m u:alice:rwX restricted-dir
 
 ### Use default ACLs (-d) to give user alice read and write access to all
 ### new files and sub-directories
