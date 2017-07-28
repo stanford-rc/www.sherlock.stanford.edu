@@ -9,9 +9,7 @@ recommended location for user-installed software is the
 `$PI_HOME` [group shared directory][url_pi_home], which is snapshotted and
 replicated off-site, and can easily be shared with members of a research group.
 
-!!! bug ":construction: Work in progress :construction:"
-
-    More details to come
+--8<--- "_wip.md"
 
 [comment]: #  (TODO: info about compilers, prefix, cmake, `system` module category, custom modules)
 

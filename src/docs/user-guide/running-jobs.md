@@ -1,11 +1,3 @@
-!!! bug ":construction: Work in progress :construction:"
-
-    This page is a work in progress and is not complete yet. We are actively
-    working on adding more content and information.
-
-
-
-
 ## Login nodes
 
 !!! danger "Login nodes are not for computing"
@@ -153,7 +145,12 @@ specify all arguments directly on the command line for them to be taken into
 account.
 
 
+
 ## Batch jobs
+
+--8<--- "_wip.md"
+
+
 
 
 [comment]: #  (batch jobs, resource requirements, partitions, qos, limits, mail...)
