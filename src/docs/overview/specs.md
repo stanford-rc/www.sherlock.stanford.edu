@@ -70,7 +70,7 @@ files and directories from both Sherlock 1.0 and Sherlock 2.0 nodes.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 [url_status]:  http://status.sherlock.stanford.edu
-[url_gpus]:    /docs/user-guide/gpus
+[url_gpus]:    /docs/user-guide/gpu
 [url_storage]: /docs/user-guide/storage
 [url_dtn]:     /docs/userguide/data-transfer
 [url_oak]:     https://oak-storage.stanford.edu
