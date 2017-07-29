@@ -127,7 +127,7 @@ authentication factor with a message like this:
     one of them with a second authentication factor could rapidely become
     cumbersome. To work around this, the OpenSSH client allows multiplexing
     channels and re-using existing authenticated for opening new sessions.
-    Please see the [Advanced Connection Options][url_adv_conn] page for more
+    Please see the [Advanced Connection Options][url_avoid_duo] page for more
     details.
 
 If your second factor is accepted, you'll see the following message:
@@ -205,7 +205,8 @@ section][url_submit].
 
 [url_prereq]:       /docs/getting-started/prerequisites
 [url_account]:      /docs/getting-started/prerequisites#how-to-request-an-account
-[url_adv_conn]:     /docs/advanced-topics/connection
+[url_avoid_duo]:    /docs/advanced-topics/connection#avoiding-multiple-duo-prompts
+[url_other_auth]:   /docs/advanced-topics/connection#authentication-methods
 [url_suaccounts]:   https://accounts.stanford.edu/
 [url_sunet]:        https://uit.stanford.edu/service/accounts/sunetids
 [url_minsec]:       https://uit.stanford.edu/guide/securitystandards
@@ -220,6 +221,6 @@ were the only allowed authentication method, which could cause some
 interoperability with third-party SSH clients.
 
 [^auth_methods]: For other methods of authentication, see the [Advanced
- Connection Options][url_adv_conn] page.
+ Connection Options][url_other_auth] page.
 
 
