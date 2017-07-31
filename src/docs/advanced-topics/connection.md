@@ -142,8 +142,9 @@ login.sherlock.stanford.edu` block in your configuration file, simply add the
 
 ```
 Host login.sherlock.stanford.edu
-  ControlMaster auto
-  ControlPersist yes
+    ControlMaster auto
+    ControlPersist yes
+    ControlPath ~/.ssh/%l%r@%h:%p
 ```
 
 It will allow SSH to re-use an existing connection to Sherlock each time you
