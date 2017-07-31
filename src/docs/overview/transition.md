@@ -240,6 +240,12 @@ specify when submitting jobs.
 
 ### Software
 
+!!! attention "Changes required"
+
+    Sherlock 2.0 runs a newer version of the Linux Operating System (OS) and as
+    a result, most the software available on Sherlock 1.0 needs to be
+    recompiled and reinstalled to work optimally in the new environment.
+
 Sherlock 2.0 runs an updated software stack, from kernel to user-space
 applications, including management software. Most user-facing applications
 are new version of the same software, while the management stack has been
@@ -251,13 +257,6 @@ Changes include:
 | ---                     | ------------- | ------------- |
 | **OS**                  | CentOS 6.x    | CentOS 7.x    |
 | **Scheduler**           | Slurm 16.05.x | Slurm 17.02.x |
-
-
-!!! attention "Changes required"
-
-    Sherlock 2.0 runs a newer version of the Linux Operating System (OS) and as
-    a result, most the software available on Sherlock 1.0 needs to be
-    recompiled and reinstalled to work optimally in the new environment.
 
 
 
@@ -326,6 +325,26 @@ Sherlock 2.0, with a refreshed but similar [modules][url_modules] system.
 
 That software stack on Sherlock is an ongoing effort, and we'll be continuing
 to add new applications over the coming days and weeks.
+
+
+## How to know which cluster you're on?
+
+!!! tldr "Determine the Sherlock version"
+
+    To check which environment you're running on, check the value of the
+    `$SHERLOCK` environment variable.
+
+To ease transition to the new software environment, and to make re-using the
+same scripts more convenient, we provide a way to check which cluster your
+jobs are running on. By checking the value of the `$SHERLOCK` environment
+variable, you'll be able to determine which environment your scripts should be
+expecting.
+
+| Command                 | Output on Sherlock 1.0  | Output on Sherlock 2.0  |
+| ---                     | ------------: | ------------: |
+| `echo $SHERLOCK`        | `1`           | `2`           |
+
+
 
 
 ## Feedback and support
