@@ -327,12 +327,12 @@ That software stack on Sherlock is an ongoing effort, and we'll be continuing
 to add new applications over the coming days and weeks.
 
 
-## How to know which cluster you're on?
+## How to differentiate clusters?
 
 !!! tldr "Determine the Sherlock version"
 
-    To check which environment you're running on, check the value of the
-    `$SHERLOCK` environment variable.
+    To check which cluster environment you're running on, check the value of
+    the `$SHERLOCK` environment variable.
 
 To ease transition to the new software environment, and to make re-using the
 same scripts more convenient, we provide a way to check which cluster your
@@ -344,7 +344,39 @@ expecting.
 | ---                     | ------------: | ------------: |
 | `echo $SHERLOCK`        | `1`           | `2`           |
 
+So, for instance, the following batch script will check that environment
+variable to determine where it's running, and load the appropriate Python
+module:
 
+```bash
+#!/bin/bash
+#
+#SBATCH --jone-name=test
+#SBATCH --time 10:00
+#
+
+if [[ "$SHERLOCK" == "1" ]]; then
+    echo "Running on Sherlock 1.0"
+    module load python/2.7.5
+
+elif [[ "$SHERLOCK" == "2" ]]; then
+    echo "Running on Sherlock 2.0"
+    module load python/2.7.13
+
+else
+    echo "Uh-oh, not sure where we are..."
+    exit 1
+fi
+
+python -c "print 'Hello Sherlock'"
+```
+
+That script could be submitted with `sbatch` on either cluster, and will
+produce the exact same output.
+
+The `$SHERLOCK` environment variable will remain available throughout all the
+[transition phases](#transition-process), and will stay defined even after the
+two clusters have been merged.
 
 
 ## Feedback and support
