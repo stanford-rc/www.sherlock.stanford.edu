@@ -78,8 +78,8 @@ should be the catalyst of innovation, be ahead of their time, and spur new
 discoveries.
 
 And what better account of what's happening on a high-performance computing
-cluster than Benedict Cumberbatch describing his role as Sherlock Holmes in
-the BBC's modern adaptation of Arthur Conan Doyle's classic?
+cluster than Benedict Cumberbatch [describing][url_quote] his role as Sherlock
+Holmes in the BBC's modern adaptation of Arthur Conan Doyle's classic?
 
 !!! quote ""
 
@@ -98,8 +98,8 @@ And finally, we couldn't resist to the pleasure of citing the most
 prestigious accomplishment of Sherlock to date: a mention in [HBO's Silicon
 Valley][url_sv] [Season 4 finale][url_ep38]!
 
-![screencap](img/richard.png)
-![screencap](img/bighead.png)
+![screencap](/img/richard.webp)
+![screencap](/img/bighead.webp)
 
 Yep, you got that right, [Richard Hendricks][url_richard] wanted to use our
 very own Sherlock. Kudos to the show's crew and whomever did the research and
@@ -108,3 +108,4 @@ got it right, you made our day.
 [url_sv]:       //www.hbo.com/silicon-valley/episodes/4/38-server-error
 [url_ep38]:     //www.hbo.com/silicon-valley
 [url_richard]:  //www.hbo.com/silicon-valley/cast-and-crew/thomas-middleditch
+[url_quote]:    //www.theguardian.com/tv-and-radio/2010/jul/17/benedict-cumberbatch-sherlock-holmes
