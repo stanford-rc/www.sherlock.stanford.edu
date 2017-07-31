@@ -171,6 +171,19 @@ and then should not be typed in).
     [MacOS][url_sshfs_macos] :fa-apple:, and [Windows][url_sshfs_windows]
     :fa-windows:.
 
+    For instance, on a Linux machine with SSHFS installed, you could mount your
+    Sherlock home directory with the following commands:
+
+    ```
+    $ mkdir ~/sherlock_home
+    $ sshfs <sunetid>@login.sherlock.stanford.edu:./ ~/sherlock_home
+    ```
+
+    And to unmount it:
+    ```
+    $ fusermount -u ~/sherlock_home
+    ```
+
     For more information about using SSHFS on your local machine, you can
     refer to this [tutorial][url_sshfs_tuto] for more details and examples.
 

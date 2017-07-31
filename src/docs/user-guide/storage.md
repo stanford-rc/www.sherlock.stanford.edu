@@ -660,6 +660,21 @@ For complete documentation and examples on using NFSv4 ACLs, please see the
 manual page at [nfs4_acl(5)][url_nfs4_acl_man].
 
 
+
+## Accessing Sherlock files from other systems
+
+!!! warning "External filesystems cannot be mounted on Sherlock"
+
+    For a variety of security, manageability and technical considerations, we
+    can't mount external filesystems nor data storage systems on Sherlock. The
+    recommended approach is to make Sherlock's data available on external
+    systems.
+
+You can mount any of your Sherlock directories on any external system you have
+access to by using SSHFS. For more details, please refer to the [Data
+Transfer][url_data_sshfs] page.
+
+
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_NFS]:      https://en.wikipedia.org/wiki/Network_File_System
@@ -670,6 +685,8 @@ manual page at [nfs4_acl(5)][url_nfs4_acl_man].
 [url_unix_perms]:   https://en.wikipedia.org/wiki/File_system_permissions
 [url_contact]:  research-computin-support@stanford.edu
 [url_nfs4_acl_man]: http://linux.die.net/man/5/nfs4_acl
+[url_data_sshfs]:  /docs/user-guide/data-transfer#sshfs
+
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
