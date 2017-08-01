@@ -27,7 +27,13 @@ modules locally.
 
 ### Installation
 
-For instance, to install the `DateTime::TimeZone` module, you can do the
+!!! tip "Perl modules installation is only necessary once"
+
+    You only need to install Perl modules once on Sherlock. Since fielsystems
+    are shared, modules installed on one node will immediately be available on
+    all nodes on the cluster.
+
+As an example, to install the `DateTime::TimeZone` module, you can do the
 following:
 
 ```
@@ -35,18 +41,18 @@ $ ml perl
 $ cpanm DateTime::TimeZone
 ```
 
-And then you can check that the module is correctly installed:
+### Usage
+
+Once installed, you can use the Perl modules directly, no specific options or
+syntax is required.
+
+For instance, to check that the `DateTime::TimeZone` module is correctly
+installed:
+
 ```
 $ perl -MDateTime::TimeZone -e 'print $DateTime::TimeZone::VERSION . "\n"';
 2.13
 ```
-
-!!! tip "Perl modules installation is only necessary once"
-
-    You only need to install Perl modules once on Sherlock. Since fielsystems
-    are shared, modules installed on one node will immediately be available on
-    all nodes on the cluster.
-
 
 ### Uninstallation
 
