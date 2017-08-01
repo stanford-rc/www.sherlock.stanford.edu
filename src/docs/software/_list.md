@@ -31,18 +31,20 @@ Field  | Module\ name | Version | URL  | Description
 **compiler** | `llvm` | `4.0.0` | [Link](http://llvm.org) | The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,
 **compiler** | `ifort` | `2017.u2` | [Link](https://software.intel.com/en-us/fortran-compilers) | Intel Fortran Compiler, also known as ifort, is a group of Fortran compilers from Intel
 **compiler** | `icc` | `2017.u2` | [Link](https://software.intel.com/en-us/c-compilers) | Intel C++ Compiler, also known as icc or icl, is a group of C and C++ compilers from Intel
-**data** | `h5utils` | `1.12.1` | [Link](http://ab-initio.mit.edu/wiki/index.php/H5utils) | h5utils is a set of utilities for visualization and conversion of scientific data in the free, portable HDF5 format.
 **data** | `hdf5` | `1.10.0p1` | [Link](https://www.hdfgroup.org/hdf5) | HDF5 is a data model, library, and file format for storing and managing data. It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O and for high volume and complex data.
+**data** | `h5utils` | `1.12.1` | [Link](http://ab-initio.mit.edu/wiki/index.php/H5utils) | h5utils is a set of utilities for visualization and conversion of scientific data in the free, portable HDF5 format.
 **data** | `sqlite` | `3.18.0` | [Link](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine.
-**language** | `python` | `3.6.1`<br/>`2.7.13` | [Link](https://www.python.org) | Python is an interpreted, interactive, object-oriented programming language.
-**language** | `julia` | `0.5.1` | [Link](https://julialang.org) | Julia is a high-level, high-performance dynamic programming language for numerical computing.
+**language** | `perl` | `5.26.0` | [Link](https://www.perl.org) | Perl 5 is a highly capable, feature-rich programming language with over 29 years of development.
+**language** | `ruby` | `2.4.1` | [Link](https://www.ruby-lang.org) | A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
 **language** | `java` | `1.8.0_131` | [Link](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible.
+**language** | `julia` | `0.5.1` | [Link](https://julialang.org) | Julia is a high-level, high-performance dynamic programming language for numerical computing.
+**language** | `python` | `3.6.1`<br/>`2.7.13` | [Link](https://www.python.org) | Python is an interpreted, interactive, object-oriented programming language.
 **language** | `cuda` | `8.0.61` | [Link](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing.
 **language** | `tcltk` | `8.6.6` | [Link](https://www.tcl.tk) | Tcl (Tool Command Language) is a dynamic programming language, suitable for web and desktop applications, networking, administration, testing. Tk is a graphical user interface toolkit.
 **libs** | `eigen` | `3.3.3` | [Link](http://eigen.tuxfamily.org) | Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.
 **libs** | `tbb` | `2017.u2` | [Link](https://software.intel.com/en-us/intel-tbb) | Intel® Threading Building Blocks (Intel® TBB) is a widely used C++ library for shared-memory parallel programming and heterogeneous computing (intra-node distributed memory programming).
-**libs** | `nccl` | `1.3.4` | [Link](https://github.com/NVIDIA/nccl) | NCCL (pronounced 'Nickel') is a stand-alone library of standard collective communication routines, such as all-gather, reduce, broadcast, etc., that have been optimized to achieve high bandwidth over PCIe.
 **libs** | `boost` | `1.64.0` | [Link](http://www.boost.org) | Boost is a set of libraries for the C++ programming language that provide support for tasks and structures such as linear algebra, pseudorandom number generation, multithreading, image processing, regular expressions, and unit testing.
+**libs** | `nccl` | `1.3.4` | [Link](https://github.com/NVIDIA/nccl) | NCCL (pronounced 'Nickel') is a stand-alone library of standard collective communication routines, such as all-gather, reduce, broadcast, etc., that have been optimized to achieve high bandwidth over PCIe.
 **mpi** | `openmpi` | `2.0.2` | [Link](https://www.openmpi.org) | The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners.
 **mpi** | `impi` | `2017.u2` | [Link](https://software.intel.com/en-us/intel-mpi-library) | Intel® MPI Library is a multi-fabric message passing library that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification.
 
@@ -61,19 +63,21 @@ Field  | Module\ name | Version | URL  | Description
 ### System
 Field  | Module\ name | Version | URL  | Description
 :----- | :----------- | ------: | :--- | :----------
-**compression** | `xz` | `5.2.3` | [Link](http://tukaani.org/xz/) | XZ Utils is free general-purpose data compression software with a high compression ratio.
-**compression** | `szip` | `2.1.1` | [Link](https://support.hdfgroup.org/doc_resource/SZIP) | Szip compression software, providing lossless compression of scientific data, is an implementation of the extended-Rice lossless compression algorithm.
 **compression** | `zlib` | `1.2.11` | [Link](http://zlib.net) | zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system.
+**compression** | `szip` | `2.1.1` | [Link](https://support.hdfgroup.org/doc_resource/SZIP) | Szip compression software, providing lossless compression of scientific data, is an implementation of the extended-Rice lossless compression algorithm.
+**compression** | `xz` | `5.2.3` | [Link](http://tukaani.org/xz/) | XZ Utils is free general-purpose data compression software with a high compression ratio.
 **containers** | `singularity` | `2.3` | [Link](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries.
 **file transfer** | `gdrive` | `2.1.0` | [Link](https://github.com/prasmussen/gdrive) | gdrive is a command line utility for interacting with Google Drive.
-**file transfer** | `mpifileutils` | `20170210` | [Link](https://github.com/hpc/mpifileutils) | mpiFileUtils is a suite of MPI-based tools to manage large datasets, which may vary from large directory trees to large files.
 **file transfer** | `rclone` | `1.36` | [Link](https://rclone.org) | Rclone is a command line program to sync files and directories to and from: Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon Drive, Microsoft One Drive, Hubic, Backblaze B2, Yandex Disk, or the local filesystem.
-**libs** | `libressl` | `2.5.3` | [Link](https://www.libressl.org) | LibreSSL is a version of the TLS/crypto stack forked from OpenSSL in 2014, with goals of modernizing the codebase, improving security, and applying best practice development processes.
+**file transfer** | `mpifileutils` | `20170210` | [Link](https://github.com/hpc/mpifileutils) | mpiFileUtils is a suite of MPI-based tools to manage large datasets, which may vary from large directory trees to large files.
+**libs** | `freetype` | `2.8` | [Link](http://freetype.org) | FreeType is a software font engine that is designed to be small, efficient, highly customizable, and portable while capable of producing high-quality output (glyph images).
 **libs** | `libxml2` | `2.9.4` | [Link](http://xmlsoft.org/) | Libxml2 is a XML C parser and toolkit.
 **libs** | `pcre` | `8.40` | [Link](http://www.pcre.org/) | The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5.
 **libs** | `libjpeg-turbo` | `1.5.1` | [Link](http://www.libjpeg-turbo.org) | libjpeg-turbo is a JPEG image codec that uses SIMD instructions (MMX, SSE2, AVX2, NEON, AltiVec) to accelerate baseline JPEG compression and decompression on x86, x86-64, ARM, and PowerPC systems
-**libs** | `libpng` | `1.2.57`<br/>`1.6.29` | [Link](http://libpng.sourceforge.net) | libpng is the official PNG reference library. It supports almost all PNG features, is extensible, and has been extensively tested for over 20 years.
+**libs** | `libressl` | `2.5.3` | [Link](https://www.libressl.org) | LibreSSL is a version of the TLS/crypto stack forked from OpenSSL in 2014, with goals of modernizing the codebase, improving security, and applying best practice development processes.
 **libs** | `libmng` | `2.0.3` | [Link](http://libmng.sourceforge.net) | THE reference library for reading, displaying, writing and examining Multiple-Image Network Graphics. MNG is the animation extension to the popular PNG image-format.
+**libs** | `ncurses` | `6.0` | [Link](https://www.gnu.org/software/ncurses) | The ncurses (new curses) library is a free software emulation of curses in System V Release 4.0 (SVr4), and more.
+**libs** | `libpng` | `1.2.57`<br/>`1.6.29` | [Link](http://libpng.sourceforge.net) | libpng is the official PNG reference library. It supports almost all PNG features, is extensible, and has been extensively tested for over 20 years.
 **scm** | `git` | `2.12.2` | [Link](http://git-scm.com) | Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 **tools** | `curl` | `7.54.0` | [Link](https://curl.haxx.se/) | curl is an open source command line tool and library for transferring data with URL syntax.
 
