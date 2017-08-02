@@ -89,9 +89,13 @@ performed on Sherlock acknowledge this. The following wording is suggested:
 Research Computing support can be reached by sending an email to
 srcc-support@stanford.edu and **mentioning Sherlock**.
 
-To ensure a timely and relevant response, please make sure to include some
-additional details, such as job ids, commands executed and error messages
-received, so we can help you better.
+
+!!! warning "How to submit successful support requests"
+
+    To ensure a timely and relevant response, please make sure to include some
+    additional details, such as job ids, commands executed and error messages
+    received, so we can help you better.  For more details, see the
+    [Troubleshooting][url_troubleshoot] page.
 
 As a member of the Sherlock community, you're also automatically subscribed to:
 
@@ -172,6 +176,7 @@ Here's what it looks like in motion:
 [url_prereq]:     /docs/getting-started/prerequisites
 [url_connect]:    /docs/getting-started/connecting
 [url_submit]:     /docs/getting-started/submitting
+[url_troubleshoot]:/docs/user-guide/troubleshoot/#how-to-submit-a-successful-support-request
 
 [url_shu_ml]:   //mailman.stanford.edu/mailman/listinfo/sherlock-users
 [url_sha_ml]:   //mailman.stanford.edu/mailman/listinfo/sherlock-announce
