@@ -1,6 +1,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
-Sherlock provides access to several different file systems, each with distinct
+Sherlock provides access to several file systems, each with distinct
 storage characteristics. Each user and PI group get access to a set of pre-defined
 directories in these file systems to store their data.
 
