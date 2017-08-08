@@ -117,6 +117,12 @@ The most notable changes are visible right from the connection process.
   ```
   (note the `login` part of the hostname)
 
+    !!! note "New server fingerprint"
+
+        When you connect to the new login nodes for the first time, you'll be
+        presented with the new servers' fingerprint (host keys). Please see the
+        [Connecting][url_hostkeys] page for more details.
+
 **New authentication scheme**
 
 : GSSAPI (Kerberos) is not required anymore. To make up for the next item, we
@@ -404,6 +410,7 @@ Feel free to contact us by email at srcc-support@stanford.edu.
 [url_jobs]:         /docs/user-guide/running
 [url_login]:        /docs/getting-started/connecting
 [url_transfer]:     /docs/user-guide/data-transfer
+[url_hostkeys]:     /docs/getting-started/connecting/#host-keys
 
 [comment]: # (footnodes ------------------------------------------------------)
 
