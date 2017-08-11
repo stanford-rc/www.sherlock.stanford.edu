@@ -101,6 +101,26 @@ Retention types:
 
 
 
+## Where should I store my files?
+
+
+!!! important "Not all filesystems are equivalent"
+
+    Choosing the appropriate storage location for your files is an essential
+    step towards making your utilization of the cluster the most efficient
+    possible. It will make your own experience much smoother, yield better
+    performance for your jobs and simulations, and contribute to make Sherlock
+    a useful and well-functioning resource for everyone.
+
+Here is where we recommend storing different types of files and data on
+Sherlock:
+
+* personal scripts, configuration files and software installations --> `$HOME`
+* group-shared scripts, software installations and medium-sized datasets -->
+  `$PI_HOME`
+* temporary output of jobs, large checkpoint files --> `$SCRATCH`
+* curated output of job campaigns, large group-shared datasets, archives --> `$OAK`
+
 ## Filesystem details
 
 ### `$HOME`
