@@ -243,7 +243,7 @@ Sherlock:
     50GB/s. So any job with high data performance requirements will take
     advantage from using `$SCRATCH` for I/O.
 
-    We recommend using `$SCRATCH` to reference your group home directory in
+    We recommend using `$SCRATCH` to reference your scratch directory in
     scripts, rather than its explicit path.
 
 **Check quota usage**
@@ -311,8 +311,8 @@ Sherlock:
     Old files are automatically purged on `$PI_SCRATCH` so users should avoid
     storing long-term data there.
 
-    We recommend using `$PI_SCRATCH` to reference your group home directory in
-    scripts, rather than its explicit path.
+    We recommend using `$PI_SCRATCH` to reference your group scratch directory
+    in scripts, rather than its explicit path.
 
 **Check quota usage**
 
@@ -360,7 +360,7 @@ your group  quota usage in `$SCRATCH`:
     files, checkpoints, dumps of temporary states, etc.
 
     Files stored in `$L_SCRATCH` are local to each node and can't be accessed
-    from other nodes nor login nodes.
+    from other nodes, nor from login nodes.
 
     All files stored in `$L_SCRATCH` are automatically purged ath the end of
     the job, whether the job was successful or not. If you need to conserve
@@ -368,8 +368,26 @@ your group  quota usage in `$SCRATCH`:
     to add a command to copy them to one of the more peristent storage
     locations, such as `$HOME` or `$SCRATCH`.
 
-    We recommend using `$L_SCRATCH` to reference your group home directory in
-    scripts, rather than its explicit path.
+    Please note that an additional, job-specific environment variable,
+    `$L_SCRATCH_JOB`, will be set to a subdirectory of `$L_SCRATCH` for each
+    job. So, if you have two jobs running on the same compute node,
+    `$L_SCRATCH` will be the same and accessible from both jobs, while
+    `$L_SCRATCH_JOB` will be different for each job.
+
+    For instance, if you have jobs `98423` and `98672` running on ths same
+    nodes, the variables will be set as follows:
+
+    | Job id | `$L_SCRATCH` | `L_SCRATCH_JOB` |
+    | -----: | ------------ | --------------- |
+    | `98423` | `/lscratch/kilian` | `/lscratch/kilian/98423` |
+    | `98672` | `/lscratch/kilian` | `/lscratch/kilian/98672` |
+
+
+
+
+    We recommend using `$L_SCRATCH` to reference your local scratch
+    directory in scripts, rather than its full path.
+
 
 
 ### `$OAK`
