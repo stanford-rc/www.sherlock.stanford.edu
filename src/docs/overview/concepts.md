@@ -15,9 +15,10 @@ using a secure remote login protocol such as [SSH][g_ssh]. Unlike in
 traditional interactive environments, users then need to prepare [compute
 jobs][g_jobs] to submit to the [resource scheduler][g_scheduler]. Based on a
 
-
-
-[g_login]: glossary#login-nodes
+[g_login]:      glossary#login-nodes
+[g_ssh]:        glossary#ssh
+[g_jobs]:       glossary#job
+[g_scheduler]:  glossary#scheduler
 
 ## Sherlock, a shared resource
 
