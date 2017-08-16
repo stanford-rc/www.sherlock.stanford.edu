@@ -2,7 +2,7 @@
 * [`biology`](#biology): neurology
 * [`chemistry`](#chemistry): computational chemistry, molecular dynamics
 * [`devel`](#devel): build, compiler, data, language, libs, mpi
-* [`math`](#math): deep learning, language, numerical analysis, numerical library, statistics
+* [`math`](#math): computational geometry, deep learning, language, numerical analysis, numerical library, statistics
 * [`system`](#system): compression, containers, file transfer, libs, scm, tools
 * [`viz`](#viz): remote display
 
@@ -55,6 +55,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 ### Math
 Field  | Module\ name | Version(s) | URL  | Description
 :----- | :----------- | ------: | :--- | :----------
+**computational geometry** | `cgal` | `4.10` | [Website](http://www.cgal.org) | The Computational Geometry Algorithms Library (CGAL) is a C++ library that aims to provide easy access to efficient and reliable algorithms in computational geometry. 
 **deep learning** | `cudnn` | `5.1`<br/>`6.0` | [Website](https://developer.nvidia.com/cudnn) | NVIDIA cuDNN is a GPU-accelerated library of primitives for deep neural networks. 
 **deep learning** | `py-tensorflow` | `1.2.1` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
 **language** | `py-scipystack` | `1.0_py36`<br/>`1.0_py27` | [Website](https://www.scipy.org) | The SciPy Stack is a collection of open source software for scientific computing in Python. It provides the following packages: numpy, scipy, matplotlib, ipython, jupyter, pandas, sympy and nose. 
@@ -85,13 +86,16 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `libpng` | `1.2.57`<br/>`1.6.29` | [Website](http://libpng.sourceforge.net) | libpng is the official PNG reference library. It supports almost all PNG features, is extensible, and has been extensively tested for over 20 years. 
 **libs** | `libressl` | `2.5.3` | [Website](https://www.libressl.org) | LibreSSL is a version of the TLS/crypto stack forked from OpenSSL in 2014, with goals of modernizing the codebase, improving security, and applying best practice development processes. 
 **libs** | `libxml2` | `2.9.4` | [Website](http://xmlsoft.org/) | Libxml2 is a XML C parser and toolkit. 
+**libs** | `mesa` | `17.1.6` | [Website](https://www.mesa3d.org) | Mesa is an open-source implementation of the OpenGL, Vulkan and other specifications. 
 **libs** | `ncurses` | `6.0` | [Website](https://www.gnu.org/software/ncurses) | The ncurses (new curses) library is a free software emulation of curses in System V Release 4.0 (SVr4), and more. 
 **libs** | `pcre` | `8.40` | [Website](http://www.pcre.org/) | The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5. 
 **libs** | `py-mako` | `1.0.7` | [Website](http://www.makotemplates.org/) | Mako is a template library written in Python. It provides a familiar, non-XML syntax which compiles into Python modules for maximum performance. 
 **scm** | `git` | `2.12.2` | [Website](http://git-scm.com) | Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. 
 **tools** | `curl` | `7.54.0` | [Website](https://curl.haxx.se/) | curl is an open source command line tool and library for transferring data with URL syntax. 
 **tools** | `expat` | `2.2.3` | [Website](http://libexpat.github.io) | Expat is a stream-oriented XML parser library written in C. 
+**tools** | `qt` | `5.9.1` | [Website](https://www.qt.io) | QT is a cross-platform application framework that is used for developing application software that can be run on various software and hardware platforms. 
 **tools** | `x11` | `7.7` | [Website](https://www.x.org) | The X.Org project provides an open source implementation of the X Window System. 
+**tools** | `xkeyboard-config` | `2.21` | [Website](https://www.freedesktop.org/wiki/Software/XKeyboardConfig/) | The non-arch keyboard configuration database for X Window. 
 
 ### Viz
 Field  | Module\ name | Version(s) | URL  | Description
