@@ -87,13 +87,6 @@ Enter your password, and if it's correct, you should see the following line:
     Authenticated with partial success.
 
 
-!!! warning "Excessive authentication failures"
-
-    Entering an invalid password multiple times will result in a (temporary)
-    ban of your IP address. This is to prevent brute-force password guessing
-    attacks on Sherlock login nodes.
-
-
 #### Second factor (2FA)
 
 Sherlock implements Stanford's [Minimum Security Standards][url_minsec]
@@ -133,6 +126,28 @@ authentication factor with a message like this:
 If your second factor is accepted, you'll see the following message:
 
     Success. Logging you in...
+
+### Authentication failures
+
+!!! warning "Excessive authentication failures"
+
+    Entering an invalid password multiple times will result in a (temporary)
+    ban of your IP address.
+
+To prevent brute-force password guessing attacks on Sherlock login nodes, we
+automatically block IP addresses that generate too many authentication failures
+in a given time span. This results in a temporary ban of the infringing IP
+address, and the impossibility for the user to connect to Sherlock from that
+IP address.
+
+When this happens, your SSH connection attempts will result in the following
+error:
+
+    ssh: connect to host login.sherlock.stanford.edu port 22: Connection refused
+
+To lift the ban before its automatic expiration, feel free to [contact
+us][url_contact] and provide your IP address.
+
 
 
 ## Login
@@ -213,6 +228,7 @@ section][url_submit].
 [url_twostep]:      https://uit.stanford.edu/service/webauth/twostep
 [url_login]:        http://localhost:8000/docs/overview/glossary/#login-nodes
 [url_submit]:       /docs/getting-started/submitting
+[url_contact]:      mailto:srcc-support@stanford.edu
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
