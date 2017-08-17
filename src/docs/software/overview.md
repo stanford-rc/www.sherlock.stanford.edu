@@ -23,7 +23,7 @@ Software Licensing office][url_software_lic].
 
 We strongly encourage users to build custom and field- or domain-specific
 software themselves, and install it in their own [personal or group shared
-directories](../storage). That way, they can share the software installations
+directories][url_storage]. That way, they can share the software installations
 with the rest of the users in their group, if necessary.
 
 Users may even maintain and publish their own [local module
@@ -51,6 +51,7 @@ resources permit[^install_req].
 
 [url_contact]:      mailto:srcc-support@stanford.edu
 [url_software_lic]: https://uit.stanford.edu/service/softwarelic
+[url_storage]:      /docs/user-guide/storage
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
