@@ -162,6 +162,27 @@ used by the login nodes.
 
 
 
+
+## Connecting from abroad
+
+!!! tip "VPN"
+
+    As a good security practice, we always recommend to use the [Stanford
+    VPN][url_vpn] when connecting from untrusted networks.
+
+Access to Sherlock is not restricted to campus, meaning that you can connect to
+Sherlock from pretty much anywhere, including when traveling abroad.  We don't
+restrict inbound SSH connections to any specific IP address range or
+geographical location, so you shouldn't have any issue to reach the login nodes
+from anywhere.
+
+Regarding two-step authentication, University IT provides [alternate
+authentication options][url_alt2fa] when phone service or Duo Mobile push
+notifications are not available.
+
+
+
+
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_screen]:       https://www.gnu.org/software/screen
@@ -169,6 +190,8 @@ used by the login nodes.
 [url_connecting]:   /docs/getting-started/connecting/#authentication
 [url_kerberos]:     https://uit.stanford.edu/service/kerberos
 [url_prereq]:       /docs/getting-started/prerequisites/#windows
+[url_vpn]:          https://uit.stanford.edu/service/vpn
+[url_alt2fa]:       https://uit.stanford.edu/service/webauth/twostep
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
