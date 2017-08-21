@@ -1,4 +1,9 @@
 ## Categories
+
+!!! Summary "Software summary"
+
+    As of Mon, 21 Aug 2017 14:54:39 -0700, we provide 115 software packages, in 6 categories.
+
 * [`biology`](#biology): cryo-em, neurology
 * [`chemistry`](#chemistry): computational chemistry, molecular dynamics
 * [`devel`](#devel): build, compiler, data, language, libs, mpi
