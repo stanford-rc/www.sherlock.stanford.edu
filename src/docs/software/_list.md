@@ -4,7 +4,9 @@
 * [`math`](#math): computational geometry, deep learning, language, numerical analysis, numerical library, statistics
 * [`system`](#system): compression, containers, file transfer, language, libs, scm, tools
 * [`viz`](#viz): remote display
+
 <small>As of Tuesday, August 22 2017, we provide 116 software packages, in 6 categories, covering 24 fields of science.</small>
+
 
 ### Biology
 Field  | Module\ name | Version(s) | URL  | Description
