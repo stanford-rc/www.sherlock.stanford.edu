@@ -1,15 +1,10 @@
-## Categories
-
-!!! Summary "Software summary"
-
-    As of Mon, 21 Aug 2017 14:54:39 -0700, we provide 115 software packages, in 6 categories.
-
 * [`biology`](#biology): cryo-em, neurology
 * [`chemistry`](#chemistry): computational chemistry, molecular dynamics
 * [`devel`](#devel): build, compiler, data, language, libs, mpi
 * [`math`](#math): computational geometry, deep learning, language, numerical analysis, numerical library, statistics
 * [`system`](#system): compression, containers, file transfer, language, libs, scm, tools
 * [`viz`](#viz): remote display
+<small>As of Tuesday, August 22 2017, we provide 116 software packages, in 6 categories, covering 24 fields of science.</small>
 
 ### Biology
 Field  | Module\ name | Version(s) | URL  | Description
@@ -98,6 +93,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `gobject-introspection` | `1.52.1` | [Website](https://wiki.gnome.org/Projects/GObjectIntrospection) | GObject introspection is a middleware layer between C libraries (using GObject) and language bindings. 
 **libs** | `gtk+` | `2.24.30`<br/>`3.22.18` | [Website](https://www.gtk.org) | GTK+, or the GIMP Toolkit, is a multi-platform toolkit for creating graphical user interfaces. 
 **libs** | `harfbuzz` | `1.4.8` | [Website](https://www.freedesktop.org/wiki/Software/HarfBuzz) | HarfBuzz is an OpenType text shaping engine. 
+**libs** | `icu` | `59.1` | [Website](http://site.icu-project.org) | ICU is a set of C/C++ and Java libraries providing Unicode and Globalization support for software applications. 
 **libs** | `libepoxy` | `1.4.1` | [Website](https://github.com/anholt/libepoxy) | Epoxy is a library for handling OpenGL function pointer management for you. 
 **libs** | `libffi` | `3.2.1` | [Website](http://sourceware.org/libffi) | libffi is a portable Foreign Function Interface library. 
 **libs** | `libidl` | `0.8.14` | [Website](https://github.com/GNOME/libIDL) | The libIDL package contains libraries for Interface Definition Language files. This is a specification for defining portable interfaces. 
