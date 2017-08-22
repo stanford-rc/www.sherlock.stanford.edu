@@ -39,7 +39,7 @@ $ echo $SCRATCH
 ### List
 
 | Name           |  Scope | Access type | Cost |
-| -------------- |  ------------ | ------ | ------ | ---- |
+| -------------- |  ------------ | ------ | ------ |
 |`$HOME`         |  cluster  | user   | Free |
 |`$PI_HOME`      |  cluster  | group  | Free |
 |`$SCRATCH`      |  cluster  | user   | Free |
