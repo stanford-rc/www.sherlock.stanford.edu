@@ -124,6 +124,8 @@ Sherlock:
 
 ## Filesystem details
 
+-----
+
 ### `$HOME`
 
 !!! summary
@@ -164,6 +166,7 @@ Filesystem             Size  Used Avail Use% Mounted on
 srcf.isilon:/ifs/home   15G  3.5G   12G  24% /home/users
 ```
 
+-----
 
 ### `$PI_HOME`
 
@@ -204,6 +207,8 @@ $ df -h $PI_HOME
 Filesystem           Size  Used Avail Use% Mounted on
 srcf.isilon:/ifs/PI  1.0T  646G  379G  64% /home/groups
 ```
+
+-----
 
 ### `$SCRATCH`
 
@@ -297,7 +302,7 @@ last modification date of the file on `$SCRATCH` will be the date it's been
 copied over. File modification dates are local to each filesystem and are not
 carried along when copying files across fielsystems.
 
-
+-----
 
 ### `$PI_SCRATCH`
 
@@ -359,6 +364,13 @@ to each of the group members will count toward the group quota.
 See the [`$SCRATCH`](#scratch) section for more details about the meaning of
 the different fields in `lfs quota`.
 
+#### Expiration policy
+
+As `$SCRATCH` and `$PI_SCRATCH` are on the same fielsystem, the same expiration
+policy applies to both. Please see the [`$SCRATCH`](#scratch) section above for
+more details.
+
+-----
 
 ### `$L_SCRATCH`
 
@@ -386,12 +398,6 @@ checkpoints, dumps of temporary states, etc.
 Files stored in `$L_SCRATCH` are local to each node and can't be accessed from
 other nodes, nor from login nodes.
 
-All files stored in `$L_SCRATCH` are automatically purged ath the end of the
-job, whether the job was successful or not. If you need to conserve files that
-were generated in `$L_SCRATCH` after the job ends, don't forget to add a
-command to copy them to one of the more peristent storage locations, such as
-`$HOME` or `$SCRATCH`.
-
 Please note that an additional, job-specific environment variable,
 `$L_SCRATCH_JOB`, will be set to a subdirectory of `$L_SCRATCH` for each job.
 So, if you have two jobs running on the same compute node, `$L_SCRATCH` will be
@@ -409,6 +415,15 @@ nodes, the variables will be set as follows:
 We strongly recommend using `$L_SCRATCH` to reference your local scratch
 directory in scripts, rather than its full path.
 
+#### Expiration policy
+
+All files stored in `$L_SCRATCH` are automatically purged ath the end of the
+job, whether the job was successful or not. If you need to conserve files that
+were generated in `$L_SCRATCH` after the job ends, don't forget to add a
+command to copy them to one of the more peristent storage locations, such as
+`$HOME` or `$SCRATCH`.
+
+-----
 
 ### `$OAK`
 
