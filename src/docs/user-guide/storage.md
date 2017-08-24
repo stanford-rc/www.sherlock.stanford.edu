@@ -288,19 +288,14 @@ The different values displayed in `lfs quota` are as follows:
 
 To manage available space and maintain optimal performance for all jobs, all
 files[^scratch_owner_exception]  on `$SCRATCH` are subject to automatic
-expiration. Based their last modification date of files, as displayed by `ls
+purges. Based on their last modification date, as displayed by `ls
 -l`, files whose contents have not been modified in the previous 6 months will
 be automatically deleted.
 
 For instance, if you create a file on February 1st and don't ever modify it
-afterwrads, it will be automatically deleted on August 1st.
+afterwards, it will be automatically deleted on August 1st.
 
 Please note that reading a file does not qualify as a modification.
-
-If you copy an file from another filesystem (such as `$OAK` or `$HOME`), the
-last modification date of the file on `$SCRATCH` will be the date it's been
-copied over. File modification dates are local to each filesystem and are not
-carried along when copying files across fielsystems.
 
 -----
 
@@ -314,7 +309,7 @@ carried along when copying files across fielsystems.
     store temporary files, such as raw job output, intermediate files, or
     unprocessed results that need to be shared among users within a group.
 
-!!! danger "`$PI_SCRATCH` is not a backup target"
+!!! danger "`$PI_SCRATCH` is **NOT** a backup target"
 
     `$PI_SCRATCH` is not meant to store permanent data, and should only be used
     for data associated with currently running jobs. It's not a target for
