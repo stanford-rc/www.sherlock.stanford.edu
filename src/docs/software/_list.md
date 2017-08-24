@@ -1,3 +1,6 @@
+
+As of Thursday, August 24 2017, we provide 119 software packages, in 6 categories, covering 24 fields of science.
+
 * [`biology`](#biology): cryo-em, neurology
 * [`chemistry`](#chemistry): computational chemistry, molecular dynamics
 * [`devel`](#devel): build, compiler, data, language, libs, mpi
@@ -5,7 +8,6 @@
 * [`system`](#system): compression, containers, file transfer, language, libs, scm, tools
 * [`viz`](#viz): remote display
 
-<small>As of Tuesday, August 22 2017, we provide 118 software packages, in 6 categories, covering 24 fields of science.</small>
 
 
 ### Biology
@@ -80,6 +82,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **containers** | `singularity` | `2.3`<br/>`2.3.1` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
 **file transfer** | `gdrive` | `2.1.0` | [Website](https://github.com/prasmussen/gdrive) | gdrive is a command line utility for interacting with Google Drive. 
 **file transfer** | `mpifileutils` | `20170210` | [Website](https://github.com/hpc/mpifileutils) | mpiFileUtils is a suite of MPI-based tools to manage large datasets, which may vary from large directory trees to large files. 
+**file transfer** | `py-globus-cli` | `1.2.0` | [Website](https://github.com/globus/globus-cli) | A command line wrapper over the Globus SDK for Python. 
 **file transfer** | `rclone` | `1.36` | [Website](https://rclone.org) | Rclone is a command line program to sync files and directories to and from: Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon Drive, Microsoft One Drive, Hubic, Backblaze B2, Yandex Disk, or the local filesystem. 
 **language** | `tcltk` | `8.6.6` | [Website](https://www.tcl.tk) | Tcl (Tool Command Language) is a dynamic programming language, suitable for web and desktop applications, networking, administration, testing. Tk is a graphical user interface toolkit. 
 **libs** | `atk` | `2.24.0` | [Website](https://developer.gnome.org/atk) | ATK is the Accessibility Toolkit. It provides a set of generic interfaces allowing accessibility technologies such as screen readers to interact with a graphical user interface. 
