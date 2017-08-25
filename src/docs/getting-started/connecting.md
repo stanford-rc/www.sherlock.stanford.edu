@@ -226,7 +226,7 @@ section][url_submit].
 [url_sunet]:        https://uit.stanford.edu/service/accounts/sunetids
 [url_minsec]:       https://uit.stanford.edu/guide/securitystandards
 [url_twostep]:      https://uit.stanford.edu/service/webauth/twostep
-[url_login]:        http://localhost:8000/docs/overview/glossary/#login-nodes
+[url_login]:        /docs/overview/glossary/#login-nodes
 [url_submit]:       /docs/getting-started/submitting
 [url_contact]:      mailto:srcc-support@stanford.edu
 
