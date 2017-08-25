@@ -12,7 +12,7 @@
 }
 </style>
 <img id="logo_head" align="right" width="220px"
-     alt="Sherlock" src="/img/logo.webp">
+     alt="Sherlock" src="/img/logo.png">
 <!-- resuming normal Markdown operations -->
 
 

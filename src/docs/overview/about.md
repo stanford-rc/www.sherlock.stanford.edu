@@ -98,8 +98,8 @@ And finally, we couldn't resist to the pleasure of citing the most
 prestigious accomplishment of Sherlock to date: a mention in [HBO's Silicon
 Valley][url_sv] [Season 4 finale][url_ep38]!
 
-![screencap](/img/richard.webp)
-![screencap](/img/bighead.webp)
+![screencap](/img/richard.png)
+![screencap](/img/bighead.png)
 
 Yep, you got that right, [Richard Hendricks][url_richard] wanted to use our
 very own Sherlock. Kudos to the show's crew and whomever did the research and
