@@ -353,6 +353,7 @@ of the different fields in `lfs quota`.
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_oak]:              https://oak-storage.stanford.edu
+[url_oak_snap]:         https://srcc.stanford.edu/oak-rsnapshot
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

@@ -150,5 +150,5 @@ Transfer][url_data_sshfs] page.
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
-[^oak_sd]: For more information about Oak, it's characteristics and cost model,
+[^oak_sd]: For more information about Oak, its characteristics and cost model,
            please see the [Oak Service Description page][url_oak].
