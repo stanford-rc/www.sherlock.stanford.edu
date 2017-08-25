@@ -153,12 +153,101 @@ account.
 
 
 
+## Recurring jobs
+[comment]: #_
+
+!!! Warning
+
+    `Cron` tasks are not supported on Sherlock.
+
+Users are not allowed to create `cron` jobs on Sherlock, for a variety of
+reasons:
+
+* resources limits cannot be easily enforced in `cron` jobs, meaning that a
+  single user can end up monopolizing all the resources of a login node,
+* user `cron` jobs have the potential of bringing down whole
+  nodes by creating fork bombs, if they're not carefully crafted and tested,
+* compute and login nodes could be redeployed at any time, meaning that
+  `cron` jobs scheduled there could go away without the user being notified,
+  and cause all sorts of unexpected results.
+
+As an alternative, if you need to run recurring tasks at regular intervals, we
+recommend the following approach: by using the `--begin` job submission option,
+and creating a job that resubmits itself once it's done, you can virtually
+emulate the behavior and benefits of a `cron` job, without its disadvantages:
+your task will be scheduled on a compute node, and use all of the resources it
+requested, without being impacted by anything else.
+
+Depending on your recurring job's specificities, where you submit it and the
+state of the cluster at the time of execution, the starting time of that task
+may not be guaranteed and result in a delay in execution, as it will be
+scheduled by Slurm like any other jobs. Typical recurring jobs, such as file
+synchronization, database updates or backup tasks don't require strict starting
+times, though, so most users find this an acceptable trade-off.
+
+### Example
+
+The script below presents an example of such a recurring, self-resubmitting
+job, that would emulate a `cron` task. It will append a timestamped line to a
+`cron.log` file in your `$HOME` directory and run every 7 days.
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=cron
+#SBATCH --begin=now+7days
+#SBATCH --dependency=singleton
+#SBATCH --time=00:02:00
+#SBATCH --mail-type=FAIL
+
+date -R >> $HOME/cron.log
+
+sbatch $0
+```
+
+If the job payload (here the `date` command) fails for some reason and
+generates and error, the job will not be resubmitted, and the user will be
+notified by email.
+
+We encourage users to get familiar with the submission options used in this
+script by giving a look at the `sbatch` [man page][url_sbatch], but some
+details are given below:
+
+
+| Submission\ option\ or\ command | Explanation |
+| ------- | ----------- |
+| `--job-name=cron` |  makes it easy to identify the job, is used by the  `--depency=singleton` option to identify identical jobs, and will allow  cancelling the job by name (because it's jobid will change each time it's  submitted) |
+| `--begin=now+7days`  |  will instruct the scheduler to not even consider the job   for scheduling before 7 days after it's been submitted |
+| `--dependency=singleton` |  will make sure that only one `cron` job runs at any given time |
+| `--time=00:02:00` |  runtime limit for the job. You'll need to adjust the value   depending on the task you need to run (shorter runtime requests usually   result in the job running closer to the clock mark) |
+| `--mail-type=FAIL` |  will send an email notification to the user if the job ever fails |
+| `sbatch $0` |  will resubmit the job script by calling its own name (`$0`)   after successful execution |
+
+You can save the script as `cron.sbatch` or any other name, and submit it with:
+
+```
+$ sbatch cron.sbatch
+```
+
+It will start running for the first time 7 days after
+you submit it, and it will continue to run until you cancel it with the
+following command (using the job name, as defined by the `--job-name` option):
+
+```
+$ scancel -n cron
+```
+
+
+
 [comment]: #  (batch jobs, resource requirements, partitions, qos, limits, mail...)
 
 
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
+
+[url_sbatch]:   https://slurm.schedmd.com/sbatch.html
+
+
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
