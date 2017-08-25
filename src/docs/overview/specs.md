@@ -72,7 +72,7 @@ files and directories from both Sherlock 1.0 and Sherlock 2.0 nodes.
 [url_status]:  http://status.sherlock.stanford.edu
 [url_gpus]:    /docs/user-guide/gpu
 [url_storage]: /docs/user-guide/storage
-[url_dtn]:     /docs/userguide/data-transfer
+[url_dtn]:     /docs/user-guide/storage/data-transfer#data-transfer-node-dtn
 [url_oak]:     https://oak-storage.stanford.edu
 [url_2650v2]:  https://ark.intel.com/products/75269/Intel-Xeon-Processor-E5-2650-v2-20M-Cache-2_60-GHz
 [url_2640v4]:  https://ark.intel.com/products/92984/Intel-Xeon-Processor-E5-2640-v4-25M-Cache-2_40-GHz
