@@ -14,7 +14,7 @@ the Sherlock's filesystems.
 | ----------------- | --- |
 | **Type**          | Isilon high speed NFS file system |
 | **Quota**         | 15 GB for the whole `$HOME` directory |
-| **Snapshots**     | yes *(cf. [Snapshots](#snapshots) for more info)* |
+| **Snapshots**     | yes *(cf. [Snapshots](data-protection#snapshots) for more info)* |
 | **Backups**       | off-site replication |
 | **Purge policy**  | not purged |
 | **Scope**         | all login and compute nodes |
@@ -58,7 +58,7 @@ srcf.isilon:/ifs/home   15G  3.5G   12G  24% /home/users
 | ----------------- | --- |
 | **Type**          | Isilon high speed NFS file system |
 | **Quota**         | 1 TB for the whole `$PI_HOME` directory |
-| **Snapshots**     | yes *(cf. [Snapshots](#snapshots) for more info)* |
+| **Snapshots**     | yes *(cf. [Snapshots](data-protection#snapshots) for more info)* |
 | **Backups**       | off-site replication |
 | **Purge policy**  | not purged |
 | **Scope**         | all login and compute nodes |
@@ -358,5 +358,5 @@ of the different fields in `lfs quota`.
 [comment]: #  (footnotes -----------------------------------------------------)
 
 [^oak_snap]: Snapshots on `$OAK` require additional storage space. Please see
-           [the Oak Snapshots Feature page][url_oak_snap] for details.
+           the [Oak Snapshots Feature][url_oak_snap] page for details.
 
