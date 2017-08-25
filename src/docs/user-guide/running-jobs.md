@@ -199,8 +199,13 @@ job, that would emulate a `cron` task. It will append a timestamped line to a
 #SBATCH --time=00:02:00
 #SBATCH --mail-type=FAIL
 
+
+## Insert you the command to run below. Here, we're just storing the date in a
+## cron.log file
+
 date -R >> $HOME/cron.log
 
+## Resubmit the job for the next execution
 sbatch $0
 ```
 
@@ -215,10 +220,10 @@ details are given below:
 
 | Submission\ option\ or\ command | Explanation |
 | ------- | ----------- |
-| `--job-name=cron` |  makes it easy to identify the job, is used by the  `--depency=singleton` option to identify identical jobs, and will allow  cancelling the job by name (because it's jobid will change each time it's  submitted) |
+| `--job-name=cron` |  makes it easy to identify the job, is used by the  `--dependency=singleton` option to identify identical jobs, and will allow  cancelling the job by name (because its jobid will change each time it's  submitted) |
 | `--begin=now+7days`  |  will instruct the scheduler to not even consider the job   for scheduling before 7 days after it's been submitted |
 | `--dependency=singleton` |  will make sure that only one `cron` job runs at any given time |
-| `--time=00:02:00` |  runtime limit for the job. You'll need to adjust the value   depending on the task you need to run (shorter runtime requests usually   result in the job running closer to the clock mark) |
+| `--time=00:02:00` |  runtime limit for the job (here 2 minutes). You'll need to adjust the value   depending on the task you need to run (shorter runtime requests usually   result in the job running closer to the clock mark) |
 | `--mail-type=FAIL` |  will send an email notification to the user if the job ever fails |
 | `sbatch $0` |  will resubmit the job script by calling its own name (`$0`)   after successful execution |
 
