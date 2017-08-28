@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-  <div style="text-align: center;">
-  <h1>404</h1>
+  <div style="text-align:center">
+    <h1>404</h1>
+    <h1><small>Uh oh, you found a ... thing.</small></h1>
   </div>
-
-  Uh oh, you found a ... thing.
-
-  You're on this page because you tried to access a URL that doesn't exist or a
-  page that's moved elsewhere. That's quite unfortunate.
-
-  Here's a unicorn.
-  <img src="{{ base_url }}/assets/images/favicon.png"/>
-
-  Now, if you really want, you can try to use the "Search" box above to find some more useful things.
-
+  <div>You're on this page because you tried to access a URL that doesn't exist or a
+  page that's moved elsewhere. That's quite unfortunate. We're really sorry,
+  here's a spinner:
+  </div>
+  {% set path = "ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" %}
+  <div style="text-align:center;margin:20px">
+    <i class="fa fa-cog fa-spin fa-5x fa-fw"></i>
+  </div><div>
+  Now, if you really want, you can try to use the "Search" box above to find some more useful things. Good luck, you're on your own.
+</div>
 {% endblock %}
