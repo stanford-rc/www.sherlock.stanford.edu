@@ -27,7 +27,7 @@ Sherlock is a High-Performance Computing (HPC) cluster, operated by the
 to the Stanford community at large. You'll find all the documentation, tips,
 FAQs and information about Sherlock among these pages.
 
-!!! note "Sherlock 1.0"
+!!! info "Sherlock 1.0"
 
     These pages refer to Sherlock 2.0, the new iteration of the Sherlock
     cluster.  For anything specific to Sherlock 1.0, please see the previous
@@ -90,7 +90,7 @@ Research Computing support can be reached by sending an email to
 srcc-support@stanford.edu and **mentioning Sherlock**.
 
 
-!!! warning "How to submit successful support requests"
+!!! important "How to submit effective support requests"
 
     To ensure a timely and relevant response, please make sure to include some
     additional details, such as job ids, commands executed and error messages

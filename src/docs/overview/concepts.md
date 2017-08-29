@@ -118,13 +118,15 @@ For administrative reasons, SRCC offers PIs the possibility to purchase
 Sherlock nodes on a quarterly basis. Large orders could be accommodated at any
 time, though.
 
-!!! warning
+!!! warning "Minimum purchase"
+
     Please note that the minimum purchase per PI is one physical server. We
-	cannot accommodate multiple PIs pooling funds for single nodes.
+	cannot accommodate multiple PIs pooling funds for a single node.
 
 If you are interested in becoming an owner, you can find the latest information
 about ordering Sherlock nodes on the [Sherlock ordering page][url_orders]
-(SUNet ID login required), and feel free to [contact us][email].
+(SUNet ID login required). Feel free to [contact us][email] is you have any
+additional question.
 
 
 ## Cluster generations
@@ -158,7 +160,7 @@ cluster was kick-started. Sherlock 2.0 is a complete refresh of Sherlock, using
 a different set of hardware and software, while conserving the same storage
 infrastructure, to ease the transition process.
 
-!!! note
+!!! tip "Transition to Sherlock 2.0"
 
     For users who are already familiar with Sherlock, a [transition
     guide][url_transition] lists all the differences and the important
@@ -182,7 +184,7 @@ expansions.  This window will be used to make hardware repairs, software and
 firmware updates, and perform general manufacturer recommended maintenance on
 our environment.
 
-!!! note "Maintenance schedule"
+!!! info "Maintenance schedule"
 
      As often as possible, maintenances will take place on the **first Tuesday
      of every month, from 8am to 12am**, and will be announced 2 weeks in
@@ -199,34 +201,34 @@ by the maintenance window would be pushed after it.
 
 ### Common questions
 
-Why doing maintenances at all?
+??? question "Why doing maintenances at all?"
 
-: Due to growth in our compute environment and the increasing complexity of the
-systems we deploy, we felt it prudent to arrange for a regular time when we
-could comfortably and without pressure fix problems or update facilities with
-minimal impact to our customers. Most, if not all, major HPC centers have
-regular maintenance schedules.  We also need to enforce the [Minimum
-Security][url_minsec] rules edicted by the Stanford Information Security
-Office, which mandate deployment of security patches in a timely manner.
+    Due to growth in our compute environment and the increasing complexity of
+    the systems we deploy, we felt it prudent to arrange for a regular time
+    when we could comfortably and without pressure fix problems or update
+    facilities with minimal impact to our customers. Most, if not all, major
+    HPC centers have regular maintenance schedules.  We also need to enforce
+    the [Minimum Security][url_minsec] rules edicted by the Stanford
+    Information Security Office, which mandate deployment of security patches
+    in a timely manner.
 
-Why Tuesdays 8am-12am? Why not do this late at night?
+??? question "Why Tuesdays 8am-12am? Why not do this late at night?"
 
-: We have observed that the least busy time for our services is at the
-beginning of the week in the morning hours. Using this time period should not
-interrupt most of our users. If the remote possibility of a problem that
-extends past the scheduled downtime occurs, we would have our full staff fresh
-and available to assist in repairs and quickly restore service.
+    We have observed that the least busy time for our services is at the
+    beginning of the week in the morning hours. Using this time period should
+    not interrupt most of our users. If the remote possibility of a problem
+    that extends past the scheduled downtime occurs, we would have our full
+    staff fresh and available to assist in repairs and quickly restore service.
 
-I have a job currently running that has been active for XX days. Since the
-compute nodes will be unavailable, what will happen to all that work?
+??? question "I have jobs running, what will happen to them?"
 
-: For long-running jobs, we strongly recommend checkpointing your results on a
-periodic basis. Besides, we will place a reservation in the scheduler for each
-maintenance that would prevent jobs to run past it. This means that the
-scheduler will only allow jobs to run if they can finish by the time the
-maintenance starts. If you submit a long job soon before the maintenance, it
-will be delayed until after the maintenance. That will ensure that no work is
-lost when the maintence starts.
+    For long-running jobs, we strongly recommend checkpointing your results on
+    a periodic basis. Besides, we will place a reservation in the scheduler for
+    each maintenance that would prevent jobs to run past it. This means that
+    the scheduler will only allow jobs to run if they can finish by the time
+    the maintenance starts. If you submit a long job soon before the
+    maintenance, it will be delayed until after the maintenance. That will
+    ensure that no work is lost when the maintence starts.
 
 
 
