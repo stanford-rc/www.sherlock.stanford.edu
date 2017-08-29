@@ -59,9 +59,10 @@ one of the fingerprints below:
 
 Key type | Key Fingerprint
 ---------|----------------
-RSA      | `SHA256:T1q1Tbq8k5XBD5PIxvlCfTxNMi1ORWwKNRPeZPXUfJA`
-ECDSA    | `SHA256:eB0bODKdaCWtPgv0pYozsdC5ckfcBFVOxeMwrNKdkmg`
-ED25519  | `SHA256:vVk4tXswI9gtDO0FZ+YaZZYFZoG42l2ZD2XVQKoKZms`
+RSA      | `SHA256:T1q1Tbq8k5XBD5PIxvlCfTxNMi1ORWwKNRPeZPXUfJA`<br/><small>legacy format: `f5:8f:01:46:d1:f9:66:5d:33:58:b4:82:d8:4a:34:41`</small>
+ECDSA    | `SHA256:eB0bODKdaCWtPgv0pYozsdC5ckfcBFVOxeMwrNKdkmg`<br/><small>legacy format: `70:4c:76:ea:ae:b2:0f:81:4b:9c:c6:5a:52:4c:7f:64`</small>
+ED25519  | `SHA256:vVk4tXswI9gtDO0FZ+YaZZYFZoG42l2ZD2XVQKoKZms`<br/><small>legacy format: `d3:2c:3a:a3:1a:5a:b2:bc:1e:a6:0a:de:c8:11:21:58`</small>
+
 
 If they match, you can proceed and type ‘yes’. Your SSH program will then store
 that key and will verify it for every subsequent SSH connection, to make sure
