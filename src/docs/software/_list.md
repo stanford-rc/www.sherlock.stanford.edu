@@ -1,7 +1,9 @@
 
-As of Thursday, August 24 2017, we provide 119 software packages, in 6 categories, covering 24 fields of science.
+!!! tip "Overview"
 
-* [`biology`](#biology): cryo-em, neurology
+    As of Tuesday, August 29 2017, we provide 124 software packages, in 6 categories, covering 25 fields of science.
+
+* [`biology`](#biology): computational biology, cryo-em, neurology
 * [`chemistry`](#chemistry): computational chemistry, molecular dynamics
 * [`devel`](#devel): build, compiler, data, language, libs, mpi
 * [`math`](#math): computational geometry, deep learning, language, numerical analysis, numerical library, statistics
@@ -13,6 +15,7 @@ As of Thursday, August 24 2017, we provide 119 software packages, in 6 categorie
 ### Biology
 Field  | Module\ name | Version(s) | URL  | Description
 :----- | :----------- | ------: | :--- | :----------
+**computational biology** | `rosetta` | `3.8` | [Website](https://www.rosettacommons.org) | Rosetta is the premier software suite for modeling macromolecular structures. As a flexible, multi-purpose application, it includes tools for structure prediction, design, and remodeling of proteins and nucleic acids. 
 **cryo-em** | `relion` | `2.0.3` | [Website](http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page) | RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a stand-alone computer program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class averages in electron cryo-microscopy (cryo-EM). 
 **neurology** | `afni` | `17.2.07` | [Website](https://afni.nimh.nih.gov) | AFNI (Analysis of Functional NeuroImages) is a set of C programs for processing, analyzing, and displaying functional MRI (FMRI) data - a technique for mapping human brain activity. 
 **neurology** | `ants` | `2.1.0` | [Website](https://stnava.github.io/ANTs) | ANTs computes high-dimensional mappings to capture the statistics of brain structure and function. 
@@ -42,6 +45,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **data** | `sqlite` | `3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
 **language** | `ant` | `1.10.1` | [Website](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. 
 **language** | `cuda` | `8.0.61` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
+**language** | `go` | `1.9` | [Website](http://golang.org) | Go is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
 **language** | `java` | `1.8.0_131` | [Website](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. 
 **language** | `julia` | `0.5.1`<br/>`0.6` | [Website](https://julialang.org) | Julia is a high-level, high-performance dynamic programming language for numerical computing. 
 **language** | `perl` | `5.26.0` | [Website](https://www.perl.org) | Perl 5 is a highly capable, feature-rich programming language with over 29 years of development. <br/>[Usage on Sherlock](http://www.sherlock.stanford.edu/docs/software/using/perl)
@@ -52,6 +56,8 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `boost` | `1.64.0` | [Website](http://www.boost.org) | Boost is a set of libraries for the C++ programming language that provide support for tasks and structures such as linear algebra, pseudorandom number generation, multithreading, image processing, regular expressions, and unit testing. 
 **libs** | `eigen` | `3.3.3` | [Website](http://eigen.tuxfamily.org) | Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms. 
 **libs** | `nccl` | `1.3.4`<br/>`2.0.4` | [Website](https://github.com/NVIDIA/nccl) | NCCL (pronounced 'Nickel') is a stand-alone library of standard collective communication routines, such as all-gather, reduce, broadcast, etc., that have been optimized to achieve high bandwidth over PCIe. 
+**libs** | `opencv` | `3.3.0` | [Website](https://opencv.org) | OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library. 
+**libs** | `swig` | `3.0.12` | [Website](http://www.swig.org) | SWIG is an interface compiler that connects programs written in C and C++ with scripting languages such as Perl, Python, Ruby, and Tcl. 
 **libs** | `tbb` | `2017.u2` | [Website](https://software.intel.com/en-us/intel-tbb) | Intel® Threading Building Blocks (Intel® TBB) is a widely used C++ library for shared-memory parallel programming and heterogeneous computing (intra-node distributed memory programming). 
 **mpi** | `impi` | `2017.u2` | [Website](https://software.intel.com/en-us/intel-mpi-library) | Intel® MPI Library is a multi-fabric message passing library that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification. 
 **mpi** | `openmpi` | `2.0.2`<br/>`2.1.1` | [Website](https://www.openmpi.org) | The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. 
@@ -115,6 +121,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `pcre` | `8.40` | [Website](http://www.pcre.org/) | The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5. 
 **libs** | `popt` | `1.16` | [Website](http://rpm5.org/files/popt) | Library for parsing command line options. 
 **libs** | `py-mako` | `1.0.7` | [Website](http://www.makotemplates.org/) | Mako is a template library written in Python. It provides a familiar, non-XML syntax which compiles into Python modules for maximum performance. 
+**libs** | `readline` | `6.3` | [Website](https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html) | The GNU Readline library provides a set of functions for use by applications that allow users to edit command lines as they are typed in. 
 **scm** | `git` | `2.12.2` | [Website](http://git-scm.com) | Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. 
 **tools** | `curl` | `7.54.0` | [Website](https://curl.haxx.se/) | curl is an open source command line tool and library for transferring data with URL syntax. 
 **tools** | `expat` | `2.2.3` | [Website](http://libexpat.github.io) | Expat is a stream-oriented XML parser library written in C. 
