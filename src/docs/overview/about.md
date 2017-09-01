@@ -81,13 +81,13 @@ And what better account of what's happening on a high-performance computing
 cluster than Benedict Cumberbatch [describing][url_quote] his role as Sherlock
 Holmes in the BBC's modern adaptation of Arthur Conan Doyle's classic?
 
-!!! quote ""
+!!! quote "Benedict Cumberbatch, about Sherlock"
 
-    There's a great charge you get from playing him, because of the volume of
+    _There's a great charge you get from playing him, because of the volume of
     words in your head and the speed of thought – you really have to make your
     connections incredibly fast. He is one step ahead of the audience, and of
     anyone around him with normal intellect. They can't quite fathom where his
-    leaps are taking him.
+    leaps are taking him._
 
 Yes, exactly. That's Sherlock.
 
