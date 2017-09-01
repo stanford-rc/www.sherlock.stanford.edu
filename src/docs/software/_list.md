@@ -1,7 +1,7 @@
 
 !!! tip "Overview"
 
-    As of Tuesday, August 29 2017, we provide 124 software packages, in 6 categories, covering 25 fields of science.
+    As of Thursday, August 31 2017, we provide 125 software packages, in 6 categories, covering 25 fields of science.
 
 * [`biology`](#biology): computational biology, cryo-em, neurology
 * [`chemistry`](#chemistry): computational chemistry, molecular dynamics
@@ -15,6 +15,7 @@
 ### Biology
 Field  | Module\ name | Version(s) | URL  | Description
 :----- | :----------- | ------: | :--- | :----------
+**computational biology** | `imp` | `2.8.0` | [Website](https://integrativemodeling.org/) | IMP's broad goal is to contribute to a comprehensive structural characterization of biomolecules ranging in size and complexity from small peptides to large macromolecular assemblies, by integrating data from diverse biochemical and biophysical experiments. 
 **computational biology** | `rosetta` | `3.8` | [Website](https://www.rosettacommons.org) | Rosetta is the premier software suite for modeling macromolecular structures. As a flexible, multi-purpose application, it includes tools for structure prediction, design, and remodeling of proteins and nucleic acids. 
 **cryo-em** | `relion` | `2.0.3` | [Website](http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page) | RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a stand-alone computer program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class averages in electron cryo-microscopy (cryo-EM). 
 **neurology** | `afni` | `17.2.07` | [Website](https://afni.nimh.nih.gov) | AFNI (Analysis of Functional NeuroImages) is a set of C programs for processing, analyzing, and displaying functional MRI (FMRI) data - a technique for mapping human brain activity. 
