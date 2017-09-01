@@ -58,9 +58,9 @@ img[alt="screencap"] {
 }
 </style>
 
-|       |       |       |       |       |
-| :---: | :---: | :---: | :---: | :---: |
-| ![favicon](//github.com/favicon.ico) [GitHub](//github.com) | ![favicon](//hund.io/favicon.ico) [Hund](//hund.io) | ![favicon](//travis-ci.com/images/favicon.png) [Travis CI](//travis-ci.com) | ![favicon](//updown.io/favicon.ico) [updown.io](//updown.io/) | ![favicon](//zenhub.com/favicon.ico) [ZenHub](//zenhub.com) |
+|       |       |       |       |       |       |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| ![favicon](//zenhub.com/favicon.ico) [ZenHub](//zenhub.com) | ![favicon](//github.com/favicon.ico) [GitHub](//github.com) | ![favicon](//travis-ci.com/images/favicon.png) [Travis CI](//travis-ci.com) | ![favicon](//hund.io/favicon.ico) [Hund](//hund.io) | ![favicon](//headwayapp.co/assets/images/favicon.png) [Headway](//headwayapp.co) | ![favicon](//updown.io/favicon.ico) [updown.io](//updown.io/) |
 
 
 The Sherlock website and documentation also rely on the following projects:
