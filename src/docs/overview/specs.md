@@ -1,6 +1,6 @@
 # Technical specifications
 
-!!! note ""
+!!! note
 
     Sherlock is driven by contributions from individual PIs and groups, and as
     such, is constantly evolving.  The technical specifications outlined here
@@ -26,7 +26,7 @@ available computing resources and the accompanying networking and storage
 infrastructure. It has since been expanded with additions from multiple PI
 groups to reach the capacity of its Infinband network in December 2016.
 
-!!! important "Sherlock 2.0"
+!!! info "Sherlock 2.0"
 
     A new Infiniband fabric has been installed in early 2017, as the foundation
     for Sherlock 2.0. The existing nodes will join that new cluster in the
@@ -56,7 +56,12 @@ groups to reach the capacity of its Infinband network in December 2016.
 | operating system |    | CentOS 7.x |
 
 
-## [Storage][url_storage]
+## Storage
+
+!!! info "More information"
+
+    For more information about storage options on Sherlock, please refer to the
+    [Storage section][url_storage] of the documentation.
 
 Storage components are common to both clusters, meaning users can find the same
 files and directories from both Sherlock 1.0 and Sherlock 2.0 nodes.
@@ -81,9 +86,9 @@ files and directories from both Sherlock 1.0 and Sherlock 2.0 nodes.
 [url_4650v4]:  https://ark.intel.com/products/93809/Intel-Xeon-Processor-E5-4650-v4-35M-Cache-2_20-GHz
 
 [comment]: # (footnodes ------------------------------------------------------)
-[^2650v2]:  2x Intel(r) Xeon(r) [E5-2650v2][url_2650v2] processors (8-core Ivy-Bridge, 2.60 GHz)
-[^4640]:    4x Intel(r) Xeon(r) [E5-4640][url_4640] processors (8-core Sandy-Bridge, 2.40 GHz)
-[^2640v4]:  2x Intel(r) Xeon(r) [E5-2640v4][url_2640v4] processors (10-core Broadwell, 2.40 GHz)
-[^4650v4]:  4x Intel(r) Xeon(r) [E5-4650v4][url_4650v4] processors (14-core Broadwell, 2.20 GHz)
-[^2697Av4]: 2x Intel(r) Xeon(r) [E5-2697Av4][url_2697Av4] processors (16-core Broadwell, 2.60 GHz)
+[^2650v2]:  two-socket Intel(r) Xeon(r) [E5-2650v2][url_2650v2] processors (8-core Ivy-Bridge, 2.60 GHz)
+[^4640]:    four-socket Intel(r) Xeon(r) [E5-4640][url_4640] processors (8-core Sandy-Bridge, 2.40 GHz)
+[^2640v4]:  two-socket Intel(r) Xeon(r) [E5-2640v4][url_2640v4] processors (10-core Broadwell, 2.40 GHz)
+[^4650v4]:  four-socket Intel(r) Xeon(r) [E5-4650v4][url_4650v4] processors (14-core Broadwell, 2.20 GHz)
+[^2697Av4]: two-socket Intel(r) Xeon(r) [E5-2697Av4][url_2697Av4] processors (16-core Broadwell, 2.60 GHz)
 
