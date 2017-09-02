@@ -48,7 +48,7 @@ process will take place.
 will coexist. As two separate clusters, they will use distinct login nodes and
 provide access to different hardware and software.
 
-    !!! danger "Two isolated clusters"
+    !!! warning "Two isolated clusters"
 
         Specific compute nodes will only be accessible from one
         cluster at a time: the new compute nodes from Sherlock 2.0, and the old
@@ -117,7 +117,7 @@ The most notable changes are visible right from the connection process.
   ```
   (note the `login` part of the hostname)
 
-    !!! note "New server fingerprint"
+    !!! info "New server fingerprint"
 
         When you connect to the new login nodes for the first time, you'll be
         presented with the new servers' fingerprint (host keys). Please see the
@@ -281,7 +281,7 @@ files and folders available on Sherlock 1.0 will be available on Sherlock 2.0.
 
 !!! caution "Path changes"
 
-    Be advised that the paths of the /home and /share/PI directories have
+    Be advised that the paths of the `/home` and `/share/PI` directories have
     changed on Sherlock 2.0.  They are now respectively `/home/users` and
     `/home/groups`.
 
@@ -335,7 +335,7 @@ to add new applications over the coming days and weeks.
 
 ## How to differentiate clusters?
 
-!!! tldr "Determine the Sherlock version"
+!!! info "Determine the Sherlock version"
 
     To check which cluster environment you're running on, check the value of
     the `$SHERLOCK` environment variable.
@@ -357,7 +357,7 @@ module:
 ```bash
 #!/bin/bash
 #
-#SBATCH --jone-name=test
+#SBATCH --job-name=test
 #SBATCH --time 10:00
 #
 
