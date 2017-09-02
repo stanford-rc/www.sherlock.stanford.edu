@@ -1,12 +1,13 @@
 
 !!! tip "Overview"
 
-    As of Friday, September 01 2017, we provide 131 software packages, in 6 categories, covering 26 fields of science.
+    As of Friday, September 01 2017, we provide 134 software packages, in 7 categories, covering 27 fields of science.
 
 * [`biology`](#biology): computational biology, cryo-em, neurology
 * [`chemistry`](#chemistry): computational chemistry, molecular dynamics
 * [`devel`](#devel): build, compiler, data, language, libs, mpi
 * [`math`](#math): computational geometry, deep learning, language, numerical analysis, numerical library, statistics
+* [`physics`](#physics): gis
 * [`system`](#system): compression, containers, file transfer, language, libs, scm, tools
 * [`viz`](#viz): molecular visualization, remote display
 
@@ -84,6 +85,13 @@ Field  | Module\ name | Version(s) | URL  | Description
 **numerical library** | `openblas` | `0.2.19` | [Website](http://www.openblas.net/) | OpenBLAS is an optimized BLAS library 
 **statistics** | `R` | `3.4.0` | [Website](http://r-project.org) | R is a free software environment for statistical computing and graphics. 
 **statistics** | `stata` | `14`<br/>`15` | [Website](https://www.stata.com) | Stata is a complete, integrated statistical software package that provides everything you need for data analysis, data management, and graphics. 
+
+### Physics
+Field  | Module\ name | Version(s) | URL  | Description
+:----- | :----------- | ------: | :--- | :----------
+**gis** | `gdal` | `2.2.1` | [Website](http://www.gdal.org) | GDAL is a translator library for raster and vector geospatial data formats. 
+**gis** | `geos` | `3.6.2` | [Website](https://trac.osgeo.org/geos) | GEOS (Geometry Engine - Open Source) is a C++ port of Java Topology Suite (JTS). 
+**gis** | `proj` | `4.9.3` | [Website](http://proj4.org) | proj.4 is a standard UNIX filter function which converts geographic longitude and latitude coordinates into cartesian coordinates (and vice versa. 
 
 ### System
 Field  | Module\ name | Version(s) | URL  | Description
