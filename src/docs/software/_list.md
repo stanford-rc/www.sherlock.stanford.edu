@@ -1,5 +1,7 @@
 
-!!! tip "Overview"
+## Categories
+
+!!! summary
 
     As of Friday, September 01 2017, we provide 134 software packages, in 7 categories, covering 27 fields of science.
 
