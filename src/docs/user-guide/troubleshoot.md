@@ -20,6 +20,7 @@ This typically involves providing the following information:
 * the name of node where you received the error (usually displayed in your
   command-line prompt),
 * the command(s) you ran, and/or the job submission script(s) you used,
+* the relevant job ID(s),
 * the **exact**, **entire** error message (or trace) you received.
 
 !!! danger "Error messages are critical"
