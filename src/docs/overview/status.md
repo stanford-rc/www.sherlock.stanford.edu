@@ -32,10 +32,9 @@ required for compliance.
 
 !!! important "Next Maintenance"
 
-    As needed to patch severe security vulnerabilities.
+    Wednesday, September 20, 2017, 9:00 am - 2:00 pm
 
-Monthly full-day maintenance will return in July 2017 with the opening of
-Sherlock 2.0
+[comment]: # (As needed to patch severe security vulnerabilities.)
 
 
 
