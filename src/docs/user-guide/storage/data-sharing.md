@@ -56,9 +56,9 @@ There are two type of ACLs supported on Sherlock depending on the underlying
 filesystem:
 
 | Type       |  Filesystems |
-| ---------- |  ------------ |
-| NFSv4 ACLs |  `$HOME` and `$PI_HOME` |
-| POSIX ACLs |  `$SCRATCH`, `$PI_SCRATCH`, `$L_SCRATCH` and `$OAK` |
+| ---------- |  ----------- |
+| [NFSv4 ACLs](#nfsv4-acls) |  `$HOME` and `$PI_HOME` |
+| [POSIX ACLs](#posix-acls) |  `$SCRATCH`, `$PI_SCRATCH`, `$L_SCRATCH` and `$OAK` |
 
 
 ### POSIX ACLs
