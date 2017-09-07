@@ -16,6 +16,6 @@ replicated off-site, and can easily be shared with members of a research group.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_sw_overview]:  /docs/software/overview
+[url_sw_overview]:  /docs/software/
 [url_sw_list]:      /docs/software/list
 [url_pi_home]:      /docs/user-guide/storage#pi_home
