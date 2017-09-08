@@ -149,12 +149,12 @@ account.
 ## Batch jobs
 
 --8<--- "_wip.md"
+[comment]: #_
 
 
 
 
 ## Recurring jobs
-[comment]: #_
 
 !!! Warning
 
@@ -165,11 +165,15 @@ reasons:
 
 * resources limits cannot be easily enforced in `cron` jobs, meaning that a
   single user can end up monopolizing all the resources of a login node,
+* no amount of resources can be guaranteed when executing a `cron` job, leading
+  to unreliable runtime and performance,
 * user `cron` jobs have the potential of bringing down whole
   nodes by creating fork bombs, if they're not carefully crafted and tested,
 * compute and login nodes could be redeployed at any time, meaning that
   `cron` jobs scheduled there could go away without the user being notified,
-  and cause all sorts of unexpected results.
+  and cause all sorts of unexpected results,
+* `cron` jobs could be mistakenly scheduled on several nodes and run multiple
+  times, which could result in corrupted files.
 
 As an alternative, if you need to run recurring tasks at regular intervals, we
 recommend the following approach: by using the `--begin` job submission option,
@@ -184,6 +188,22 @@ may not be guaranteed and result in a delay in execution, as it will be
 scheduled by Slurm like any other jobs. Typical recurring jobs, such as file
 synchronization, database updates or backup tasks don't require strict starting
 times, though, so most users find this an acceptable trade-off.
+
+The table below summarizes the advantages and inconvenients of each approach:
+
+<!-- color styles for yes/no checks -->
+<style>
+.yes { color: darkgreen; }
+.no  { color: darkred;   }
+</style>
+
+|     | Cron tasks | Recurring jobs |
+| --- | :--------: | :------------: |
+| Authorized on Sherlock                | <b class="no">:fa-times:</b> | <b class="yes">:fa-check:</b> |
+| Dedicated resources for the task      | <b class="no">:fa-times:</b> | <b class="yes">:fa-check:</b> |
+| Persistent across node redeployments  | <b class="no">:fa-times:</b> | <b class="yes">:fa-check:</b> |
+| Unique, controlled execution          | <b class="no">:fa-times:</b> | <b class="yes">:fa-check:</b> |
+| Potential execution delay             | <b class="yes">:fa-check:</b> | <b class="no">:fa-times:</b> |
 
 ### Example
 
