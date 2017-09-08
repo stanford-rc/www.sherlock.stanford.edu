@@ -3,10 +3,10 @@
 
 !!! summary
 
-    As of Friday, September 08 2017, we provide 149 software packages, in 7 categories, covering 27 fields of science.
+    As of Friday, September 08 2017, we provide 149 software packages, in 7 categories, covering 29 fields of science.
 
 * [`biology`](#biology): computational biology, cryo-em, genomics, neurology
-* [`chemistry`](#chemistry): 
+* [`chemistry`](#chemistry): computational chemistry, molecular dynamics
 * [`devel`](#devel): build, compiler, data, language, libs, mpi
 * [`math`](#math): computational geometry, deep learning, language, numerical analysis, numerical library, statistics, symbolic
 * [`physics`](#physics): gis
@@ -33,6 +33,13 @@ Field  | Module\ name | Version(s) | URL  | Description
 ### Chemistry
 Field  | Module\ name | Version(s) | URL  | Description
 :----- | :----------- | ------: | :--- | :----------
+**computational chemistry** | `gaussian` | `g16` | [Website](https://www.gaussian.com) | Gaussian is a general purpose computational chemistry software package. 
+**computational chemistry** | `libint` | `2.0.3` | [Website](https://sourceforge.net/p/libint/home/) | Libint computes molecular integrals. 
+**computational chemistry** | `libxc` | `3.0.0` | [Website](http://octopus-code.org/wiki/Libxc) | Libxc is a library of exchange-correlation functionals for density-functional theory. 
+**computational chemistry** | `schrodinger` | `2017-2` | [Website](https://www.schrodinger.com) | Schrödinger Suites (Small-molecule Drug Discovery Suite, Material Science Suite, Biologics Suite) provide a set of molecular modelling software. 
+**computational chemistry** | `vasp` | `5.4.1` | [Website](https://www.vasp.at) | The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic scale materials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics, from first principles. 
+**molecular dynamics** | `gromacs` | `2016.3` | [Website](http://www.gromacs.org) | GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles. 
+**molecular dynamics** | `plumed` | `2.3.2` | [Website](http://www.plumed.org/) | PLUMED is an open source library for free energy calculations in molecular systems. 
 
 ### Devel
 Field  | Module\ name | Version(s) | URL  | Description
