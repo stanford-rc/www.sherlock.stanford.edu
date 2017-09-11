@@ -5,13 +5,13 @@
 
     As of Monday, September 11 2017, we provide 167 software packages, in 7 categories, covering 30 fields of science.
 
-* [`biology`](#biology): computational biology, cryo-em, genomics, neurology
-* [`chemistry`](#chemistry): computational chemistry, molecular dynamics
-* [`devel`](#devel): build, compiler, data, language, libs, mpi
-* [`math`](#math): computational geometry, deep learning, language, numerical analysis, numerical library, statistics, symbolic
-* [`physics`](#physics): gis
-* [`system`](#system): compression, containers, file transfer, language, libs, scm, tools
-* [`viz`](#viz): molecular visualization, plotting, remote display
+* [`biology`](#biology): <small>computational biology, cryo-em, genomics, neurology</small>
+* [`chemistry`](#chemistry): <small>computational chemistry, molecular dynamics</small>
+* [`devel`](#devel): <small>build, compiler, data, language, libs, mpi</small>
+* [`math`](#math): <small>computational geometry, deep learning, language, numerical analysis, numerical library, statistics, symbolic</small>
+* [`physics`](#physics): <small>gis</small>
+* [`system`](#system): <small>compression, containers, file transfer, language, libs, scm, tools</small>
+* [`viz`](#viz): <small>molecular visualization, plotting, remote display</small>
 
 
 !!! warning "Licensed software"
