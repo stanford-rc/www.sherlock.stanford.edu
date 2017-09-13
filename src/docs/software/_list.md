@@ -3,15 +3,15 @@
 
 !!! summary
 
-    As of Monday, September 11 2017, we provide 167 software packages, in 7 categories, covering 30 fields of science.
+    As of Tuesday, September 12 2017, we provide 172 software packages, in 7 categories, covering 31 fields of science.
 
-* [`biology`](#biology): <small>computational biology, cryo-em, genomics, neurology</small>
-* [`chemistry`](#chemistry): <small>computational chemistry, molecular dynamics</small>
-* [`devel`](#devel): <small>build, compiler, data, language, libs, mpi</small>
-* [`math`](#math): <small>computational geometry, deep learning, language, numerical analysis, numerical library, statistics, symbolic</small>
-* [`physics`](#physics): <small>gis</small>
-* [`system`](#system): <small>compression, containers, file transfer, language, libs, scm, tools</small>
-* [`viz`](#viz): <small>molecular visualization, plotting, remote display</small>
+* [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology</small>
+* [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
+* [`devel`](#devel) <small>build, compiler, data, language, libs, mpi</small>
+* [`math`](#math) <small>computational geometry, deep learning, language, numerical analysis, numerical library, statistics, symbolic</small>
+* [`physics`](#physics) <small>gis</small>
+* [`system`](#system) <small>compression, containers, file transfer, language, libs, scm, tools</small>
+* [`viz`](#viz) <small>molecular visualization, plotting, remote display</small>
 
 
 !!! warning "Licensed software"
@@ -55,12 +55,15 @@ Field  | Module\ name | Version(s) | URL  | Description
 Field  | Module\ name | Version(s) | URL  | Description
 :----- | :----------- | ------: | :--- | :----------
 **computational chemistry** | `gaussian`^<b class="lic"></b>^ | `g16` | [Website](https://www.gaussian.com) | Gaussian is a general purpose computational chemistry software package. 
-**computational chemistry** | `libint` | `2.0.3` | [Website](https://sourceforge.net/p/libint/home/) | Libint computes molecular integrals. 
+**computational chemistry** | `libint` | `1.1.4`<br/>`2.0.3` | [Website](https://sourceforge.net/p/libint/home/) | Libint computes molecular integrals. 
 **computational chemistry** | `libxc` | `3.0.0` | [Website](http://octopus-code.org/wiki/Libxc) | Libxc is a library of exchange-correlation functionals for density-functional theory. 
+**computational chemistry** | `py-ase` | `3.14.1_py27` | [Website](https://wiki.fysik.dtu.dk/ase/) | The Atomic Simulation Environment (ASE) is a set of tools and Python modules for setting up, manipulating, running, visualizing and analyzing atomistic simulations. 
 **computational chemistry** | `schrodinger`^<b class="lic"></b>^ | `2017-2` | [Website](https://www.schrodinger.com) | Schrödinger Suites (Small-molecule Drug Discovery Suite, Material Science Suite, Biologics Suite) provide a set of molecular modelling software. 
 **computational chemistry** | `vasp`^<b class="lic"></b>^ | `5.4.1` | [Website](https://www.vasp.at) | The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic scale materials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics, from first principles. 
 **molecular dynamics** | `gromacs` | `2016.3` | [Website](http://www.gromacs.org) | GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles. 
 **molecular dynamics** | `plumed` | `2.3.2` | [Website](http://www.plumed.org/) | PLUMED is an open source library for free energy calculations in molecular systems. 
+**molecular dynamics** | `quip` | `20170901` | [Website](https://github.com/libAtoms/QUIP) | The QUIP package is a collection of software tools to carry out molecular dynamics simulations. 
+**quantum chemistry** | `cp2k` | `4.1` | [Website](http://www.cp2k.org) | CP2K is a quantum chemistry and solid state physics software package that can perform atomistic simulations of solid state, liquid, molecular, periodic, material, crystal, and biological systems. 
 
 ### Devel
 Field  | Module\ name | Version(s) | URL  | Description
@@ -121,6 +124,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **numerical library** | `libxsmm` | `1.8.1` | [Website](https://github.com/hfp/libxsmm) | LIBXSMM is a library for small dense and small sparse matrix-matrix multiplications as well as for deep learning primitives such as small convolutions 
 **numerical library** | `mpfr` | `3.1.5` | [Website](https://www.mpfr.org) | The MPFR library is a C library for multiple-precision floating-point computations with correct rounding. 
 **numerical library** | `openblas` | `0.2.19` | [Website](http://www.openblas.net/) | OpenBLAS is an optimized BLAS library 
+**numerical library** | `scalapack` | `2.0.2` | [Website](http://www.netlib.org/scalapack/) | ScaLAPACK is a library of high-performance linear algebra routines for parallel distributed memory machines. 
 **statistics** | `R` | `3.4.0` | [Website](http://r-project.org) | R is a free software environment for statistical computing and graphics. 
 **statistics** | `stata`^<b class="lic"></b>^ | `14`<br/>`15` | [Website](https://www.stata.com) | Stata is a complete, integrated statistical software package that provides everything you need for data analysis, data management, and graphics. 
 **symbolic** | `libmatheval` | `1.1.11` | [Website](https://www.gnu.org/software/libmatheval/) | GNU libmatheval is a library (callable from C and Fortran) to parse and evaluate symbolic expressions input as text. 
