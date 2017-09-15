@@ -53,6 +53,6 @@ dashboard][url_status].
 ## Current usage
 
 <iframe
-  src="https://srcc-lookout.stanford.edu/public/dashboard-solo/db/sherlock-public-dashboard?panelId=3&edit&theme=light"
+  src="https://srcc-lookout.stanford.edu/public/dashboard-solo/db/sherlock-public-dashboard?panelId=3&theme=light"
   width="100%" height="200" frameborder="0">
 </iframe>
