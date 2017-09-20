@@ -3,14 +3,14 @@
 
 !!! summary
 
-    As of Monday, September 18 2017, we provide 189 software packages, in 7 categories, covering 31 fields of science.
+    As of Tuesday, September 19 2017, we provide 194 software packages, in 7 categories, covering 33 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
 * [`devel`](#devel) <small>build, compiler, data, language, libs, mpi</small>
-* [`math`](#math) <small>computational geometry, deep learning, language, numerical analysis, numerical library, statistics, symbolic</small>
+* [`math`](#math) <small>computational geometry, deep learning, language, numerical analysis, numerical library, optimization, statistics, symbolic</small>
 * [`physics`](#physics) <small>gis</small>
-* [`system`](#system) <small>compression, containers, file transfer, language, libs, scm, tools</small>
+* [`system`](#system) <small>compression, containers, file management, file transfer, language, libs, scm, tools</small>
 * [`viz`](#viz) <small>molecular visualization, plotting, remote display</small>
 
 
@@ -133,6 +133,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **numerical library** | `openblas` | `0.2.19` | [Website](http://www.openblas.net/) | OpenBLAS is an optimized BLAS library 
 **numerical library** | `qrupdate` | `1.1.2` | [Website](https://sourceforge.net/projects/qrupdate/) | qrupdate is a Fortran library for fast updates of QR and Cholesky decompositions. 
 **numerical library** | `scalapack` | `2.0.2` | [Website](http://www.netlib.org/scalapack/) | ScaLAPACK is a library of high-performance linear algebra routines for parallel distributed memory machines. 
+**optimization** | `knitro` | `10.3.0` | [Website](https://www.artelys.com/en/optimization-tools/knitro) | Artelys Knitro is an optimization solver for difficult large-scale nonlinear problems. 
 **statistics** | `R` | `3.4.0` | [Website](http://r-project.org) | R is a free software environment for statistical computing and graphics. 
 **statistics** | `stata`^<b class="lic"></b>^ | `14`<br/>`15` | [Website](https://www.stata.com) | Stata is a complete, integrated statistical software package that provides everything you need for data analysis, data management, and graphics. 
 **symbolic** | `libmatheval` | `1.1.11` | [Website](https://www.gnu.org/software/libmatheval/) | GNU libmatheval is a library (callable from C and Fortran) to parse and evaluate symbolic expressions input as text. 
@@ -151,7 +152,9 @@ Field  | Module\ name | Version(s) | URL  | Description
 **compression** | `xz` | `5.2.3` | [Website](http://tukaani.org/xz/) | XZ Utils is free general-purpose data compression software with a high compression ratio. 
 **compression** | `zlib` | `1.2.11` | [Website](http://zlib.net) | zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. 
 **containers** | `singularity` | `2.3`<br/>`2.3.1` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
+**file management** | `fpart` | `0.9.3` | [Website](https://github.com/martymac/fpart) | fpart sorts files and packs them into partitions. 
 **file transfer** | `gdrive` | `2.1.0` | [Website](https://github.com/prasmussen/gdrive) | gdrive is a command line utility for interacting with Google Drive. 
+**file transfer** | `lftp` | `4.8.1` | [Website](https://lftp.yar.ru/) | LFTP is a sophisticated file transfer program supporting a number of network protocols (ftp, http, sftp, fish, torrent). 
 **file transfer** | `mpifileutils` | `20170210` | [Website](https://github.com/hpc/mpifileutils) | mpiFileUtils is a suite of MPI-based tools to manage large datasets, which may vary from large directory trees to large files. 
 **file transfer** | `py-globus-cli` | `1.2.0` | [Website](https://github.com/globus/globus-cli) | A command line wrapper over the Globus SDK for Python. 
 **file transfer** | `rclone` | `1.37` | [Website](https://rclone.org) | Rclone is a command line program to sync files and directories to and from: Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon Drive, Microsoft One Drive, Hubic, Backblaze B2, Yandex Disk, or the local filesystem. 
@@ -171,6 +174,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `gflags` | `2.2.1` | [Website](https://gflags.github.io/gflags/) | The gflags package contains a C++ library that implements commandline flags processing. 
 **libs** | `glib` | `2.52.3` | [Website](https://wiki.gnome.org/Projects/GLib) | The GLib library provides core non-graphical functionality such as high level data types, Unicode manipulation, and an object and type system to C programs. 
 **libs** | `glog` | `0.3.5` | [Website](https://github.com/google/glog) | C++ implementation of the Google logging module. 
+**libs** | `gnutls` | `3.5.9` | [Website](https://www.gnutls.org) | GnuTLS is a secure communications library implementing the SSL, TLS and DTLS protocols and technologies around them. 
 **libs** | `gobject-introspection` | `1.52.1` | [Website](https://wiki.gnome.org/Projects/GObjectIntrospection) | GObject introspection is a middleware layer between C libraries (using GObject) and language bindings. 
 **libs** | `googletest` | `1.8.0` | [Website](https://github.com/google/googletest) | Google Test is Google's C++ test framework. 
 **libs** | `gtk+` | `2.24.30`<br/>`3.22.18` | [Website](https://www.gtk.org) | GTK+, or the GIMP Toolkit, is a multi-platform toolkit for creating graphical user interfaces. 
@@ -188,6 +192,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `libxml2` | `2.9.4` | [Website](http://xmlsoft.org/) | Libxml2 is a XML C parser and toolkit. 
 **libs** | `mesa` | `17.1.6` | [Website](https://www.mesa3d.org) | Mesa is an open-source implementation of the OpenGL, Vulkan and other specifications. 
 **libs** | `ncurses` | `6.0` | [Website](https://www.gnu.org/software/ncurses) | The ncurses (new curses) library is a free software emulation of curses in System V Release 4.0 (SVr4), and more. 
+**libs** | `nettle` | `3.3` | [Website](http://www.lysator.liu.se/~nisse/nettle/) | Nettle is a cryptographic library that is designed to fit easily in more or less any context. 
 **libs** | `orbit` | `2.14.19` | [Website](https://projects.gnome.org/ORBit2) | ORBit2 is a CORBA 2.4-compliant Object Request Broker (ORB) featuring mature C, C++ and Python bindings. 
 **libs** | `pango` | `1.40.10` | [Website](http://www.pango.org) | Pango is a library for laying out and rendering of text, with an emphasis on internationalization. 
 **libs** | `pcre` | `8.40` | [Website](http://www.pcre.org/) | The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5. 
