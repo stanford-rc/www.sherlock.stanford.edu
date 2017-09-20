@@ -4,7 +4,7 @@
     hostname: "status.sherlock.stanford.edu",
     selector: "#sh_status",
     display: {
-        ledPosition: "right",
+        ledPosition: "left",
     }
   });
 </script>
@@ -16,6 +16,9 @@
   height: 12px;
   width: 12px;
   border-radius: 12px;
+}
+.status-widget__issue {
+  line-height: normal;
 }
 .status-widget__issue__title,
 .status-widget__issue__body {
