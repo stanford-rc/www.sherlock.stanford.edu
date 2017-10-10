@@ -143,6 +143,100 @@ An ACL in NFSv4 is a list of rules setting permissions on files or directories.
 A permission rule, or Access Control Entry (ACE), is of the form
 `type:flags:principle:permissions`.
 
+
+Commonly used entries for these fields are:
+
+* **type**: `A` (allow) or `D` (deny)
+* **flags**: `g` (group), `d` (directory-inherit), `f` (file-inherit), `n`
+  (no-propagate-inherit), or `i` (inherit-only)
+* **principle**:  a named user (`user@sherlock`), a group, or one of three
+  special principles: `OWNER@`, `GROUP@`, and `EVERYONE@`.
+* **permissions**: there are 14 permission characters, as well as the shortcuts
+  `R`, `W`, and `X`. Here is a list of possible permissions that can be
+  included in the permissions field (options are Case Sensitive)<small>
+    * `r` read-data (files) / list-directory (directories)
+    * `w` write-data (files) / create-file (directories)
+    * `x` execute (files) / change-directory (directories)
+    * `a` append-data (files) / create-subdirectory (directories)
+    * `t` read-attributes: read the attributes of the file/directory.
+    * `T` write-attributes: write the attributes of the file/directory.
+    * `n` read-named-attributes: read the named attributes of the
+      file/directory.
+    * `N` write-named-attributes: write the named attributes of the
+      file/directory.
+    * `c` read-ACL: read the file/directory NFSv4 ACL.
+    * `C` write-ACL: write the file/directory NFSv4 ACL.
+    * `o` write-owner: change ownership of the file/directory.
+    * `y` synchronize: allow clients to use synchronous I/O with the server.
+    * `d` delete: delete the file/directory. Some servers will allow a delete
+      to occur if either this permission is set in the file/directory or if the
+      delete-child permission is set in its parent direcory.
+    * `D` delete-child: remove a file or subdirectory from within the given
+      directory (directories only)
+
+   </small>
+
+A comprehensive listing of allowable field strings is given in the manual page
+[nfs4_acl(5)][url_nfs4_acl_man]
+
+To see what permissions are set on a particular file, use the `nfs4_getfacl`
+command. For example, newly created `file1` may have default permissions listed
+by `ls -l` as `-rw-r—r—`. Listing the permissions with `nfs4_getfacl` would
+display the following:
+
+```shell
+$ nfs4_getfacl file1
+A::OWNER@:rwatTnNcCoy
+A:g:GROUP@:rtncy
+A::EVERYONE@:rtncy
+```
+
+To set permissions on a file, use the `nfs4_setfacl` command. For convenience,
+NFSv4 provides the shortcuts `R`, `W` and `X` for setting read, write, and
+execute permissions. For example, to add write permissions for the current
+group on `file1`, use `nfs4_setfacl` with the `-a` switch:
+
+```shell
+$ nfs4_setfacl -a A::GROUP@:W file1
+```
+
+This command switched the `GROUP@` permission field from `rtncy` to
+`rwatTnNcCoy`.  However, be aware that NFSv4 file permission shortcuts have a
+different meanings than the traditional Unix `r`, `w`, and `x`. For example
+issuing `chmod g+w file1` will set `GROUP@` to `rwatncy`.
+
+Although the shortcut permissions can be handy, often rules need to be more
+customized. Use `nfs4_setfacl -e file1`  to open the ACL for `file1` in a text
+editor.
+
+Access Control Entries allow more fine grained control over file and directory
+permissions than does the `chmod` command. For example, if user `joe` wants to
+give read and write permissions to `jack` for her directory `private`, she
+would issue:
+
+```shell
+$ nfs4_setfacl -R -a A::jack@sherlock:RW private/
+```
+
+The `-R` switch recursively applies the rule to the files and directories
+within `private/` as well.
+
+To allow `jack` to create files and subdirectories within `private/` with the
+permissions as granted above, inheritance rules need to be applied.
+
+```
+$ nfs4_setfacl -R -a A:fdi:jack@sherlock:RW private/
+```
+
+By default, each permission is in the Deny state and an ACE is required to
+explicitly allow a permission. However, be aware that a server may silently
+override a users ACE, usually to a less permissive setting.
+
+
+
+
+
+
 For complete documentation and examples on using NFSv4 ACLs, please see the
 manual page at [nfs4_acl(5)][url_nfs4_acl_man].
 
