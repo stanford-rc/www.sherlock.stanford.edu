@@ -3,14 +3,14 @@
 
 !!! summary
 
-    As of Tuesday, September 19 2017, we provide 194 software packages, in 7 categories, covering 33 fields of science.
+    As of Thursday, October 19 2017, we provide 206 software packages, in 7 categories, covering 37 fields of science.
 
-* [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology</small>
+* [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
-* [`devel`](#devel) <small>build, compiler, data, language, libs, mpi</small>
-* [`math`](#math) <small>computational geometry, deep learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
+* [`devel`](#devel) <small>build, compiler, data, language, libs, mpi, networking</small>
+* [`math`](#math) <small>computational geometry, deep learning, linear algebra, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>gis</small>
-* [`system`](#system) <small>compression, containers, file management, file transfer, language, libs, scm, tools</small>
+* [`system`](#system) <small>compression, containers, file management, file transfer, language, libs, resource monitoring, scm, tools</small>
 * [`viz`](#viz) <small>molecular visualization, plotting, remote display</small>
 
 
@@ -43,13 +43,19 @@ Field  | Module\ name | Version(s) | URL  | Description
 **computational biology** | `py-biopython` | `1.70` | [Website](http://biopython.org) | Biopython is a set of freely available tools for biological computation written in Python. 
 **computational biology** | `rosetta` | `3.8` | [Website](https://www.rosettacommons.org) | Rosetta is the premier software suite for modeling macromolecular structures. As a flexible, multi-purpose application, it includes tools for structure prediction, design, and remodeling of proteins and nucleic acids. 
 **cryo-em** | `relion` | `2.0.3` | [Website](http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page) | RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a stand-alone computer program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class averages in electron cryo-microscopy (cryo-EM). 
+**genomics** | `angsd` | `0.919` | [Website](http://www.popgen.dk/angsd/index.php/ANGSD) | ANGSD is a software for analyzing next generation sequencing data. 
+**genomics** | `bcftools` | `1.6` | [Website](https://github.com/samtools/bcftools) | BCFtools is a program for variant calling and manipulating files in the Variant Call Format (VCF) and its binary counterpart BCF. 
+**genomics** | `htslib` | `1.6` | [Website](https://github.com/samtools/htslib) | C library for high-throughput sequencing data formats. 
+**genomics** | `ncbi-blast+` | `2.6.0` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
 **genomics** | `py-macs2` | `2.1.1_py27` | [Website](https://github.com/taoliu/MACS) | MACS (Model-based Analysis of ChIP-Seq) implements a novel ChIP-Seq analysis method. 
+**genomics** | `samtools` | `1.6` | [Website](https://github.com/samtools/samtools) | Tools (written in C using htslib) for manipulating next-generation sequencing data. 
 **neurology** | `afni` | `17.2.07` | [Website](https://afni.nimh.nih.gov) | AFNI (Analysis of Functional NeuroImages) is a set of C programs for processing, analyzing, and displaying functional MRI (FMRI) data - a technique for mapping human brain activity. 
 **neurology** | `ants` | `2.1.0` | [Website](https://stnava.github.io/ANTs) | ANTs computes high-dimensional mappings to capture the statistics of brain structure and function. 
 **neurology** | `freesurfer` | `6.0.0` | [Website](https://surfer.nmr.mgh.harvard.edu/) | An open source software suite for processing and analyzing (human) brain MRI images. 
 **neurology** | `fsl` | `5.0.10` | [Website](https://fsl.fmrib.ox.ac.uk/fsl) | FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. 
 **neurology** | `mrtrix` | `0.3.16` | [Website](http://www.mrtrix.org) | MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses. 
 **neurology** | `spm` | `12` | [Website](http://www.fil.ion.ucl.ac.uk/spm/) | The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. 
+**phylogenetics** | `py-ete` | `3.0.0_py27_qt5`<br/>`3.0.0_py27` | [Website](http://etetoolkit.org/) | A Python framework for the analysis and visualization of trees. 
 
 ### Chemistry
 Field  | Module\ name | Version(s) | URL  | Description
@@ -62,6 +68,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **computational chemistry** | `vasp`^<b class="lic"></b>^ | `5.4.1` | [Website](https://www.vasp.at) | The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic scale materials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics, from first principles. 
 **molecular dynamics** | `gromacs` | `2016.3` | [Website](http://www.gromacs.org) | GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles. 
 **molecular dynamics** | `plumed` | `2.3.2` | [Website](http://www.plumed.org/) | PLUMED is an open source library for free energy calculations in molecular systems. 
+**molecular dynamics** | `py-raspa2` | `2.0.3_py27` | [Website](https://github.com/numat/RASPA2) | RASPA2 is a general purpose classical simulation package that can be used for the simulation of molecules in gases, fluids, zeolites, aluminosilicates, metal-organic frameworks, carbon nanotubes and external fields. 
 **molecular dynamics** | `quip` | `20170901` | [Website](https://github.com/libAtoms/QUIP) | The QUIP package is a collection of software tools to carry out molecular dynamics simulations. 
 **quantum chemistry** | `cp2k` | `4.1` | [Website](http://www.cp2k.org) | CP2K is a quantum chemistry and solid state physics software package that can perform atomistic simulations of solid state, liquid, molecular, periodic, material, crystal, and biological systems. 
 
@@ -85,7 +92,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **data** | `redis` | `4.0.1` | [Website](https://redis.io) | Redis is an open source, in-memory data structure store, used as a database, cache and message broker. 
 **data** | `sqlite` | `3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
 **language** | `ant` | `1.10.1` | [Website](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. 
-**language** | `cuda` | `8.0.61` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
+**language** | `cuda` | `8.0.61`<br/>`9.0.176` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
 **language** | `go` | `1.9` | [Website](http://golang.org) | Go is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
 **language** | `guile` | `2.2.2` | [Website](https://www.gnu.org/software/guile/) | GNU Guile is the preferred extension system for the GNU Project, which features an implementation of the Scheme programming language. 
 **language** | `java` | `1.8.0_131` | [Website](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. 
@@ -107,6 +114,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `zeromq` | `4.2.2` | [Website](http://zeromq.org) | ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous messaging library, aimed at use in distributed or concurrent applications. 
 **mpi** | `impi` | `2017.u2`<br/>`2018` | [Website](https://software.intel.com/en-us/intel-mpi-library) | Intel® MPI Library is a multi-fabric message passing library that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification. 
 **mpi** | `openmpi` | `2.0.2`<br/>`2.1.1` | [Website](https://www.openmpi.org) | The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. 
+**networking** | `gasnet` | `1.30.0` | [Website](https://gasnet.lbl.gov) | GASNet is a language-independent, low-level networking layer that provides network-independent, high-performance communication primitives tailored for implementing parallel global address space SPMD languages and libraries. 
 
 ### Math
 Field  | Module\ name | Version(s) | URL  | Description
@@ -117,8 +125,9 @@ Field  | Module\ name | Version(s) | URL  | Description
 **deep learning** | `cudnn` | `5.1`<br/>`6.0`<br/>`7.0` | [Website](https://developer.nvidia.com/cudnn) | NVIDIA cuDNN is a GPU-accelerated library of primitives for deep neural networks. 
 **deep learning** | `py-keras` | `2.0.8_py27` | [Website](http://keras.io) | Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. 
 **deep learning** | `py-pytorch` | `0.2.0_py36`<br/>`0.2.0_py27` | [Website](http://pytorch.org) | PyTorch is a deep learning framework that puts Python first. 
-**deep learning** | `py-tensorflow` | `1.2.1`<br/>`1.3.0_py36`<br/>`1.3.0`<br/>`1.3.0_py27` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
+**deep learning** | `py-tensorflow` | `1.2.1`<br/>`1.3.0_py36`<br/>`1.3.0_py27` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
 **deep learning** | `py-tensorlayer` | `1.6.3_py27` | [Website](http://tensorlayer.org) | TensorLayer is a Deep Learning (DL) and Reinforcement Learning (RL) library extended from Google TensorFlow. 
+**linear algebra** | `armadillo` | `8.200.1` | [Website](http://arma.sourceforge.net/) | Armadillo is a high quality linear algebra library (matrix maths) for the C++ language, aiming towards a good balance between speed and ease of use. 
 **numerical analysis** | `matlab`^<b class="lic"></b>^ | `R2017a` | [Website](https://www.mathworks.com/products/matlab.html) | MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment and fourth-generation programming language. 
 **numerical analysis** | `octave` | `4.2.1` | [Website](https://www.gnu.org/software/octave/) | GNU Octave is a high-level language primarily intended for numerical computations. 
 **numerical library** | `arpack` | `3.5.0` | [Website](https://github.com/opencollab/arpack-ng) | Collection of Fortran77 subroutines designed to solve large scale eigenvalue problems. 
@@ -132,6 +141,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **numerical library** | `openblas` | `0.2.19` | [Website](http://www.openblas.net/) | OpenBLAS is an optimized BLAS library 
 **numerical library** | `qrupdate` | `1.1.2` | [Website](https://sourceforge.net/projects/qrupdate/) | qrupdate is a Fortran library for fast updates of QR and Cholesky decompositions. 
 **numerical library** | `scalapack` | `2.0.2` | [Website](http://www.netlib.org/scalapack/) | ScaLAPACK is a library of high-performance linear algebra routines for parallel distributed memory machines. 
+**optimization** | `gurobi` | `7.5.1` | [Website](http://www.gurobi.com) | The Gurobi Optimizer is a commercial optimization solver for mathematical programming. 
 **optimization** | `knitro` | `10.3.0` | [Website](https://www.artelys.com/en/optimization-tools/knitro) | Artelys Knitro is an optimization solver for difficult large-scale nonlinear problems. 
 **scientific computing** | `py-scipystack` | `1.0_py36`<br/>`1.0_py27` | [Website](https://www.scipy.org) | The SciPy Stack is a collection of open source software for scientific computing in Python. It provides the following packages: numpy, scipy, matplotlib, ipython, jupyter, pandas, sympy and nose. 
 **statistics** | `R` | `3.4.0` | [Website](http://r-project.org) | R is a free software environment for statistical computing and graphics. 
@@ -201,6 +211,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `py-mako` | `1.0.7` | [Website](http://www.makotemplates.org/) | Mako is a template library written in Python. It provides a familiar, non-XML syntax which compiles into Python modules for maximum performance. 
 **libs** | `readline` | `7.0` | [Website](https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html) | The GNU Readline library provides a set of functions for use by applications that allow users to edit command lines as they are typed in. 
 **libs** | `snappy` | `1.1.7` | [Website](https://github.com/google/snappy) | A fast compressor/decompressor. 
+**resource monitoring** | `remora` | `1.8.2` | [Website](https://github.com/TACC/remora) | Remora is a tool to monitor runtime resource utilization. 
 **scm** | `git` | `2.12.2` | [Website](http://git-scm.com) | Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. 
 **tools** | `curl` | `7.54.0` | [Website](https://curl.haxx.se/) | curl is an open source command line tool and library for transferring data with URL syntax. 
 **tools** | `expat` | `2.2.3` | [Website](http://libexpat.github.io) | Expat is a stream-oriented XML parser library written in C. 
