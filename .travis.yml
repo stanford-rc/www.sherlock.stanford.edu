@@ -41,11 +41,12 @@ before_install:
 
 # install dependencies
 install:
+    - pip install mkdocs==0.16.0
     - pip install -r requirements.txt
 
 # build
 script:
-    - mkdocs build --verbose --clean
+    - mkdocs build --verbose --clean --strict
 
 # ----------------------------------------------------------------------------
 #
