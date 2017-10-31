@@ -1,4 +1,7 @@
-{% import "partials/language.html" as lang %}
+{% import "partials/language.html" as lang with context %}
+{% set feature = config.theme.feature %}
+{% set palette = config.theme.palette %}
+{% set font = config.theme.font %}
 <!DOCTYPE html>
 <html lang="{{ lang.t('language') }}" class="no-js">
   <head>
@@ -19,12 +22,23 @@
       {% elif config.site_author %}
         <meta name="author" content="{{ config.site_author }}">
       {% endif %}
+      {% for key in [
+        "clipboard.copy",
+        "clipboard.copied",
+        "search.language",
+        "search.result.none",
+        "search.result.one",
+        "search.result.other",
+        "search.tokenizer"
+      ] %}
+        <meta name="lang:{{ key }}" content="{{ lang.t(key) }}">
+      {% endfor %}
       {% if config.site_favicon %}
         <link rel="shortcut icon" href="{{ base_url }}/{{ config.site_favicon }}">
       {% else %}
         <link rel="shortcut icon" href="{{ base_url }}/assets/images/favicon.png">
       {% endif %}
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-1.10.4">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-2.0.1">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta.title %}
@@ -39,19 +53,18 @@
       <script src="{{ base_url }}/assets/javascripts/modernizr-e826f8942a.js"></script>
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-0741cbeb94.css">
-      {% if config.extra.palette %}
+      <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-462a8722ef.css">
+      {% if palette.primary or palette.accent %}
         <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-bc8471412e.palette.css">
       {% endif %}
     {% endblock %}
     {% block fonts %}
-      {% if config.extra.font != false and config.extra.font != "none" %}
-        {% set text = config.extra.get("font", {}).text | default("Roboto") %}
-        {% set code = config.extra.get("font", {}).code
-                    | default("Roboto Mono") %}
-        {% set font = text + ":300,400,400i,700|" + code | replace(" ", "+") %}
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ font }}">
-        <style>body,input{font-family:"{{ text }}","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"{{ code }}","Courier New",Courier,monospace}</style>
+      {% if font != false %}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{
+              font.text | replace(' ', '+')  + ':300,400,400i,700|' +
+              font.code | replace(' ', '+')
+            }}">
+        <style>body,input{font-family:"{{ font.text }}","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"{{ font.code }}","Courier New",Courier,monospace}</style>
       {% endif %}
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     {% endblock %}
@@ -60,11 +73,16 @@
     {% endfor %}
     {% block extrahead %}{% endblock %}
   </head>
-  {% set palette = config.extra.get("palette", {}) %}
-  {% set primary = palette.primary | replace(" ", "-") | lower %}
-  {% set accent  = palette.accent  | replace(" ", "-") | lower %}
-  {% if primary or accent %}
-    <body data-md-color-primary="{{ primary }}" data-md-color-accent="{{ accent }}">
+  {% if palette.primary or palette.accent %}
+    {% set primary = palette.primary | replace(" ", "-") | lower %}
+    {% set accent  = palette.accent  | replace(" ", "-") | lower %}
+    {% if palette.primary and palette.accent %}
+      <body data-md-color-primary="{{ primary }}" data-md-color-accent="{{ accent }}">
+    {% elif palette.primary %}
+      <body data-md-color-primary="{{ primary }}">
+    {% elif palette.accent %}
+      <body data-md-color-accent="{{ accent }}">
+    {% endif %}
   {% else %}
     <body>
   {% endif %}
@@ -87,10 +105,6 @@
       {% include "partials/header.html" %}
     {% endblock %}
     <div class="md-container">
-      {% set feature = config.extra.get("feature", {}) %}
-      {% if feature.hero %}
-        {% include "partials/hero.html" %}
-      {% endif %}
       {% if feature.tabs %}
         {% include "partials/tabs.html" %}
       {% endif %}
@@ -153,24 +167,26 @@
       {% endblock %}
     </div>
     {% block scripts %}
-      <script src="{{ base_url }}/assets/javascripts/application-683e1b679e.js"></script>
-      {% set languages = lang.t("search.languages").split(",") %}
-      {% if languages | length and languages[0] != "" %}
-        {% set path = base_url + "/assets/javascripts/lunr" %}
-        <script src="{{ path }}/lunr.stemmer.support.js"></script>
-        {% for language in languages | map("trim") %}
-          {% if language != "en" %}
-            {% if language == "jp" %}
-              <script src="{{ path }}/tinyseg.js"></script>
+      <script src="{{ base_url }}/assets/javascripts/application-84693e5e49.js"></script>
+      {% if lang.t("search.language") != "en" %}
+        {% set languages = lang.t("search.language").split(",") %}
+        {% if languages | length and languages[0] != "" %}
+          {% set path = base_url + "/assets/javascripts/lunr" %}
+          <script src="{{ path }}/lunr.stemmer.support.js"></script>
+          {% for language in languages | map("trim") %}
+            {% if language != "en" %}
+              {% if language == "jp" %}
+                <script src="{{ path }}/tinyseg.js"></script>
+              {% endif %}
+              <script src="{{ path }}/lunr.{{ language }}.js"></script>
             {% endif %}
-            <script src="{{ path }}/lunr.{{ language }}.js"></script>
+          {% endfor %}
+          {% if languages | length > 1 %}
+            <script src="{{ path }}/lunr.multi.js"></script>
           {% endif %}
-        {% endfor %}
-        {% if languages | length > 1 %}
-          <script src="{{ path }}/lunr.multi.js"></script>
         {% endif %}
       {% endif %}
-      <script>app.initialize({url:{base:"{{ base_url }}"}})</script>
+      <script>app.initialize({version:"{{ mkdocs_version }}",url:{base:"{{ base_url }}"}})</script>
       {% for path in extra_javascript %}
         <script src="{{ path }}"></script>
       {% endfor %}
