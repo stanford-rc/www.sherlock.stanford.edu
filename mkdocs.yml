@@ -23,23 +23,30 @@ google_analytics: ['UA-68034405-2', auto]
 # Documentation and theme directories
 docs_dir:   src
 site_dir:   site
-theme_dir:  theme
+theme:
+  name: null
+  custom_dir: theme
 
-# Styling (keep empty values to avoid auto-adding the main page CSS/JS)
-extra_css:
-  - ''
-extra_javascript:
-  - ''
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  feature:
+    tabs: false
+  palette:
+    primary: stanford
+    accent:  stanford
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: 'img/logo_small.png'
+
 
 # Options
 extra:
-  feature:
-    tabs:   false
-  logo:     'img/logo_small.png'
-  made_in:  "<a href='https://www.google.com/maps/place/Stanford,+CA'>Stanford, California</a>"
-  palette:
-    primary: 'stanford'
-    accent:  'stanford'
+  made_in: "<a href='https://www.google.com/maps/place/Stanford,+CA'>Stanford, California</a>"
   social:
     - type: 'globe'
       link: 'https:/srcc.stanford.edu'
