@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       {% if page and page.meta.description %}
-        <meta name="description" content="{{ page.meta.description | first }}">
+        <meta name="description" content="{{ page.meta.description }}">
       {% elif config.site_description %}
         <meta name="description" content="{{ config.site_description }}">
       {% endif %}
@@ -33,30 +33,26 @@
       ] %}
         <meta name="lang:{{ key }}" content="{{ lang.t(key) }}">
       {% endfor %}
-      {% if config.site_favicon %}
-        <link rel="shortcut icon" href="{{ base_url }}/{{ config.site_favicon }}">
-      {% else %}
-        <link rel="shortcut icon" href="{{ base_url }}/assets/images/favicon.png">
-      {% endif %}
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-2.0.1">
+      <link rel="shortcut icon" href="{{ base_url }}/{{ config.theme.favicon }}">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-2.0.2">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta.title %}
-        <title>{{ page.meta.title | first }}</title>
+        <title>{{ page.meta.title }}</title>
       {% elif page and page.title and not page.is_homepage %}
         <title>{{ page.title }} - {{ config.site_name }}</title>
       {% else %}
         <title>{{ config.site_name }}</title>
       {% endif %}
     {% endblock %}
-    {% block libs %}
-      <script src="{{ base_url }}/assets/javascripts/modernizr-e826f8942a.js"></script>
-    {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-462a8722ef.css">
+      <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-5b1b46901f.css">
       {% if palette.primary or palette.accent %}
         <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-bc8471412e.palette.css">
       {% endif %}
+    {% endblock %}
+    {% block libs %}
+      <script src="{{ base_url }}/assets/javascripts/modernizr-e826f8942a.js"></script>
     {% endblock %}
     {% block fonts %}
       {% if font != false %}
@@ -143,12 +139,11 @@
                 {% block source %}
                   {% if page.meta.source %}
                     <h2 id="__source">{{ lang.t("meta.source") }}</h2>
-                    {% set path = (page.meta.path | default([""]) | first) %}
-                    {% for file in page.meta.source %}
-                      <a href="{{ [config.repo_url, path, file] | join('/') }}" title="{{ file }}" class="md-source-file">
-                        {{ file }}
-                      </a>
-                    {% endfor %}
+                    {% set path = page.meta.path | default([""]) %}
+                    {% set file = page.meta.source %}
+                    <a href="{{ [config.repo_url, path, file] | join('/') }}" title="{{ file }}" class="md-source-file">
+                      {{ file }}
+                    </a>
                   {% endif %}
                 {% endblock %}
               {% endblock %}
