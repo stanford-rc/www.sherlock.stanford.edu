@@ -3,7 +3,7 @@
 
 !!! summary
 
-    As of Thursday, November 09 2017, we provide 213 software packages, in 7 categories, covering 37 fields of science.
+    As of Friday, November 17 2017, we provide 218 software packages, in 7 categories, covering 37 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -79,8 +79,8 @@ Field  | Module\ name | Version(s) | URL  | Description
 **build** | `cmake` | `3.8.1` | [Website](https://www.cmake.org) | CMake is an extensible, open-source system that manages the build process in an operating system and in a compiler-independent manner. 
 **build** | `scons` | `2.5.1_py36`<br/>`2.5.1_py27` | [Website](http://www.scons.org) | SCons is an Open Source software construction tool. 
 **compiler** | `gcc` | `7.1.0`<br/>`6.3.0` | [Website](http://gcc.gnu.org) | The GNU Compiler Collection includes front ends for C, C++, Fortran, Java, and Go, as well as libraries for these languages (libstdc++, libgcj,...). 
-**compiler** | `icc` | `2017.u2`<br/>`2018` | [Website](https://software.intel.com/en-us/c-compilers) | Intel C++ Compiler, also known as icc or icl, is a group of C and C++ compilers from Intel 
-**compiler** | `ifort` | `2017.u2`<br/>`2018` | [Website](https://software.intel.com/en-us/fortran-compilers) | Intel Fortran Compiler, also known as ifort, is a group of Fortran compilers from Intel 
+**compiler** | `icc` | `2017.u2`<br/>`2018.u1`<br/>`2018` | [Website](https://software.intel.com/en-us/c-compilers) | Intel C++ Compiler, also known as icc or icl, is a group of C and C++ compilers from Intel 
+**compiler** | `ifort` | `2017.u2`<br/>`2018.u1`<br/>`2018` | [Website](https://software.intel.com/en-us/fortran-compilers) | Intel Fortran Compiler, also known as ifort, is a group of Fortran compilers from Intel 
 **compiler** | `llvm` | `3.8.1`<br/>`4.0.0`<br/>`5.0.0` | [Website](http://llvm.org) | The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler, 
 **compiler** | `pgi` | `17.4` | [Website](http://pgroup.com) | PGI compilers and tools, including Open MPI (Community Edition). 
 **data** | `h5utils` | `1.12.1` | [Website](http://ab-initio.mit.edu/wiki/index.php/H5utils) | h5utils is a set of utilities for visualization and conversion of scientific data in the free, portable HDF5 format. 
@@ -113,9 +113,9 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `py-numba` | `0.35.0_py27`<br/>`0.35.0_py36` | [Website](http://numba.pydata.org) | Numba is a compiler for Python array and numerical functions that gives you the power to speed up your applications with high performance functions written directly in Python.. 
 **libs** | `py-scikit-image` | `0.13.0_py27` | [Website](http://scikit-image.org/) | scikit-image is a collection of algorithms for image processing. 
 **libs** | `swig` | `3.0.12` | [Website](http://www.swig.org) | SWIG is an interface compiler that connects programs written in C and C++ with scripting languages such as Perl, Python, Ruby, and Tcl. 
-**libs** | `tbb` | `2017.u2`<br/>`2018` | [Website](https://software.intel.com/en-us/intel-tbb) | Intel® Threading Building Blocks (Intel® TBB) is a widely used C++ library for shared-memory parallel programming and heterogeneous computing (intra-node distributed memory programming). 
+**libs** | `tbb` | `2017.u2`<br/>`2018.u1`<br/>`2018` | [Website](https://software.intel.com/en-us/intel-tbb) | Intel® Threading Building Blocks (Intel® TBB) is a widely used C++ library for shared-memory parallel programming and heterogeneous computing (intra-node distributed memory programming). 
 **libs** | `zeromq` | `4.2.2` | [Website](http://zeromq.org) | ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous messaging library, aimed at use in distributed or concurrent applications. 
-**mpi** | `impi` | `2017.u2`<br/>`2018` | [Website](https://software.intel.com/en-us/intel-mpi-library) | Intel® MPI Library is a multi-fabric message passing library that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification. 
+**mpi** | `impi` | `2017.u2`<br/>`2018.u1`<br/>`2018` | [Website](https://software.intel.com/en-us/intel-mpi-library) | Intel® MPI Library is a multi-fabric message passing library that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification. 
 **mpi** | `openmpi` | `2.0.2`<br/>`2.1.1` | [Website](https://www.openmpi.org) | The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. 
 **networking** | `gasnet` | `1.30.0` | [Website](https://gasnet.lbl.gov) | GASNet is a language-independent, low-level networking layer that provides network-independent, high-performance communication primitives tailored for implementing parallel global address space SPMD languages and libraries. 
 
@@ -138,7 +138,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **numerical library** | `glpk` | `4.63` | [Website](http://www.openblas.net/) | The GLPK (GNU Linear Programming Kit) package is intended for solving large-scale linear programming (LP), mixed integer programming (MIP), and other related problems. 
 **numerical library** | `gmp` | `6.1.2` | [Website](https://gmplib.org) | GMP is a free library for arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating-point numbers. 
 **numerical library** | `gsl` | `1.16`<br/>`2.3` | [Website](https://www.gnu.org/software/gsl) | The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers. The library provides a wide range of mathematical routines such as random number generators, special functions and least-squares fitting. 
-**numerical library** | `imkl` | `2017.u2`<br/>`2018` | [Website](https://software.intel.com/en-us/intel-mkl) | Intel Math Kernel Library (Intel MKL) is a library of optimized math routines for science, engineering, and financial applications. Core math functions include BLAS, LAPACK, ScaLAPACK, sparse solvers, fast Fourier transforms, and vector math.[3] The routines in MKL are hand-optimized specifically for Intel processors 
+**numerical library** | `imkl` | `2017.u2`<br/>`2018.u1`<br/>`2018` | [Website](https://software.intel.com/en-us/intel-mkl) | Intel Math Kernel Library (Intel MKL) is a library of optimized math routines for science, engineering, and financial applications. Core math functions include BLAS, LAPACK, ScaLAPACK, sparse solvers, fast Fourier transforms, and vector math.[3] The routines in MKL are hand-optimized specifically for Intel processors 
 **numerical library** | `libxsmm` | `1.8.1` | [Website](https://github.com/hfp/libxsmm) | LIBXSMM is a library for small dense and small sparse matrix-matrix multiplications as well as for deep learning primitives such as small convolutions 
 **numerical library** | `mpfr` | `3.1.5` | [Website](https://www.mpfr.org) | The MPFR library is a C library for multiple-precision floating-point computations with correct rounding. 
 **numerical library** | `openblas` | `0.2.19` | [Website](http://www.openblas.net/) | OpenBLAS is an optimized BLAS library 
