@@ -91,7 +91,7 @@ The `gpu` partition only accepts jobs explicitly requesting GPU resources. If
 they don't, they will be rejected with the following message:
 
 ```
-srun -p gpu --pty bash
+$ srun -p gpu --pty bash
 srun: error: Unable to allocate resources: Job violates accounting/QOS policy (job submit limit, user's size and/or time limits)
 ```
 
