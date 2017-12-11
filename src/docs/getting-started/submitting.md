@@ -1,5 +1,11 @@
 ## Principle
 
+!!! danger "Login nodes are not for computing"
+
+    Login nodes are shared among many users and therefore must not be used to
+    run computationally intensive tasks. Those should be submitted to the
+    scheduler which will dispatch them on compute nodes.
+
 ### Requesting resources
 
 A mandatory prerequisite for running computational tasks on Sherlock is to
