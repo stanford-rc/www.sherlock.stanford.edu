@@ -3,12 +3,12 @@
 
 !!! summary
 
-    As of Friday, December 01 2017, we provide 223 software packages, in 7 categories, covering 38 fields of science.
+    As of Monday, December 11 2017, we provide 227 software packages, in 7 categories, covering 39 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
 * [`devel`](#devel) <small>build, compiler, data, language, libs, mpi, networking</small>
-* [`math`](#math) <small>computational geometry, deep learning, linear algebra, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
+* [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, gis</small>
 * [`system`](#system) <small>compression, containers, file management, file transfer, language, libs, resource monitoring, scm, tools</small>
 * [`viz`](#viz) <small>molecular visualization, plotting, remote display</small>
@@ -131,6 +131,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **deep learning** | `py-tensorflow` | `1.2.1`<br/>`1.3.0_py36`<br/>`1.4.0_py27`<br/>`1.4.0_py36`<br/>`1.3.0_py27` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
 **deep learning** | `py-tensorlayer` | `1.6.3_py27` | [Website](http://tensorlayer.org) | TensorLayer is a Deep Learning (DL) and Reinforcement Learning (RL) library extended from Google TensorFlow. 
 **linear algebra** | `armadillo` | `8.200.1` | [Website](http://arma.sourceforge.net/) | Armadillo is a high quality linear algebra library (matrix maths) for the C++ language, aiming towards a good balance between speed and ease of use. 
+**machine learning** | `py-scikit-learn` | `0.19.1_py27` | [Website](http://scikit-learn.org) | Scikit-learn is a free software machine learning library for the Python programming language. 
 **numerical analysis** | `matlab`^<b class="lic"></b>^ | `R2017a`<br/>`R2017b` | [Website](https://www.mathworks.com/products/matlab.html) | MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment and fourth-generation programming language. 
 **numerical analysis** | `octave` | `4.2.1` | [Website](https://www.gnu.org/software/octave/) | GNU Octave is a high-level language primarily intended for numerical computations. 
 **numerical library** | `arpack` | `3.5.0` | [Website](https://github.com/opencollab/arpack-ng) | Collection of Fortran77 subroutines designed to solve large scale eigenvalue problems. 
@@ -187,6 +188,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `gconf` | `2.9.91` | [Website](https://projects.gnome.org/gconf) | GConf is a system for storing application preferences. 
 **libs** | `gdk-pixbuf` | `2.36.8` | [Website](https://git.gnome.org/browse/gdk-pixbuf) | The GdkPixbuf library provides facilities for loading images in a variety of file formats. 
 **libs** | `gflags` | `2.2.1` | [Website](https://gflags.github.io/gflags/) | The gflags package contains a C++ library that implements commandline flags processing. 
+**libs** | `giflib` | `5.1.4` | [Website](http://giflib.sourceforge.net/) | GIFLIB is a package of portable tools and library routines for working with GIF images. 
 **libs** | `glib` | `2.52.3` | [Website](https://wiki.gnome.org/Projects/GLib) | The GLib library provides core non-graphical functionality such as high level data types, Unicode manipulation, and an object and type system to C programs. 
 **libs** | `glog` | `0.3.5` | [Website](https://github.com/google/glog) | C++ implementation of the Google logging module. 
 **libs** | `gnutls` | `3.5.9` | [Website](https://www.gnutls.org) | GnuTLS is a secure communications library implementing the SSL, TLS and DTLS protocols and technologies around them. 
@@ -197,6 +199,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `icu` | `59.1` | [Website](http://site.icu-project.org) | ICU is a set of C/C++ and Java libraries providing Unicode and Globalization support for software applications. 
 **libs** | `libepoxy` | `1.4.1` | [Website](https://github.com/anholt/libepoxy) | Epoxy is a library for handling OpenGL function pointer management for you. 
 **libs** | `libffi` | `3.2.1` | [Website](http://sourceware.org/libffi) | libffi is a portable Foreign Function Interface library. 
+**libs** | `libgd` | `2.2.5` | [Website](https://libgd.github.io/) | GD is an open source code library for the dynamic creation of images by programmers. 
 **libs** | `libidl` | `0.8.14` | [Website](https://github.com/GNOME/libIDL) | The libIDL package contains libraries for Interface Definition Language files. This is a specification for defining portable interfaces. 
 **libs** | `libjpeg-turbo` | `1.5.1` | [Website](http://www.libjpeg-turbo.org) | libjpeg-turbo is a JPEG image codec that uses SIMD instructions (MMX, SSE2, AVX2, NEON, AltiVec) to accelerate baseline JPEG compression and decompression on x86, x86-64, ARM, and PowerPC systems 
 **libs** | `libmng` | `2.0.3` | [Website](http://libmng.sourceforge.net) | THE reference library for reading, displaying, writing and examining Multiple-Image Network Graphics. MNG is the animation extension to the popular PNG image-format. 
@@ -204,6 +207,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `libressl` | `2.5.3` | [Website](https://www.libressl.org) | LibreSSL is a version of the TLS/crypto stack forked from OpenSSL in 2014, with goals of modernizing the codebase, improving security, and applying best practice development processes. 
 **libs** | `libtiff` | `4.0.8` | [Website](http://simplesystems.org/libtiff/) | libtiff provides support for the Tag Image File Format (TIFF), a widely used format for storing image data. 
 **libs** | `libunistring` | `0.9.7` | [Website](https://www.gnu.org/software/libunistring/) | Libunistring provides functions for manipulating Unicode strings and for manipulating C strings according to the Unicode standard. 
+**libs** | `libwebp` | `0.6.1` | [Website](https://developers.google.com/speed/webp) | WebP is a modern image format that provides superior lossless and lossy compression for images on the web. 
 **libs** | `libxml2` | `2.9.4` | [Website](http://xmlsoft.org/) | Libxml2 is a XML C parser and toolkit. 
 **libs** | `mesa` | `17.1.6` | [Website](https://www.mesa3d.org) | Mesa is an open-source implementation of the OpenGL, Vulkan and other specifications. 
 **libs** | `ncurses` | `6.0` | [Website](https://www.gnu.org/software/ncurses) | The ncurses (new curses) library is a free software emulation of curses in System V Release 4.0 (SVr4), and more. 
