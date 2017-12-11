@@ -162,7 +162,6 @@ used by the login nodes.
 
 
 
-
 ## Connecting from abroad
 
 !!! tip "VPN"
@@ -191,7 +190,7 @@ notifications are not available.
 [url_kerberos]:     https://uit.stanford.edu/service/kerberos
 [url_prereq]:       /docs/getting-started/prerequisites/#windows
 [url_vpn]:          https://uit.stanford.edu/service/vpn
-[url_alt2fa]:       https://uit.stanford.edu/service/webauth/twostep
+[url_alt2fa]:       https://uit.stanford.edu/service/webauth/twostep
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
