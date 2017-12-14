@@ -3,7 +3,7 @@
 
 !!! summary
 
-    As of Monday, December 11 2017, we provide 227 software packages, in 7 categories, covering 39 fields of science.
+    As of Thursday, December 14 2017, we provide 230 software packages, in 7 categories, covering 39 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -93,7 +93,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **data** | `redis` | `4.0.1` | [Website](https://redis.io) | Redis is an open source, in-memory data structure store, used as a database, cache and message broker. 
 **data** | `sqlite` | `3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
 **language** | `ant` | `1.10.1` | [Website](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. 
-**language** | `cuda` | `8.0.61`<br/>`9.0.176` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
+**language** | `cuda` | `8.0.61`<br/>`9.0.176`<br/>`9.1.85` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
 **language** | `go` | `1.9` | [Website](http://golang.org) | Go is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
 **language** | `guile` | `2.2.2` | [Website](https://www.gnu.org/software/guile/) | GNU Guile is the preferred extension system for the GNU Project, which features an implementation of the Scheme programming language. 
 **language** | `java` | `1.8.0_131` | [Website](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. 
@@ -106,6 +106,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `boost` | `1.64.0` | [Website](http://www.boost.org) | Boost is a set of libraries for the C++ programming language that provide support for tasks and structures such as linear algebra, pseudorandom number generation, multithreading, image processing, regular expressions, and unit testing. 
 **libs** | `cnmem` | `1.0.0` | [Website](https://github.com/NVIDIA/ncmem) | CNMeM is a simple library to help the Deep Learning frameworks manage CUDA memory. 
 **libs** | `cub` | `1.7.3` | [Website](https://nvlabs.github.io/cub/) | CUB is a flexible library of cooperative threadblock primitives and other utilities for CUDA kernel programming. 
+**libs** | `cutlass` | `0.1.0` | [Website](https://github.com/NVIDIA/cutlass) | CUTLASS is a collection of CUDA C++ template abstractions for implementing high-performance matrix-multiplication (GEMM) at all levels and scales within CUDA. 
 **libs** | `eigen` | `3.3.3` | [Website](http://eigen.tuxfamily.org) | Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms. 
 **libs** | `nccl` | `1.3.4`<br/>`2.0.4` | [Website](https://github.com/NVIDIA/nccl) | NCCL (pronounced 'Nickel') is a stand-alone library of standard collective communication routines, such as all-gather, reduce, broadcast, etc., that have been optimized to achieve high bandwidth over PCIe. 
 **libs** | `opencv` | `3.3.0` | [Website](https://opencv.org) | OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library. 
@@ -125,7 +126,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **computational geometry** | `cgal` | `4.10` | [Website](http://www.cgal.org) | The Computational Geometry Algorithms Library (CGAL) is a C++ library that aims to provide easy access to efficient and reliable algorithms in computational geometry. 
 **computational geometry** | `qhull` | `2015.2` | [Website](http://www.qhull.org/) | Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram, halfspace intersection about a point, furthest-site Delaunay triangulation, and furthest-site Voronoi diagram. 
 **deep learning** | `caffe2` | `0.8.1` | [Website](https://caffe2.ai) | Caffe2 is a deep learning framework that provides an easy and straightforward way to experiment with deep learning and leverage community contributions of new models and algorithms. 
-**deep learning** | `cudnn` | `5.1`<br/>`6.0`<br/>`7.0.1`<br/>`7.0.4` | [Website](https://developer.nvidia.com/cudnn) | NVIDIA cuDNN is a GPU-accelerated library of primitives for deep neural networks. 
+**deep learning** | `cudnn` | `5.1`<br/>`6.0`<br/>`7.0.1`<br/>`7.0.4`<br/>`7.0.5` | [Website](https://developer.nvidia.com/cudnn) | NVIDIA cuDNN is a GPU-accelerated library of primitives for deep neural networks. 
 **deep learning** | `py-keras` | `2.0.8_py27` | [Website](http://keras.io) | Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. 
 **deep learning** | `py-pytorch` | `0.2.0_py36`<br/>`0.2.0_py27` | [Website](http://pytorch.org) | PyTorch is a deep learning framework that puts Python first. 
 **deep learning** | `py-tensorflow` | `1.2.1`<br/>`1.3.0_py36`<br/>`1.4.0_py27`<br/>`1.4.0_py36`<br/>`1.3.0_py27` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
