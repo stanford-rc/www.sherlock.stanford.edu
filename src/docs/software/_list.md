@@ -3,7 +3,7 @@
 
 !!! summary
 
-    As of Thursday, December 14 2017, we provide 232 software packages, in 7 categories, covering 39 fields of science.
+    As of Monday, December 18 2017, we provide 234 software packages, in 7 categories, covering 39 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -53,6 +53,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **neurology** | `ants` | `2.1.0` | [Website](https://stnava.github.io/ANTs) | ANTs computes high-dimensional mappings to capture the statistics of brain structure and function. 
 **neurology** | `freesurfer` | `6.0.0` | [Website](https://surfer.nmr.mgh.harvard.edu/) | An open source software suite for processing and analyzing (human) brain MRI images. 
 **neurology** | `fsl` | `5.0.10` | [Website](https://fsl.fmrib.ox.ac.uk/fsl) | FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. 
+**neurology** | `mricron` | `20160502` | [Website](https://www.nitrc.org/projects/mricron) | MRIcron is a cross-platform NIfTI format image viewer. 
 **neurology** | `mrtrix` | `0.3.16` | [Website](http://www.mrtrix.org) | MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses. 
 **neurology** | `spm` | `12` | [Website](http://www.fil.ion.ucl.ac.uk/spm/) | The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. 
 **phylogenetics** | `py-ete` | `3.0.0_py27_qt5`<br/>`3.0.0_py27` | [Website](http://etetoolkit.org/) | A Python framework for the analysis and visualization of trees. 
@@ -153,6 +154,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **scientific computing** | `py-scipystack` | `1.0_py36`<br/>`1.0_py27` | [Website](https://www.scipy.org) | The SciPy Stack is a collection of open source software for scientific computing in Python. It provides the following packages: numpy, scipy, matplotlib, ipython, jupyter, pandas, sympy and nose. 
 **statistics** | `R` | `3.4.0` | [Website](http://r-project.org) | R is a free software environment for statistical computing and graphics. 
 **statistics** | `jags` | `4.3.0` | [Website](http://mcmc-jags.sourceforge.net/) | Just another Gibbs sampler (JAGS) is a program for simulation from Bayesian hierarchical models using Markov chain Monte Carlo (MCMC). 
+**statistics** | `sas`^<b class="lic"></b>^ | `9.4` | [Website](http://www.sas.com/) | SAS is a software suite developed by SAS Institute for advanced analytics, multivariate analyses, business intelligence, data management, and predictive analytics. 
 **statistics** | `stata`^<b class="lic"></b>^ | `14`<br/>`15` | [Website](https://www.stata.com) | Stata is a complete, integrated statistical software package that provides everything you need for data analysis, data management, and graphics. 
 **symbolic** | `libmatheval` | `1.1.11` | [Website](https://www.gnu.org/software/libmatheval/) | GNU libmatheval is a library (callable from C and Fortran) to parse and evaluate symbolic expressions input as text. 
 
