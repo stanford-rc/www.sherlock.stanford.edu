@@ -3,7 +3,7 @@
 
 !!! summary
 
-    As of Wednesday, December 20 2017, we provide 242 software packages, in 7 categories, covering 41 fields of science.
+    As of Thursday, December 21 2017, we provide 248 software packages, in 7 categories, covering 41 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -147,10 +147,16 @@ Field  | Module\ name | Version(s) | URL  | Description
 **numerical library** | `harminv` | `1.4.1` | [Website](https://github.com/stevengj/harminv) | harminv is a program designed to solve the problem of harmonic inversion: given a time series consisting of a sum of sinusoids (modes), extract their frequencies and amplitudes. 
 **numerical library** | `imkl` | `2017.u2`<br/>`2018.u1`<br/>`2018` | [Website](https://software.intel.com/en-us/intel-mkl) | Intel Math Kernel Library (Intel MKL) is a library of optimized math routines for science, engineering, and financial applications. Core math functions include BLAS, LAPACK, ScaLAPACK, sparse solvers, fast Fourier transforms, and vector math.[3] The routines in MKL are hand-optimized specifically for Intel processors 
 **numerical library** | `libxsmm` | `1.8.1` | [Website](https://github.com/hfp/libxsmm) | LIBXSMM is a library for small dense and small sparse matrix-matrix multiplications as well as for deep learning primitives such as small convolutions 
+**numerical library** | `metis` | `5.1.0` | [Website](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview) | METIS is a set of serial programs for partitioning graphs, partitioning finite element meshes, and producing fill reducing orderings for sparse matrices. 
 **numerical library** | `mpfr` | `3.1.5` | [Website](https://www.mpfr.org) | The MPFR library is a C library for multiple-precision floating-point computations with correct rounding. 
+**numerical library** | `mumps` | `5.1.2` | [Website](http://mumps.enseeiht.fr/) | A parallel sparse direct solver. 
 **numerical library** | `openblas` | `0.2.19` | [Website](http://www.openblas.net/) | OpenBLAS is an optimized BLAS library 
+**numerical library** | `parmetis` | `4.0.3` | [Website](http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview) | ParMETIS is an MPI-based parallel library that implements a variety of algorithms for partitioning unstructured graphs, meshes, and for computing fill-reducing orderings of sparse matrices. 
 **numerical library** | `qrupdate` | `1.1.2` | [Website](https://sourceforge.net/projects/qrupdate/) | qrupdate is a Fortran library for fast updates of QR and Cholesky decompositions. 
 **numerical library** | `scalapack` | `2.0.2` | [Website](http://www.netlib.org/scalapack/) | ScaLAPACK is a library of high-performance linear algebra routines for parallel distributed memory machines. 
+**numerical library** | `scotch` | `6.0.4` | [Website](http://www.labri.fr/perso/pelegrin/scotch) | Software package and libraries for sequential and parallel graph partitioning, static mapping and clustering, sequential mesh and hypergraph partitioning, and sequential and parallel sparse matrix block ordering. 
+**numerical library** | `superlu` | `5.2.1` | [Website](https://github.com/xiaoyeli/superlu) | SuperLU is a general purpose library for the direct solution of large, sparse, nonsymmetric systems of linear equations. 
+**numerical library** | `xblas` | `1.0.248` | [Website](http://www.netlib.org/xblas) | Extra precise basic linear algebra subroutines. 
 **optimization** | `gurobi` | `7.5.1` | [Website](http://www.gurobi.com) | The Gurobi Optimizer is a commercial optimization solver for mathematical programming. 
 **optimization** | `knitro` | `10.3.0` | [Website](https://www.artelys.com/en/optimization-tools/knitro) | Artelys Knitro is an optimization solver for difficult large-scale nonlinear problems. 
 **scientific computing** | `py-scipystack` | `1.0_py36`<br/>`1.0_py27` | [Website](https://www.scipy.org) | The SciPy Stack is a collection of open source software for scientific computing in Python. It provides the following packages: numpy, scipy, matplotlib, ipython, jupyter, pandas, sympy and nose. 
