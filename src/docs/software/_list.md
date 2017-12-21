@@ -3,14 +3,14 @@
 
 !!! summary
 
-    As of Monday, December 18 2017, we provide 234 software packages, in 7 categories, covering 39 fields of science.
+    As of Wednesday, December 20 2017, we provide 242 software packages, in 7 categories, covering 41 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
 * [`devel`](#devel) <small>build, compiler, data, language, libs, mpi, networking</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
-* [`physics`](#physics) <small>astronomy, gis</small>
-* [`system`](#system) <small>compression, containers, file management, file transfer, language, libs, resource monitoring, scm, tools</small>
+* [`physics`](#physics) <small>astronomy, gis, photonics</small>
+* [`system`](#system) <small>compression, containers, database, file management, file transfer, language, libs, resource monitoring, scm, tools</small>
 * [`viz`](#viz) <small>molecular visualization, plotting, remote display</small>
 
 
@@ -92,7 +92,6 @@ Field  | Module\ name | Version(s) | URL  | Description
 **data** | `pnetcdf` | `1.8.1` | [Website](http://cucis.ece.northwestern.edu/projects/PnetCDF/) | Parallel netCDF (PnetCDF) is a parallel I/O library for accessing NetCDF files in CDF-1, 2, and 5 formats. 
 **data** | `protobuf` | `3.4.0` | [Website](https://developers.google.com/protocol-buffers/) | Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data. 
 **data** | `redis` | `4.0.1` | [Website](https://redis.io) | Redis is an open source, in-memory data structure store, used as a database, cache and message broker. 
-**data** | `sqlite` | `3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
 **language** | `ant` | `1.10.1` | [Website](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. 
 **language** | `cuda` | `8.0.61`<br/>`9.0.176`<br/>`9.1.85` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
 **language** | `go` | `1.9` | [Website](http://golang.org) | Go is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
@@ -109,6 +108,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `cub` | `1.7.3` | [Website](https://nvlabs.github.io/cub/) | CUB is a flexible library of cooperative threadblock primitives and other utilities for CUDA kernel programming. 
 **libs** | `cutlass` | `0.1.0` | [Website](https://github.com/NVIDIA/cutlass) | CUTLASS is a collection of CUDA C++ template abstractions for implementing high-performance matrix-multiplication (GEMM) at all levels and scales within CUDA. 
 **libs** | `eigen` | `3.3.3` | [Website](http://eigen.tuxfamily.org) | Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms. 
+**libs** | `libctl` | `3.2.2` | [Website](https://github.com/stevengj/libctl) | libctl is a library for supporting flexible control files in scientific simulations. 
 **libs** | `nccl` | `1.3.4`<br/>`2.0.4` | [Website](https://github.com/NVIDIA/nccl) | NCCL (pronounced 'Nickel') is a stand-alone library of standard collective communication routines, such as all-gather, reduce, broadcast, etc., that have been optimized to achieve high bandwidth over PCIe. 
 **libs** | `opencv` | `3.3.0` | [Website](https://opencv.org) | OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library. 
 **libs** | `py-h5py` | `2.7.1_py27` | [Website](http://http://www.h5py.org) | The h5py package is a Pythonic interface to the HDF5 binary data format. 
@@ -119,8 +119,9 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `tbb` | `2017.u2`<br/>`2018.u1`<br/>`2018` | [Website](https://software.intel.com/en-us/intel-tbb) | Intel® Threading Building Blocks (Intel® TBB) is a widely used C++ library for shared-memory parallel programming and heterogeneous computing (intra-node distributed memory programming). 
 **libs** | `zeromq` | `4.2.2` | [Website](http://zeromq.org) | ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous messaging library, aimed at use in distributed or concurrent applications. 
 **mpi** | `impi` | `2017.u2`<br/>`2018.u1`<br/>`2018` | [Website](https://software.intel.com/en-us/intel-mpi-library) | Intel® MPI Library is a multi-fabric message passing library that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification. 
-**mpi** | `openmpi` | `2.0.2`<br/>`2.1.1` | [Website](https://www.openmpi.org) | The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. 
+**mpi** | `openmpi` | `2.0.2`<br/>`3.0.0`<br/>`2.1.1` | [Website](https://www.openmpi.org) | The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. 
 **networking** | `gasnet` | `1.30.0` | [Website](https://gasnet.lbl.gov) | GASNet is a language-independent, low-level networking layer that provides network-independent, high-performance communication primitives tailored for implementing parallel global address space SPMD languages and libraries. 
+**networking** | `ucx` | `1.2.1` | [Website](http://www.openucx.org) | UCX is a communication library implementing high-performance messaging for MPI/PGAS frameworks. 
 
 ### Math
 Field  | Module\ name | Version(s) | URL  | Description
@@ -143,6 +144,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **numerical library** | `glpk` | `4.63` | [Website](http://www.openblas.net/) | The GLPK (GNU Linear Programming Kit) package is intended for solving large-scale linear programming (LP), mixed integer programming (MIP), and other related problems. 
 **numerical library** | `gmp` | `6.1.2` | [Website](https://gmplib.org) | GMP is a free library for arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating-point numbers. 
 **numerical library** | `gsl` | `1.16`<br/>`2.3` | [Website](https://www.gnu.org/software/gsl) | The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers. The library provides a wide range of mathematical routines such as random number generators, special functions and least-squares fitting. 
+**numerical library** | `harminv` | `1.4.1` | [Website](https://github.com/stevengj/harminv) | harminv is a program designed to solve the problem of harmonic inversion: given a time series consisting of a sum of sinusoids (modes), extract their frequencies and amplitudes. 
 **numerical library** | `imkl` | `2017.u2`<br/>`2018.u1`<br/>`2018` | [Website](https://software.intel.com/en-us/intel-mkl) | Intel Math Kernel Library (Intel MKL) is a library of optimized math routines for science, engineering, and financial applications. Core math functions include BLAS, LAPACK, ScaLAPACK, sparse solvers, fast Fourier transforms, and vector math.[3] The routines in MKL are hand-optimized specifically for Intel processors 
 **numerical library** | `libxsmm` | `1.8.1` | [Website](https://github.com/hfp/libxsmm) | LIBXSMM is a library for small dense and small sparse matrix-matrix multiplications as well as for deep learning primitives such as small convolutions 
 **numerical library** | `mpfr` | `3.1.5` | [Website](https://www.mpfr.org) | The MPFR library is a C library for multiple-precision floating-point computations with correct rounding. 
@@ -165,14 +167,19 @@ Field  | Module\ name | Version(s) | URL  | Description
 **gis** | `gdal` | `2.2.1` | [Website](http://www.gdal.org) | GDAL is a translator library for raster and vector geospatial data formats. 
 **gis** | `geos` | `3.6.2` | [Website](https://trac.osgeo.org/geos) | GEOS (Geometry Engine - Open Source) is a C++ port of Java Topology Suite (JTS). 
 **gis** | `proj` | `4.9.3` | [Website](http://proj4.org) | proj.4 is a standard UNIX filter function which converts geographic longitude and latitude coordinates into cartesian coordinates (and vice versa. 
+**photonics** | `meep` | `1.3` | [Website](https://github.com/stevengj/meep) | Meep is a free finite-difference time-domain (FDTD) simulation software package to model electromagnetic systems. 
+**photonics** | `mpb` | `1.5` | [Website](https://github.com/stevengj/mpb) | MPB is a free software package for computing the band structures, or dispersion relations, and electromagnetic modes of periodic dielectric structures, on both serial and parallel computers. 
 
 ### System
 Field  | Module\ name | Version(s) | URL  | Description
 :----- | :----------- | ------: | :--- | :----------
+**compression** | `lz4` | `1.8.0` | [Website](https://www.lz4.org) | LZ4 is lossless compression algorithm. 
 **compression** | `szip` | `2.1.1` | [Website](https://support.hdfgroup.org/doc_resource/SZIP) | Szip compression software, providing lossless compression of scientific data, is an implementation of the extended-Rice lossless compression algorithm. 
 **compression** | `xz` | `5.2.3` | [Website](http://tukaani.org/xz/) | XZ Utils is free general-purpose data compression software with a high compression ratio. 
 **compression** | `zlib` | `1.2.11` | [Website](http://zlib.net) | zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. 
 **containers** | `singularity` | `2.3`<br/>`2.3.1`<br/>`2.4` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
+**database** | `mariadb` | `10.2.11` | [Website](https://www.mariadb.org) | MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. 
+**database** | `sqlite` | `3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
 **file management** | `fpart` | `0.9.3` | [Website](https://github.com/martymac/fpart) | fpart sorts files and packs them into partitions. 
 **file transfer** | `gdrive` | `2.1.0` | [Website](https://github.com/prasmussen/gdrive) | gdrive is a command line utility for interacting with Google Drive. 
 **file transfer** | `lftp` | `4.8.1` | [Website](https://lftp.yar.ru/) | LFTP is a sophisticated file transfer program supporting a number of network protocols (ftp, http, sftp, fish, torrent). 
