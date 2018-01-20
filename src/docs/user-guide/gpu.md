@@ -137,6 +137,69 @@ Depending on the partitions you have access to, more features may be available
 to be requested in your jobs.
 
 
+
+### Changing the GPU compute mode
+
+By default, GPUs on Sherlock are set in the **Exclusive Process** compute
+mode[^gpu_cmodes], to provide the best performance and an isolated environment
+for jobs, out of the box.
+
+Some software may require GPUs to be set to a different compute mode, for
+instance to share a GPU across different processes within the same application.
+
+To handle that case, we developed a specific option, `--gpu_cmode`, that users
+can add to their `srun` and `sbatch` submission options, to choose the compute
+mode for the GPUs allocated to their job.
+
+Here's the list of the different compute modes supported on Sherlock's GPUs:
+
+| GPU\ compute\ mode   | `--gpu_cmode` option | Description |
+| -------------------- | -------------------- | ----------- |
+| "Default"            | `shared`             | Multiple contexts are allowed per device (NVIDIA default) |
+| "Exclusive Process"  | **`exclusive`**      | Only one context is allowed per device, usable from multiple threads at a time (Sherlock default)|
+| "Prohibited"         | `prohibited`         | No CUDA context can be created on the device |
+
+By default, or if the `--gpu_cmode` option is not specified, GPUs will be set
+in the "Exclusive Process" mode, as demonstrated by this example command:
+
+```
+$ srun -p gpu --gres gpu:1 nvidia-smi
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 387.26                 Driver Version: 387.26                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla P40           On   | 00000000:03:00.0 Off |                    0 |
+| N/A   22C    P8    10W / 250W |      0MiB / 22912MiB |      0%   E. Process |
++-------------------------------+----------------------+----------------------+
+```
+
+With the `--gpu_cmode` option, the scheduler will set the GPU compute mode to
+the desired value before execution:
+
+```
+$ srun -p gpu --gres gpu:1 --gpu_cmode=shared nvidia-smi
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 387.26                 Driver Version: 387.26                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla P40           On   | 00000000:03:00.0 Off |                    0 |
+| N/A   22C    P8    10W / 250W |      0MiB / 22912MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+```
+
+!!! Tip
+
+    "Default" is the name that the NVIDIA System Management Interface
+    (`nvidia-smi`) uses to describe the mode where a GPU can be shared between
+    different processes. It does not represent the default GPU compute mode on
+    Sherlock, which is "Exclusive Process".
+
+
+
 ## Environment and diagnostic tools
 
 --8<--- "_wip.md"
@@ -152,6 +215,7 @@ to be requested in your jobs.
 [url_p100]:     //images.nvidia.com/content/tesla/pdf/nvidia-tesla-p100-PCIe-datasheet.pdf
 [url_p40]:      //images.nvidia.com/content/pdf/tesla/184427-Tesla-P40-Datasheet-NV-Final-Letter-Web.pdf
 [url_slurm_sbatch]: //slurm.schedmd.com/sbatch.html#OPT_constraint
+[url_gpu_cmodes]: http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-modes
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
@@ -161,3 +225,5 @@ to be requested in your jobs.
   details.
 [^node_feat]: See `node_feat -h` for more details.
 [^values]: The lists of values provided in the table are non exhaustive.
+[^gpu_cmodes]: The list of available GPU compute modes and relevant details are
+  available in the [CUDA Toolkit Documentation][url_gpu_cmodes]
