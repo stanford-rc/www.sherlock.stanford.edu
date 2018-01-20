@@ -97,7 +97,7 @@ srun: error: Unable to allocate resources: Job violates accounting/QOS policy (j
 
 
 
-### Specifying GPU types
+### GPU types
 
 Since Sherlock features many different types of GPUs, each with its own
 technical characteristics, performance profiles and specificities, you may want
