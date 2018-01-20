@@ -138,7 +138,7 @@ to be requested in your jobs.
 
 
 
-### Changing the GPU compute mode
+### GPU compute modes
 
 By default, GPUs on Sherlock are set in the **Exclusive Process** compute
 mode[^gpu_cmodes], to provide the best performance and an isolated environment
