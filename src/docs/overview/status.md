@@ -1,4 +1,4 @@
-<script src="//libraries.hund.io/status-js/status-2.3.5-compat.js"></script>
+<script src="//libraries.hund.io/status-js/status-3.4.3.js"></script>
 <script>
   var statusWidget = new Status.Widget({
     hostname: "status.sherlock.stanford.edu",
@@ -14,8 +14,7 @@
 }
 .status-widget__led {
   height: 12px;
-  width: 12px;
-  border-radius: 12px;
+  width:  11px;
 }
 .status-widget__issue {
   line-height: normal;
