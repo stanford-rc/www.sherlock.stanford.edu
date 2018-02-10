@@ -3,7 +3,7 @@
 
 !!! summary
 
-    As of Friday, February 02 2018, we provide 261 software packages, in 7 categories, covering 42 fields of science.
+    As of Friday, February 09 2018, we provide 273 software packages, in 7 categories, covering 42 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -53,6 +53,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **genomics** | `samtools` | `1.6` | [Website](https://github.com/samtools/samtools) | Tools (written in C using htslib) for manipulating next-generation sequencing data. 
 **neurology** | `afni` | `17.2.07`<br/>`18.0.09` | [Website](https://afni.nimh.nih.gov) | AFNI (Analysis of Functional NeuroImages) is a set of C programs for processing, analyzing, and displaying functional MRI (FMRI) data - a technique for mapping human brain activity. 
 **neurology** | `ants` | `2.1.0` | [Website](https://stnava.github.io/ANTs) | ANTs computes high-dimensional mappings to capture the statistics of brain structure and function. 
+**neurology** | `dcm2niix` | `1.0.20171215` | [Website](https://github.com/rordenlab/dcm2niix) | dcm2niix is a program esigned to convert neuroimaging data from the DICOM format to the NIfTI format. 
 **neurology** | `freesurfer` | `6.0.0` | [Website](https://surfer.nmr.mgh.harvard.edu/) | An open source software suite for processing and analyzing (human) brain MRI images. 
 **neurology** | `fsl` | `5.0.10` | [Website](https://fsl.fmrib.ox.ac.uk/fsl) | FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. 
 **neurology** | `mricron` | `20160502` | [Website](https://www.nitrc.org/projects/mricron) | MRIcron is a cross-platform NIfTI format image viewer. 
@@ -177,6 +178,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 :----- | :----------- | ------: | :--- | :----------
 **astronomy** | `heasoft` | `6.22.1` | [Website](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/) | HEAsoft is a Unified Release of the FTOOLS (General and mission-specific tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks for X-ray astronomical spectral, timing, and imaging data analysis) software packages. 
 **geophysics** | `opensees` | `r6642` | [Website](http://opensees.berkeley.edu/) | OpenSees is a software framework for developing applications to simulate the performance of structural and geotechnical systems subjected to earthquakes. 
+**gis** | `comsol` | `5.3a` | [Website](https://trac.osgeo.org/geos) | GEOS (Geometry Engine - Open Source) is a C++ port of Java Topology Suite (JTS). 
 **gis** | `gdal` | `2.2.1` | [Website](http://www.gdal.org) | GDAL is a translator library for raster and vector geospatial data formats. 
 **gis** | `geos` | `3.6.2` | [Website](https://trac.osgeo.org/geos) | GEOS (Geometry Engine - Open Source) is a C++ port of Java Topology Suite (JTS). 
 **gis** | `proj` | `4.9.3` | [Website](http://proj4.org) | proj.4 is a standard UNIX filter function which converts geographic longitude and latitude coordinates into cartesian coordinates (and vice versa. 
@@ -198,13 +200,14 @@ Field  | Module\ name | Version(s) | URL  | Description
 **file transfer** | `lftp` | `4.8.1` | [Website](https://lftp.yar.ru/) | LFTP is a sophisticated file transfer program supporting a number of network protocols (ftp, http, sftp, fish, torrent). 
 **file transfer** | `mpifileutils` | `20170210` | [Website](https://github.com/hpc/mpifileutils) | mpiFileUtils is a suite of MPI-based tools to manage large datasets, which may vary from large directory trees to large files. 
 **file transfer** | `py-globus-cli` | `1.2.0` | [Website](https://github.com/globus/globus-cli) | A command line wrapper over the Globus SDK for Python. 
-**file transfer** | `rclone` | `1.37` | [Website](https://rclone.org) | Rclone is a command line program to sync files and directories to and from: Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon Drive, Microsoft One Drive, Hubic, Backblaze B2, Yandex Disk, or the local filesystem. 
+**file transfer** | `rclone` | `1.39` | [Website](https://rclone.org) | Rclone is a command line program to sync files and directories to and from: Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon Drive, Microsoft One Drive, Hubic, Backblaze B2, Yandex Disk, or the local filesystem. 
 **language** | `tcltk` | `8.6.6` | [Website](https://www.tcl.tk) | Tcl (Tool Command Language) is a dynamic programming language, suitable for web and desktop applications, networking, administration, testing. Tk is a graphical user interface toolkit. 
 **libs** | `atk` | `2.24.0` | [Website](https://developer.gnome.org/atk) | ATK is the Accessibility Toolkit. It provides a set of generic interfaces allowing accessibility technologies such as screen readers to interact with a graphical user interface. 
 **libs** | `benchmark` | `1.2.0` | [Website](https://github.com/google/benchmark) | A microbenchmark support library 
 **libs** | `cairo` | `1.14.10` | [Website](https://www.cairographics.org/) | Cairo is a 2D graphics library with support for multiple output devices. 
 **libs** | `cups` | `2.2.4` | [Website](https://www.cups.org/) | CUPS is the standards-based, open source printing system. 
 **libs** | `dbus` | `1.10.22` | [Website](https://www.freedesktop.org/wiki/Software/dbus/) | D-Bus is a message bus system, a simple way for applications to talk to one another. 
+**libs** | `enchant` | `1.6.1`<br/>`2.2.3` | [Website](https://abiword.github.io/enchant/) | Enchant is a library (and command-line program) that wraps a number of different spelling libraries and programs with a consistent interface. 
 **libs** | `fltk` | `1.3.4` | [Website](http://www.fltk.org) | FLTK (pronounced 'fulltick') is a cross-platform C++ GUI toolkit. 
 **libs** | `fontconfig` | `2.12.4` | [Website](https://www.freedesktop.org/wiki/Software/fontconfig) | Fontconfig is a library for configuring and customizing font access. 
 **libs** | `freeglut` | `3.0.0` | [Website](http://freeglut.sourceforge.net/) | FreeGLUT is a free-software/open-source alternative to the OpenGL Utility Toolkit (GLUT) library. 
@@ -221,19 +224,27 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `googletest` | `1.8.0` | [Website](https://github.com/google/googletest) | Google Test is Google's C++ test framework. 
 **libs** | `gtk+` | `2.24.30`<br/>`3.22.18` | [Website](https://www.gtk.org) | GTK+, or the GIMP Toolkit, is a multi-platform toolkit for creating graphical user interfaces. 
 **libs** | `harfbuzz` | `1.4.8` | [Website](https://www.freedesktop.org/wiki/Software/HarfBuzz) | HarfBuzz is an OpenType text shaping engine. 
+**libs** | `hunspell` | `1.6.2` | [Website](https://hunspell.github.io/) | Hunspell is a spell checker. 
+**libs** | `hyphen` | `2.8.8` | [Website](https://github.com/hunspell/hyphen) | Hyphen is a hyphenation library to use converted TeX hyphenation patterns. 
 **libs** | `icu` | `59.1` | [Website](http://site.icu-project.org) | ICU is a set of C/C++ and Java libraries providing Unicode and Globalization support for software applications. 
 **libs** | `libepoxy` | `1.4.1` | [Website](https://github.com/anholt/libepoxy) | Epoxy is a library for handling OpenGL function pointer management for you. 
 **libs** | `libffi` | `3.2.1` | [Website](http://sourceware.org/libffi) | libffi is a portable Foreign Function Interface library. 
+**libs** | `libgcrypt` | `1.8.2` | [Website](https://www.gnupg.org/software/libgcrypt) | Libgcrypt is a general purpose cryptographic library originally based on code from GnuPG. 
 **libs** | `libgd` | `2.2.5` | [Website](https://libgd.github.io/) | GD is an open source code library for the dynamic creation of images by programmers. 
+**libs** | `libgpg-error` | `1.27` | [Website](https://www.gnupg.org/software/libgpg-error) | Libgpg-error is a small library that originally defined common error values for all GnuPG components. 
 **libs** | `libidl` | `0.8.14` | [Website](https://github.com/GNOME/libIDL) | The libIDL package contains libraries for Interface Definition Language files. This is a specification for defining portable interfaces. 
 **libs** | `libjpeg-turbo` | `1.5.1` | [Website](http://www.libjpeg-turbo.org) | libjpeg-turbo is a JPEG image codec that uses SIMD instructions (MMX, SSE2, AVX2, NEON, AltiVec) to accelerate baseline JPEG compression and decompression on x86, x86-64, ARM, and PowerPC systems 
 **libs** | `libmng` | `2.0.3` | [Website](http://libmng.sourceforge.net) | THE reference library for reading, displaying, writing and examining Multiple-Image Network Graphics. MNG is the animation extension to the popular PNG image-format. 
 **libs** | `libpng` | `1.2.57`<br/>`1.6.29` | [Website](http://libpng.sourceforge.net) | libpng is the official PNG reference library. It supports almost all PNG features, is extensible, and has been extensively tested for over 20 years. 
+**libs** | `libproxy` | `0.4.15` | [Website](https://libproxy.github.io/libproxy/) | libproxy is a library that provides automatic proxy configuration management. 
 **libs** | `libressl` | `2.5.3` | [Website](https://www.libressl.org) | LibreSSL is a version of the TLS/crypto stack forked from OpenSSL in 2014, with goals of modernizing the codebase, improving security, and applying best practice development processes. 
+**libs** | `libsoup` | `2.61.2` | [Website](https://wiki.gnome.org/LibSoup) | libsoup is an HTTP client/server library for GNOME. 
+**libs** | `libtasn1` | `4.13` | [Website](https://www.gnu.org/software/libtasn1/) | Libtasn1 is the ASN.1 library used by GnuTLS, p11-kit and some other packages. 
 **libs** | `libtiff` | `4.0.8` | [Website](http://simplesystems.org/libtiff/) | libtiff provides support for the Tag Image File Format (TIFF), a widely used format for storing image data. 
 **libs** | `libunistring` | `0.9.7` | [Website](https://www.gnu.org/software/libunistring/) | Libunistring provides functions for manipulating Unicode strings and for manipulating C strings according to the Unicode standard. 
 **libs** | `libwebp` | `0.6.1` | [Website](https://developers.google.com/speed/webp) | WebP is a modern image format that provides superior lossless and lossy compression for images on the web. 
 **libs** | `libxml2` | `2.9.4` | [Website](http://xmlsoft.org/) | Libxml2 is a XML C parser and toolkit. 
+**libs** | `libxslt` | `1.1.32` | [Website](http://xmlsoft.org/libxslt) | Libxslt is the XSLT C library developed for the GNOME project. XSLT itself is a an XML language to define transformation for XML. 
 **libs** | `mesa` | `17.1.6` | [Website](https://www.mesa3d.org) | Mesa is an open-source implementation of the OpenGL, Vulkan and other specifications. 
 **libs** | `ncurses` | `6.0` | [Website](https://www.gnu.org/software/ncurses) | The ncurses (new curses) library is a free software emulation of curses in System V Release 4.0 (SVr4), and more. 
 **libs** | `nettle` | `3.3` | [Website](http://www.lysator.liu.se/~nisse/nettle/) | Nettle is a cryptographic library that is designed to fit easily in more or less any context. 
