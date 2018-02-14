@@ -3,7 +3,7 @@
 
 !!! summary
 
-    As of Friday, February 09 2018, we provide 273 software packages, in 7 categories, covering 42 fields of science.
+    As of Tuesday, February 13 2018, we provide 276 software packages, in 7 categories, covering 42 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -58,6 +58,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **neurology** | `fsl` | `5.0.10` | [Website](https://fsl.fmrib.ox.ac.uk/fsl) | FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. 
 **neurology** | `mricron` | `20160502` | [Website](https://www.nitrc.org/projects/mricron) | MRIcron is a cross-platform NIfTI format image viewer. 
 **neurology** | `mrtrix` | `0.3.16` | [Website](http://www.mrtrix.org) | MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses. 
+**neurology** | `py-mdt` | `0.10.6_py36` | [Website](https://github.com/cbclab/MDT) | The Maastricht Diffusion Toolbox, MDT, is a framework and library for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging (MRI) modeling. 
 **neurology** | `spm` | `12` | [Website](http://www.fil.ion.ucl.ac.uk/spm/) | The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. 
 **phylogenetics** | `py-ete` | `3.0.0_py27_qt5`<br/>`3.0.0_py27` | [Website](http://etetoolkit.org/) | A Python framework for the analysis and visualization of trees. 
 
@@ -253,7 +254,8 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `pcre` | `8.40` | [Website](http://www.pcre.org/) | The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5. 
 **libs** | `popt` | `1.16` | [Website](http://rpm5.org/files/popt) | Library for parsing command line options. 
 **libs** | `py-lmdb` | `0.93` | [Website](https://lmdb.readthedocs.io/en/release/) | Universal Python binding for the LMDB 'Lightning' Database. 
-**libs** | `py-mako` | `1.0.7` | [Website](http://www.makotemplates.org/) | Mako is a template library written in Python. It provides a familiar, non-XML syntax which compiles into Python modules for maximum performance. 
+**libs** | `py-mako` | `1.0.7_py27`<br/>`1.0.7_py36` | [Website](http://www.makotemplates.org/) | Mako is a template library written in Python. It provides a familiar, non-XML syntax which compiles into Python modules for maximum performance. 
+**libs** | `py-pyqt5` | `5.9.1_py36` | [Website](https://www.riverbankcomputing.com/software/pyqt/) | PyQt5 is a comprehensive set of Python bindings for Qt v5. 
 **libs** | `readline` | `7.0` | [Website](https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html) | The GNU Readline library provides a set of functions for use by applications that allow users to edit command lines as they are typed in. 
 **libs** | `snappy` | `1.1.7` | [Website](https://github.com/google/snappy) | A fast compressor/decompressor. 
 **resource monitoring** | `remora` | `1.8.2` | [Website](https://github.com/TACC/remora) | Remora is a tool to monitor runtime resource utilization. 
