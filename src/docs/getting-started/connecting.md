@@ -176,7 +176,7 @@ by the following *message of the day*:
 
   Support           email: srcc-support@stanford.edu
   ========   office hours: Tuesdays 10-11am, Thursdays 3-4pm,
-                           room 261-262 @ Polya Hall
+                           room 255 @ Polya Hall
 
   Web                 www: http://www.sherlock.stanford.edu
   ========           news: http://news.sherlock.stanford.edu

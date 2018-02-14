@@ -118,8 +118,8 @@ As a member of the Sherlock community, you're also automatically subscribed to:
     able to help you otherwise.
 
 
-The SRCC holds office hours twice a week, in [Polya Hall][url_polya], rooms
-261-262 (2nd floor):
+The SRCC holds office hours twice a week, in [Polya Hall][url_polya], room 255
+(2nd floor):
 
 * Tuesdays, 10-11am
 * Thursdays 3-4pm
