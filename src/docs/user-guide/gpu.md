@@ -114,6 +114,7 @@ The list of available features on GPU nodes can be obtained with the
 
 ```
 $ node_feat -p gpu | grep GPU_
+GPU_BRD:TESLA
 GPU_GEN:PSC
 GPU_MEM:16GB
 GPU_MEM:24GB
@@ -129,6 +130,7 @@ table
 
 | Slurm\ feature | Description | Possible values | Example job constraint |
 | -------------- | ----------- | --------------- | ---------------------- |
+| `GPU_BRD`      | GPU brand | `GEFORCE`: GeForce / TITAN<br>`TESLA`: Tesla | `#SBATCH -C GPU_BRD:TESLA` |
 | `GPU_GEN`      | GPU generation | `PSC`: Pascal<br>`MXW`: Maxwell | `#SBATCH -C GPU_GEN:PSC` |
 | `GPU_MEM`      | Amount of GPU memory | `16GB`, `24GB` | `#SBATCH -C GPU_MEM:16GB` |
 | `GPU_SKU`      | GPU model | `TESLA_P100_PCIE`<br/>`TESLA_P40` | `#SBATCH -C GPU_SKU:TESLA_P40` |
@@ -136,6 +138,26 @@ table
 Depending on the partitions you have access to, more features may be available
 to be requested in your jobs.
 
+
+For instance, to request a Tesla GPU for you job, you can use the following
+submisison options:
+
+```
+$ srun -p owners --gres gpu:1 -C GPU_BRD:TESLA nvidia-smi -L
+GPU 0: Tesla P100-SXM2-16GB (UUID: GPU-4f91f58f-f3ea-d414-d4ce-faf587c5c4d4)
+```
+
+!!! warning "Unsatisfiable contraints"
+
+    If you specify a constraint that can't be satisfied in the partition you're
+    submitting your job to, the job will be rejected by the scheduler.     For
+    instance, requesting a GeForce GPU in the `gpu` partition, which only
+    features Tesla GPUs, will result in an error:
+
+    ```
+    $ srun -p gpu --gres gpu:1 -C GPU_BRD:GEFORCE nvidia-smi -L
+    srun: error: Unable to allocate resources: Requested node configuration is not available
+    ```
 
 
 ### GPU compute modes
