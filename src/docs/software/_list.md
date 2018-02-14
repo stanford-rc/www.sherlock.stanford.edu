@@ -3,13 +3,13 @@
 
 !!! summary
 
-    As of Thursday, December 21 2017, we provide 248 software packages, in 7 categories, covering 41 fields of science.
+    As of Friday, February 09 2018, we provide 273 software packages, in 7 categories, covering 42 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
 * [`devel`](#devel) <small>build, compiler, data, language, libs, mpi, networking</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
-* [`physics`](#physics) <small>astronomy, gis, photonics</small>
+* [`physics`](#physics) <small>astronomy, geophysics, gis, photonics</small>
 * [`system`](#system) <small>compression, containers, database, file management, file transfer, language, libs, resource monitoring, scm, tools</small>
 * [`viz`](#viz) <small>molecular visualization, plotting, remote display</small>
 
@@ -45,12 +45,15 @@ Field  | Module\ name | Version(s) | URL  | Description
 **cryo-em** | `relion` | `2.0.3` | [Website](http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page) | RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a stand-alone computer program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class averages in electron cryo-microscopy (cryo-EM). 
 **genomics** | `angsd` | `0.919` | [Website](http://www.popgen.dk/angsd/index.php/ANGSD) | ANGSD is a software for analyzing next generation sequencing data. 
 **genomics** | `bcftools` | `1.6` | [Website](https://github.com/samtools/bcftools) | BCFtools is a program for variant calling and manipulating files in the Variant Call Format (VCF) and its binary counterpart BCF. 
+**genomics** | `bwa` | `0.7.17` | [Website](http://bio-bwa.sourceforge.net/) | BWA (Burrows-Wheeler Aligner) is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. 
+**genomics** | `fastx_toolkit` | `0.0.14` | [Website](http://hannonlab.cshl.edu/fastx_toolkit/) | The FASTX-Toolkit is a collection of command line tools for Short-Reads FASTA/FASTQ files preprocessing. 
 **genomics** | `htslib` | `1.6` | [Website](https://github.com/samtools/htslib) | C library for high-throughput sequencing data formats. 
 **genomics** | `ncbi-blast+` | `2.6.0` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
 **genomics** | `py-macs2` | `2.1.1_py27` | [Website](https://github.com/taoliu/MACS) | MACS (Model-based Analysis of ChIP-Seq) implements a novel ChIP-Seq analysis method. 
 **genomics** | `samtools` | `1.6` | [Website](https://github.com/samtools/samtools) | Tools (written in C using htslib) for manipulating next-generation sequencing data. 
-**neurology** | `afni` | `17.2.07` | [Website](https://afni.nimh.nih.gov) | AFNI (Analysis of Functional NeuroImages) is a set of C programs for processing, analyzing, and displaying functional MRI (FMRI) data - a technique for mapping human brain activity. 
+**neurology** | `afni` | `17.2.07`<br/>`18.0.09` | [Website](https://afni.nimh.nih.gov) | AFNI (Analysis of Functional NeuroImages) is a set of C programs for processing, analyzing, and displaying functional MRI (FMRI) data - a technique for mapping human brain activity. 
 **neurology** | `ants` | `2.1.0` | [Website](https://stnava.github.io/ANTs) | ANTs computes high-dimensional mappings to capture the statistics of brain structure and function. 
+**neurology** | `dcm2niix` | `1.0.20171215` | [Website](https://github.com/rordenlab/dcm2niix) | dcm2niix is a program esigned to convert neuroimaging data from the DICOM format to the NIfTI format. 
 **neurology** | `freesurfer` | `6.0.0` | [Website](https://surfer.nmr.mgh.harvard.edu/) | An open source software suite for processing and analyzing (human) brain MRI images. 
 **neurology** | `fsl` | `5.0.10` | [Website](https://fsl.fmrib.ox.ac.uk/fsl) | FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. 
 **neurology** | `mricron` | `20160502` | [Website](https://www.nitrc.org/projects/mricron) | MRIcron is a cross-platform NIfTI format image viewer. 
@@ -65,7 +68,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **computational chemistry** | `libint` | `1.1.4`<br/>`2.0.3` | [Website](https://sourceforge.net/p/libint/home/) | Libint computes molecular integrals. 
 **computational chemistry** | `libxc` | `3.0.0` | [Website](http://octopus-code.org/wiki/Libxc) | Libxc is a library of exchange-correlation functionals for density-functional theory. 
 **computational chemistry** | `py-ase` | `3.14.1_py27` | [Website](https://wiki.fysik.dtu.dk/ase/) | The Atomic Simulation Environment (ASE) is a set of tools and Python modules for setting up, manipulating, running, visualizing and analyzing atomistic simulations. 
-**computational chemistry** | `schrodinger`^<b class="lic"></b>^ | `2017-2`<br/>`2017-3` | [Website](https://www.schrodinger.com) | Schrödinger Suites (Small-molecule Drug Discovery Suite, Material Science Suite, Biologics Suite) provide a set of molecular modelling software. 
+**computational chemistry** | `schrodinger`^<b class="lic"></b>^ | `2017-3` | [Website](https://www.schrodinger.com) | Schrödinger Suites (Small-molecule Drug Discovery Suite, Material Science Suite, Biologics Suite) provide a set of molecular modelling software. 
 **computational chemistry** | `vasp`^<b class="lic"></b>^ | `5.4.1` | [Website](https://www.vasp.at) | The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic scale materials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics, from first principles. 
 **molecular dynamics** | `gromacs` | `2016.3` | [Website](http://www.gromacs.org) | GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles. 
 **molecular dynamics** | `openmm` | `7.1.1` | [Website](http://openmm.org) | A high performance toolkit for molecular simulation. 
@@ -98,6 +101,9 @@ Field  | Module\ name | Version(s) | URL  | Description
 **language** | `guile` | `2.2.2` | [Website](https://www.gnu.org/software/guile/) | GNU Guile is the preferred extension system for the GNU Project, which features an implementation of the Scheme programming language. 
 **language** | `java` | `1.8.0_131` | [Website](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. 
 **language** | `julia` | `0.5.1`<br/>`0.6` | [Website](https://julialang.org) | Julia is a high-level, high-performance dynamic programming language for numerical computing. 
+**language** | `lua` | `5.3.4` | [Website](https://www.lua.org) | Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description. 
+**language** | `luarocks` | `2.4.3` | [Website](https://luarocks.org/) | LuaRocks is the package manager for Lua modules. 
+**language** | `nodejs` | `8.9.4`<br/>`9.5.0` | [Website](https://nodejs.org/) | Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It provides the npm package manager. 
 **language** | `perl` | `5.26.0` | [Website](https://www.perl.org) | Perl 5 is a highly capable, feature-rich programming language with over 29 years of development. <br/>[Usage on Sherlock](http://www.sherlock.stanford.edu/docs/software/using/perl)
 **language** | `py-ipython` | `6.1.0_py36`<br/>`5.4.1_py27` | [Website](https://ipython.org) | IPython is a command shell for interactive computing in multiple programming languages, originally developed for the Python programming language. 
 **language** | `py-jupyter` | `1.0.0_py36`<br/>`1.0.0_py27` | [Website](https://jupyter.org) | Jupyter is a browser-based interactive notebook for programming, mathematics, and data science. It supports a number of languages via plugins. 
@@ -131,13 +137,14 @@ Field  | Module\ name | Version(s) | URL  | Description
 **deep learning** | `caffe2` | `0.8.1` | [Website](https://caffe2.ai) | Caffe2 is a deep learning framework that provides an easy and straightforward way to experiment with deep learning and leverage community contributions of new models and algorithms. 
 **deep learning** | `cudnn` | `5.1`<br/>`6.0`<br/>`7.0.1`<br/>`7.0.4`<br/>`7.0.5` | [Website](https://developer.nvidia.com/cudnn) | NVIDIA cuDNN is a GPU-accelerated library of primitives for deep neural networks. 
 **deep learning** | `py-keras` | `2.0.8_py27` | [Website](http://keras.io) | Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. 
-**deep learning** | `py-pytorch` | `0.2.0_py36`<br/>`0.2.0_py27` | [Website](http://pytorch.org) | PyTorch is a deep learning framework that puts Python first. 
-**deep learning** | `py-tensorflow` | `1.2.1`<br/>`1.3.0_py36`<br/>`1.4.0_py27`<br/>`1.4.0_py36`<br/>`1.3.0_py27` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
+**deep learning** | `py-pytorch` | `0.2.0_py27`<br/>`0.2.0_py36`<br/>`0.3.0_py36`<br/>`0.3.0_py27` | [Website](http://pytorch.org) | PyTorch is a deep learning framework that puts Python first. 
+**deep learning** | `py-tensorflow` | `1.2.1`<br/>`1.3.0_py36`<br/>`1.4.0_py27`<br/>`1.5.0_py27`<br/>`1.5.0_py36`<br/>`1.3.0_py27` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
 **deep learning** | `py-tensorlayer` | `1.6.3_py27` | [Website](http://tensorlayer.org) | TensorLayer is a Deep Learning (DL) and Reinforcement Learning (RL) library extended from Google TensorFlow. 
 **deep learning** | `tensorrt` | `3.0.1` | [Website](https://developer.nvidia.com/tensorrt) | NVIDIA TensorRT™ is a high-performance deep learning inference optimizer and runtime that delivers low latency, high-throughput inference for deep learning applications. 
+**deep learning** | `torch` | `20180202` | [Website](http//torch.ch) | Torch is a scientific computing framework with wide support for machine learning algorithms that puts GPUs first. 
 **linear algebra** | `armadillo` | `8.200.1` | [Website](http://arma.sourceforge.net/) | Armadillo is a high quality linear algebra library (matrix maths) for the C++ language, aiming towards a good balance between speed and ease of use. 
 **machine learning** | `py-scikit-learn` | `0.19.1_py27` | [Website](http://scikit-learn.org) | Scikit-learn is a free software machine learning library for the Python programming language. 
-**numerical analysis** | `matlab`^<b class="lic"></b>^ | `R2017a`<br/>`R2017b` | [Website](https://www.mathworks.com/products/matlab.html) | MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment and fourth-generation programming language. 
+**numerical analysis** | `matlab`^<b class="lic"></b>^ | `R2014b`<br/>`R2017a`<br/>`R2017b` | [Website](https://www.mathworks.com/products/matlab.html) | MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment and fourth-generation programming language. 
 **numerical analysis** | `octave` | `4.2.1` | [Website](https://www.gnu.org/software/octave/) | GNU Octave is a high-level language primarily intended for numerical computations. 
 **numerical library** | `arpack` | `3.5.0` | [Website](https://github.com/opencollab/arpack-ng) | Collection of Fortran77 subroutines designed to solve large scale eigenvalue problems. 
 **numerical library** | `fftw` | `3.3.6` | [Website](http://www.fftw.org/) | The Fastest Fourier Transform in the West (FFTW) is a software library for computing discrete Fourier transforms (DFTs). 
@@ -170,6 +177,8 @@ Field  | Module\ name | Version(s) | URL  | Description
 Field  | Module\ name | Version(s) | URL  | Description
 :----- | :----------- | ------: | :--- | :----------
 **astronomy** | `heasoft` | `6.22.1` | [Website](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/) | HEAsoft is a Unified Release of the FTOOLS (General and mission-specific tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks for X-ray astronomical spectral, timing, and imaging data analysis) software packages. 
+**geophysics** | `opensees` | `r6642` | [Website](http://opensees.berkeley.edu/) | OpenSees is a software framework for developing applications to simulate the performance of structural and geotechnical systems subjected to earthquakes. 
+**gis** | `comsol` | `5.3a` | [Website](https://trac.osgeo.org/geos) | GEOS (Geometry Engine - Open Source) is a C++ port of Java Topology Suite (JTS). 
 **gis** | `gdal` | `2.2.1` | [Website](http://www.gdal.org) | GDAL is a translator library for raster and vector geospatial data formats. 
 **gis** | `geos` | `3.6.2` | [Website](https://trac.osgeo.org/geos) | GEOS (Geometry Engine - Open Source) is a C++ port of Java Topology Suite (JTS). 
 **gis** | `proj` | `4.9.3` | [Website](http://proj4.org) | proj.4 is a standard UNIX filter function which converts geographic longitude and latitude coordinates into cartesian coordinates (and vice versa. 
@@ -191,13 +200,14 @@ Field  | Module\ name | Version(s) | URL  | Description
 **file transfer** | `lftp` | `4.8.1` | [Website](https://lftp.yar.ru/) | LFTP is a sophisticated file transfer program supporting a number of network protocols (ftp, http, sftp, fish, torrent). 
 **file transfer** | `mpifileutils` | `20170210` | [Website](https://github.com/hpc/mpifileutils) | mpiFileUtils is a suite of MPI-based tools to manage large datasets, which may vary from large directory trees to large files. 
 **file transfer** | `py-globus-cli` | `1.2.0` | [Website](https://github.com/globus/globus-cli) | A command line wrapper over the Globus SDK for Python. 
-**file transfer** | `rclone` | `1.37` | [Website](https://rclone.org) | Rclone is a command line program to sync files and directories to and from: Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon Drive, Microsoft One Drive, Hubic, Backblaze B2, Yandex Disk, or the local filesystem. 
+**file transfer** | `rclone` | `1.39` | [Website](https://rclone.org) | Rclone is a command line program to sync files and directories to and from: Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon Drive, Microsoft One Drive, Hubic, Backblaze B2, Yandex Disk, or the local filesystem. 
 **language** | `tcltk` | `8.6.6` | [Website](https://www.tcl.tk) | Tcl (Tool Command Language) is a dynamic programming language, suitable for web and desktop applications, networking, administration, testing. Tk is a graphical user interface toolkit. 
 **libs** | `atk` | `2.24.0` | [Website](https://developer.gnome.org/atk) | ATK is the Accessibility Toolkit. It provides a set of generic interfaces allowing accessibility technologies such as screen readers to interact with a graphical user interface. 
 **libs** | `benchmark` | `1.2.0` | [Website](https://github.com/google/benchmark) | A microbenchmark support library 
 **libs** | `cairo` | `1.14.10` | [Website](https://www.cairographics.org/) | Cairo is a 2D graphics library with support for multiple output devices. 
 **libs** | `cups` | `2.2.4` | [Website](https://www.cups.org/) | CUPS is the standards-based, open source printing system. 
 **libs** | `dbus` | `1.10.22` | [Website](https://www.freedesktop.org/wiki/Software/dbus/) | D-Bus is a message bus system, a simple way for applications to talk to one another. 
+**libs** | `enchant` | `1.6.1`<br/>`2.2.3` | [Website](https://abiword.github.io/enchant/) | Enchant is a library (and command-line program) that wraps a number of different spelling libraries and programs with a consistent interface. 
 **libs** | `fltk` | `1.3.4` | [Website](http://www.fltk.org) | FLTK (pronounced 'fulltick') is a cross-platform C++ GUI toolkit. 
 **libs** | `fontconfig` | `2.12.4` | [Website](https://www.freedesktop.org/wiki/Software/fontconfig) | Fontconfig is a library for configuring and customizing font access. 
 **libs** | `freeglut` | `3.0.0` | [Website](http://freeglut.sourceforge.net/) | FreeGLUT is a free-software/open-source alternative to the OpenGL Utility Toolkit (GLUT) library. 
@@ -214,19 +224,27 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `googletest` | `1.8.0` | [Website](https://github.com/google/googletest) | Google Test is Google's C++ test framework. 
 **libs** | `gtk+` | `2.24.30`<br/>`3.22.18` | [Website](https://www.gtk.org) | GTK+, or the GIMP Toolkit, is a multi-platform toolkit for creating graphical user interfaces. 
 **libs** | `harfbuzz` | `1.4.8` | [Website](https://www.freedesktop.org/wiki/Software/HarfBuzz) | HarfBuzz is an OpenType text shaping engine. 
+**libs** | `hunspell` | `1.6.2` | [Website](https://hunspell.github.io/) | Hunspell is a spell checker. 
+**libs** | `hyphen` | `2.8.8` | [Website](https://github.com/hunspell/hyphen) | Hyphen is a hyphenation library to use converted TeX hyphenation patterns. 
 **libs** | `icu` | `59.1` | [Website](http://site.icu-project.org) | ICU is a set of C/C++ and Java libraries providing Unicode and Globalization support for software applications. 
 **libs** | `libepoxy` | `1.4.1` | [Website](https://github.com/anholt/libepoxy) | Epoxy is a library for handling OpenGL function pointer management for you. 
 **libs** | `libffi` | `3.2.1` | [Website](http://sourceware.org/libffi) | libffi is a portable Foreign Function Interface library. 
+**libs** | `libgcrypt` | `1.8.2` | [Website](https://www.gnupg.org/software/libgcrypt) | Libgcrypt is a general purpose cryptographic library originally based on code from GnuPG. 
 **libs** | `libgd` | `2.2.5` | [Website](https://libgd.github.io/) | GD is an open source code library for the dynamic creation of images by programmers. 
+**libs** | `libgpg-error` | `1.27` | [Website](https://www.gnupg.org/software/libgpg-error) | Libgpg-error is a small library that originally defined common error values for all GnuPG components. 
 **libs** | `libidl` | `0.8.14` | [Website](https://github.com/GNOME/libIDL) | The libIDL package contains libraries for Interface Definition Language files. This is a specification for defining portable interfaces. 
 **libs** | `libjpeg-turbo` | `1.5.1` | [Website](http://www.libjpeg-turbo.org) | libjpeg-turbo is a JPEG image codec that uses SIMD instructions (MMX, SSE2, AVX2, NEON, AltiVec) to accelerate baseline JPEG compression and decompression on x86, x86-64, ARM, and PowerPC systems 
 **libs** | `libmng` | `2.0.3` | [Website](http://libmng.sourceforge.net) | THE reference library for reading, displaying, writing and examining Multiple-Image Network Graphics. MNG is the animation extension to the popular PNG image-format. 
 **libs** | `libpng` | `1.2.57`<br/>`1.6.29` | [Website](http://libpng.sourceforge.net) | libpng is the official PNG reference library. It supports almost all PNG features, is extensible, and has been extensively tested for over 20 years. 
+**libs** | `libproxy` | `0.4.15` | [Website](https://libproxy.github.io/libproxy/) | libproxy is a library that provides automatic proxy configuration management. 
 **libs** | `libressl` | `2.5.3` | [Website](https://www.libressl.org) | LibreSSL is a version of the TLS/crypto stack forked from OpenSSL in 2014, with goals of modernizing the codebase, improving security, and applying best practice development processes. 
+**libs** | `libsoup` | `2.61.2` | [Website](https://wiki.gnome.org/LibSoup) | libsoup is an HTTP client/server library for GNOME. 
+**libs** | `libtasn1` | `4.13` | [Website](https://www.gnu.org/software/libtasn1/) | Libtasn1 is the ASN.1 library used by GnuTLS, p11-kit and some other packages. 
 **libs** | `libtiff` | `4.0.8` | [Website](http://simplesystems.org/libtiff/) | libtiff provides support for the Tag Image File Format (TIFF), a widely used format for storing image data. 
 **libs** | `libunistring` | `0.9.7` | [Website](https://www.gnu.org/software/libunistring/) | Libunistring provides functions for manipulating Unicode strings and for manipulating C strings according to the Unicode standard. 
 **libs** | `libwebp` | `0.6.1` | [Website](https://developers.google.com/speed/webp) | WebP is a modern image format that provides superior lossless and lossy compression for images on the web. 
 **libs** | `libxml2` | `2.9.4` | [Website](http://xmlsoft.org/) | Libxml2 is a XML C parser and toolkit. 
+**libs** | `libxslt` | `1.1.32` | [Website](http://xmlsoft.org/libxslt) | Libxslt is the XSLT C library developed for the GNOME project. XSLT itself is a an XML language to define transformation for XML. 
 **libs** | `mesa` | `17.1.6` | [Website](https://www.mesa3d.org) | Mesa is an open-source implementation of the OpenGL, Vulkan and other specifications. 
 **libs** | `ncurses` | `6.0` | [Website](https://www.gnu.org/software/ncurses) | The ncurses (new curses) library is a free software emulation of curses in System V Release 4.0 (SVr4), and more. 
 **libs** | `nettle` | `3.3` | [Website](http://www.lysator.liu.se/~nisse/nettle/) | Nettle is a cryptographic library that is designed to fit easily in more or less any context. 
@@ -247,6 +265,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **tools** | `leveldb` | `1.20` | [Website](https://symas.com/lightning-memory-mapped-database/) | Symas LMDB is an extraordinarily fast, memory-efficient database we developed for the Symas OpenLDAP Project. 
 **tools** | `lmdb` | `0.9.21` | [Website](https://symas.com/lightning-memory-mapped-database/) | Symas LMDB is an extraordinarily fast, memory-efficient database we developed for the Symas OpenLDAP Project. 
 **tools** | `motif` | `2.3.7` | [Website](https://motif.ics.com) | Motif is the toolkit for the Common Desktop Environment. 
+**tools** | `parallel` | `20180122` | [Website](https://www.gnu.org/software/parallel/) | GNU parallel is a shell tool for executing jobs in parallel using one or more computers. 
 **tools** | `qt` | `5.9.1` | [Website](https://www.qt.io) | QT is a cross-platform application framework that is used for developing application software that can be run on various software and hardware platforms. 
 **tools** | `rocksdb` | `5.7.3` | [Website](https://rocksdb.org) | A library that provides an embeddable, persistent key-value store for fast storage. 
 **tools** | `x11` | `7.7` | [Website](https://www.x.org) | The X.Org project provides an open source implementation of the X Window System. 
