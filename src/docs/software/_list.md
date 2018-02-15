@@ -3,7 +3,7 @@
 
 !!! summary
 
-    As of Tuesday, February 13 2018, we provide 276 software packages, in 7 categories, covering 42 fields of science.
+    As of Thursday, February 15 2018, we provide 280 software packages, in 7 categories, covering 42 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -58,7 +58,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **neurology** | `fsl` | `5.0.10` | [Website](https://fsl.fmrib.ox.ac.uk/fsl) | FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. 
 **neurology** | `mricron` | `20160502` | [Website](https://www.nitrc.org/projects/mricron) | MRIcron is a cross-platform NIfTI format image viewer. 
 **neurology** | `mrtrix` | `0.3.16` | [Website](http://www.mrtrix.org) | MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses. 
-**neurology** | `py-mdt` | `0.10.6_py36` | [Website](https://github.com/cbclab/MDT) | The Maastricht Diffusion Toolbox, MDT, is a framework and library for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging (MRI) modeling. 
+**neurology** | `py-mdt` | `0.10.7_py36` | [Website](https://github.com/cbclab/MDT) | The Maastricht Diffusion Toolbox, MDT, is a framework and library for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging (MRI) modeling. 
 **neurology** | `spm` | `12` | [Website](http://www.fil.ion.ucl.ac.uk/spm/) | The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. 
 **phylogenetics** | `py-ete` | `3.0.0_py27_qt5`<br/>`3.0.0_py27` | [Website](http://etetoolkit.org/) | A Python framework for the analysis and visualization of trees. 
 
@@ -194,6 +194,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **compression** | `xz` | `5.2.3` | [Website](http://tukaani.org/xz/) | XZ Utils is free general-purpose data compression software with a high compression ratio. 
 **compression** | `zlib` | `1.2.11` | [Website](http://zlib.net) | zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. 
 **containers** | `singularity` | `2.3`<br/>`2.3.1`<br/>`2.4` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
+**database** | `bdb` | `6.2.32` | [Website](http://www.oracle.com/us/products/database/berkeley-db) | Berkeley DB (BDB) is a software library intended to provide a high-performance embedded database for key/value data. 
 **database** | `mariadb` | `10.2.11` | [Website](https://www.mariadb.org) | MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. 
 **database** | `sqlite` | `3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
 **file management** | `fpart` | `0.9.3` | [Website](https://github.com/martymac/fpart) | fpart sorts files and packs them into partitions. 
@@ -203,6 +204,8 @@ Field  | Module\ name | Version(s) | URL  | Description
 **file transfer** | `py-globus-cli` | `1.2.0` | [Website](https://github.com/globus/globus-cli) | A command line wrapper over the Globus SDK for Python. 
 **file transfer** | `rclone` | `1.39` | [Website](https://rclone.org) | Rclone is a command line program to sync files and directories to and from: Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon Drive, Microsoft One Drive, Hubic, Backblaze B2, Yandex Disk, or the local filesystem. 
 **language** | `tcltk` | `8.6.6` | [Website](https://www.tcl.tk) | Tcl (Tool Command Language) is a dynamic programming language, suitable for web and desktop applications, networking, administration, testing. Tk is a graphical user interface toolkit. 
+**libs** | `apr` | `1.6.3` | [Website](https://apr.apache.org/) | The Apache Portable Runtime is a supporting library for the Apache web server. It provides a set of APIs that map to the underlying operating system. 
+**libs** | `apr-util` | `1.6.1` | [Website](https://apr.apache.org/) | The Apache Portable Runtime is a supporting library for the Apache web server. It provides a set of APIs that map to the underlying operating system. 
 **libs** | `atk` | `2.24.0` | [Website](https://developer.gnome.org/atk) | ATK is the Accessibility Toolkit. It provides a set of generic interfaces allowing accessibility technologies such as screen readers to interact with a graphical user interface. 
 **libs** | `benchmark` | `1.2.0` | [Website](https://github.com/google/benchmark) | A microbenchmark support library 
 **libs** | `cairo` | `1.14.10` | [Website](https://www.cairographics.org/) | Cairo is a 2D graphics library with support for multiple output devices. 
@@ -260,6 +263,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `snappy` | `1.1.7` | [Website](https://github.com/google/snappy) | A fast compressor/decompressor. 
 **resource monitoring** | `remora` | `1.8.2` | [Website](https://github.com/TACC/remora) | Remora is a tool to monitor runtime resource utilization. 
 **scm** | `git` | `2.12.2` | [Website](http://git-scm.com) | Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. 
+**scm** | `subversion` | `1.9.7` | [Website](https://subversion.apache.org/) | Subversion is an open source version control system. 
 **tools** | `curl` | `7.54.0` | [Website](https://curl.haxx.se/) | curl is an open source command line tool and library for transferring data with URL syntax. 
 **tools** | `expat` | `2.2.3` | [Website](http://libexpat.github.io) | Expat is a stream-oriented XML parser library written in C. 
 **tools** | `graphicsmagick` | `1.3.26` | [Website](http://www.graphicsmagick.org/) | GraphicsMagick is the swiss army knife of image processing. 
