@@ -3,7 +3,7 @@
 
 !!! summary
 
-    As of Thursday, February 15 2018, we provide 280 software packages, in 7 categories, covering 42 fields of science.
+    As of Wednesday, February 21 2018, we provide 283 software packages, in 7 categories, covering 42 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -49,6 +49,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **genomics** | `fastx_toolkit` | `0.0.14` | [Website](http://hannonlab.cshl.edu/fastx_toolkit/) | The FASTX-Toolkit is a collection of command line tools for Short-Reads FASTA/FASTQ files preprocessing. 
 **genomics** | `htslib` | `1.6` | [Website](https://github.com/samtools/htslib) | C library for high-throughput sequencing data formats. 
 **genomics** | `ncbi-blast+` | `2.6.0` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
+**genomics** | `plink` | `1.07`<br/>`1.90b5`<br/>`2.0a1` | [Website](http://zzz.bwh.harvard.edu/plink/) | PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. 
 **genomics** | `py-macs2` | `2.1.1_py27` | [Website](https://github.com/taoliu/MACS) | MACS (Model-based Analysis of ChIP-Seq) implements a novel ChIP-Seq analysis method. 
 **genomics** | `samtools` | `1.6` | [Website](https://github.com/samtools/samtools) | Tools (written in C using htslib) for manipulating next-generation sequencing data. 
 **neurology** | `afni` | `17.2.07`<br/>`18.0.09` | [Website](https://afni.nimh.nih.gov) | AFNI (Analysis of Functional NeuroImages) is a set of C programs for processing, analyzing, and displaying functional MRI (FMRI) data - a technique for mapping human brain activity. 
@@ -58,7 +59,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **neurology** | `fsl` | `5.0.10` | [Website](https://fsl.fmrib.ox.ac.uk/fsl) | FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. 
 **neurology** | `mricron` | `20160502` | [Website](https://www.nitrc.org/projects/mricron) | MRIcron is a cross-platform NIfTI format image viewer. 
 **neurology** | `mrtrix` | `0.3.16` | [Website](http://www.mrtrix.org) | MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses. 
-**neurology** | `py-mdt` | `0.10.7_py36` | [Website](https://github.com/cbclab/MDT) | The Maastricht Diffusion Toolbox, MDT, is a framework and library for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging (MRI) modeling. 
+**neurology** | `py-mdt` | `0.10.8_py36` | [Website](https://github.com/cbclab/MDT) | The Maastricht Diffusion Toolbox, MDT, is a framework and library for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging (MRI) modeling. 
 **neurology** | `spm` | `12` | [Website](http://www.fil.ion.ucl.ac.uk/spm/) | The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. 
 **phylogenetics** | `py-ete` | `3.0.0_py27_qt5`<br/>`3.0.0_py27` | [Website](http://etetoolkit.org/) | A Python framework for the analysis and visualization of trees. 
 
