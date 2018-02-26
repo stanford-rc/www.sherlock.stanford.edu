@@ -94,7 +94,9 @@ A few tutorials we recommend are:
 
 More specifically about HPC:
 
+* [Intro to HPC][url_tuto_5] (HPC Carpentry)
 * [HPC in a day][url_tuto_4] (Software Carpentry}
+
 
 ### Text editors
 
@@ -142,6 +144,8 @@ For an introduction to shell scripting, you can refer to:
 [url_tuto_2]:       http://www.doc.ic.ac.uk/~wjk/UnixIntro/
 [url_tuto_3]:       https://swcarpentry.github.io/shell-novice/
 [url_tuto_4]:       https://psteinb.github.io/hpc-in-a-day/
+[url_tuto_5]:       https://hpc-carpentry.github.io/hpc-intro/
+
 
 [url_nano]:         https://wiki.gentoo.org/wiki/Nano/Basics_Guide
 [url_vim]:          https://wiki.gentoo.org/wiki/Vim/Guide
