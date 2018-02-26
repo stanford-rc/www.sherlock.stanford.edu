@@ -3,7 +3,7 @@
 
 !!! summary
 
-    As of Wednesday, February 21 2018, we provide 283 software packages, in 7 categories, covering 42 fields of science.
+    As of Monday, February 26 2018, we provide 287 software packages, in 7 categories, covering 42 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -59,7 +59,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **neurology** | `fsl` | `5.0.10` | [Website](https://fsl.fmrib.ox.ac.uk/fsl) | FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. 
 **neurology** | `mricron` | `20160502` | [Website](https://www.nitrc.org/projects/mricron) | MRIcron is a cross-platform NIfTI format image viewer. 
 **neurology** | `mrtrix` | `0.3.16` | [Website](http://www.mrtrix.org) | MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses. 
-**neurology** | `py-mdt` | `0.10.8_py36` | [Website](https://github.com/cbclab/MDT) | The Maastricht Diffusion Toolbox, MDT, is a framework and library for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging (MRI) modeling. 
+**neurology** | `py-mdt` | `0.10.9_py36` | [Website](https://github.com/cbclab/MDT) | The Maastricht Diffusion Toolbox, MDT, is a framework and library for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging (MRI) modeling. 
 **neurology** | `spm` | `12` | [Website](http://www.fil.ion.ucl.ac.uk/spm/) | The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. 
 **phylogenetics** | `py-ete` | `3.0.0_py27_qt5`<br/>`3.0.0_py27` | [Website](http://etetoolkit.org/) | A Python framework for the analysis and visualization of trees. 
 
@@ -88,6 +88,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **compiler** | `icc` | `2017.u2`<br/>`2018.u1`<br/>`2018` | [Website](https://software.intel.com/en-us/c-compilers) | Intel C++ Compiler, also known as icc or icl, is a group of C and C++ compilers from Intel 
 **compiler** | `ifort` | `2017.u2`<br/>`2018.u1`<br/>`2018` | [Website](https://software.intel.com/en-us/fortran-compilers) | Intel Fortran Compiler, also known as ifort, is a group of Fortran compilers from Intel 
 **compiler** | `llvm` | `3.8.1`<br/>`4.0.0`<br/>`5.0.0` | [Website](http://llvm.org) | The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler, 
+**compiler** | `nagfor` | `npl6a61na` | [Website](https://www.nag.com/nag-compiler) | The NAG Fortran Compiler is a full standard implementation of the ISO Fortran 95 language with the addition of all of Fortran 2003, most of Fortran 2008 and OpenMP 3.0 and 3.1. 
 **compiler** | `pgi` | `17.4` | [Website](http://pgroup.com) | PGI compilers and tools, including Open MPI (Community Edition). 
 **data** | `h5utils` | `1.12.1` | [Website](http://ab-initio.mit.edu/wiki/index.php/H5utils) | h5utils is a set of utilities for visualization and conversion of scientific data in the free, portable HDF5 format. 
 **data** | `hdf5` | `1.10.0p1` | [Website](https://www.hdfgroup.org/hdf5) | HDF5 is a data model, library, and file format for storing and managing data. It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O and for high volume and complex data. 
@@ -159,6 +160,10 @@ Field  | Module\ name | Version(s) | URL  | Description
 **numerical library** | `metis` | `5.1.0` | [Website](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview) | METIS is a set of serial programs for partitioning graphs, partitioning finite element meshes, and producing fill reducing orderings for sparse matrices. 
 **numerical library** | `mpfr` | `3.1.5` | [Website](https://www.mpfr.org) | The MPFR library is a C library for multiple-precision floating-point computations with correct rounding. 
 **numerical library** | `mumps` | `5.1.2` | [Website](http://mumps.enseeiht.fr/) | A parallel sparse direct solver. 
+**numerical library** | `nagcl` | `cll6i26dcl` | [Website](https://www.nag.com/nag-c-library) | The NAG C Library is the largest and most comprehensive collection of mathematical and statistical algorithms for C and C++. 
+**numerical library** | `nagfl` | `fll6i26dcl` | [Website](https://www.nag.com/nag-fortran-library) | The NAG Fortran Library is the largest and most comprehensive collection of numerical and statistical algorithms in Fortran. 
+**numerical library** | `nagfs` | `fsl6i26dcl` | [Website](https://www.nag.com/nag-library-smp-multicore) | The NAG Library for SMP & Multicore is based on, and includes, the full functionality of the NAG Fortran Library. 
+**numerical library** | `nagmb` | `MBL6I25DNL` | [Website](https://www.nag.com/nag-toolbox-matlab) | The NAG C Library is the largest and most comprehensive collection of mathematical and statistical algorithms for C and C++. 
 **numerical library** | `openblas` | `0.2.19` | [Website](http://www.openblas.net/) | OpenBLAS is an optimized BLAS library 
 **numerical library** | `parmetis` | `4.0.3` | [Website](http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview) | ParMETIS is an MPI-based parallel library that implements a variety of algorithms for partitioning unstructured graphs, meshes, and for computing fill-reducing orderings of sparse matrices. 
 **numerical library** | `qrupdate` | `1.1.2` | [Website](https://sourceforge.net/projects/qrupdate/) | qrupdate is a Fortran library for fast updates of QR and Cholesky decompositions. 
@@ -180,7 +185,6 @@ Field  | Module\ name | Version(s) | URL  | Description
 :----- | :----------- | ------: | :--- | :----------
 **astronomy** | `heasoft` | `6.22.1` | [Website](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/) | HEAsoft is a Unified Release of the FTOOLS (General and mission-specific tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks for X-ray astronomical spectral, timing, and imaging data analysis) software packages. 
 **geophysics** | `opensees` | `2.5.0` | [Website](http://opensees.berkeley.edu/) | OpenSees is a software framework for developing applications to simulate the performance of structural and geotechnical systems subjected to earthquakes. 
-**gis** | `comsol` | `5.3a` | [Website](https://trac.osgeo.org/geos) | GEOS (Geometry Engine - Open Source) is a C++ port of Java Topology Suite (JTS). 
 **gis** | `gdal` | `2.2.1` | [Website](http://www.gdal.org) | GDAL is a translator library for raster and vector geospatial data formats. 
 **gis** | `geos` | `3.6.2` | [Website](https://trac.osgeo.org/geos) | GEOS (Geometry Engine - Open Source) is a C++ port of Java Topology Suite (JTS). 
 **gis** | `proj` | `4.9.3` | [Website](http://proj4.org) | proj.4 is a standard UNIX filter function which converts geographic longitude and latitude coordinates into cartesian coordinates (and vice versa. 
