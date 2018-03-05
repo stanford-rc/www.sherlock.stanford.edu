@@ -32,13 +32,6 @@ scheduled on Sherlock on a regular basis.  Per the University's [Minimum
 Security policies][url_minsec], we deploy security patches on Sherlock as
 required for compliance.
 
-!!! important "Next Maintenance"
-
-    Wednesday, September 20, 2017, 9:00 am - 2:00 pm
-
-[comment]: # (As needed to patch severe security vulnerabilities.)
-
-
 
 [url_minsec]:  https://uit.stanford.edu/guide/securitystandards
 
