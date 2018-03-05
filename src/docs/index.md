@@ -56,7 +56,7 @@ information through various channels:
 
 | Channel | URL | Purpose |
 | ------- | --- | ------- |
-| **Documentation** <br/><small>You are here</small>| www.sherlock.stanford.edu/docs | information to help new users start on Sherlock, and more in-depth documentation for users already familiar with the environment. |
+| **Documentation** <br/><small>You are here</small>| [www.sherlock.stanford.edu/docs][url_docs] | information to help new users start on Sherlock, and more in-depth documentation for users already familiar with the environment. |
 | **Changelog** | [news.sherlock.stanford.edu][url_news] | announces, news and updates about Sherlock. |
 | **Dashboard** | [status.sherlock.stanford.edu][url_status] | status of Sherlock's main components and services, outages, maintenances. |
 

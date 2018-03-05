@@ -167,8 +167,8 @@ by the following *message of the day*:
 -----------------------------------------------------------------------------
   This system is for authorized users only and you are expected to comply
   with all Stanford computing, network and research policies.
-  For more info, see http://acomp.stanford.edu/about/policy and
-  http://doresearch.stanford.edu/policies/research-policy-handbook
+  For more info, see https://acomp.stanford.edu/about/policy and
+  https://doresearch.stanford.edu/policies/research-policy-handbook
 -----------------------------------------------------------------------------
   This system is *NOT* HIPAA compliant and shouldn't be used to process PHI
   See https://privacy.stanford.edu/faqs/hipaa-faqs for more information.
@@ -178,9 +178,9 @@ by the following *message of the day*:
   ========   office hours: Tuesdays 10-11am, Thursdays 3-4pm,
                            room 255 @ Polya Hall
 
-  Web                 www: http://www.sherlock.stanford.edu
-  ========           news: http://news.sherlock.stanford.edu
-                   status: http://status.sherlock.stanford.edu
+  Web                 www: https://www.sherlock.stanford.edu
+  ========           news: https://news.sherlock.stanford.edu
+                   status: https://status.sherlock.stanford.edu
 
 -----------------------------------------------------------------------------
 ```

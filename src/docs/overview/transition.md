@@ -403,7 +403,7 @@ Feel free to contact us by email at srcc-support@stanford.edu.
 [url_minsec]:       https://uit.stanford.edu/guide/securitystandards
 [url_iso]:          https://uit.stanford.edu/security
 [url_status]:       https://status.sherlock.stanford.edu
-[url_changelog]:    http://news.sherlock.stanford.edu
+[url_changelog]:    https://news.sherlock.stanford.edu
 
 [url_docs]:         /docs
 [url_modules]:      /docs/software/modules

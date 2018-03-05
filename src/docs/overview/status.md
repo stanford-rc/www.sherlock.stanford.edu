@@ -50,7 +50,7 @@ Sherlock status is <span id="sh_status"></span>
 For more details about Sherlock components and services, see the [status
 dashboard][url_status].
 
-[url_status]:  http://status.sherlock.stanford.edu
+[url_status]:  https://status.sherlock.stanford.edu
 
 ## Current usage
 
