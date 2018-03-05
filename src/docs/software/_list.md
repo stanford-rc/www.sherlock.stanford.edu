@@ -3,14 +3,14 @@
 
 !!! summary
 
-    As of Tuesday, February 27 2018, we provide 289 software packages, in 7 categories, covering 42 fields of science.
+    As of Monday, March 05 2018, we provide 297 software packages, in 7 categories, covering 44 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
-* [`devel`](#devel) <small>build, compiler, data, language, libs, mpi, networking</small>
+* [`devel`](#devel) <small>build, compiler, data, language, libs, mpi, networking, parser</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, gis, photonics</small>
-* [`system`](#system) <small>compression, containers, database, file management, file transfer, language, libs, resource monitoring, scm, tools</small>
+* [`system`](#system) <small>becnhmark, compression, containers, database, file management, file transfer, language, libs, resource monitoring, scm, tools</small>
 * [`viz`](#viz) <small>molecular visualization, plotting, remote display</small>
 
 
@@ -84,12 +84,13 @@ Field  | Module\ name | Version(s) | URL  | Description
 :----- | :----------- | ------: | :--- | :----------
 **build** | `cmake` | `3.8.1` | [Website](https://www.cmake.org) | CMake is an extensible, open-source system that manages the build process in an operating system and in a compiler-independent manner. 
 **build** | `scons` | `2.5.1_py36`<br/>`2.5.1_py27` | [Website](http://www.scons.org) | SCons is an Open Source software construction tool. 
-**compiler** | `gcc` | `7.1.0`<br/>`6.3.0` | [Website](http://gcc.gnu.org) | The GNU Compiler Collection includes front ends for C, C++, Fortran, Java, and Go, as well as libraries for these languages (libstdc++, libgcj,...). 
+**compiler** | `gcc` | `7.1.0`<br/>`7.3.0`<br/>`6.3.0` | [Website](http://gcc.gnu.org) | The GNU Compiler Collection includes front ends for C, C++, Fortran, Java, and Go, as well as libraries for these languages (libstdc++, libgcj,...). 
 **compiler** | `icc` | `2017.u2`<br/>`2018.u1`<br/>`2018` | [Website](https://software.intel.com/en-us/c-compilers) | Intel C++ Compiler, also known as icc or icl, is a group of C and C++ compilers from Intel 
 **compiler** | `ifort` | `2017.u2`<br/>`2018.u1`<br/>`2018` | [Website](https://software.intel.com/en-us/fortran-compilers) | Intel Fortran Compiler, also known as ifort, is a group of Fortran compilers from Intel 
 **compiler** | `llvm` | `3.8.1`<br/>`4.0.0`<br/>`5.0.0` | [Website](http://llvm.org) | The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler, 
 **compiler** | `nagfor` | `npl6a61na` | [Website](https://www.nag.com/nag-compiler) | The NAG Fortran Compiler is a full standard implementation of the ISO Fortran 95 language with the addition of all of Fortran 2003, most of Fortran 2008 and OpenMP 3.0 and 3.1. 
 **compiler** | `pgi` | `17.4` | [Website](http://pgroup.com) | PGI compilers and tools, including Open MPI (Community Edition). 
+**compiler** | `smlnj` | `110.81` | [Website](http://smlnj.org/) | Standard ML of New Jersey (abbreviated SML/NJ) is a compiler for the Standard ML '97 programming language. 
 **data** | `h5utils` | `1.12.1` | [Website](http://ab-initio.mit.edu/wiki/index.php/H5utils) | h5utils is a set of utilities for visualization and conversion of scientific data in the free, portable HDF5 format. 
 **data** | `hdf5` | `1.10.0p1` | [Website](https://www.hdfgroup.org/hdf5) | HDF5 is a data model, library, and file format for storing and managing data. It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O and for high volume and complex data. 
 **data** | `hiredis` | `0.13.3` | [Website](https://github.com/redis/hiredis) | Hiredis is a minimalistic C client library for the Redis database. 
@@ -98,7 +99,6 @@ Field  | Module\ name | Version(s) | URL  | Description
 **data** | `pnetcdf` | `1.8.1` | [Website](http://cucis.ece.northwestern.edu/projects/PnetCDF/) | Parallel netCDF (PnetCDF) is a parallel I/O library for accessing NetCDF files in CDF-1, 2, and 5 formats. 
 **data** | `protobuf` | `3.4.0` | [Website](https://developers.google.com/protocol-buffers/) | Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data. 
 **data** | `redis` | `4.0.1` | [Website](https://redis.io) | Redis is an open source, in-memory data structure store, used as a database, cache and message broker. 
-**language** | `ant` | `1.10.1` | [Website](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. 
 **language** | `cuda` | `8.0.61`<br/>`9.0.176`<br/>`9.1.85` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
 **language** | `go` | `1.9` | [Website](http://golang.org) | Go is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
 **language** | `guile` | `2.2.2` | [Website](https://www.gnu.org/software/guile/) | GNU Guile is the preferred extension system for the GNU Project, which features an implementation of the Scheme programming language. 
@@ -106,12 +106,14 @@ Field  | Module\ name | Version(s) | URL  | Description
 **language** | `julia` | `0.5.1`<br/>`0.6` | [Website](https://julialang.org) | Julia is a high-level, high-performance dynamic programming language for numerical computing. 
 **language** | `lua` | `5.3.4` | [Website](https://www.lua.org) | Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description. 
 **language** | `luarocks` | `2.4.3` | [Website](https://luarocks.org/) | LuaRocks is the package manager for Lua modules. 
+**language** | `manticore` | `20180301` | [Website](http://manticore.cs.uchicago.edu/) | Manticore is a high-level parallel programming language aimed at general-purpose applications running on multi-core processors. 
 **language** | `nodejs` | `8.9.4`<br/>`9.5.0` | [Website](https://nodejs.org/) | Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It provides the npm package manager. 
-**language** | `perl` | `5.26.0` | [Website](https://www.perl.org) | Perl 5 is a highly capable, feature-rich programming language with over 29 years of development. <br/>[Usage on Sherlock](http://www.sherlock.stanford.edu/docs/software/using/perl)
+**language** | `perl` | `5.26.0` | [Website](https://www.perl.org) | Perl 5 is a highly capable, feature-rich programming language with over 29 years of development. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/perl)
 **language** | `py-ipython` | `6.1.0_py36`<br/>`5.4.1_py27` | [Website](https://ipython.org) | IPython is a command shell for interactive computing in multiple programming languages, originally developed for the Python programming language. 
 **language** | `py-jupyter` | `1.0.0_py36`<br/>`1.0.0_py27` | [Website](https://jupyter.org) | Jupyter is a browser-based interactive notebook for programming, mathematics, and data science. It supports a number of languages via plugins. 
 **language** | `python` | `3.6.1`<br/>`2.7.13` | [Website](https://www.python.org) | Python is an interpreted, interactive, object-oriented programming language. 
 **language** | `ruby` | `2.4.1` | [Website](https://www.ruby-lang.org) | A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. 
+**libs** | `ant` | `1.10.1` | [Website](https://ant.apache.org/) | Apache Ant is a Java library and command-line tool whose mission is to drive processes described in build files as targets and extension points dependent upon each other. 
 **libs** | `boost` | `1.64.0` | [Website](http://www.boost.org) | Boost is a set of libraries for the C++ programming language that provide support for tasks and structures such as linear algebra, pseudorandom number generation, multithreading, image processing, regular expressions, and unit testing. 
 **libs** | `cnmem` | `1.0.0` | [Website](https://github.com/NVIDIA/ncmem) | CNMeM is a simple library to help the Deep Learning frameworks manage CUDA memory. 
 **libs** | `cub` | `1.7.3` | [Website](https://nvlabs.github.io/cub/) | CUB is a flexible library of cooperative threadblock primitives and other utilities for CUDA kernel programming. 
@@ -131,6 +133,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **mpi** | `openmpi` | `2.0.2`<br/>`3.0.0`<br/>`2.1.1` | [Website](https://www.openmpi.org) | The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. 
 **networking** | `gasnet` | `1.30.0` | [Website](https://gasnet.lbl.gov) | GASNet is a language-independent, low-level networking layer that provides network-independent, high-performance communication primitives tailored for implementing parallel global address space SPMD languages and libraries. 
 **networking** | `ucx` | `1.2.1` | [Website](http://www.openucx.org) | UCX is a communication library implementing high-performance messaging for MPI/PGAS frameworks. 
+**parser** | `xerces-c` | `3.2.1` | [Website](https://xerces.apache.org/xerces-c/index.html) | Xerces-C++ is a validating XML parser written in a portable subset of C++. 
 
 ### Math
 Field  | Module\ name | Version(s) | URL  | Description
@@ -166,6 +169,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **numerical library** | `nagmb` | `MBL6I25DNL` | [Website](https://www.nag.com/nag-toolbox-matlab) | The NAG C Library is the largest and most comprehensive collection of mathematical and statistical algorithms for C and C++. 
 **numerical library** | `openblas` | `0.2.19` | [Website](http://www.openblas.net/) | OpenBLAS is an optimized BLAS library 
 **numerical library** | `parmetis` | `4.0.3` | [Website](http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview) | ParMETIS is an MPI-based parallel library that implements a variety of algorithms for partitioning unstructured graphs, meshes, and for computing fill-reducing orderings of sparse matrices. 
+**numerical library** | `py-pyublas` | `2017.1_py27` | [Website](https://mathema.tician.de/software/pyublas/) | PyUblas provides a seamless glue layer between Numpy and Boost.Ublas for use with Boost.Python. 
 **numerical library** | `qrupdate` | `1.1.2` | [Website](https://sourceforge.net/projects/qrupdate/) | qrupdate is a Fortran library for fast updates of QR and Cholesky decompositions. 
 **numerical library** | `scalapack` | `2.0.2` | [Website](http://www.netlib.org/scalapack/) | ScaLAPACK is a library of high-performance linear algebra routines for parallel distributed memory machines. 
 **numerical library** | `scotch` | `6.0.4` | [Website](http://www.labri.fr/perso/pelegrin/scotch) | Software package and libraries for sequential and parallel graph partitioning, static mapping and clustering, sequential mesh and hypergraph partitioning, and sequential and parallel sparse matrix block ordering. 
@@ -195,6 +199,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 ### System
 Field  | Module\ name | Version(s) | URL  | Description
 :----- | :----------- | ------: | :--- | :----------
+**becnhmark** | `hp2p` | `3.2` | [Website](https://github.com/cea-hpc/hp2p) | Heavy Peer To Peer: a MPI based benchmark for network diagnostic. 
 **compression** | `lz4` | `1.8.0` | [Website](https://www.lz4.org) | LZ4 is lossless compression algorithm. 
 **compression** | `szip` | `2.1.1` | [Website](https://support.hdfgroup.org/doc_resource/SZIP) | Szip compression software, providing lossless compression of scientific data, is an implementation of the extended-Rice lossless compression algorithm. 
 **compression** | `xz` | `5.2.3` | [Website](http://tukaani.org/xz/) | XZ Utils is free general-purpose data compression software with a high compression ratio. 
@@ -288,5 +293,6 @@ Field  | Module\ name | Version(s) | URL  | Description
 :----- | :----------- | ------: | :--- | :----------
 **molecular visualization** | `pymol`^<b class="lic"></b>^ | `1.8.6.2` | [Website](https://pymol.org) | PyMOL is a Python-enhanced molecular graphics tool. 
 **plotting** | `gnuplot` | `5.2.0` | [Website](http://www.gnuplot.info) | Gnuplot is a portable command-line driven graphing utility for Linux, OS/2, MS Windows, OSX, VMS, and many other platforms. 
-**plotting** | `py-matplotlib` | `2.0.2_py27`<br/>`2.1.2_py36` | [Website](http://matplotlib.org) | Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. 
+**plotting** | `py-matplotlib` | `2.1.0_py27`<br/>`2.1.2_py36`<br/>`2.0.2_py27` | [Website](http://matplotlib.org) | Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. 
+**plotting** | `py-plotly` | `2.4.1_py27` | [Website](https://plot.ly/python/) | Plotly's Python graphing library makes interactive, publication-quality graphs online. 
 **remote display** | `virtualgl` | `2.5.2` | [Website](http://www.virtualgl.org) | VirtualGL is an open source toolkit that gives any Unix or Linux remote display software the ability to run OpenGL applications with full 3D hardware acceleration. 
