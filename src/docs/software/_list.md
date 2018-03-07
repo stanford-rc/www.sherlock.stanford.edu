@@ -3,7 +3,7 @@
 
 !!! summary
 
-    As of Monday, March 05 2018, we provide 297 software packages, in 7 categories, covering 44 fields of science.
+    As of Tuesday, March 06 2018, we provide 299 software packages, in 7 categories, covering 44 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -109,6 +109,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **language** | `manticore` | `20180301` | [Website](http://manticore.cs.uchicago.edu/) | Manticore is a high-level parallel programming language aimed at general-purpose applications running on multi-core processors. 
 **language** | `nodejs` | `8.9.4`<br/>`9.5.0` | [Website](https://nodejs.org/) | Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It provides the npm package manager. 
 **language** | `perl` | `5.26.0` | [Website](https://www.perl.org) | Perl 5 is a highly capable, feature-rich programming language with over 29 years of development. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/perl)
+**language** | `py-cython` | `0.27.3_py36`<br/>`0.27.3_py27` | [Website](http://cython.org/) | Cython is an optimising static compiler for both the Python programming language and the extended Cython programming language (based on Pyrex). 
 **language** | `py-ipython` | `6.1.0_py36`<br/>`5.4.1_py27` | [Website](https://ipython.org) | IPython is a command shell for interactive computing in multiple programming languages, originally developed for the Python programming language. 
 **language** | `py-jupyter` | `1.0.0_py36`<br/>`1.0.0_py27` | [Website](https://jupyter.org) | Jupyter is a browser-based interactive notebook for programming, mathematics, and data science. It supports a number of languages via plugins. 
 **language** | `python` | `3.6.1`<br/>`2.7.13` | [Website](https://www.python.org) | Python is an interpreted, interactive, object-oriented programming language. 
@@ -122,7 +123,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `libctl` | `3.2.2` | [Website](https://github.com/stevengj/libctl) | libctl is a library for supporting flexible control files in scientific simulations. 
 **libs** | `nccl` | `1.3.4`<br/>`2.0.4` | [Website](https://github.com/NVIDIA/nccl) | NCCL (pronounced 'Nickel') is a stand-alone library of standard collective communication routines, such as all-gather, reduce, broadcast, etc., that have been optimized to achieve high bandwidth over PCIe. 
 **libs** | `opencv` | `3.3.0` | [Website](https://opencv.org) | OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library. 
-**libs** | `py-h5py` | `2.7.1_py27` | [Website](http://http://www.h5py.org) | The h5py package is a Pythonic interface to the HDF5 binary data format. 
+**libs** | `py-h5py` | `2.7.1_py27` | [Website](http://www.h5py.org) | The h5py package is a Pythonic interface to the HDF5 binary data format. 
 **libs** | `py-numba` | `0.35.0_py27`<br/>`0.35.0_py36` | [Website](http://numba.pydata.org) | Numba is a compiler for Python array and numerical functions that gives you the power to speed up your applications with high performance functions written directly in Python.. 
 **libs** | `py-pycuda` | `2017.1.1_py27` | [Website](https://mathema.tician.de/software/pycuda/) | PyCUDA lets you access Nvidia‘s CUDA parallel computation API from Python. 
 **libs** | `py-scikit-image` | `0.13.0_py27` | [Website](http://scikit-image.org/) | scikit-image is a collection of algorithms for image processing. 
