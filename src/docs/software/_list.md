@@ -3,7 +3,7 @@
 
 !!! summary
 
-    As of Tuesday, March 06 2018, we provide 299 software packages, in 7 categories, covering 44 fields of science.
+    As of Thursday, March 08 2018, we provide 300 software packages, in 7 categories, covering 45 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -11,7 +11,7 @@
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, gis, photonics</small>
 * [`system`](#system) <small>becnhmark, compression, containers, database, file management, file transfer, language, libs, resource monitoring, scm, tools</small>
-* [`viz`](#viz) <small>molecular visualization, plotting, remote display</small>
+* [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 
 
 !!! warning "Licensed software"
@@ -292,6 +292,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 ### Viz
 Field  | Module\ name | Version(s) | URL  | Description
 :----- | :----------- | ------: | :--- | :----------
+**graphs** | `graphviz` | `2.40.1` | [Website](https://www.graphviz.org/) | Graphviz is open source graph visualization software. 
 **molecular visualization** | `pymol`^<b class="lic"></b>^ | `1.8.6.2` | [Website](https://pymol.org) | PyMOL is a Python-enhanced molecular graphics tool. 
 **plotting** | `gnuplot` | `5.2.0` | [Website](http://www.gnuplot.info) | Gnuplot is a portable command-line driven graphing utility for Linux, OS/2, MS Windows, OSX, VMS, and many other platforms. 
 **plotting** | `py-matplotlib` | `2.1.0_py27`<br/>`2.1.2_py36`<br/>`2.0.2_py27` | [Website](http://matplotlib.org) | Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. 
