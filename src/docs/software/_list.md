@@ -3,7 +3,7 @@
 
 !!! summary
 
-    As of Thursday, March 08 2018, we provide 300 software packages, in 7 categories, covering 45 fields of science.
+    As of Thursday, March 08 2018, we provide 302 software packages, in 7 categories, covering 45 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -72,7 +72,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **computational chemistry** | `py-ase` | `3.14.1_py27` | [Website](https://wiki.fysik.dtu.dk/ase/) | The Atomic Simulation Environment (ASE) is a set of tools and Python modules for setting up, manipulating, running, visualizing and analyzing atomistic simulations. 
 **computational chemistry** | `schrodinger`^<b class="lic"></b>^ | `2017-3` | [Website](https://www.schrodinger.com) | Schrödinger Suites (Small-molecule Drug Discovery Suite, Material Science Suite, Biologics Suite) provide a set of molecular modelling software. 
 **computational chemistry** | `vasp`^<b class="lic"></b>^ | `5.4.1` | [Website](https://www.vasp.at) | The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic scale materials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics, from first principles. 
-**molecular dynamics** | `gromacs` | `2016.3` | [Website](http://www.gromacs.org) | GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles. 
+**molecular dynamics** | `gromacs` | `2016.3`<br/>`2018` | [Website](http://www.gromacs.org) | GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles. 
 **molecular dynamics** | `openmm` | `7.1.1` | [Website](http://openmm.org) | A high performance toolkit for molecular simulation. 
 **molecular dynamics** | `plumed` | `2.3.2` | [Website](http://www.plumed.org/) | PLUMED is an open source library for free energy calculations in molecular systems. 
 **molecular dynamics** | `py-raspa2` | `2.0.3_py27` | [Website](https://github.com/numat/RASPA2) | RASPA2 is a general purpose classical simulation package that can be used for the simulation of molecules in gases, fluids, zeolites, aluminosilicates, metal-organic frameworks, carbon nanotubes and external fields. 
@@ -181,6 +181,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **scientific computing** | `py-scipystack` | `1.0_py36`<br/>`1.0_py27` | [Website](https://www.scipy.org) | The SciPy Stack is a collection of open source software for scientific computing in Python. It provides the following packages: numpy, scipy, matplotlib, ipython, jupyter, pandas, sympy and nose. 
 **statistics** | `R` | `3.4.0` | [Website](http://r-project.org) | R is a free software environment for statistical computing and graphics. 
 **statistics** | `jags` | `4.3.0` | [Website](http://mcmc-jags.sourceforge.net/) | Just another Gibbs sampler (JAGS) is a program for simulation from Bayesian hierarchical models using Markov chain Monte Carlo (MCMC). 
+**statistics** | `r-rstan` | `2.17.3` | [Website](http://mc-stan.org/users/interfaces/rstan) | RStan is the R interface to Stan, an open-source software for facilitating statistical inference at the frontiers of applied statistics. 
 **statistics** | `rstudio` | `1.1.423` | [Website](http://www.rstudio.com) | RStudio is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management. 
 **statistics** | `sas`^<b class="lic"></b>^ | `9.4` | [Website](http://www.sas.com/) | SAS is a software suite developed by SAS Institute for advanced analytics, multivariate analyses, business intelligence, data management, and predictive analytics. 
 **statistics** | `stata`^<b class="lic"></b>^ | `14`<br/>`15` | [Website](https://www.stata.com) | Stata is a complete, integrated statistical software package that provides everything you need for data analysis, data management, and graphics. 
