@@ -3,13 +3,13 @@
 
 **As of Thursday, March 15 2018, we provide 307 software packages, in 7 categories, covering 45 fields of science:**
 
-* [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
-* [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
-* [`devel`](#devel) <small>build, compiler, data, language, libs, mpi, networking, parser</small>
-* [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
-* [`physics`](#physics) <small>astronomy, geophysics, gis, photonics</small>
-* [`system`](#system) <small>becnhmark, compression, containers, database, file management, file transfer, language, libs, resource monitoring, scm, tools</small>
-* [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
+* [**`biology`**](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
+* [**`chemistry`**](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
+* [**`devel`**](#devel) <small>build, compiler, data, language, libs, mpi, networking, parser</small>
+* [**`math`**](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
+* [**`physics`**](#physics) <small>astronomy, geophysics, gis, photonics</small>
+* [**`system`**](#system) <small>becnhmark, compression, containers, database, file management, file transfer, language, libs, resource monitoring, scm, tools</small>
+* [**`viz`**](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 
 
 !!! warning "Licensed software"
