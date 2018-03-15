@@ -1,9 +1,7 @@
 
 ## Categories
 
-!!! summary
-
-    As of Tuesday, March 13 2018, we provide 305 software packages, in 7 categories, covering 45 fields of science.
+**As of Thursday, March 15 2018, we provide 307 software packages, in 7 categories, covering 45 fields of science:**
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -121,6 +119,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `cutlass` | `0.1.0` | [Website](https://github.com/NVIDIA/cutlass) | CUTLASS is a collection of CUDA C++ template abstractions for implementing high-performance matrix-multiplication (GEMM) at all levels and scales within CUDA. 
 **libs** | `eigen` | `3.3.3` | [Website](http://eigen.tuxfamily.org) | Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms. 
 **libs** | `libctl` | `3.2.2` | [Website](https://github.com/stevengj/libctl) | libctl is a library for supporting flexible control files in scientific simulations. 
+**libs** | `libgpuarray` | `0.7.5` | [Website](http://deeplearning.net/software/libgpuarray) | Library to manipulate tensors on the GPU. 
 **libs** | `nccl` | `1.3.4`<br/>`2.0.4` | [Website](https://github.com/NVIDIA/nccl) | NCCL (pronounced 'Nickel') is a stand-alone library of standard collective communication routines, such as all-gather, reduce, broadcast, etc., that have been optimized to achieve high bandwidth over PCIe. 
 **libs** | `opencv` | `3.3.0` | [Website](https://opencv.org) | OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library. 
 **libs** | `py-h5py` | `2.7.1_py27` | [Website](http://www.h5py.org) | The h5py package is a Pythonic interface to the HDF5 binary data format. 
@@ -147,6 +146,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **deep learning** | `py-pytorch` | `0.2.0_py27`<br/>`0.2.0_py36`<br/>`0.3.0_py36`<br/>`0.3.0_py27` | [Website](http://pytorch.org) | PyTorch is a deep learning framework that puts Python first. 
 **deep learning** | `py-tensorflow` | `1.2.1`<br/>`1.3.0_py36`<br/>`1.4.0_py27`<br/>`1.5.0_py27`<br/>`1.5.0_py36`<br/>`1.6.0_py27`<br/>`1.6.0_py36`<br/>`1.3.0_py27` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
 **deep learning** | `py-tensorlayer` | `1.6.3_py27` | [Website](http://tensorlayer.org) | TensorLayer is a Deep Learning (DL) and Reinforcement Learning (RL) library extended from Google TensorFlow. 
+**deep learning** | `py-theano` | `1.0.1_py27` | [Website](http://deeplearning.net/software/theano) | Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. 
 **deep learning** | `tensorrt` | `3.0.1` | [Website](https://developer.nvidia.com/tensorrt) | NVIDIA TensorRT™ is a high-performance deep learning inference optimizer and runtime that delivers low latency, high-throughput inference for deep learning applications. 
 **deep learning** | `torch` | `20180202` | [Website](http//torch.ch) | Torch is a scientific computing framework with wide support for machine learning algorithms that puts GPUs first. 
 **linear algebra** | `armadillo` | `8.200.1` | [Website](http://arma.sourceforge.net/) | Armadillo is a high quality linear algebra library (matrix maths) for the C++ language, aiming towards a good balance between speed and ease of use. 
