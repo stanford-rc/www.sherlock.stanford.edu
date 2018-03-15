@@ -1,15 +1,15 @@
 
 ## Categories
 
-**As of Thursday, March 15 2018, we provide 307 software packages, in 7 categories, covering 45 fields of science:**
+*As of Thursday, March 15 2018, we provide 312 software packages, in 7 categories, covering 45 fields of science:*
 
-* [**`biology`**](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
-* [**`chemistry`**](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
-* [**`devel`**](#devel) <small>build, compiler, data, language, libs, mpi, networking, parser</small>
-* [**`math`**](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
-* [**`physics`**](#physics) <small>astronomy, geophysics, gis, photonics</small>
-* [**`system`**](#system) <small>becnhmark, compression, containers, database, file management, file transfer, language, libs, resource monitoring, scm, tools</small>
-* [**`viz`**](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
+* [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
+* [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
+* [`devel`](#devel) <small>build, compiler, data, language, libs, mpi, networking, parser</small>
+* [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
+* [`physics`](#physics) <small>astronomy, geophysics, gis, photonics</small>
+* [`system`](#system) <small>becnhmark, compression, containers, database, file management, file transfer, language, libs, resource monitoring, scm, tools</small>
+* [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 
 
 !!! warning "Licensed software"
@@ -43,13 +43,18 @@ Field  | Module\ name | Version(s) | URL  | Description
 **cryo-em** | `relion` | `2.0.3` | [Website](http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page) | RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a stand-alone computer program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class averages in electron cryo-microscopy (cryo-EM). 
 **genomics** | `angsd` | `0.919` | [Website](http://www.popgen.dk/angsd/index.php/ANGSD) | ANGSD is a software for analyzing next generation sequencing data. 
 **genomics** | `bcftools` | `1.6` | [Website](https://github.com/samtools/bcftools) | BCFtools is a program for variant calling and manipulating files in the Variant Call Format (VCF) and its binary counterpart BCF. 
+**genomics** | `bedtools` | `2.27.1` | [Website](https://bedtools.readthedocs.io) | The bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. 
+**genomics** | `bowtie` | `1.2.2` | [Website](http://bowtie-bio.sourceforge.net/) | Bowtie is an ultrafast, memory-efficient short read aligner. 
+**genomics** | `bowtie2` | `2.3.4.1` | [Website](http://bowtie-bio.sourceforge.net/bowtie2) | Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences. 
 **genomics** | `bwa` | `0.7.17` | [Website](http://bio-bwa.sourceforge.net/) | BWA (Burrows-Wheeler Aligner) is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. 
 **genomics** | `fastx_toolkit` | `0.0.14` | [Website](http://hannonlab.cshl.edu/fastx_toolkit/) | The FASTX-Toolkit is a collection of command line tools for Short-Reads FASTA/FASTQ files preprocessing. 
+**genomics** | `hisat2` | `2.1.0` | [Website](http://ccb.jhu.edu/software/hisat2) | HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes (as well as to a single reference genome). 
 **genomics** | `htslib` | `1.6` | [Website](https://github.com/samtools/htslib) | C library for high-throughput sequencing data formats. 
 **genomics** | `ncbi-blast+` | `2.6.0` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
 **genomics** | `plink` | `1.07`<br/>`1.90b5`<br/>`2.0a1` | [Website](http://zzz.bwh.harvard.edu/plink/) | PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. 
 **genomics** | `py-macs2` | `2.1.1_py27` | [Website](https://github.com/taoliu/MACS) | MACS (Model-based Analysis of ChIP-Seq) implements a novel ChIP-Seq analysis method. 
 **genomics** | `samtools` | `1.6` | [Website](https://github.com/samtools/samtools) | Tools (written in C using htslib) for manipulating next-generation sequencing data. 
+**genomics** | `tophat` | `2.1.1` | [Website](http://ccb.jhu.edu/software/tophat/index.shtml) | TopHat is a fast splice junction mapper for RNA-Seq reads. 
 **neurology** | `afni` | `17.2.07`<br/>`18.0.09` | [Website](https://afni.nimh.nih.gov) | AFNI (Analysis of Functional NeuroImages) is a set of C programs for processing, analyzing, and displaying functional MRI (FMRI) data - a technique for mapping human brain activity. 
 **neurology** | `ants` | `2.1.0` | [Website](https://stnava.github.io/ANTs) | ANTs computes high-dimensional mappings to capture the statistics of brain structure and function. 
 **neurology** | `dcm2niix` | `1.0.20171215` | [Website](https://github.com/rordenlab/dcm2niix) | dcm2niix is a program esigned to convert neuroimaging data from the DICOM format to the NIfTI format. 
