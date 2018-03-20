@@ -1,7 +1,9 @@
 
 ## Categories
 
-*As of Thursday, March 15 2018, we provide 314 software packages, in 7 categories, covering 45 fields of science:*
+!!! summary
+
+    As of Tuesday, March 20 2018, we provide 321 software packages, in 7 categories, covering 45 fields of science.
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -38,8 +40,9 @@
 Field  | Module\ name | Version(s) | URL  | Description
 :----- | :----------- | ------: | :--- | :----------
 **computational biology** | `imp` | `2.8.0` | [Website](https://integrativemodeling.org/) | IMP's broad goal is to contribute to a comprehensive structural characterization of biomolecules ranging in size and complexity from small peptides to large macromolecular assemblies, by integrating data from diverse biochemical and biophysical experiments. 
-**computational biology** | `py-biopython` | `1.70` | [Website](http://biopython.org) | Biopython is a set of freely available tools for biological computation written in Python. 
+**computational biology** | `py-biopython` | `1.70_py27` | [Website](http://biopython.org) | Biopython is a set of freely available tools for biological computation written in Python. 
 **computational biology** | `rosetta` | `3.8` | [Website](https://www.rosettacommons.org) | Rosetta is the premier software suite for modeling macromolecular structures. As a flexible, multi-purpose application, it includes tools for structure prediction, design, and remodeling of proteins and nucleic acids. 
+**cryo-em** | `eman2` | `2.2` | [Website](http://blake.bcm.edu/emanwiki/EMAN2) | EMAN2 is a broadly based greyscale scientific image processing suite with a primary focus on processing data from transmission electron microscopes. 
 **cryo-em** | `relion` | `2.0.3` | [Website](http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page) | RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a stand-alone computer program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class averages in electron cryo-microscopy (cryo-EM). 
 **genomics** | `angsd` | `0.919` | [Website](http://www.popgen.dk/angsd/index.php/ANGSD) | ANGSD is a software for analyzing next generation sequencing data. 
 **genomics** | `bcftools` | `1.6` | [Website](https://github.com/samtools/bcftools) | BCFtools is a program for variant calling and manipulating files in the Variant Call Format (VCF) and its binary counterpart BCF. 
@@ -53,6 +56,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **genomics** | `htslib` | `1.6` | [Website](https://github.com/samtools/htslib) | C library for high-throughput sequencing data formats. 
 **genomics** | `ncbi-blast+` | `2.6.0` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
 **genomics** | `plink` | `1.07`<br/>`1.90b5`<br/>`2.0a1` | [Website](http://zzz.bwh.harvard.edu/plink/) | PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. 
+**genomics** | `py-bx-python` | `0.8.1_py27` | [Website](https://github.com/bxlab/bx-python) | Tools for manipulating biological data, particularly multiple sequence alignments. 
 **genomics** | `py-macs2` | `2.1.1_py27` | [Website](https://github.com/taoliu/MACS) | MACS (Model-based Analysis of ChIP-Seq) implements a novel ChIP-Seq analysis method. 
 **genomics** | `samtools` | `1.6` | [Website](https://github.com/samtools/samtools) | Tools (written in C using htslib) for manipulating next-generation sequencing data. 
 **genomics** | `star` | `2.5.4b` | [Website](https://github.com/alexdobin/STAR) | STAR: ultrafast universal RNA-seq aligner. 
@@ -127,7 +131,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `eigen` | `3.3.3` | [Website](http://eigen.tuxfamily.org) | Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms. 
 **libs** | `libctl` | `3.2.2` | [Website](https://github.com/stevengj/libctl) | libctl is a library for supporting flexible control files in scientific simulations. 
 **libs** | `libgpuarray` | `0.7.5` | [Website](http://deeplearning.net/software/libgpuarray) | Library to manipulate tensors on the GPU. 
-**libs** | `nccl` | `1.3.4`<br/>`2.0.4` | [Website](https://github.com/NVIDIA/nccl) | NCCL (pronounced 'Nickel') is a stand-alone library of standard collective communication routines, such as all-gather, reduce, broadcast, etc., that have been optimized to achieve high bandwidth over PCIe. 
+**libs** | `nccl` | `1.3.4`<br/>`2.0.4`<br/>`2.1.15` | [Website](https://github.com/NVIDIA/nccl) | NCCL (pronounced 'Nickel') is a stand-alone library of standard collective communication routines, such as all-gather, reduce, broadcast, etc., that have been optimized to achieve high bandwidth over PCIe. 
 **libs** | `opencv` | `3.3.0` | [Website](https://opencv.org) | OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library. 
 **libs** | `py-h5py` | `2.7.1_py27` | [Website](http://www.h5py.org) | The h5py package is a Pythonic interface to the HDF5 binary data format. 
 **libs** | `py-numba` | `0.35.0_py27`<br/>`0.35.0_py36` | [Website](http://numba.pydata.org) | Numba is a compiler for Python array and numerical functions that gives you the power to speed up your applications with high performance functions written directly in Python.. 
@@ -149,7 +153,8 @@ Field  | Module\ name | Version(s) | URL  | Description
 **computational geometry** | `qhull` | `2015.2` | [Website](http://www.qhull.org/) | Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram, halfspace intersection about a point, furthest-site Delaunay triangulation, and furthest-site Voronoi diagram. 
 **deep learning** | `caffe2` | `0.8.1` | [Website](https://caffe2.ai) | Caffe2 is a deep learning framework that provides an easy and straightforward way to experiment with deep learning and leverage community contributions of new models and algorithms. 
 **deep learning** | `cudnn` | `5.1`<br/>`6.0`<br/>`7.0.1`<br/>`7.0.4`<br/>`7.0.5`<br/>`7.1.1` | [Website](https://developer.nvidia.com/cudnn) | NVIDIA cuDNN is a GPU-accelerated library of primitives for deep neural networks. 
-**deep learning** | `py-keras` | `2.0.8_py27`<br/>`2.1.5_py36` | [Website](http://keras.io) | Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. 
+**deep learning** | `py-horovod` | `0.12.1_py27`<br/>`0.12.1_py36` | [Website](https://github.com/uber/horovod) | Horovod is a distributed training framework for TensorFlow. The goal of Horovod is to make distributed Deep Learning fast and easy to use. 
+**deep learning** | `py-keras` | `2.0.8_py27`<br/>`2.1.5_py27`<br/>`2.1.5_py36` | [Website](http://keras.io) | Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. 
 **deep learning** | `py-pytorch` | `0.2.0_py27`<br/>`0.2.0_py36`<br/>`0.3.0_py36`<br/>`0.3.0_py27` | [Website](http://pytorch.org) | PyTorch is a deep learning framework that puts Python first. 
 **deep learning** | `py-tensorflow` | `1.2.1`<br/>`1.3.0_py36`<br/>`1.4.0_py27`<br/>`1.5.0_py27`<br/>`1.5.0_py36`<br/>`1.6.0_py27`<br/>`1.6.0_py36`<br/>`1.3.0_py27` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
 **deep learning** | `py-tensorlayer` | `1.6.3_py27` | [Website](http://tensorlayer.org) | TensorLayer is a Deep Learning (DL) and Reinforcement Learning (RL) library extended from Google TensorFlow. 
@@ -210,6 +215,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 :----- | :----------- | ------: | :--- | :----------
 **becnhmark** | `hp2p` | `3.2` | [Website](https://github.com/cea-hpc/hp2p) | Heavy Peer To Peer: a MPI based benchmark for network diagnostic. 
 **compression** | `lz4` | `1.8.0` | [Website](https://www.lz4.org) | LZ4 is lossless compression algorithm. 
+**compression** | `lzo` | `2.10` | [Website](http://www.oberhumer.com/opensource/lzo) | LZO is a portable lossless data compression library written in ANSI C. 
 **compression** | `szip` | `2.1.1` | [Website](https://support.hdfgroup.org/doc_resource/SZIP) | Szip compression software, providing lossless compression of scientific data, is an implementation of the extended-Rice lossless compression algorithm. 
 **compression** | `xz` | `5.2.3` | [Website](http://tukaani.org/xz/) | XZ Utils is free general-purpose data compression software with a high compression ratio. 
 **compression** | `zlib` | `1.2.11` | [Website](http://zlib.net) | zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. 
