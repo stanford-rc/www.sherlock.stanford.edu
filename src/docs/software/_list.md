@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, March 20 2018, we provide 321 software packages, in 7 categories, covering 45 fields of science:*
+*As of Friday, March 30 2018, we provide 325 software packages, in 7 categories, covering 45 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -41,7 +41,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **computational biology** | `py-biopython` | `1.70_py27` | [Website](http://biopython.org) | Biopython is a set of freely available tools for biological computation written in Python. 
 **computational biology** | `rosetta` | `3.8` | [Website](https://www.rosettacommons.org) | Rosetta is the premier software suite for modeling macromolecular structures. As a flexible, multi-purpose application, it includes tools for structure prediction, design, and remodeling of proteins and nucleic acids. 
 **cryo-em** | `eman2` | `2.2` | [Website](http://blake.bcm.edu/emanwiki/EMAN2) | EMAN2 is a broadly based greyscale scientific image processing suite with a primary focus on processing data from transmission electron microscopes. 
-**cryo-em** | `relion` | `2.0.3` | [Website](http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page) | RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a stand-alone computer program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class averages in electron cryo-microscopy (cryo-EM). 
+**cryo-em** | `relion` | `2.0.3`<br/>`2.1` | [Website](http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page) | RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a stand-alone computer program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class averages in electron cryo-microscopy (cryo-EM). 
 **genomics** | `angsd` | `0.919` | [Website](http://www.popgen.dk/angsd/index.php/ANGSD) | ANGSD is a software for analyzing next generation sequencing data. 
 **genomics** | `bcftools` | `1.6` | [Website](https://github.com/samtools/bcftools) | BCFtools is a program for variant calling and manipulating files in the Variant Call Format (VCF) and its binary counterpart BCF. 
 **genomics** | `bedtools` | `2.27.1` | [Website](https://bedtools.readthedocs.io) | The bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. 
@@ -132,7 +132,8 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `nccl` | `1.3.4`<br/>`2.0.4`<br/>`2.1.15` | [Website](https://github.com/NVIDIA/nccl) | NCCL (pronounced 'Nickel') is a stand-alone library of standard collective communication routines, such as all-gather, reduce, broadcast, etc., that have been optimized to achieve high bandwidth over PCIe. 
 **libs** | `opencv` | `3.3.0` | [Website](https://opencv.org) | OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library. 
 **libs** | `py-h5py` | `2.7.1_py27` | [Website](http://www.h5py.org) | The h5py package is a Pythonic interface to the HDF5 binary data format. 
-**libs** | `py-numba` | `0.35.0_py27`<br/>`0.35.0_py36` | [Website](http://numba.pydata.org) | Numba is a compiler for Python array and numerical functions that gives you the power to speed up your applications with high performance functions written directly in Python.. 
+**libs** | `py-netcdf4` | `1.3.1_py36`<br/>`1.3.1_py27` | [Website](https://unidata.github.io/netcdf4-python/) | netcdf4-python is a Python interface to the netCDF C library. 
+**libs** | `py-numba` | `0.35.0_py36`<br/>`0.35.0_py27` | [Website](http://numba.pydata.org) | Numba is a compiler for Python array and numerical functions that gives you the power to speed up your applications with high performance functions written directly in Python.. 
 **libs** | `py-pycuda` | `2017.1.1_py27` | [Website](https://mathema.tician.de/software/pycuda/) | PyCUDA lets you access Nvidia‘s CUDA parallel computation API from Python. 
 **libs** | `py-scikit-image` | `0.13.0_py27` | [Website](http://scikit-image.org/) | scikit-image is a collection of algorithms for image processing. 
 **libs** | `swig` | `3.0.12` | [Website](http://www.swig.org) | SWIG is an interface compiler that connects programs written in C and C++ with scripting languages such as Perl, Python, Ruby, and Tcl. 
@@ -151,13 +152,14 @@ Field  | Module\ name | Version(s) | URL  | Description
 **computational geometry** | `qhull` | `2015.2` | [Website](http://www.qhull.org/) | Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram, halfspace intersection about a point, furthest-site Delaunay triangulation, and furthest-site Voronoi diagram. 
 **deep learning** | `caffe2` | `0.8.1` | [Website](https://caffe2.ai) | Caffe2 is a deep learning framework that provides an easy and straightforward way to experiment with deep learning and leverage community contributions of new models and algorithms. 
 **deep learning** | `cudnn` | `5.1`<br/>`6.0`<br/>`7.0.1`<br/>`7.0.4`<br/>`7.0.5`<br/>`7.1.1` | [Website](https://developer.nvidia.com/cudnn) | NVIDIA cuDNN is a GPU-accelerated library of primitives for deep neural networks. 
-**deep learning** | `py-horovod` | `0.12.1_py27`<br/>`0.12.1_py36` | [Website](https://github.com/uber/horovod) | Horovod is a distributed training framework for TensorFlow. The goal of Horovod is to make distributed Deep Learning fast and easy to use. 
-**deep learning** | `py-keras` | `2.0.8_py27`<br/>`2.1.5_py27`<br/>`2.1.5_py36` | [Website](http://keras.io) | Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. 
+**deep learning** | `py-horovod` | `0.12.1_py36`<br/>`0.12.1_py27` | [Website](https://github.com/uber/horovod) | Horovod is a distributed training framework for TensorFlow. The goal of Horovod is to make distributed Deep Learning fast and easy to use. 
+**deep learning** | `py-keras` | `2.0.8_py27`<br/>`2.1.5_py36`<br/>`2.1.5_py27` | [Website](http://keras.io) | Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. 
+**deep learning** | `py-onnx` | `1.0.1_py27` | [Website](https://onnx.ai) | ONNX is a open format to represent deep learning models. 
 **deep learning** | `py-pytorch` | `0.2.0_py27`<br/>`0.2.0_py36`<br/>`0.3.0_py36`<br/>`0.3.0_py27` | [Website](http://pytorch.org) | PyTorch is a deep learning framework that puts Python first. 
-**deep learning** | `py-tensorflow` | `1.2.1`<br/>`1.3.0_py36`<br/>`1.4.0_py27`<br/>`1.5.0_py27`<br/>`1.5.0_py36`<br/>`1.6.0_py27`<br/>`1.6.0_py36`<br/>`1.3.0_py27` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
+**deep learning** | `py-tensorflow` | `1.2.1`<br/>`1.3.0_py27`<br/>`1.3.0_py36`<br/>`1.4.0_py27`<br/>`1.5.0_py27`<br/>`1.5.0_py36`<br/>`1.6.0_py36`<br/>`1.7.0_py27`<br/>`1.6.0_py27` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
 **deep learning** | `py-tensorlayer` | `1.6.3_py27` | [Website](http://tensorlayer.org) | TensorLayer is a Deep Learning (DL) and Reinforcement Learning (RL) library extended from Google TensorFlow. 
 **deep learning** | `py-theano` | `1.0.1_py27` | [Website](http://deeplearning.net/software/theano) | Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. 
-**deep learning** | `tensorrt` | `3.0.1` | [Website](https://developer.nvidia.com/tensorrt) | NVIDIA TensorRT™ is a high-performance deep learning inference optimizer and runtime that delivers low latency, high-throughput inference for deep learning applications. 
+**deep learning** | `tensorrt` | `3.0.1`<br/>`3.0.4` | [Website](https://developer.nvidia.com/tensorrt) | NVIDIA TensorRT™ is a high-performance deep learning inference optimizer and runtime that delivers low latency, high-throughput inference for deep learning applications. 
 **deep learning** | `torch` | `20180202` | [Website](http//torch.ch) | Torch is a scientific computing framework with wide support for machine learning algorithms that puts GPUs first. 
 **linear algebra** | `armadillo` | `8.200.1` | [Website](http://arma.sourceforge.net/) | Armadillo is a high quality linear algebra library (matrix maths) for the C++ language, aiming towards a good balance between speed and ease of use. 
 **machine learning** | `py-scikit-learn` | `0.19.1_py27` | [Website](http://scikit-learn.org) | Scikit-learn is a free software machine learning library for the Python programming language. 
@@ -217,7 +219,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **compression** | `szip` | `2.1.1` | [Website](https://support.hdfgroup.org/doc_resource/SZIP) | Szip compression software, providing lossless compression of scientific data, is an implementation of the extended-Rice lossless compression algorithm. 
 **compression** | `xz` | `5.2.3` | [Website](http://tukaani.org/xz/) | XZ Utils is free general-purpose data compression software with a high compression ratio. 
 **compression** | `zlib` | `1.2.11` | [Website](http://zlib.net) | zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. 
-**containers** | `singularity` | `2.3`<br/>`2.3.1`<br/>`2.4` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
+**containers** | `singularity` | `2.4.5` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
 **database** | `bdb` | `6.2.32` | [Website](http://www.oracle.com/us/products/database/berkeley-db) | Berkeley DB (BDB) is a software library intended to provide a high-performance embedded database for key/value data. 
 **database** | `mariadb` | `10.2.11` | [Website](https://www.mariadb.org) | MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. 
 **database** | `sqlite` | `3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
@@ -281,7 +283,7 @@ Field  | Module\ name | Version(s) | URL  | Description
 **libs** | `pcre` | `8.40` | [Website](http://www.pcre.org/) | The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5. 
 **libs** | `popt` | `1.16` | [Website](http://rpm5.org/files/popt) | Library for parsing command line options. 
 **libs** | `py-lmdb` | `0.93` | [Website](https://lmdb.readthedocs.io/en/release/) | Universal Python binding for the LMDB 'Lightning' Database. 
-**libs** | `py-mako` | `1.0.7_py27`<br/>`1.0.7_py36` | [Website](http://www.makotemplates.org/) | Mako is a template library written in Python. It provides a familiar, non-XML syntax which compiles into Python modules for maximum performance. 
+**libs** | `py-mako` | `1.0.7_py36`<br/>`1.0.7_py27` | [Website](http://www.makotemplates.org/) | Mako is a template library written in Python. It provides a familiar, non-XML syntax which compiles into Python modules for maximum performance. 
 **libs** | `py-pyqt5` | `5.9.1_py36` | [Website](https://www.riverbankcomputing.com/software/pyqt/) | PyQt5 is a comprehensive set of Python bindings for Qt v5. 
 **libs** | `readline` | `7.0` | [Website](https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html) | The GNU Readline library provides a set of functions for use by applications that allow users to edit command lines as they are typed in. 
 **libs** | `snappy` | `1.1.7` | [Website](https://github.com/google/snappy) | A fast compressor/decompressor. 
