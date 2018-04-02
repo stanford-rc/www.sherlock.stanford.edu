@@ -35,8 +35,8 @@
 
 
 ### Biology
-Field  | <span style="min-width:120px">Module name | <span style="min-width:90px">Version(s) | URL  | Description
-:----- | :----------- | ------: | :--- | :----------
+Field  | <img style="float:left;min-width:120px;visibility:hidden">Module name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
+:----- | :----------- | :------ | :--- | :----------
 **computational biology** | `imp` | - `2.8.0` | [Website](https://integrativemodeling.org/) | IMP's broad goal is to contribute to a comprehensive structural characterization of biomolecules ranging in size and complexity from small peptides to large macromolecular assemblies, by integrating data from diverse biochemical and biophysical experiments. 
 **computational biology** | `py-biopython` | - `1.70_py27` | [Website](http://biopython.org) | Biopython is a set of freely available tools for biological computation written in Python. 
 **computational biology** | `rosetta` | - `3.8` | [Website](https://www.rosettacommons.org) | Rosetta is the premier software suite for modeling macromolecular structures. As a flexible, multi-purpose application, it includes tools for structure prediction, design, and remodeling of proteins and nucleic acids. 
@@ -71,8 +71,8 @@ Field  | <span style="min-width:120px">Module name | <span style="min-width:90px
 **phylogenetics** | `py-ete` | - `3.0.0_py27_qt5`<br/>- `3.0.0_py27` | [Website](http://etetoolkit.org/) | A Python framework for the analysis and visualization of trees. 
 
 ### Chemistry
-Field  | <span style="min-width:120px">Module name | <span style="min-width:90px">Version(s) | URL  | Description
-:----- | :----------- | ------: | :--- | :----------
+Field  | <img style="float:left;min-width:120px;visibility:hidden">Module name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
+:----- | :----------- | :------ | :--- | :----------
 **computational chemistry** | `gaussian`^<b class="lic"></b>^ | - `g16` | [Website](https://www.gaussian.com) | Gaussian is a general purpose computational chemistry software package. 
 **computational chemistry** | `libint` | - `1.1.4`<br/>- `2.0.3` | [Website](https://sourceforge.net/p/libint/home/) | Libint computes molecular integrals. 
 **computational chemistry** | `libxc` | - `3.0.0` | [Website](http://octopus-code.org/wiki/Libxc) | Libxc is a library of exchange-correlation functionals for density-functional theory. 
@@ -87,8 +87,8 @@ Field  | <span style="min-width:120px">Module name | <span style="min-width:90px
 **quantum chemistry** | `cp2k` | - `4.1` | [Website](http://www.cp2k.org) | CP2K is a quantum chemistry and solid state physics software package that can perform atomistic simulations of solid state, liquid, molecular, periodic, material, crystal, and biological systems. 
 
 ### Devel
-Field  | <span style="min-width:120px">Module name | <span style="min-width:90px">Version(s) | URL  | Description
-:----- | :----------- | ------: | :--- | :----------
+Field  | <img style="float:left;min-width:120px;visibility:hidden">Module name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
+:----- | :----------- | :------ | :--- | :----------
 **build** | `cmake` | - `3.8.1` | [Website](https://www.cmake.org) | CMake is an extensible, open-source system that manages the build process in an operating system and in a compiler-independent manner. 
 **build** | `scons` | - `2.5.1_py36`<br/>- `2.5.1_py27` | [Website](http://www.scons.org) | SCons is an Open Source software construction tool. 
 **compiler** | `gcc` | - `7.1.0`<br/>- `7.3.0`<br/>- `6.3.0` | [Website](http://gcc.gnu.org) | The GNU Compiler Collection includes front ends for C, C++, Fortran, Java, and Go, as well as libraries for these languages (libstdc++, libgcj,...). 
@@ -146,8 +146,8 @@ Field  | <span style="min-width:120px">Module name | <span style="min-width:90px
 **parser** | `xerces-c` | - `3.2.1` | [Website](https://xerces.apache.org/xerces-c/index.html) | Xerces-C++ is a validating XML parser written in a portable subset of C++. 
 
 ### Math
-Field  | <span style="min-width:120px">Module name | <span style="min-width:90px">Version(s) | URL  | Description
-:----- | :----------- | ------: | :--- | :----------
+Field  | <img style="float:left;min-width:120px;visibility:hidden">Module name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
+:----- | :----------- | :------ | :--- | :----------
 **computational geometry** | `cgal` | - `4.10` | [Website](http://www.cgal.org) | The Computational Geometry Algorithms Library (CGAL) is a C++ library that aims to provide easy access to efficient and reliable algorithms in computational geometry. 
 **computational geometry** | `qhull` | - `2015.2` | [Website](http://www.qhull.org/) | Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram, halfspace intersection about a point, furthest-site Delaunay triangulation, and furthest-site Voronoi diagram. 
 **deep learning** | `caffe2` | - `0.8.1` | [Website](https://caffe2.ai) | Caffe2 is a deep learning framework that provides an easy and straightforward way to experiment with deep learning and leverage community contributions of new models and algorithms. 
@@ -200,8 +200,8 @@ Field  | <span style="min-width:120px">Module name | <span style="min-width:90px
 **symbolic** | `libmatheval` | - `1.1.11` | [Website](https://www.gnu.org/software/libmatheval/) | GNU libmatheval is a library (callable from C and Fortran) to parse and evaluate symbolic expressions input as text. 
 
 ### Physics
-Field  | <span style="min-width:120px">Module name | <span style="min-width:90px">Version(s) | URL  | Description
-:----- | :----------- | ------: | :--- | :----------
+Field  | <img style="float:left;min-width:120px;visibility:hidden">Module name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
+:----- | :----------- | :------ | :--- | :----------
 **astronomy** | `heasoft` | - `6.22.1` | [Website](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/) | HEAsoft is a Unified Release of the FTOOLS (General and mission-specific tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks for X-ray astronomical spectral, timing, and imaging data analysis) software packages. 
 **geophysics** | `opensees` | - `2.5.0` | [Website](http://opensees.berkeley.edu/) | OpenSees is a software framework for developing applications to simulate the performance of structural and geotechnical systems subjected to earthquakes. 
 **gis** | `gdal` | - `2.2.1` | [Website](http://www.gdal.org) | GDAL is a translator library for raster and vector geospatial data formats. 
@@ -211,8 +211,8 @@ Field  | <span style="min-width:120px">Module name | <span style="min-width:90px
 **photonics** | `mpb` | - `1.5` | [Website](https://github.com/stevengj/mpb) | MPB is a free software package for computing the band structures, or dispersion relations, and electromagnetic modes of periodic dielectric structures, on both serial and parallel computers. 
 
 ### System
-Field  | <span style="min-width:120px">Module name | <span style="min-width:90px">Version(s) | URL  | Description
-:----- | :----------- | ------: | :--- | :----------
+Field  | <img style="float:left;min-width:120px;visibility:hidden">Module name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
+:----- | :----------- | :------ | :--- | :----------
 **becnhmark** | `hp2p` | - `3.2` | [Website](https://github.com/cea-hpc/hp2p) | Heavy Peer To Peer: a MPI based benchmark for network diagnostic. 
 **compression** | `lz4` | - `1.8.0` | [Website](https://www.lz4.org) | LZ4 is lossless compression algorithm. 
 **compression** | `lzo` | - `2.10` | [Website](http://www.oberhumer.com/opensource/lzo) | LZO is a portable lossless data compression library written in ANSI C. 
@@ -304,8 +304,8 @@ Field  | <span style="min-width:120px">Module name | <span style="min-width:90px
 **tools** | `xkeyboard-config` | - `2.21` | [Website](https://www.freedesktop.org/wiki/Software/XKeyboardConfig/) | The non-arch keyboard configuration database for X Window. 
 
 ### Viz
-Field  | <span style="min-width:120px">Module name | <span style="min-width:90px">Version(s) | URL  | Description
-:----- | :----------- | ------: | :--- | :----------
+Field  | <img style="float:left;min-width:120px;visibility:hidden">Module name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
+:----- | :----------- | :------ | :--- | :----------
 **graphs** | `graphviz` | - `2.40.1` | [Website](https://www.graphviz.org/) | Graphviz is open source graph visualization software. 
 **molecular visualization** | `pymol`^<b class="lic"></b>^ | - `1.8.6.2` | [Website](https://pymol.org) | PyMOL is a Python-enhanced molecular graphics tool. 
 **plotting** | `gnuplot` | - `5.2.0` | [Website](http://www.gnuplot.info) | Gnuplot is a portable command-line driven graphing utility for Linux, OS/2, MS Windows, OSX, VMS, and many other platforms. 
