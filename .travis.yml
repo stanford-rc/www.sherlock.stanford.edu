@@ -7,15 +7,15 @@
 sudo: false
 language: python
 
-# we only care about the web_docs branch
+# we only care about the docs branch
 branches:
     only:
-        - web_docs
+        - docs
 
 # notify srcc#github
 notifications:
     slack:
-        secure: "5LH3JMgre8bvoyVXvZs/TF5oWUiAAUTiRrLJ9g+2D63QlXtDt82PCf/wnzx16xiIaNk26IzmEs5McvDSoAH2eaHxOBa20zlHqxnZiy0nqQTP1QT6yxVMBXt95FaEbvptqmsD60PovacY563o5Cmp0JfhdHuJAy/kE+oNkgzYbiuliLTx1qJAidIvKaEaglVMQG9UzKk+5mtW33K/a2EKMI8I45whmloEnBjHjkhAqBA93nn6l6f+HAfLSsVGjxL4p95Nvi/Te9q/4VTmPleZLQoXDTKF9/IaASu1wBEZPkF1R5/sdtYxsp9UZv/G63aPwBQ7ZvpzuRDU/Hs40R3LFUW2mbYgTPloUpOygnVRxFIpiVYFDQs/HvcILN2d21+9yCn0Kb2Xbqk1l43hh9I0VkSSRnJx6whPZ3yBepbJusQq0nQGe+VET8sL38zsCBc2d3DnEK1vYgwohe3tMEpu/BXFcL7+rHHQAj/+XOwsDZdRO+uGfL+Eb52286tsSxlA3BcM7TX2BGwdSAQOX+fJQ9QHRcN0oB3KUcXCydgEJwi7uVuU6LTcvdvb1oa7jdFqvNkdqOtHtom03gdsNxhK7d0rD+pKS0y0htR/mfcbMlreFfQ35fzX//C+QQI6lYioc/uPVutjJ5QZKwy4Bsf6yL90jeSNpzgb/NcTx/Y0BV4="
+        secure: b8qQVB4C8u0pOBh8M/+jeNl5B9aIJB0VyxmOCVRn5AT8RAlnj805eY+RAq1THSIwPGJXeQ5lY3tLKXvRGSp3bfjY5DSrSloJS879WL4BCMzOT+o+v+YQzkICn5E5x+Sz4C/PWScR4UR9iUSTb37PAYCPATc9l/+hI/XO2jNBi0hDOWOYVfd1erGPMJOGBhJCfz0gdu5ULJ5QLbvjGIWXfOgsHG/DRfEMvnpuaW1Gi+g+RFeA1II0ZN/44n2UENiM+nmJTcjmQaJ+6yBxxXmWwIgKc4SqI4zoHIkz3Zck88m4RIe7tzj5HHwI/T6h7G5FJPojbL6J9YWqceSZF+q0VwLgVitStrDsGG34eVxQG1Cp5p8rltHGSjr2kGpdb7Nh9IOV2C6FcfoyY8X3ZrGGfzN3RwNO6nFNtEJ4MN1yJRrmOClJmDIGolloNwUpTr6ZgzhOC07ydNX6oTqj4gqCxqYmGX07oc2sCN1nwb5WPtQXpkafYTThUnKVunoomrps+EOCNjL6j3g/TYo9w1rKxnnUA2mxuRlDYGn2PcMs8RJOpbFkDIX7EYyEIiLAI0H8PUUHgsdC6kX9z6W91RXCV7scxLi0xNFZ4l/9Relg7YfGwQjCJNcU4um1BZonEVpqosht5PU3moqdIvxdVOIn5avJ9nqJLzi+Ic8bBnO6eWo=
 
 
 # ----------------------------------------------------------------------------
@@ -55,7 +55,7 @@ script:
 # ----------------------------------------------------------------------------
 
 # deploy
-#   fetch web_docs and copy contents of material/ there, then commit and push
+#   fetch "docs" branch and copy contents of material/ there, then commit and push
 
 deploy:
     provider: pages
@@ -67,7 +67,7 @@ deploy:
     #fqdn: 117f8628f187c24bbe15febead3046fa.sherlock.stanford.edu # temporary stealthy URL
     project-name: "Sherlock documentation"
     on:
-        branch: web_docs
+        branch: docs
     verbose: true
     edge:
         branch: v1.8.47
