@@ -3,12 +3,12 @@
 ## Overview
 
 The Sherlock web presence is made of 3 components, each living in its own
-branch of the [stanford-rc/sherlock](https://github.com/stanford-rc/sherlock) GitHub repository:
+branch of the [stanford-rc/www.sherlock.stanford.edu](https://github.com/stanford-rc/www.sherlock.stanford.edu) GitHub repository:
 
-  1. a [landing page][url_landing_branch] (in branch [`web_landing`][url_landing_branch])
-  2. a [documentation theme][url_theme_branch] (in branch [`web_theme`][url_theme_branch])
+  1. a [landing page][url_landing_branch] (in branch [`landing`][url_landing_branch])
+  2. a [documentation theme][url_theme_branch] (in branch [`theme`][url_theme_branch])
   3. [documentation pages](#documentation-pages), generated from Markdown by
-     [MkDocs][url_mkdocs] (in branch [`web_docs`][url_docs_branch])
+     [MkDocs][url_mkdocs] (in branch [`docs`][url_docs_branch])
 
 Each of those components has two parts:
 
@@ -25,9 +25,9 @@ each commit:
 
 So for instance, a commit in the landing page branch will generate a Travis
 build of the landing page, and the resulting HTML contents will be pushed and
-committed to the `src/` directory in the `web_docs` branch.
+committed to the `src/` directory in the `docs` branch.
 
-This `web_docs` branch commit will in turn generate a Travis build of the
+This `docs` branch commit will in turn generate a Travis build of the
 MkDocs pages, which will get pushed to the `gh-pages` branch for final
 publication.
 
@@ -86,7 +86,7 @@ modifications (adding new pages, rewriting whole sections...)
 ### Editing in GitHub
 
 Markdown pages can directly be edited within GitHub web interface. They're all
-in the [`src/docs`](https://github.com/stanford-rc/sherlock/tree/web_docs/src/docs)
+in the [`src/docs`](https://github.com/stanford-rc/www.sherlock.stanford.edu/tree/docs/src/docs)
 directory.
 
 Click on a file, click on the "Edit this file" button, edit, add a little
@@ -110,9 +110,9 @@ the modifications and preview the changes, then commit and push to GitHub.
 
 To modify the source files, you'll need to:
 
-1. clone the `web_docs` branch of Sherlock repo on your local machine:
+1. clone the `docs` branch of Sherlock repo on your local machine:
    ```
-   $ git clone https://github.com/stanford-rc/sherlock.git --branch web_docs --single-branch sherlock_docs
+   $ git clone https://github.com/stanford-rc/www.sherlock.stanford.edu.git --branch docs --single-branch sherlock_docs
    ```
 2. install the required dependencies with:
    ```
@@ -156,18 +156,18 @@ the docs directory.
 
 [url_mkdocs]:           http://mkdocs.org
 [url_travis]:           https://travisci.com
-[url_travis_branches]:  https://travis-ci.com/stanford-rc/sherlock/branches
+[url_travis_branches]:  https://travis-ci.com/stanford-rc/www.sherlock.stanford.edu/branches
 
-[url_repo]:             https://github.com/stanford-rc/sherlock
-[url_landing_branch]:   https://github.com/stanford-rc/sherlock/tree/web_landing
-[url_theme_branch]:     https://github.com/stanford-rc/sherlock/tree/web_theme
-[url_docs_branch]:      https://github.com/stanford-rc/sherlock/tree/web_docs
+[url_repo]:             https://github.com/stanford-rc/www.sherlock.stanford.edu
+[url_landing_branch]:   https://github.com/stanford-rc/www.sherlock.stanford.edu/tree/landing
+[url_theme_branch]:     https://github.com/stanford-rc/www.sherlock.stanford.edu/tree/theme
+[url_docs_branch]:      https://github.com/stanford-rc/www.sherlock.stanford.edu/tree/docs
 [url_mkdocs_material]:  https://squidfunk.github.io/mkdocs-material
 
 [url_webs]:      https://docs.google.com/drawings/d/1ja1TyamMKqiemhwW7ZJgdSbmD9wy7xGXhPkNxOEvPE4/pub?w=842&amp;h=715
 [url_webs_edit]: https://docs.google.com/drawings/d/1ja1TyamMKqiemhwW7ZJgdSbmD9wy7xGXhPkNxOEvPE4/edit
 
-[img_landing_buildstatus]: https://travis-ci.com/stanford-rc/sherlock.svg?token=uginarQXUTdAZXLFvqnS&branch=web_landing
-[img_theme_buildstatus]:   https://travis-ci.com/stanford-rc/sherlock.svg?token=uginarQXUTdAZXLFvqnS&branch=web_theme
-[img_docs_buildstatus]:    https://travis-ci.com/stanford-rc/sherlock.svg?token=uginarQXUTdAZXLFvqnS&branch=web_docs
+[img_landing_buildstatus]: https://travis-ci.com/stanford-rc/www.sherlock.stanford.edu.svg?token=uginarQXUTdAZXLFvqnS&branch=landing
+[img_theme_buildstatus]:   https://travis-ci.com/stanford-rc/www.sherlock.stanford.edu.svg?token=uginarQXUTdAZXLFvqnS&branch=theme
+[img_docs_buildstatus]:    https://travis-ci.com/stanford-rc/www.sherlock.stanford.edu.svg?token=uginarQXUTdAZXLFvqnS&branch=docs
 
