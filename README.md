@@ -47,7 +47,7 @@ changes and push them to GitHub.
 Here's an overview of the whole workflow:
 
 ![webs][url_webs]
-([edit][url_webs_edit]
+([edit][url_webs_edit])
 
 
 
