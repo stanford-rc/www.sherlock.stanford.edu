@@ -155,8 +155,8 @@ back to your repository on GitHub.
 [url_gh_pr]:            https://help.github.com/articles/creating-a-pull-request-from-a-fork/
 [url_workflow]:         https://gist.github.com/Chaser324/ce0505fbed06b947d962
 
-[url_travis_branches]:  https://travis-ci.com/stanford-rc/www.sherlock.stanford.edu/branches
-[img_docs_buildstatus]: https://travis-ci.com/stanford-rc/www.sherlock.stanford.edu.svg?token=uginarQXUTdAZXLFvqnS&branch=docs
+[url_travis_branches]:  https://travis-ci.org/stanford-rc/www.sherlock.stanford.edu/branches
+[img_docs_buildstatus]: https://travis-ci.org/stanford-rc/www.sherlock.stanford.edu.svg?branch=docs
 
 [url_srcc]:             https://srcc.stanford.edu
 [url_docs]:             https://www.sherlock.stanford.edu/docs
