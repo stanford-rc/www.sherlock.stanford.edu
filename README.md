@@ -81,7 +81,7 @@ back to your repository on GitHub.
     repo or just head straight to the command line:
 
     ```shell
-    $ git clone git@github.com:USERNAME/FORKED-PROJECT.git
+    $ git clone git@github.com:USERNAME/FORKED-PROJECT.git sherlock_docs/
     $ cd sherlock_docs/
     ```
 
