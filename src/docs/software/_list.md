@@ -25,7 +25,6 @@
     purchasing information.
 
 
-
 <!-- color styles for module properties -->
 <style>
 .lic  { color: darkred; }
