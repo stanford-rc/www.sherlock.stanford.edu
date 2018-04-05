@@ -34,7 +34,7 @@ before_install:
       if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
           TRAVIS_COMMIT_RANGE="FETCH_HEAD...$TRAVIS_BRANCH"
       fi
-      git diff --name-only $TRAVIS_COMMIT_RANGE | grep -qvE '(README.md)|(^(\.git|site))/' || {
+      git diff --name-only $TRAVIS_COMMIT_RANGE | grep -qvE '(README.md)|(INTERNALS.md)|(LICENSE)|(^(\.git|site))/' || {
           echo "Only non-source files were updated, no need to trigger a build."
           exit
       }
