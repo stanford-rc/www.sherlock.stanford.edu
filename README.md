@@ -54,8 +54,8 @@ You can also get to the page source on GitHub directly by forking the
 repository, going to the [`src/docs`][url_docs_src] directory, and then editing
 files there.
 
-Once you've committed your changes to your forked repository, you can submit
-them for review by [creating a Pull Request][url_gh_pr]. And once your PR is
+After you've committed your changes to your forked repository, you can submit
+them for review by [creating a Pull Request][url_gh_pr]. Once your PR is
 accepted and merged, the website will be automatically rebuilt and deployed at
 https://www.sherlock.stanford.edu
 
@@ -129,15 +129,16 @@ back to your repository on GitHub.
 
 9. **submit a pull request**
 
-    The last step is to submit your changes for review by [creating a Pull
-    Request][url_gh_pr]
+    After you've committed your changes to your forked repository, you can
+    submit them for review by [creating a Pull Request][url_gh_pr]. Once your
+    PR is accepted and merged, the website will be automatically rebuilt and
+    deployed at https://www.sherlock.stanford.edu
 
 
 
 
 
-
-##
+#
 <img align="left" height="35px"  src="https://cloud.githubusercontent.com/assets/186807/23107559/02ea22bc-f6b4-11e6-8a0a-48601bd7465e.png">
 
 **Sherlock cluster**<br/>
