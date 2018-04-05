@@ -162,9 +162,8 @@ The different values displayed in `lfs quota` are as follows:
     Files not modified in over 6 months will be automatically deleted
 
 To manage available space and maintain optimal performance for all jobs, all
-files on `$SCRATCH` are subject to automatic purges. Based on their last
-modification date, as displayed by `ls -l`, files whose contents have not been
-modified in the previous 6 months will be automatically deleted.
+files on `$SCRATCH` are subject to automatic purges. Files whose contents have
+not been modified in the previous 6 months will be automatically deleted.
 
 For instance, if you create a file on February 1st and don't ever modify it
 afterwards, it will be automatically deleted on August 1st.
