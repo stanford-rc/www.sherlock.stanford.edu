@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Thursday, April 05 2018, we provide 326 software packages, in 7 categories, covering 45 fields of science:*
+*As of Friday, April 06 2018, we provide 327 software packages, in 7 categories, covering 45 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -68,7 +68,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **neurology** | `mrtrix` | -&nbsp;`0.3.16` | [Website](http://www.mrtrix.org) | MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses. 
 **neurology** | `py-mdt` | -&nbsp;`0.10.9_py36` | [Website](https://github.com/cbclab/MDT) | The Maastricht Diffusion Toolbox, MDT, is a framework and library for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging (MRI) modeling. 
 **neurology** | `spm` | -&nbsp;`12` | [Website](http://www.fil.ion.ucl.ac.uk/spm/) | The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. 
-**phylogenetics** | `py-ete` | -&nbsp;`3.0.0_py27_qt5`<br/>-&nbsp;`3.0.0_py27` | [Website](http://etetoolkit.org/) | A Python framework for the analysis and visualization of trees. 
+**phylogenetics** | `py-ete` | -&nbsp;`3.0.0_py27` | [Website](http://etetoolkit.org/) | A Python framework for the analysis and visualization of trees. 
 
 ### Chemistry
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
