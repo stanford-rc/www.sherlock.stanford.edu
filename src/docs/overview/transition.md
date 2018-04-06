@@ -223,8 +223,8 @@ same partition nomenclature, although different hardware characteristics:
 | -------------  | ------------ | ------------ |
 | `normal`       | 116x 16c/64GB nodes | 56x 20c/128GB nodes |
 | `dev`          | 2x 16c/64GB nodes   | 2x 20c/128GB nodes |
-| `bigmem`       | 2x 32c/1.5TB nodes  | 1x 56c/3.0TB node<br/> 1x 32c/1.5TB node |
-| `gpu`          | 6x 16c/256GB nodes <br/> w/ 8x K20/K80/TITAN Black | 2x 20c/256GB nodes <br/> w/ 4x P40/P100 |
+| `bigmem`       | 2x 32c/1.5TB nodes  | 1x 56c/3.0TB node<br/> 1x 32c/512GB node |
+| `gpu`          | 6x 16c/256GB nodes <br/> w/ 8x K20/K80/TITAN Black | 5x 20c/256GB nodes <br/> w/ 4x P40/P100_PCIE/V100_NVLINK |
 
 
 After the first coexistence phase of the [transition](#transition-process),
