@@ -239,10 +239,10 @@ characteristics of Sherlock 2.0, and the new version of Slurm (cf. below).
 
 The main change will be that your jobs won't generally need to specify any QOS,
 except for the *long* one. or in other words, `--qos=long` is the only QOS
-option you will need to specify in your jobs. `bigmem` and `gpu` are not used
-anymore for job submission, and will lead to errors if used. The goal is to
-simplify job submission for new users and limit the number of parameters to
-specify when submitting jobs.
+option you will need to specify in your jobs. The `bigmem` and `gpu` QOSes are
+not used anymore for job submission, and will lead to errors if used. The goal
+is to simplify job submission for new users and limit the number of parameters
+to specify when submitting jobs.
 
 ### Software
 
