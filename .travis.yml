@@ -9,13 +9,13 @@ language: python
 
 # we only care about the docs branch
 branches:
-    only:
-        - docs
+  only:
+  - docs
 
 # notify srcc#github
 notifications:
-    slack:
-        secure: iWp+s5M7P2oHkSqX92NKxhHRNaH1fZ1j8OHluo6oqiht1aqB2vcHdCeCWNS8GQBFNBf5DAMkD1tKiIJPdonCkMVoizv0lvwemx+U6RWMZpL4+E3YOLxAh1thtcKqAdcs549eEdSeAjaylyend6XJI7tU6KPYfbd/dY1xu3Fyt23gqbot55EYlc2Yl0MzsP3AiiDAQ6+ToZfA5r1hWww9Zr9lr3Yt348G8Ti8VXMhiJRwUJ21WCoWnZcBji+AhE0KCY1VP4+VVWL48rQL6CGRwaXkQCyBtw7Pa5U9DUdan4+zrrNSFCxrVSHHPxXAvbAgzWFT0EthW2qO7RCug1BryoucvTn5Mx4Gf8F6UUYJAKairmNiM0AKlck7TP0BM0sFiF2PHorP+s2dJfIXqkx4CNrxz9YxwoFT7q0kiXC9ioKo5cMynYCU0Apcv5mbYnEeh72kCUkPUxZKiOH6ct3aj/91MS6FX9E3YyUHUqES7/j4MEbwzAO+matnq1Wz5w+Nl374+Hmgw03pr8pasTnFWFjIhHuMPS1eg8e5YyFNANlVRp5mxwtG/yhR1lniyiOztd4GG45IARze5tW7vkZSeYghOqZogzfcqDCoJSD/8tViDvpMgXSp0sQg/449DQP8sZ79EfWl0rV6J1MZUSf+N+SrTRXS7tZMtCCza9GvUMI=
+  slack:
+    secure: UbCZ5DW7w7xqg6Jxj1GGKyVorE0ixiozKEHzNvE93iz/nmoIVZZTWvTSZuxpBzWfM60MHKMT93rkqZQ6S7dQzI189TLaUM/6fSKyt9tT1nKk9W0JU9sekk51qptUvy1NbvfEE7yteSQiQQbNfMiupHar3sDNwntCPTu+ARf4WeVkzHVR6TYsRIz4i2XraLZlzTg3/p8dIGuFBdMcvcJd/Lcp/qzGnXVSDxiwAwg8qvHNiVWxekDOSkXqY5dcEXuwtC2c9s1mOhqrWGT9+HOPYsFyQECsu/rdduh2Yu8OQYvItIYrC6WacxY84Gazpz+lk7YcXJdLdy2RhI+WoJHp8y/hZAqcreLYTs3NKpWSml2DnhUNTMCc9OwS2qQKd6AwXF11LlGUcYsvvGylWa0QIhoNek5zbrx80AOyYyP/i6hPrQBUAv+90qtv2lsWfDQsR1BQbWJuSWmfgcT6resBdUkSjxigzdVSF+x/g0ZL5DEXFhlXwPTw3q3OCh9RiKbuuCkUdnJbPW8QrWDipcIl33LanMcu7ul6A2piYd59EsOWge9U6yfwX239nwZve+0KfqsZ3QJ9CFniywyT9Uproi565V1fhf1bqsJoM4NW0Mv27VVUjVAFwhH8Bo22bw6x4ELFzwGLbG98Wfk4GI4c87QjA0Lhm9Tis5k0ghKfexs=
 
 
 # ----------------------------------------------------------------------------
@@ -26,27 +26,27 @@ notifications:
 
 # limit clone depth to 50, to speed up build
 git:
-    depth: 50
+  depth: 50
 
 before_install:
-    - |
-      # check that we actually need to build anything
-      if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
-          TRAVIS_COMMIT_RANGE="FETCH_HEAD...$TRAVIS_BRANCH"
-      fi
-      git diff --name-only $TRAVIS_COMMIT_RANGE | grep -qvE '(README.md)|(INTERNALS.md)|(LICENSE)|(^(\.git|site))/' || {
-          echo "Only non-source files were updated, no need to trigger a build."
-          exit
-      }
+- |
+  # check that we actually need to build anything
+  if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+      TRAVIS_COMMIT_RANGE="FETCH_HEAD...$TRAVIS_BRANCH"
+  fi
+  git diff --name-only $TRAVIS_COMMIT_RANGE | grep -qvE '(README.md)|(INTERNALS.md)|(LICENSE)|(^(\.git|site))/' || {
+      echo "Only non-source files were updated, no need to trigger a build."
+      exit
+  }
 
 # install dependencies
 install:
-    - pip install mkdocs
-    - pip install -r requirements.txt
+- pip install mkdocs
+- pip install -r requirements.txt
 
 # build
 script:
-    - mkdocs build --verbose --clean
+- mkdocs build --verbose --clean
 
 # ----------------------------------------------------------------------------
 #
@@ -58,16 +58,15 @@ script:
 #   fetch "docs" branch and copy contents of material/ there, then commit and push
 
 deploy:
-    provider: pages
-    skip_cleanup: true
-    github-token: $DEPLOY_KEY # Set in travis-ci.com dashboard
-    local-dir: site
-    target_branch: gh-pages   # that's the default, but just to make sure
-    fqdn: www.sherlock.stanford.edu
-    #fqdn: 117f8628f187c24bbe15febead3046fa.sherlock.stanford.edu # temporary stealthy URL
-    project-name: "Sherlock documentation"
-    on:
-        branch: docs
-    verbose: true
-    edge:
-        branch: v1.8.47
+  provider: pages
+  skip_cleanup: true
+  github-token: "$DEPLOY_KEY" # Set in travis-ci.com dashboard
+  local-dir: site
+  target_branch: gh-pages     # that's the default, but just to make sure
+  fqdn: www.sherlock.stanford.edu
+  project-name: Sherlock documentation
+  on:
+    branch: docs
+  verbose: true
+  edge:
+    branch: v1.8.47
