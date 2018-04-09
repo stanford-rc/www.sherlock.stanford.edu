@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, April 06 2018, we provide 327 software packages, in 7 categories, covering 45 fields of science:*
+*As of Monday, April 09 2018, we provide 328 software packages, in 7 categories, covering 45 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -80,6 +80,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **computational chemistry** | `schrodinger`^<b class="lic"></b>^ | -&nbsp;`2017-3` | [Website](https://www.schrodinger.com) | Schrödinger Suites (Small-molecule Drug Discovery Suite, Material Science Suite, Biologics Suite) provide a set of molecular modelling software. 
 **computational chemistry** | `vasp`^<b class="lic"></b>^ | -&nbsp;`5.4.1` | [Website](https://www.vasp.at) | The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic scale materials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics, from first principles. 
 **molecular dynamics** | `gromacs` | -&nbsp;`2016.3`<br/>-&nbsp;`2018` | [Website](http://www.gromacs.org) | GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles. 
+**molecular dynamics** | `lammps` | -&nbsp;`20180316` | [Website](http://lammps.sandia.gov) | LAMMPS is a classical molecular dynamics code that models an ensemble of particles in a liquid, solid, or gaseous state. 
 **molecular dynamics** | `openmm` | -&nbsp;`7.1.1` | [Website](http://openmm.org) | A high performance toolkit for molecular simulation. 
 **molecular dynamics** | `plumed` | -&nbsp;`2.3.2` | [Website](http://www.plumed.org/) | PLUMED is an open source library for free energy calculations in molecular systems. 
 **molecular dynamics** | `py-raspa2` | -&nbsp;`2.0.3_py27` | [Website](https://github.com/numat/RASPA2) | RASPA2 is a general purpose classical simulation package that can be used for the simulation of molecules in gases, fluids, zeolites, aluminosilicates, metal-organic frameworks, carbon nanotubes and external fields. 
