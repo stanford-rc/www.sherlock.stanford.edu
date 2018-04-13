@@ -1,3 +1,54 @@
+## Sherlock, a shared resource
+
+Sherlock is a shared compute cluster available for use by all Stanford faculty
+members and their research teams to support sponsored research.
+
+!!! warning "Sherlock is a resource for research"
+
+    Sherlock is not suitable for course work, class assignments or general-use
+    training sessions.
+
+It is open to the Stanford community as a computing resource to support
+departmental or sponsored research, thus a faculty member's sponsorship is
+required for all user accounts.
+
+!!! danger "Usage policy"
+
+    Please note that your use of this system falls under the "Computer and
+    Network Usage Policy", as described in the [Stanford Administrative
+    Guide][url_admin]. In particular, sharing authentication credentials is
+    strictly prohibited.  Violation of this policy will result in termination
+    of access to Sherlock.
+
+
+Sherlock has been designed, deployed, and is maintained and operated by the
+[Stanford Research Computing Center (SRCC)][url_srcc] staff. The SRCC is a
+joint effort of the [Dean of Research][url_dor] and [IT Services][url_uit] to
+build and support a comprehensive program to advance computational research at
+Stanford.
+
+Sherlock has been initially purchased and supported with seed funding from
+Stanford's [Provost][url_provost]. It comprises a set of freely available
+compute nodes, a few specific resources such as large-memory machines and GPU
+servers, as well as the associated networking equipment and storage.  These
+resources can be used to run computational codes and programs, and are managed
+through a job scheduler using a [fair-share algorithm][url_fairshare].
+
+### Data risk classification
+
+!!! success "Low and Moderate Risk data"
+
+    Sherlock is approved for computing with Low and Moderate Risk data only.
+
+!!! danger "High Risk data"
+
+    Sherlock is **NOT** [HIPAA][url_HIPAA] compliant and shouldn't be used to
+    process [PHI][url_PHI] nor [PII][url_PII].  The system is approved for
+    computing with Low and Moderate Risk data only, and is **not suitable to
+    process High Risk data**.  For more information about data risk
+    classifications, see the [Information Security Risk Classification
+    page][url_risk].
+
 ## What's a cluster?
 
 A computing cluster is a federation of multiple compute nodes (independent
@@ -20,49 +71,6 @@ jobs][g_jobs] to submit to the [resource scheduler][g_scheduler]. Based on a
 [g_jobs]:       glossary#job
 [g_scheduler]:  glossary#scheduler
 
-## Sherlock, a shared resource
-
-Sherlock is a shared compute cluster available for use by all Stanford faculty
-members and their research teams to support sponsored research.
-
-!!! warning "Sherlock is a resource for research"
-
-    Sherlock is not suitable for course work, class assignments or general-use
-    training sessions.
-
-It is open to the Stanford community as a computing resource to support
-departmental or sponsored research, thus a faculty member's sponsorship is
-required for all user accounts.
-
-!!! danger "Moderate/high risk data"
-
-    Sherlock is **NOT** [HIPAA][url_HIPAA] compliant and shouldn't be used to
-    process [PHI][url_PHI] nor [PII][url_PII].  The system is approved for
-    computing with Low Risk data only, and is not suitable to process Moderate
-    nor High Risk data.  For more information about data risk classifications,
-    see the [Information Security Risk Classification page][url_risk].
-
-!!! danger "Usage policy"
-
-    Please note that your use of this system falls under the "Computer and
-    Network Usage Policy", as described in the [Stanford Administrative
-    Guide][url_admin]. In particular, sharing authentication credentials is
-    strictly prohibited.  Violation of this policy will result in termination
-    of access to Sherlock.
-
-
-Sherlock has been designed, deployed, and is maintained and operated by
-[SRCC][url_srcc] staff. The Stanford Research Computing Center (SRCC) is a
-joint effort of the [Dean of Research][url_dor] and [IT Services][url_uit] to
-build and support a comprehensive program to advance computational research at
-Stanford.
-
-Sherlock has been initially purchased and supported with seed funding from
-Stanford's [Provost][url_provost]. It comprises a set of freely available
-compute nodes, a few specific resources such as large-memory machines and GPU
-servers, as well as the associated networking equipment and storage.  These
-resources can be used to run computational codes and programs, and are managed
-through a job scheduler using a [fair-share algorithm][url_fairshare].
 
 ## The condominium model
 
