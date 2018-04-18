@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, April 10 2018, we provide 329 software packages, in 7 categories, covering 45 fields of science:*
+*As of Wednesday, April 18 2018, we provide 331 software packages, in 7 categories, covering 45 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -77,6 +77,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **computational chemistry** | `gaussian`^<b class="lic"></b>^ | -&nbsp;`g16` | [Website](https://www.gaussian.com) | Gaussian is a general purpose computational chemistry software package. 
 **computational chemistry** | `libint` | -&nbsp;`1.1.4`<br/>-&nbsp;`2.0.3` | [Website](https://sourceforge.net/p/libint/home/) | Libint computes molecular integrals. 
 **computational chemistry** | `libxc` | -&nbsp;`3.0.0` | [Website](http://octopus-code.org/wiki/Libxc) | Libxc is a library of exchange-correlation functionals for density-functional theory. 
+**computational chemistry** | `nwchem` | -&nbsp;`6.8` | [Website](http://www.nwchem-sw.org) | NWChem is an ab initio computational chemistry software package which also includes quantum chemical and molecular dynamics functionality. 
 **computational chemistry** | `py-ase` | -&nbsp;`3.14.1_py27` | [Website](https://wiki.fysik.dtu.dk/ase/) | The Atomic Simulation Environment (ASE) is a set of tools and Python modules for setting up, manipulating, running, visualizing and analyzing atomistic simulations. 
 **computational chemistry** | `schrodinger`^<b class="lic"></b>^ | -&nbsp;`2017-3` | [Website](https://www.schrodinger.com) | Schrödinger Suites (Small-molecule Drug Discovery Suite, Material Science Suite, Biologics Suite) provide a set of molecular modelling software. 
 **computational chemistry** | `vasp`^<b class="lic"></b>^ | -&nbsp;`5.4.1` | [Website](https://www.vasp.at) | The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic scale materials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics, from first principles. 
@@ -294,6 +295,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | `snappy` | -&nbsp;`1.1.7` | [Website](https://github.com/google/snappy) | A fast compressor/decompressor. 
 **resource monitoring** | `remora` | -&nbsp;`1.8.2` | [Website](https://github.com/TACC/remora) | Remora is a tool to monitor runtime resource utilization. 
 **scm** | `git` | -&nbsp;`2.12.2` | [Website](http://git-scm.com) | Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. 
+**scm** | `git-lfs` | -&nbsp;`2.4.0` | [Website](https://git-lfs.github.com/) | Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server. 
 **scm** | `subversion` | -&nbsp;`1.9.7` | [Website](https://subversion.apache.org/) | Subversion is an open source version control system. 
 **tools** | `curl` | -&nbsp;`7.54.0` | [Website](https://curl.haxx.se/) | curl is an open source command line tool and library for transferring data with URL syntax. 
 **tools** | `expat` | -&nbsp;`2.2.3` | [Website](http://libexpat.github.io) | Expat is a stream-oriented XML parser library written in C. 
