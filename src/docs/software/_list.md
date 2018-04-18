@@ -12,19 +12,6 @@
 * [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 
 
-!!! warning "Licensed software"
-
-    Access to software modules marked with ^<b class="lic"></b>^ in the tables
-    below is restricted to properly licensed user groups.
-
-    The SRCC is not funded to provide commercial software on Sherlock and
-    researchers are responsible for the costs of purchasing and renewing
-    commercial software licenses. For more information, please feel free to
-    [contact us](mailto:srcc-support@stanford.edu) and see the [Stanford
-    Software Licensing page](https://uit.stanford.edu/service/softwarelic) for
-    purchasing information.
-
-
 <!-- color styles for module properties -->
 <style>
 .lic  { color: darkred; }
