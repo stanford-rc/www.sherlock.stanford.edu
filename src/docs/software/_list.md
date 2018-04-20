@@ -8,21 +8,8 @@
 * [`devel`](#devel) <small>build, compiler, data, language, libs, mpi, networking, parser</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, photonics</small>
-* [`system`](#system) <small>becnhmark, compression, containers, database, file management, file transfer, language, libs, resource monitoring, scm, tools</small>
+* [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, language, libs, resource monitoring, scm, tools</small>
 * [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
-
-
-!!! warning "Licensed software"
-
-    Access to software modules marked with ^<b class="lic"></b>^ in the tables
-    below is restricted to properly licensed user groups.
-
-    The SRCC is not funded to provide commercial software on Sherlock and
-    researchers are responsible for the costs of purchasing and renewing
-    commercial software licenses. For more information, please feel free to
-    [contact us](mailto:srcc-support@stanford.edu) and see the [Stanford
-    Software Licensing page](https://uit.stanford.edu/service/softwarelic) for
-    purchasing information.
 
 
 <!-- color styles for module properties -->
@@ -219,7 +206,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 ### System
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
-**becnhmark** | `hp2p` | -&nbsp;`3.2` | [Website](https://github.com/cea-hpc/hp2p) | Heavy Peer To Peer: a MPI based benchmark for network diagnostic. 
+**benchmark** | `hp2p` | -&nbsp;`3.2` | [Website](https://github.com/cea-hpc/hp2p) | Heavy Peer To Peer: a MPI based benchmark for network diagnostic. 
 **compression** | `lz4` | -&nbsp;`1.8.0` | [Website](https://www.lz4.org) | LZ4 is lossless compression algorithm. 
 **compression** | `lzo` | -&nbsp;`2.10` | [Website](http://www.oberhumer.com/opensource/lzo) | LZO is a portable lossless data compression library written in ANSI C. 
 **compression** | `szip` | -&nbsp;`2.1.1` | [Website](https://support.hdfgroup.org/doc_resource/SZIP) | Szip compression software, providing lossless compression of scientific data, is an implementation of the extended-Rice lossless compression algorithm. 
