@@ -1,242 +1,151 @@
-# Connecting <small>to Sherlock </small>
 
-!!! warning "Sherlock account required"
+To start using Sherlock, you will need:
 
-    To be able to connect to Sherlock, you must first obtain a [Sherlock
-    account][url_account].
+* an active [SUNet ID][url_sunet],
 
+    !!! information "SUNet ID [service levels][url_level] and external collaborators"
 
-## Credentials
+        Base-level service is sufficient for Sherlock accounts. External
+        collaborators, or users without a SUNet ID, can be sponsored by a PI a
+        get a sponsored SUNet ID at no cost. Please see the [sponsorship
+        page][url_sponsor] for more information.
 
-All users must have a [Stanford SUNet ID][url_sunet] and a [Sherlock
-account][url_account] to log in to Sherlock. Your Sherlock account uses the
-same username/password as your SUnet ID:
+* a [Sherlock account][url_request],
+* a [SSH client][url_ssh],
+* good understanding of the [concepts][url_concepts] and [terms][url_glossary]
+  used throughout that documentation,
+* some familiarity with [Unix/Linux command-line environments][url_unix], and
+  notions of [shell scripting][url_bash].
 
-    Username: SUNet ID
-    Password: SUNet ID password
 
-To request a Sherlock account, please see the [Prerequisites][url_account]
-page.
 
-!!! important "Resetting passwords"
+## How to request an account
 
-    Sherlock does **not** store your SUNet ID password. As a consequence, we
-    are unable to reset your password. If you require password assistance,
-    please see the [SUNet Account page][url_suaccounts].
+To request an account, the sponsoring Stanford faculty member should email
+srcc-support@stanford.edu, specifying the names and SUNet IDs of
+his/her research team members needing an account.
 
-## Connection
+Sherlock is open to the Stanford community as a computing resource to support
+departmental or sponsored research, thus a faculty member's explicit consent is
+required for account requests.
 
-Access to Sherlock is provided via Secure Shell (SSH) login. Most Unix-like
-operating systems provide an SSH client by default that can be accessed by
-typing the `ssh` command in a terminal window.
+!!! danger "Sherlock is a resource for research"
 
-To login to Sherlock, open a terminal and type the following command, where
-`<sunetid>` should be replaced by your *actual* SUNet ID:
+    Sherlock is a resource to help and support research, and is not suitable
+    for course work, class assignments or general-use training sessions.
 
-```bash
-$ ssh <sunetid>@login.sherlock.stanford.edu
-```
+There is no fee associated with using Sherlock, and no limit in the amount of
+accounts each faculty member can request. We will periodically ensure that all
+accounts associated with each PI are still active, and reserve the right to
+close any Sherlock account whose SUNet ID is expired.
 
-Upon logging in, you will be connected to one of Sherlock's load-balanced login
-node. You should be automatically directed to the least-loaded login node at
-the moment of your connection, which should give you the best possible
-environment to work.
 
-### Host keys
 
-Upon your very first connection to Sherlock, you will be greeted by a warning
-such as :
+## SSH clients
 
-    The authenticity of host 'login.sherlock.stanford.edu' can't be established.
-    ECDSA key fingerprint is SHA256:eB0bODKdaCWtPgv0pYozsdC5ckfcBFVOxeMwrNKdkmg.
-    Are you sure you want to continue connecting (yes/no)?
 
+### Linux :fa-linux:
 
-This warning is normal: your SSH client warns you that it is the first time it
-sees that new computer. To make sure you are actually connecting to the right
-machine, you should compare the ECDSA key fingerprint shown in the message with
-one of the fingerprints below:
+Linux distributions usually come with a version of the [OpenSSH][url_openssh]
+client already installed. So no additional software installation is required.
+If not, please refer to your distribution's documentation to install it.
 
-Key type | Key Fingerprint
----------|----------------
-RSA      | `SHA256:T1q1Tbq8k5XBD5PIxvlCfTxNMi1ORWwKNRPeZPXUfJA`<br/><small>legacy format: `f5:8f:01:46:d1:f9:66:5d:33:58:b4:82:d8:4a:34:41`</small>
-ECDSA    | `SHA256:eB0bODKdaCWtPgv0pYozsdC5ckfcBFVOxeMwrNKdkmg`<br/><small>legacy format: `70:4c:76:ea:ae:b2:0f:81:4b:9c:c6:5a:52:4c:7f:64`</small>
+### MacOS :fa-apple:
 
+MacOS systems usually come with a version of the [OpenSSH][url_openssh] client
+already installed. So no additional software installation is required
 
-If they match, you can proceed and type ‘yes’. Your SSH program will then store
-that key and will verify it for every subsequent SSH connection, to make sure
-that the server you're connecting to is indeed Sherlock.
 
+### Windows :fa-windows:
 
+Microsoft Windows doesn't provide any SSH client by default. To install one,
+you have several options, depending on the version of Windows.
 
-### Authentication
+* **WSL <small>recommended</small>**
 
-#### Password
+    Windows 10 provides a feature called the ["Windows
+    Subsystem for Linux"][url_wsl] (WSL). Please refer to the [official
+    documentation][url_wsl_doc] or [this howto][url_wsl_howto] for installation
+    instructions. Once installed, you'll be able to use the `ssh` command from a
+    Windows terminal to connect to Sherlock.
 
-To ease access and increase compatibility[^krb_legacy] with different
-platforms, Sherlock allows a simple password-based authentication mechanism for
-SSH.[^auth_methods].
+* Cygwin
 
-Upon connection, you will be asked for your SUNet ID password with the
-following prompt:
+    The [Cygwin project][url_cygwin] predates WSL and provides similar features,
+    which among other things, allow users to install a command-line SSH client on
+    their Windows machines.
 
-    <sunetid>@login.sherlock.stanford.edu's password:
+The two options above will ensure the best compatibility with the Sherlock
+environment. If you'd like to explore other avenues, many [other SSH client
+implementations][url_ssh_clients] are available, but have not necessarily been tested
+with Sherlock, so your mileage may vary.
 
-Enter your password, and if it's correct, you should see the following line:
 
-    Authenticated with partial success.
+## Unix/Linux resources
 
+A full tutorial on using Unix/Linux is beyond the scope of this documentation.
+However, there are many tutorials for beginning to use Unix/Linux on the web.
 
-#### Second factor (2FA)
+A few tutorials we recommend are:
 
-Sherlock implements Stanford's [Minimum Security Standards][url_minsec]
-policies which mandate two-step authentication to access the cluster.
+* [Unix Tutorial for Beginners][url_tuto_1] (University of Surrey, UK)
+* [Introduction to Unix][url_tuto_2] (Imperial College, London)
+* [The Unix Shell][url_tuto_3] (Software Carpentry)
 
-Two-step authentication protects your personal information and credentials by
-combining something only you *know* (your password) with something only you
-*have* (your phone, tablet or token). This prevents an attacker who would steal
-your password to actually use it to impersonate you. For more details about
-two-step authentication at Stanford, please refer to the [University IT
-two-step][url_twostep] page.
+More specifically about HPC:
 
+* [Intro to HPC][url_tuto_5] (HPC Carpentry)
+* [HPC in a day][url_tuto_4] (Software Carpentry}
 
-After successfully entering your password, you'll be prompted for your second
-authentication factor with a message like this:
 
-    Duo two-factor login for <sunetid>
+### Text editors
 
-    Enter a passcode or select one of the following options:
+Multiple text editors are available on Sherlock. For beginners, we recommend
+the use of `nano`. And for more advanced uses, you'll also find below some
+resources about using `vim`
 
-     1. Duo Push to XXX-XXX-9999
-     2. Phone call to XXX-XXX-9999
-     3. SMS passcodes to XXX-XXX-9999 (next code starts with: 9)
+* [Nano guide][url_nano] (Gentoo wiki)
+* [Vim guide][url_vim] (Gentoo wiki)
 
-    Passcode or option (1-3):
 
+### Shell scripting
 
-!!! tip "Avoiding two-factor prompt on each connection"
+Compute jobs launched on Sherlock are most often initialized by user-written
+shell scripts. Beyond that, many common operations can be simplified and
+automated using shell scripts.
 
-    If you routinely open multiple sessions to Sherlock, having to confirm each
-    one of them with a second authentication factor could rapidely become
-    cumbersome. To work around this, the OpenSSH client allows multiplexing
-    channels and re-using existing authenticated for opening new sessions.
-    Please see the [Advanced Connection Options][url_avoid_duo] page for more
-    details.
+For an introduction to shell scripting, you can refer to:
 
-If your second factor is accepted, you'll see the following message:
+* [Bash Programming - Introduction HOWTO][url_scripting]
 
-    Success. Logging you in...
-
-### Authentication failures
-
-!!! warning "Excessive authentication failures"
-
-    Entering an invalid password multiple times will result in a (temporary)
-    ban of your IP address.
-
-To prevent brute-force password guessing attacks on Sherlock login nodes, we
-automatically block IP addresses that generate too many authentication failures
-in a given time span. This results in a temporary ban of the infringing IP
-address, and the impossibility for the user to connect to Sherlock from that
-IP address.
-
-When this happens, your SSH connection attempts will result in the following
-error:
-
-    ssh: connect to host login.sherlock.stanford.edu port 22: Connection refused
-
-To lift the ban before its automatic expiration, feel free to [contact
-us][url_contact] and provide your IP address.
-
-
-
-## Login
-
-Congratulations! You've successfully connected to Sherlock. You'll be greeted
-by the following *message of the day*:
-
-```
-
-             --*-*- Stanford Research Computing Center -*-*--
-                ____  _               _            _
-               / ___|| |__   ___ _ __| | ___   ___| | __
-               \___ \| '_ \ / _ \ '__| |/ _ \ / __| |/ /
-                ___) | | | |  __/ |  | | (_) | (__|   <
-               |____/|_| |_|\___|_|  |_|\___/ \___|_|\_\ 2.0
-
------------------------------------------------------------------------------
-  This system is for authorized users only and you are expected to comply
-  with all Stanford computing, network and research policies.
-  For more info, see https://acomp.stanford.edu/about/policy and
-  https://doresearch.stanford.edu/policies/research-policy-handbook
------------------------------------------------------------------------------
-  This system is *NOT* HIPAA compliant and shouldn't be used to process PHI
-  See https://privacy.stanford.edu/faqs/hipaa-faqs for more information.
------------------------------------------------------------------------------
-
-  Support           email: srcc-support@stanford.edu
-  ========   office hours: Tuesdays 10-11am, Thursdays 3-4pm,
-                           room 255 @ Polya Hall
-
-  Web                 www: https://www.sherlock.stanford.edu
-  ========           news: https://news.sherlock.stanford.edu
-                   status: https://status.sherlock.stanford.edu
-
------------------------------------------------------------------------------
-```
-
-Once authenticated to Sherlock, you'll see the following prompt:
-
-<!-- manual coloring -->
-<pre style="padding: 10.5px 12px">
-[<font color=lawngreen>&lt;sunetid&gt;</font>@sh-ln01 <font color=red>login!</font> ~]$
-</pre>
-
-It indicates the name of the login node you've been connected to, and a
-reminder that you're actually connected to a [login node][url_login], not a
-compute node.
-
-!!! danger "Login nodes are not for computing"
-
-    Login nodes are shared among many users and therefore must not be used to
-    run computationally intensive tasks. Those should be submitted to the
-    scheduler which will dispatch them on compute nodes.
-
-By contrast, the shell prompt on a login node looks like this:
-
-<!-- manual coloring -->
-<pre style="padding: 10.5px 12px">
-[<font color=lawngreen>&lt;sunetid&gt;</font>@sh-101-01 ~]$
-</pre>
-
-
-## Start computing
-
-To start computing, there's still a extra step required, which is requesting
-resources to run your application. It's all described in the [next
-section][url_submit].
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_prereq]:       /docs/getting-started/prerequisites
-[url_account]:      /docs/getting-started/prerequisites#how-to-request-an-account
-[url_avoid_duo]:    /docs/advanced-topics/connection#avoiding-multiple-duo-prompts
-[url_other_auth]:   /docs/advanced-topics/connection#authentication-methods
-[url_suaccounts]:   https://accounts.stanford.edu/
 [url_sunet]:        https://uit.stanford.edu/service/accounts/sunetids
-[url_minsec]:       https://uit.stanford.edu/guide/securitystandards
-[url_twostep]:      https://uit.stanford.edu/service/webauth/twostep
-[url_login]:        /docs/overview/glossary/#login-nodes
-[url_submit]:       /docs/getting-started/submitting
-[url_contact]:      mailto:srcc-support@stanford.edu
+[url_level]:        https://uit.stanford.edu/service/accounts/sunetids#services
+[url_sponsor]:      https://uit.stanford.edu/service/sponsorship/
 
-[comment]: #  (footnotes -----------------------------------------------------)
+[url_openssh]:      https://www.openssh.com/
+[url_wsl]:          https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
+[url_wsl_doc]:      https://msdn.microsoft.com/commandline/wsl
+[url_wsl_howto]:    https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/
+[url_cygwin]:       https://cygwin.com
+[url_ssh_clients]:  https://en.wikipedia.org/wiki/Comparison_of_SSH_clients#Platform
 
-[^krb_legacy]: On Sherlock 1.0, GSSAPI tokens (based on Kerberos tickets)
-were the only allowed authentication method, which could cause some
-interoperability with third-party SSH clients.
+[url_request]:      #how-to-request-an-account
+[url_ssh]:          #ssh-clients
+[url_unix]:         #unixlinux-resources
+[url_bash]:         #shell-scripting
+[url_concepts]:     /docs/overview/concepts
+[url_glossary]:     /docs/overview/glossary
 
-[^auth_methods]: For other methods of authentication, see the [Advanced
- Connection Options][url_other_auth] page.
+[url_scripting]:    http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
+[url_tuto_1]:       http://www.ee.surrey.ac.uk/Teaching/Unix/
+[url_tuto_2]:       http://www.doc.ic.ac.uk/~wjk/UnixIntro/
+[url_tuto_3]:       https://swcarpentry.github.io/shell-novice/
+[url_tuto_4]:       https://psteinb.github.io/hpc-in-a-day/
+[url_tuto_5]:       https://hpc-carpentry.github.io/hpc-intro/
 
 
+[url_nano]:         https://wiki.gentoo.org/wiki/Nano/Basics_Guide
+[url_vim]:          https://wiki.gentoo.org/wiki/Vim/Guide
