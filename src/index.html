@@ -46,15 +46,13 @@
     <link rel="stylesheet" type="text/css" href="https://www.stanford.edu/su-identity/css/ie/ie7.css" />
   <![endif]-->
 
-  <!-- HeadwayApp widget (Changelog) - https://headwayapp.co -->
-	<script>
-	  var HW_config = {
-		selector: ".changelog", // CSS selector where to inject the badge
-		account:  "JrZ9XJ" 		// account ID
-	  };
-	</script>
-	<script async src="//cdn.headwayapp.co/widget.js"></script>
-
+  <!-- noticeable.io widget (changelog) -->
+  <script>if (!window.customElements) { document.write('<!--'); }</script>
+  <script src="https://cdn.noticeable.io/v1/libs/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+  <!--! do not remove this comment -->
+  <script src="https://cdn.noticeable.io/v1/libs/webcomponentsjs/webcomponents-loader.js"></script>
+  <link rel="import" href="https://cdn.noticeable.io/v1/libs/noticeable-widget/noticeable-widget.html">
+                    
 	<!-- UserVoice widget -->
 	<script async>
 	  // Include the UserVoice JavaScript SDK (only needed once on a page)
@@ -127,7 +125,7 @@
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <div class="nav navbar-nav navbar-right" id="status"></div>
+      <div class="nav navbar-nav navbar-right"></div>
         <ul class="nav navbar-nav navbar-right">
           <li class="hidden">
             <a href="#page-top"></a>
@@ -150,9 +148,13 @@
           <li>
             <a class="page-scroll"
             href="https://status.sherlock.stanford.edu">Status</a>
+            <span id="status"/>
           </li>
           <li>
-            <a class="page-scroll changelog" href="https://news.sherlock.stanford.edu">News</a>
+            <a class="page-scroll" href="https://news.sherlock.stanford.edu">News</a>
+            <noticeable-widget id="news"
+            access-token="AoaqgE2gEgx8fjXbxETY"
+            project-id="bYyIewUV308AvkMztxix"></noticeable-widget></span>
           </li>
           <li>
             <a class="page-scroll" href="/docs">Docs</a>
