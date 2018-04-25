@@ -47,61 +47,57 @@
   <![endif]-->
 
   <!-- noticeable.io widget (changelog) -->
-  <script>if (!window.customElements) { document.write('<!--'); }</script>
-  <script src="https://cdn.noticeable.io/v1/libs/webcomponentsjs/custom-elements-es5-adapter.js"></script>
-  <!--! do not remove this comment -->
-  <script src="https://cdn.noticeable.io/v1/libs/webcomponentsjs/webcomponents-loader.js"></script>
-  <link rel="import" href="https://cdn.noticeable.io/v1/libs/noticeable-widget/noticeable-widget.html">
+  <script async="" defer="" src="https://cdn.noticeable.io/v1/noticeable-widget.js"></script>
                     
-	<!-- UserVoice widget -->
-	<script async>
-	  // Include the UserVoice JavaScript SDK (only needed once on a page)
-	  UserVoice = window.UserVoice||[];(
-        function() {
-          var uv=document.createElement('script');
-          uv.type='text/javascript';
-          uv.async=true;
-          uv.src='//widget.uservoice.com/4a4IvDVZKokz6bHpdbN6Q.js';
-          var s=document.getElementsByTagName('script')[0];
-          s.parentNode.insertBefore(uv,s)
-        }
-      )();
-	  UserVoice.push(['set', {
-		accent_color: '#8C1515',
-		ticket_custom_fields: {
-		  'System': 'Sherlock'
-		},
-		strings: {
-		  contact_message_placeholder: 'How could we help you?'
-		}
-	  }]);
-	  var mesg_tmpl = 'Please indicate your name, SUNet ID, and PI, and we\'ll get back to you. Your PI\'s approval will be required.'
-	  for (i=1; i<=3; i++) {
-		  UserVoice.push(['addTrigger', '#account_request'+i, {
-			position: 'top',
-			width: '300px',
-			height: '350px',
-			screenshot_enabled: false,
-			ticket_custom_fields: {
-			  'System': 'Sherlock'
-			},
-			strings: {
-			  contact_title: 'Sherlock account request',
-			  contact_message_placeholder: mesg_tmpl
-			}
-		  }]);
-	  }
-	</script>
+    <!-- UserVoice widget -->
+  <script async>
+    // Include the UserVoice JavaScript SDK (only needed once on a page)
+    UserVoice = window.UserVoice||[];(
+      function() {
+        var uv=document.createElement('script');
+        uv.type='text/javascript';
+        uv.async=true;
+        uv.src='//widget.uservoice.com/4a4IvDVZKokz6bHpdbN6Q.js';
+        var s=document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(uv,s)
+      }
+    )();
+    UserVoice.push(['set', {
+      accent_color: '#8C1515',
+      ticket_custom_fields: {
+        'System': 'Sherlock'
+      },
+      strings: {
+        contact_message_placeholder: 'How could we help you?'
+      }
+    }]);
+    var mesg_tmpl = 'Please indicate your name, SUNet ID, and PI, and we\'ll get back to you. Your PI\'s approval will be required.'
+    for (i=1; i<=3; i++) {
+        UserVoice.push(['addTrigger', '#account_request'+i, {
+          position: 'top',
+          width: '300px',
+          height: '350px',
+          screenshot_enabled: false,
+          ticket_custom_fields: {
+            'System': 'Sherlock'
+          },
+          strings: {
+            contact_title: 'Sherlock account request',
+            contact_message_placeholder: mesg_tmpl
+          }
+        }]);
+    }
+  </script>
 
   <!-- Google Analytics -->
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	  ga('create', 'UA-68034405-2', 'auto');
-	  ga('send', 'pageview');
-	</script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-68034405-2', 'auto');
+    ga('send', 'pageview');
+  </script>
 
 </head>
 
@@ -119,7 +115,7 @@
           <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
         </button>
         <a class="navbar-brand page-scroll" href="#page-top">
-		      <img src="img/logo_small.png" height="30" alt="">Sherlock
+              <img src="img/logo_small.png" height="30" alt="">Sherlock
         </a>
       </div>
 
@@ -153,9 +149,8 @@
           <li>
             <a class="page-scroll" href="https://news.sherlock.stanford.edu">News</a>
             <noticeable-widget id="news"
-            no-cache="true"
-            access-token="AoaqgE2gEgx8fjXbxETY"
-            project-id="bYyIewUV308AvkMztxix"></noticeable-widget></span>
+            access-token="AoaqgE2gEgx8fjXbxETY" project-id="bYyIewUV308AvkMztxix">
+            </noticeable-widget>
           </li>
           <li>
             <a class="page-scroll" href="/docs">Docs</a>
@@ -184,7 +179,7 @@
     <div class="container">
       <div class="intro-text">
         <img height="180" src="img/logo.png" alt="">
-		<div class="intro-heading">Sherlock</div>
+        <div class="intro-heading">Sherlock</div>
         <div class="intro-subtitle">The HPC cluster for all your computing needs</div>
         <div class="intro-content">Need to access computing resources to
         support your sponsored or departmental research at Stanford?  You may
@@ -322,8 +317,8 @@
             href="docs/">documentation</a>, and drop us an <a
             href="mailto:srcc-support@stanford.edu">email</a> if
             you have any question.</p> </div>
-	  </div>
-	</div>
+      </div>
+    </div>
   </section>
 
   <!-- About Section -->
@@ -422,7 +417,7 @@
                 <h4>Come
                   <br>join us
                   <br>today!</h4>
-				
+                
               </div>
             </li>
           </ul>
@@ -486,13 +481,13 @@
 <script src="//libraries.hund.io/status-js/status-3.4.3.js"></script>
 <script>
   var statusWidget = new Status.Widget({
-	hostname: "status.sherlock.stanford.edu",
-	selector: "#status",
-	display: {
-		hideOnError: true,
-		ledOnly: true,
-		panePosition: "bottom-right"
-	}
+    hostname: "status.sherlock.stanford.edu",
+    selector: "#status",
+    display: {
+        hideOnError: true,
+        ledOnly: true,
+        panePosition: "bottom-right"
+    }
   });
 </script>
 
