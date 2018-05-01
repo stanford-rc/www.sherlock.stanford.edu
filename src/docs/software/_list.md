@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, April 25 2018, we provide 337 software packages, in 7 categories, covering 45 fields of science:*
+*As of Tuesday, May 01 2018, we provide 338 software packages, in 7 categories, covering 45 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -285,6 +285,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **resource monitoring** | `remora` | -&nbsp;`1.8.2` | [Website](https://github.com/TACC/remora) | Remora is a tool to monitor runtime resource utilization. 
 **scm** | `git` | -&nbsp;`2.12.2` | [Website](http://git-scm.com) | Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. 
 **scm** | `git-lfs` | -&nbsp;`2.4.0` | [Website](https://git-lfs.github.com/) | Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server. 
+**scm** | `mercurial` | -&nbsp;`4.5.3` | [Website](https://www.mercurial-scm.org/) | Mercurial is a free, distributed source control management tool. 
 **scm** | `subversion` | -&nbsp;`1.9.7` | [Website](https://subversion.apache.org/) | Subversion is an open source version control system. 
 **tools** | `curl` | -&nbsp;`7.54.0` | [Website](https://curl.haxx.se/) | curl is an open source command line tool and library for transferring data with URL syntax. 
 **tools** | `expat` | -&nbsp;`2.2.3` | [Website](http://libexpat.github.io) | Expat is a stream-oriented XML parser library written in C. 
