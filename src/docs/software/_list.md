@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, May 01 2018, we provide 338 software packages, in 7 categories, covering 45 fields of science:*
+*As of Wednesday, May 02 2018, we provide 338 software packages, in 7 categories, covering 45 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -86,7 +86,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **compiler** | `ifort` | -&nbsp;`2017.u2`<br/>-&nbsp;`2018.u1`<br/>-&nbsp;`2018` | [Website](https://software.intel.com/en-us/fortran-compilers) | Intel Fortran Compiler, also known as ifort, is a group of Fortran compilers from Intel 
 **compiler** | `llvm` | -&nbsp;`3.8.1`<br/>-&nbsp;`4.0.0`<br/>-&nbsp;`5.0.0` | [Website](http://llvm.org) | The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler, 
 **compiler** | `nagfor` | -&nbsp;`npl6a61na` | [Website](https://www.nag.com/nag-compiler) | The NAG Fortran Compiler is a full standard implementation of the ISO Fortran 95 language with the addition of all of Fortran 2003, most of Fortran 2008 and OpenMP 3.0 and 3.1. 
-**compiler** | `pgi` | -&nbsp;`17.4` | [Website](http://pgroup.com) | PGI compilers and tools, including Open MPI (Community Edition). 
+**compiler** | `pgi` | -&nbsp;`18.4` | [Website](http://pgroup.com) | PGI compilers and tools, including Open MPI (Community Edition). 
 **compiler** | `smlnj` | -&nbsp;`110.81` | [Website](http://smlnj.org/) | Standard ML of New Jersey (abbreviated SML/NJ) is a compiler for the Standard ML '97 programming language. 
 **data** | `h5utils` | -&nbsp;`1.12.1` | [Website](http://ab-initio.mit.edu/wiki/index.php/H5utils) | h5utils is a set of utilities for visualization and conversion of scientific data in the free, portable HDF5 format. 
 **data** | `hdf5` | -&nbsp;`1.10.0p1` | [Website](https://www.hdfgroup.org/hdf5) | HDF5 is a data model, library, and file format for storing and managing data. It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O and for high volume and complex data. 
