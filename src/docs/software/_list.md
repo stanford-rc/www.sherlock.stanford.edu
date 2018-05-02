@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, May 02 2018, we provide 338 software packages, in 7 categories, covering 45 fields of science:*
+*As of Wednesday, May 02 2018, we provide 339 software packages, in 7 categories, covering 45 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -148,7 +148,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **deep learning** | `py-keras` | -&nbsp;`2.0.8_py27`<br/>-&nbsp;`2.1.5_py36`<br/>-&nbsp;`2.1.5_py27` | [Website](http://keras.io) | Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. 
 **deep learning** | `py-onnx` | -&nbsp;`1.0.1_py27` | [Website](https://onnx.ai) | ONNX is a open format to represent deep learning models. 
 **deep learning** | `py-pytorch` | -&nbsp;`0.2.0_py27`<br/>-&nbsp;`0.2.0_py36`<br/>-&nbsp;`0.3.0_py36`<br/>-&nbsp;`0.3.0_py27` | [Website](http://pytorch.org) | PyTorch is a deep learning framework that puts Python first. 
-**deep learning** | `py-tensorflow` | -&nbsp;`1.4.0_py27`<br/>-&nbsp;`1.5.0_py27`<br/>-&nbsp;`1.5.0_py36`<br/>-&nbsp;`1.6.0_py36`<br/>-&nbsp;`1.7.0_py27`<br/>-&nbsp;`1.6.0_py27` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
+**deep learning** | `py-tensorflow` | -&nbsp;`1.4.0_py27`<br/>-&nbsp;`1.5.0_py27`<br/>-&nbsp;`1.5.0_py36`<br/>-&nbsp;`1.6.0_py36`<br/>-&nbsp;`1.7.0_py27`<br/>-&nbsp;`1.8.0_py27`<br/>-&nbsp;`1.6.0_py27` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
 **deep learning** | `py-tensorlayer` | -&nbsp;`1.6.3_py27` | [Website](http://tensorlayer.org) | TensorLayer is a Deep Learning (DL) and Reinforcement Learning (RL) library extended from Google TensorFlow. 
 **deep learning** | `py-theano` | -&nbsp;`1.0.1_py27` | [Website](http://deeplearning.net/software/theano) | Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. 
 **deep learning** | `tensorrt` | -&nbsp;`3.0.1`<br/>-&nbsp;`3.0.4` | [Website](https://developer.nvidia.com/tensorrt) | NVIDIA TensorRT™ is a high-performance deep learning inference optimizer and runtime that delivers low latency, high-throughput inference for deep learning applications. 
