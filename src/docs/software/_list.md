@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Thursday, May 03 2018, we provide 339 software packages, in 7 categories, covering 45 fields of science:*
+*As of Thursday, May 03 2018, we provide 340 software packages, in 7 categories, covering 45 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -220,6 +220,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **file management** | `fpart` | -&nbsp;`0.9.3` | [Website](https://github.com/martymac/fpart) | fpart sorts files and packs them into partitions. 
 **file management** | `py-pcircle` | -&nbsp;`0.17_py27` | [Website](https://github.com/olcf/pcircle) | pcircle contains a suite of file system tools developed at OLCF to take advantage of highly scalable parallel file system such as Lustre. 
 **file transfer** | `gdrive` | -&nbsp;`2.1.0` | [Website](https://github.com/prasmussen/gdrive) | gdrive is a command line utility for interacting with Google Drive. 
+**file transfer** | `gsutil` | -&nbsp;`4.31` | [Website](https://cloud.google.com/storage/docs/gsutil) | gsutil is a Python application that lets you access Cloud Storage from the command line. 
 **file transfer** | `lftp` | -&nbsp;`4.8.1` | [Website](https://lftp.yar.ru/) | LFTP is a sophisticated file transfer program supporting a number of network protocols (ftp, http, sftp, fish, torrent). 
 **file transfer** | `mpifileutils` | -&nbsp;`20170210` | [Website](https://github.com/hpc/mpifileutils) | mpiFileUtils is a suite of MPI-based tools to manage large datasets, which may vary from large directory trees to large files. 
 **file transfer** | `py-globus-cli` | -&nbsp;`1.2.0` | [Website](https://github.com/globus/globus-cli) | A command line wrapper over the Globus SDK for Python. 
