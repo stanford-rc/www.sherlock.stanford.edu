@@ -129,7 +129,7 @@ If your second factor is accepted, you'll see the following message:
 
 ### Authentication failures
 
-!!! warning "Excessive authentication failures"
+!!! danger "Excessive authentication failures"
 
     Entering an invalid password multiple times will result in a (temporary)
     ban of your IP address.
@@ -144,6 +144,19 @@ When this happens, your SSH connection attempts will result in the following
 error:
 
     ssh: connect to host login.sherlock.stanford.edu port 22: Connection refused
+
+
+!!! warning "SSHFS on macOS"
+
+    SSHFS on macOS is known to try to [automatically reconnect][url_sshfs]
+    filesystem mounts after resuming from sleep or uspend, even without any
+    valid credentials.  As a result, it will generate a lot of failed
+    connection attempts and likely make your IP address blacklisted on login
+    nodes.
+
+    Make sure to unmount your SSHFS drives before putting your macOS system
+    to sleep to avoid this situation.
+
 
 To lift the ban before its automatic expiration, feel free to [contact
 us][url_contact] and provide your IP address.
@@ -229,6 +242,7 @@ section][url_submit].
 [url_login]:        /docs/overview/glossary/#login-nodes
 [url_submit]:       /docs/getting-started/submitting
 [url_contact]:      mailto:srcc-support@stanford.edu
+[url_sshfs]:        /docs/user-guide/storage/data-transfer#sshfs
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

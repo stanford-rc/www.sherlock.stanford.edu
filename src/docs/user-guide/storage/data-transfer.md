@@ -147,7 +147,7 @@ and then should not be typed in).
     For more information about using the `rsync`, you can
     refer to this [tutorial][url_rsync_tuto] for more details and examples.
 
-### SSHFS
+#### SSHFS
 
 : Sometimes, moving files in and out of the cluster, and maintaining two
     copies of each of the files you work on, both on your local machine and on
@@ -171,6 +171,17 @@ and then should not be typed in).
     [MacOS][url_sshfs_macos] :fa-apple:, and [Windows][url_sshfs_windows]
     :fa-windows:.
 
+    !!! warning "SSHFS on macOS"
+
+        SSHFS on macOS is known to try to automatically reconnect filesystem
+        mounts after resuming from sleep or uspend, even without any valid
+        credentials.  As a result, it will generate a lot of failed connection
+        attempts and likely make your [IP address blacklisted][url_auth_fail]
+        on login nodes.
+
+        Make sure to unmount your SSHFS drives before putting your macOS system
+        to sleep to avoid this situation.
+
     For instance, on a Linux machine with SSHFS installed, you could mount your
     Sherlock home directory with the following commands:
 
@@ -186,6 +197,7 @@ and then should not be typed in).
 
     For more information about using SSHFS on your local machine, you can
     refer to this [tutorial][url_sshfs_tuto] for more details and examples.
+
 
 
 ### Globus
@@ -346,6 +358,7 @@ documentation][url_rclone].
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_ssh_clients]:  /docs/getting-started/prerequisites/#ssh-clients
+[url_auth_fail]:    /docs/getting-started/connecting/#authentication-failures
 
 [url_winscp]:       https://winscp.net/eng/docs/introduction
 [url_filezilla]:    https://filezilla-project.org/
