@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Thursday, May 10 2018, we provide 342 software packages, in 7 categories, covering 46 fields of science:*
+*As of Thursday, May 10 2018, we provide 343 software packages, in 7 categories, covering 46 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -143,7 +143,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | `tbb` | -&nbsp;`2017.u2`<br/>-&nbsp;`2018.u1`<br/>-&nbsp;`2018` | [Website](https://software.intel.com/en-us/intel-tbb) | Intel® Threading Building Blocks (Intel® TBB) is a widely used C++ library for shared-memory parallel programming and heterogeneous computing (intra-node distributed memory programming). 
 **libs** | `zeromq` | -&nbsp;`4.2.2` | [Website](http://zeromq.org) | ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous messaging library, aimed at use in distributed or concurrent applications. 
 **mpi** | `impi` | -&nbsp;`2017.u2`<br/>-&nbsp;`2018.u1`<br/>-&nbsp;`2018` | [Website](https://software.intel.com/en-us/intel-mpi-library) | Intel® MPI Library is a multi-fabric message passing library that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification. 
-**mpi** | `openmpi` | -&nbsp;`2.0.2`<br/>-&nbsp;`3.0.1`<br/>-&nbsp;`2.1.1` | [Website](https://www.openmpi.org) | The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. 
+**mpi** | `openmpi` | -&nbsp;`2.0.2`<br/>-&nbsp;`2.1.3`<br/>-&nbsp;`3.0.1`<br/>-&nbsp;`2.1.1` | [Website](https://www.openmpi.org) | The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. 
 **mpi** | `py-mpi4py` | -&nbsp;`3.0.0_py27` | [Website](https://bitbucket.org/mpi4py/mpi4py) | MPI for Python provides Python bindings for the Message Passing Interface (MPI) standard. It is implemented on top of the MPI-1/2/3 specification and exposes an API which grounds on the standard MPI-2 C++ bindings. 
 **networking** | `gasnet` | -&nbsp;`1.30.0` | [Website](https://gasnet.lbl.gov) | GASNet is a language-independent, low-level networking layer that provides network-independent, high-performance communication primitives tailored for implementing parallel global address space SPMD languages and libraries. 
 **networking** | `libfabric` | -&nbsp;`1.6.0` | [Website](https://ofiwg.github.io/libfabric/) | The Open Fabrics Interfaces (OFI) is a framework focused on exporting fabric communication services to applications. Libfabric is the library that defines and exports the user-space API of OFI. 
