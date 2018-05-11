@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Thursday, May 10 2018, we provide 343 software packages, in 7 categories, covering 46 fields of science:*
+*As of Friday, May 11 2018, we provide 344 software packages, in 7 categories, covering 46 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -79,7 +79,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **computational chemistry** | `libxc` | -&nbsp;`3.0.0` | [Website](http://octopus-code.org/wiki/Libxc) | Libxc is a library of exchange-correlation functionals for density-functional theory. 
 **computational chemistry** | `nwchem` | -&nbsp;`6.8` | [Website](http://www.nwchem-sw.org) | NWChem is an ab initio computational chemistry software package which also includes quantum chemical and molecular dynamics functionality. 
 **computational chemistry** | `py-ase` | -&nbsp;`3.14.1_py27` | [Website](https://wiki.fysik.dtu.dk/ase/) | The Atomic Simulation Environment (ASE) is a set of tools and Python modules for setting up, manipulating, running, visualizing and analyzing atomistic simulations. 
-**computational chemistry** | `schrodinger`^<b class="lic"></b>^ | -&nbsp;`2017-3` | [Website](https://www.schrodinger.com) | Schrödinger Suites (Small-molecule Drug Discovery Suite, Material Science Suite, Biologics Suite) provide a set of molecular modelling software. 
+**computational chemistry** | `schrodinger`^<b class="lic"></b>^ | -&nbsp;`2017-3`<br/>-&nbsp;`2018-1` | [Website](https://www.schrodinger.com) | Schrödinger Suites (Small-molecule Drug Discovery Suite, Material Science Suite, Biologics Suite) provide a set of molecular modelling software. 
 **computational chemistry** | `vasp`^<b class="lic"></b>^ | -&nbsp;`5.4.1` | [Website](https://www.vasp.at) | The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic scale materials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics, from first principles. 
 **molecular dynamics** | `gromacs` | -&nbsp;`2016.3`<br/>-&nbsp;`2018` | [Website](http://www.gromacs.org) | GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles. 
 **molecular dynamics** | `lammps` | -&nbsp;`20180316` | [Website](http://lammps.sandia.gov) | LAMMPS is a classical molecular dynamics code that models an ensemble of particles in a liquid, solid, or gaseous state. 
