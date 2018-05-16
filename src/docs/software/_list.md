@@ -1,15 +1,28 @@
 
 ## Categories
 
-*As of Thursday, May 03 2018, we provide 340 software packages, in 7 categories, covering 45 fields of science:*
+*As of Friday, May 11 2018, we provide 348 software packages, in 7 categories, covering 47 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
-* [`devel`](#devel) <small>build, compiler, data, language, libs, mpi, networking, parser</small>
+* [`devel`](#devel) <small>build, compiler, data, data analytics, language, libs, mpi, networking, parser</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, photonics</small>
-* [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, language, libs, resource monitoring, scm, tools</small>
+* [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, language, libs, performance, resource monitoring, scm, tools</small>
 * [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
+
+
+!!! warning "Licensed software"
+
+    Access to software modules marked with ^<b class="lic"></b>^ in the tables
+    below is restricted to properly licensed user groups.
+
+    The SRCC is not funded to provide commercial software on Sherlock and
+    researchers are responsible for the costs of purchasing and renewing
+    commercial software licenses. For more information, please feel free to
+    [contact us](mailto:srcc-support@stanford.edu) and see the [Stanford
+    Software Licensing page](https://uit.stanford.edu/service/softwarelic) for
+    purchasing information.
 
 
 <!-- color styles for module properties -->
@@ -66,7 +79,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **computational chemistry** | `libxc` | -&nbsp;`3.0.0` | [Website](http://octopus-code.org/wiki/Libxc) | Libxc is a library of exchange-correlation functionals for density-functional theory. 
 **computational chemistry** | `nwchem` | -&nbsp;`6.8` | [Website](http://www.nwchem-sw.org) | NWChem is an ab initio computational chemistry software package which also includes quantum chemical and molecular dynamics functionality. 
 **computational chemistry** | `py-ase` | -&nbsp;`3.14.1_py27` | [Website](https://wiki.fysik.dtu.dk/ase/) | The Atomic Simulation Environment (ASE) is a set of tools and Python modules for setting up, manipulating, running, visualizing and analyzing atomistic simulations. 
-**computational chemistry** | `schrodinger`^<b class="lic"></b>^ | -&nbsp;`2017-3` | [Website](https://www.schrodinger.com) | Schrödinger Suites (Small-molecule Drug Discovery Suite, Material Science Suite, Biologics Suite) provide a set of molecular modelling software. 
+**computational chemistry** | `schrodinger`^<b class="lic"></b>^ | -&nbsp;`2017-3`<br/>-&nbsp;`2018-1` | [Website](https://www.schrodinger.com) | Schrödinger Suites (Small-molecule Drug Discovery Suite, Material Science Suite, Biologics Suite) provide a set of molecular modelling software. 
 **computational chemistry** | `vasp`^<b class="lic"></b>^ | -&nbsp;`5.4.1` | [Website](https://www.vasp.at) | The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic scale materials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics, from first principles. 
 **molecular dynamics** | `gromacs` | -&nbsp;`2016.3`<br/>-&nbsp;`2018` | [Website](http://www.gromacs.org) | GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles. 
 **molecular dynamics** | `lammps` | -&nbsp;`20180316` | [Website](http://lammps.sandia.gov) | LAMMPS is a classical molecular dynamics code that models an ensemble of particles in a liquid, solid, or gaseous state. 
@@ -79,7 +92,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 ### Devel
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
-**build** | `cmake` | -&nbsp;`3.8.1` | [Website](https://www.cmake.org) | CMake is an extensible, open-source system that manages the build process in an operating system and in a compiler-independent manner. 
+**build** | `cmake` | -&nbsp;`3.8.1`<br/>-&nbsp;`3.11.1` | [Website](https://www.cmake.org) | CMake is an extensible, open-source system that manages the build process in an operating system and in a compiler-independent manner. 
 **build** | `scons` | -&nbsp;`2.5.1_py36`<br/>-&nbsp;`2.5.1_py27` | [Website](http://www.scons.org) | SCons is an Open Source software construction tool. 
 **compiler** | `gcc` | -&nbsp;`7.1.0`<br/>-&nbsp;`7.3.0`<br/>-&nbsp;`6.3.0` | [Website](http://gcc.gnu.org) | The GNU Compiler Collection includes front ends for C, C++, Fortran, Java, and Go, as well as libraries for these languages (libstdc++, libgcj,...). 
 **compiler** | `icc` | -&nbsp;`2017.u2`<br/>-&nbsp;`2018.u1`<br/>-&nbsp;`2018` | [Website](https://software.intel.com/en-us/c-compilers) | Intel C++ Compiler, also known as icc or icl, is a group of C and C++ compilers from Intel 
@@ -96,6 +109,9 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **data** | `pnetcdf` | -&nbsp;`1.8.1` | [Website](http://cucis.ece.northwestern.edu/projects/PnetCDF/) | Parallel netCDF (PnetCDF) is a parallel I/O library for accessing NetCDF files in CDF-1, 2, and 5 formats. 
 **data** | `protobuf` | -&nbsp;`3.4.0` | [Website](https://developers.google.com/protocol-buffers/) | Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data. 
 **data** | `redis` | -&nbsp;`4.0.1` | [Website](https://redis.io) | Redis is an open source, in-memory data structure store, used as a database, cache and message broker. 
+**data analytics** | `hadoop` | -&nbsp;`3.1.0` | [Website](https://hadoop.apache.org/) | The Apache Hadoop software library is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. 
+**data analytics** | `py-sparkhpc` | -&nbsp;`0.3` | [Website](https://sparkhpc.readthedocs.io) | Launching and controlling spark on hpc clusters  
+**data analytics** | `spark` | -&nbsp;`2.3.0` | [Website](https://spark.apache.org) | Apache Spark™ is a unified analytics engine for large-scale data processing. 
 **language** | `cuda` | -&nbsp;`8.0.61`<br/>-&nbsp;`9.0.176`<br/>-&nbsp;`9.1.85` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
 **language** | `go` | -&nbsp;`1.9` | [Website](http://golang.org) | Go is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
 **language** | `guile` | -&nbsp;`2.0.11`<br/>-&nbsp;`2.2.2` | [Website](https://www.gnu.org/software/guile/) | GNU Guile is the preferred extension system for the GNU Project, which features an implementation of the Scheme programming language. 
@@ -111,6 +127,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **language** | `py-jupyter` | -&nbsp;`1.0.0_py36`<br/>-&nbsp;`1.0.0_py27` | [Website](https://jupyter.org) | Jupyter is a browser-based interactive notebook for programming, mathematics, and data science. It supports a number of languages via plugins. 
 **language** | `python` | -&nbsp;`3.6.1`<br/>-&nbsp;`2.7.13` | [Website](https://www.python.org) | Python is an interpreted, interactive, object-oriented programming language. 
 **language** | `ruby` | -&nbsp;`2.4.1` | [Website](https://www.ruby-lang.org) | A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. 
+**language** | `scala` | -&nbsp;`2.12.6` | [Website](https://www.scala-lang.org) | Scala combines object-oriented and functional programming in one concise, high-level language. 
 **libs** | `ant` | -&nbsp;`1.10.1` | [Website](https://ant.apache.org/) | Apache Ant is a Java library and command-line tool whose mission is to drive processes described in build files as targets and extension points dependent upon each other. 
 **libs** | `boost` | -&nbsp;`1.64.0` | [Website](http://www.boost.org) | Boost is a set of libraries for the C++ programming language that provide support for tasks and structures such as linear algebra, pseudorandom number generation, multithreading, image processing, regular expressions, and unit testing. 
 **libs** | `cnmem` | -&nbsp;`1.0.0` | [Website](https://github.com/NVIDIA/ncmem) | CNMeM is a simple library to help the Deep Learning frameworks manage CUDA memory. 
@@ -130,7 +147,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | `tbb` | -&nbsp;`2017.u2`<br/>-&nbsp;`2018.u1`<br/>-&nbsp;`2018` | [Website](https://software.intel.com/en-us/intel-tbb) | Intel® Threading Building Blocks (Intel® TBB) is a widely used C++ library for shared-memory parallel programming and heterogeneous computing (intra-node distributed memory programming). 
 **libs** | `zeromq` | -&nbsp;`4.2.2` | [Website](http://zeromq.org) | ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous messaging library, aimed at use in distributed or concurrent applications. 
 **mpi** | `impi` | -&nbsp;`2017.u2`<br/>-&nbsp;`2018.u1`<br/>-&nbsp;`2018` | [Website](https://software.intel.com/en-us/intel-mpi-library) | Intel® MPI Library is a multi-fabric message passing library that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification. 
-**mpi** | `openmpi` | -&nbsp;`2.0.2`<br/>-&nbsp;`3.0.1`<br/>-&nbsp;`2.1.1` | [Website](https://www.openmpi.org) | The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. 
+**mpi** | `openmpi` | -&nbsp;`2.0.2`<br/>-&nbsp;`2.1.3`<br/>-&nbsp;`3.0.1`<br/>-&nbsp;`2.1.1` | [Website](https://www.openmpi.org) | The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. 
 **mpi** | `py-mpi4py` | -&nbsp;`3.0.0_py27` | [Website](https://bitbucket.org/mpi4py/mpi4py) | MPI for Python provides Python bindings for the Message Passing Interface (MPI) standard. It is implemented on top of the MPI-1/2/3 specification and exposes an API which grounds on the standard MPI-2 C++ bindings. 
 **networking** | `gasnet` | -&nbsp;`1.30.0` | [Website](https://gasnet.lbl.gov) | GASNet is a language-independent, low-level networking layer that provides network-independent, high-performance communication primitives tailored for implementing parallel global address space SPMD languages and libraries. 
 **networking** | `libfabric` | -&nbsp;`1.6.0` | [Website](https://ofiwg.github.io/libfabric/) | The Open Fabrics Interfaces (OFI) is a framework focused on exporting fabric communication services to applications. Libfabric is the library that defines and exports the user-space API of OFI. 
@@ -283,6 +300,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | `py-pyqt5` | -&nbsp;`5.9.1_py36` | [Website](https://www.riverbankcomputing.com/software/pyqt/) | PyQt5 is a comprehensive set of Python bindings for Qt v5. 
 **libs** | `readline` | -&nbsp;`7.0` | [Website](https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html) | The GNU Readline library provides a set of functions for use by applications that allow users to edit command lines as they are typed in. 
 **libs** | `snappy` | -&nbsp;`1.1.7` | [Website](https://github.com/google/snappy) | A fast compressor/decompressor. 
+**performance** | `likwid` | -&nbsp;`4.3.2` | [Website](https://github.com/RRZE-HPC/likwid) | Likwid is a simple toolsuite of command line applications for performance oriented programmers. 
 **resource monitoring** | `remora` | -&nbsp;`1.8.2` | [Website](https://github.com/TACC/remora) | Remora is a tool to monitor runtime resource utilization. 
 **scm** | `git` | -&nbsp;`2.12.2` | [Website](http://git-scm.com) | Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. 
 **scm** | `git-lfs` | -&nbsp;`2.4.0` | [Website](https://git-lfs.github.com/) | Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server. 
