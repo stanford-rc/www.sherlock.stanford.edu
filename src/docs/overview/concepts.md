@@ -64,12 +64,21 @@ through the high-performance interconnect network.
 On a computing cluster, users typically connect to [login nodes][g_login],
 using a secure remote login protocol such as [SSH][g_ssh]. Unlike in
 traditional interactive environments, users then need to prepare [compute
-jobs][g_jobs] to submit to the [resource scheduler][g_scheduler]. Based on a
+jobs][g_jobs] to submit to a [resource scheduler][g_scheduler]. Based on a set
+of rules and limits, the scheduler will then try to match the jobs' resource
+requirements with available resources such as [CPUs][g_cpu], memory or
+computing accelerators such as [GPUs][g_gpu]. It will then execute the user
+defined tasks on the selected resources, and generate output files in one of
+the different [storage spaces][url_storage] available on the cluster, for the
+user to review and analyze.
 
+[g_cpu]:        glossary#cpu
+[g_gpu]:        glossary#gpu
 [g_login]:      glossary#login-nodes
 [g_ssh]:        glossary#ssh
 [g_jobs]:       glossary#job
 [g_scheduler]:  glossary#scheduler
+[url_storage]:  /docs/user-guide/storage/
 
 
 ## The condominium model
