@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, May 16 2018, we provide 348 software packages, in 7 categories, covering 47 fields of science:*
+*As of Wednesday, May 16 2018, we provide 349 software packages, in 7 categories, covering 47 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -88,6 +88,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **molecular dynamics** | `py-raspa2` | -&nbsp;`2.0.3_py27` | [Website](https://github.com/numat/RASPA2) | RASPA2 is a general purpose classical simulation package that can be used for the simulation of molecules in gases, fluids, zeolites, aluminosilicates, metal-organic frameworks, carbon nanotubes and external fields. 
 **molecular dynamics** | `quip` | -&nbsp;`20170901` | [Website](https://github.com/libAtoms/QUIP) | The QUIP package is a collection of software tools to carry out molecular dynamics simulations. 
 **quantum chemistry** | `cp2k` | -&nbsp;`4.1` | [Website](http://www.cp2k.org) | CP2K is a quantum chemistry and solid state physics software package that can perform atomistic simulations of solid state, liquid, molecular, periodic, material, crystal, and biological systems. 
+**quantum chemistry** | `quantum-espresso` | -&nbsp;`6.2.1` | [Website](https://www.quantum-espresso.org) | Quantum ESPRESSO is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials. 
 
 ### Devel
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
@@ -110,7 +111,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **data** | `protobuf` | -&nbsp;`3.4.0` | [Website](https://developers.google.com/protocol-buffers/) | Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data. 
 **data** | `redis` | -&nbsp;`4.0.1` | [Website](https://redis.io) | Redis is an open source, in-memory data structure store, used as a database, cache and message broker. 
 **data analytics** | `hadoop` | -&nbsp;`3.1.0` | [Website](https://hadoop.apache.org/) | The Apache Hadoop software library is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. 
-**data analytics** | `py-sparkhpc` | -&nbsp;`0.3` | [Website](https://sparkhpc.readthedocs.io) | Launching and controlling spark on hpc clusters  
+**data analytics** | `py-sparkhpc` | -&nbsp;`0.3` | [Website](https://sparkhpc.readthedocs.io) | Launching and controlling spark on HPC clusters  
 **data analytics** | `spark` | -&nbsp;`2.3.0` | [Website](https://spark.apache.org) | Apache Spark™ is a unified analytics engine for large-scale data processing. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/spark)
 **language** | `cuda` | -&nbsp;`8.0.61`<br/>-&nbsp;`9.0.176`<br/>-&nbsp;`9.1.85` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
 **language** | `go` | -&nbsp;`1.9` | [Website](http://golang.org) | Go is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
