@@ -252,7 +252,7 @@ manual page at [nfs4_acl(5)][url_nfs4_acl_man].
 
 [url_rhel_posix_acl]:   https://access.redhat.com/documentation/en-US/Red_Hat_Storage/2.0/html/Administration_Guide/ch09s05.html
 [url_unix_perms]:       https://en.wikipedia.org/wiki/File_system_permissions
-[url_contact]:          srcc-support@stanford.edu
+[url_contact]:          mailto:srcc-support@stanford.edu
 [url_nfs4_acl_man]:     http://linux.die.net/man/5/nfs4_acl
 
 
