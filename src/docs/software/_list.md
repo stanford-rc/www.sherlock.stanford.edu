@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, May 16 2018, we provide 348 software packages, in 7 categories, covering 47 fields of science:*
+*As of Wednesday, May 16 2018, we provide 349 software packages, in 7 categories, covering 47 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -79,6 +79,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **computational chemistry** | `libxc` | -&nbsp;`3.0.0` | [Website](http://octopus-code.org/wiki/Libxc) | Libxc is a library of exchange-correlation functionals for density-functional theory. 
 **computational chemistry** | `nwchem` | -&nbsp;`6.8` | [Website](http://www.nwchem-sw.org) | NWChem is an ab initio computational chemistry software package which also includes quantum chemical and molecular dynamics functionality. 
 **computational chemistry** | `py-ase` | -&nbsp;`3.14.1_py27` | [Website](https://wiki.fysik.dtu.dk/ase/) | The Atomic Simulation Environment (ASE) is a set of tools and Python modules for setting up, manipulating, running, visualizing and analyzing atomistic simulations. 
+**computational chemistry** | `quantum-espresso` | -&nbsp;`6.2.1` | [Website](https://www.quantum-espresso.org) | Quantum ESPRESSO is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials. 
 **computational chemistry** | `schrodinger`^<b class="lic"></b>^ | -&nbsp;`2017-3`<br/>-&nbsp;`2018-1` | [Website](https://www.schrodinger.com) | Schrödinger Suites (Small-molecule Drug Discovery Suite, Material Science Suite, Biologics Suite) provide a set of molecular modelling software. 
 **computational chemistry** | `vasp`^<b class="lic"></b>^ | -&nbsp;`5.4.1` | [Website](https://www.vasp.at) | The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic scale materials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics, from first principles. 
 **molecular dynamics** | `gromacs` | -&nbsp;`2016.3`<br/>-&nbsp;`2018` | [Website](http://www.gromacs.org) | GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles. 
