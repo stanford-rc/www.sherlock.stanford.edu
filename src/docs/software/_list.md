@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, May 16 2018, we provide 349 software packages, in 7 categories, covering 47 fields of science:*
+*As of Thursday, May 17 2018, we provide 350 software packages, in 7 categories, covering 47 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -113,7 +113,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **data analytics** | `hadoop` | -&nbsp;`3.1.0` | [Website](https://hadoop.apache.org/) | The Apache Hadoop software library is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. 
 **data analytics** | `py-sparkhpc` | -&nbsp;`0.3` | [Website](https://sparkhpc.readthedocs.io) | Launching and controlling spark on HPC clusters  
 **data analytics** | `spark` | -&nbsp;`2.3.0` | [Website](https://spark.apache.org) | Apache Spark™ is a unified analytics engine for large-scale data processing. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/spark)
-**language** | `cuda` | -&nbsp;`8.0.61`<br/>-&nbsp;`9.0.176`<br/>-&nbsp;`9.1.85` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
+**language** | `cuda` | -&nbsp;`8.0.61`<br/>-&nbsp;`9.0.176`<br/>-&nbsp;`9.1.85`<br/>-&nbsp;`9.2.88` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
 **language** | `go` | -&nbsp;`1.9` | [Website](http://golang.org) | Go is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
 **language** | `guile` | -&nbsp;`2.0.11`<br/>-&nbsp;`2.2.2` | [Website](https://www.gnu.org/software/guile/) | GNU Guile is the preferred extension system for the GNU Project, which features an implementation of the Scheme programming language. 
 **language** | `java` | -&nbsp;`1.8.0_131` | [Website](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. 
