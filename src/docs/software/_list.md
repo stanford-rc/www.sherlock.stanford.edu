@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Thursday, May 17 2018, we provide 350 software packages, in 7 categories, covering 47 fields of science:*
+*As of Friday, May 18 2018, we provide 351 software packages, in 7 categories, covering 47 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -161,7 +161,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **computational geometry** | `cgal` | -&nbsp;`4.10` | [Website](http://www.cgal.org) | The Computational Geometry Algorithms Library (CGAL) is a C++ library that aims to provide easy access to efficient and reliable algorithms in computational geometry. 
 **computational geometry** | `qhull` | -&nbsp;`2015.2` | [Website](http://www.qhull.org/) | Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram, halfspace intersection about a point, furthest-site Delaunay triangulation, and furthest-site Voronoi diagram. 
 **deep learning** | `caffe2` | -&nbsp;`0.8.1` | [Website](https://caffe2.ai) | Caffe2 is a deep learning framework that provides an easy and straightforward way to experiment with deep learning and leverage community contributions of new models and algorithms. 
-**deep learning** | `cudnn` | -&nbsp;`5.1`<br/>-&nbsp;`6.0`<br/>-&nbsp;`7.0.1`<br/>-&nbsp;`7.0.4`<br/>-&nbsp;`7.0.5`<br/>-&nbsp;`7.1.1` | [Website](https://developer.nvidia.com/cudnn) | NVIDIA cuDNN is a GPU-accelerated library of primitives for deep neural networks. 
+**deep learning** | `cudnn` | -&nbsp;`5.1`<br/>-&nbsp;`6.0`<br/>-&nbsp;`7.0.1`<br/>-&nbsp;`7.0.4`<br/>-&nbsp;`7.0.5`<br/>-&nbsp;`7.1.1`<br/>-&nbsp;`7.1.4` | [Website](https://developer.nvidia.com/cudnn) | NVIDIA cuDNN is a GPU-accelerated library of primitives for deep neural networks. 
 **deep learning** | `py-horovod` | -&nbsp;`0.12.1_py36`<br/>-&nbsp;`0.12.1_py27` | [Website](https://github.com/uber/horovod) | Horovod is a distributed training framework for TensorFlow. The goal of Horovod is to make distributed Deep Learning fast and easy to use. 
 **deep learning** | `py-keras` | -&nbsp;`2.0.8_py27`<br/>-&nbsp;`2.1.5_py36`<br/>-&nbsp;`2.1.5_py27` | [Website](http://keras.io) | Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. 
 **deep learning** | `py-onnx` | -&nbsp;`1.0.1_py27` | [Website](https://onnx.ai) | ONNX is a open format to represent deep learning models. 
