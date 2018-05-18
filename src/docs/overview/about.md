@@ -60,7 +60,7 @@ img[alt="screencap"] {
 
 |       |       |       |       |       |       |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| ![favicon](//zenhub.com/favicon.ico) [ZenHub](//zenhub.com) | ![favicon](//github.com/favicon.ico) [GitHub](//github.com) | ![favicon](//travis-ci.com/images/favicon.png) [Travis CI](//travis-ci.com) | ![favicon](//hund.io/favicon.ico) [Hund](//hund.io) | ![favicon](//headwayapp.co/assets/images/favicon.png) [Headway](//headwayapp.co) | ![favicon](//updown.io/favicon.ico) [updown.io](//updown.io/) |
+| ![favicon](//zenhub.com/favicon.ico) [ZenHub](//zenhub.com) | ![favicon](//github.com/favicon.ico) [GitHub](//github.com) | ![favicon](//travis-ci.com/images/favicon.png) [Travis CI](//travis-ci.com) | ![favicon](//hund.io/favicon.ico) [Hund](//hund.io) | ![favicon](//www.noticeable.io/es6-unbundled/assets/images/favicon.ico) [Noticeable](//noticeable.io) | ![favicon](//updown.io/favicon.ico) [updown.io](//updown.io/) |
 
 
 The Sherlock website and documentation also rely on the following projects:
