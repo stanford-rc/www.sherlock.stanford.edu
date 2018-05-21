@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, May 16 2018, we provide 349 software packages, in 7 categories, covering 47 fields of science:*
+*As of Friday, May 18 2018, we provide 353 software packages, in 7 categories, covering 47 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -89,6 +89,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **molecular dynamics** | `quip` | -&nbsp;`20170901` | [Website](https://github.com/libAtoms/QUIP) | The QUIP package is a collection of software tools to carry out molecular dynamics simulations. 
 **quantum chemistry** | `cp2k` | -&nbsp;`4.1` | [Website](http://www.cp2k.org) | CP2K is a quantum chemistry and solid state physics software package that can perform atomistic simulations of solid state, liquid, molecular, periodic, material, crystal, and biological systems. 
 **quantum chemistry** | `quantum-espresso` | -&nbsp;`6.2.1` | [Website](https://www.quantum-espresso.org) | Quantum ESPRESSO is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials. 
+**quantum chemistry** | `quantum-espresso_gpu` | -&nbsp;`1.1` | [Website](https://github.com/fspiga/qe-gpu) | GPU-accelerated Quantum ESPRESSO using CUDA FORTRAN 
 
 ### Devel
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
@@ -100,7 +101,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **compiler** | `ifort` | -&nbsp;`2017.u2`<br/>-&nbsp;`2018.u1`<br/>-&nbsp;`2018` | [Website](https://software.intel.com/en-us/fortran-compilers) | Intel Fortran Compiler, also known as ifort, is a group of Fortran compilers from Intel 
 **compiler** | `llvm` | -&nbsp;`3.8.1`<br/>-&nbsp;`4.0.0`<br/>-&nbsp;`5.0.0` | [Website](http://llvm.org) | The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler, 
 **compiler** | `nagfor` | -&nbsp;`npl6a61na` | [Website](https://www.nag.com/nag-compiler) | The NAG Fortran Compiler is a full standard implementation of the ISO Fortran 95 language with the addition of all of Fortran 2003, most of Fortran 2008 and OpenMP 3.0 and 3.1. 
-**compiler** | `pgi` | -&nbsp;`18.4` | [Website](http://pgroup.com) | PGI compilers and tools, including Open MPI (Community Edition). 
+**compiler** | `pgi` | -&nbsp;`17.4`<br/>-&nbsp;`18.4` | [Website](http://pgroup.com) | PGI compilers and tools, including Open MPI (Community Edition). 
 **compiler** | `smlnj` | -&nbsp;`110.81` | [Website](http://smlnj.org/) | Standard ML of New Jersey (abbreviated SML/NJ) is a compiler for the Standard ML '97 programming language. 
 **data** | `h5utils` | -&nbsp;`1.12.1` | [Website](http://ab-initio.mit.edu/wiki/index.php/H5utils) | h5utils is a set of utilities for visualization and conversion of scientific data in the free, portable HDF5 format. 
 **data** | `hdf5` | -&nbsp;`1.10.0p1` | [Website](https://www.hdfgroup.org/hdf5) | HDF5 is a data model, library, and file format for storing and managing data. It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O and for high volume and complex data. 
@@ -113,7 +114,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **data analytics** | `hadoop` | -&nbsp;`3.1.0` | [Website](https://hadoop.apache.org/) | The Apache Hadoop software library is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. 
 **data analytics** | `py-sparkhpc` | -&nbsp;`0.3` | [Website](https://sparkhpc.readthedocs.io) | Launching and controlling spark on HPC clusters  
 **data analytics** | `spark` | -&nbsp;`2.3.0` | [Website](https://spark.apache.org) | Apache Spark™ is a unified analytics engine for large-scale data processing. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/spark)
-**language** | `cuda` | -&nbsp;`8.0.61`<br/>-&nbsp;`9.0.176`<br/>-&nbsp;`9.1.85` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
+**language** | `cuda` | -&nbsp;`8.0.61`<br/>-&nbsp;`9.0.176`<br/>-&nbsp;`9.1.85`<br/>-&nbsp;`9.2.88` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
 **language** | `go` | -&nbsp;`1.9` | [Website](http://golang.org) | Go is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
 **language** | `guile` | -&nbsp;`2.0.11`<br/>-&nbsp;`2.2.2` | [Website](https://www.gnu.org/software/guile/) | GNU Guile is the preferred extension system for the GNU Project, which features an implementation of the Scheme programming language. 
 **language** | `java` | -&nbsp;`1.8.0_131` | [Website](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. 
@@ -161,7 +162,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **computational geometry** | `cgal` | -&nbsp;`4.10` | [Website](http://www.cgal.org) | The Computational Geometry Algorithms Library (CGAL) is a C++ library that aims to provide easy access to efficient and reliable algorithms in computational geometry. 
 **computational geometry** | `qhull` | -&nbsp;`2015.2` | [Website](http://www.qhull.org/) | Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram, halfspace intersection about a point, furthest-site Delaunay triangulation, and furthest-site Voronoi diagram. 
 **deep learning** | `caffe2` | -&nbsp;`0.8.1` | [Website](https://caffe2.ai) | Caffe2 is a deep learning framework that provides an easy and straightforward way to experiment with deep learning and leverage community contributions of new models and algorithms. 
-**deep learning** | `cudnn` | -&nbsp;`5.1`<br/>-&nbsp;`6.0`<br/>-&nbsp;`7.0.1`<br/>-&nbsp;`7.0.4`<br/>-&nbsp;`7.0.5`<br/>-&nbsp;`7.1.1` | [Website](https://developer.nvidia.com/cudnn) | NVIDIA cuDNN is a GPU-accelerated library of primitives for deep neural networks. 
+**deep learning** | `cudnn` | -&nbsp;`5.1`<br/>-&nbsp;`6.0`<br/>-&nbsp;`7.0.1`<br/>-&nbsp;`7.0.4`<br/>-&nbsp;`7.0.5`<br/>-&nbsp;`7.1.1`<br/>-&nbsp;`7.1.4` | [Website](https://developer.nvidia.com/cudnn) | NVIDIA cuDNN is a GPU-accelerated library of primitives for deep neural networks. 
 **deep learning** | `py-horovod` | -&nbsp;`0.12.1_py36`<br/>-&nbsp;`0.12.1_py27` | [Website](https://github.com/uber/horovod) | Horovod is a distributed training framework for TensorFlow. The goal of Horovod is to make distributed Deep Learning fast and easy to use. 
 **deep learning** | `py-keras` | -&nbsp;`2.0.8_py27`<br/>-&nbsp;`2.1.5_py36`<br/>-&nbsp;`2.1.5_py27` | [Website](http://keras.io) | Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. 
 **deep learning** | `py-onnx` | -&nbsp;`1.0.1_py27` | [Website](https://onnx.ai) | ONNX is a open format to represent deep learning models. 
