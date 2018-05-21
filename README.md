@@ -18,7 +18,7 @@ process, please see [INTERNALS.md](INTERNALS.md)
 We're following the fork, commit, pull-request classical GitHub workflow, as
 described in the [Forking projects][url_gh_guide] GitHub guide:
 
-1. Fork the repository on GitHub
+1. [Fork the repository on GitHub][url_fork]
 2. Make your changes, commit and push them to your repository
 3. Create a new Pull Request
 
@@ -40,9 +40,9 @@ above.
 
 #### Editing on GitHub
 
-Markdown pages can be edited directly within the GitHub web interface, or from
-the Sherlock documentation pages themselves. Each page features a pencil icon
-on the top-right corner.
+Once you've [forked the repo][url_fork], Markdown pages can be edited directly
+within the GitHub web interface, or from the Sherlock documentation pages
+themselves. Each page features a pencil icon on the top-right corner.
 
 Clicking on that icon will automatically fork the repository and bring up the
 GitHub editor interface. You can then modify the file with your changes. Once
@@ -161,4 +161,5 @@ back to your repository on GitHub.
 [url_srcc]:             https://srcc.stanford.edu
 [url_docs]:             https://www.sherlock.stanford.edu/docs
 [url_repo]:             https://github.com/stanford-rc/www.sherlock.stanford.edu
+[url_fork]:             https://github.com/stanford-rc/www.sherlock.stanford.edu/fork
 [url_docs_src]:         https://github.com/stanford-rc/www.sherlock.stanford.edu/tree/docs/src/docs
