@@ -1,14 +1,14 @@
 
 ## Categories
 
-*As of Friday, May 18 2018, we provide 353 software packages, in 7 categories, covering 47 fields of science:*
+*As of Tuesday, May 22 2018, we provide 355 software packages, in 7 categories, covering 48 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
 * [`devel`](#devel) <small>build, compiler, data, data analytics, language, libs, mpi, networking, parser</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, photonics</small>
-* [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, language, libs, performance, resource monitoring, scm, tools</small>
+* [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, language, libs, media, performance, resource monitoring, scm, tools</small>
 * [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 
 
@@ -302,6 +302,8 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | `py-pyqt5` | -&nbsp;`5.9.1_py36` | [Website](https://www.riverbankcomputing.com/software/pyqt/) | PyQt5 is a comprehensive set of Python bindings for Qt v5. 
 **libs** | `readline` | -&nbsp;`7.0` | [Website](https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html) | The GNU Readline library provides a set of functions for use by applications that allow users to edit command lines as they are typed in. 
 **libs** | `snappy` | -&nbsp;`1.1.7` | [Website](https://github.com/google/snappy) | A fast compressor/decompressor. 
+**media** | `ffmpeg` | -&nbsp;`4.0` | [Website](https://www.ffmpeg.org) | FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. 
+**media** | `libsndfile` | -&nbsp;`1.0.28` | [Website](http://www.mega-nerd.com/libsndfile) | Libsndfile is a C library for reading and writing files containing sampled sound (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface. 
 **performance** | `likwid` | -&nbsp;`4.3.2` | [Website](https://github.com/RRZE-HPC/likwid) | Likwid is a simple toolsuite of command line applications for performance oriented programmers. 
 **resource monitoring** | `remora` | -&nbsp;`1.8.2` | [Website](https://github.com/TACC/remora) | Remora is a tool to monitor runtime resource utilization. 
 **scm** | `git` | -&nbsp;`2.12.2` | [Website](http://git-scm.com) | Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. 
