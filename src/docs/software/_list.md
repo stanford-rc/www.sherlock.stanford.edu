@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, May 22 2018, we provide 358 software packages, in 7 categories, covering 48 fields of science:*
+*As of Tuesday, May 22 2018, we provide 359 software packages, in 7 categories, covering 48 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -104,7 +104,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **compiler** | `pgi` | -&nbsp;`17.4`<br/>-&nbsp;`18.4` | [Website](http://pgroup.com) | PGI compilers and tools, including Open MPI (Community Edition). 
 **compiler** | `smlnj` | -&nbsp;`110.81` | [Website](http://smlnj.org/) | Standard ML of New Jersey (abbreviated SML/NJ) is a compiler for the Standard ML '97 programming language. 
 **data** | `h5utils` | -&nbsp;`1.12.1` | [Website](http://ab-initio.mit.edu/wiki/index.php/H5utils) | h5utils is a set of utilities for visualization and conversion of scientific data in the free, portable HDF5 format. 
-**data** | `hdf5` | -&nbsp;`1.10.0p1` | [Website](https://www.hdfgroup.org/hdf5) | HDF5 is a data model, library, and file format for storing and managing data. It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O and for high volume and complex data. 
+**data** | `hdf5` | -&nbsp;`1.10.0p1`<br/>-&nbsp;`1.10.2` | [Website](https://www.hdfgroup.org/hdf5) | HDF5 is a data model, library, and file format for storing and managing data. It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O and for high volume and complex data. 
 **data** | `hiredis` | -&nbsp;`0.13.3` | [Website](https://github.com/redis/hiredis) | Hiredis is a minimalistic C client library for the Redis database. 
 **data** | `ncl` | -&nbsp;`6.4.0` | [Website](http://www.ncl.ucar.edu/) | NCL is a free interpreted language designed specifically for scientific data processing and visualization. 
 **data** | `netcdf` | -&nbsp;`4.4.1.1` | [Website](https://www.unidata.ucar.edu/software/netcdf) | NetCDF is a set of software libraries and self-describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. 
