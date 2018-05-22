@@ -114,7 +114,7 @@ As a member of the Sherlock community, you're also automatically subscribed to:
 !!! warning "We can't accommodate walk-ins"
 
     We're unfortunately not staffed to accommodate walk-ins, so please make
-    sure that you're planning to stop by **during** office hours. We may not be
+    sure that you're planning to stop by **during** office hours. We will not be
     able to help you otherwise.
 
 
