@@ -116,6 +116,26 @@ As a member of the Sherlock community, you're also automatically subscribed to:
     We're unfortunately not staffed to accommodate walk-ins, so please make
     sure that you're planning to stop by **during** office hours. We will not be
     able to help you otherwise.
+    
+ Purpose of Office Hours
+ 
+ Sending a question to our ticketing system at srcc-support@stanford.edu is always the best first option for questions.  
+ That way you can include detailed descriptions of the problem or question, valuable output and error messages and any 
+ steps you took when you encountered your error.  Also, everyone on our team will see your ticket, enabling the most
+ appropriate group member to respond.
+ 
+ Office hours are a good place for more generalized questions about Sherlock, SLURM, Linux usage, data storage, queue
+ structures/scheduling, job optimization and general capabilities of Sherlock.  It's also useful for more technically 
+ nuanced questions that may not be easily answered with our ticketing system.  In office hours some problems can indeed 
+ be solved quickly or progress can be made so that you can then work self-sufficiently towards a solution on your own. 
+
+ We cannot help you with application specific or algorithm problems.  You should plan your projects sufficiently and not 
+ come to office hours at the last minute before a deadline.  Sherlock is a busy resource with over 3,500 users and you 
+ should not expect your jobs to complete on a given date.
+
+ Not all problems users encounter can be solved during office hours, especially ones involving hardware, filesystem or
+ network issues.  Sherlock's over 1,400 servers, routers and storage systems are constantly being monitored by our team.
+ You can be sure that when Sherlock has an issue, we are aware of it and fixing the problem.
 
 
 The SRCC holds office hours twice a week, in [Polya Hall][url_polya], room 255
@@ -123,9 +143,6 @@ The SRCC holds office hours twice a week, in [Polya Hall][url_polya], room 255
 
 * Tuesdays, 10-11am
 * Thursdays 3-4pm
-
-Please feel free to stop by if you have any question or trouble using Sherlock,
-we'll be happy to help you.
 
 
 
