@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Thursday, May 24 2018, we provide 360 software packages, in 7 categories, covering 48 fields of science:*
+*As of Tuesday, May 29 2018, we provide 363 software packages, in 7 categories, covering 48 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -227,12 +227,13 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
 **benchmark** | `hp2p` | -&nbsp;`3.2` | [Website](https://github.com/cea-hpc/hp2p) | Heavy Peer To Peer: a MPI based benchmark for network diagnostic. 
+**compression** | `libarchive` | -&nbsp;`3.3.2` | [Website](https://www.libarchive.org/) | The libarchive project develops a portable, efficient C library that can read and write streaming archives in a variety of formats. 
 **compression** | `lz4` | -&nbsp;`1.8.0` | [Website](https://www.lz4.org) | LZ4 is lossless compression algorithm. 
 **compression** | `lzo` | -&nbsp;`2.10` | [Website](http://www.oberhumer.com/opensource/lzo) | LZO is a portable lossless data compression library written in ANSI C. 
 **compression** | `szip` | -&nbsp;`2.1.1` | [Website](https://support.hdfgroup.org/doc_resource/SZIP) | Szip compression software, providing lossless compression of scientific data, is an implementation of the extended-Rice lossless compression algorithm. 
 **compression** | `xz` | -&nbsp;`5.2.3` | [Website](http://tukaani.org/xz/) | XZ Utils is free general-purpose data compression software with a high compression ratio. 
 **compression** | `zlib` | -&nbsp;`1.2.11` | [Website](http://zlib.net) | zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. 
-**containers** | `singularity` | -&nbsp;`2.4.6` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
+**containers** | `singularity` | -&nbsp;`2.4.6`<br/>-&nbsp;`2.5.1` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
 **database** | `bdb` | -&nbsp;`6.2.32` | [Website](http://www.oracle.com/us/products/database/berkeley-db) | Berkeley DB (BDB) is a software library intended to provide a high-performance embedded database for key/value data. 
 **database** | `mariadb` | -&nbsp;`10.2.11` | [Website](https://www.mariadb.org) | MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. 
 **database** | `sqlite` | -&nbsp;`3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
@@ -252,6 +253,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | `cairo` | -&nbsp;`1.14.10` | [Website](https://www.cairographics.org/) | Cairo is a 2D graphics library with support for multiple output devices. 
 **libs** | `cups` | -&nbsp;`2.2.4` | [Website](https://www.cups.org/) | CUPS is the standards-based, open source printing system. 
 **libs** | `dbus` | -&nbsp;`1.10.22` | [Website](https://www.freedesktop.org/wiki/Software/dbus/) | D-Bus is a message bus system, a simple way for applications to talk to one another. 
+**libs** | `docbook-xsl` | -&nbsp;`1.79.1` | [Website](http://docbook.sourceforge.net/) | The DocBook Project supports the open-source development of a variety of DocBook resources; in particular, the DocBook XSL stylesheets. 
 **libs** | `enchant` | -&nbsp;`1.6.1`<br/>-&nbsp;`2.2.3` | [Website](https://abiword.github.io/enchant/) | Enchant is a library (and command-line program) that wraps a number of different spelling libraries and programs with a consistent interface. 
 **libs** | `fltk` | -&nbsp;`1.3.4` | [Website](http://www.fltk.org) | FLTK (pronounced 'fulltick') is a cross-platform C++ GUI toolkit. 
 **libs** | `fontconfig` | -&nbsp;`2.12.4` | [Website](https://www.freedesktop.org/wiki/Software/fontconfig) | Fontconfig is a library for configuring and customizing font access. 
