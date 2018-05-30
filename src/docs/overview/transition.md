@@ -71,6 +71,19 @@ comply with the data center usage guidelines. When all the remaining Sherlock
 1.0 nodes have been merged into Sherlock 2.0, the Sherlock 1.0 and 2.0
 distinction will disappear, and Sherlock will be a single system again.
 
+### Timeline
+
+The Sherlock 1.0 to Sherlock 2.0 transition will happen according to the
+following timeline:
+
+- [x] 05/08/2018: no new users accounts will be created on Sherlock 1.0
+- [x] 05/14/2018: the `gpu` and `bigmem` partitions are migrated to
+  Sherlock 2.0
+- [ ] 06/25/2018: the `normal` partition is migrated to Sherlock 2.0
+- [ ] 07/02/2018: the login and DTN nodes are migrate to Sherlock 2.0
+
+This will effectively mark the end of the Sherlock 1.0 environment.
+
 
 ## What changes?
 
