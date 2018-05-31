@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Thursday, May 31 2018, we provide 371 software packages, in 7 categories, covering 49 fields of science:*
+*As of Thursday, May 31 2018, we provide 379 software packages, in 7 categories, covering 49 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -115,6 +115,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **data** | <a id="netcdf" class="soft_anch">`netcdf`</a> | -&nbsp;`4.4.1.1` | [Website](https://www.unidata.ucar.edu/software/netcdf) | NetCDF is a set of software libraries and self-describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. 
 **data** | <a id="pnetcdf" class="soft_anch">`pnetcdf`</a> | -&nbsp;`1.8.1` | [Website](http://cucis.ece.northwestern.edu/projects/PnetCDF/) | Parallel netCDF (PnetCDF) is a parallel I/O library for accessing NetCDF files in CDF-1, 2, and 5 formats. 
 **data** | <a id="protobuf" class="soft_anch">`protobuf`</a> | -&nbsp;`3.4.0` | [Website](https://developers.google.com/protocol-buffers/) | Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data. 
+**data** | <a id="py-pandas" class="soft_anch">`py-pandas`</a> | -&nbsp;`0.23.0_py27`<br/>-&nbsp;`0.23.0_py36` | [Website](https://pandas.pydata.org/) | pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language. 
 **data** | <a id="redis" class="soft_anch">`redis`</a> | -&nbsp;`4.0.1` | [Website](https://redis.io) | Redis is an open source, in-memory data structure store, used as a database, cache and message broker. 
 **data analytics** | <a id="hadoop" class="soft_anch">`hadoop`</a> | -&nbsp;`3.1.0` | [Website](https://hadoop.apache.org/) | The Apache Hadoop software library is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. 
 **data analytics** | <a id="py-sparkhpc" class="soft_anch">`py-sparkhpc`</a> | -&nbsp;`0.3` | [Website](https://sparkhpc.readthedocs.io) | Launching and controlling spark on HPC clusters  
@@ -198,7 +199,9 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **numerical library** | <a id="nagmb" class="soft_anch">`nagmb`</a> | -&nbsp;`MBL6I25DNL` | [Website](https://www.nag.com/nag-toolbox-matlab) | The NAG C Library is the largest and most comprehensive collection of mathematical and statistical algorithms for C and C++. 
 **numerical library** | <a id="openblas" class="soft_anch">`openblas`</a> | -&nbsp;`0.2.19` | [Website](http://www.openblas.net/) | OpenBLAS is an optimized BLAS library 
 **numerical library** | <a id="parmetis" class="soft_anch">`parmetis`</a> | -&nbsp;`4.0.3` | [Website](http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview) | ParMETIS is an MPI-based parallel library that implements a variety of algorithms for partitioning unstructured graphs, meshes, and for computing fill-reducing orderings of sparse matrices. 
+**numerical library** | <a id="py-numpy" class="soft_anch">`py-numpy`</a> | -&nbsp;`1.14.3_py36`<br/>-&nbsp;`1.14.3_py27` | [Website](http://www.numpy.org) | NumPy is the fundamental package for scientific computing with Python. 
 **numerical library** | <a id="py-pyublas" class="soft_anch">`py-pyublas`</a> | -&nbsp;`2017.1_py27` | [Website](https://mathema.tician.de/software/pyublas/) | PyUblas provides a seamless glue layer between Numpy and Boost.Ublas for use with Boost.Python. 
+**numerical library** | <a id="py-scipy" class="soft_anch">`py-scipy`</a> | -&nbsp;`1.1.0_py27`<br/>-&nbsp;`1.1.0_py36` | [Website](https://www.scipy.org/scipylib) | The SciPy library provides many user-friendly and efficient numerical routines such as routines for numerical integration and optimization. 
 **numerical library** | <a id="qrupdate" class="soft_anch">`qrupdate`</a> | -&nbsp;`1.1.2` | [Website](https://sourceforge.net/projects/qrupdate/) | qrupdate is a Fortran library for fast updates of QR and Cholesky decompositions. 
 **numerical library** | <a id="scalapack" class="soft_anch">`scalapack`</a> | -&nbsp;`2.0.2` | [Website](http://www.netlib.org/scalapack/) | ScaLAPACK is a library of high-performance linear algebra routines for parallel distributed memory machines. 
 **numerical library** | <a id="scotch" class="soft_anch">`scotch`</a> | -&nbsp;`6.0.4` | [Website](http://www.labri.fr/perso/pelegrin/scotch) | Software package and libraries for sequential and parallel graph partitioning, static mapping and clustering, sequential mesh and hypergraph partitioning, and sequential and parallel sparse matrix block ordering. 
@@ -215,6 +218,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **statistics** | <a id="sas" class="soft_anch">`sas`</a>^<b class="lic"></b>^ | -&nbsp;`9.4` | [Website](http://www.sas.com/) | SAS is a software suite developed by SAS Institute for advanced analytics, multivariate analyses, business intelligence, data management, and predictive analytics. 
 **statistics** | <a id="stata" class="soft_anch">`stata`</a>^<b class="lic"></b>^ | -&nbsp;`14`<br/>-&nbsp;`15` | [Website](https://www.stata.com) | Stata is a complete, integrated statistical software package that provides everything you need for data analysis, data management, and graphics. 
 **symbolic** | <a id="libmatheval" class="soft_anch">`libmatheval`</a> | -&nbsp;`1.1.11` | [Website](https://www.gnu.org/software/libmatheval/) | GNU libmatheval is a library (callable from C and Fortran) to parse and evaluate symbolic expressions input as text. 
+**symbolic** | <a id="py-sympy" class="soft_anch">`py-sympy`</a> | -&nbsp;`1.1.1_py27`<br/>-&nbsp;`1.1.1_py36` | [Website](http://www.sympy.org) | SymPy is a Python library for symbolic mathematics. 
 
 ### Physics
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
