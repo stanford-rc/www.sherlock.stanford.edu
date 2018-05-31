@@ -1,15 +1,15 @@
 
 ## Categories
 
-*As of Thursday, May 31 2018, we provide 369 software packages, in 7 categories, covering 49 fields of science:*
+*As of Thursday, May 31 2018, we provide 371 software packages, in 7 categories, covering 49 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
 * [`devel`](#devel) <small>build, compiler, data, data analytics, language, libs, mpi, networking, parser</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, photonics</small>
-* [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, language, libs, media, performance, resource monitoring, scm, tools</small>
-* [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
+* [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, imaging, language, libs, media, performance, resource monitoring, scm, tools</small>
+* [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 
 
 !!! warning "Licensed software"
@@ -149,7 +149,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="py-netcdf4" class="soft_anch">`py-netcdf4`</a> | -&nbsp;`1.3.1_py36`<br/>-&nbsp;`1.3.1_py27` | [Website](https://unidata.github.io/netcdf4-python/) | netcdf4-python is a Python interface to the netCDF C library. 
 **libs** | <a id="py-numba" class="soft_anch">`py-numba`</a> | -&nbsp;`0.35.0_py36`<br/>-&nbsp;`0.35.0_py27` | [Website](http://numba.pydata.org) | Numba is a compiler for Python array and numerical functions that gives you the power to speed up your applications with high performance functions written directly in Python.. 
 **libs** | <a id="py-pycuda" class="soft_anch">`py-pycuda`</a> | -&nbsp;`2017.1.1_py27` | [Website](https://mathema.tician.de/software/pycuda/) | PyCUDA lets you access Nvidia‘s CUDA parallel computation API from Python. 
-**libs** | <a id="py-scikit-image" class="soft_anch">`py-scikit-image`</a> | -&nbsp;`0.13.0_py27` | [Website](http://scikit-image.org/) | scikit-image is a collection of algorithms for image processing. 
+**libs** | <a id="py-scikit-image" class="soft_anch">`py-scikit-image`</a> | -&nbsp;`0.13.0_py27`<br/>-&nbsp;`0.14.0_py27` | [Website](http://scikit-image.org/) | scikit-image is a collection of algorithms for image processing. 
 **libs** | <a id="swig" class="soft_anch">`swig`</a> | -&nbsp;`3.0.12` | [Website](http://www.swig.org) | SWIG is an interface compiler that connects programs written in C and C++ with scripting languages such as Perl, Python, Ruby, and Tcl. 
 **libs** | <a id="tbb" class="soft_anch">`tbb`</a> | -&nbsp;`2017.u2`<br/>-&nbsp;`2018.u1`<br/>-&nbsp;`2018` | [Website](https://software.intel.com/en-us/intel-tbb) | Intel® Threading Building Blocks (Intel® TBB) is a widely used C++ library for shared-memory parallel programming and heterogeneous computing (intra-node distributed memory programming). 
 **libs** | <a id="zeromq" class="soft_anch">`zeromq`</a> | -&nbsp;`4.2.2` | [Website](http://zeromq.org) | ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous messaging library, aimed at use in distributed or concurrent applications. 
@@ -224,7 +224,8 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **geoscience** | <a id="gdal" class="soft_anch">`gdal`</a> | -&nbsp;`2.2.1` | [Website](http://www.gdal.org) | GDAL is a translator library for raster and vector geospatial data formats. 
 **geoscience** | <a id="geos" class="soft_anch">`geos`</a> | -&nbsp;`3.6.2` | [Website](https://trac.osgeo.org/geos) | GEOS (Geometry Engine - Open Source) is a C++ port of Java Topology Suite (JTS). 
 **geoscience** | <a id="proj" class="soft_anch">`proj`</a> | -&nbsp;`4.9.3` | [Website](http://proj4.org) | proj.4 is a standard UNIX filter function which converts geographic longitude and latitude coordinates into cartesian coordinates (and vice versa. 
-**geoscience** | <a id="py-pyproj" class="soft_anch">`py-pyproj`</a> | -&nbsp;`1.9.5.1_py27`<br/>-&nbsp;`1.9.5.1_py36` | [Website](https://github.com/jswhit/pyproj) | Python interface to PROJ4 library for cartographic transformations. 
+**geoscience** | <a id="py-opendrift" class="soft_anch">`py-opendrift`</a> | -&nbsp;`1.0.3_py27` | [Website](https://github.com/OpenDrift/opendrift) | OpenDrift is a software for modeling the trajectories and fate of objects or substances drifting in the ocean, or even in the atmosphere. 
+**geoscience** | <a id="py-pyproj" class="soft_anch">`py-pyproj`</a> | -&nbsp;`1.9.5.1_py36`<br/>-&nbsp;`1.9.5.1_py27` | [Website](https://github.com/jswhit/pyproj) | Python interface to PROJ4 library for cartographic transformations. 
 **geoscience** | <a id="udunits" class="soft_anch">`udunits`</a> | -&nbsp;`2.2.26` | [Website](https://www.unidata.ucar.edu/software/udunits/) | The UDUNITS package from Unidata is a C-based package for the programatic handling of units of physical quantities. 
 **photonics** | <a id="meep" class="soft_anch">`meep`</a> | -&nbsp;`1.3`<br/>-&nbsp;`1.4.3` | [Website](https://github.com/stevengj/meep) | Meep is a free finite-difference time-domain (FDTD) simulation software package to model electromagnetic systems. 
 **photonics** | <a id="mpb" class="soft_anch">`mpb`</a> | -&nbsp;`1.5`<br/>-&nbsp;`1.6.2` | [Website](https://github.com/stevengj/mpb) | MPB is a free software package for computing the band structures, or dispersion relations, and electromagnetic modes of periodic dielectric structures, on both serial and parallel computers. 
@@ -251,6 +252,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **file transfer** | <a id="mpifileutils" class="soft_anch">`mpifileutils`</a> | -&nbsp;`20170210` | [Website](https://github.com/hpc/mpifileutils) | mpiFileUtils is a suite of MPI-based tools to manage large datasets, which may vary from large directory trees to large files. 
 **file transfer** | <a id="py-globus-cli" class="soft_anch">`py-globus-cli`</a> | -&nbsp;`1.2.0` | [Website](https://github.com/globus/globus-cli) | A command line wrapper over the Globus SDK for Python. 
 **file transfer** | <a id="rclone" class="soft_anch">`rclone`</a> | -&nbsp;`1.39` | [Website](https://rclone.org) | Rclone is a command line program to sync files and directories to and from: Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon Drive, Microsoft One Drive, Hubic, Backblaze B2, Yandex Disk, or the local filesystem. 
+**imaging** | <a id="py-pillow" class="soft_anch">`py-pillow`</a> | -&nbsp;`5.1.0_py36`<br/>-&nbsp;`5.1.0_py27` | [Website](https://python-pillow.org) | Pillow is a friendly PIL (Python Imaging Library) fork. 
 **language** | <a id="tcltk" class="soft_anch">`tcltk`</a> | -&nbsp;`8.6.6` | [Website](https://www.tcl.tk) | Tcl (Tool Command Language) is a dynamic programming language, suitable for web and desktop applications, networking, administration, testing. Tk is a graphical user interface toolkit. 
 **libs** | <a id="apr" class="soft_anch">`apr`</a> | -&nbsp;`1.6.3` | [Website](https://apr.apache.org/) | The Apache Portable Runtime is a supporting library for the Apache web server. It provides a set of APIs that map to the underlying operating system. 
 **libs** | <a id="apr-util" class="soft_anch">`apr-util`</a> | -&nbsp;`1.6.1` | [Website](https://apr.apache.org/) | The Apache Portable Runtime is a supporting library for the Apache web server. It provides a set of APIs that map to the underlying operating system. 
@@ -335,7 +337,6 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
 **graphs** | <a id="graphviz" class="soft_anch">`graphviz`</a> | -&nbsp;`2.40.1` | [Website](https://www.graphviz.org/) | Graphviz is open source graph visualization software. 
-**imaging** | <a id="py-pillow" class="soft_anch">`py-pillow`</a> | -&nbsp;`5.1.0_py36`<br/>-&nbsp;`5.1.0_py27` | [Website](https://python-pillow.org) | Pillow is a friendly PIL (Python Imaging Library) fork. 
 **molecular visualization** | <a id="pymol" class="soft_anch">`pymol`</a>^<b class="lic"></b>^ | -&nbsp;`1.8.6.2` | [Website](https://pymol.org) | PyMOL is a Python-enhanced molecular graphics tool. 
 **plotting** | <a id="gnuplot" class="soft_anch">`gnuplot`</a> | -&nbsp;`5.2.0` | [Website](http://www.gnuplot.info) | Gnuplot is a portable command-line driven graphing utility for Linux, OS/2, MS Windows, OSX, VMS, and many other platforms. 
 **plotting** | <a id="py-basemap" class="soft_anch">`py-basemap`</a> | -&nbsp;`1.1.0_py36`<br/>-&nbsp;`1.1.0_py27` | [Website](https://matplotlib.org/basemap/) | The matplotlib basemap toolkit is a library for plotting 2D data on maps in Python. 
