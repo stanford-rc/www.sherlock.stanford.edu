@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, May 29 2018, we provide 363 software packages, in 7 categories, covering 48 fields of science:*
+*As of Thursday, May 31 2018, we provide 365 software packages, in 7 categories, covering 49 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -9,7 +9,7 @@
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, photonics</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, language, libs, media, performance, resource monitoring, scm, tools</small>
-* [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
+* [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 
 
 !!! warning "Licensed software"
@@ -224,6 +224,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **geoscience** | <a id="gdal" class="soft_anch">`gdal`</a> | -&nbsp;`2.2.1` | [Website](http://www.gdal.org) | GDAL is a translator library for raster and vector geospatial data formats. 
 **geoscience** | <a id="geos" class="soft_anch">`geos`</a> | -&nbsp;`3.6.2` | [Website](https://trac.osgeo.org/geos) | GEOS (Geometry Engine - Open Source) is a C++ port of Java Topology Suite (JTS). 
 **geoscience** | <a id="proj" class="soft_anch">`proj`</a> | -&nbsp;`4.9.3` | [Website](http://proj4.org) | proj.4 is a standard UNIX filter function which converts geographic longitude and latitude coordinates into cartesian coordinates (and vice versa. 
+**geoscience** | <a id="py-pyproj" class="soft_anch">`py-pyproj`</a> | -&nbsp;`1.9.5.1_py27` | [Website](https://github.com/jswhit/pyproj) | Python interface to PROJ4 library for cartographic transformations. 
 **geoscience** | <a id="udunits" class="soft_anch">`udunits`</a> | -&nbsp;`2.2.26` | [Website](https://www.unidata.ucar.edu/software/udunits/) | The UDUNITS package from Unidata is a C-based package for the programatic handling of units of physical quantities. 
 **photonics** | <a id="meep" class="soft_anch">`meep`</a> | -&nbsp;`1.3`<br/>-&nbsp;`1.4.3` | [Website](https://github.com/stevengj/meep) | Meep is a free finite-difference time-domain (FDTD) simulation software package to model electromagnetic systems. 
 **photonics** | <a id="mpb" class="soft_anch">`mpb`</a> | -&nbsp;`1.5`<br/>-&nbsp;`1.6.2` | [Website](https://github.com/stevengj/mpb) | MPB is a free software package for computing the band structures, or dispersion relations, and electromagnetic modes of periodic dielectric structures, on both serial and parallel computers. 
@@ -238,7 +239,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **compression** | <a id="szip" class="soft_anch">`szip`</a> | -&nbsp;`2.1.1` | [Website](https://support.hdfgroup.org/doc_resource/SZIP) | Szip compression software, providing lossless compression of scientific data, is an implementation of the extended-Rice lossless compression algorithm. 
 **compression** | <a id="xz" class="soft_anch">`xz`</a> | -&nbsp;`5.2.3` | [Website](http://tukaani.org/xz/) | XZ Utils is free general-purpose data compression software with a high compression ratio. 
 **compression** | <a id="zlib" class="soft_anch">`zlib`</a> | -&nbsp;`1.2.11` | [Website](http://zlib.net) | zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. 
-**containers** | <a id="singularity" class="soft_anch">`singularity`</a> | -&nbsp;`2.4.6`<br/>-&nbsp;`2.5.1` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
+**containers** | <a id="singularity" class="soft_anch">`singularity`</a> | -&nbsp;`2.5.1` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
 **database** | <a id="bdb" class="soft_anch">`bdb`</a> | -&nbsp;`6.2.32` | [Website](http://www.oracle.com/us/products/database/berkeley-db) | Berkeley DB (BDB) is a software library intended to provide a high-performance embedded database for key/value data. 
 **database** | <a id="mariadb" class="soft_anch">`mariadb`</a> | -&nbsp;`10.2.11` | [Website](https://www.mariadb.org) | MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. 
 **database** | <a id="sqlite" class="soft_anch">`sqlite`</a> | -&nbsp;`3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
@@ -334,8 +335,10 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
 **graphs** | <a id="graphviz" class="soft_anch">`graphviz`</a> | -&nbsp;`2.40.1` | [Website](https://www.graphviz.org/) | Graphviz is open source graph visualization software. 
+**imaging** | <a id="py-pillow" class="soft_anch">`py-pillow`</a> | -&nbsp;`5.1.0_py27` | [Website](https://python-pillow.org) | Pillow is a friendly PIL (Python Imaging Library) fork. 
 **molecular visualization** | <a id="pymol" class="soft_anch">`pymol`</a>^<b class="lic"></b>^ | -&nbsp;`1.8.6.2` | [Website](https://pymol.org) | PyMOL is a Python-enhanced molecular graphics tool. 
 **plotting** | <a id="gnuplot" class="soft_anch">`gnuplot`</a> | -&nbsp;`5.2.0` | [Website](http://www.gnuplot.info) | Gnuplot is a portable command-line driven graphing utility for Linux, OS/2, MS Windows, OSX, VMS, and many other platforms. 
-**plotting** | <a id="py-matplotlib" class="soft_anch">`py-matplotlib`</a> | -&nbsp;`2.1.0_py27`<br/>-&nbsp;`2.1.2_py36`<br/>-&nbsp;`2.0.2_py27` | [Website](http://matplotlib.org) | Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. 
+**plotting** | <a id="py-basemap" class="soft_anch">`py-basemap`</a> | -&nbsp;`1.1.0_py27` | [Website](https://matplotlib.org/basemap/) | The matplotlib basemap toolkit is a library for plotting 2D data on maps in Python. 
+**plotting** | <a id="py-matplotlib" class="soft_anch">`py-matplotlib`</a> | -&nbsp;`2.1.2_py27`<br/>-&nbsp;`2.1.2_py36`<br/>-&nbsp;`2.2.2_py27` | [Website](http://matplotlib.org) | Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. 
 **plotting** | <a id="py-plotly" class="soft_anch">`py-plotly`</a> | -&nbsp;`2.4.1_py27` | [Website](https://plot.ly/python/) | Plotly's Python graphing library makes interactive, publication-quality graphs online. 
 **remote display** | <a id="virtualgl" class="soft_anch">`virtualgl`</a> | -&nbsp;`2.5.2` | [Website](http://www.virtualgl.org) | VirtualGL is an open source toolkit that gives any Unix or Linux remote display software the ability to run OpenGL applications with full 3D hardware acceleration. 
