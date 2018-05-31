@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Thursday, May 31 2018, we provide 365 software packages, in 7 categories, covering 49 fields of science:*
+*As of Thursday, May 31 2018, we provide 369 software packages, in 7 categories, covering 49 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -224,7 +224,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **geoscience** | <a id="gdal" class="soft_anch">`gdal`</a> | -&nbsp;`2.2.1` | [Website](http://www.gdal.org) | GDAL is a translator library for raster and vector geospatial data formats. 
 **geoscience** | <a id="geos" class="soft_anch">`geos`</a> | -&nbsp;`3.6.2` | [Website](https://trac.osgeo.org/geos) | GEOS (Geometry Engine - Open Source) is a C++ port of Java Topology Suite (JTS). 
 **geoscience** | <a id="proj" class="soft_anch">`proj`</a> | -&nbsp;`4.9.3` | [Website](http://proj4.org) | proj.4 is a standard UNIX filter function which converts geographic longitude and latitude coordinates into cartesian coordinates (and vice versa. 
-**geoscience** | <a id="py-pyproj" class="soft_anch">`py-pyproj`</a> | -&nbsp;`1.9.5.1_py27` | [Website](https://github.com/jswhit/pyproj) | Python interface to PROJ4 library for cartographic transformations. 
+**geoscience** | <a id="py-pyproj" class="soft_anch">`py-pyproj`</a> | -&nbsp;`1.9.5.1_py27`<br/>-&nbsp;`1.9.5.1_py36` | [Website](https://github.com/jswhit/pyproj) | Python interface to PROJ4 library for cartographic transformations. 
 **geoscience** | <a id="udunits" class="soft_anch">`udunits`</a> | -&nbsp;`2.2.26` | [Website](https://www.unidata.ucar.edu/software/udunits/) | The UDUNITS package from Unidata is a C-based package for the programatic handling of units of physical quantities. 
 **photonics** | <a id="meep" class="soft_anch">`meep`</a> | -&nbsp;`1.3`<br/>-&nbsp;`1.4.3` | [Website](https://github.com/stevengj/meep) | Meep is a free finite-difference time-domain (FDTD) simulation software package to model electromagnetic systems. 
 **photonics** | <a id="mpb" class="soft_anch">`mpb`</a> | -&nbsp;`1.5`<br/>-&nbsp;`1.6.2` | [Website](https://github.com/stevengj/mpb) | MPB is a free software package for computing the band structures, or dispersion relations, and electromagnetic modes of periodic dielectric structures, on both serial and parallel computers. 
@@ -335,10 +335,10 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
 **graphs** | <a id="graphviz" class="soft_anch">`graphviz`</a> | -&nbsp;`2.40.1` | [Website](https://www.graphviz.org/) | Graphviz is open source graph visualization software. 
-**imaging** | <a id="py-pillow" class="soft_anch">`py-pillow`</a> | -&nbsp;`5.1.0_py27` | [Website](https://python-pillow.org) | Pillow is a friendly PIL (Python Imaging Library) fork. 
+**imaging** | <a id="py-pillow" class="soft_anch">`py-pillow`</a> | -&nbsp;`5.1.0_py36`<br/>-&nbsp;`5.1.0_py27` | [Website](https://python-pillow.org) | Pillow is a friendly PIL (Python Imaging Library) fork. 
 **molecular visualization** | <a id="pymol" class="soft_anch">`pymol`</a>^<b class="lic"></b>^ | -&nbsp;`1.8.6.2` | [Website](https://pymol.org) | PyMOL is a Python-enhanced molecular graphics tool. 
 **plotting** | <a id="gnuplot" class="soft_anch">`gnuplot`</a> | -&nbsp;`5.2.0` | [Website](http://www.gnuplot.info) | Gnuplot is a portable command-line driven graphing utility for Linux, OS/2, MS Windows, OSX, VMS, and many other platforms. 
-**plotting** | <a id="py-basemap" class="soft_anch">`py-basemap`</a> | -&nbsp;`1.1.0_py27` | [Website](https://matplotlib.org/basemap/) | The matplotlib basemap toolkit is a library for plotting 2D data on maps in Python. 
-**plotting** | <a id="py-matplotlib" class="soft_anch">`py-matplotlib`</a> | -&nbsp;`2.1.2_py27`<br/>-&nbsp;`2.1.2_py36`<br/>-&nbsp;`2.2.2_py27` | [Website](http://matplotlib.org) | Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. 
+**plotting** | <a id="py-basemap" class="soft_anch">`py-basemap`</a> | -&nbsp;`1.1.0_py36`<br/>-&nbsp;`1.1.0_py27` | [Website](https://matplotlib.org/basemap/) | The matplotlib basemap toolkit is a library for plotting 2D data on maps in Python. 
+**plotting** | <a id="py-matplotlib" class="soft_anch">`py-matplotlib`</a> | -&nbsp;`2.1.2_py27`<br/>-&nbsp;`2.1.2_py36`<br/>-&nbsp;`2.2.2_py36`<br/>-&nbsp;`2.2.2_py27` | [Website](http://matplotlib.org) | Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. 
 **plotting** | <a id="py-plotly" class="soft_anch">`py-plotly`</a> | -&nbsp;`2.4.1_py27` | [Website](https://plot.ly/python/) | Plotly's Python graphing library makes interactive, publication-quality graphs online. 
 **remote display** | <a id="virtualgl" class="soft_anch">`virtualgl`</a> | -&nbsp;`2.5.2` | [Website](http://www.virtualgl.org) | VirtualGL is an open source toolkit that gives any Unix or Linux remote display software the ability to run OpenGL applications with full 3D hardware acceleration. 
