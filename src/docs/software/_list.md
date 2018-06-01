@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, June 01 2018, we provide 379 software packages, in 7 categories, covering 49 fields of science:*
+*As of Friday, June 01 2018, we provide 378 software packages, in 7 categories, covering 49 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -265,7 +265,6 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="cairo" class="soft_anch">`cairo`</a> | -&nbsp;`1.14.10` | [Website](https://www.cairographics.org/) | Cairo is a 2D graphics library with support for multiple output devices. 
 **libs** | <a id="cups" class="soft_anch">`cups`</a> | -&nbsp;`2.2.4` | [Website](https://www.cups.org/) | CUPS is the standards-based, open source printing system. 
 **libs** | <a id="dbus" class="soft_anch">`dbus`</a> | -&nbsp;`1.10.22` | [Website](https://www.freedesktop.org/wiki/Software/dbus/) | D-Bus is a message bus system, a simple way for applications to talk to one another. 
-**libs** | <a id="docbook-xsl" class="soft_anch">`docbook-xsl`</a> | -&nbsp;`1.79.1` | [Website](http://docbook.sourceforge.net/) | The DocBook Project supports the open-source development of a variety of DocBook resources; in particular, the DocBook XSL stylesheets. 
 **libs** | <a id="enchant" class="soft_anch">`enchant`</a> | -&nbsp;`1.6.1`<br/>-&nbsp;`2.2.3` | [Website](https://abiword.github.io/enchant/) | Enchant is a library (and command-line program) that wraps a number of different spelling libraries and programs with a consistent interface. 
 **libs** | <a id="fltk" class="soft_anch">`fltk`</a> | -&nbsp;`1.3.4` | [Website](http://www.fltk.org) | FLTK (pronounced 'fulltick') is a cross-platform C++ GUI toolkit. 
 **libs** | <a id="fontconfig" class="soft_anch">`fontconfig`</a> | -&nbsp;`2.12.4` | [Website](https://www.freedesktop.org/wiki/Software/fontconfig) | Fontconfig is a library for configuring and customizing font access. 
