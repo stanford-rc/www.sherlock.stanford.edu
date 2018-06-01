@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Thursday, May 31 2018, we provide 379 software packages, in 7 categories, covering 49 fields of science:*
+*As of Friday, June 01 2018, we provide 379 software packages, in 7 categories, covering 49 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
@@ -201,7 +201,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **numerical library** | <a id="parmetis" class="soft_anch">`parmetis`</a> | -&nbsp;`4.0.3` | [Website](http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview) | ParMETIS is an MPI-based parallel library that implements a variety of algorithms for partitioning unstructured graphs, meshes, and for computing fill-reducing orderings of sparse matrices. 
 **numerical library** | <a id="py-numpy" class="soft_anch">`py-numpy`</a> | -&nbsp;`1.14.3_py36`<br/>-&nbsp;`1.14.3_py27` | [Website](http://www.numpy.org) | NumPy is the fundamental package for scientific computing with Python. 
 **numerical library** | <a id="py-pyublas" class="soft_anch">`py-pyublas`</a> | -&nbsp;`2017.1_py27` | [Website](https://mathema.tician.de/software/pyublas/) | PyUblas provides a seamless glue layer between Numpy and Boost.Ublas for use with Boost.Python. 
-**numerical library** | <a id="py-scipy" class="soft_anch">`py-scipy`</a> | -&nbsp;`1.1.0_py27`<br/>-&nbsp;`1.1.0_py36` | [Website](https://www.scipy.org/scipylib) | The SciPy library provides many user-friendly and efficient numerical routines such as routines for numerical integration and optimization. 
+**numerical library** | <a id="py-scipy" class="soft_anch">`py-scipy`</a> | -&nbsp;`1.1.0_py36`<br/>-&nbsp;`1.1.0_py27` | [Website](https://www.scipy.org/scipylib) | The SciPy library provides many user-friendly and efficient numerical routines such as routines for numerical integration and optimization. 
 **numerical library** | <a id="qrupdate" class="soft_anch">`qrupdate`</a> | -&nbsp;`1.1.2` | [Website](https://sourceforge.net/projects/qrupdate/) | qrupdate is a Fortran library for fast updates of QR and Cholesky decompositions. 
 **numerical library** | <a id="scalapack" class="soft_anch">`scalapack`</a> | -&nbsp;`2.0.2` | [Website](http://www.netlib.org/scalapack/) | ScaLAPACK is a library of high-performance linear algebra routines for parallel distributed memory machines. 
 **numerical library** | <a id="scotch" class="soft_anch">`scotch`</a> | -&nbsp;`6.0.4` | [Website](http://www.labri.fr/perso/pelegrin/scotch) | Software package and libraries for sequential and parallel graph partitioning, static mapping and clustering, sequential mesh and hypergraph partitioning, and sequential and parallel sparse matrix block ordering. 
