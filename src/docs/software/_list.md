@@ -1,14 +1,17 @@
 
 ## Categories
 
-*As of Friday, June 01 2018, we provide 378 software packages, in 7 categories, covering 49 fields of science:*
+*As of Thursday, July 05 2018, we provide 392 software packages, in 10 categories, covering 54 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
+* [`computational`](#computational) <small></small>
+* [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`devel`](#devel) <small>build, compiler, data, data analytics, language, libs, mpi, networking, parser</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, photonics</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, imaging, language, libs, media, performance, resource monitoring, scm, tools</small>
+* [`tools`](#tools) <small></small>
 * [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 
 
@@ -95,6 +98,47 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **quantum chemistry** | <a id="cp2k" class="soft_anch">`cp2k`</a> | -&nbsp;`4.1` | [Website](http://www.cp2k.org) | CP2K is a quantum chemistry and solid state physics software package that can perform atomistic simulations of solid state, liquid, molecular, periodic, material, crystal, and biological systems. 
 **quantum chemistry** | <a id="quantum-espresso" class="soft_anch">`quantum-espresso`</a> | -&nbsp;`6.2.1` | [Website](https://www.quantum-espresso.org) | Quantum ESPRESSO is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials. 
 **quantum chemistry** | <a id="quantum-espresso_gpu" class="soft_anch">`quantum-espresso_gpu`</a> | -&nbsp;`1.1` | [Website](https://github.com/fspiga/qe-gpu) | GPU-accelerated Quantum ESPRESSO using CUDA FORTRAN 
+
+### Computational
+Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
+:----- | :----------- | :------ | :--- | :----------
+
+### Biology
+Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
+:----- | :----------- | :------ | :--- | :----------
+**computational biology** | <a id="imp" class="soft_anch">`imp`</a> | -&nbsp;`2.8.0` | [Website](https://integrativemodeling.org/) | IMP's broad goal is to contribute to a comprehensive structural characterization of biomolecules ranging in size and complexity from small peptides to large macromolecular assemblies, by integrating data from diverse biochemical and biophysical experiments. 
+**computational biology** | <a id="py-biopython" class="soft_anch">`py-biopython`</a> | -&nbsp;`1.70_py27` | [Website](http://biopython.org) | Biopython is a set of freely available tools for biological computation written in Python. 
+**computational biology** | <a id="rosetta" class="soft_anch">`rosetta`</a> | -&nbsp;`3.8` | [Website](https://www.rosettacommons.org) | Rosetta is the premier software suite for modeling macromolecular structures. As a flexible, multi-purpose application, it includes tools for structure prediction, design, and remodeling of proteins and nucleic acids. 
+**cryo-em** | <a id="eman2" class="soft_anch">`eman2`</a> | -&nbsp;`2.2` | [Website](http://blake.bcm.edu/emanwiki/EMAN2) | EMAN2 is a broadly based greyscale scientific image processing suite with a primary focus on processing data from transmission electron microscopes. 
+**cryo-em** | <a id="relion" class="soft_anch">`relion`</a> | -&nbsp;`2.0.3`<br/>-&nbsp;`2.1` | [Website](http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page) | RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a stand-alone computer program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class averages in electron cryo-microscopy (cryo-EM). 
+**genomics** | <a id="angsd" class="soft_anch">`angsd`</a> | -&nbsp;`0.919` | [Website](http://www.popgen.dk/angsd/index.php/ANGSD) | ANGSD is a software for analyzing next generation sequencing data. 
+**genomics** | <a id="bcftools" class="soft_anch">`bcftools`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/bcftools) | BCFtools is a program for variant calling and manipulating files in the Variant Call Format (VCF) and its binary counterpart BCF. 
+**genomics** | <a id="bedtools" class="soft_anch">`bedtools`</a> | -&nbsp;`2.27.1` | [Website](https://bedtools.readthedocs.io) | The bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. 
+**genomics** | <a id="bowtie" class="soft_anch">`bowtie`</a> | -&nbsp;`1.2.2` | [Website](http://bowtie-bio.sourceforge.net/) | Bowtie is an ultrafast, memory-efficient short read aligner. 
+**genomics** | <a id="bowtie2" class="soft_anch">`bowtie2`</a> | -&nbsp;`2.3.4.1` | [Website](http://bowtie-bio.sourceforge.net/bowtie2) | Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences. 
+**genomics** | <a id="bwa" class="soft_anch">`bwa`</a> | -&nbsp;`0.7.17` | [Website](http://bio-bwa.sourceforge.net/) | BWA (Burrows-Wheeler Aligner) is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. 
+**genomics** | <a id="cufflinks" class="soft_anch">`cufflinks`</a> | -&nbsp;`2.2.1` | [Website](https://cole-trapnell-lab.github.io/cufflinks/) | Cufflinks assembles transcripts, estimates their abundances, and tests for differential expression and regulation in RNA-Seq samples. 
+**genomics** | <a id="fastx_toolkit" class="soft_anch">`fastx_toolkit`</a> | -&nbsp;`0.0.14` | [Website](http://hannonlab.cshl.edu/fastx_toolkit/) | The FASTX-Toolkit is a collection of command line tools for Short-Reads FASTA/FASTQ files preprocessing. 
+**genomics** | <a id="hisat2" class="soft_anch">`hisat2`</a> | -&nbsp;`2.1.0` | [Website](http://ccb.jhu.edu/software/hisat2) | HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes (as well as to a single reference genome). 
+**genomics** | <a id="htslib" class="soft_anch">`htslib`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/htslib) | C library for high-throughput sequencing data formats. 
+**genomics** | <a id="ncbi-blast+" class="soft_anch">`ncbi-blast+`</a> | -&nbsp;`2.6.0` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
+**genomics** | <a id="plink" class="soft_anch">`plink`</a> | -&nbsp;`1.07`<br/>-&nbsp;`1.90b5.3`<br/>-&nbsp;`2.0a1` | [Website](http://zzz.bwh.harvard.edu/plink/) | PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. 
+**genomics** | <a id="py-bx-python" class="soft_anch">`py-bx-python`</a> | -&nbsp;`0.8.1_py27` | [Website](https://github.com/bxlab/bx-python) | Tools for manipulating biological data, particularly multiple sequence alignments. 
+**genomics** | <a id="py-macs2" class="soft_anch">`py-macs2`</a> | -&nbsp;`2.1.1_py27` | [Website](https://github.com/taoliu/MACS) | MACS (Model-based Analysis of ChIP-Seq) implements a novel ChIP-Seq analysis method. 
+**genomics** | <a id="samtools" class="soft_anch">`samtools`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/samtools) | Tools (written in C using htslib) for manipulating next-generation sequencing data. 
+**genomics** | <a id="star" class="soft_anch">`star`</a> | -&nbsp;`2.5.4b` | [Website](https://github.com/alexdobin/STAR) | STAR: ultrafast universal RNA-seq aligner. 
+**genomics** | <a id="tophat" class="soft_anch">`tophat`</a> | -&nbsp;`2.1.1` | [Website](http://ccb.jhu.edu/software/tophat/index.shtml) | TopHat is a fast splice junction mapper for RNA-Seq reads. 
+**genomics** | <a id="vcftools" class="soft_anch">`vcftools`</a> | -&nbsp;`0.1.15` | [Website](https://vcftools.github.io) | VCFtools is a program package designed for working with VCF files, such as those generated by the 1000 Genomes Project. 
+**neurology** | <a id="afni" class="soft_anch">`afni`</a> | -&nbsp;`17.2.07`<br/>-&nbsp;`18.0.09` | [Website](https://afni.nimh.nih.gov) | AFNI (Analysis of Functional NeuroImages) is a set of C programs for processing, analyzing, and displaying functional MRI (FMRI) data - a technique for mapping human brain activity. 
+**neurology** | <a id="ants" class="soft_anch">`ants`</a> | -&nbsp;`2.1.0` | [Website](https://stnava.github.io/ANTs) | ANTs computes high-dimensional mappings to capture the statistics of brain structure and function. 
+**neurology** | <a id="dcm2niix" class="soft_anch">`dcm2niix`</a> | -&nbsp;`1.0.20171215` | [Website](https://github.com/rordenlab/dcm2niix) | dcm2niix is a program esigned to convert neuroimaging data from the DICOM format to the NIfTI format. 
+**neurology** | <a id="freesurfer" class="soft_anch">`freesurfer`</a> | -&nbsp;`6.0.0` | [Website](https://surfer.nmr.mgh.harvard.edu/) | An open source software suite for processing and analyzing (human) brain MRI images. 
+**neurology** | <a id="fsl" class="soft_anch">`fsl`</a> | -&nbsp;`5.0.10` | [Website](https://fsl.fmrib.ox.ac.uk/fsl) | FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. 
+**neurology** | <a id="mricron" class="soft_anch">`mricron`</a> | -&nbsp;`20160502` | [Website](https://www.nitrc.org/projects/mricron) | MRIcron is a cross-platform NIfTI format image viewer. 
+**neurology** | <a id="mrtrix" class="soft_anch">`mrtrix`</a> | -&nbsp;`0.3.16` | [Website](http://www.mrtrix.org) | MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses. 
+**neurology** | <a id="py-mdt" class="soft_anch">`py-mdt`</a> | -&nbsp;`0.10.9_py36` | [Website](https://github.com/cbclab/MDT) | The Maastricht Diffusion Toolbox, MDT, is a framework and library for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging (MRI) modeling. 
+**neurology** | <a id="spm" class="soft_anch">`spm`</a> | -&nbsp;`12` | [Website](http://www.fil.ion.ucl.ac.uk/spm/) | The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. 
+**phylogenetics** | <a id="py-ete" class="soft_anch">`py-ete`</a> | -&nbsp;`3.0.0_py27` | [Website](http://etetoolkit.org/) | A Python framework for the analysis and visualization of trees. 
 
 ### Devel
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
@@ -244,7 +288,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **compression** | <a id="szip" class="soft_anch">`szip`</a> | -&nbsp;`2.1.1` | [Website](https://support.hdfgroup.org/doc_resource/SZIP) | Szip compression software, providing lossless compression of scientific data, is an implementation of the extended-Rice lossless compression algorithm. 
 **compression** | <a id="xz" class="soft_anch">`xz`</a> | -&nbsp;`5.2.3` | [Website](http://tukaani.org/xz/) | XZ Utils is free general-purpose data compression software with a high compression ratio. 
 **compression** | <a id="zlib" class="soft_anch">`zlib`</a> | -&nbsp;`1.2.11` | [Website](http://zlib.net) | zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. 
-**containers** | <a id="singularity" class="soft_anch">`singularity`</a> | -&nbsp;`2.5.1` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
+**containers** | <a id="singularity" class="soft_anch">`singularity`</a> | -&nbsp;`2.5.2` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
 **database** | <a id="bdb" class="soft_anch">`bdb`</a> | -&nbsp;`6.2.32` | [Website](http://www.oracle.com/us/products/database/berkeley-db) | Berkeley DB (BDB) is a software library intended to provide a high-performance embedded database for key/value data. 
 **database** | <a id="mariadb" class="soft_anch">`mariadb`</a> | -&nbsp;`10.2.11` | [Website](https://www.mariadb.org) | MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. 
 **database** | <a id="sqlite" class="soft_anch">`sqlite`</a> | -&nbsp;`3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
@@ -335,6 +379,10 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **tools** | <a id="rocksdb" class="soft_anch">`rocksdb`</a> | -&nbsp;`5.7.3` | [Website](https://rocksdb.org) | A library that provides an embeddable, persistent key-value store for fast storage. 
 **tools** | <a id="x11" class="soft_anch">`x11`</a> | -&nbsp;`7.7` | [Website](https://www.x.org) | The X.Org project provides an open source implementation of the X Window System. 
 **tools** | <a id="xkeyboard-config" class="soft_anch">`xkeyboard-config`</a> | -&nbsp;`2.21` | [Website](https://www.freedesktop.org/wiki/Software/XKeyboardConfig/) | The non-arch keyboard configuration database for X Window. 
+
+### Tools
+Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
+:----- | :----------- | :------ | :--- | :----------
 
 ### Viz
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
