@@ -1,14 +1,17 @@
 
 ## Categories
 
-*As of Tuesday, May 29 2018, we provide 363 software packages, in 7 categories, covering 48 fields of science:*
+*As of Thursday, July 05 2018, we provide 392 software packages, in 10 categories, covering 54 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, molecular dynamics, quantum chemistry</small>
+* [`computational`](#computational) <small></small>
+* [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`devel`](#devel) <small>build, compiler, data, data analytics, language, libs, mpi, networking, parser</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, photonics</small>
-* [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, language, libs, media, performance, resource monitoring, scm, tools</small>
+* [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, imaging, language, libs, media, performance, resource monitoring, scm, tools</small>
+* [`tools`](#tools) <small></small>
 * [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 
 
@@ -96,6 +99,47 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **quantum chemistry** | <a id="quantum-espresso" class="soft_anch">`quantum-espresso`</a> | -&nbsp;`6.2.1` | [Website](https://www.quantum-espresso.org) | Quantum ESPRESSO is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials. 
 **quantum chemistry** | <a id="quantum-espresso_gpu" class="soft_anch">`quantum-espresso_gpu`</a> | -&nbsp;`1.1` | [Website](https://github.com/fspiga/qe-gpu) | GPU-accelerated Quantum ESPRESSO using CUDA FORTRAN 
 
+### Computational
+Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
+:----- | :----------- | :------ | :--- | :----------
+
+### Biology
+Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
+:----- | :----------- | :------ | :--- | :----------
+**computational biology** | <a id="imp" class="soft_anch">`imp`</a> | -&nbsp;`2.8.0` | [Website](https://integrativemodeling.org/) | IMP's broad goal is to contribute to a comprehensive structural characterization of biomolecules ranging in size and complexity from small peptides to large macromolecular assemblies, by integrating data from diverse biochemical and biophysical experiments. 
+**computational biology** | <a id="py-biopython" class="soft_anch">`py-biopython`</a> | -&nbsp;`1.70_py27` | [Website](http://biopython.org) | Biopython is a set of freely available tools for biological computation written in Python. 
+**computational biology** | <a id="rosetta" class="soft_anch">`rosetta`</a> | -&nbsp;`3.8` | [Website](https://www.rosettacommons.org) | Rosetta is the premier software suite for modeling macromolecular structures. As a flexible, multi-purpose application, it includes tools for structure prediction, design, and remodeling of proteins and nucleic acids. 
+**cryo-em** | <a id="eman2" class="soft_anch">`eman2`</a> | -&nbsp;`2.2` | [Website](http://blake.bcm.edu/emanwiki/EMAN2) | EMAN2 is a broadly based greyscale scientific image processing suite with a primary focus on processing data from transmission electron microscopes. 
+**cryo-em** | <a id="relion" class="soft_anch">`relion`</a> | -&nbsp;`2.0.3`<br/>-&nbsp;`2.1` | [Website](http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page) | RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a stand-alone computer program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class averages in electron cryo-microscopy (cryo-EM). 
+**genomics** | <a id="angsd" class="soft_anch">`angsd`</a> | -&nbsp;`0.919` | [Website](http://www.popgen.dk/angsd/index.php/ANGSD) | ANGSD is a software for analyzing next generation sequencing data. 
+**genomics** | <a id="bcftools" class="soft_anch">`bcftools`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/bcftools) | BCFtools is a program for variant calling and manipulating files in the Variant Call Format (VCF) and its binary counterpart BCF. 
+**genomics** | <a id="bedtools" class="soft_anch">`bedtools`</a> | -&nbsp;`2.27.1` | [Website](https://bedtools.readthedocs.io) | The bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. 
+**genomics** | <a id="bowtie" class="soft_anch">`bowtie`</a> | -&nbsp;`1.2.2` | [Website](http://bowtie-bio.sourceforge.net/) | Bowtie is an ultrafast, memory-efficient short read aligner. 
+**genomics** | <a id="bowtie2" class="soft_anch">`bowtie2`</a> | -&nbsp;`2.3.4.1` | [Website](http://bowtie-bio.sourceforge.net/bowtie2) | Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences. 
+**genomics** | <a id="bwa" class="soft_anch">`bwa`</a> | -&nbsp;`0.7.17` | [Website](http://bio-bwa.sourceforge.net/) | BWA (Burrows-Wheeler Aligner) is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. 
+**genomics** | <a id="cufflinks" class="soft_anch">`cufflinks`</a> | -&nbsp;`2.2.1` | [Website](https://cole-trapnell-lab.github.io/cufflinks/) | Cufflinks assembles transcripts, estimates their abundances, and tests for differential expression and regulation in RNA-Seq samples. 
+**genomics** | <a id="fastx_toolkit" class="soft_anch">`fastx_toolkit`</a> | -&nbsp;`0.0.14` | [Website](http://hannonlab.cshl.edu/fastx_toolkit/) | The FASTX-Toolkit is a collection of command line tools for Short-Reads FASTA/FASTQ files preprocessing. 
+**genomics** | <a id="hisat2" class="soft_anch">`hisat2`</a> | -&nbsp;`2.1.0` | [Website](http://ccb.jhu.edu/software/hisat2) | HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes (as well as to a single reference genome). 
+**genomics** | <a id="htslib" class="soft_anch">`htslib`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/htslib) | C library for high-throughput sequencing data formats. 
+**genomics** | <a id="ncbi-blast+" class="soft_anch">`ncbi-blast+`</a> | -&nbsp;`2.6.0` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
+**genomics** | <a id="plink" class="soft_anch">`plink`</a> | -&nbsp;`1.07`<br/>-&nbsp;`1.90b5.3`<br/>-&nbsp;`2.0a1` | [Website](http://zzz.bwh.harvard.edu/plink/) | PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. 
+**genomics** | <a id="py-bx-python" class="soft_anch">`py-bx-python`</a> | -&nbsp;`0.8.1_py27` | [Website](https://github.com/bxlab/bx-python) | Tools for manipulating biological data, particularly multiple sequence alignments. 
+**genomics** | <a id="py-macs2" class="soft_anch">`py-macs2`</a> | -&nbsp;`2.1.1_py27` | [Website](https://github.com/taoliu/MACS) | MACS (Model-based Analysis of ChIP-Seq) implements a novel ChIP-Seq analysis method. 
+**genomics** | <a id="samtools" class="soft_anch">`samtools`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/samtools) | Tools (written in C using htslib) for manipulating next-generation sequencing data. 
+**genomics** | <a id="star" class="soft_anch">`star`</a> | -&nbsp;`2.5.4b` | [Website](https://github.com/alexdobin/STAR) | STAR: ultrafast universal RNA-seq aligner. 
+**genomics** | <a id="tophat" class="soft_anch">`tophat`</a> | -&nbsp;`2.1.1` | [Website](http://ccb.jhu.edu/software/tophat/index.shtml) | TopHat is a fast splice junction mapper for RNA-Seq reads. 
+**genomics** | <a id="vcftools" class="soft_anch">`vcftools`</a> | -&nbsp;`0.1.15` | [Website](https://vcftools.github.io) | VCFtools is a program package designed for working with VCF files, such as those generated by the 1000 Genomes Project. 
+**neurology** | <a id="afni" class="soft_anch">`afni`</a> | -&nbsp;`17.2.07`<br/>-&nbsp;`18.0.09` | [Website](https://afni.nimh.nih.gov) | AFNI (Analysis of Functional NeuroImages) is a set of C programs for processing, analyzing, and displaying functional MRI (FMRI) data - a technique for mapping human brain activity. 
+**neurology** | <a id="ants" class="soft_anch">`ants`</a> | -&nbsp;`2.1.0` | [Website](https://stnava.github.io/ANTs) | ANTs computes high-dimensional mappings to capture the statistics of brain structure and function. 
+**neurology** | <a id="dcm2niix" class="soft_anch">`dcm2niix`</a> | -&nbsp;`1.0.20171215` | [Website](https://github.com/rordenlab/dcm2niix) | dcm2niix is a program esigned to convert neuroimaging data from the DICOM format to the NIfTI format. 
+**neurology** | <a id="freesurfer" class="soft_anch">`freesurfer`</a> | -&nbsp;`6.0.0` | [Website](https://surfer.nmr.mgh.harvard.edu/) | An open source software suite for processing and analyzing (human) brain MRI images. 
+**neurology** | <a id="fsl" class="soft_anch">`fsl`</a> | -&nbsp;`5.0.10` | [Website](https://fsl.fmrib.ox.ac.uk/fsl) | FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. 
+**neurology** | <a id="mricron" class="soft_anch">`mricron`</a> | -&nbsp;`20160502` | [Website](https://www.nitrc.org/projects/mricron) | MRIcron is a cross-platform NIfTI format image viewer. 
+**neurology** | <a id="mrtrix" class="soft_anch">`mrtrix`</a> | -&nbsp;`0.3.16` | [Website](http://www.mrtrix.org) | MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses. 
+**neurology** | <a id="py-mdt" class="soft_anch">`py-mdt`</a> | -&nbsp;`0.10.9_py36` | [Website](https://github.com/cbclab/MDT) | The Maastricht Diffusion Toolbox, MDT, is a framework and library for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging (MRI) modeling. 
+**neurology** | <a id="spm" class="soft_anch">`spm`</a> | -&nbsp;`12` | [Website](http://www.fil.ion.ucl.ac.uk/spm/) | The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. 
+**phylogenetics** | <a id="py-ete" class="soft_anch">`py-ete`</a> | -&nbsp;`3.0.0_py27` | [Website](http://etetoolkit.org/) | A Python framework for the analysis and visualization of trees. 
+
 ### Devel
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
@@ -115,6 +159,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **data** | <a id="netcdf" class="soft_anch">`netcdf`</a> | -&nbsp;`4.4.1.1` | [Website](https://www.unidata.ucar.edu/software/netcdf) | NetCDF is a set of software libraries and self-describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. 
 **data** | <a id="pnetcdf" class="soft_anch">`pnetcdf`</a> | -&nbsp;`1.8.1` | [Website](http://cucis.ece.northwestern.edu/projects/PnetCDF/) | Parallel netCDF (PnetCDF) is a parallel I/O library for accessing NetCDF files in CDF-1, 2, and 5 formats. 
 **data** | <a id="protobuf" class="soft_anch">`protobuf`</a> | -&nbsp;`3.4.0` | [Website](https://developers.google.com/protocol-buffers/) | Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data. 
+**data** | <a id="py-pandas" class="soft_anch">`py-pandas`</a> | -&nbsp;`0.23.0_py27`<br/>-&nbsp;`0.23.0_py36` | [Website](https://pandas.pydata.org/) | pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language. 
 **data** | <a id="redis" class="soft_anch">`redis`</a> | -&nbsp;`4.0.1` | [Website](https://redis.io) | Redis is an open source, in-memory data structure store, used as a database, cache and message broker. 
 **data analytics** | <a id="hadoop" class="soft_anch">`hadoop`</a> | -&nbsp;`3.1.0` | [Website](https://hadoop.apache.org/) | The Apache Hadoop software library is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. 
 **data analytics** | <a id="py-sparkhpc" class="soft_anch">`py-sparkhpc`</a> | -&nbsp;`0.3` | [Website](https://sparkhpc.readthedocs.io) | Launching and controlling spark on HPC clusters  
@@ -149,7 +194,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="py-netcdf4" class="soft_anch">`py-netcdf4`</a> | -&nbsp;`1.3.1_py36`<br/>-&nbsp;`1.3.1_py27` | [Website](https://unidata.github.io/netcdf4-python/) | netcdf4-python is a Python interface to the netCDF C library. 
 **libs** | <a id="py-numba" class="soft_anch">`py-numba`</a> | -&nbsp;`0.35.0_py36`<br/>-&nbsp;`0.35.0_py27` | [Website](http://numba.pydata.org) | Numba is a compiler for Python array and numerical functions that gives you the power to speed up your applications with high performance functions written directly in Python.. 
 **libs** | <a id="py-pycuda" class="soft_anch">`py-pycuda`</a> | -&nbsp;`2017.1.1_py27` | [Website](https://mathema.tician.de/software/pycuda/) | PyCUDA lets you access Nvidia‘s CUDA parallel computation API from Python. 
-**libs** | <a id="py-scikit-image" class="soft_anch">`py-scikit-image`</a> | -&nbsp;`0.13.0_py27` | [Website](http://scikit-image.org/) | scikit-image is a collection of algorithms for image processing. 
+**libs** | <a id="py-scikit-image" class="soft_anch">`py-scikit-image`</a> | -&nbsp;`0.13.0_py27`<br/>-&nbsp;`0.14.0_py27` | [Website](http://scikit-image.org/) | scikit-image is a collection of algorithms for image processing. 
 **libs** | <a id="swig" class="soft_anch">`swig`</a> | -&nbsp;`3.0.12` | [Website](http://www.swig.org) | SWIG is an interface compiler that connects programs written in C and C++ with scripting languages such as Perl, Python, Ruby, and Tcl. 
 **libs** | <a id="tbb" class="soft_anch">`tbb`</a> | -&nbsp;`2017.u2`<br/>-&nbsp;`2018.u1`<br/>-&nbsp;`2018` | [Website](https://software.intel.com/en-us/intel-tbb) | Intel® Threading Building Blocks (Intel® TBB) is a widely used C++ library for shared-memory parallel programming and heterogeneous computing (intra-node distributed memory programming). 
 **libs** | <a id="zeromq" class="soft_anch">`zeromq`</a> | -&nbsp;`4.2.2` | [Website](http://zeromq.org) | ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous messaging library, aimed at use in distributed or concurrent applications. 
@@ -198,7 +243,9 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **numerical library** | <a id="nagmb" class="soft_anch">`nagmb`</a> | -&nbsp;`MBL6I25DNL` | [Website](https://www.nag.com/nag-toolbox-matlab) | The NAG C Library is the largest and most comprehensive collection of mathematical and statistical algorithms for C and C++. 
 **numerical library** | <a id="openblas" class="soft_anch">`openblas`</a> | -&nbsp;`0.2.19` | [Website](http://www.openblas.net/) | OpenBLAS is an optimized BLAS library 
 **numerical library** | <a id="parmetis" class="soft_anch">`parmetis`</a> | -&nbsp;`4.0.3` | [Website](http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview) | ParMETIS is an MPI-based parallel library that implements a variety of algorithms for partitioning unstructured graphs, meshes, and for computing fill-reducing orderings of sparse matrices. 
+**numerical library** | <a id="py-numpy" class="soft_anch">`py-numpy`</a> | -&nbsp;`1.14.3_py36`<br/>-&nbsp;`1.14.3_py27` | [Website](http://www.numpy.org) | NumPy is the fundamental package for scientific computing with Python. 
 **numerical library** | <a id="py-pyublas" class="soft_anch">`py-pyublas`</a> | -&nbsp;`2017.1_py27` | [Website](https://mathema.tician.de/software/pyublas/) | PyUblas provides a seamless glue layer between Numpy and Boost.Ublas for use with Boost.Python. 
+**numerical library** | <a id="py-scipy" class="soft_anch">`py-scipy`</a> | -&nbsp;`1.1.0_py36`<br/>-&nbsp;`1.1.0_py27` | [Website](https://www.scipy.org/scipylib) | The SciPy library provides many user-friendly and efficient numerical routines such as routines for numerical integration and optimization. 
 **numerical library** | <a id="qrupdate" class="soft_anch">`qrupdate`</a> | -&nbsp;`1.1.2` | [Website](https://sourceforge.net/projects/qrupdate/) | qrupdate is a Fortran library for fast updates of QR and Cholesky decompositions. 
 **numerical library** | <a id="scalapack" class="soft_anch">`scalapack`</a> | -&nbsp;`2.0.2` | [Website](http://www.netlib.org/scalapack/) | ScaLAPACK is a library of high-performance linear algebra routines for parallel distributed memory machines. 
 **numerical library** | <a id="scotch" class="soft_anch">`scotch`</a> | -&nbsp;`6.0.4` | [Website](http://www.labri.fr/perso/pelegrin/scotch) | Software package and libraries for sequential and parallel graph partitioning, static mapping and clustering, sequential mesh and hypergraph partitioning, and sequential and parallel sparse matrix block ordering. 
@@ -215,6 +262,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **statistics** | <a id="sas" class="soft_anch">`sas`</a>^<b class="lic"></b>^ | -&nbsp;`9.4` | [Website](http://www.sas.com/) | SAS is a software suite developed by SAS Institute for advanced analytics, multivariate analyses, business intelligence, data management, and predictive analytics. 
 **statistics** | <a id="stata" class="soft_anch">`stata`</a>^<b class="lic"></b>^ | -&nbsp;`14`<br/>-&nbsp;`15` | [Website](https://www.stata.com) | Stata is a complete, integrated statistical software package that provides everything you need for data analysis, data management, and graphics. 
 **symbolic** | <a id="libmatheval" class="soft_anch">`libmatheval`</a> | -&nbsp;`1.1.11` | [Website](https://www.gnu.org/software/libmatheval/) | GNU libmatheval is a library (callable from C and Fortran) to parse and evaluate symbolic expressions input as text. 
+**symbolic** | <a id="py-sympy" class="soft_anch">`py-sympy`</a> | -&nbsp;`1.1.1_py27`<br/>-&nbsp;`1.1.1_py36` | [Website](http://www.sympy.org) | SymPy is a Python library for symbolic mathematics. 
 
 ### Physics
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
@@ -224,6 +272,8 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **geoscience** | <a id="gdal" class="soft_anch">`gdal`</a> | -&nbsp;`2.2.1` | [Website](http://www.gdal.org) | GDAL is a translator library for raster and vector geospatial data formats. 
 **geoscience** | <a id="geos" class="soft_anch">`geos`</a> | -&nbsp;`3.6.2` | [Website](https://trac.osgeo.org/geos) | GEOS (Geometry Engine - Open Source) is a C++ port of Java Topology Suite (JTS). 
 **geoscience** | <a id="proj" class="soft_anch">`proj`</a> | -&nbsp;`4.9.3` | [Website](http://proj4.org) | proj.4 is a standard UNIX filter function which converts geographic longitude and latitude coordinates into cartesian coordinates (and vice versa. 
+**geoscience** | <a id="py-opendrift" class="soft_anch">`py-opendrift`</a> | -&nbsp;`1.0.3_py27` | [Website](https://github.com/OpenDrift/opendrift) | OpenDrift is a software for modeling the trajectories and fate of objects or substances drifting in the ocean, or even in the atmosphere. 
+**geoscience** | <a id="py-pyproj" class="soft_anch">`py-pyproj`</a> | -&nbsp;`1.9.5.1_py36`<br/>-&nbsp;`1.9.5.1_py27` | [Website](https://github.com/jswhit/pyproj) | Python interface to PROJ4 library for cartographic transformations. 
 **geoscience** | <a id="udunits" class="soft_anch">`udunits`</a> | -&nbsp;`2.2.26` | [Website](https://www.unidata.ucar.edu/software/udunits/) | The UDUNITS package from Unidata is a C-based package for the programatic handling of units of physical quantities. 
 **photonics** | <a id="meep" class="soft_anch">`meep`</a> | -&nbsp;`1.3`<br/>-&nbsp;`1.4.3` | [Website](https://github.com/stevengj/meep) | Meep is a free finite-difference time-domain (FDTD) simulation software package to model electromagnetic systems. 
 **photonics** | <a id="mpb" class="soft_anch">`mpb`</a> | -&nbsp;`1.5`<br/>-&nbsp;`1.6.2` | [Website](https://github.com/stevengj/mpb) | MPB is a free software package for computing the band structures, or dispersion relations, and electromagnetic modes of periodic dielectric structures, on both serial and parallel computers. 
@@ -238,7 +288,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **compression** | <a id="szip" class="soft_anch">`szip`</a> | -&nbsp;`2.1.1` | [Website](https://support.hdfgroup.org/doc_resource/SZIP) | Szip compression software, providing lossless compression of scientific data, is an implementation of the extended-Rice lossless compression algorithm. 
 **compression** | <a id="xz" class="soft_anch">`xz`</a> | -&nbsp;`5.2.3` | [Website](http://tukaani.org/xz/) | XZ Utils is free general-purpose data compression software with a high compression ratio. 
 **compression** | <a id="zlib" class="soft_anch">`zlib`</a> | -&nbsp;`1.2.11` | [Website](http://zlib.net) | zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. 
-**containers** | <a id="singularity" class="soft_anch">`singularity`</a> | -&nbsp;`2.4.6`<br/>-&nbsp;`2.5.1` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
+**containers** | <a id="singularity" class="soft_anch">`singularity`</a> | -&nbsp;`2.5.2` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
 **database** | <a id="bdb" class="soft_anch">`bdb`</a> | -&nbsp;`6.2.32` | [Website](http://www.oracle.com/us/products/database/berkeley-db) | Berkeley DB (BDB) is a software library intended to provide a high-performance embedded database for key/value data. 
 **database** | <a id="mariadb" class="soft_anch">`mariadb`</a> | -&nbsp;`10.2.11` | [Website](https://www.mariadb.org) | MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. 
 **database** | <a id="sqlite" class="soft_anch">`sqlite`</a> | -&nbsp;`3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
@@ -250,6 +300,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **file transfer** | <a id="mpifileutils" class="soft_anch">`mpifileutils`</a> | -&nbsp;`20170210` | [Website](https://github.com/hpc/mpifileutils) | mpiFileUtils is a suite of MPI-based tools to manage large datasets, which may vary from large directory trees to large files. 
 **file transfer** | <a id="py-globus-cli" class="soft_anch">`py-globus-cli`</a> | -&nbsp;`1.2.0` | [Website](https://github.com/globus/globus-cli) | A command line wrapper over the Globus SDK for Python. 
 **file transfer** | <a id="rclone" class="soft_anch">`rclone`</a> | -&nbsp;`1.39` | [Website](https://rclone.org) | Rclone is a command line program to sync files and directories to and from: Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon Drive, Microsoft One Drive, Hubic, Backblaze B2, Yandex Disk, or the local filesystem. 
+**imaging** | <a id="py-pillow" class="soft_anch">`py-pillow`</a> | -&nbsp;`5.1.0_py36`<br/>-&nbsp;`5.1.0_py27` | [Website](https://python-pillow.org) | Pillow is a friendly PIL (Python Imaging Library) fork. 
 **language** | <a id="tcltk" class="soft_anch">`tcltk`</a> | -&nbsp;`8.6.6` | [Website](https://www.tcl.tk) | Tcl (Tool Command Language) is a dynamic programming language, suitable for web and desktop applications, networking, administration, testing. Tk is a graphical user interface toolkit. 
 **libs** | <a id="apr" class="soft_anch">`apr`</a> | -&nbsp;`1.6.3` | [Website](https://apr.apache.org/) | The Apache Portable Runtime is a supporting library for the Apache web server. It provides a set of APIs that map to the underlying operating system. 
 **libs** | <a id="apr-util" class="soft_anch">`apr-util`</a> | -&nbsp;`1.6.1` | [Website](https://apr.apache.org/) | The Apache Portable Runtime is a supporting library for the Apache web server. It provides a set of APIs that map to the underlying operating system. 
@@ -258,7 +309,6 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="cairo" class="soft_anch">`cairo`</a> | -&nbsp;`1.14.10` | [Website](https://www.cairographics.org/) | Cairo is a 2D graphics library with support for multiple output devices. 
 **libs** | <a id="cups" class="soft_anch">`cups`</a> | -&nbsp;`2.2.4` | [Website](https://www.cups.org/) | CUPS is the standards-based, open source printing system. 
 **libs** | <a id="dbus" class="soft_anch">`dbus`</a> | -&nbsp;`1.10.22` | [Website](https://www.freedesktop.org/wiki/Software/dbus/) | D-Bus is a message bus system, a simple way for applications to talk to one another. 
-**libs** | <a id="docbook-xsl" class="soft_anch">`docbook-xsl`</a> | -&nbsp;`1.79.1` | [Website](http://docbook.sourceforge.net/) | The DocBook Project supports the open-source development of a variety of DocBook resources; in particular, the DocBook XSL stylesheets. 
 **libs** | <a id="enchant" class="soft_anch">`enchant`</a> | -&nbsp;`1.6.1`<br/>-&nbsp;`2.2.3` | [Website](https://abiword.github.io/enchant/) | Enchant is a library (and command-line program) that wraps a number of different spelling libraries and programs with a consistent interface. 
 **libs** | <a id="fltk" class="soft_anch">`fltk`</a> | -&nbsp;`1.3.4` | [Website](http://www.fltk.org) | FLTK (pronounced 'fulltick') is a cross-platform C++ GUI toolkit. 
 **libs** | <a id="fontconfig" class="soft_anch">`fontconfig`</a> | -&nbsp;`2.12.4` | [Website](https://www.freedesktop.org/wiki/Software/fontconfig) | Fontconfig is a library for configuring and customizing font access. 
@@ -330,12 +380,17 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **tools** | <a id="x11" class="soft_anch">`x11`</a> | -&nbsp;`7.7` | [Website](https://www.x.org) | The X.Org project provides an open source implementation of the X Window System. 
 **tools** | <a id="xkeyboard-config" class="soft_anch">`xkeyboard-config`</a> | -&nbsp;`2.21` | [Website](https://www.freedesktop.org/wiki/Software/XKeyboardConfig/) | The non-arch keyboard configuration database for X Window. 
 
+### Tools
+Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
+:----- | :----------- | :------ | :--- | :----------
+
 ### Viz
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
 **graphs** | <a id="graphviz" class="soft_anch">`graphviz`</a> | -&nbsp;`2.40.1` | [Website](https://www.graphviz.org/) | Graphviz is open source graph visualization software. 
 **molecular visualization** | <a id="pymol" class="soft_anch">`pymol`</a>^<b class="lic"></b>^ | -&nbsp;`1.8.6.2` | [Website](https://pymol.org) | PyMOL is a Python-enhanced molecular graphics tool. 
 **plotting** | <a id="gnuplot" class="soft_anch">`gnuplot`</a> | -&nbsp;`5.2.0` | [Website](http://www.gnuplot.info) | Gnuplot is a portable command-line driven graphing utility for Linux, OS/2, MS Windows, OSX, VMS, and many other platforms. 
-**plotting** | <a id="py-matplotlib" class="soft_anch">`py-matplotlib`</a> | -&nbsp;`2.1.0_py27`<br/>-&nbsp;`2.1.2_py36`<br/>-&nbsp;`2.0.2_py27` | [Website](http://matplotlib.org) | Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. 
+**plotting** | <a id="py-basemap" class="soft_anch">`py-basemap`</a> | -&nbsp;`1.1.0_py36`<br/>-&nbsp;`1.1.0_py27` | [Website](https://matplotlib.org/basemap/) | The matplotlib basemap toolkit is a library for plotting 2D data on maps in Python. 
+**plotting** | <a id="py-matplotlib" class="soft_anch">`py-matplotlib`</a> | -&nbsp;`2.1.2_py27`<br/>-&nbsp;`2.1.2_py36`<br/>-&nbsp;`2.2.2_py36`<br/>-&nbsp;`2.2.2_py27` | [Website](http://matplotlib.org) | Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. 
 **plotting** | <a id="py-plotly" class="soft_anch">`py-plotly`</a> | -&nbsp;`2.4.1_py27` | [Website](https://plot.ly/python/) | Plotly's Python graphing library makes interactive, publication-quality graphs online. 
 **remote display** | <a id="virtualgl" class="soft_anch">`virtualgl`</a> | -&nbsp;`2.5.2` | [Website](http://www.virtualgl.org) | VirtualGL is an open source toolkit that gives any Unix or Linux remote display software the ability to run OpenGL applications with full 3D hardware acceleration. 
