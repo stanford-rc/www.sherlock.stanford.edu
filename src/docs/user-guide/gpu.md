@@ -18,8 +18,6 @@ running on Sherlock can submit a job there. As owners contribute to expand
 Sherlock, more GPU nodes are added to the `owners` partition, for use by PI
 groups which purchased their own compute nodes.
 
-### GPU types
-
 !!! tip "More GPU types to come"
 
     As we merge cluster nodes during Phase 2, the existing Sherlock 1.0 GPU
