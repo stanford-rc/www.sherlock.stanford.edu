@@ -192,7 +192,7 @@ that will be able to connect to this instance from any node. This user will
 need a real password, though. So please make sure to replace the
 `my-secure-password` string below by the actual password of your choice.
 
-!!! Danger "Choose a real password"
+!!! Danger "Choose a proper password"
 
     This password will only be used to access this specific instance of
     MariaDB. Note that anybody knowing that password will be allowed to connect
