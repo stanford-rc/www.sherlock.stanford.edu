@@ -76,7 +76,7 @@ steps[^os_support]:
    `~/.ssh/config` file (indentation is important):
 
     ```
-    Host login.sherlock.stanford.edu
+    Host sherlock.stanford.edu
         GSSAPIDelegateCredentials yes
         GSSAPIAuthentication yes
     ```
