@@ -141,7 +141,7 @@ login.sherlock.stanford.edu` block in your configuration file, simply add the
 `Control*` option lines in the same block.
 
 ```
-Host login.sherlock.stanford.edu
+Host sherlock.stanford.edu
     ControlMaster auto
     ControlPersist yes
     ControlPath ~/.ssh/%l%r@%h:%p
