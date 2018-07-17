@@ -158,8 +158,12 @@ error:
     to sleep to avoid this situation.
 
 
-To lift the ban before its automatic expiration, feel free to [contact
-us][url_contact] and provide your IP address.
+!!! info "VPN"
+
+    If your IP got blocked and you have an urgent need to connect, before the
+    automatic blacklist expiration, we recommend trying to connect through
+    [Stanford's VPN][url_vpn]: your computer will then use a different IP
+    address and will not be affected by the ban on your regaulrIP address.
 
 
 
@@ -243,6 +247,7 @@ section][url_submit].
 [url_submit]:       /docs/getting-started/submitting
 [url_contact]:      mailto:srcc-support@stanford.edu
 [url_sshfs]:        /docs/user-guide/storage/data-transfer#sshfs
+[url_vpn]:          https://uit.stanford.edu/service/vpn
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
