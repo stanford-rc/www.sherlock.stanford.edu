@@ -11,16 +11,14 @@ $R
 >install.packages("ggplot2", lib="~/Rpackages/", repos="http://cran.cnr.Berkeley.edu/")
 library(ggplot2, lib.loc="~/Rpackages/")
 ```
-Sometimes R packages need compilation, either with C++, C or Fortran, in this case you may need to load a compiler.  The llvm compiler is loaded by default when you ml load R.
+Sometimes R packages need compilation, either with C++, C or Fortran, in this case you may need to load a compiler.  The llvm compiler is loaded by default when you ml load R.  If you still get compilation errors you can try GCC.
 
-For C++/C:
+For C++/C:Fortran
 ```
 $ml load gcc
+
 ```
-for Fortran:
-```
-$ml load ifort
-```
+
 Note that sometimes it can take awhile to install and compile R packages, in some cases up to 30 minutes.
 ## R GUIs
 
