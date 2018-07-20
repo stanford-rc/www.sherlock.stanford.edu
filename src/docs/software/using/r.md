@@ -1,7 +1,7 @@
-Install R locally with out root/sudo privileges
+Install R locally without root/sudo privileges
 
-If you need to install and R package that's not part of the basic R installation, you can would simply make a directory 
-in your /home or $PI_HOME to add the packages to (in this case /data/Rpackages) add this to your code:
+If you need to install an R package that's not part of the basic R installation, you can would simply make a directory 
+in your /home or $PI_HOME to add the packages to (in this case /data/Rpackages), in this example we add the ggplot2 package:
 
 mkdir ~/Rpackages
 ml load R
