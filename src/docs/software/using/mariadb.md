@@ -19,7 +19,7 @@ this:
 ## Single-node access
 
 In that example, the database server and client will run within the same job,
-on the same [compute node][compute_node].
+on the same [compute node][url_compute_node].
 
 ### Preparation
 
