@@ -10,7 +10,7 @@ $R
 >install.packages("ggplot2", lib="~/Rpackages/", repos="http://cran.cnr.Berkeley.edu/")
 library(ggplot2, lib.loc="~/Rpackages/")
 ```
-Sometimes R packages need compilation, either with C++, C or Fortran, in this case you may need to load a compiler.
+Sometimes R packages need compilation, either with C++, C or Fortran, in this case you may need to load a compiler.  The llvm compiler is loaded by default when you ml load R.
 
 For C++/C:
 ```
