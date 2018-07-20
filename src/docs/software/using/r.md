@@ -9,3 +9,11 @@ R
 
 install.packages("ggplot2", lib="~/Rpackages/", repos="http://cran.cnr.Berkeley.edu/")
 library(ggplot2, lib.loc="~/data/Rpackages/")
+
+Sometimes an R package will need compilation, either wil C++, C or Fortran, in this case you need to load a compiler-
+For C++/C-
+
+ml load gcc
+
+for Fortran
+ml load ifort
