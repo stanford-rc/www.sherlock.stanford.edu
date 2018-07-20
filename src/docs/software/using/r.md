@@ -13,15 +13,11 @@ library(ggplot2, lib.loc="~/Rpackages/")
 Sometimes R packages need compilation, either with C++, C or Fortran, in this case you need to load a compiler.
 
 For C++/C:
-
 ```
 $ml load gcc
-
 ```
 for Fortran:
-
 ```
 $ml load ifort
-
 ```
 Note that sometimes it can take awhile to install and compile R packages, in some cases up to 30 minutes.
