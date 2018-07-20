@@ -19,7 +19,7 @@ this:
 ## Single-node access
 
 In that example, the database server and client will run within the same job,
-on the same [compute node][url_compute_node].
+on the same [compute node][compute_node].
 
 ### Preparation
 
@@ -306,7 +306,7 @@ Complete documentation about MariaDB is available at the [MariaDB website][url_m
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_mariadb]:      https://mariadb.com/
+[url_mysql]:        https://www.mysql.com/
 [url_mariadb]:      https://www.mariadb.com/
 [url_mariadb_docs]: https://mariadb.com/kb/en/library/documentation/
 
