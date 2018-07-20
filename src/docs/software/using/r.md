@@ -23,8 +23,16 @@ $ml load ifort
 Note that sometimes it can take awhile to install and compile R packages, in some cases up to 30 minutes.
 ## R GUIs
 
-Its best to edit and test your R code locally on your laptop/destop and then scp/rsync your code/data over to Sherlock. If you need to bring up the R GUI remember to ssh with the -XY options in order to enable X11 forwarding on Sherlock
+Its best to edit and test your R code locally on your laptop/destop and then scp/rsync your code/data over to Sherlock. If you need to bring up the R GUI remember to ssh with the -XY options in order to enable X11 forwarding on Sherlock.
 
 ```
 ssh -XY <sunetid>@login.sherlock.stanford.edu
+```
+
+We have rstudio availible.
+
+```
+$ml load rstudio
+
+$rstudio
 ```
