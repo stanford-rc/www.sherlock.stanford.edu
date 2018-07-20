@@ -39,4 +39,4 @@ $rstudio &
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[ssh] https://www.sherlock.stanford.edu/docs/user-guide/storage/data-transfer/#scp-secure-copy
+[ssh]: https://www.sherlock.stanford.edu/docs/user-guide/storage/data-transfer/#scp-secure-copy
