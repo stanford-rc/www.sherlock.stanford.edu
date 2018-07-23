@@ -79,8 +79,8 @@ following timeline:
 - [x] 05/08/2018: no new users accounts will be created on Sherlock 1.0
 - [x] 05/14/2018: the `gpu` and `bigmem` partitions are migrated to
   Sherlock 2.0
-- [ ] 06/25/2018: the `normal` partition is migrated to Sherlock 2.0
-- [ ] 07/02/2018: the login and DTN nodes are migrate to Sherlock 2.0
+- [x] 06/25/2018: the `normal` partition is migrated to Sherlock 2.0
+- [x] 07/02/2018: the login and DTN nodes are migrated to Sherlock 2.0
 
 This will effectively mark the end of the Sherlock 1.0 environment.
 
