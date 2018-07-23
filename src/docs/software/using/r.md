@@ -32,7 +32,7 @@ We have rstudio availible.
 ```
 $ml load rstudio
 
-$rstudio &
+$rstudio&
 ```
 
 [comment]: #  (link URLs -----------------------------------------------------)
