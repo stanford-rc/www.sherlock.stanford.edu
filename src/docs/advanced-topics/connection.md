@@ -147,6 +147,8 @@ Host login.sherlock.stanford.edu
     ControlPath ~/.ssh/%l%r@%h:%p
 ```
 
+
+
 It will allow SSH to re-use an existing connection to Sherlock each time you
 open a new session (create a new SSH connection), thus avoiding subsequent 2FA
 prompts once the initial connection is established.
@@ -155,6 +157,19 @@ The slight disadvantage of this approach is that once you have a connection
 open to one of Sherlock's login nodes, all your subsequent connections will be
 using the same login node. This will somewhat defeat the purpose of the load-balancing mechanism
 used by the login nodes.
+
+
+!!! tip "Connection failure with `unix_listener` error"
+
+    If your connection fails with the following error message:
+    ```
+    unix_listener: "..." too long for Unix domain socket
+    ```
+    you're being hit by a macOS limitation, and you should replace the
+    `ControlPath` line above by:
+    ```
+    ControlPath ~/.ssh/%C
+    ```
 
 
 
