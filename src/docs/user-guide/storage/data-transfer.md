@@ -28,6 +28,9 @@ prompt, omitting the initial `$` character (it just indicates a command prompt,
 and then should not be typed in).
 
 
+--8<--- "_host_keys.md"
+
+
 ### SSH-based protocols
 
 !!! important "Login name"
