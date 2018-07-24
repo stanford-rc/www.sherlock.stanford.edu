@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Thursday, July 19 2018, we provide 400 software packages, in 10 categories, covering 55 fields of science:*
+*As of Monday, July 23 2018, we provide 403 software packages, in 10 categories, covering 55 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, electrostatics, molecular dynamics, quantum chemistry</small>
@@ -91,7 +91,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **computational chemistry** | <a id="libxc" class="soft_anch">`libxc`</a> | -&nbsp;`3.0.0` | [Website](http://octopus-code.org/wiki/Libxc) | Libxc is a library of exchange-correlation functionals for density-functional theory. 
 **computational chemistry** | <a id="nwchem" class="soft_anch">`nwchem`</a> | -&nbsp;`6.8` | [Website](http://www.nwchem-sw.org) | NWChem is an ab initio computational chemistry software package which also includes quantum chemical and molecular dynamics functionality. 
 **computational chemistry** | <a id="py-ase" class="soft_anch">`py-ase`</a> | -&nbsp;`3.14.1_py27` | [Website](https://wiki.fysik.dtu.dk/ase/) | The Atomic Simulation Environment (ASE) is a set of tools and Python modules for setting up, manipulating, running, visualizing and analyzing atomistic simulations. 
-**computational chemistry** | <a id="schrodinger" class="soft_anch">`schrodinger`</a>^<b class="lic"></b>^ | -&nbsp;`2017-3`<br/>-&nbsp;`2018-1` | [Website](https://www.schrodinger.com) | Schrödinger Suites (Small-molecule Drug Discovery Suite, Material Science Suite, Biologics Suite) provide a set of molecular modelling software. 
+**computational chemistry** | <a id="schrodinger" class="soft_anch">`schrodinger`</a>^<b class="lic"></b>^ | -&nbsp;`2017-3`<br/>-&nbsp;`2018-1`<br/>-&nbsp;`2018-2` | [Website](https://www.schrodinger.com) | Schrödinger Suites (Small-molecule Drug Discovery Suite, Material Science Suite, Biologics Suite) provide a set of molecular modelling software. 
 **computational chemistry** | <a id="vasp" class="soft_anch">`vasp`</a>^<b class="lic"></b>^ | -&nbsp;`5.4.1` | [Website](https://www.vasp.at) | The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic scale materials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics, from first principles. 
 **electrostatics** | <a id="apbs" class="soft_anch">`apbs`</a> | -&nbsp;`1.5` | [Website](http://www.poissonboltzmann.org/) | APBS solves the equations of continuum electrostatics for large biomolecular assemblages. 
 **molecular dynamics** | <a id="gromacs" class="soft_anch">`gromacs`</a> | -&nbsp;`2016.3`<br/>-&nbsp;`2018` | [Website](http://www.gromacs.org) | GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles. 
@@ -169,6 +169,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **data** | <a id="pnetcdf" class="soft_anch">`pnetcdf`</a> | -&nbsp;`1.8.1` | [Website](http://cucis.ece.northwestern.edu/projects/PnetCDF/) | Parallel netCDF (PnetCDF) is a parallel I/O library for accessing NetCDF files in CDF-1, 2, and 5 formats. 
 **data** | <a id="protobuf" class="soft_anch">`protobuf`</a> | -&nbsp;`3.4.0` | [Website](https://developers.google.com/protocol-buffers/) | Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data. 
 **data** | <a id="py-pandas" class="soft_anch">`py-pandas`</a> | -&nbsp;`0.23.0_py27`<br/>-&nbsp;`0.23.0_py36` | [Website](https://pandas.pydata.org/) | pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language. 
+**data** | <a id="py-protobuf" class="soft_anch">`py-protobuf`</a> | -&nbsp;`3.4.0_py36`<br/>-&nbsp;`3.4.0_py27` | [Website](https://developers.google.com/protocol-buffers) | Python bindings for Google's Protocol Buffers data interchange format. 
 **data** | <a id="redis" class="soft_anch">`redis`</a> | -&nbsp;`4.0.1` | [Website](https://redis.io) | Redis is an open source, in-memory data structure store, used as a database, cache and message broker. 
 **data analytics** | <a id="hadoop" class="soft_anch">`hadoop`</a> | -&nbsp;`3.1.0` | [Website](https://hadoop.apache.org/) | The Apache Hadoop software library is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. 
 **data analytics** | <a id="py-sparkhpc" class="soft_anch">`py-sparkhpc`</a> | -&nbsp;`0.3` | [Website](https://sparkhpc.readthedocs.io) | Launching and controlling spark on HPC clusters  
