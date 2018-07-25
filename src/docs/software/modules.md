@@ -66,6 +66,7 @@ available software][url_list]
 
 
 
+
 ## Module usage
 
 The most common `module` commands are outlined in the following table.
@@ -328,6 +329,53 @@ Sherlock. To that end, and to facilitate usage or sharing of their custom
 software installations, they can create their own module repositories.
 
 See the [Software Installation page](install) for more details.
+
+### Lab-provided software
+
+PI groups and Labs can share their software installations and modules with the
+whole Sherlock community of users, and let everyone benefit from their tuning
+efforts and software developments.
+
+Those modules are available in the specific `labs` category, and organized by
+lab name.
+
+For instance, listing the available lab modules can be done with:
+
+```
+$ ml labs
+$ ml av
+-------------------- labs -- lab-contributed software ----------------------
+   poldrack
+```
+
+To get information about a specific lab module:
+
+```
+$ ml show poldrack
+----------------------------------------------------------------------------
+   /share/software/modules/labs/poldrack.lua:
+----------------------------------------------------------------------------
+prepend_path("MODULEPATH","/home/groups/russpold/modules")
+whatis("Name:        poldrack")
+whatis("Version:     1.0")
+whatis("Category:    labs")
+whatis("URL:         https://github.com/poldracklab/lmod_modules")
+whatis("Description: Software modules contributed by the Poldrack Lab.")
+```
+
+And to list the available software modules contributed by the lab:
+
+```
+$ ml poldrack
+$ ml av
+
+------------------------ /home/groups/russpold/modules -------------------------
+   afni/17.3.03           freesurfer/6.0.1            gsl/2.3      (D)
+   anaconda/5.0.0-py36    fsl/5.0.9                   pigz/2.4
+   ants/2.1.0.post710     fsl/5.0.11           (D)    remora/1.8.2
+   c3d/1.1.0              git-annex/6.20171109        xft/2.3.2
+[...]
+```
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
