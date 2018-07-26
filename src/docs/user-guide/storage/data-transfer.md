@@ -281,6 +281,7 @@ It supports:
 
 * SSH-based protocols (such as the ones [described above](#ssh-based
   protocols))
+* [BBCP][url_bbcp]
 * [Globus](#globus)
 
 
@@ -294,7 +295,7 @@ $ scp foo <sunetid>@dtn.sherlock.stanford.edu:~/foo
 !!! Warning "No shell"
 
     The DTN doesn't provide any interactive shell, so connecting via SSH
-    directly won't work. It will only accept `scp`, `sftp`, or `rsync`
+    directly won't work. It will only accept `scp`, `sftp`, `rsync` of `bbcp`
     connections.
 
 One important difference to keep in mind when transferring files through the
@@ -379,6 +380,7 @@ documentation][url_rclone].
 [url_globus_login]: https://auth.globus.org/p/login
 [url_globus_xfer_mgmt]:   https://www.globus.org/app/endpoints
 [url_globus_xfer_start]:  https://www.globus.org/app/transfer
+[url_bbcp]:         https://www.slac.stanford.edu/~abh/bbcp
 [url_rclone]:       https://rclone.org/
 [url_gdrive]:       https://github.com/prasmussen/gdrive
 [url_uit_gdrive]:   https://uit.stanford.edu/service/googleapps/drive
