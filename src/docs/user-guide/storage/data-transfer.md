@@ -372,7 +372,7 @@ documentation][url_rclone].
 [url_rsync_tuto]:   https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps
 [url_sshfs_linux]:  http://fuse.sourceforge.net/sshfs.html
 [url_sshfs_macos]:  https://osxfuse.github.io/
-[url_sshfs_windows]:https://code.google.com/p/win-sshfs/
+[url_sshfs_windows]:https://github.com/feo-cz/win-sshfs
 [url_sshfs_tuto]:   https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
 [url_globus]:       https://www.globus.org
 [url_globus_doc]:   https://www.globus.org/how-it-works
