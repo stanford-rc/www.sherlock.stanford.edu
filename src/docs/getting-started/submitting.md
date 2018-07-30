@@ -104,7 +104,9 @@ editor][url_texteditors] such as `nano` or `vim`, and save it as `submit.sh`.
     Slurm will ignore all `#SBATCH` directives after the first non-comment
     line.  Always put your `#SBATCH` parameters at the top of your batch
     script.
- !!! warning "Spaces Matter"
+    
+ !!! warning "Spaces Matters"
+ 
     Spaces after sbatch arguments will make the scheduler stop processing 
     any following argument and make it pretty much ignore everything else
     that follows in your sbatch script.  For example:
