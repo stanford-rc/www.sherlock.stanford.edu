@@ -110,10 +110,13 @@ editor][url_texteditors] such as `nano` or `vim`, and save it as `submit.sh`.
     Spaces after sbatch arguments will make the scheduler stop processing 
     any following argument and make it pretty much ignore everything else
     that follows in your sbatch script.  For example:
-    ```#SBATCH -p normal, owners
+    ```
+    #SBATCH -p normal, owners
     ```
     should be,
-    ```#SBATCH -p normal,owners```
+    ```
+    #SBATCH -p normal,owners
+    ```
     
 ### Job submission
 
