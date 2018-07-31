@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Monday, July 23 2018, we provide 403 software packages, in 10 categories, covering 55 fields of science:*
+*As of Tuesday, July 31 2018, we provide 404 software packages, in 10 categories, covering 56 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, electrostatics, molecular dynamics, quantum chemistry</small>
@@ -10,7 +10,7 @@
 * [`devel`](#devel) <small>build, compiler, data, data analytics, language, libs, mpi, networking, parser</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, photonics</small>
-* [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, imaging, language, libs, media, performance, resource monitoring, scm, tools</small>
+* [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, imaging, language, libs, media, performance, resource monitoring, scm, tools</small>
 * [`tools`](#tools) <small></small>
 * [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 
@@ -209,7 +209,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="tbb" class="soft_anch">`tbb`</a> | -&nbsp;`2017.u2`<br/>-&nbsp;`2018.u1`<br/>-&nbsp;`2018` | [Website](https://software.intel.com/en-us/intel-tbb) | Intel® Threading Building Blocks (Intel® TBB) is a widely used C++ library for shared-memory parallel programming and heterogeneous computing (intra-node distributed memory programming). 
 **libs** | <a id="zeromq" class="soft_anch">`zeromq`</a> | -&nbsp;`4.2.2` | [Website](http://zeromq.org) | ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous messaging library, aimed at use in distributed or concurrent applications. 
 **mpi** | <a id="impi" class="soft_anch">`impi`</a> | -&nbsp;`2017.u2`<br/>-&nbsp;`2018.u1`<br/>-&nbsp;`2018` | [Website](https://software.intel.com/en-us/intel-mpi-library) | Intel® MPI Library is a multi-fabric message passing library that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification. 
-**mpi** | <a id="openmpi" class="soft_anch">`openmpi`</a> | -&nbsp;`2.0.2`<br/>-&nbsp;`2.1.3`<br/>-&nbsp;`3.0.1`<br/>-&nbsp;`2.1.1` | [Website](https://www.openmpi.org) | The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. 
+**mpi** | <a id="openmpi" class="soft_anch">`openmpi`</a> | -&nbsp;`2.0.2`<br/>-&nbsp;`3.0.1`<br/>-&nbsp;`2.1.1` | [Website](https://www.openmpi.org) | The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. 
 **mpi** | <a id="py-mpi4py" class="soft_anch">`py-mpi4py`</a> | -&nbsp;`3.0.0_py27` | [Website](https://bitbucket.org/mpi4py/mpi4py) | MPI for Python provides Python bindings for the Message Passing Interface (MPI) standard. It is implemented on top of the MPI-1/2/3 specification and exposes an API which grounds on the standard MPI-2 C++ bindings. 
 **networking** | <a id="gasnet" class="soft_anch">`gasnet`</a> | -&nbsp;`1.30.0` | [Website](https://gasnet.lbl.gov) | GASNet is a language-independent, low-level networking layer that provides network-independent, high-performance communication primitives tailored for implementing parallel global address space SPMD languages and libraries. 
 **networking** | <a id="libfabric" class="soft_anch">`libfabric`</a> | -&nbsp;`1.6.0` | [Website](https://ofiwg.github.io/libfabric/) | The Open Fabrics Interfaces (OFI) is a framework focused on exporting fabric communication services to applications. Libfabric is the library that defines and exports the user-space API of OFI. 
@@ -234,7 +234,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **deep learning** | <a id="torch" class="soft_anch">`torch`</a> | -&nbsp;`20180202` | [Website](http//torch.ch) | Torch is a scientific computing framework with wide support for machine learning algorithms that puts GPUs first. 
 **linear algebra** | <a id="armadillo" class="soft_anch">`armadillo`</a> | -&nbsp;`8.200.1` | [Website](http://arma.sourceforge.net/) | Armadillo is a high quality linear algebra library (matrix maths) for the C++ language, aiming towards a good balance between speed and ease of use. 
 **machine learning** | <a id="py-scikit-learn" class="soft_anch">`py-scikit-learn`</a> | -&nbsp;`0.19.1_py27` | [Website](http://scikit-learn.org) | Scikit-learn is a free software machine learning library for the Python programming language. 
-**numerical analysis** | <a id="matlab" class="soft_anch">`matlab`</a>^<b class="lic"></b>^ | -&nbsp;`R2017a`<br/>-&nbsp;`R2017b` | [Website](https://www.mathworks.com/products/matlab.html) | MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment and fourth-generation programming language. 
+**numerical analysis** | <a id="matlab" class="soft_anch">`matlab`</a>^<b class="lic"></b>^ | -&nbsp;`R2017a`<br/>-&nbsp;`R2017b`<br/>-&nbsp;`R2018a` | [Website](https://www.mathworks.com/products/matlab.html) | MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment and fourth-generation programming language. 
 **numerical analysis** | <a id="octave" class="soft_anch">`octave`</a> | -&nbsp;`4.2.1` | [Website](https://www.gnu.org/software/octave/) | GNU Octave is a high-level language primarily intended for numerical computations. 
 **numerical library** | <a id="arpack" class="soft_anch">`arpack`</a> | -&nbsp;`3.5.0` | [Website](https://github.com/opencollab/arpack-ng) | Collection of Fortran77 subroutines designed to solve large scale eigenvalue problems. 
 **numerical library** | <a id="fftw" class="soft_anch">`fftw`</a> | -&nbsp;`3.3.6` | [Website](http://www.fftw.org/) | The Fastest Fourier Transform in the West (FFTW) is a software library for computing discrete Fourier transforms (DFTs). 
@@ -310,6 +310,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **file transfer** | <a id="mpifileutils" class="soft_anch">`mpifileutils`</a> | -&nbsp;`20170210` | [Website](https://github.com/hpc/mpifileutils) | mpiFileUtils is a suite of MPI-based tools to manage large datasets, which may vary from large directory trees to large files. 
 **file transfer** | <a id="py-globus-cli" class="soft_anch">`py-globus-cli`</a> | -&nbsp;`1.2.0` | [Website](https://github.com/globus/globus-cli) | A command line wrapper over the Globus SDK for Python. 
 **file transfer** | <a id="rclone" class="soft_anch">`rclone`</a> | -&nbsp;`1.39` | [Website](https://rclone.org) | Rclone is a command line program to sync files and directories to and from: Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon Drive, Microsoft One Drive, Hubic, Backblaze B2, Yandex Disk, or the local filesystem. 
+**framework** | <a id="mono" class="soft_anch">`mono`</a> | -&nbsp;`5.12.0.301` | [Website](https://www.mono-project.com) | Mono is an open source implementation of Microsoft's .NET Framework based on the ECMA standards for C# and the Common Language Runtime. 
 **imaging** | <a id="py-pillow" class="soft_anch">`py-pillow`</a> | -&nbsp;`5.1.0_py36`<br/>-&nbsp;`5.1.0_py27` | [Website](https://python-pillow.org) | Pillow is a friendly PIL (Python Imaging Library) fork. 
 **language** | <a id="tcltk" class="soft_anch">`tcltk`</a> | -&nbsp;`8.6.6` | [Website](https://www.tcl.tk) | Tcl (Tool Command Language) is a dynamic programming language, suitable for web and desktop applications, networking, administration, testing. Tk is a graphical user interface toolkit. 
 **libs** | <a id="apr" class="soft_anch">`apr`</a> | -&nbsp;`1.6.3` | [Website](https://apr.apache.org/) | The Apache Portable Runtime is a supporting library for the Apache web server. It provides a set of APIs that map to the underlying operating system. 
