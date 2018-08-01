@@ -31,6 +31,43 @@ that key and will verify it for every subsequent SSH connection, to make sure
 that the server you're connecting to is indeed Sherlock.
 
 
+!!! info "Migration from Sherlock 1.0"
+
+    If you've connected to Sherlock 1.0 before, there's a good chance the
+    Sherlock 1.0 keys were stored by your local SSH client. In that case, when
+    connecting to Sherlock 2.0 using the old `sherlock.stanford.edu` alias, you
+    will be presented with the following message:
+
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        @ WARNING: POSSIBLE DNS SPOOFING DETECTED! @
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        The RSA host key for sherlock.stanford.edu has changed, and the key for
+        the corresponding IP address 171.66.97.101 is unknown. This could
+        either mean that DNS SPOOFING is happening or the IP address for the
+        host and its host key have changed at the same time.
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        @ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+        Someone could be eavesdropping on you right now (man-in-the-middle
+        attack)!  It is also possible that a host key has just been changed.
+        The fingerprint for the RSA key sent by the remote host is
+        SHA256:T1q1Tbq8k5XBD5PIxvlCfTxNMi1ORWwKNRPeZPXUfJA.
+        Please contact your system administrator.
+
+    You can just check that the SHA256 key listed in that warning message
+    correctly matches the one listed in the table above, and if that's the
+    case, you can safely remove the `sherlock.stanford.edu` entry from your
+    `~/.ssh/known_hosts` file with the following command on your local machine:
+
+        $ ssh-keygen -R sherlock.stanford.edu
+
+    and then connect again. You'll see the first-connection prompt [mentioned
+    above](#host-keys), and your SSH client will store the new keys for future
+    connections.
+
+
+
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_dtn]:	/docs/user-guide/storage/data-transfer/#data-transfer-node-dtn
