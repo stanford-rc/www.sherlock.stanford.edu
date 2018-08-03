@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, August 03 2018, we provide 406 software packages, in 10 categories, covering 56 fields of science:*
+*As of Friday, August 03 2018, we provide 408 software packages, in 10 categories, covering 56 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, electrostatics, molecular dynamics, quantum chemistry</small>
@@ -298,6 +298,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **compression** | <a id="szip" class="soft_anch">`szip`</a> | -&nbsp;`2.1.1` | [Website](https://support.hdfgroup.org/doc_resource/SZIP) | Szip compression software, providing lossless compression of scientific data, is an implementation of the extended-Rice lossless compression algorithm. 
 **compression** | <a id="xz" class="soft_anch">`xz`</a> | -&nbsp;`5.2.3` | [Website](http://tukaani.org/xz/) | XZ Utils is free general-purpose data compression software with a high compression ratio. 
 **compression** | <a id="zlib" class="soft_anch">`zlib`</a> | -&nbsp;`1.2.11` | [Website](http://zlib.net) | zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. 
+**containers** | <a id="proot" class="soft_anch">`proot`</a> | -&nbsp;`5.1.0` | [Website](https://proot-me.github.io) | PRoot is a user-space implementation of chroot, mount --bind, and binfmt_misc. 
 **containers** | <a id="singularity" class="soft_anch">`singularity`</a> | -&nbsp;`2.5.2` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
 **database** | <a id="bdb" class="soft_anch">`bdb`</a> | -&nbsp;`6.2.32` | [Website](http://www.oracle.com/us/products/database/berkeley-db) | Berkeley DB (BDB) is a software library intended to provide a high-performance embedded database for key/value data. 
 **database** | <a id="mariadb" class="soft_anch">`mariadb`</a> | -&nbsp;`10.2.11` | [Website](https://www.mariadb.org) | MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/mariadb)
@@ -371,6 +372,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="py-pyqt5" class="soft_anch">`py-pyqt5`</a> | -&nbsp;`5.9.1_py36` | [Website](https://www.riverbankcomputing.com/software/pyqt/) | PyQt5 is a comprehensive set of Python bindings for Qt v5. 
 **libs** | <a id="readline" class="soft_anch">`readline`</a> | -&nbsp;`7.0` | [Website](https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html) | The GNU Readline library provides a set of functions for use by applications that allow users to edit command lines as they are typed in. 
 **libs** | <a id="snappy" class="soft_anch">`snappy`</a> | -&nbsp;`1.1.7` | [Website](https://github.com/google/snappy) | A fast compressor/decompressor. 
+**libs** | <a id="talloc" class="soft_anch">`talloc`</a> | -&nbsp;`2.1.14` | [Website](https://talloc.samba.org) | talloc is a hierarchical, reference counted memory pool system with destructors. 
 **media** | <a id="ffmpeg" class="soft_anch">`ffmpeg`</a> | -&nbsp;`4.0` | [Website](https://www.ffmpeg.org) | FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. 
 **media** | <a id="libsndfile" class="soft_anch">`libsndfile`</a> | -&nbsp;`1.0.28` | [Website](http://www.mega-nerd.com/libsndfile) | Libsndfile is a C library for reading and writing files containing sampled sound (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface. 
 **performance** | <a id="likwid" class="soft_anch">`likwid`</a> | -&nbsp;`4.3.2` | [Website](https://github.com/RRZE-HPC/likwid) | Likwid is a simple toolsuite of command line applications for performance oriented programmers. 
