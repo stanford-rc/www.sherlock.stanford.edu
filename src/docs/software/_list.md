@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, August 03 2018, we provide 408 software packages, in 10 categories, covering 56 fields of science:*
+*As of Friday, August 03 2018, we provide 409 software packages, in 10 categories, covering 56 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, electrostatics, molecular dynamics, quantum chemistry</small>
@@ -65,6 +65,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **genomics** | <a id="ncbi-blast+" class="soft_anch">`ncbi-blast+`</a> | -&nbsp;`2.6.0` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
 **genomics** | <a id="plink" class="soft_anch">`plink`</a> | -&nbsp;`1.07`<br/>-&nbsp;`1.90b5.3`<br/>-&nbsp;`2.0a1` | [Website](http://zzz.bwh.harvard.edu/plink/) | PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. 
 **genomics** | <a id="py-bx-python" class="soft_anch">`py-bx-python`</a> | -&nbsp;`0.8.1_py27` | [Website](https://github.com/bxlab/bx-python) | Tools for manipulating biological data, particularly multiple sequence alignments. 
+**genomics** | <a id="py-fithic" class="soft_anch">`py-fithic`</a> | -&nbsp;`1.1.3_py27` | [Website](https://github.com/ay-lab/fithic) | Fit-Hi-C is a tool for assigning statistical confidence estimates to chromosomal contact maps produced by genome architecture assays. 
 **genomics** | <a id="py-macs2" class="soft_anch">`py-macs2`</a> | -&nbsp;`2.1.1_py27` | [Website](https://github.com/taoliu/MACS) | MACS (Model-based Analysis of ChIP-Seq) implements a novel ChIP-Seq analysis method. 
 **genomics** | <a id="py-pysam" class="soft_anch">`py-pysam`</a> | -&nbsp;`0.14.1_py27` | [Website](https://github.com/pysam-developers/pysam) | Pysam is a python module for reading, manipulating and writing genomic data sets. 
 **genomics** | <a id="samtools" class="soft_anch">`samtools`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/samtools) | Tools (written in C using htslib) for manipulating next-generation sequencing data. 
@@ -131,6 +132,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **genomics** | <a id="ncbi-blast+" class="soft_anch">`ncbi-blast+`</a> | -&nbsp;`2.6.0` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
 **genomics** | <a id="plink" class="soft_anch">`plink`</a> | -&nbsp;`1.07`<br/>-&nbsp;`1.90b5.3`<br/>-&nbsp;`2.0a1` | [Website](http://zzz.bwh.harvard.edu/plink/) | PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. 
 **genomics** | <a id="py-bx-python" class="soft_anch">`py-bx-python`</a> | -&nbsp;`0.8.1_py27` | [Website](https://github.com/bxlab/bx-python) | Tools for manipulating biological data, particularly multiple sequence alignments. 
+**genomics** | <a id="py-fithic" class="soft_anch">`py-fithic`</a> | -&nbsp;`1.1.3_py27` | [Website](https://github.com/ay-lab/fithic) | Fit-Hi-C is a tool for assigning statistical confidence estimates to chromosomal contact maps produced by genome architecture assays. 
 **genomics** | <a id="py-macs2" class="soft_anch">`py-macs2`</a> | -&nbsp;`2.1.1_py27` | [Website](https://github.com/taoliu/MACS) | MACS (Model-based Analysis of ChIP-Seq) implements a novel ChIP-Seq analysis method. 
 **genomics** | <a id="py-pysam" class="soft_anch">`py-pysam`</a> | -&nbsp;`0.14.1_py27` | [Website](https://github.com/pysam-developers/pysam) | Pysam is a python module for reading, manipulating and writing genomic data sets. 
 **genomics** | <a id="samtools" class="soft_anch">`samtools`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/samtools) | Tools (written in C using htslib) for manipulating next-generation sequencing data. 
