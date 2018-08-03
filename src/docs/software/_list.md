@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, August 01 2018, we provide 404 software packages, in 10 categories, covering 56 fields of science:*
+*As of Friday, August 03 2018, we provide 406 software packages, in 10 categories, covering 56 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, electrostatics, molecular dynamics, quantum chemistry</small>
@@ -178,7 +178,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **language** | <a id="go" class="soft_anch">`go`</a> | -&nbsp;`1.9` | [Website](http://golang.org) | Go is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
 **language** | <a id="guile" class="soft_anch">`guile`</a> | -&nbsp;`2.0.11`<br/>-&nbsp;`2.2.2` | [Website](https://www.gnu.org/software/guile/) | GNU Guile is the preferred extension system for the GNU Project, which features an implementation of the Scheme programming language. 
 **language** | <a id="java" class="soft_anch">`java`</a> | -&nbsp;`1.8.0_131` | [Website](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. 
-**language** | <a id="julia" class="soft_anch">`julia`</a> | -&nbsp;`0.5.1`<br/>-&nbsp;`0.6` | [Website](https://julialang.org) | Julia is a high-level, high-performance dynamic programming language for numerical computing. 
+**language** | <a id="julia" class="soft_anch">`julia`</a> | -&nbsp;`0.5.1`<br/>-&nbsp;`0.6`<br/>-&nbsp;`0.6.4` | [Website](https://julialang.org) | Julia is a high-level, high-performance dynamic programming language for numerical computing. 
 **language** | <a id="lua" class="soft_anch">`lua`</a> | -&nbsp;`5.3.4` | [Website](https://www.lua.org) | Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description. 
 **language** | <a id="luarocks" class="soft_anch">`luarocks`</a> | -&nbsp;`2.4.3` | [Website](https://luarocks.org/) | LuaRocks is the package manager for Lua modules. 
 **language** | <a id="manticore" class="soft_anch">`manticore`</a> | -&nbsp;`20180301` | [Website](http://manticore.cs.uchicago.edu/) | Manticore is a high-level parallel programming language aimed at general-purpose applications running on multi-core processors. 
@@ -355,6 +355,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="libtasn1" class="soft_anch">`libtasn1`</a> | -&nbsp;`4.13` | [Website](https://www.gnu.org/software/libtasn1/) | Libtasn1 is the ASN.1 library used by GnuTLS, p11-kit and some other packages. 
 **libs** | <a id="libtiff" class="soft_anch">`libtiff`</a> | -&nbsp;`4.0.8` | [Website](http://simplesystems.org/libtiff/) | libtiff provides support for the Tag Image File Format (TIFF), a widely used format for storing image data. 
 **libs** | <a id="libunistring" class="soft_anch">`libunistring`</a> | -&nbsp;`0.9.7` | [Website](https://www.gnu.org/software/libunistring/) | Libunistring provides functions for manipulating Unicode strings and for manipulating C strings according to the Unicode standard. 
+**libs** | <a id="libuuid" class="soft_anch">`libuuid`</a> | -&nbsp;`1.0.3` | [Website](https://sourceforge.net/projects/libuuid) | Portable uuid C library. 
 **libs** | <a id="libwebp" class="soft_anch">`libwebp`</a> | -&nbsp;`0.6.1` | [Website](https://developers.google.com/speed/webp) | WebP is a modern image format that provides superior lossless and lossy compression for images on the web. 
 **libs** | <a id="libxml2" class="soft_anch">`libxml2`</a> | -&nbsp;`2.9.4` | [Website](http://xmlsoft.org/) | Libxml2 is a XML C parser and toolkit. 
 **libs** | <a id="libxslt" class="soft_anch">`libxslt`</a> | -&nbsp;`1.1.32` | [Website](http://xmlsoft.org/libxslt) | Libxslt is the XSLT C library developed for the GNOME project. XSLT itself is a an XML language to define transformation for XML. 
