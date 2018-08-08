@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, August 03 2018, we provide 406 software packages, in 10 categories, covering 56 fields of science:*
+*As of Wednesday, August 08 2018, we provide 409 software packages, in 10 categories, covering 56 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, electrostatics, molecular dynamics, quantum chemistry</small>
@@ -65,6 +65,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **genomics** | <a id="ncbi-blast+" class="soft_anch">`ncbi-blast+`</a> | -&nbsp;`2.6.0` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
 **genomics** | <a id="plink" class="soft_anch">`plink`</a> | -&nbsp;`1.07`<br/>-&nbsp;`1.90b5.3`<br/>-&nbsp;`2.0a1` | [Website](http://zzz.bwh.harvard.edu/plink/) | PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. 
 **genomics** | <a id="py-bx-python" class="soft_anch">`py-bx-python`</a> | -&nbsp;`0.8.1_py27` | [Website](https://github.com/bxlab/bx-python) | Tools for manipulating biological data, particularly multiple sequence alignments. 
+**genomics** | <a id="py-fithic" class="soft_anch">`py-fithic`</a> | -&nbsp;`1.1.3_py27` | [Website](https://github.com/ay-lab/fithic) | Fit-Hi-C is a tool for assigning statistical confidence estimates to chromosomal contact maps produced by genome architecture assays. 
 **genomics** | <a id="py-macs2" class="soft_anch">`py-macs2`</a> | -&nbsp;`2.1.1_py27` | [Website](https://github.com/taoliu/MACS) | MACS (Model-based Analysis of ChIP-Seq) implements a novel ChIP-Seq analysis method. 
 **genomics** | <a id="py-pysam" class="soft_anch">`py-pysam`</a> | -&nbsp;`0.14.1_py27` | [Website](https://github.com/pysam-developers/pysam) | Pysam is a python module for reading, manipulating and writing genomic data sets. 
 **genomics** | <a id="samtools" class="soft_anch">`samtools`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/samtools) | Tools (written in C using htslib) for manipulating next-generation sequencing data. 
@@ -131,6 +132,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **genomics** | <a id="ncbi-blast+" class="soft_anch">`ncbi-blast+`</a> | -&nbsp;`2.6.0` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
 **genomics** | <a id="plink" class="soft_anch">`plink`</a> | -&nbsp;`1.07`<br/>-&nbsp;`1.90b5.3`<br/>-&nbsp;`2.0a1` | [Website](http://zzz.bwh.harvard.edu/plink/) | PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. 
 **genomics** | <a id="py-bx-python" class="soft_anch">`py-bx-python`</a> | -&nbsp;`0.8.1_py27` | [Website](https://github.com/bxlab/bx-python) | Tools for manipulating biological data, particularly multiple sequence alignments. 
+**genomics** | <a id="py-fithic" class="soft_anch">`py-fithic`</a> | -&nbsp;`1.1.3_py27` | [Website](https://github.com/ay-lab/fithic) | Fit-Hi-C is a tool for assigning statistical confidence estimates to chromosomal contact maps produced by genome architecture assays. 
 **genomics** | <a id="py-macs2" class="soft_anch">`py-macs2`</a> | -&nbsp;`2.1.1_py27` | [Website](https://github.com/taoliu/MACS) | MACS (Model-based Analysis of ChIP-Seq) implements a novel ChIP-Seq analysis method. 
 **genomics** | <a id="py-pysam" class="soft_anch">`py-pysam`</a> | -&nbsp;`0.14.1_py27` | [Website](https://github.com/pysam-developers/pysam) | Pysam is a python module for reading, manipulating and writing genomic data sets. 
 **genomics** | <a id="samtools" class="soft_anch">`samtools`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/samtools) | Tools (written in C using htslib) for manipulating next-generation sequencing data. 
@@ -298,6 +300,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **compression** | <a id="szip" class="soft_anch">`szip`</a> | -&nbsp;`2.1.1` | [Website](https://support.hdfgroup.org/doc_resource/SZIP) | Szip compression software, providing lossless compression of scientific data, is an implementation of the extended-Rice lossless compression algorithm. 
 **compression** | <a id="xz" class="soft_anch">`xz`</a> | -&nbsp;`5.2.3` | [Website](http://tukaani.org/xz/) | XZ Utils is free general-purpose data compression software with a high compression ratio. 
 **compression** | <a id="zlib" class="soft_anch">`zlib`</a> | -&nbsp;`1.2.11` | [Website](http://zlib.net) | zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. 
+**containers** | <a id="proot" class="soft_anch">`proot`</a> | -&nbsp;`5.1.0` | [Website](https://proot-me.github.io) | PRoot is a user-space implementation of chroot, mount --bind, and binfmt_misc. 
 **containers** | <a id="singularity" class="soft_anch">`singularity`</a> | -&nbsp;`2.5.2` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
 **database** | <a id="bdb" class="soft_anch">`bdb`</a> | -&nbsp;`6.2.32` | [Website](http://www.oracle.com/us/products/database/berkeley-db) | Berkeley DB (BDB) is a software library intended to provide a high-performance embedded database for key/value data. 
 **database** | <a id="mariadb" class="soft_anch">`mariadb`</a> | -&nbsp;`10.2.11` | [Website](https://www.mariadb.org) | MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/mariadb)
@@ -371,6 +374,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="py-pyqt5" class="soft_anch">`py-pyqt5`</a> | -&nbsp;`5.9.1_py36` | [Website](https://www.riverbankcomputing.com/software/pyqt/) | PyQt5 is a comprehensive set of Python bindings for Qt v5. 
 **libs** | <a id="readline" class="soft_anch">`readline`</a> | -&nbsp;`7.0` | [Website](https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html) | The GNU Readline library provides a set of functions for use by applications that allow users to edit command lines as they are typed in. 
 **libs** | <a id="snappy" class="soft_anch">`snappy`</a> | -&nbsp;`1.1.7` | [Website](https://github.com/google/snappy) | A fast compressor/decompressor. 
+**libs** | <a id="talloc" class="soft_anch">`talloc`</a> | -&nbsp;`2.1.14` | [Website](https://talloc.samba.org) | talloc is a hierarchical, reference counted memory pool system with destructors. 
 **media** | <a id="ffmpeg" class="soft_anch">`ffmpeg`</a> | -&nbsp;`4.0` | [Website](https://www.ffmpeg.org) | FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. 
 **media** | <a id="libsndfile" class="soft_anch">`libsndfile`</a> | -&nbsp;`1.0.28` | [Website](http://www.mega-nerd.com/libsndfile) | Libsndfile is a C library for reading and writing files containing sampled sound (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface. 
 **performance** | <a id="likwid" class="soft_anch">`likwid`</a> | -&nbsp;`4.3.2` | [Website](https://github.com/RRZE-HPC/likwid) | Likwid is a simple toolsuite of command line applications for performance oriented programmers. 
