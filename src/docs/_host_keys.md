@@ -31,11 +31,11 @@ that key and will verify it for every subsequent SSH connection, to make sure
 that the server you're connecting to is indeed Sherlock.
 
 
-#### Sherlock 1.0 migration
+#### Host keys warning
 
 If you've connected to Sherlock 1.0 before, there's a good chance the
 Sherlock 1.0 keys were stored by your local SSH client. In that case, when
-connecting to Sherlock 2.0 using the old `sherlock.stanford.edu` alias, you
+connecting to Sherlock 2.0 using the `sherlock.stanford.edu` alias, you
 will be presented with the following message:
 
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
