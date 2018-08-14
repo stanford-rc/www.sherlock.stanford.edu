@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Thursday, August 09 2018, we provide 409 software packages, in 10 categories, covering 56 fields of science:*
+*As of Tuesday, August 14 2018, we provide 411 software packages, in 10 categories, covering 56 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, electrostatics, molecular dynamics, quantum chemistry</small>
@@ -263,7 +263,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **numerical library** | <a id="scotch" class="soft_anch">`scotch`</a> | -&nbsp;`6.0.4` | [Website](http://www.labri.fr/perso/pelegrin/scotch) | Software package and libraries for sequential and parallel graph partitioning, static mapping and clustering, sequential mesh and hypergraph partitioning, and sequential and parallel sparse matrix block ordering. 
 **numerical library** | <a id="superlu" class="soft_anch">`superlu`</a> | -&nbsp;`5.2.1` | [Website](https://github.com/xiaoyeli/superlu) | SuperLU is a general purpose library for the direct solution of large, sparse, nonsymmetric systems of linear equations. 
 **numerical library** | <a id="xblas" class="soft_anch">`xblas`</a> | -&nbsp;`1.0.248` | [Website](http://www.netlib.org/xblas) | Extra precise basic linear algebra subroutines. 
-**optimization** | <a id="gurobi" class="soft_anch">`gurobi`</a> | -&nbsp;`7.5.1` | [Website](http://www.gurobi.com) | The Gurobi Optimizer is a commercial optimization solver for mathematical programming. 
+**optimization** | <a id="gurobi" class="soft_anch">`gurobi`</a> | -&nbsp;`7.5.1`<br/>-&nbsp;`8.0.1_py27`<br/>-&nbsp;`8.0.1_py36` | [Website](http://www.gurobi.com) | The Gurobi Optimizer is a commercial optimization solver for mathematical programming. 
 **optimization** | <a id="knitro" class="soft_anch">`knitro`</a> | -&nbsp;`10.3.0` | [Website](https://www.artelys.com/en/optimization-tools/knitro) | Artelys Knitro is an optimization solver for difficult large-scale nonlinear problems. 
 **scientific computing** | <a id="py-scipystack" class="soft_anch">`py-scipystack`</a> | -&nbsp;`1.0_py36`<br/>-&nbsp;`1.0_py27` | [Website](https://www.scipy.org) | The SciPy Stack is a collection of open source software for scientific computing in Python. It provides the following packages: numpy, scipy, matplotlib, ipython, jupyter, pandas, sympy and nose. 
 **statistics** | <a id="R" class="soft_anch">`R`</a> | -&nbsp;`3.4.0` | [Website](http://r-project.org) | R is a free software environment for statistical computing and graphics. 
