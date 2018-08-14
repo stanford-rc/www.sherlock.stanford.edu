@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, August 14 2018, we provide 410 software packages, in 10 categories, covering 56 fields of science:*
+*As of Tuesday, August 14 2018, we provide 411 software packages, in 10 categories, covering 56 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, electrostatics, molecular dynamics, quantum chemistry</small>
@@ -52,6 +52,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **cryo-em** | <a id="relion" class="soft_anch">`relion`</a> | -&nbsp;`2.0.3`<br/>-&nbsp;`2.1` | [Website](http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page) | RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a stand-alone computer program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class averages in electron cryo-microscopy (cryo-EM). 
 **genomics** | <a id="angsd" class="soft_anch">`angsd`</a> | -&nbsp;`0.919` | [Website](http://www.popgen.dk/angsd/index.php/ANGSD) | ANGSD is a software for analyzing next generation sequencing data. 
 **genomics** | <a id="bcftools" class="soft_anch">`bcftools`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/bcftools) | BCFtools is a program for variant calling and manipulating files in the Variant Call Format (VCF) and its binary counterpart BCF. 
+**genomics** | <a id="bcl2fastq" class="soft_anch">`bcl2fastq`</a> | -&nbsp;`2.20` | [Website](https://support.illumina.com/downloads/bcl2fastq-conversion-software-v2-20.html) | The bcl2fastq2 conversion software can be used to convert BCL files from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems. 
 **genomics** | <a id="bedtools" class="soft_anch">`bedtools`</a> | -&nbsp;`2.27.1` | [Website](https://bedtools.readthedocs.io) | The bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. 
 **genomics** | <a id="bowtie" class="soft_anch">`bowtie`</a> | -&nbsp;`1.2.2` | [Website](http://bowtie-bio.sourceforge.net/) | Bowtie is an ultrafast, memory-efficient short read aligner. 
 **genomics** | <a id="bowtie2" class="soft_anch">`bowtie2`</a> | -&nbsp;`2.3.4.1` | [Website](http://bowtie-bio.sourceforge.net/bowtie2) | Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences. 
@@ -119,6 +120,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **cryo-em** | <a id="relion" class="soft_anch">`relion`</a> | -&nbsp;`2.0.3`<br/>-&nbsp;`2.1` | [Website](http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page) | RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a stand-alone computer program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class averages in electron cryo-microscopy (cryo-EM). 
 **genomics** | <a id="angsd" class="soft_anch">`angsd`</a> | -&nbsp;`0.919` | [Website](http://www.popgen.dk/angsd/index.php/ANGSD) | ANGSD is a software for analyzing next generation sequencing data. 
 **genomics** | <a id="bcftools" class="soft_anch">`bcftools`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/bcftools) | BCFtools is a program for variant calling and manipulating files in the Variant Call Format (VCF) and its binary counterpart BCF. 
+**genomics** | <a id="bcl2fastq" class="soft_anch">`bcl2fastq`</a> | -&nbsp;`2.20` | [Website](https://support.illumina.com/downloads/bcl2fastq-conversion-software-v2-20.html) | The bcl2fastq2 conversion software can be used to convert BCL files from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems. 
 **genomics** | <a id="bedtools" class="soft_anch">`bedtools`</a> | -&nbsp;`2.27.1` | [Website](https://bedtools.readthedocs.io) | The bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. 
 **genomics** | <a id="bowtie" class="soft_anch">`bowtie`</a> | -&nbsp;`1.2.2` | [Website](http://bowtie-bio.sourceforge.net/) | Bowtie is an ultrafast, memory-efficient short read aligner. 
 **genomics** | <a id="bowtie2" class="soft_anch">`bowtie2`</a> | -&nbsp;`2.3.4.1` | [Website](http://bowtie-bio.sourceforge.net/bowtie2) | Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences. 
