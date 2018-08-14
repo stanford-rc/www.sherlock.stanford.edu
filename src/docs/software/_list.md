@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, August 14 2018, we provide 411 software packages, in 10 categories, covering 56 fields of science:*
+*As of Tuesday, August 14 2018, we provide 410 software packages, in 10 categories, covering 56 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, electrostatics, molecular dynamics, quantum chemistry</small>
@@ -180,7 +180,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **language** | <a id="go" class="soft_anch">`go`</a> | -&nbsp;`1.9` | [Website](http://golang.org) | Go is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
 **language** | <a id="guile" class="soft_anch">`guile`</a> | -&nbsp;`2.0.11`<br/>-&nbsp;`2.2.2` | [Website](https://www.gnu.org/software/guile/) | GNU Guile is the preferred extension system for the GNU Project, which features an implementation of the Scheme programming language. 
 **language** | <a id="java" class="soft_anch">`java`</a> | -&nbsp;`1.8.0_131` | [Website](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. 
-**language** | <a id="julia" class="soft_anch">`julia`</a> | -&nbsp;`0.5.1`<br/>-&nbsp;`0.6`<br/>-&nbsp;`0.6.4` | [Website](https://julialang.org) | Julia is a high-level, high-performance dynamic programming language for numerical computing. 
+**language** | <a id="julia" class="soft_anch">`julia`</a> | -&nbsp;`0.6.4`<br/>-&nbsp;`1.0.0` | [Website](https://julialang.org) | Julia is a high-level, high-performance dynamic programming language for numerical computing. 
 **language** | <a id="lua" class="soft_anch">`lua`</a> | -&nbsp;`5.3.4` | [Website](https://www.lua.org) | Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description. 
 **language** | <a id="luarocks" class="soft_anch">`luarocks`</a> | -&nbsp;`2.4.3` | [Website](https://luarocks.org/) | LuaRocks is the package manager for Lua modules. 
 **language** | <a id="manticore" class="soft_anch">`manticore`</a> | -&nbsp;`20180301` | [Website](http://manticore.cs.uchicago.edu/) | Manticore is a high-level parallel programming language aimed at general-purpose applications running on multi-core processors. 
