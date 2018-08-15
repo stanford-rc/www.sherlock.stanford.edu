@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, August 14 2018, we provide 411 software packages, in 10 categories, covering 56 fields of science:*
+*As of Tuesday, August 14 2018, we provide 413 software packages, in 10 categories, covering 56 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, electrostatics, molecular dynamics, quantum chemistry</small>
@@ -237,7 +237,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **deep learning** | <a id="tensorrt" class="soft_anch">`tensorrt`</a> | -&nbsp;`3.0.1`<br/>-&nbsp;`3.0.4`<br/>-&nbsp;`4.0.1.6` | [Website](https://developer.nvidia.com/tensorrt) | NVIDIA TensorRT™ is a high-performance deep learning inference optimizer and runtime that delivers low latency, high-throughput inference for deep learning applications. 
 **deep learning** | <a id="torch" class="soft_anch">`torch`</a> | -&nbsp;`20180202` | [Website](http//torch.ch) | Torch is a scientific computing framework with wide support for machine learning algorithms that puts GPUs first. 
 **linear algebra** | <a id="armadillo" class="soft_anch">`armadillo`</a> | -&nbsp;`8.200.1` | [Website](http://arma.sourceforge.net/) | Armadillo is a high quality linear algebra library (matrix maths) for the C++ language, aiming towards a good balance between speed and ease of use. 
-**machine learning** | <a id="py-scikit-learn" class="soft_anch">`py-scikit-learn`</a> | -&nbsp;`0.19.1_py27` | [Website](http://scikit-learn.org) | Scikit-learn is a free software machine learning library for the Python programming language. 
+**machine learning** | <a id="py-scikit-learn" class="soft_anch">`py-scikit-learn`</a> | -&nbsp;`0.19.1_py36`<br/>-&nbsp;`0.19.1_py27` | [Website](http://scikit-learn.org) | Scikit-learn is a free software machine learning library for the Python programming language. 
 **numerical analysis** | <a id="matlab" class="soft_anch">`matlab`</a>^<b class="lic"></b>^ | -&nbsp;`R2017a`<br/>-&nbsp;`R2017b`<br/>-&nbsp;`R2018a` | [Website](https://www.mathworks.com/products/matlab.html) | MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment and fourth-generation programming language. 
 **numerical analysis** | <a id="octave" class="soft_anch">`octave`</a> | -&nbsp;`4.2.1` | [Website](https://www.gnu.org/software/octave/) | GNU Octave is a high-level language primarily intended for numerical computations. 
 **numerical library** | <a id="arpack" class="soft_anch">`arpack`</a> | -&nbsp;`3.5.0` | [Website](https://github.com/opencollab/arpack-ng) | Collection of Fortran77 subroutines designed to solve large scale eigenvalue problems. 
@@ -268,7 +268,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **optimization** | <a id="gurobi" class="soft_anch">`gurobi`</a> | -&nbsp;`7.5.1`<br/>-&nbsp;`8.0.1_py27`<br/>-&nbsp;`8.0.1_py36` | [Website](http://www.gurobi.com) | The Gurobi Optimizer is a commercial optimization solver for mathematical programming. 
 **optimization** | <a id="knitro" class="soft_anch">`knitro`</a> | -&nbsp;`10.3.0` | [Website](https://www.artelys.com/en/optimization-tools/knitro) | Artelys Knitro is an optimization solver for difficult large-scale nonlinear problems. 
 **scientific computing** | <a id="py-scipystack" class="soft_anch">`py-scipystack`</a> | -&nbsp;`1.0_py36`<br/>-&nbsp;`1.0_py27` | [Website](https://www.scipy.org) | The SciPy Stack is a collection of open source software for scientific computing in Python. It provides the following packages: numpy, scipy, matplotlib, ipython, jupyter, pandas, sympy and nose. 
-**statistics** | <a id="R" class="soft_anch">`R`</a> | -&nbsp;`3.4.0` | [Website](http://r-project.org) | R is a free software environment for statistical computing and graphics. 
+**statistics** | <a id="R" class="soft_anch">`R`</a> | -&nbsp;`3.4.0`<br/>-&nbsp;`3.5.1` | [Website](http://r-project.org) | R is a free software environment for statistical computing and graphics. 
 **statistics** | <a id="jags" class="soft_anch">`jags`</a> | -&nbsp;`4.3.0` | [Website](http://mcmc-jags.sourceforge.net/) | Just another Gibbs sampler (JAGS) is a program for simulation from Bayesian hierarchical models using Markov chain Monte Carlo (MCMC). 
 **statistics** | <a id="py-rpy2" class="soft_anch">`py-rpy2`</a> | -&nbsp;`2.8.6_py27`<br/>-&nbsp;`2.9.2_py36` | [Website](https://rpy2.bitbucket.io) | rpy2 is an interface to R running embedded in a Python process. 
 **statistics** | <a id="r-rstan" class="soft_anch">`r-rstan`</a> | -&nbsp;`2.17.3` | [Website](http://mc-stan.org/users/interfaces/rstan) | RStan is the R interface to Stan, an open-source software for facilitating statistical inference at the frontiers of applied statistics. 
