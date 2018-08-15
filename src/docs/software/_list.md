@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, August 14 2018, we provide 414 software packages, in 10 categories, covering 56 fields of science:*
+*As of Wednesday, August 15 2018, we provide 415 software packages, in 10 categories, covering 56 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, electrostatics, molecular dynamics, quantum chemistry</small>
@@ -101,6 +101,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **molecular dynamics** | <a id="openmm" class="soft_anch">`openmm`</a> | -&nbsp;`7.1.1` | [Website](http://openmm.org) | A high performance toolkit for molecular simulation. 
 **molecular dynamics** | <a id="plumed" class="soft_anch">`plumed`</a> | -&nbsp;`2.3.2` | [Website](http://www.plumed.org/) | PLUMED is an open source library for free energy calculations in molecular systems. 
 **molecular dynamics** | <a id="py-raspa2" class="soft_anch">`py-raspa2`</a> | -&nbsp;`2.0.3_py27` | [Website](https://github.com/numat/RASPA2) | RASPA2 is a general purpose classical simulation package that can be used for the simulation of molecules in gases, fluids, zeolites, aluminosilicates, metal-organic frameworks, carbon nanotubes and external fields. 
+**molecular dynamics** | <a id="qbox" class="soft_anch">`qbox`</a> | -&nbsp;`1.65.0` | [Website](http://www.qboxcode.org) | Qbox is a First-Principles Molecular Dynamics code. 
 **molecular dynamics** | <a id="quip" class="soft_anch">`quip`</a> | -&nbsp;`20170901` | [Website](https://github.com/libAtoms/QUIP) | The QUIP package is a collection of software tools to carry out molecular dynamics simulations. 
 **quantum chemistry** | <a id="cp2k" class="soft_anch">`cp2k`</a> | -&nbsp;`4.1` | [Website](http://www.cp2k.org) | CP2K is a quantum chemistry and solid state physics software package that can perform atomistic simulations of solid state, liquid, molecular, periodic, material, crystal, and biological systems. 
 **quantum chemistry** | <a id="quantum-espresso" class="soft_anch">`quantum-espresso`</a> | -&nbsp;`6.2.1` | [Website](https://www.quantum-espresso.org) | Quantum ESPRESSO is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials. 
