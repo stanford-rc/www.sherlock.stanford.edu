@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, August 14 2018, we provide 413 software packages, in 10 categories, covering 56 fields of science:*
+*As of Tuesday, August 14 2018, we provide 414 software packages, in 10 categories, covering 56 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, electrostatics, molecular dynamics, quantum chemistry</small>
@@ -156,6 +156,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 ### Devel
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
+**build** | <a id="bazel" class="soft_anch">`bazel`</a> | -&nbsp;`0.16.1` | [Website](https://bazel.build/) | Bazel is a fast, scalable, multi-language and extensible build system. 
 **build** | <a id="cmake" class="soft_anch">`cmake`</a> | -&nbsp;`3.8.1`<br/>-&nbsp;`3.11.1` | [Website](https://www.cmake.org) | CMake is an extensible, open-source system that manages the build process in an operating system and in a compiler-independent manner. 
 **build** | <a id="scons" class="soft_anch">`scons`</a> | -&nbsp;`2.5.1_py36`<br/>-&nbsp;`2.5.1_py27` | [Website](http://www.scons.org) | SCons is an Open Source software construction tool. 
 **compiler** | <a id="gcc" class="soft_anch">`gcc`</a> | -&nbsp;`7.1.0`<br/>-&nbsp;`7.3.0`<br/>-&nbsp;`8.1.0`<br/>-&nbsp;`6.3.0` | [Website](http://gcc.gnu.org) | The GNU Compiler Collection includes front ends for C, C++, Fortran, Java, and Go, as well as libraries for these languages (libstdc++, libgcj,...). 
