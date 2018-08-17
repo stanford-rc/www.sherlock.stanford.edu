@@ -24,15 +24,16 @@ and for some of them, purge policies (time-residency limits).
 <style>
 .yes { color: darkgreen; }
 .no  { color: darkred;   }
+.md-typeset code { word-break: keep-all; }
 </style>
 
 
-| Name                     | Type                 | Backups/Snapshots | Performance | Purpose | Cost |
+| Name                     | Type                 | Backups / Snapshots | Performance | Purpose | Cost |
 | ------------------------ |--------------------- |------------------ | ----------- | ------- | ---- |
-|`$HOME`, `$PI_HOME       `| [NFS][url_NFS]       | <b class="yes">:fa-check:</b> / <b class="yes">:fa-check:</b> | Low | Small, important files (source code, executables, configuration files...) | Free |
-|`$SCRATCH`, `$PI_SCRATCH` | [Lustre][url_lustre] | <b class="no">:fa-times:</b> / <b class="no">:fa-times:</b> | High bandwidth | Large, temporary files (checkpoints, raw application output...) | Free |
-|`$L_SCRATCH`          | Local SSD    | <b class="no">:fa-times:</b> / <b class="no">:fa-times:</b> | Low latency, high IOPS | Job specific output requiring high IOPS | Free |
-|`$OAK`                    | [Lustre][url_lustre] | <b class="no">:fa-times:</b> / option | Moderate | Long term storage of research data | Volume[^oak_sd] |
+|`$HOME`, `$GROUP_HOME`    | [NFS][url_NFS]       | <b class="yes">:fa-check:</b> / <b class="yes">:fa-check:</b> | Low | Small, important files (source code, executables, configuration files...) | Free |
+|`$SCRATCH`, `$GROUP_SCRATCH` | [Lustre][url_lustre] | <b class="no">:fa-times:</b> / <b class="no">:fa-times:</b> | High bandwidth | Large, temporary files (checkpoints, raw application output...) | Free |
+|`$L_SCRATCH`              | Local SSD    | <b class="no">:fa-times:</b> / <b class="no">:fa-times:</b> | Low latency, high IOPS | Job specific output requiring high IOPS | Free |
+|`$OAK`                    | [Lustre][url_lustre] | <b class="no">:fa-times:</b> / option | Moderate | Long term storage of research data | Based on volume[^oak_sd] |
 
 
 ### Quotas and limits
@@ -40,9 +41,9 @@ and for some of them, purge policies (time-residency limits).
 | Name           | Quota type | Quota value | Retention |
 | -------------- | ---------- | ----------: | --------- |
 |`$HOME`         | user       |       15 GB | $\infty$  |
-|`$PI_HOME`      | group      |        1 TB | $\infty$  |
+|`$GROUP_HOME`   | group      |        1 TB | $\infty$  |
 |`$SCRATCH`      | user       |       20 TB | time limited   |
-|`$PI_SCRATCH`   | group      |       30 TB | time limited   |
+|`$GROUP_SCRATCH`| group      |       30 TB | time limited   |
 |`$L_SCRATCH`    | n/a        |         n/a | job       |
 |`$OAK`          | group      | amount purchased | $\infty$ |
 
@@ -70,9 +71,9 @@ Retention types:
 | Name           |  Scope        | Access sharing level |
 | -------------- |  ------------ | ----------- |
 |`$HOME`         |  cluster      | user        |
-|`$PI_HOME`      |  cluster      | group       |
+|`$GROUP_HOME`      |  cluster      | group       |
 |`$SCRATCH`      |  cluster      | user        |
-|`$PI_SCRATCH`   |  cluster      | group       |
+|`$GROUP_SCRATCH`   |  cluster      | group       |
 |`$L_SCRATCH`    |  compute node | user        |
 |`$OAK`          |  cluster (optional, purchase required) | group |
 
@@ -94,7 +95,7 @@ Sherlock:
 
 * personal scripts, configuration files and software installations --> `$HOME`
 * group-shared scripts, software installations and medium-sized datasets -->
-  `$PI_HOME`
+  `$GROUP_HOME`
 * temporary output of jobs, large checkpoint files --> `$SCRATCH`
 * curated output of job campaigns, large group-shared datasets, archives --> `$OAK`
 
@@ -123,7 +124,7 @@ $ echo $SCRATCH
 
 Or for instance, to move to your group-shared home directory:
 ```
-$ cd $PI_HOME
+$ cd $GROUP_HOME
 ```
 
 

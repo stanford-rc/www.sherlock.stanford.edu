@@ -1,7 +1,7 @@
 
 !!! Warning "Data protection is mostly a task for the user"
 
-    Except for `$HOME` and `$PI_HOME`, data on Sherlock is not backed up,
+    Except for `$HOME` and `$GROUP_HOME`, data on Sherlock is not backed up,
     nor archived. It's up to each user and group to make sure they maintain
     multiple copies of their data if needed.
 
@@ -15,11 +15,11 @@ modified since the snapshot was taken.
 
 !!! important
 
-    Snapshots are only available on `$HOME` and `$PI_HOME`.
+    Snapshots are only available on `$HOME` and `$GROUP_HOME`.
 
 ### Accessing snapshots
 
-Snapshots taken in `$HOME` and `$PI_HOME` are accessible in a `.snapshot`
+Snapshots taken in `$HOME` and `$GROUP_HOME` are accessible in a `.snapshot`
 directory at any level of the hierarchy. Those `.snapshot` directories don't
 appear when listing directory contents with `ls`, but they can be listed
 explicitly or accessed with `cd`:
@@ -84,7 +84,7 @@ Examples:
 
 The current[^snap_policy] policy is to take snapshots on an hourly, daily and
 weekly basis.  Older snapshots automatically expire after their retention
-period. The snapshot policy applies to both `$HOME` and `$PI_HOME` storage
+period. The snapshot policy applies to both `$HOME` and `$GROUP_HOME` storage
 spaces.
 
 

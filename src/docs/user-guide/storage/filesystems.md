@@ -43,21 +43,21 @@ srcf.isilon:/ifs/home   15G  3.5G   12G  24% /home/users
 
 -----
 
-## `$PI_HOME`
+## `$GROUP_HOME`
 
 !!! summary
 
-    `$PI_HOME` is your group home directory. It's the best place to keep your
+    `$GROUP_HOME` is your group home directory. It's the best place to keep your
     group's shared code, software installations and important data as it
     provides snapshots and off-site replication. It is not meant to host data
     that will be actively read and written to by compute jobs.
 
-`$HOME` and `$PI_HOME` are based on the same physical file system.
+`$HOME` and `$GROUP_HOME` are based on the same physical file system.
 
 | Characteristics   |     |
 | ----------------- | --- |
 | **Type**          | Isilon high speed NFS file system |
-| **Quota**         | 1 TB for the whole `$PI_HOME` directory |
+| **Quota**         | 1 TB for the whole `$GROUP_HOME` directory |
 | **Snapshots**     | yes *(cf. [Snapshots](data-protection#snapshots) for more info)* |
 | **Backups**       | off-site replication |
 | **Purge policy**  | not purged |
@@ -66,19 +66,19 @@ srcf.isilon:/ifs/home   15G  3.5G   12G  24% /home/users
 
 ### Recommended usage
 
-`$PI_HOME` is best suited for group shared source code, common software
+`$GROUP_HOME` is best suited for group shared source code, common software
 installations, shared data sets and scripts.
 
-We strongly recommend using `$PI_HOME` to reference your group home directory in
+We strongly recommend using `$GROUP_HOME` to reference your group home directory in
 scripts, rather than its explicit path.
 
 ### Check quota usage
 
-The `df -h $PI_HOME` command could be used to check your group quota usage in
-`$PI_HOME`:
+The `df -h $GROUP_HOME` command could be used to check your group quota usage in
+`$GROUP_HOME`:
 
 ```
-$ df -h $PI_HOME
+$ df -h $GROUP_HOME
 Filesystem           Size  Used Avail Use% Mounted on
 srcf.isilon:/ifs/PI  1.0T  646G  379G  64% /home/groups
 ```
@@ -143,7 +143,7 @@ Disk quotas for user kilian (uid 215845):
 **NB**: user quotas are based on file ownership, meaning that all files
 belonging to a given user will count towards her user quota, no matter
 where they're located on the file system. That means that if you have files
-in `$PI_SCRATCH`, those will also count toward your user quota.
+in `$GROUP_SCRATCH`, those will also count toward your user quota.
 
 The different values displayed in `lfs quota` are as follows:
 
@@ -172,19 +172,19 @@ Please note that reading a file does not qualify as a modification.
 
 -----
 
-## `$PI_SCRATCH`
+## `$GROUP_SCRATCH`
 
-`$SCRATCH` and `$PI_SCRATCH` are based on the same physical file system.
+`$SCRATCH` and `$GROUP_SCRATCH` are based on the same physical file system.
 
 !!! summary
 
-    `$PI_SCRATCH` is your group shared scratch space. It's the best place to
+    `$GROUP_SCRATCH` is your group shared scratch space. It's the best place to
     store temporary files, such as raw job output, intermediate files, or
     unprocessed results that need to be shared among users within a group.
 
-!!! danger "`$PI_SCRATCH` is **NOT** a backup target"
+!!! danger "`$GROUP_SCRATCH` is **NOT** a backup target"
 
-    `$PI_SCRATCH` is not meant to store permanent data, and should only be used
+    `$GROUP_SCRATCH` is not meant to store permanent data, and should only be used
     for data associated with currently running jobs. It's not a target for
     backups, archived data, etc.
 
@@ -200,15 +200,15 @@ Please note that reading a file does not qualify as a modification.
 
 ### Recommended usage
 
-`$PI_SCRATCH` is best suited for large files, such as raw job output,
+`$GROUP_SCRATCH` is best suited for large files, such as raw job output,
 intermediate job files, unprocessed simlulation results, and so on.  This is
 the recommended location to run jobs from, and to store files that will be read
 or written to during job execution.
 
-Old files are automatically purged on `$PI_SCRATCH` so users should avoid
+Old files are automatically purged on `$GROUP_SCRATCH` so users should avoid
 storing long-term data there.
 
-We strongly recommend using `$PI_SCRATCH` to reference your group scratch
+We strongly recommend using `$GROUP_SCRATCH` to reference your group scratch
 directory in scripts, rather than its explicit path.
 
 ### Check quota usage
@@ -234,7 +234,7 @@ the different fields in `lfs quota`.
 
 ### Expiration policy
 
-As `$SCRATCH` and `$PI_SCRATCH` are on the same fielsystem, the same expiration
+As `$SCRATCH` and `$GROUP_SCRATCH` are on the same fielsystem, the same expiration
 policy applies to both. Please see the [`$SCRATCH`](#scratch) section above for
 more details.
 

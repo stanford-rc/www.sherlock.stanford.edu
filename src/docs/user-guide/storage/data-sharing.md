@@ -57,8 +57,8 @@ filesystem:
 
 | Type       |  Filesystems |
 | ---------- |  ----------- |
-| [NFSv4 ACLs](#nfsv4-acls) |  `$HOME` and `$PI_HOME` |
-| [POSIX ACLs](#posix-acls) |  `$SCRATCH`, `$PI_SCRATCH`, `$L_SCRATCH` and `$OAK` |
+| [NFSv4 ACLs](#nfsv4-acls) |  `$HOME` and `$GROUP_HOME` |
+| [POSIX ACLs](#posix-acls) |  `$SCRATCH`, `$GROUP_SCRATCH`, `$L_SCRATCH` and `$OAK` |
 
 
 ### POSIX ACLs
@@ -77,10 +77,10 @@ ACLs are set with the `setfacl` command, and displayed with `getfacl`. For more
 details and examples, please refer to [this documentation][url_rhel_posix_acl].
 
 In the example below, we allow two users to access a restricted directory
-located at `$PI_SCRATCH/restricted-dir/`:
+located at `$GROUP_SCRATCH/restricted-dir/`:
 
 ```
-$ cd $PI_SCRATCH
+$ cd $GROUP_SCRATCH
 
 ### Create new directory
 $ mkdir restricted-dir
@@ -121,9 +121,9 @@ default:mask::rwx
 default:other::---
 ```
 
-!!! warning "Default permissions on `$PI_SCRATCH` don't allow sharing outside of your group"
+!!! warning "Default permissions on `$GROUP_SCRATCH` don't allow sharing outside of your group"
 
-    By default, the Unix permissions on the root directory `$PI_SCRATCH` don't
+    By default, the Unix permissions on the root directory `$GROUP_SCRATCH` don't
     allow read nor traversal access for *others* (*ie.* any user no part of
     your PI group). If you need to share files with users outside of your own
     group, please [contact us][url_contact] so we can set the appropriate
@@ -135,7 +135,7 @@ permissions yourself.
 
 ### NFSv4 ACLs
 
-`$HOME` and `$PI_HOME` also allow setting ACLs, albeit with different
+`$HOME` and `$GROUP_HOME` also allow setting ACLs, albeit with different
 syntax and semantics than POSIX ACLs. The principle is very similar,
 though.
 

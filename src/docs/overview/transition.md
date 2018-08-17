@@ -288,7 +288,7 @@ change it all: we kept the best parts as they are.
 
 ### Storage
 
-All the storage systems (including `$HOME`, `$PI_HOME`, `$SCRATCH`, `$PI_SCRATCH`
+All the storage systems (including `$HOME`, `$GROUP_HOME`, `$SCRATCH`, `$GROUP_SCRATCH`
 and `$OAK`) are shared between Sherlock 1.0 and Sherlock 2.0. So all the
 files and folders available on Sherlock 1.0 will be available on Sherlock 2.0.
 
@@ -298,7 +298,7 @@ files and folders available on Sherlock 1.0 will be available on Sherlock 2.0.
     changed on Sherlock 2.0.  They are now respectively `/home/users` and
     `/home/groups`.
 
-    We strongly recommend referring to them through the `$HOME` and `$PI_HOME`
+    We strongly recommend referring to them through the `$HOME` and `$GROUP_HOME`
     environment variables instead of using the full paths.
 
 ### File transfers
