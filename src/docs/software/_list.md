@@ -1,10 +1,10 @@
 
 ## Categories
 
-*As of Thursday, August 23 2018, we provide 417 software packages, in 10 categories, covering 56 fields of science:*
+*As of Thursday, August 23 2018, we provide 419 software packages, in 10 categories, covering 57 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
-* [`chemistry`](#chemistry) <small>computational chemistry, electrostatics, molecular dynamics, quantum chemistry</small>
+* [`chemistry`](#chemistry) <small>computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
 * [`computational`](#computational) <small></small>
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`devel`](#devel) <small>build, compiler, data, data analytics, language, libs, mpi, networking, parser</small>
@@ -95,6 +95,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **computational chemistry** | <a id="py-ase" class="soft_anch">`py-ase`</a> | -&nbsp;`3.14.1_py27` | [Website](https://wiki.fysik.dtu.dk/ase/) | The Atomic Simulation Environment (ASE) is a set of tools and Python modules for setting up, manipulating, running, visualizing and analyzing atomistic simulations. 
 **computational chemistry** | <a id="schrodinger" class="soft_anch">`schrodinger`</a>^<b class="lic"></b>^ | -&nbsp;`2017-3`<br/>-&nbsp;`2018-1`<br/>-&nbsp;`2018-2` | [Website](https://www.schrodinger.com) | Schrödinger Suites (Small-molecule Drug Discovery Suite, Material Science Suite, Biologics Suite) provide a set of molecular modelling software. 
 **computational chemistry** | <a id="vasp" class="soft_anch">`vasp`</a>^<b class="lic"></b>^ | -&nbsp;`5.4.1` | [Website](https://www.vasp.at) | The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic scale materials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics, from first principles. 
+**cristallography** | <a id="vesta" class="soft_anch">`vesta`</a> | -&nbsp;`3.4.4` | [Website](http://jp-minerals.org/vesta/en/) | VESTA is a 3D visualization program for structural models, volumetric data such as electron/nuclear densities, and crystal morphologies. 
 **electrostatics** | <a id="apbs" class="soft_anch">`apbs`</a> | -&nbsp;`1.5` | [Website](http://www.poissonboltzmann.org/) | APBS solves the equations of continuum electrostatics for large biomolecular assemblages. 
 **molecular dynamics** | <a id="gromacs" class="soft_anch">`gromacs`</a> | -&nbsp;`2016.3`<br/>-&nbsp;`2018` | [Website](http://www.gromacs.org) | GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles. 
 **molecular dynamics** | <a id="lammps" class="soft_anch">`lammps`</a> | -&nbsp;`20180316` | [Website](http://lammps.sandia.gov) | LAMMPS is a classical molecular dynamics code that models an ensemble of particles in a liquid, solid, or gaseous state. 
@@ -412,6 +413,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **graphs** | <a id="graphviz" class="soft_anch">`graphviz`</a> | -&nbsp;`2.40.1` | [Website](https://www.graphviz.org/) | Graphviz is open source graph visualization software. 
 **molecular visualization** | <a id="pymol" class="soft_anch">`pymol`</a>^<b class="lic"></b>^ | -&nbsp;`1.8.6.2` | [Website](https://pymol.org) | PyMOL is a Python-enhanced molecular graphics tool. 
 **plotting** | <a id="gnuplot" class="soft_anch">`gnuplot`</a> | -&nbsp;`5.2.0` | [Website](http://www.gnuplot.info) | Gnuplot is a portable command-line driven graphing utility for Linux, OS/2, MS Windows, OSX, VMS, and many other platforms. 
+**plotting** | <a id="grace" class="soft_anch">`grace`</a> | -&nbsp;`5.1.25` | [Website](http://plasma-gate.weizmann.ac.il/Grace) | Grace is a WYSIWYG tool to make two-dimensional plots of numerical data. 
 **plotting** | <a id="py-basemap" class="soft_anch">`py-basemap`</a> | -&nbsp;`1.1.0_py36`<br/>-&nbsp;`1.1.0_py27` | [Website](https://matplotlib.org/basemap/) | The matplotlib basemap toolkit is a library for plotting 2D data on maps in Python. 
 **plotting** | <a id="py-matplotlib" class="soft_anch">`py-matplotlib`</a> | -&nbsp;`2.1.2_py27`<br/>-&nbsp;`2.1.2_py36`<br/>-&nbsp;`2.2.2_py36`<br/>-&nbsp;`2.2.2_py27` | [Website](http://matplotlib.org) | Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. 
 **plotting** | <a id="py-plotly" class="soft_anch">`py-plotly`</a> | -&nbsp;`2.4.1_py27` | [Website](https://plot.ly/python/) | Plotly's Python graphing library makes interactive, publication-quality graphs online. 
