@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Thursday, August 23 2018, we provide 419 software packages, in 10 categories, covering 57 fields of science:*
+*As of Monday, August 27 2018, we provide 422 software packages, in 10 categories, covering 57 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
@@ -306,8 +306,9 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **compression** | <a id="szip" class="soft_anch">`szip`</a> | -&nbsp;`2.1.1` | [Website](https://support.hdfgroup.org/doc_resource/SZIP) | Szip compression software, providing lossless compression of scientific data, is an implementation of the extended-Rice lossless compression algorithm. 
 **compression** | <a id="xz" class="soft_anch">`xz`</a> | -&nbsp;`5.2.3` | [Website](http://tukaani.org/xz/) | XZ Utils is free general-purpose data compression software with a high compression ratio. 
 **compression** | <a id="zlib" class="soft_anch">`zlib`</a> | -&nbsp;`1.2.11` | [Website](http://zlib.net) | zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. 
+**containers** | <a id="libnvidia-container" class="soft_anch">`libnvidia-container`</a> | -&nbsp;`1.0.0rc2` | [Website](https://github.com/NVIDIA/libnvidia-container) | libnvidia-container is a library and a simple CLI utility to automatically configure GNU/Linux containers leveraging NVIDIA hardware. 
 **containers** | <a id="proot" class="soft_anch">`proot`</a> | -&nbsp;`5.1.0` | [Website](https://proot-me.github.io) | PRoot is a user-space implementation of chroot, mount --bind, and binfmt_misc. 
-**containers** | <a id="singularity" class="soft_anch">`singularity`</a> | -&nbsp;`2.5.2` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
+**containers** | <a id="singularity" class="soft_anch">`singularity`</a> | -&nbsp;`2.5.2`<br/>-&nbsp;`2.6.0` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. 
 **database** | <a id="bdb" class="soft_anch">`bdb`</a> | -&nbsp;`6.2.32` | [Website](http://www.oracle.com/us/products/database/berkeley-db) | Berkeley DB (BDB) is a software library intended to provide a high-performance embedded database for key/value data. 
 **database** | <a id="mariadb" class="soft_anch">`mariadb`</a> | -&nbsp;`10.2.11` | [Website](https://www.mariadb.org) | MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/mariadb)
 **database** | <a id="sqlite" class="soft_anch">`sqlite`</a> | -&nbsp;`3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
@@ -360,6 +361,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="libpng" class="soft_anch">`libpng`</a> | -&nbsp;`1.2.57`<br/>-&nbsp;`1.6.29` | [Website](http://libpng.sourceforge.net) | libpng is the official PNG reference library. It supports almost all PNG features, is extensible, and has been extensively tested for over 20 years. 
 **libs** | <a id="libproxy" class="soft_anch">`libproxy`</a> | -&nbsp;`0.4.15` | [Website](https://libproxy.github.io/libproxy/) | libproxy is a library that provides automatic proxy configuration management. 
 **libs** | <a id="libressl" class="soft_anch">`libressl`</a> | -&nbsp;`2.5.3` | [Website](https://www.libressl.org) | LibreSSL is a version of the TLS/crypto stack forked from OpenSSL in 2014, with goals of modernizing the codebase, improving security, and applying best practice development processes. 
+**libs** | <a id="libseccomp" class="soft_anch">`libseccomp`</a> | -&nbsp;`2.3.3` | [Website](https://github.com/seccomp/libseccomp) | The libseccomp library provides an easy to use, platform independent, interface to the Linux Kernel's syscall filtering mechanism.. 
 **libs** | <a id="libsoup" class="soft_anch">`libsoup`</a> | -&nbsp;`2.61.2` | [Website](https://wiki.gnome.org/LibSoup) | libsoup is an HTTP client/server library for GNOME. 
 **libs** | <a id="libtasn1" class="soft_anch">`libtasn1`</a> | -&nbsp;`4.13` | [Website](https://www.gnu.org/software/libtasn1/) | Libtasn1 is the ASN.1 library used by GnuTLS, p11-kit and some other packages. 
 **libs** | <a id="libtiff" class="soft_anch">`libtiff`</a> | -&nbsp;`4.0.8` | [Website](http://simplesystems.org/libtiff/) | libtiff provides support for the Tag Image File Format (TIFF), a widely used format for storing image data. 
