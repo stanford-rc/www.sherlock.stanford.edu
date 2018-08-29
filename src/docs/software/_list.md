@@ -1,13 +1,13 @@
 
 ## Categories
 
-*As of Monday, August 27 2018, we provide 422 software packages, in 10 categories, covering 57 fields of science:*
+*As of Wednesday, August 29 2018, we provide 423 software packages, in 10 categories, covering 58 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
 * [`computational`](#computational) <small></small>
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
-* [`devel`](#devel) <small>build, compiler, data, data analytics, language, libs, mpi, networking, parser</small>
+* [`devel`](#devel) <small>build, compiler, data, data analytics, language, library, libs, mpi, networking, parser</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, photonics</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, imaging, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -197,6 +197,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **language** | <a id="python" class="soft_anch">`python`</a> | -&nbsp;`3.6.1`<br/>-&nbsp;`2.7.13` | [Website](https://www.python.org) | Python is an interpreted, interactive, object-oriented programming language. 
 **language** | <a id="ruby" class="soft_anch">`ruby`</a> | -&nbsp;`2.4.1` | [Website](https://www.ruby-lang.org) | A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. 
 **language** | <a id="scala" class="soft_anch">`scala`</a> | -&nbsp;`2.12.6` | [Website](https://www.scala-lang.org) | Scala combines object-oriented and functional programming in one concise, high-level language. 
+**library** | <a id="trilinos" class="soft_anch">`trilinos`</a> | -&nbsp;`12.12.1` | [Website](https://trilinos.org/) | Trilinos is a collection of open-source software libraries, called packages, intended to be used as building blocks for the development of scientific applications. 
 **libs** | <a id="ant" class="soft_anch">`ant`</a> | -&nbsp;`1.10.1` | [Website](https://ant.apache.org/) | Apache Ant is a Java library and command-line tool whose mission is to drive processes described in build files as targets and extension points dependent upon each other. 
 **libs** | <a id="boost" class="soft_anch">`boost`</a> | -&nbsp;`1.64.0` | [Website](http://www.boost.org) | Boost is a set of libraries for the C++ programming language that provide support for tasks and structures such as linear algebra, pseudorandom number generation, multithreading, image processing, regular expressions, and unit testing. 
 **libs** | <a id="cnmem" class="soft_anch">`cnmem`</a> | -&nbsp;`1.0.0` | [Website](https://github.com/NVIDIA/ncmem) | CNMeM is a simple library to help the Deep Learning frameworks manage CUDA memory. 
