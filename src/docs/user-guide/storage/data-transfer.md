@@ -185,6 +185,15 @@ and then should not be typed in).
         Make sure to unmount your SSHFS drives before putting your macOS system
         to sleep to avoid this situation.
 
+    !!! info "SSHFS on Windows"
+
+        Most of the open and free implementations of SSHFS on Windows don't
+        support 2FA and will fail to mount Sherlock's filesystems. Until
+        Microsoft implements a working FUSE driver in WSL, Windows users will
+        have to rely on [commercial solutions][url_sshfs_windows], or
+        [workarounds][url_sshfs_win_vm].
+
+
     For instance, on a Linux machine with SSHFS installed, you could mount your
     Sherlock home directory with the following commands:
 
@@ -372,7 +381,8 @@ documentation][url_rclone].
 [url_rsync_tuto]:   https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps
 [url_sshfs_linux]:  http://fuse.sourceforge.net/sshfs.html
 [url_sshfs_macos]:  https://osxfuse.github.io/
-[url_sshfs_windows]:https://github.com/feo-cz/win-sshfs
+[url_sshfs_windows]:https://mountainduck.io/
+[url_sshfs_win_vm]: https://jtanx.github.io/2017/10/16/an-alternative-approach-to-sshfs-on-windows/
 [url_sshfs_tuto]:   https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
 [url_globus]:       https://www.globus.org
 [url_globus_doc]:   https://www.globus.org/how-it-works
