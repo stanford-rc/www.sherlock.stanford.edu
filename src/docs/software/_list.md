@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, August 29 2018, we provide 423 software packages, in 10 categories, covering 58 fields of science:*
+*As of Thursday, August 30 2018, we provide 423 software packages, in 10 categories, covering 58 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
