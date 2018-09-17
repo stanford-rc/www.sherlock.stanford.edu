@@ -177,7 +177,7 @@ and then should not be typed in).
     !!! warning "SSHFS on macOS"
 
         SSHFS on macOS is known to try to automatically reconnect filesystem
-        mounts after resuming from sleep or uspend, even without any valid
+        mounts after resuming from sleep or suspend, even without any valid
         credentials.  As a result, it will generate a lot of failed connection
         attempts and likely make your [IP address blacklisted][url_auth_fail]
         on login nodes.
