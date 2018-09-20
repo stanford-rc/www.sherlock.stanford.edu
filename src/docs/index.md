@@ -27,21 +27,41 @@ Sherlock is a High-Performance Computing (HPC) cluster, operated by the
 to the Stanford community at large. You'll find all the documentation, tips,
 FAQs and information about Sherlock among these pages.
 
-!!! info "Sherlock 1.0"
+### Why use Sherlock?
 
-    These pages refer to Sherlock 2.0, the new iteration of the Sherlock
-    cluster.  For anything specific to Sherlock 1.0, please see the previous
-    [wiki][url_old_wiki].
+Using Sherlock for your work provides many advantages over individual
+solutions: hosted in an on-premises, state-of-the-art datacenter, the Sherlock
+cluster is powered and cooled by installations that are optimized for
+scientific computing.
 
-    The older Sherlock system will remain in production until all of its nodes
-    have been merged into Sherlock 2.0.  Until then, the two systems will
-    coexist for an extended transition period. The [Sherlock 2.0 transition
-    guide][url_transition] includes material intended to help users manage
-    their transition between the two systems: differences, temporary
-    conditions, etc.
+On Sherlock, simulations and workloads benefit from performance levels that
+only large scale HPC systems can offer: high-performance I/O infrastructure,
+petabytes of storage, large variety of hardware configurations, GPU
+accelerators, centralized system administration and management provided by the
+[Stanford Research Computing Center][url_srcc] (SRCC).
 
-Feel free to explore the different sections. If some information is missing,
-please [contact us][url_contact] to suggest additions or modifications.
+Such features are not easily accessible at the departmental level, and often
+require both significant initial investments and recurring costs. Joining
+Sherlock allows researchers and faculty members to avoid those costs and
+benefit from economies of scale, as well as to access larger, professionally
+managed computing resources that what would not be available on an individual
+or even departmental basis.
+
+### How much does it cost?
+
+Sherlock is free to use for anyone doing sponsored research at Stanford. Any
+faculty member can request access for research purposes, and get an account
+with a base storage allocation and unlimited compute time on the global, shared
+pool of resources.
+
+In case those free resources are not sufficient, Stanford Research Computing
+provides faculty with the [opportunity to purchase][url_condo] from a [catalog
+a recommended configurations][url_catalog], for the use of their research
+teams. Using a traditional compute cluster condominium model, participating
+faculty and their teams get priority access to the resources they purchase.
+When they're idle, those resources are available to use by other owners on the
+cluster, giving them access to virtually unlimited resources.
+
 
 ## Information sources
 
@@ -142,8 +162,8 @@ solution on your own.
 
     * Not all questions and problems can be solved or answered during office
       hours, especially ones involving hardware, filesystem or network issues.
-      Sherlock features over 1,400 servers, routers and storage pieces of
-      equipment, that are constantly being monitored by our team.  You can be
+      Sherlock features several thousand computing, networking and storage
+      components, that are constantly being monitored by our team. You can be
       sure that when Sherlock has an issue, we are aware of it and working on
       it.
 
@@ -191,24 +211,25 @@ Here's what it looks like in motion:
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_old_wiki]:     //sherlock.stanford.edu
 [url_srcc]:         //srcc.stanford.edu
 [url_contact]:      mailto:srcc-support@stanford.edu
 [url_docs]:         //www.sherlock.stanford.edu/docs
 [url_news]:         //news.sherlock.stanford.edu
 [url_status]:       //status.sherlock.stanford.edu
+[url_catalog]:      //srcc.stanford.edu/private/sherlock-qtr-order
 
-[url_concepts]:   /docs/overview/concepts
-[url_glossary]:   /docs/overview/glossary
-[url_transition]: /docs/overview/transition
-[url_prereq]:     /docs/getting-started/
-[url_connect]:    /docs/getting-started/connecting
-[url_submit]:     /docs/getting-started/submitting
-[url_troubleshoot]:/docs/user-guide/troubleshoot/#how-to-submit-a-successful-support-request
+[url_condo]:        /docs/overview/concepts#the-condominium-model
+[url_concepts]:     /docs/overview/concepts
+[url_glossary]:     /docs/overview/glossary
+[url_transition]:   /docs/overview/transition
+[url_prereq]:       /docs/getting-started/
+[url_connect]:      /docs/getting-started/connecting
+[url_submit]:       /docs/getting-started/submitting
+[url_troubleshoot]: /docs/user-guide/troubleshoot/#how-to-submit-a-successful-support-request
 
-[url_shu_ml]:   //mailman.stanford.edu/mailman/listinfo/sherlock-users
-[url_sha_ml]:   //mailman.stanford.edu/mailman/listinfo/sherlock-announce
-[url_polya]:    //campus-map.stanford.edu/?id=14-160&lat=37.42898333&lng=-122.17752929&zoom=17&srch=polya%20hall
+[url_shu_ml]:       //mailman.stanford.edu/mailman/listinfo/sherlock-users
+[url_sha_ml]:       //mailman.stanford.edu/mailman/listinfo/sherlock-announce
+[url_polya]:        //campus-map.stanford.edu/?id=14-160&lat=37.42898333&lng=-122.17752929&zoom=17&srch=polya%20hall
 
 
 [comment]: #  (footnotes -----------------------------------------------------)
