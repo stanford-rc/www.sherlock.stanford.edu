@@ -28,82 +28,89 @@ $ ml python/2.7.13
 If just load "python" without a version number, it will default to Python 2.7.
 
 
-## Python modules in your environment
+## Installing Python modules in your environment
 Python supports modules and packages which allows programs to be modularity.
 
-Python provides a utility, called pip, that allows users to easily install modules from its extensive
-library.
+Python provides a utility, called `pip`, that allows users to easily install modules 
+from its extensive library.
 
+To install Python modules from with `pip`, we recommend using the `--user` option 
+when installing so that it installs inside of your environment. 
 
-
-To install Python modules from CPAN, we recommend using the (provided)
-[`App::cpanminus`][url_cpanminus] module and [`local::lib`][url_locallib]
-modules:
-
-* `App::cpanminus` is a popular alternative CPAN client that can be used to
-  manage Python distributions. It has many great features, including uninstalling
-  modules.
-* `local::lib` allows users to install Python modules in the directory of their
-  choice (typically their home directory) without administrative privileges.
-
-
-Both are already installed on Sherlock, and are automatically enabled and
-configured when you load the `perl` module. You don't need to add anything in
-your `~/.bashrc` file, the Sherlock `perl` module will automatically create
-everything that is required so you can directly run a command to install Python
-modules locally.
-
-### Installation
-
-!!! tip "Python modules installation is only necessary once"
-
-    You only need to install Python modules once on Sherlock. Since fielsystems
-    are shared, modules installed on one node will immediately be available on
-    all nodes on the cluster.
-
-As an example, to install the `DateTime::TimeZone` module, you can do the
-following:
-
+For example: 
 ```
-$ ml perl
-$ cpanm DateTime::TimeZone
+$ pip install <module name> --user
 ```
 
-### Usage
-
-Once installed, you can use the Python modules directly, no specific options or
-syntax is required.
-
-For instance, to check that the `DateTime::TimeZone` module is correctly
-installed:
+For Python 3, use `pip3`:
 
 ```
-$ perl -MDateTime::TimeZone -e 'print $DateTime::TimeZone::VERSION . "\n"';
-2.13
+$ pip3 install <module name> --user
 ```
+
+
+### Install a list of modules using a requirement file
+
+Python's `pip` utility also allows you to install a list of modules by using a file called `requirements.txt`. 
+
+In order to do this, create a text file called `requirements.txt` and place the module you would like to install on its own line like so:
+```
+numpy
+scikit-learn
+keras
+tensorflow
+```
+
+You can now install your modules like so:
+```
+$ pip3 install -r requirements.txt --user
+```
+
+### Upgrading packages
+
+`Pip` can update a package by:
+
+```
+$ pip3 install <module name> --upgrade --user
+
+```
+
+It even easier with a `requirements.txt` file:
+
+```
+$ pip3 install -r requirements.txt --upgrade --user
+
+```
+
+### Anaconda
+
+`Anaconda` can be used in Sherlock by loading the module:
+```
+$ ml anaconda/5.0.0-py36
+
+```
+
+Although for installing modules we prefer using the `pip` utility on Sherlock. 
+
 
 ### Uninstallation
 
 To uninstall a Python module:
 
 ```
-$ cpanm -U DateTime::TimeZone
+$ pip3 uninstall <module name> --upgrade --user
+
+```
+
+With a `requirements.txt` file:
+
+```
+$ pip3 uninstall -r requirements.txt --upgrade --user
+
 ```
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_python]:         https://www.python.org/
-[url_cpanminus]:    https://metacpan.org/pod/App::cpanminus
-[url_locallib]:     https://metacpan.org/pod/App::cpanminus
-
-
-[comment]: #  (footnotes -----------------------------------------------------)
-
-[^cpan]: CPAN can denote either the archive network itself, or the Python program
-  that acts as an interface to the network and as an automated software
-  installer (somewhat like a package manager). Most software on CPAN is free
-  and open source.
-
-
-
+[url_pip]:            https://pip.pypa.io/en/stable/
