@@ -123,10 +123,10 @@ default:other::---
 
 !!! warning "Default permissions on `$GROUP_SCRATCH` don't allow sharing outside of your group"
 
-    By default, the Unix permissions on the root directory `$GROUP_SCRATCH` don't
-    allow read nor traversal access for *others* (*ie.* any user no part of
-    your PI group). If you need to share files with users outside of your own
-    group, please [contact us][url_contact] so we can set the appropriate
+    By default, the Unix permissions on the root directory `$GROUP_SCRATCH`
+    don't allow read nor traversal access for *others* (*ie.* any user not part
+    of your PI group). If you need to share files with users outside of your
+    own group, please [contact us][url_contact] so we can set the appropriate
     permissions on your folder.
 
 For `$SCRATCH`, you're the owner of the directory and so you can change the
