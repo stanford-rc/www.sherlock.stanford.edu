@@ -422,7 +422,7 @@ Feel free to contact us by email at srcc-support@stanford.edu.
 [url_modules]:      /docs/software/modules
 [url_jobs]:         /docs/user-guide/running
 [url_login]:        /docs/getting-started/connecting
-[url_transfer]:     /docs/user-guide/storage/data-transfer
+[url_transfer]:     /docs/storage/data-transfer
 [url_hostkeys]:     /docs/getting-started/connecting/#host-keys
 
 [comment]: # (footnodes ------------------------------------------------------)

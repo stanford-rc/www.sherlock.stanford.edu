@@ -66,7 +66,7 @@ group on Sherlock, please [let us know][url_contact], and we'll get in touch.
 
 [url_contact]:      mailto:srcc-support@stanford.edu
 [url_software_lic]: https://uit.stanford.edu/service/softwarelic
-[url_storage]:      /docs/user-guide/storage
+[url_storage]:      /docs/storage
 [url_modules]:      /docs/software/modules
 [url_modules_lab]:  /docs/software/modules#lab-provided-software
 

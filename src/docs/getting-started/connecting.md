@@ -222,7 +222,7 @@ section][url_submit].
 [url_login]:        /docs/overview/glossary/#login-nodes
 [url_submit]:       /docs/getting-started/submitting
 [url_contact]:      mailto:srcc-support@stanford.edu
-[url_sshfs]:        /docs/user-guide/storage/data-transfer#sshfs
+[url_sshfs]:        /docs/storage/data-transfer#sshfs
 [url_vpn]:          https://uit.stanford.edu/service/vpn
 
 [comment]: #  (footnotes -----------------------------------------------------)

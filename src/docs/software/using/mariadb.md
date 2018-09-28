@@ -313,4 +313,4 @@ Complete documentation about MariaDB is available at the [MariaDB website][url_m
 [url_compute_node]: /docs/overview/glossary/#node
 [url_heredoc]:      https://en.wikipedia.org/wiki/Here_document
 
-[url_storage]:      /docs/user-guide/storage
+[url_storage]:      /docs/storage

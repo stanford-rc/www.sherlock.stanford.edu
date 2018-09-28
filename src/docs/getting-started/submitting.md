@@ -165,8 +165,8 @@ there are many other options and areas to explore in the next sections:
 [url_texteditors]:    prerequisites/#text-editors
 [url_running]:        /docs/user-guide/running-jobs/
 
-[url_transfer]:       /docs/user-guide/storage/data-transfer
-[url_storage]:        /docs/user-guide/storage
+[url_transfer]:       /docs/storage/data-transfer
+[url_storage]:        /docs/storage
 [url_runningjobs]:    /docs/user-guide/running-jobs/
 
 [comment]: #  (footnotes -----------------------------------------------------)

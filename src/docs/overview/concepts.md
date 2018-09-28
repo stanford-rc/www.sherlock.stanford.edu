@@ -78,7 +78,7 @@ user to review and analyze.
 [g_ssh]:        glossary#ssh
 [g_jobs]:       glossary#job
 [g_scheduler]:  glossary#scheduler
-[url_storage]:  /docs/user-guide/storage/
+[url_storage]:  /docs/storage/
 
 
 ## The condominium model
