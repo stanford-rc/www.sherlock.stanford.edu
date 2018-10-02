@@ -1,4 +1,9 @@
-## Perl modules in your environment
+## Introduction
+
+Perl is a high-level, general-purpose, interpreted, dynamic programming
+language. Originally developed by Larry Wall in 1987 as a general-purpose Unix
+scripting language to make report processing easier, it has since
+undergone many changes and revisions.
 
 Perl provides a framework allowing users to easily extend the language by
 installing new modules in their local environment. The Comprehensive Perl
@@ -6,6 +11,8 @@ Archive Network (CPAN[^cpan]) is an archive of over 25,000 distributions of
 software written in Perl, as well as documentation for it. It is searchable at
 http://metacpan.org or http://search.cpan.org and mirrored in over 270
 locations around the world.
+
+## Perl modules on Sherlock
 
 
 To install Perl modules from CPAN, we recommend using the (provided)
