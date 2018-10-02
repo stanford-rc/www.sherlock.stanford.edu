@@ -1,6 +1,10 @@
+## Introduction
+
 Apache Spark™ is a general engine for large-scale data processing.  This
 document gives a quick introduction how to get a first test program in Spark
 running on Sherlock.
+
+## Spark on Sherlock
 
 Running Apache Spark on Sherlock is a bit different from using a traditional
 Spark/Hadoop cluster in that it requires some level of integration with the
@@ -20,7 +24,7 @@ job to the queuing system:
 The following scripts show how to implement these three steps, and use the Pi
 Monte-Carlo calculation as an example.
 
-## Single-node job
+### Single-node job
 
 In this example, all the Spark processes run on the same [compute
 node][url_compute_node], which makes for a fairly simply sbatch script. The
@@ -47,7 +51,7 @@ run-example SparkPi 1000
 spark-submit --master $MASTER $SPARK_HOME/examples/src/main/python/pi.py 1000
 ```
 
-## Multi-node job
+### Multi-node job
 
 To start a Spark cluster and run a task on multiple nodes, more preliminary
 steps are necessary. Here's an example script that will span 2 nodes, start 2
