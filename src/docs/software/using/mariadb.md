@@ -1,6 +1,11 @@
+## Introduction
+
 [MariaDB][url_mariadb] is a community-developed fork of the [MySQL][url_mysql]
 relational database management system. It is completely compatible with MySQL
 and could be use as a drop-in replacement in the vast majority of cases.
+
+
+## MariaDB on Sherlock
 
 We don't provide any centralized database service on Sherlock, but we provide a
 centralized installation of MariaDB, and each user is welcome to start their
@@ -16,12 +21,12 @@ this:
    and/or jobs (via the network).
 
 
-## Single-node access
+### Single-node access
 
 In that example, the database server and client will run within the same job,
 on the same [compute node][url_compute_node].
 
-### Preparation
+#### Preparation
 
 You first need to let MariaDB know where to store its database, where to log
 things, and how to allow connections from clients. The commands below only need
@@ -76,7 +81,7 @@ $ $MARIADB_DIR/scripts/mysql_install_db --basedir=$MARIADB_DIR  --datadir=$DB_DI
 
 ```
 
-### Start the server
+#### Start the server
 
 You can now start the MariaDB server. For this, first get an allocation on a
 compute node, note the hostname of the compute node your job has been
@@ -100,7 +105,7 @@ you'll find more information about the issue in the `$DB_DIR/mysqld.log` file
 you defined in `~/.my.cnf`.
 
 
-### Run queries
+#### Run queries
 
 You're now ready to run queries aginst that MariaDB instance, from the same
 node your job is running on.
@@ -131,14 +136,14 @@ and all the processes will be terminated automatically.
 
 
 
-## Multi-node access
+### Multi-node access
 
 In case you need to run a more persistent instance of MariaDB, you can for
 instance submit a dedicated job to run the server, make it accessible over the
 network, and run queries from other jobs and/or nodes.
 
 
-### Enable network access
+#### Enable network access
 
 The preparation steps are pretty similar to the [single-node
 case](#single-node-access), except the MariaDB server instance will be accessed
@@ -232,7 +237,7 @@ EOF
 Once you've done that, you're ready to terminate that interactive job, and
 start a dedicated MariaDB server job.
 
-### Start MariaDB in a job
+#### Start MariaDB in a job
 
 You can use the following `mariadb.sbatch` job as a template:
 
@@ -252,7 +257,7 @@ and submit it with:
 $ sbatch mariadb.sbatch
 ```
 
-### Connect to the running instance
+#### Connect to the running instance
 
 
 Now, from any node on Sherlock, whether from a login node, an interactive job,
