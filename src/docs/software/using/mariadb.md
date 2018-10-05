@@ -186,7 +186,7 @@ $ ml system mariadb
 $ $MARIADB_DIR/scripts/mysql_install_db --basedir=$MARIADB_DIR  --datadir=$DB_DIR
 ```
 
-### Secure access
+#### Secure access
 
 We will now set a password for the MariaDB `root` user to a random string,
 just for the purpose of preventing unauthorized access, since we won't need it for
@@ -246,6 +246,7 @@ You can use the following `mariadb.sbatch` job as a template:
 
 #SBATCH --job-name=mariadb
 #SBATCH --time=8:0:0
+#SBATCH --dependency=singleton
 
 ml system mariadb
 mysqld_safe
@@ -256,6 +257,18 @@ and submit it with:
 ```
 $ sbatch mariadb.sbatch
 ```
+
+!!! warning "Concurrent instances will lead to data corruption"
+
+    An important thing to keep in mind is that having multiple instances of a
+    MariaDB server running at the same time, using the same database files,
+    will certainly lead to catastrophic situations and the corruption of those
+    files.
+
+    To prevent this from happening, the `--dependency=singleton` job submission
+    option will make sure that only one instance of that job (based on its name
+    and user) will run at any given time.
+
 
 #### Connect to the running instance
 
