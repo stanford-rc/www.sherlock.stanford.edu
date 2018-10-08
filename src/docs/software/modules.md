@@ -328,7 +328,7 @@ Users are welcome and encouraged to build and install their own software on
 Sherlock. To that end, and to facilitate usage or sharing of their custom
 software installations, they can create their own module repositories.
 
-See the [Software Installation page](install) for more details.
+See the [Software Installation page][url_install] for more details.
 
 ### Lab-provided software
 
@@ -383,6 +383,7 @@ $ ml av
 [url_lmod]:         //lmod.readthedocs.io
 [url_lmod_user]:    //lmod.readthedocs.io/en/latest/010_user.html
 [url_list]:         list
+[url_install]:      /docs/software/install
 [url_contact]:      mailto:srcc-support@stanford.edu
 
 
