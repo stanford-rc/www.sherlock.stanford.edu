@@ -1,9 +1,9 @@
 ## Available software
 
 A set of supported software installations is provided for use on Sherlock. This
-software is made available through a [Software Modules](modules) system. For
-the complete list of available software, please refer to the [Software List
-page](list).
+software is made available through a [Software Modules][url_modules] system.
+For the complete list of available software, please refer to the [Software List
+page][url_list].
 
 Licensed software can be used on Sherlock, under certain conditions. Feel free
 to [contact us][url_contact] for more details or if you have questions. For more
@@ -27,9 +27,9 @@ directories][url_storage]. That way, they can share the software installations
 with the rest of the users in their group, if necessary.
 
 Users may even maintain and publish their own [local module
-files](modules#custom-modules) to dynamically configure a running environment
-to use the software. They could share those modules with other users to
-simplify the use of their own custom software installations.
+files][url_modules_custom] to dynamically configure a running environment to
+use the software. They could share those modules with other users to simplify
+the use of their own custom software installations.
 
 !!! tip "Installing your own software"
 
@@ -64,11 +64,13 @@ group on Sherlock, please [let us know][url_contact], and we'll get in touch.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_contact]:      mailto:srcc-support@stanford.edu
-[url_software_lic]: https://uit.stanford.edu/service/softwarelic
-[url_storage]:      /docs/storage
-[url_modules]:      /docs/software/modules
-[url_modules_lab]:  /docs/software/modules#lab-provided-software
+[url_contact]:        mailto:srcc-support@stanford.edu
+[url_software_lic]:   https://uit.stanford.edu/service/softwarelic
+[url_storage]:        /docs/storage
+[url_list]:           /docs/software/list
+[url_modules]:        /docs/software/modules
+[url_modules_custom]: /docs/software/modules#custom-modules
+[url_modules_lab]:    /docs/software/modules#lab-provided-software
 
 
 [comment]: #  (footnotes -----------------------------------------------------)
