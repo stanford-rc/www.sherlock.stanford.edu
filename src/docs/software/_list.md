@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Monday, October 01 2018, we provide 431 software packages, in 10 categories, covering 58 fields of science:*
+*As of Monday, October 08 2018, we provide 434 software packages, in 10 categories, covering 58 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
@@ -303,7 +303,10 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **compression** | <a id="libarchive" class="soft_anch">`libarchive`</a> | -&nbsp;`3.3.2` | [Website](https://www.libarchive.org/) | The libarchive project develops a portable, efficient C library that can read and write streaming archives in a variety of formats. 
 **compression** | <a id="lz4" class="soft_anch">`lz4`</a> | -&nbsp;`1.8.0` | [Website](https://www.lz4.org) | LZ4 is lossless compression algorithm. 
 **compression** | <a id="lzo" class="soft_anch">`lzo`</a> | -&nbsp;`2.10` | [Website](http://www.oberhumer.com/opensource/lzo) | LZO is a portable lossless data compression library written in ANSI C. 
+**compression** | <a id="mpibzip2" class="soft_anch">`mpibzip2`</a> | -&nbsp;`0.6` | [Website](https://compression.ca/mpibzip2) | MPIBZIP2 is a parallel implementation of the bzip2 block-sorting file compressor that uses MPI and achieves significant speedup on cluster machines. 
 **compression** | <a id="p7zip" class="soft_anch">`p7zip`</a> | -&nbsp;`16.02` | [Website](https://sourceforge.net/projects/p7zip/) | p7zip is a Linux port of 7zip, a file archiver with high compression ratio. 
+**compression** | <a id="pbzip2" class="soft_anch">`pbzip2`</a> | -&nbsp;`1.1.12` | [Website](https://compression.ca/pbzip2) | PBZIP2 is a parallel implementation of the bzip2 block-sorting file compressor that uses pthreads and achieves near-linear speedup on SMP machines. 
+**compression** | <a id="pigz" class="soft_anch">`pigz`</a> | -&nbsp;`2.4` | [Website](https://zlib.net/pigz/) | A parallel implementation of gzip for modern multi-processor, multi-core machines. 
 **compression** | <a id="szip" class="soft_anch">`szip`</a> | -&nbsp;`2.1.1` | [Website](https://support.hdfgroup.org/doc_resource/SZIP) | Szip compression software, providing lossless compression of scientific data, is an implementation of the extended-Rice lossless compression algorithm. 
 **compression** | <a id="xz" class="soft_anch">`xz`</a> | -&nbsp;`5.2.3` | [Website](http://tukaani.org/xz/) | XZ Utils is free general-purpose data compression software with a high compression ratio. 
 **compression** | <a id="zlib" class="soft_anch">`zlib`</a> | -&nbsp;`1.2.11` | [Website](http://zlib.net) | zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. 
