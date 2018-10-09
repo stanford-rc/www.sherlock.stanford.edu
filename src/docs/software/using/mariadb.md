@@ -4,6 +4,12 @@
 relational database management system. It is completely compatible with MySQL
 and could be use as a drop-in replacement in the vast majority of cases.
 
+### More documentation
+
+The following documentation specifically intended for using MariaDB on
+Sherlock. For more complete documentation about MariaDB in general, please see
+the [MariaDB documentation][url_mariadb_docs].
+
 
 ## MariaDB on Sherlock
 
@@ -316,10 +322,6 @@ MariaDB instance.
 
 
 
-
-## More documentation
-
-Complete documentation about MariaDB is available at the [MariaDB website][url_mariadb_docs].
 
 
 [comment]: #  (link URLs -----------------------------------------------------)

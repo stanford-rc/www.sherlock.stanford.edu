@@ -12,6 +12,14 @@ software written in Perl, as well as documentation for it. It is searchable at
 http://metacpan.org or http://search.cpan.org and mirrored in over 270
 locations around the world.
 
+
+### More documentation
+
+The following documentation specifically intended for using Perl on Sherlock.
+For more complete documentation about Perl in general, please see the [Perl
+documentation][url_perl_docs].
+
+
 ## Perl modules on Sherlock
 
 
@@ -72,6 +80,7 @@ $ cpanm -U DateTime::TimeZone
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
+[url_perl_docs]:    https://www.perl.org/docs.html
 [url_cpan]:         https://www.cpan.org/
 [url_cpanminus]:    https://metacpan.org/pod/App::cpanminus
 [url_locallib]:     https://metacpan.org/pod/App::cpanminus

@@ -4,6 +4,14 @@ Apache Spark™ is a general engine for large-scale data processing.  This
 document gives a quick introduction how to get a first test program in Spark
 running on Sherlock.
 
+### More documentation
+
+The following documentation specifically intended for using Spark on Sherlock.
+For more complete documentation about Spark in general, please see the [Apache
+Spark documentation][url_spark].
+
+
+
 ## Spark on Sherlock
 
 Running Apache Spark on Sherlock is a bit different from using a traditional
@@ -124,12 +132,6 @@ scancel ${SLURM_JOBID}.0
 # stop the master
 stop-master.sh
 ```
-
-
-## More documentation
-
-Complete documentation about Spark is available at the [Apache Spark
-website][url_spark].
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
