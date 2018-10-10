@@ -86,11 +86,10 @@ and then should not be typed in).
 : SFTP clients are interactive file transfer programs, similar to FTP, which
     perform all operations over an encrypted transport.
 
-    A variety of graphical
-    SFTP clients are available for different OSes:
+    A variety of graphical SFTP clients are available for different OSes:
 
     * [WinSCP][url_winscp] :fa-windows:
-    * [FileZilla][url_filezilla] :fa-windows:, :fa-apple:, :fa-linux:
+    * [SecureFX][url_securefx] :fa-windows:,
     * [Fetch][url_fetch][^fetch_su] :fa-apple:
     * [CyberDuck][url_cyberduck] :fa-apple:
 
@@ -373,7 +372,7 @@ documentation][url_rclone].
 [url_auth_fail]:    /docs/getting-started/connecting/#authentication-failures
 
 [url_winscp]:       https://winscp.net/eng/docs/introduction
-[url_filezilla]:    https://filezilla-project.org/
+[url_securefx]:     https://uit.stanford.edu/software/scrt_sfx
 [url_cyberduck]:    http://cyberduck.io/
 [url_fetch]:        http://fetchsoftworks.com/
 [url_fetch_su]:     https://uit.stanford.edu/software/fetch
