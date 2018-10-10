@@ -15,7 +15,7 @@ the [MariaDB documentation][url_mariadb_docs].
 
 We don't provide any centralized database service on Sherlock, but we provide a
 centralized installation of MariaDB, and each user is welcome to start their
-own instance of the database serverto fit their jobs' needs.
+own instance of the database server to fit their jobs' needs.
 
 The overall process to run an instance of MariaDB on Sherlock would look like
 this:
@@ -113,7 +113,7 @@ you defined in `~/.my.cnf`.
 
 #### Run queries
 
-You're now ready to run queries aginst that MariaDB instance, from the same
+You're now ready to run queries against that MariaDB instance, from the same
 node your job is running on.
 
 From another terminal on Sherlock, connect to your job's compute node (here,
@@ -122,7 +122,7 @@ it's `sh-01-01`, as shown above), load the `mariadb` module, and then run the
 
 ```
 $ ssh sh-01-01
-$ ml system mariabd
+$ ml system mariadb
 $ mysql
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
 Your MariaDB connection id is 8
