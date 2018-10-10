@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, October 09 2018, we provide 434 software packages, in 10 categories, covering 58 fields of science:*
+*As of Tuesday, October 09 2018, we provide 435 software packages, in 10 categories, covering 58 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
@@ -63,6 +63,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **genomics** | <a id="hisat2" class="soft_anch">`hisat2`</a> | -&nbsp;`2.1.0` | [Website](http://ccb.jhu.edu/software/hisat2) | HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes (as well as to a single reference genome). 
 **genomics** | <a id="htslib" class="soft_anch">`htslib`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/htslib) | C library for high-throughput sequencing data formats. 
 **genomics** | <a id="kallisto" class="soft_anch">`kallisto`</a> | -&nbsp;`0.44.0` | [Website](https://pachterlab.github.io/kallisto/) | kallisto is a program for quantifying abundances of transcripts from RNA-Seq data using high-throughput sequencing reads. 
+**genomics** | <a id="mixcr" class="soft_anch">`mixcr`</a> | -&nbsp;`2.1.12` | [Website](https://milaboratory.com/software/mixcr/) | MiXCR is a universal framework that processes big immunome data from raw sequences to quantitated clonotypes. 
 **genomics** | <a id="ncbi-blast+" class="soft_anch">`ncbi-blast+`</a> | -&nbsp;`2.6.0` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
 **genomics** | <a id="plink" class="soft_anch">`plink`</a> | -&nbsp;`1.07`<br/>-&nbsp;`1.90b5.3`<br/>-&nbsp;`2.0a1` | [Website](http://zzz.bwh.harvard.edu/plink/) | PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. 
 **genomics** | <a id="py-bx-python" class="soft_anch">`py-bx-python`</a> | -&nbsp;`0.8.1_py27` | [Website](https://github.com/bxlab/bx-python) | Tools for manipulating biological data, particularly multiple sequence alignments. 
@@ -133,6 +134,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **genomics** | <a id="hisat2" class="soft_anch">`hisat2`</a> | -&nbsp;`2.1.0` | [Website](http://ccb.jhu.edu/software/hisat2) | HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes (as well as to a single reference genome). 
 **genomics** | <a id="htslib" class="soft_anch">`htslib`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/htslib) | C library for high-throughput sequencing data formats. 
 **genomics** | <a id="kallisto" class="soft_anch">`kallisto`</a> | -&nbsp;`0.44.0` | [Website](https://pachterlab.github.io/kallisto/) | kallisto is a program for quantifying abundances of transcripts from RNA-Seq data using high-throughput sequencing reads. 
+**genomics** | <a id="mixcr" class="soft_anch">`mixcr`</a> | -&nbsp;`2.1.12` | [Website](https://milaboratory.com/software/mixcr/) | MiXCR is a universal framework that processes big immunome data from raw sequences to quantitated clonotypes. 
 **genomics** | <a id="ncbi-blast+" class="soft_anch">`ncbi-blast+`</a> | -&nbsp;`2.6.0` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
 **genomics** | <a id="plink" class="soft_anch">`plink`</a> | -&nbsp;`1.07`<br/>-&nbsp;`1.90b5.3`<br/>-&nbsp;`2.0a1` | [Website](http://zzz.bwh.harvard.edu/plink/) | PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. 
 **genomics** | <a id="py-bx-python" class="soft_anch">`py-bx-python`</a> | -&nbsp;`0.8.1_py27` | [Website](https://github.com/bxlab/bx-python) | Tools for manipulating biological data, particularly multiple sequence alignments. 
