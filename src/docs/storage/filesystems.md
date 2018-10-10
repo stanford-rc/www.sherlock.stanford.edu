@@ -112,7 +112,7 @@ srcf.isilon:/ifs/PI  1.0T  646G  379G  64% /home/groups
 ### Recommended usage
 
 `$SCRATCH` is best suited for large files, such as raw job output, intermediate
-job files, unprocessed simlulation results, and so on.  This is the recommended
+job files, unprocessed simulation results, and so on.  This is the recommended
 location to run jobs from, and to store files that will be read or written to
 during job execution.
 
@@ -201,7 +201,7 @@ Please note that reading a file does not qualify as a modification.
 ### Recommended usage
 
 `$GROUP_SCRATCH` is best suited for large files, such as raw job output,
-intermediate job files, unprocessed simlulation results, and so on.  This is
+intermediate job files, unprocessed simulation results, and so on.  This is
 the recommended location to run jobs from, and to store files that will be read
 or written to during job execution.
 
@@ -234,7 +234,7 @@ the different fields in `lfs quota`.
 
 ### Expiration policy
 
-As `$SCRATCH` and `$GROUP_SCRATCH` are on the same fielsystem, the same expiration
+As `$SCRATCH` and `$GROUP_SCRATCH` are on the same filesystem, the same expiration
 policy applies to both. Please see the [`$SCRATCH`](#scratch) section above for
 more details.
 
@@ -272,7 +272,7 @@ So, if you have two jobs running on the same compute node, `$L_SCRATCH` will be
 the same and accessible from both jobs, while `$L_SCRATCH_JOB` will be
 different for each job.
 
-For instance, if you have jobs `98423` and `98672` running on ths same
+For instance, if you have jobs `98423` and `98672` running on this same
 nodes, the variables will be set as follows:
 
 | Job id  | `$L_SCRATCH` | `L_SCRATCH_JOB` |
@@ -285,11 +285,16 @@ directory in scripts, rather than its full path.
 
 ### Expiration policy
 
-All files stored in `$L_SCRATCH` are automatically purged ath the end of the
+All files stored in `$L_SCRATCH_JOB` are automatically purged at the end of the
 job, whether the job was successful or not. If you need to conserve files that
-were generated in `$L_SCRATCH` after the job ends, don't forget to add a
-command to copy them to one of the more peristent storage locations, such as
-`$HOME` or `$SCRATCH`.
+were generated in `$L_SCRATCH_JOB` after the job ends, don't forget to add a
+command at the end of your batch script to copy them to one of the more
+persistent storage locations, such as `$HOME` or `$SCRATCH`.
+
+Data stored in `$L_SCRATCH` will be purged at the end of a job, only if no
+other job from the same user is still running on the node. Which means that
+data stored in `$L_SCRATCH` (but in not `$L_SCRATCH_JOB`) will persist on the
+node until the last job from the user terminates.
 
 -----
 
