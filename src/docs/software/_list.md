@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, October 09 2018, we provide 435 software packages, in 10 categories, covering 58 fields of science:*
+*As of Thursday, October 11 2018, we provide 435 software packages, in 10 categories, covering 58 fields of science:*
 
 * [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
@@ -317,7 +317,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **containers** | <a id="singularity" class="soft_anch">`singularity`</a> | -&nbsp;`2.6.0` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/singularity)
 **database** | <a id="bdb" class="soft_anch">`bdb`</a> | -&nbsp;`6.2.32` | [Website](http://www.oracle.com/us/products/database/berkeley-db) | Berkeley DB (BDB) is a software library intended to provide a high-performance embedded database for key/value data. 
 **database** | <a id="mariadb" class="soft_anch">`mariadb`</a> | -&nbsp;`10.2.11` | [Website](https://www.mariadb.org) | MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/mariadb)
-**database** | <a id="postgresql" class="soft_anch">`postgresql`</a> | -&nbsp;`10.5` | [Website](https://www.mariadb.org) | MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/postgresql)
+**database** | <a id="postgresql" class="soft_anch">`postgresql`</a> | -&nbsp;`10.5` | [Website](https://postgresql.org) | PostgreSQL is a powerful, open source object-relational database system with a strong focus on reliability, feature robustness, and performance. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/postgresql)
 **database** | <a id="sqlite" class="soft_anch">`sqlite`</a> | -&nbsp;`3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
 **file management** | <a id="fpart" class="soft_anch">`fpart`</a> | -&nbsp;`0.9.3` | [Website](https://github.com/martymac/fpart) | fpart sorts files and packs them into partitions. 
 **file management** | <a id="py-pcircle" class="soft_anch">`py-pcircle`</a> | -&nbsp;`0.17_py27` | [Website](https://github.com/olcf/pcircle) | pcircle contains a suite of file system tools developed at OLCF to take advantage of highly scalable parallel file system such as Lustre. 
