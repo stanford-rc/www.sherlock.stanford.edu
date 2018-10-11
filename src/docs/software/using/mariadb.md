@@ -308,18 +308,25 @@ MariaDB [(none)]>
 That's it! You can now run SQL queries from anywhere on Sherlock to your own
 MariaDB instance.
 
+
+
+!!! tip "SQL data is persistent"
+
+### Persistent DB instances
+
 !!! tip "SQL data is persistent"
 
     All the data you import in your SQL databases will be persistent across
-    jobs. Meaning that you can run a MariaDB server job for the day, import
-    data in its database, stop the job, and resubmit the same MariaDB server
+    jobs. Meaning that you can run a PostgreSQL server job for the day, import
+    data in its database, stop the job, and resubmit the same PostgreSQL server
     job the next day: all your data will still be there as long as the location
     you've chosen for your database (the `$DB_DIR` defined in the
     [Preparation](#preparation) steps) is on a persistent [storage
     location][url_storage].
 
-
-
+If you need database access for more than the maximum runtime of a job, you can
+use the instructions provided to define [self-resubmitting recurring
+jobs][url_recurring_jobs] and submit long-running database instances.
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
@@ -332,3 +339,4 @@ MariaDB instance.
 [url_heredoc]:      https://en.wikipedia.org/wiki/Here_document
 
 [url_storage]:      /docs/storage
+[url_recurring_jobs]:   /docs/user-guide/running-jobs/#recurring-jobs

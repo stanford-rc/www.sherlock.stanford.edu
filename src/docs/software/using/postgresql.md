@@ -253,6 +253,9 @@ test_db=#
 That's it! You can now run SQL queries from anywhere on Sherlock to your own
 PostgreSQL instance.
 
+
+### Persistent DB instances
+
 !!! tip "SQL data is persistent"
 
     All the data you import in your SQL databases will be persistent across
@@ -263,16 +266,19 @@ PostgreSQL instance.
     [Preparation](#preparation) steps) is on a persistent [storage
     location][url_storage].
 
-
+If you need database access for more than the maximum runtime of a job, you can
+use the instructions provided to define [self-resubmitting recurring
+jobs][url_recurring_jobs] and submit long-running database instances.
 
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_postgresql]:      https://www.postgresql.org/
-[url_postgresql_docs]: https://postgresql.com/docs/
+[url_postgresql]:       https://www.postgresql.org/
+[url_postgresql_docs]:  https://postgresql.com/docs/
 
-[url_compute_node]: /docs/overview/glossary/#node
-[url_heredoc]:      https://en.wikipedia.org/wiki/Here_document
+[url_compute_node]:     /docs/overview/glossary/#node
+[url_heredoc]:          https://en.wikipedia.org/wiki/Here_document
 
-[url_storage]:      /docs/storage
+[url_storage]:          /docs/storage
+[url_recurring_jobs]:   /docs/user-guide/running-jobs/#recurring-jobs
