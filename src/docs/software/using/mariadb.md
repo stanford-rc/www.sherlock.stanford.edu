@@ -209,10 +209,8 @@ need a real password, though. So please make sure to replace the
     MariaDB. Note that anybody knowing that password will be allowed to connect
     to your MariaDB instances and modify data in the tables.
 
-    Please make sure to:
-
-    * **NOT** use `my-secure-password`
-    * **NOT** use your SUNet ID password
+    * do **NOT** use `my-secure-password`
+    * do **NOT** use your SUNet ID password
 
 Once you've chosen your password, you can start the `mysqld` process on a
 compute node, like before:
@@ -287,7 +285,7 @@ First, identify the node your job is running on with `squeue`:
 ```
 $ squeue -u $USER -n mariadb
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-          21383445      test  mariadb   kilian  R       0:07      1 sh-01-02
+          21383445    normal  mariadb   kilian  R       0:07      1 sh-01-02
 ```
 
 and then, point your MariaDB client to that node:
