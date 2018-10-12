@@ -254,6 +254,20 @@ Sherlock also supports the use of container images provided by NVIDIA in the
 [NVIDIA GPU Cloud (NGC)][url_ngc]. This registry provides GPU-accelerated
 containers for the most popular HPC and deep-learning scientific applications.
 
+!!! warning "GPU support"
+
+    Containers provided on NGC are only supported on Pascal and Volta
+    architectures (TITAN Xp, Tesla P40, P100 or V100). For GPUs from the
+    previous generations (GTX TITAN Black/X, Tesla K20/K80), things may or may
+    not work.
+
+    We recommend making sure to [select a supported GPU
+    generation][url_gpu_types] by adding the following directive to your batch
+    script when submitting a job to run GPU-enabled containers from NGC:
+    ```
+    #SBATCH -C "GPU_GEN:PSC|GPU_GEN:VLT"
+    ```
+
 
 #### Pulling NGC images
 
@@ -434,6 +448,7 @@ the [Singularity documentation][url_singularity_build].
 
 [url_modules]:			  /docs/software/modules
 [url_gpu_job]:			  /docs/user-guide/gpu#submitting-a-gpu-job
+[url_gpu_types]:  	      /docs/user-guide/gpu/#gpu-types
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
