@@ -42,9 +42,9 @@ For instance, the following script will request one GPU for two hours in the
 
 ```bash
 #!/bin/bash
-# SBATCH -p gpu
-# SBATCH -c 10
-# SBATCH --gres gpu:1
+#SBATCH -p gpu
+#SBATCH -c 10
+#SBATCH --gres gpu:1
 
 ml load gromacs/2016.3
 
