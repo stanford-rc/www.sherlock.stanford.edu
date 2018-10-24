@@ -36,7 +36,7 @@
         <meta name="lang:{{ key }}" content="{{ lang.t(key) }}">
       {% endfor %}
       <link rel="shortcut icon" href="{{ config.theme.favicon | url }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-3.0.4">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-3.0.5">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta and page.meta.title %}
@@ -102,7 +102,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     {% if page.toc | first is defined %}
-      <a href="{{ (page.toc | first).url | url }}" tabindex="1" class="md-skip">
+      <a href="{{ (page.toc | first).url }}" tabindex="1" class="md-skip">
         {{ lang.t('skip.link.title') }}
       </a>
     {% endif %}
