@@ -9,9 +9,9 @@ techniques and is highly extensible.
 
 ### More documentation
 
-The following documentation specifically intended for using R on
-Sherlock. For more complete documentation about R in general, please
-see the [R documentation][url_r_docs].
+The following documentation is specifically intended for using R on Sherlock.
+For more complete documentation about R in general, please see the [R
+documentation][url_r_docs].
 
 
 ## R on Sherlock
@@ -142,7 +142,8 @@ $ ml R
 ```
 
 Then start a R session, and use the `install.packages()` function at the R
-prompt. For instance, the following example will install the `doParallel` package, using the US mirror of the [CRAN repository][url_cran]:
+prompt. For instance, the following example will install the `doParallel`
+package, using the US mirror of the [CRAN repository][url_cran]:
 
 ```
 $ R
@@ -286,7 +287,8 @@ downloaded 169 KB
 
 ##### Installing packages from GitHub
 
-R packages can be directly installed from GitHub using the `devtools` package. `devtools needs to be installed first, with:
+R packages can be directly installed from GitHub using the `devtools` package.
+`devtools` needs to be installed first, with:
 
 ```R
 > install.packages("devtools")
