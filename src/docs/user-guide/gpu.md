@@ -221,7 +221,7 @@ $ srun -p gpu --gres gpu:1 --gpu_cmode=shared nvidia-smi
 
 
 ## Environment and diagnostic tools
-
+<!-- nvtop info here? -->
 --8<--- "_wip.md"
 
 
