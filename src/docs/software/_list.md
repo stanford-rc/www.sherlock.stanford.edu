@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, October 24 2018, we provide 438 software packages, in 7 categories, covering 53 fields of science:*
+*As of Thursday, October 25 2018, we provide 439 software packages, in 7 categories, covering 53 fields of science:*
 
 * [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, imaging, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -259,7 +259,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **genomics** | <a id="htslib" class="soft_anch">`htslib`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/htslib) | C library for high-throughput sequencing data formats. 
 **genomics** | <a id="kallisto" class="soft_anch">`kallisto`</a> | -&nbsp;`0.44.0` | [Website](https://pachterlab.github.io/kallisto/) | kallisto is a program for quantifying abundances of transcripts from RNA-Seq data using high-throughput sequencing reads. 
 **genomics** | <a id="mixcr" class="soft_anch">`mixcr`</a> | -&nbsp;`2.1.12` | [Website](https://milaboratory.com/software/mixcr/) | MiXCR is a universal framework that processes big immunome data from raw sequences to quantitated clonotypes. 
-**genomics** | <a id="ncbi-blast+" class="soft_anch">`ncbi-blast+`</a> | -&nbsp;`2.6.0` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
+**genomics** | <a id="ncbi-blast+" class="soft_anch">`ncbi-blast+`</a> | -&nbsp;`2.6.0`<br/>-&nbsp;`2.7.1` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
 **genomics** | <a id="plink" class="soft_anch">`plink`</a> | -&nbsp;`1.07`<br/>-&nbsp;`1.90b5.3`<br/>-&nbsp;`2.0a1` | [Website](http://zzz.bwh.harvard.edu/plink/) | PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. 
 **genomics** | <a id="py-bx-python" class="soft_anch">`py-bx-python`</a> | -&nbsp;`0.8.1_py27` | [Website](https://github.com/bxlab/bx-python) | Tools for manipulating biological data, particularly multiple sequence alignments. 
 **genomics** | <a id="py-fithic" class="soft_anch">`py-fithic`</a> | -&nbsp;`1.1.3_py27` | [Website](https://github.com/ay-lab/fithic) | Fit-Hi-C is a tool for assigning statistical confidence estimates to chromosomal contact maps produced by genome architecture assays. 
@@ -344,7 +344,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **language** | <a id="py-cython" class="soft_anch">`py-cython`</a> | -&nbsp;`0.27.3_py36`<br/>-&nbsp;`0.27.3_py27` | [Website](http://cython.org/) | Cython is an optimising static compiler for both the Python programming language and the extended Cython programming language (based on Pyrex). 
 **language** | <a id="py-ipython" class="soft_anch">`py-ipython`</a> | -&nbsp;`6.1.0_py36`<br/>-&nbsp;`5.4.1_py27` | [Website](https://ipython.org) | IPython is a command shell for interactive computing in multiple programming languages, originally developed for the Python programming language. 
 **language** | <a id="py-jupyter" class="soft_anch">`py-jupyter`</a> | -&nbsp;`1.0.0_py36`<br/>-&nbsp;`1.0.0_py27` | [Website](https://jupyter.org) | Jupyter is a browser-based interactive notebook for programming, mathematics, and data science. It supports a number of languages via plugins. 
-**language** | <a id="python" class="soft_anch">`python`</a> | -&nbsp;`3.6.1`<br/>-&nbsp;`2.7.13` | [Website](https://www.python.org) | Python is an interpreted, interactive, object-oriented programming language. 
+**language** | <a id="python" class="soft_anch">`python`</a> | -&nbsp;`3.6.1`<br/>-&nbsp;`2.7.13` | [Website](https://www.python.org) | Python is an interpreted, interactive, object-oriented programming language. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/python)
 **language** | <a id="ruby" class="soft_anch">`ruby`</a> | -&nbsp;`2.4.1` | [Website](https://www.ruby-lang.org) | A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. 
 **language** | <a id="scala" class="soft_anch">`scala`</a> | -&nbsp;`2.12.6` | [Website](https://www.scala-lang.org) | Scala combines object-oriented and functional programming in one concise, high-level language. 
 **library** | <a id="trilinos" class="soft_anch">`trilinos`</a> | -&nbsp;`12.12.1` | [Website](https://trilinos.org/) | Trilinos is a collection of open-source software libraries, called packages, intended to be used as building blocks for the development of scientific applications. 
