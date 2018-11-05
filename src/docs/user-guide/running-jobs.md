@@ -211,7 +211,7 @@ The script below presents an example of such a recurring, self-resubmitting
 job, that would emulate a `cron` task. It will append a timestamped line to a
 `cron.log` file in your `$HOME` directory and run every 7 days.
 
-```bash
+```bash tab="cron.sbatch"
 #!/bin/bash
 #SBATCH --job-name=cron
 #SBATCH --begin=now+7days
@@ -220,9 +220,8 @@ job, that would emulate a `cron` task. It will append a timestamped line to a
 #SBATCH --mail-type=FAIL
 
 
-## Insert you the command to run below. Here, we're just storing the date in a
+## Insert the command to run below. Here, we're just storing the date in a
 ## cron.log file
-
 date -R >> $HOME/cron.log
 
 ## Resubmit the job for the next execution
@@ -263,14 +262,165 @@ $ scancel -n cron
 
 
 
-[comment]: #  (batch jobs, resource requirements, partitions, qos, limits, mail...)
+## Persistent jobs
+
+[Recurring jobs](#recurring-jobs) described above are a good way to emulate
+`cron` jobs on Sherlock, but don't fit all needs, especially when a persistent
+service is required.
+
+For instance, workflows that require a persistent database connection would
+benefit from an ever-running database server instance. We don't provide
+persistent database services on Sherlock, but instructions and examples on how
+to submit database server jobs are provided for [MariaDB][url_mariadb] or
+[PostgreSQL][url_pgsql].
+
+In case those database instances need to run pretty much continuously (within
+the limits of available resources and runtime maximums), the previous approach
+described in the [recurring jobs](#recurring-jobs) section could fall a bit
+short.  Recurring jobs are mainly designed for jobs that have a fixed execution
+time and don't reach their time limit, but need to run at given intervals (like
+synchronization or backup jobs, for instance).
+
+Because a database server process will never end within the job, and will
+continue until the job reaches its time limit, the last resubmission command
+(`sbatch $0`) will actually never be executed, and the job won't be
+resubmitted.
+
+To work around this, a possible approach is to catch a specific
+[signal][url_signals] sent by the scheduler at a predefined time, before the
+time limit is reached, and then re-queue the job. This is easily done with the
+Bash [`trap`][url_trap] command, which can be instructed to re-submit a job
+when it receives the [`SIGUSR1`][url_signals] signal.
+
+!!! important "Automatically resubmitting a job doesn't make it immediately
+runnable"
+
+    Jobs that are automatically re-submitted using this technique won't restart
+    right away: the will get back in queue and stay pending until their
+    execution conditions (priority, resources, usage limits...) are satisfied.
 
 
+
+### Example
+
+Here's the recurring job example from above, modified to:
+
+1. instruct the scheduler to send a `SIGUSR1` signal to the job 90
+   seconds[^signal_delay] before reaching its time limit (with the `#SBATCH
+   --signal` option),
+2. re-submit itself upon receiving that `SIGUSR1` signal (with the `trap`
+   command)
+
+```bash tab="persistent.sbatch"
+#!/bin/bash
+#
+#SBATCH --job-name=persistent
+#SBATCH --dependency=singleton
+#SBATCH --time=00:05:00
+#SBATCH --signal=B:SIGUSR1@90
+
+# catch the SIGUSR1 signal
+_resubmit() {
+    ## Resubmit the job for the next execution
+    echo "$(date): job $SLURM_JOBID received SIGUSR1 at $(date), re-submitting"
+    sbatch $0
+}
+trap _resubmit SIGUSR1
+
+## Insert the command to run below. Here, we're just outputing the date every
+## 10 seconds, forever
+
+echo "$(date): job $SLURM_JOBID starting on $SLURM_NODELIST"
+while true; do
+    echo "$(date): normal execution"
+    sleep 60
+done
+
+```
+
+
+### Persistent `$JOBID`
+
+One potential issue with having a persistent job re-submit itself when it
+reaches its runtime limit is that it will get a different `$JOBID` each time
+it's (re-)submitted.
+
+This could be particularly challenging when other jobs depend on it, like in
+the database server scenario, where client jobs would need to start only if the
+database server is running. This can be achieved with [job
+dependencies][url_job_deps], but those dependencies have to be expressed using
+jobids, so having the server job's id changing at each re-submission will be
+difficult to handle.
+
+To avoid this, the re-submission command (`sbatch $0`) can be replaced by
+a re-queuing command:
+
+    scontrol requeue $SLURM_JOBID
+
+The benefit of that change is that the job will keep the same `$JOBID` across
+all re-submissions. And now, dependencies can be added to other jobs using that
+specific `$JOBID`, without having to worry about it changing. And there will be
+only one `$JOBID` to track for that database server job.
+
+
+The previous [example](#example_1) can then be modified as follows:
+
+```bash tab="persistent.sbatch" hl_lines="10"
+#!/bin/bash
+#SBATCH --job-name=persistent
+#SBATCH --dependency=singleton
+#SBATCH --time=00:05:00
+#SBATCH --signal=B:SIGUSR1@90
+
+# catch the SIGUSR1 signal
+_requeue() {
+    echo "$(date): job $SLURM_JOBID received SIGUSR1, re-queueing"
+    scontrol requeue $SLURM_JOBID
+}
+trap '_requeue' SIGUSR1
+
+## Insert the command to run below. Here, we're just outputing the date every
+## 60 seconds, forever
+
+echo "$(date): job $SLURM_JOBID starting on $SLURM_NODELIST"
+while true; do
+    echo "$(date): normal execution"
+    sleep 60
+done
+
+```
+
+Submitting that job will produce an output similar to this:
+
+```
+Mon Nov  5 10:30:59 PST 2018: Job 31182239 starting on sh-06-34
+Mon Nov  5 10:30:59 PST 2018: normal execution
+Mon Nov  5 10:31:59 PST 2018: normal execution
+Mon Nov  5 10:32:59 PST 2018: normal execution
+Mon Nov  5 10:33:59 PST 2018: normal execution
+Mon Nov  5 10:34:59 PST 2018: Job 31182239 received SIGUSR1, re-queueing
+slurmstepd: error: *** JOB 31182239 ON sh-06-34 CANCELLED AT 2018-11-05T10:35:06 DUE TO JOB REQUEUE ***
+Mon Nov  5 10:38:11 PST 2018: Job 31182239 starting on sh-06-34
+Mon Nov  5 10:38:11 PST 2018: normal execution
+Mon Nov  5 10:39:11 PST 2018: normal execution
+```
+
+The job runs for 5 minutes, then received the `SIGUSR`` signal, is re-queued,
+restarts for 5 minutes, and so on, until it's properly `scancel`led.
+
+
+[comment]: #  (TODO: batch jobs, resource requirements, partitions, qos, limits, mail...)
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_sbatch]:   https://slurm.schedmd.com/sbatch.html
+[url_trap]:     http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_12_02.html
+[url_signals]:  https://en.wikipedia.org/wiki/Signal_(IPC)
+[url_job_deps]: https://slurm.schedmd.com/sbatch.html#OPT_dependency
+
+[url_mariadb]:  /docs/software/using/mariadb
+[url_pgsql]:    /docs/software/using/postgresql
 
 
 
@@ -289,3 +439,5 @@ $ scancel -n cron
   memory limits, which will trigger its termination.
 
 
+[^signal_delay]: Due to the resolution of event handling by the scheduler, the
+  signal may be sent up to 60 seconds earlier than specified.
