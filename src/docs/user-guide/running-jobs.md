@@ -292,8 +292,7 @@ time limit is reached, and then re-queue the job. This is easily done with the
 Bash [`trap`][url_trap] command, which can be instructed to re-submit a job
 when it receives the [`SIGUSR1`][url_signals] signal.
 
-!!! important "Automatically resubmitting a job doesn't make it immediately
-runnable"
+!!! important "Automatically resubmitting a job doesn't make it immediately runnable"
 
     Jobs that are automatically re-submitted using this technique won't restart
     right away: the will get back in queue and stay pending until their
