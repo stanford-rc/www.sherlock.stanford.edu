@@ -7,7 +7,7 @@ conditions, etc.
 !!! tip "Sherlock 2.0 orders"
 
     If you are looking to buy into Sherlock 2.0, please see the [Sherlock
-    Quarterly Order][url_orders] page (*SUNet ID required*).
+    Order][url_orders] page (*SUNet ID required*).
 
 
 ## Why Sherlock 2.0?
