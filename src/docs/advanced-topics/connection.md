@@ -14,8 +14,9 @@ and bypass the automatic load-balanced dispatching of new connections
 (which we don't recommend), you can use that login node's hostname
 explicitly. For instance:
 
-    $ ssh <sunetid>@ln01.sherlock.stanford.edu
-
+```
+$ ssh <sunetid>@ln01.sherlock.stanford.edu
+```
 
 This can be useful if you run long-standing processes on the login nodes, such
 as [screen][url_screen] or [tmux][url_tmux] sessions. To find them back when you
