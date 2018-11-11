@@ -68,29 +68,13 @@ julia [switches] -- [programfile] [args...]
  -L, --load <file>         Load <file> immediately on all processors
 
  -p, --procs {N|auto}      Integer value N launches N additional local worker processes
-                           "auto" launches as many workers as the number of local CPU threads (logical cores)
+                           "auto" launches as many workers as the number 
+                           of local CPU threads (logical cores)
  --machine-file <file>     Run processes on hosts listed in <file>
 
  -i                        Interactive mode; REPL runs and isinteractive() is true
  -q, --quiet               Quiet startup: no banner, suppress REPL warnings
- --banner={yes|no|auto}    Enable or disable startup banner
- --color={yes|no|auto}     Enable or disable color text
- --history-file={yes|no}   Load or save history
 
- --depwarn={yes|no|error}  Enable or disable syntax and method deprecation warnings ("error" turns warnings into errors)
- --warn-overwrite={yes|no} Enable or disable method overwrite warnings
-
- -C, --cpu-target <target> Limit usage of cpu features up to <target>; set to "help" to see the available options
- -O, --optimize={0,1,2,3}  Set the optimization level (default level is 2 if unspecified or 3 if used without a level)
- -g, -g <level>            Enable / Set the level of debug info generation (default level is 1 if unspecified or 2 if used without a level)
- --inline={yes|no}         Control whether inlining is permitted, including overriding @inline declarations
- --check-bounds={yes|no}   Emit bounds checks always or never (ignoring declarations)
- --math-mode={ieee,fast}   Disallow or enable unsafe floating point optimizations (overrides @fastmath declaration)
-
- --code-coverage={none|user|all}, --code-coverage
-                           Count executions of source lines (omitting setting is equivalent to "user")
- --track-allocation={none|user|all}, --track-allocation
-                           Count bytes allocated by each source line
 ```
 #### Running a Julia script
 
@@ -109,7 +93,8 @@ $ echo 'println("hello world")' > helloworld.jl
 
 #### Submitting a Julia job
 
-Here's an example Julia sbatch script that can be submitted via `sbatch`. This 
+Here's an example Julia sbatch script that can be submitted via `sbatch`.
+
 ```bash tab="juliaTest.sbatch"
 #!/bin/bash
 
@@ -226,11 +211,11 @@ Julia can natively spawn parallel workers across multiple compute nodes, without
 
 There are 2 modes of operation:
 
-1\. ClusterManager; in which you start Julia, and from within Julia, you
+1. ClusterManager; in which you start Julia, and from within Julia, you
 spawn workers which will actually submit jobs to the scheduler,
 executing instructions within those jobs.
 
-2\. --machine file; here you submit a SLURM job and run the Julia
+2. --machine file; here you submit a SLURM job and run the Julia
 interpreter in parallel mode within the job's resources.
 
 Mode 2 is easier to use, and more convenient, since you have all your
@@ -246,6 +231,7 @@ with the process id and the node it's executing on, in parallel:
     @everywhere println(@sprintf("process: %d on host %s", myid(), gethostname()))
 
 You can submit the following job:
+
 ```bash tab="juliaTest.sbatch"
     #!/bin/bash
     #SBATCH --nodes 2
@@ -259,25 +245,29 @@ Save as julia\_test.out.
 
 Then:
 ```
-    sbatch  julia_test.sbatch
+$ sbatch  julia_test.sbatch
 ```
   
-It will-
+It will:
 
-1\. Request 2 nodes, 4 tasks per node (8 tasks total)
+1. Request 2 nodes, 4 tasks per node (8 tasks total)
 
-2\. load the julia module
+2. load the julia module
 
-3\. Run Julia in parallel with a machine file that is automatically
+3. Run Julia in parallel with a machine file that is automatically
 generated, listing the nodes that are assigned to your job.
 
 It should output something like this in your slurm-(JOBID\#).out:
 ```
-    process: 1 on host sh-5-33.local
-            From worker 3:  process: 3 on host sh-5-33.local
-            From worker 5:  process: 5 on host sh-5-33.local
-            From worker 6:  process: 6 on host sh-5-33.local
-            From worker 4:  process: 4 on host sh-5-33.l
+process: 1 on host sh-5-33.local
+        From worker 3:  process: 3 on host sh-5-33.local
+        From worker 5:  process: 5 on host sh-5-33.local
+        From worker 6:  process: 6 on host sh-5-33.local
+        From worker 4:  process: 4 on host sh-5-33.local
+        From worker 2:  process: 2 on host sh-5-34.local
+        From worker 7:  process: 7 on host sh-5-34.local
+        From worker 9:  process: 9 on host sh-5-34.local
+        From worker 8:  process: 8 on host sh-5-34.local
 ```
 
 
