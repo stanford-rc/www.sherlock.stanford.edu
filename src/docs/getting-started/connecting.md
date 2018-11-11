@@ -56,12 +56,15 @@ SSH.[^auth_methods].
 Upon connection, you will be asked for your SUNet ID password with the
 following prompt:
 
-    <sunetid>@login.sherlock.stanford.edu's password:
+```
+<sunetid>@login.sherlock.stanford.edu's password:
+```
 
 Enter your password, and if it's correct, you should see the following line:
 
-    Authenticated with partial success.
-
+```
+Authenticated with partial success.
+```
 
 #### Second factor (2FA)
 
@@ -79,16 +82,17 @@ two-step][url_twostep] page.
 After successfully entering your password, you'll be prompted for your second
 authentication factor with a message like this:
 
-    Duo two-factor login for <sunetid>
+```
+Duo two-factor login for <sunetid>
 
-    Enter a passcode or select one of the following options:
+Enter a passcode or select one of the following options:
 
-     1. Duo Push to XXX-XXX-9999
-     2. Phone call to XXX-XXX-9999
-     3. SMS passcodes to XXX-XXX-9999 (next code starts with: 9)
+ 1. Duo Push to XXX-XXX-9999
+ 2. Phone call to XXX-XXX-9999
+ 3. SMS passcodes to XXX-XXX-9999 (next code starts with: 9)
 
-    Passcode or option (1-3):
-
+Passcode or option (1-3):
+```
 
 !!! tip "Avoiding two-factor prompt on each connection"
 
