@@ -353,8 +353,8 @@ documentation][url_gdrive].
 
 If you need to access other cloud storage services, you can use
 [rclone][url_rclone]: it can be used to sync files and directories to and from
-Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon Drive, Microsoft
-OneDrive and many more.
+Google Drive, Amazon S3, Box, Dropbox, Google Cloud Storage, Amazon Drive,
+Microsoft OneDrive and many more.
 
 ```
 $ ml load system rclone
