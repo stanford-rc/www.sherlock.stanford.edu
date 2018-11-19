@@ -231,7 +231,7 @@ ml load system nvtop
 
 ```
 
-nvtop[nvtop_url] provides an htop like interactive view of GPU utilization.  Users can monitor, 
+[nvtop][nvtop_url] provides an htop like interactive view of GPU utilization.  Users can monitor, 
 estimate and fine tune their GPU resource requests with this tool.  Percent GPU and 
 memory utilization is shown as a user's GPU code is running.
 
