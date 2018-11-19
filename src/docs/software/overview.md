@@ -34,7 +34,7 @@ the use of their own custom software installations.
 !!! tip "Installing your own software"
 
     For more information about building your own software on Sherlock, please
-    see the [Software Installation page](install).
+    see the [Software Installation page](/docs/software/install).
 
 If the software you need is not in the [list of available software](list), and
 you have trouble installing it on your own, please [contact us][url_contact]

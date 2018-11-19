@@ -10,7 +10,7 @@ language.
 
 ### More documentation
 
-The following documentation specifically intended for using Julia on Sherlock.
+The following documentation is specifically intended for using Julia on Sherlock.
 For more complete documentation about Julia in general, please see the [Julia
 documentation][url_julia_docs].
 
