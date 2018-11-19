@@ -221,24 +221,26 @@ $ srun -p gpu --gres gpu:1 --gpu_cmode=shared nvidia-smi
 
 
 ## Environment and diagnostic tools
-<!-- nvtop info here? -->
-Additional GPU specific usage information can be shown with the nvtop tool
-
-
-```
-
-ml load system nvtop
-
-```
-
-nvtop[nvtop_url] provides an htop like interactive view of GPU utilization.  Users can monitor, 
-estimate and fine tune their GPU resource requests with this tool.  Percent GPU and 
-memory utilization is shown as a user's GPU code is running.
-
-
-
 
 --8<--- "_wip.md"
+
+
+### `nvtop`
+
+GPU usage information can be shown with the [`nvtop`][url_nvtop] tool. `nvtop`
+is available as a [module][url_modules], which can be loaded like this:
+
+```
+$ ml load system nvtop
+```
+
+
+`nvtop` provides an [`htop`][url_htop]-like interactive view of GPU
+utilization.  Users can monitor, estimate and fine tune their GPU resource
+requests with this tool.  Percent GPU and memory utilization is shown as a
+user's GPU code is running.
+
+![nvtop](/docs/_img/nvtop.png)
 
 
 [comment]: #  ( modules (g) cuda nvcc, nvidia-smi,  CUDA_VISIBLE_DEVICES)
@@ -247,12 +249,15 @@ memory utilization is shown as a user's GPU code is running.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_condo]:    /docs/overview/concepts/#the-condominium-model
-[url_p100]:     //images.nvidia.com/content/tesla/pdf/nvidia-tesla-p100-PCIe-datasheet.pdf
-[url_p40]:      //images.nvidia.com/content/pdf/tesla/184427-Tesla-P40-Datasheet-NV-Final-Letter-Web.pdf
+[url_condo]:        /docs/overview/concepts/#the-condominium-model
+[url_modules]:      /docs/software/modules
+[url_p100]:         //images.nvidia.com/content/tesla/pdf/nvidia-tesla-p100-PCIe-datasheet.pdf
+[url_p40]:          //images.nvidia.com/content/pdf/tesla/184427-Tesla-P40-Datasheet-NV-Final-Letter-Web.pdf
 [url_slurm_sbatch]: //slurm.schedmd.com/sbatch.html#OPT_constraint
-[url_gpu_cmodes]: http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-modes
-[nvtop_url]: https://github.com/Syllo/nvtop
+[url_gpu_cmodes]:   http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-modes
+[url_nvtop]:        https://github.com/Syllo/nvtop
+[url_htop]:         https://hisham.hm/htop/
+
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
