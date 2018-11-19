@@ -221,6 +221,22 @@ $ srun -p gpu --gres gpu:1 --gpu_cmode=shared nvidia-smi
 
 
 ## Environment and diagnostic tools
+<!-- nvtop info here? -->
+Additional GPU specific usage information can be shown with the nvtop tool
+
+
+```
+
+ml load system nvtop
+
+```
+
+nvtop[nvtop_url] provides an htop like interactive view of GPU utilization.  Users can monitor, 
+estimate and fine tune their GPU resource requests with this tool.  Percent GPU and 
+memory utilization is shown as a user's GPU code is running.
+
+
+
 
 --8<--- "_wip.md"
 
@@ -236,6 +252,7 @@ $ srun -p gpu --gres gpu:1 --gpu_cmode=shared nvidia-smi
 [url_p40]:      //images.nvidia.com/content/pdf/tesla/184427-Tesla-P40-Datasheet-NV-Final-Letter-Web.pdf
 [url_slurm_sbatch]: //slurm.schedmd.com/sbatch.html#OPT_constraint
 [url_gpu_cmodes]: http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-modes
+[nvtop_url]: https://github.com/Syllo/nvtop
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
