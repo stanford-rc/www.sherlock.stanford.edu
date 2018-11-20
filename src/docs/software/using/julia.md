@@ -146,7 +146,6 @@ First import the `Pkg` module:
 
 ```
 julia> import Pkg
-
 julia> Pkg.status()
     Status `~/.julia/environments/v1.0/Project.toml`
 ```
