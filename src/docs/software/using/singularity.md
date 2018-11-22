@@ -328,7 +328,7 @@ current directory, named `namd-2.12-171025.simg`.
 Instructions about running NGC containers are provided on the NGC website,
 under each application:
 
-![NAMD on NGC](/docs/_img/ngc_namd.png)
+![NAMD on NGC](img/ngc_namd.png)
 
 Each application comes with specific running instructions, so we recommend to
 follow the container's particular guidelines before running it with

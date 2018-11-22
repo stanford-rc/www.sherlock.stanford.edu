@@ -240,7 +240,7 @@ utilization.  Users can monitor, estimate and fine tune their GPU resource
 requests with this tool.  Percent GPU and memory utilization is shown as a
 user's GPU code is running.
 
-![nvtop](/docs/_img/nvtop.png)
+![nvtop](img/nvtop.png)
 
 
 [comment]: #  ( modules (g) cuda nvcc, nvidia-smi,  CUDA_VISIBLE_DEVICES)

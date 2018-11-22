@@ -8,7 +8,7 @@ traditional way, via a SSH terminal connection.
 
 ### More documentation
 <div style="float:right">
-[![ood](/docs/_img/ood_logo.png)][url_ood]
+[![ood](img/ood_logo.png)][url_ood]
 </div>
 [Open OnDemand][url_ood] was created by the [Ohio Supercomputer
 Center][url_osc].
@@ -37,7 +37,7 @@ menus across the top of the page to manage files, get a shell on Sherlock,
 submit jobs or open interactive applications such as Jupyter Notebooks or
 RStudio sessions.
 
-![ood_dashboard](/docs/_img/ood_dashboard.png)
+![ood_dashboard](img/ood_dashboard.png)
 
 To end your Sherlock OnDemand session, click on the ["Log Out"](url_ood_logout)
 link at the top right of the Dashboard window and close your browser.
@@ -54,7 +54,7 @@ install any SSH client on your local machine, configure [Kerberos][url_gssapi]
 or deal with your SSH client configuration to [avoid endless two-factor
 prompts][url_avoid_duo]. How cool is that?
 
-![ood_shell](/docs/_img/ood_shell.png)
+![ood_shell](img/ood_shell.png)
 
 
 ## Managing files
@@ -75,14 +75,14 @@ tab. The files in the selected directory are listed.
 There are two sets of buttons in the File Explorer.
 
 * On the top left, just below the name of the current directory:
-  ![fs_btn1](/docs/_img/file_explorer_btn1.png)
+  ![fs_btn1](img/file_explorer_btn1.png)
   Those buttons allow you to
   **View**, **Edit**, **Rename**, **Download**, **Copy**, **Paste** (after you
   have moved to a different directory) or **Delete** a file, or you can toggle
   the file selection with **(Un)Select All**.
 
 * At the top of the window, on the right side:
-  ![fs_btn2](/docs/_img/file_explorer_btn2.png)
+  ![fs_btn2](img/file_explorer_btn2.png)
 
     | Button | Function |
     | ------ | -------- |
@@ -127,7 +127,7 @@ the location of the script and the script name (by default, `main_job.sh`).
 Under that, you will see the contents of the job script in a section named
 **Submit Script**.
 
-![ood_new_job](/docs/_img/ood_new_job.png)
+![ood_new_job](img/ood_new_job.png)
 
 #### Edit the job script
 
@@ -166,7 +166,7 @@ submitted successfully, the status of the job in the **Jobs Composer** window
 will change to _Queued_ or _Running_. When  the job completes, the status will
 change to _Completed_.
 
-![ood_submit_job](/docs/_img/ood_submit_job.png)
+![ood_submit_job](img/ood_submit_job.png)
 
 ## Monitoring jobs
 
@@ -175,7 +175,7 @@ bring you to a live view of Sherlock's scheduler queue. You'll be able to see
 all the jobs currently in queue, including running and pending jobs, as well as
 eome details about individual jobs.
 
-![ood_my_jobs](/docs/_img/ood_my_jobs.png)
+![ood_my_jobs](img/ood_my_jobs.png)
 
 At the bottom of the detailled view, you'll find two button that will bring you
 to the directory where that job's files are located, either in the **File
@@ -219,7 +219,7 @@ To start a Jupyter session from Sherlock OnDemand:
    (time limit, number of nodes, CPUs, partition to use, etc.). You can also
    choose to be notified by email when your notebook start.
 
-   ![ood_jup](/docs/_img/ood_jup.png)
+   ![ood_jup](img/ood_jup.png)
 
 3. Click the blue **Launch** button to start your JupyterHub session. You may
    have to wait in the queue for resources to become available for you.
@@ -228,11 +228,11 @@ To start a Jupyter session from Sherlock OnDemand:
    button to open your Jupyter Notebook. The Dashboard window will display
    information about your Jupyter session, including the name of the compute
    node it is running on, when it started, and how much time remains.
-   ![ood_sess](/docs/_img/ood_sess.png)
+   ![ood_sess](img/ood_sess.png)
 
 5. In your new Jupyter Notebook tab, you'll see 3 tabs: Files, Running and
    Clusters.
-   ![ood_jup_notebook](/docs/_img/ood_jup_notebook.png)
+   ![ood_jup_notebook](img/ood_jup_notebook.png)
 
    By default, you are in the **Files** tab, that displays the contents of your
    `$HOME` directory on Sherlock. You can navigate through your files there.
@@ -273,7 +273,7 @@ To run RStudio via Sherlock OnDemand:
 4. When your session starts, click the blue **Connect to RStudio Server**
    button. A new window opens with the RStudio interface.
 
-![ood_rstudio](/docs/_img/ood_rstudio.png)
+![ood_rstudio](img/ood_rstudio.png)
 
 ### Tensorboard
 
@@ -292,7 +292,7 @@ To run Tensorboard via Sherlock OnDemand:
 4. When your session starts, click the blue **Connect to Tensorboard**
    button. A new window opens with the Tensorboard interface.
 
-![ood_tb](/docs/_img/ood_tb.png)
+![ood_tb](img/ood_tb.png)
 
 
 [comment]: #  (link URLs -----------------------------------------------------)

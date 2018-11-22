@@ -3,7 +3,7 @@
 The terms that are typically used to describe cluster components could be
 confusing, so in an effort to clarify things, here's a schema of the most
 important ones, and their definition.
-![components](/docs/_img/cluster_components.png)
+![components](img/cluster_components.png)
 
 ##### CPU
 

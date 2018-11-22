@@ -59,7 +59,7 @@ What makes it a "super-computer" is the ability for a program to address
 resources (such as memory, CPU cores) located in different compute nodes,
 through the high-performance interconnect network.
 
-![overview](/docs/_img/cluster_overview.png)
+![overview](img/cluster_overview.png)
 
 On a computing cluster, users typically connect to [login nodes][g_login],
 using a secure remote login protocol such as [SSH][g_ssh]. Unlike in

@@ -12,7 +12,7 @@ img[alt="logo"] {
 </b>
 <!-- end of camouflage -->
 
-[![logo](/docs/_img/srcc.png)][url_srcc]
+[![logo](img/srcc.png)][url_srcc]
 
 The Stanford Research Computing Center ([SRCC][url_srcc]) is a joint effort of
 the [Dean of Research]() and [IT Services][url_uit] to build and support a
