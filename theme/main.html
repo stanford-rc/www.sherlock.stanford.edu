@@ -1,7 +1,5 @@
 {% if page.meta.redirect %}
-<script>
-    location.href = '{{ page.meta.redirect }}')
-</script>
+<script>var anchor=window.location.hash.substr(1);location.href="{{ page.meta.redirect }}"+(anchor?"#"+anchor:"")</script>
 <meta http-equiv="refresh" content="0; url={{ page.meta.redirect }}">
 <link rel="canonical" href="{{ page.meta.redirect }}">
 {% endif %}
