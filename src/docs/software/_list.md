@@ -1,13 +1,13 @@
 
 ## Categories
 
-*As of Friday, November 30 2018, we provide 444 software packages, in 7 categories, covering 53 fields of science:*
+*As of Friday, November 30 2018, we provide 445 software packages, in 7 categories, covering 54 fields of science:*
 
 * [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, imaging, language, libs, media, performance, resource monitoring, scm, tools</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, photonics</small>
-* [`biology`](#biology) <small>computational biology, cryo-em, genomics, neurology, phylogenetics</small>
+* [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
 * [`devel`](#devel) <small>build, compiler, data, data analytics, framework, language, lib, mpi, networking, parser</small>
 
@@ -243,6 +243,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 ### Biology
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
+**clinical science** | <a id="simvascular" class="soft_anch">`simvascular`</a> | -&nbsp;`20180704` | [Website](https://simvascular.github.io) | Simvascular is a blood flow simulation and analysis toolkit. This module provides the svFSI (Fluid Solid Interaction) solver. 
 **computational biology** | <a id="imp" class="soft_anch">`imp`</a> | -&nbsp;`2.8.0` | [Website](https://integrativemodeling.org/) | IMP's broad goal is to contribute to a comprehensive structural characterization of biomolecules ranging in size and complexity from small peptides to large macromolecular assemblies, by integrating data from diverse biochemical and biophysical experiments. 
 **computational biology** | <a id="py-biopython" class="soft_anch">`py-biopython`</a> | -&nbsp;`1.70_py27` | [Website](http://biopython.org) | Biopython is a set of freely available tools for biological computation written in Python. 
 **computational biology** | <a id="rosetta" class="soft_anch">`rosetta`</a> | -&nbsp;`3.8` | [Website](https://www.rosettacommons.org) | Rosetta is the premier software suite for modeling macromolecular structures. As a flexible, multi-purpose application, it includes tools for structure prediction, design, and remodeling of proteins and nucleic acids. 
