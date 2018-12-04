@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, November 30 2018, we provide 445 software packages, in 7 categories, covering 54 fields of science:*
+*As of Tuesday, December 04 2018, we provide 448 software packages, in 7 categories, covering 54 fields of science:*
 
 * [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, imaging, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -266,6 +266,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **genomics** | <a id="ncbi-blast+" class="soft_anch">`ncbi-blast+`</a> | -&nbsp;`2.6.0`<br/>-&nbsp;`2.7.1` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
 **genomics** | <a id="plink" class="soft_anch">`plink`</a> | -&nbsp;`1.07`<br/>-&nbsp;`1.90b5.3`<br/>-&nbsp;`2.0a1` | [Website](http://zzz.bwh.harvard.edu/plink/) | PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. 
 **genomics** | <a id="py-bx-python" class="soft_anch">`py-bx-python`</a> | -&nbsp;`0.8.1_py27` | [Website](https://github.com/bxlab/bx-python) | Tools for manipulating biological data, particularly multiple sequence alignments. 
+**genomics** | <a id="py-cutadapt" class="soft_anch">`py-cutadapt`</a> | -&nbsp;`1.18_py36`<br/>-&nbsp;`1.18_py27` | [Website](https://cutadapt.readthedocs.io) | Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads. 
 **genomics** | <a id="py-fithic" class="soft_anch">`py-fithic`</a> | -&nbsp;`1.1.3_py27` | [Website](https://github.com/ay-lab/fithic) | Fit-Hi-C is a tool for assigning statistical confidence estimates to chromosomal contact maps produced by genome architecture assays. 
 **genomics** | <a id="py-macs2" class="soft_anch">`py-macs2`</a> | -&nbsp;`2.1.1_py27` | [Website](https://github.com/taoliu/MACS) | MACS (Model-based Analysis of ChIP-Seq) implements a novel ChIP-Seq analysis method. 
 **genomics** | <a id="py-pysam" class="soft_anch">`py-pysam`</a> | -&nbsp;`0.14.1_py27` | [Website](https://github.com/pysam-developers/pysam) | Pysam is a python module for reading, manipulating and writing genomic data sets. 
