@@ -125,6 +125,8 @@ error:
 
     ssh: connect to host login.sherlock.stanford.edu port 22: Connection refused
 
+IP blocked by this mechanism will automatically be authorized again after some
+time.
 
 !!! warning "SSHFS on macOS"
 
@@ -138,12 +140,14 @@ error:
     to sleep to avoid this situation.
 
 
+
+
 !!! info "VPN"
 
     If your IP got blocked and you have an urgent need to connect, before the
     automatic blacklist expiration, we recommend trying to connect through
     [Stanford's VPN][url_vpn]: your computer will then use a different IP
-    address and will not be affected by the ban on your regaulrIP address.
+    address and will not be affected by the ban on your regular IP address.
 
 
 
