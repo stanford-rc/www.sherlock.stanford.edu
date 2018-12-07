@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, December 07 2018, we provide 452 software packages, in 7 categories, covering 54 fields of science:*
+*As of Friday, December 07 2018, we provide 453 software packages, in 7 categories, covering 54 fields of science:*
 
 * [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, imaging, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -364,7 +364,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **lib** | <a id="eigen" class="soft_anch">`eigen`</a> | -&nbsp;`3.3.3` | [Website](http://eigen.tuxfamily.org) | Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms. 
 **lib** | <a id="libctl" class="soft_anch">`libctl`</a> | -&nbsp;`3.2.2`<br/>-&nbsp;`4.0.1` | [Website](https://github.com/stevengj/libctl) | libctl is a library for supporting flexible control files in scientific simulations. 
 **lib** | <a id="libgpuarray" class="soft_anch">`libgpuarray`</a> | -&nbsp;`0.7.5` | [Website](http://deeplearning.net/software/libgpuarray) | Library to manipulate tensors on the GPU. 
-**lib** | <a id="nccl" class="soft_anch">`nccl`</a> | -&nbsp;`1.3.4`<br/>-&nbsp;`2.0.4`<br/>-&nbsp;`2.1.15` | [Website](https://github.com/NVIDIA/nccl) | NCCL (pronounced 'Nickel') is a stand-alone library of standard collective communication routines, such as all-gather, reduce, broadcast, etc., that have been optimized to achieve high bandwidth over PCIe. 
+**lib** | <a id="nccl" class="soft_anch">`nccl`</a> | -&nbsp;`1.3.4`<br/>-&nbsp;`2.0.4`<br/>-&nbsp;`2.1.15`<br/>-&nbsp;`2.3.7` | [Website](https://github.com/NVIDIA/nccl) | NCCL (pronounced 'Nickel') is a stand-alone library of standard collective communication routines, such as all-gather, reduce, broadcast, etc., that have been optimized to achieve high bandwidth over PCIe. 
 **lib** | <a id="opencv" class="soft_anch">`opencv`</a> | -&nbsp;`3.3.0` | [Website](https://opencv.org) | OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library. 
 **lib** | <a id="py-h5py" class="soft_anch">`py-h5py`</a> | -&nbsp;`2.7.1_py27` | [Website](http://www.h5py.org) | The h5py package is a Pythonic interface to the HDF5 binary data format. 
 **lib** | <a id="py-netcdf4" class="soft_anch">`py-netcdf4`</a> | -&nbsp;`1.3.1_py36`<br/>-&nbsp;`1.3.1_py27` | [Website](https://unidata.github.io/netcdf4-python/) | netcdf4-python is a Python interface to the netCDF C library. 
