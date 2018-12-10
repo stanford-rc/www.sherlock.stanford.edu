@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Monday, December 10 2018, we provide 457 software packages, in 7 categories, covering 54 fields of science:*
+*As of Monday, December 10 2018, we provide 459 software packages, in 7 categories, covering 54 fields of science:*
 
 * [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, imaging, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -173,7 +173,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **computational geometry** | <a id="cgal" class="soft_anch">`cgal`</a> | -&nbsp;`4.10` | [Website](http://www.cgal.org) | The Computational Geometry Algorithms Library (CGAL) is a C++ library that aims to provide easy access to efficient and reliable algorithms in computational geometry. 
 **computational geometry** | <a id="qhull" class="soft_anch">`qhull`</a> | -&nbsp;`2015.2` | [Website](http://www.qhull.org/) | Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram, halfspace intersection about a point, furthest-site Delaunay triangulation, and furthest-site Voronoi diagram. 
 **deep learning** | <a id="caffe2" class="soft_anch">`caffe2`</a> | -&nbsp;`0.8.1` | [Website](https://caffe2.ai) | Caffe2 is a deep learning framework that provides an easy and straightforward way to experiment with deep learning and leverage community contributions of new models and algorithms. 
-**deep learning** | <a id="cudnn" class="soft_anch">`cudnn`</a> | -&nbsp;`5.1`<br/>-&nbsp;`6.0`<br/>-&nbsp;`7.0.1`<br/>-&nbsp;`7.0.4`<br/>-&nbsp;`7.0.5`<br/>-&nbsp;`7.1.1`<br/>-&nbsp;`7.1.4` | [Website](https://developer.nvidia.com/cudnn) | NVIDIA cuDNN is a GPU-accelerated library of primitives for deep neural networks. 
+**deep learning** | <a id="cudnn" class="soft_anch">`cudnn`</a> | -&nbsp;`5.1`<br/>-&nbsp;`6.0`<br/>-&nbsp;`7.0.1`<br/>-&nbsp;`7.0.4`<br/>-&nbsp;`7.0.5`<br/>-&nbsp;`7.1.1`<br/>-&nbsp;`7.1.4`<br/>-&nbsp;`7.4.1.5` | [Website](https://developer.nvidia.com/cudnn) | NVIDIA cuDNN is a GPU-accelerated library of primitives for deep neural networks. 
 **deep learning** | <a id="h2o" class="soft_anch">`h2o`</a> | -&nbsp;`3.22.0.1` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
 **deep learning** | <a id="py-horovod" class="soft_anch">`py-horovod`</a> | -&nbsp;`0.12.1_py36`<br/>-&nbsp;`0.12.1_py27` | [Website](https://github.com/uber/horovod) | Horovod is a distributed training framework for TensorFlow. The goal of Horovod is to make distributed Deep Learning fast and easy to use. 
 **deep learning** | <a id="py-keras" class="soft_anch">`py-keras`</a> | -&nbsp;`2.0.8_py27`<br/>-&nbsp;`2.1.5_py36`<br/>-&nbsp;`2.1.5_py27` | [Website](http://keras.io) | Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. 
@@ -366,7 +366,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **lib** | <a id="libgpuarray" class="soft_anch">`libgpuarray`</a> | -&nbsp;`0.7.5` | [Website](http://deeplearning.net/software/libgpuarray) | Library to manipulate tensors on the GPU. 
 **lib** | <a id="nccl" class="soft_anch">`nccl`</a> | -&nbsp;`1.3.4`<br/>-&nbsp;`2.0.4`<br/>-&nbsp;`2.1.15`<br/>-&nbsp;`2.2.13`<br/>-&nbsp;`2.3.7` | [Website](https://github.com/NVIDIA/nccl) | NCCL (pronounced 'Nickel') is a stand-alone library of standard collective communication routines, such as all-gather, reduce, broadcast, etc., that have been optimized to achieve high bandwidth over PCIe. 
 **lib** | <a id="opencv" class="soft_anch">`opencv`</a> | -&nbsp;`3.3.0` | [Website](https://opencv.org) | OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library. 
-**lib** | <a id="py-h5py" class="soft_anch">`py-h5py`</a> | -&nbsp;`2.7.1_py27` | [Website](http://www.h5py.org) | The h5py package is a Pythonic interface to the HDF5 binary data format. 
+**lib** | <a id="py-h5py" class="soft_anch">`py-h5py`</a> | -&nbsp;`2.8.0_py36`<br/>-&nbsp;`2.7.1_py27` | [Website](http://www.h5py.org) | The h5py package is a Pythonic interface to the HDF5 binary data format. 
 **lib** | <a id="py-netcdf4" class="soft_anch">`py-netcdf4`</a> | -&nbsp;`1.3.1_py36`<br/>-&nbsp;`1.3.1_py27` | [Website](https://unidata.github.io/netcdf4-python/) | netcdf4-python is a Python interface to the netCDF C library. 
 **lib** | <a id="py-numba" class="soft_anch">`py-numba`</a> | -&nbsp;`0.35.0_py36`<br/>-&nbsp;`0.35.0_py27` | [Website](http://numba.pydata.org) | Numba is a compiler for Python array and numerical functions that gives you the power to speed up your applications with high performance functions written directly in Python.. 
 **lib** | <a id="py-pycuda" class="soft_anch">`py-pycuda`</a> | -&nbsp;`2017.1.1_py27` | [Website](https://mathema.tician.de/software/pycuda/) | PyCUDA lets you access Nvidia‘s CUDA parallel computation API from Python. 
