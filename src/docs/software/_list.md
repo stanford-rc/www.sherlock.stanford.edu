@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Monday, December 10 2018, we provide 459 software packages, in 7 categories, covering 54 fields of science:*
+*As of Monday, December 10 2018, we provide 461 software packages, in 7 categories, covering 54 fields of science:*
 
 * [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, imaging, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -178,7 +178,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **deep learning** | <a id="py-horovod" class="soft_anch">`py-horovod`</a> | -&nbsp;`0.12.1_py36`<br/>-&nbsp;`0.12.1_py27` | [Website](https://github.com/uber/horovod) | Horovod is a distributed training framework for TensorFlow. The goal of Horovod is to make distributed Deep Learning fast and easy to use. 
 **deep learning** | <a id="py-keras" class="soft_anch">`py-keras`</a> | -&nbsp;`2.0.8_py27`<br/>-&nbsp;`2.1.5_py36`<br/>-&nbsp;`2.1.5_py27` | [Website](http://keras.io) | Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. 
 **deep learning** | <a id="py-onnx" class="soft_anch">`py-onnx`</a> | -&nbsp;`1.0.1_py27` | [Website](https://onnx.ai) | ONNX is a open format to represent deep learning models. 
-**deep learning** | <a id="py-pytorch" class="soft_anch">`py-pytorch`</a> | -&nbsp;`0.2.0_py27`<br/>-&nbsp;`0.2.0_py36`<br/>-&nbsp;`0.3.0_py36`<br/>-&nbsp;`0.3.0_py27` | [Website](http://pytorch.org) | PyTorch is a deep learning framework that puts Python first. 
+**deep learning** | <a id="py-pytorch" class="soft_anch">`py-pytorch`</a> | -&nbsp;`0.2.0_py27`<br/>-&nbsp;`0.2.0_py36`<br/>-&nbsp;`0.3.0_py36`<br/>-&nbsp;`1.0.0_py27`<br/>-&nbsp;`1.0.0_py36`<br/>-&nbsp;`0.3.0_py27` | [Website](http://pytorch.org) | PyTorch is a deep learning framework that puts Python first. 
 **deep learning** | <a id="py-tensorflow" class="soft_anch">`py-tensorflow`</a> | -&nbsp;`1.4.0_py27`<br/>-&nbsp;`1.5.0_py27`<br/>-&nbsp;`1.5.0_py36`<br/>-&nbsp;`1.6.0_py36`<br/>-&nbsp;`1.7.0_py27`<br/>-&nbsp;`1.8.0_py27`<br/>-&nbsp;`1.9.0_py27`<br/>-&nbsp;`1.9.0_py36`<br/>-&nbsp;`1.6.0_py27` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
 **deep learning** | <a id="py-tensorlayer" class="soft_anch">`py-tensorlayer`</a> | -&nbsp;`1.6.3_py27` | [Website](http://tensorlayer.org) | TensorLayer is a Deep Learning (DL) and Reinforcement Learning (RL) library extended from Google TensorFlow. 
 **deep learning** | <a id="py-theano" class="soft_anch">`py-theano`</a> | -&nbsp;`1.0.1_py27` | [Website](http://deeplearning.net/software/theano) | Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. 
