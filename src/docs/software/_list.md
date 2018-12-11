@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, December 11 2018, we provide 461 software packages, in 7 categories, covering 54 fields of science:*
+*As of Tuesday, December 11 2018, we provide 462 software packages, in 7 categories, covering 54 fields of science:*
 
 * [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, imaging, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -261,6 +261,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **genomics** | <a id="hic-pro" class="soft_anch">`hic-pro`</a> | -&nbsp;`2.10.0` | [Website](https://github.com/nservant/HiC-Pro) | HiC-Pro: An optimized and flexible pipeline for Hi-C data processing. 
 **genomics** | <a id="hisat2" class="soft_anch">`hisat2`</a> | -&nbsp;`2.1.0` | [Website](http://ccb.jhu.edu/software/hisat2) | HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes (as well as to a single reference genome). 
 **genomics** | <a id="htslib" class="soft_anch">`htslib`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/htslib) | C library for high-throughput sequencing data formats. 
+**genomics** | <a id="jellyfish" class="soft_anch">`jellyfish`</a> | -&nbsp;`2.2.10` | [Website](https://github.com/gmarcais/Jellyfish) | A fast multi-threaded k-mer counter. 
 **genomics** | <a id="kallisto" class="soft_anch">`kallisto`</a> | -&nbsp;`0.44.0` | [Website](https://pachterlab.github.io/kallisto/) | kallisto is a program for quantifying abundances of transcripts from RNA-Seq data using high-throughput sequencing reads. 
 **genomics** | <a id="mixcr" class="soft_anch">`mixcr`</a> | -&nbsp;`2.1.12` | [Website](https://milaboratory.com/software/mixcr/) | MiXCR is a universal framework that processes big immunome data from raw sequences to quantitated clonotypes. 
 **genomics** | <a id="ncbi-blast+" class="soft_anch">`ncbi-blast+`</a> | -&nbsp;`2.6.0`<br/>-&nbsp;`2.7.1` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
