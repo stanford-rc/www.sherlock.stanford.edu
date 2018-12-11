@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Monday, December 10 2018, we provide 461 software packages, in 7 categories, covering 54 fields of science:*
+*As of Tuesday, December 11 2018, we provide 460 software packages, in 7 categories, covering 54 fields of science:*
 
 * [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, imaging, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -67,7 +67,6 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **compression** | <a id="zlib" class="soft_anch">`zlib`</a> | -&nbsp;`1.2.11` | [Website](http://zlib.net) | zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. 
 **containers** | <a id="libnvidia-container" class="soft_anch">`libnvidia-container`</a> | -&nbsp;`1.0.0rc2` | [Website](https://github.com/NVIDIA/libnvidia-container) | libnvidia-container is a library and a simple CLI utility to automatically configure GNU/Linux containers leveraging NVIDIA hardware. 
 **containers** | <a id="proot" class="soft_anch">`proot`</a> | -&nbsp;`5.1.0` | [Website](https://proot-me.github.io) | PRoot is a user-space implementation of chroot, mount --bind, and binfmt_misc. 
-**containers** | <a id="singularity" class="soft_anch">`singularity`</a> | -&nbsp;`2.6.0` | [Website](http://singularity.lbl.gov) | Singularity is a container framework that enables users to package entire scientific workflows, software and libraries. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/singularity)
 **database** | <a id="bdb" class="soft_anch">`bdb`</a> | -&nbsp;`6.2.32` | [Website](http://www.oracle.com/us/products/database/berkeley-db) | Berkeley DB (BDB) is a software library intended to provide a high-performance embedded database for key/value data. 
 **database** | <a id="mariadb" class="soft_anch">`mariadb`</a> | -&nbsp;`10.2.11` | [Website](https://www.mariadb.org) | MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/mariadb)
 **database** | <a id="postgresql" class="soft_anch">`postgresql`</a> | -&nbsp;`10.5` | [Website](https://postgresql.org) | PostgreSQL is a powerful, open source object-relational database system with a strong focus on reliability, feature robustness, and performance. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/postgresql)
