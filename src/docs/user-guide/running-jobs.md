@@ -337,6 +337,25 @@ done
 
 ```
 
+!!! danger "Long running processes need to run in the background"
+
+    If your job's actual paylod (the application or command you want to run) is
+    running continuously for the whole duration of the job, it needs to be run
+    in the background, so the trap can be processed.
+
+    To run your application in the background, just add a `&` at the end of the
+    command and then add a `wait` statement at the end of the script, to make
+    the shell wait until the end of the job.
+
+    For instance, if you were to run a [PostgreSQL database server][url_pgsql],
+    the `while true ... done` loop in the previous example could be replaced by
+    something like this:
+
+    ```bash
+    postgres -i -D $DB_DIR &
+    wait
+    ```
+
 
 ### Persistent `$JOBID`
 
