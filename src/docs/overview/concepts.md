@@ -5,8 +5,13 @@ members and their research teams to support sponsored research.
 
 !!! warning "Sherlock is a resource for research"
 
-    Sherlock is not suitable for course work, class assignments or general-use
-    training sessions.
+    **Sherlock is not suitable for course work, class assignments or general-use
+    training sessions.**
+
+    Users interested in using computing resources in such contexts are
+    encouraged to investigate [FarmShare][url_farmshare], Stanford’s community
+    computing environment, which is primarily intended for to support
+    coursework.
 
 It is open to the Stanford community as a computing resource to support
 departmental or sponsored research, thus a faculty member's sponsorship is
@@ -261,6 +266,7 @@ by the maintenance window would be pushed after it.
 [url_admin]:  	  https://adminguide.stanford.edu
 [url_fairshare]:  /docs/advanced-topics/scheduler#fair-share
 [url_transition]: /docs/overview/transition
+[url_farmshare]:  https://uit.stanford.edu/service/sharedcomputing
 
 [url_HIPAA]: https://en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act
 [url_PHI]:   https://en.wikipedia.org/wiki/Protected_health_information
