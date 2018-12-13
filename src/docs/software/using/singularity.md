@@ -87,14 +87,10 @@ documentation][url_singularity_docs].
 
 ## Singularity on Sherlock
 
-Before running containers on Sherlock, the `singularity` module needs to be
-loaded.  It belongs to the `system` category, which needs to be loaded
-first[^modules]:
-
-```
-$ ml system
-$ ml singularity
-```
+As [announced][url_containernative] during the [SC'18 Supercomputing
+Conference][url_sc18], Singularity is an integral part of the Sherlock cluster,
+and Singularity commands can be executed natively on any login or compute node,
+without the need to load any additional module.
 
 ### Importing containers
 
@@ -131,7 +127,6 @@ multiple cores in your job can make the pull operation faster:
 
 ```
 $ srun -c 4 --pty bash
-$ ml system singularity
 ```
 
 We recommend storing Singularity images in `$GROUP_HOME`, as container images
@@ -277,7 +272,6 @@ those images:
 
 ```
 $ srun -c 4 --pty bash
-$ ml system singularity
 $ cd $GROUP_HOME/simg
 ```
 
@@ -355,7 +349,6 @@ following commands. We start by creating a temporary directory to hold the
 execution results, and start the container using this as the current directory:
 
 ```
-$ ml system singularity
 $ mkdir /tmp/namd_test
 $ singularity shell --nv --pwd /tmp/namd_test $GROUP_HOME/simg/namd-2.12-171025.simg
 Singularity: Invoking an interactive shell within container...
@@ -445,6 +438,9 @@ the [Singularity documentation][url_singularity_build].
 [url_ngc]:                https://www.nvidia.com/en-us/gpu-cloud
 [url_ngc_auth]:           https://docs.nvidia.com/ngc/ngc-getting-started-guide/index.html
 [url_namd]:               https://www.ks.uiuc.edu/Research/namd/
+[url_sc18]:               https://sc18.supercomputing.org/
+[url_containernative]:    https://news.sherlock.stanford.edu/posts/sherlock-goes-container-native
+
 
 [url_modules]:			  /docs/software/modules
 [url_gpu_job]:			  /docs/user-guide/gpu#submitting-a-gpu-job
