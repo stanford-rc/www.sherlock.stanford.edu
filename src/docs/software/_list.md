@@ -1,14 +1,14 @@
 
 ## Categories
 
-*As of Thursday, December 13 2018, we provide 471 software packages, in 7 categories, covering 54 fields of science:*
+*As of Friday, December 14 2018, we provide 479 software packages, in 7 categories, covering 55 fields of science:*
 
 * [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, imaging, language, libs, media, performance, resource monitoring, scm, tools</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, photonics</small>
 * [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, phylogenetics</small>
-* [`chemistry`](#chemistry) <small>computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
+* [`chemistry`](#chemistry) <small>cheminformatics, computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
 * [`devel`](#devel) <small>build, compiler, data, data analytics, framework, language, lib, mpi, networking, parser</small>
 
 
@@ -175,10 +175,10 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **deep learning** | <a id="cudnn" class="soft_anch">`cudnn`</a> | -&nbsp;`5.1`<br/>-&nbsp;`6.0`<br/>-&nbsp;`7.0.1`<br/>-&nbsp;`7.0.4`<br/>-&nbsp;`7.0.5`<br/>-&nbsp;`7.1.1`<br/>-&nbsp;`7.1.4`<br/>-&nbsp;`7.3.1.20`<br/>-&nbsp;`7.4.1.5` | [Website](https://developer.nvidia.com/cudnn) | NVIDIA cuDNN is a GPU-accelerated library of primitives for deep neural networks. 
 **deep learning** | <a id="h2o" class="soft_anch">`h2o`</a> | -&nbsp;`3.22.0.1` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
 **deep learning** | <a id="py-horovod" class="soft_anch">`py-horovod`</a> | -&nbsp;`0.12.1_py36`<br/>-&nbsp;`0.12.1_py27` | [Website](https://github.com/uber/horovod) | Horovod is a distributed training framework for TensorFlow. The goal of Horovod is to make distributed Deep Learning fast and easy to use. 
-**deep learning** | <a id="py-keras" class="soft_anch">`py-keras`</a> | -&nbsp;`2.0.8_py27`<br/>-&nbsp;`2.1.5_py36`<br/>-&nbsp;`2.1.5_py27` | [Website](http://keras.io) | Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. 
+**deep learning** | <a id="py-keras" class="soft_anch">`py-keras`</a> | -&nbsp;`2.0.8_py27`<br/>-&nbsp;`2.1.5_py36`<br/>-&nbsp;`2.2.4_py27`<br/>-&nbsp;`2.2.4_py36`<br/>-&nbsp;`2.1.5_py27` | [Website](http://keras.io) | Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. 
 **deep learning** | <a id="py-onnx" class="soft_anch">`py-onnx`</a> | -&nbsp;`1.0.1_py27` | [Website](https://onnx.ai) | ONNX is a open format to represent deep learning models. 
 **deep learning** | <a id="py-pytorch" class="soft_anch">`py-pytorch`</a> | -&nbsp;`0.2.0_py27`<br/>-&nbsp;`0.2.0_py36`<br/>-&nbsp;`0.3.0_py36`<br/>-&nbsp;`1.0.0_py27`<br/>-&nbsp;`1.0.0_py36`<br/>-&nbsp;`0.3.0_py27` | [Website](http://pytorch.org) | PyTorch is a deep learning framework that puts Python first. 
-**deep learning** | <a id="py-tensorflow" class="soft_anch">`py-tensorflow`</a> | -&nbsp;`1.4.0_py27`<br/>-&nbsp;`1.5.0_py27`<br/>-&nbsp;`1.5.0_py36`<br/>-&nbsp;`1.6.0_py36`<br/>-&nbsp;`1.7.0_py27`<br/>-&nbsp;`1.8.0_py27`<br/>-&nbsp;`1.9.0_py27`<br/>-&nbsp;`1.9.0_py36`<br/>-&nbsp;`1.6.0_py27` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
+**deep learning** | <a id="py-tensorflow" class="soft_anch">`py-tensorflow`</a> | -&nbsp;`1.4.0_py27`<br/>-&nbsp;`1.5.0_py27`<br/>-&nbsp;`1.5.0_py36`<br/>-&nbsp;`1.6.0_py36`<br/>-&nbsp;`1.7.0_py27`<br/>-&nbsp;`1.8.0_py27`<br/>-&nbsp;`1.9.0_py27`<br/>-&nbsp;`1.9.0_py36`<br/>-&nbsp;`1.12.0_py27`<br/>-&nbsp;`1.12.0_py36`<br/>-&nbsp;`1.6.0_py27` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
 **deep learning** | <a id="py-tensorlayer" class="soft_anch">`py-tensorlayer`</a> | -&nbsp;`1.6.3_py27` | [Website](http://tensorlayer.org) | TensorLayer is a Deep Learning (DL) and Reinforcement Learning (RL) library extended from Google TensorFlow. 
 **deep learning** | <a id="py-theano" class="soft_anch">`py-theano`</a> | -&nbsp;`1.0.1_py27` | [Website](http://deeplearning.net/software/theano) | Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. 
 **deep learning** | <a id="tensorrt" class="soft_anch">`tensorrt`</a> | -&nbsp;`3.0.1`<br/>-&nbsp;`3.0.4`<br/>-&nbsp;`4.0.1.6`<br/>-&nbsp;`5.0.2.6` | [Website](https://developer.nvidia.com/tensorrt) | NVIDIA TensorRT™ is a high-performance deep learning inference optimizer and runtime that delivers low latency, high-throughput inference for deep learning applications. 
@@ -297,6 +297,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 ### Chemistry
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
+**cheminformatics** | <a id="py-rdkit" class="soft_anch">`py-rdkit`</a> | -&nbsp;`2018.09.1_py36`<br/>-&nbsp;`2018.09.1_py27` | [Website](http://www.rdkit.org) | RDKit is a collection of cheminformatics and machine-learning software written in C++ and Python. 
 **computational chemistry** | <a id="gaussian" class="soft_anch">`gaussian`</a>^<b class="lic"></b>^ | -&nbsp;`g16` | [Website](https://www.gaussian.com) | Gaussian is a general purpose computational chemistry software package. 
 **computational chemistry** | <a id="libint" class="soft_anch">`libint`</a> | -&nbsp;`1.1.4`<br/>-&nbsp;`2.0.3` | [Website](https://sourceforge.net/p/libint/home/) | Libint computes molecular integrals. 
 **computational chemistry** | <a id="libxc" class="soft_anch">`libxc`</a> | -&nbsp;`3.0.0` | [Website](http://octopus-code.org/wiki/Libxc) | Libxc is a library of exchange-correlation functionals for density-functional theory. 
@@ -338,7 +339,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **data** | <a id="pnetcdf" class="soft_anch">`pnetcdf`</a> | -&nbsp;`1.8.1` | [Website](http://cucis.ece.northwestern.edu/projects/PnetCDF/) | Parallel netCDF (PnetCDF) is a parallel I/O library for accessing NetCDF files in CDF-1, 2, and 5 formats. 
 **data** | <a id="protobuf" class="soft_anch">`protobuf`</a> | -&nbsp;`3.4.0` | [Website](https://developers.google.com/protocol-buffers/) | Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data. 
 **data** | <a id="py-pandas" class="soft_anch">`py-pandas`</a> | -&nbsp;`0.23.0_py27`<br/>-&nbsp;`0.23.0_py36` | [Website](https://pandas.pydata.org/) | pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language. 
-**data** | <a id="py-protobuf" class="soft_anch">`py-protobuf`</a> | -&nbsp;`3.4.0_py36`<br/>-&nbsp;`3.4.0_py27` | [Website](https://developers.google.com/protocol-buffers) | Python bindings for Google's Protocol Buffers data interchange format. 
+**data** | <a id="py-protobuf" class="soft_anch">`py-protobuf`</a> | -&nbsp;`3.4.0_py36`<br/>-&nbsp;`3.6.1_py27`<br/>-&nbsp;`3.6.1_py36`<br/>-&nbsp;`3.4.0_py27` | [Website](https://developers.google.com/protocol-buffers) | Python bindings for Google's Protocol Buffers data interchange format. 
 **data** | <a id="redis" class="soft_anch">`redis`</a> | -&nbsp;`4.0.1` | [Website](https://redis.io) | Redis is an open source, in-memory data structure store, used as a database, cache and message broker. 
 **data analytics** | <a id="hadoop" class="soft_anch">`hadoop`</a> | -&nbsp;`3.1.0` | [Website](https://hadoop.apache.org/) | The Apache Hadoop software library is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. 
 **data analytics** | <a id="py-sparkhpc" class="soft_anch">`py-sparkhpc`</a> | -&nbsp;`0.3` | [Website](https://sparkhpc.readthedocs.io) | Launching and controlling spark on HPC clusters  
