@@ -93,11 +93,15 @@ srcf.isilon:/ifs/PI  1.0T  646G  379G  64% /home/groups
     temporary files, such as raw job output, intermediate files, unprocessed
     results, and so on.
 
-!!! danger "`$SCRATCH` is not a backup target"
+!!! danger "Purge policy"
+
+    **Files are automatically purged from `$SCRATCH`** after an inactivity
+    period.
 
     `$SCRATCH` is not meant to store permanent data, and should only be used
     for data associated with currently running jobs. It's not a target for
-    backups, archived data, etc.
+    backups, archived data, etc. See the [Expiration
+    Policy](#expiration_policy) section for details.
 
 | Characteristics   |   |
 | ----------------- | --- |
@@ -119,10 +123,10 @@ during job execution.
 Old files are automatically purged on `$SCRATCH` so users should avoid storing
 long-term data there.
 
-Each compute node has a 56Gb/s low latency Infiniband link to `$SCRATCH`. The
-aggregate bandwidth of the filesystem is about 50GB/s. So any job with high
-data performance requirements will take advantage from using `$SCRATCH` for
-I/O.
+Each compute node has a low latency, high-bandwidth Infiniband link to
+`$SCRATCH`. The aggregate bandwidth of the filesystem is about 75GB/s. So any
+job with high data performance requirements will take advantage from using
+`$SCRATCH` for I/O.
 
 We strongly recommend using `$SCRATCH` to reference your scratch directory in
 scripts, rather than its explicit path.
@@ -137,7 +141,7 @@ $ lfs quota -u $USER -h $SCRATCH
 Disk quotas for user kilian (uid 215845):
      Filesystem    used   quota   limit   grace   files   quota   limit   grace
 /scratch/users/kilian
-                 749.4G     18T     20T       - 2028766  18000000 20000000       -
+                 749.4G     20T     20T       - 2028766  20000000 20000000       -
 ```
 
 **NB**: user quotas are based on file ownership, meaning that all files
@@ -155,20 +159,62 @@ The different values displayed in `lfs quota` are as follows:
   resources (volume or number of files) that a user is allowed to use. That
   limit can never be exceeded.
 
+Note that to make things easier, soft and hard quotas are set to the same
+value on Sherlock. This practically disables the soft quota behavior, which has
+proven confusing.
+
 ### Expiration policy
 
-!!! Warning
+!!! Danger "Inactive files are automatically purged"
 
-    Files not modified in over 6 months will be automatically deleted
+    Files that are **not modified in the last 6 months** will be automatically
+    deleted from the filesystem.
 
 To manage available space and maintain optimal performance for all jobs, all
-files on `$SCRATCH` are subject to automatic purges. Files whose contents have
-not been modified in the previous 6 months will be automatically deleted.
+files on `$SCRATCH` are subject to automatic purges. Meaning that after a
+period of inactivity, files that are not used anymore will be automatically
+deleted from the filesystem.
 
-For instance, if you create a file on February 1st and don't ever modify it
-afterwards, it will be automatically deleted on August 1st.
+File activity is defined based on the last time a file's contents (the actual
+data in the file) have been modified. Meaning that **files whose contents have
+not been modified in the previous 6 months will be automatically deleted.**
 
-Please note that reading a file does not qualify as a modification.
+Each time a file's contents are modified, the expiration countdown is reset,
+and the file gets another 6-month of lifetime.
+
+!!! important "Metadata changes don't qualify as an update"
+
+    Modifying a file's contents is the only way to reset the expiration
+    countdown and extend the file's lifetime on the filesystem.
+
+    Metadata modifications such as: reading the file, renaming it, moving it to
+    a different directory, changing its permissions or its ownership,
+    "touching" it to update its last modification or access times, won't have
+    any effect on the purge countdown.
+
+Purges are based on an internal filesystem property that reflects the last date
+a file's data has been modified, and which is unfortunately not readily
+accessible by users.
+
+Please note that tools like `ls` will only display the date of the last
+metadata[^metadata] modification for a file, which is not necessarily relevant
+to determine a file's eligibility for deletion. For instance, using the `touch`
+command on a file to update its last modification date will only update the
+metadata, not the data, and as such, will not reset the purge countdown timer.
+
+Filesystem purges are a continuous process: they don't run at particular times,
+but are carried out in a permanent background fashion. Files are not
+necessarily deleted right away when they become eligible for deletion.  For
+instance, if you create a file on February 1st and don't ever modify it
+afterwards, it will be automatically become eligible for deletion on August
+1st, and can be deleted anytime after this date.
+
+Empty directories that would remain after all their files have been purged are
+are not automatically deleted, because user workflows may rely on and require
+specific directory trees to be present. And there's no good way to distinguish
+between a directory created empty intentionally, and a directory emptied by
+automatic purges.
+
 
 -----
 
@@ -361,5 +407,7 @@ of the different fields in `lfs quota`.
 [comment]: #  (footnotes -----------------------------------------------------)
 
 [^oak_snap]: Snapshots on `$OAK` require additional storage space. Please see
-           the [Oak Snapshots Feature][url_oak_snap] page for details.
+  the [Oak Snapshots Feature][url_oak_snap] page for details.
+[^metadata]: Metadata are data such as a file's size, name, path, owner,
+  permissions, etc.
 
