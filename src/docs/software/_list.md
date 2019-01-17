@@ -1,12 +1,12 @@
 
 ## Categories
 
-*As of Tuesday, January 15 2019, we provide 485 software packages, in 7 categories, covering 40 fields of science:*
+*As of Wednesday, January 16 2019, we provide 486 software packages, in 7 categories, covering 41 fields of science:*
 
 * [`viz`](#viz) <small>graphs, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small></small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
-* [`physics`](#physics) <small>astronomy, geophysics, geoscience, photonics</small>
+* [`physics`](#physics) <small>astronomy, geophysics, geoscience, materials science, photonics</small>
 * [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>cheminformatics, computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
 * [`devel`](#devel) <small>build, compiler, data, data analytics, framework, language, lib, mpi, networking, parser</small>
@@ -126,6 +126,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **geoscience** | <a id="py-opendrift" class="soft_anch">`py-opendrift`</a> | -&nbsp;`1.0.3_py27` | [Website](https://github.com/OpenDrift/opendrift) | OpenDrift is a software for modeling the trajectories and fate of objects or substances drifting in the ocean, or even in the atmosphere. 
 **geoscience** | <a id="py-pyproj" class="soft_anch">`py-pyproj`</a> | -&nbsp;`1.9.5.1_py36`<br/>-&nbsp;`1.9.5.1_py27` | [Website](https://github.com/jswhit/pyproj) | Python interface to PROJ4 library for cartographic transformations. 
 **geoscience** | <a id="udunits" class="soft_anch">`udunits`</a> | -&nbsp;`2.2.26` | [Website](https://www.unidata.ucar.edu/software/udunits/) | The UDUNITS package from Unidata is a C-based package for the programatic handling of units of physical quantities. 
+**materials science** | <a id="atat" class="soft_anch">`atat`</a> | -&nbsp;`3.36` | [Website](https://www.brown.edu/Departments/Engineering/Labs/avdw/atat/) | Alloy Theoretic Automated Toolkit: a software toolkit for modeling coupled configurational and vibrational disorder in alloy systems. 
 **photonics** | <a id="meep" class="soft_anch">`meep`</a> | -&nbsp;`1.3`<br/>-&nbsp;`1.4.3` | [Website](https://github.com/stevengj/meep) | Meep is a free finite-difference time-domain (FDTD) simulation software package to model electromagnetic systems. 
 **photonics** | <a id="mpb" class="soft_anch">`mpb`</a> | -&nbsp;`1.5`<br/>-&nbsp;`1.6.2` | [Website](https://github.com/stevengj/mpb) | MPB is a free software package for computing the band structures, or dispersion relations, and electromagnetic modes of periodic dielectric structures, on both serial and parallel computers. 
 
