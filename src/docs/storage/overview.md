@@ -42,8 +42,8 @@ and for some of them, purge policies (time-residency limits).
 | -------------- | ---------- | ----------: | --------- |
 |`$HOME`         | user       |       15 GB | $\infty$  |
 |`$GROUP_HOME`   | group      |        1 TB | $\infty$  |
-|`$SCRATCH`      | user       |       20 TB | time limited   |
-|`$GROUP_SCRATCH`| group      |       30 TB | time limited   |
+|`$SCRATCH`      | user       |       20 TB | [time limited][url_purge] |
+|`$GROUP_SCRATCH`| group      |       30 TB | [time limited][url_purge] |
 |`$L_SCRATCH`    | n/a        |         n/a | job       |
 |`$OAK`          | group      | amount purchased | $\infty$ |
 
@@ -148,6 +148,7 @@ Transfer][url_data_sshfs] page.
 [url_lustre]:           https://en.wikipedia.org/wiki/Lustre_(file_system)
 [url_oak]:              https://oak-storage.stanford.edu
 [url_data_sshfs]:       data-transfer#sshfs
+[url_purge]:            /docs/storage/filesystems/#expiration-policy
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
