@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, February 01 2019, we provide 489 software packages, in 7 categories, covering 56 fields of science:*
+*As of Monday, February 04 2019, we provide 489 software packages, in 7 categories, covering 56 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
