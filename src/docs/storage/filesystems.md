@@ -31,15 +31,13 @@ store your source code and build your executables there.
 We strongly recommend using `$HOME` to reference your home directory in
 scripts, rather than its explicit path.
 
-### Check quota usage
+### Checking quota usage
 
-The `df -h $HOME` command could be used to check your quota usage in `$HOME`:
-
+The `sh_quota` tool can be used to display quota usage on `$HOME`
 ```
-$ df -h $HOME
-Filesystem             Size  Used Avail Use% Mounted on
-srcf.isilon:/ifs/home   15G  3.5G   12G  24% /home/users
+$ sh_quota -f HOME
 ```
+See the [Checking Quotas][url_check_quotas] section for more details.
 
 -----
 
@@ -72,16 +70,14 @@ installations, shared data sets and scripts.
 We strongly recommend using `$GROUP_HOME` to reference your group home directory in
 scripts, rather than its explicit path.
 
-### Check quota usage
+### Checking quota usage
 
-The `df -h $GROUP_HOME` command could be used to check your group quota usage in
-`$GROUP_HOME`:
+The `sh_quota` tool can be used to display quota usage on `$GROUP_HOME`
+```
+$ sh_quota -f GROUP_HOME
+```
+See the [Checking Quotas][url_check_quotas] section for more details.
 
-```
-$ df -h $GROUP_HOME
-Filesystem           Size  Used Avail Use% Mounted on
-srcf.isilon:/ifs/PI  1.0T  646G  379G  64% /home/groups
-```
 
 -----
 
@@ -131,37 +127,19 @@ job with high data performance requirements will take advantage from using
 We strongly recommend using `$SCRATCH` to reference your scratch directory in
 scripts, rather than its explicit path.
 
-### Check quota usage
+### Checking quota usage
 
-The `lfs quota -u $USER -h $SCRATCH` command could be used to check your quota
-usage in `$SCRATCH`:
-
+The `sh_quota` tool can be used to display quota usage on `$SCRATCH`
 ```
-$ lfs quota -u $USER -h $SCRATCH
-Disk quotas for user kilian (uid 215845):
-     Filesystem    used   quota   limit   grace   files   quota   limit   grace
-/scratch/users/kilian
-                 749.4G     20T     20T       - 2028766  20000000 20000000       -
+$ sh_quota -f SCRATCH
 ```
+See the [Checking Quotas][url_check_quotas] section for more details.
 
 **NB**: user quotas are based on file ownership, meaning that all files
 belonging to a given user will count towards her user quota, no matter
 where they're located on the file system. That means that if you have files
 in `$GROUP_SCRATCH`, those will also count toward your user quota.
 
-The different values displayed in `lfs quota` are as follows:
-
-* **used**: actual usage in volume (bytes) or number of files,
-* **quota**, or *"soft quota"*: this limit can be exceeded for the duration
-  of the grace period (7 days). When the grace period expired, the soft
-  quota is considered a hard limit and can't be exceeded anymore.
-* **limit**, or *"hard quota"*: this value represents the maximum amount of
-  resources (volume or number of files) that a user is allowed to use. That
-  limit can never be exceeded.
-
-Note that to make things easier, soft and hard quotas are set to the same
-value on Sherlock. This practically disables the soft quota behavior, which has
-proven confusing.
 
 ### Expiration policy
 
@@ -257,26 +235,19 @@ storing long-term data there.
 We strongly recommend using `$GROUP_SCRATCH` to reference your group scratch
 directory in scripts, rather than its explicit path.
 
-### Check quota usage
+### Checking quota usage
 
-The `lfs quota -g $(id -gn $USER) -h $SCRATCH` command could be used to check
-your group  quota usage in `$SCRATCH`:
+The `sh_quota` tool can be used to display quota usage on `$GROUP_SCRATCH`
+```
+$ sh_quota -f GROUP_SCRATCH
+```
+See the [Checking Quotas][url_check_quotas] section for more details.
 
-```
-$ lfs quota -g $(id -gn $USER) -h $SCRATCH
-Disk quotas for group ruthm (gid 32264):
-     Filesystem    used   quota   limit   grace   files   quota   limit   grace
-/scratch/PI/ruthm
-                 13.87T     28T     30T       - 4171746  28000000 30000000       -
-```
 
 **NB**: group quotas are based on file ownership, meaning that all files
 belonging to a given group will count towards the group quota, no matter where
 they're located on the file system. That means that all the files that belong
 to each of the group members will count toward the group quota.
-
-See the [`$SCRATCH`](#scratch) section for more details about the meaning of
-the different fields in `lfs quota`.
 
 ### Expiration policy
 
@@ -348,14 +319,18 @@ node until the last job from the user terminates.
 
 !!! summary
 
-    `$OAK` is the latest *cheap'n'deep* storage offering of the SRCC. It
-    provides a long-term, affordable storage option for research data, and is
-    ideally suited to host large datasets, or curated, post-processed results
-    from job campaigns, as well as final results used for publication.
+    `$OAK` is SRCC's research data storage offering. It provides an affordable,
+    long-term storage option for labs and reserachers, and is ideally suited to
+    host large datasets, or curated, post-processed results from job campaigns,
+    as well as final results used for publication.
 
-`$OAK` is available as an option on Sherlock. For complete details and
-characteristics, including pricing, please refer to the [Oak Storage Service
-page][url_oak].
+
+!!! warning "OAK is opt-in"
+
+    `$OAK` is available as an option on Sherlock. Meaning that only members of
+    groups which have purchased storage on Oak can access this filesystem.  For
+    complete details and characteristics, including pricing, please refer to
+    the [Oak Storage Service page][url_oak].
 
 
 | Characteristics   |   |
@@ -382,27 +357,21 @@ at the end of the job campaign.
 We strongly recommend using `$OAK` to reference your group home directory in
 scripts, rather than its explicit path.
 
-### Check quota usage
+### Checking quota usage
 
-The `lfs quota -g $(id -gn $USER) -h $OAK` command could be used to check
-your group  quota usage in `$OAK`:
-
+The `sh_quota` tool can be used to display quota usage on `$OAK`
 ```
-$ lfs quota -h -g ruthm $OAK
-Disk quotas for group ruthm (gid 32264):
-     Filesystem    used   quota   limit   grace   files   quota   limit   grace
-/oak/stanford/groups/ruthm
-                  9.16T  18.63T  18.63T       -  384864  1500000 1500000       -
+$ sh_quota -f OAK
 ```
+See the [Checking Quotas][url_check_quotas] section for more details.
 
-See the [`$SCRATCH`](#scratch) section for more details about the meaning
-of the different fields in `lfs quota`.
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_oak]:              https://oak-storage.stanford.edu
 [url_oak_snap]:         https://srcc.stanford.edu/oak-rsnapshot
+[url_check_quotas]:     /docs/storage/#checking-quotas
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

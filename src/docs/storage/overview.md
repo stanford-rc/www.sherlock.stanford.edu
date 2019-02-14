@@ -36,15 +36,30 @@ and for some of them, purge policies (time-residency limits).
 |`$OAK`                    | [Lustre][url_lustre] | <b class="no">:fa-times:</b> / option | Moderate | Long term storage of research data | Based on volume[^oak_sd] |
 
 
+### Access scope
+
+| Name           |  Scope        | Access sharing level |
+| -------------- |  ------------ | ----------- |
+|`$HOME`         |  cluster      | user        |
+|`$GROUP_HOME`   |  cluster      | group       |
+|`$SCRATCH`      |  cluster      | user        |
+|`$GROUP_SCRATCH`|  cluster      | group       |
+|`$L_SCRATCH`    |  compute node | user        |
+|`$OAK`          |  cluster (optional, purchase required) | group |
+
+Group storage locations are typically shared between all the members of the
+same PI group. User locations are only accessible by the user.
+
+
 ### Quotas and limits
 
 | Name           | Quota type | Quota value | Retention |
 | -------------- | ---------- | ----------: | --------- |
-|`$HOME`         | user       |       15 GB | $\infty$  |
-|`$GROUP_HOME`   | group      |        1 TB | $\infty$  |
+|`$HOME`         | directory  |       15 GB | $\infty$  |
+|`$GROUP_HOME`   | directory  |        1 TB | $\infty$  |
 |`$SCRATCH`      | user       |       20 TB | [time limited][url_purge] |
 |`$GROUP_SCRATCH`| group      |       30 TB | [time limited][url_purge] |
-|`$L_SCRATCH`    | n/a        |         n/a | job       |
+|`$L_SCRATCH`    | n/a        |         n/a | job lifetime  |
 |`$OAK`          | group      | amount purchased | $\infty$ |
 
 Quota types:
@@ -62,23 +77,81 @@ Retention types:
 * **time limited**: files are kept for a fixed length of time after they've
   been last modified. Once the limit is reached, files expire and are
   automatically deleted.
-* **job**: files are only kept for the duration of the job and are
+* **job lifetime**: files are only kept for the duration of the job and are
   automatically purged when the job ends.
 
 
-### Access scope
+#### Checking quotas
 
-| Name           |  Scope        | Access sharing level |
-| -------------- |  ------------ | ----------- |
-|`$HOME`         |  cluster      | user        |
-|`$GROUP_HOME`      |  cluster      | group       |
-|`$SCRATCH`      |  cluster      | user        |
-|`$GROUP_SCRATCH`   |  cluster      | group       |
-|`$L_SCRATCH`    |  compute node | user        |
-|`$OAK`          |  cluster (optional, purchase required) | group |
+To check your quota usage on the different filesystems you have access to, you
+can use the `sh_quota` command:
 
-Group storage locations are typically shared between all the members of the
-same PI group. User locations are only accessible by the user.
+```
+$ sh_quota
++---------------------------------------------------------------------------+
+| Disk usage for user kilian (group: ruthm)                                 |
++---------------------------------------------------------------------------+
+|   Filesystem |  volume /   limit                  | inodes /  limit       |
++---------------------------------------------------------------------------+
+          HOME |  14.3GB /  15.0GB [|||||||||  95%] |      - /      - (  -%)
+    GROUP_HOME | 355.2GB /   1.0TB [|||        34%] |      - /      - (  -%)
+       SCRATCH |  45.3GB /  20.0TB [            0%] | 100.1M /  20.5G (  0%)
+ GROUP_SCRATCH | 729.4GB /  30.0TB [            2%] | 318.7M /  30.7G (  1%)
+           OAK |  21.4TB /  27.9TB [|||||||    76%] |   2.3G /   4.6G ( 49%)
++---------------------------------------------------------------------------+
+```
+
+Several options are provided to allow listing quotas for a specific filesystem
+only, or in the context of a different group (for users who are members of
+several PI groups). Please see the `sh_quota` usage information for details:
+
+```
+$ sh_quota -h
+sh_quota: display user and group quota information for all accessible filesystems.
+
+Usage: sh_quota [OPTIONS]
+    Optional arguments:
+        -f FILESYSTEM   only display quota information for FILESYSTEM.
+                        For instance: "-f $HOME"
+        -g GROUP        for users with multiple group memberships, display
+                        group quotas in the context of that group
+        -n              don't display headers
+        -j              JSON output (implies -n)
+```
+
+##### Examples
+For instance, to only display your quota usage on `$HOME`:
+```
+$ sh_quota -f HOME
+```
+
+If you belong to multiple groups, you can display the group quotas for your
+secondary groups with:
+```
+$ sh_quota -g <group_name>
+```
+
+And finally, for great output control, an option to display quota usage in JSON
+is provided via the `-j` option:
+
+```
+$ sh_quota -f SCRATCH -j
+{
+  "SCRATCH": {
+    "quotas": {
+      "type": "user",
+      "blocks": {
+        "usage": "47476660",
+        "limit": "21474836480"
+      },
+      "inodes": {
+        "usage": "97794",
+        "limit": "20000000"
+      }
+    }
+  }
+}
+```
 
 ## Where should I store my files?
 
