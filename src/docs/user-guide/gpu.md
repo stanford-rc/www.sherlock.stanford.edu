@@ -93,6 +93,18 @@ $ srun -p gpu --pty bash
 srun: error: Unable to allocate resources: Job violates accounting/QOS policy (job submit limit, user's size and/or time limits)
 ```
 
+### Interactive session on a GPU node
+
+As for any other compute node, you can submit an interactive job and request a
+shell on a GPU node with the following command:
+
+```
+$ srun -p gpu --gres gpu:1 --pty bash
+srun: job 38068928 queued and waiting for resources
+srun: job 38068928 has been allocated resources
+$ nvidia-smi --query-gpu=index,name --format=csv,noheader
+0, Tesla V100-SXM2-16GB
+```
 
 
 ### GPU types
