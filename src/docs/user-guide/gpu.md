@@ -93,7 +93,7 @@ $ srun -p gpu --pty bash
 srun: error: Unable to allocate resources: Job violates accounting/QOS policy (job submit limit, user's size and/or time limits)
 ```
 
-### Interactive session on a GPU node
+### Interactive session
 
 As for any other compute node, you can submit an interactive job and request a
 shell on a GPU node with the following command:
