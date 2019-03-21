@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Monday, March 18 2019, we provide 495 software packages, in 7 categories, covering 56 fields of science:*
+*As of Thursday, March 21 2019, we provide 496 software packages, in 7 categories, covering 57 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -9,7 +9,7 @@
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, materials science, photonics</small>
 * [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>cheminformatics, computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
-* [`devel`](#devel) <small>build, compiler, data, data analytics, framework, language, lib, mpi, networking, parser</small>
+* [`devel`](#devel) <small>build, compiler, data, data analytics, debug, framework, language, lib, mpi, networking, parser</small>
 
 
 !!! warning "Licensed software"
@@ -351,6 +351,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **data analytics** | <a id="hadoop" class="soft_anch">`hadoop`</a> | -&nbsp;`3.1.0` | [Website](https://hadoop.apache.org/) | The Apache Hadoop software library is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. 
 **data analytics** | <a id="py-sparkhpc" class="soft_anch">`py-sparkhpc`</a> | -&nbsp;`0.3` | [Website](https://sparkhpc.readthedocs.io) | Launching and controlling spark on HPC clusters  
 **data analytics** | <a id="spark" class="soft_anch">`spark`</a> | -&nbsp;`2.3.0` | [Website](https://spark.apache.org) | Apache Spark™ is a unified analytics engine for large-scale data processing. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/spark)
+**debug** | <a id="valgrind" class="soft_anch">`valgrind`</a> | -&nbsp;`3.14.0` | [Website](http://valgrind.org/) | Valgrind is an instrumentation framework for building dynamic analysis tools. 
 **framework** | <a id="dotnet" class="soft_anch">`dotnet`</a> | -&nbsp;`2.1.500` | [Website](https://dotnet.microsoft.com/) | .NET is a free, cross-platform, open source developer platform for building many different types of applications. 
 **language** | <a id="cuda" class="soft_anch">`cuda`</a> | -&nbsp;`8.0.61`<br/>-&nbsp;`9.1.85`<br/>-&nbsp;`9.2.148`<br/>-&nbsp;`10.0.130`<br/>-&nbsp;`10.1.105`<br/>-&nbsp;`9.0.176` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
 **language** | <a id="go" class="soft_anch">`go`</a> | -&nbsp;`1.9` | [Website](http://golang.org) | Go is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
