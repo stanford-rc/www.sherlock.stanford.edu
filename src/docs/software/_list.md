@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, March 22 2019, we provide 502 software packages, in 7 categories, covering 57 fields of science:*
+*As of Friday, March 22 2019, we provide 503 software packages, in 7 categories, covering 57 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -275,6 +275,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **genomics** | <a id="mixcr" class="soft_anch">`mixcr`</a> | -&nbsp;`2.1.12` | [Website](https://milaboratory.com/software/mixcr/) | MiXCR is a universal framework that processes big immunome data from raw sequences to quantitated clonotypes. 
 **genomics** | <a id="ncbi-blast+" class="soft_anch">`ncbi-blast+`</a> | -&nbsp;`2.6.0`<br/>-&nbsp;`2.7.1` | [Website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic Local Alignment Search Tool), an algorithm for comparing primary biological sequence information. 
 **genomics** | <a id="plink" class="soft_anch">`plink`</a> | -&nbsp;`1.07`<br/>-&nbsp;`1.90b5.3`<br/>-&nbsp;`2.0a1`<br/>-&nbsp;`2.0a2` | [Website](http://zzz.bwh.harvard.edu/plink/) | PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. 
+**genomics** | <a id="py-busco" class="soft_anch">`py-busco`</a> | -&nbsp;`3.0.2_py27` | [Website](https://busco.ezlab.org/) | Assessing genome assembly and annotation completeness with Benchmarking Universal Single-Copy Orthologs (BUSCO). 
 **genomics** | <a id="py-bx-python" class="soft_anch">`py-bx-python`</a> | -&nbsp;`0.8.1_py27` | [Website](https://github.com/bxlab/bx-python) | Tools for manipulating biological data, particularly multiple sequence alignments. 
 **genomics** | <a id="py-cutadapt" class="soft_anch">`py-cutadapt`</a> | -&nbsp;`1.18_py36`<br/>-&nbsp;`1.18_py27` | [Website](https://cutadapt.readthedocs.io) | Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads. 
 **genomics** | <a id="py-fithic" class="soft_anch">`py-fithic`</a> | -&nbsp;`1.1.3_py27` | [Website](https://github.com/ay-lab/fithic) | Fit-Hi-C is a tool for assigning statistical confidence estimates to chromosomal contact maps produced by genome architecture assays. 
