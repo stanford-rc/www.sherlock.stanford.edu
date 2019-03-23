@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, March 22 2019, we provide 500 software packages, in 7 categories, covering 57 fields of science:*
+*As of Friday, March 22 2019, we provide 502 software packages, in 7 categories, covering 57 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -254,6 +254,8 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **cryo-em** | <a id="eman2" class="soft_anch">`eman2`</a> | -&nbsp;`2.2` | [Website](http://blake.bcm.edu/emanwiki/EMAN2) | EMAN2 is a broadly based greyscale scientific image processing suite with a primary focus on processing data from transmission electron microscopes. 
 **cryo-em** | <a id="relion" class="soft_anch">`relion`</a> | -&nbsp;`2.0.3`<br/>-&nbsp;`2.1` | [Website](http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page) | RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a stand-alone computer program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class averages in electron cryo-microscopy (cryo-EM). 
 **genomics** | <a id="angsd" class="soft_anch">`angsd`</a> | -&nbsp;`0.919` | [Website](http://www.popgen.dk/angsd/index.php/ANGSD) | ANGSD is a software for analyzing next generation sequencing data. 
+**genomics** | <a id="augustus" class="soft_anch">`augustus`</a> | -&nbsp;`3.3.2` | [Website](https://github.com/Gaius-Augustus/Augustus) | AUGUSTUS is a program that predicts genes in eukaryotic genomic sequences. 
+**genomics** | <a id="bamtools" class="soft_anch">`bamtools`</a> | -&nbsp;`2.5.1` | [Website](https://github.com/pezmaster31/bamtools) | BamTools is a project that provides both a C++ API and a command-line toolkit for reading, writing, and manipulating BAM (genome alignment) files. 
 **genomics** | <a id="bcftools" class="soft_anch">`bcftools`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/bcftools) | BCFtools is a program for variant calling and manipulating files in the Variant Call Format (VCF) and its binary counterpart BCF. 
 **genomics** | <a id="bcl2fastq" class="soft_anch">`bcl2fastq`</a> | -&nbsp;`2.20` | [Website](https://support.illumina.com/downloads/bcl2fastq-conversion-software-v2-20.html) | The bcl2fastq2 conversion software can be used to convert BCL files from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems. 
 **genomics** | <a id="bedtools" class="soft_anch">`bedtools`</a> | -&nbsp;`2.27.1` | [Website](https://bedtools.readthedocs.io) | The bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. 
