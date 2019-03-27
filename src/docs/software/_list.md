@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, March 27 2019, we provide 505 software packages, in 7 categories, covering 57 fields of science:*
+*As of Wednesday, March 27 2019, we provide 504 software packages, in 7 categories, covering 57 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -150,7 +150,6 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **media** | <a id="ffmpeg" class="soft_anch">`ffmpeg`</a> | -&nbsp;`4.0` | [Website](https://www.ffmpeg.org) | FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. 
 **media** | <a id="libsndfile" class="soft_anch">`libsndfile`</a> | -&nbsp;`1.0.28` | [Website](http://www.mega-nerd.com/libsndfile) | Libsndfile is a C library for reading and writing files containing sampled sound (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface. 
 **performance** | <a id="likwid" class="soft_anch">`likwid`</a> | -&nbsp;`4.3.2` | [Website](https://github.com/RRZE-HPC/likwid) | Likwid is a simple toolsuite of command line applications for performance oriented programmers. 
-**resource monitoring** | <a id="ngputop" class="soft_anch">`ngputop`</a> | -&nbsp;`0.1.4` | [Website](https://github.com/Syllo/nvtop) | Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA GPUs. 
 **resource monitoring** | <a id="nvtop" class="soft_anch">`nvtop`</a> | -&nbsp;`0.2.2`<br/>-&nbsp;`1.0.0` | [Website](https://github.com/Syllo/nvtop) | Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA GPUs. 
 **resource monitoring** | <a id="remora" class="soft_anch">`remora`</a> | -&nbsp;`1.8.2` | [Website](https://github.com/TACC/remora) | Remora is a tool to monitor runtime resource utilization. 
 **scm** | <a id="git" class="soft_anch">`git`</a> | -&nbsp;`2.12.2` | [Website](http://git-scm.com) | Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. 
