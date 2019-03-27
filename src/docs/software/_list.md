@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, March 22 2019, we provide 503 software packages, in 7 categories, covering 57 fields of science:*
+*As of Wednesday, March 27 2019, we provide 505 software packages, in 7 categories, covering 57 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -111,6 +111,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="hunspell" class="soft_anch">`hunspell`</a> | -&nbsp;`1.6.2` | [Website](https://hunspell.github.io/) | Hunspell is a spell checker. 
 **libs** | <a id="hyphen" class="soft_anch">`hyphen`</a> | -&nbsp;`2.8.8` | [Website](https://github.com/hunspell/hyphen) | Hyphen is a hyphenation library to use converted TeX hyphenation patterns. 
 **libs** | <a id="icu" class="soft_anch">`icu`</a> | -&nbsp;`59.1` | [Website](http://site.icu-project.org) | ICU is a set of C/C++ and Java libraries providing Unicode and Globalization support for software applications. 
+**libs** | <a id="libaio" class="soft_anch">`libaio`</a> | -&nbsp;`0.3.111` | [Website](https://pagure.io/libaio) | libaio provides the Linux-native API for async I/O. 
 **libs** | <a id="libepoxy" class="soft_anch">`libepoxy`</a> | -&nbsp;`1.4.1` | [Website](https://github.com/anholt/libepoxy) | Epoxy is a library for handling OpenGL function pointer management for you. 
 **libs** | <a id="libexif" class="soft_anch">`libexif`</a> | -&nbsp;`0.6.21` | [Website](https://github.com/libexif/libexif) | A library for parsing, editing, and saving EXIF data. 
 **libs** | <a id="libffi" class="soft_anch">`libffi`</a> | -&nbsp;`3.2.1` | [Website](http://sourceware.org/libffi) | libffi is a portable Foreign Function Interface library. 
@@ -334,6 +335,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 :----- | :----------- | :------ | :--- | :----------
 **build** | <a id="bazel" class="soft_anch">`bazel`</a> | -&nbsp;`0.16.1` | [Website](https://bazel.build/) | Bazel is a fast, scalable, multi-language and extensible build system. 
 **build** | <a id="cmake" class="soft_anch">`cmake`</a> | -&nbsp;`3.8.1`<br/>-&nbsp;`3.11.1`<br/>-&nbsp;`3.13.1` | [Website](https://www.cmake.org) | CMake is an extensible, open-source system that manages the build process in an operating system and in a compiler-independent manner. 
+**build** | <a id="kerl" class="soft_anch">`kerl`</a> | -&nbsp;`1.8.5` | [Website](https://github.com/kerl/kerl) | Kerl is a tool to easily build and install Erlang/OTP instances. 
 **build** | <a id="scons" class="soft_anch">`scons`</a> | -&nbsp;`2.5.1_py36`<br/>-&nbsp;`2.5.1_py27` | [Website](http://www.scons.org) | SCons is an Open Source software construction tool. 
 **compiler** | <a id="gcc" class="soft_anch">`gcc`</a> | -&nbsp;`7.1.0`<br/>-&nbsp;`7.3.0`<br/>-&nbsp;`8.1.0`<br/>-&nbsp;`6.3.0` | [Website](http://gcc.gnu.org) | The GNU Compiler Collection includes front ends for C, C++, Fortran, Java, and Go, as well as libraries for these languages (libstdc++, libgcj,...). 
 **compiler** | <a id="icc" class="soft_anch">`icc`</a> | -&nbsp;`2017.u2`<br/>-&nbsp;`2018.u1`<br/>-&nbsp;`2018`<br/>-&nbsp;`2019` | [Website](https://software.intel.com/en-us/c-compilers) | Intel C++ Compiler, also known as icc or icl, is a group of C and C++ compilers from Intel 
