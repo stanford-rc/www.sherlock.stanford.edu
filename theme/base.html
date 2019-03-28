@@ -41,7 +41,7 @@
         <meta name="lang:{{ key }}" content="{{ lang.t(key) }}">
       {% endfor %}
       <link rel="shortcut icon" href="{{ config.theme.favicon | url }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-4.0.2">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-4.1.1">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta and page.meta.title %}
@@ -53,7 +53,7 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/application.982221ab.css' | url }}">
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/application.3020aac5.css' | url }}">
       {% if palette.primary or palette.accent %}
         <link rel="stylesheet" href="{{ 'assets/stylesheets/application-palette.fe74ad26.css' | url }}">
       {% endif %}
@@ -66,7 +66,7 @@
       {% endif %}
     {% endblock %}
     {% block libs %}
-      <script src="{{ 'assets/javascripts/modernizr.1f0bcf2b.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/modernizr.01ccdecf.js' | url }}"></script>
     {% endblock %}
     {% block fonts %}
       {% if font != false %}
@@ -190,7 +190,7 @@
       {% endblock %}
     </div>
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/application.b2594303.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/application.ecf9e528.js' | url }}"></script>
       {% if lang.t("search.language") != "en" %}
         {% set languages = lang.t("search.language").split(",") %}
         {% if languages | length and languages[0] != "" %}
@@ -198,10 +198,10 @@
           <script src="{{ (path ~ 'lunr.stemmer.support.js') | url }}"></script>
           {% for language in languages | map("trim") %}
             {% if language != "en" %}
-              {% if language == "jp" %}
+              {% if language == "ja" %}
                 <script src="{{ (path ~ 'tinyseg.js') | url }}"></script>
               {% endif %}
-              {% if language in ("da", "de", "du", "es", "fi", "fr", "hu", "it", "ja", "jp", "nl", "no", "pt", "ro", "ru", "sv", "th", "tr") %}
+              {% if language in ("da", "de", "es", "fi", "fr", "hu", "it", "ja", "nl", "no", "pt", "ro", "ru", "sv", "th", "tr") %}
                 <script src="{{ (path ~ 'lunr.' ~ language ~ '.js') | url }}"></script>
               {% endif %}
             {% endif %}
