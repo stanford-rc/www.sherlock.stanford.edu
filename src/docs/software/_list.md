@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, March 27 2019, we provide 504 software packages, in 7 categories, covering 57 fields of science:*
+*As of Thursday, March 28 2019, we provide 505 software packages, in 7 categories, covering 58 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -9,7 +9,7 @@
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, materials science, photonics</small>
 * [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>cheminformatics, computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
-* [`devel`](#devel) <small>build, compiler, data, data analytics, debug, framework, language, lib, mpi, networking, parser</small>
+* [`devel`](#devel) <small>build, compiler, data, data analytics, debug, framework, language, lib, mpi, networking, parser, sdk</small>
 
 
 !!! warning "Licensed software"
@@ -404,3 +404,4 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **networking** | <a id="libfabric" class="soft_anch">`libfabric`</a> | -&nbsp;`1.6.0`<br/>-&nbsp;`1.6.2` | [Website](https://ofiwg.github.io/libfabric/) | The Open Fabrics Interfaces (OFI) is a framework focused on exporting fabric communication services to applications. Libfabric is the library that defines and exports the user-space API of OFI. 
 **networking** | <a id="ucx" class="soft_anch">`ucx`</a> | -&nbsp;`1.2.1`<br/>-&nbsp;`1.4.0`<br/>-&nbsp;`1.3.1` | [Website](http://www.openucx.org) | UCX is a communication library implementing high-performance messaging for MPI/PGAS frameworks. 
 **parser** | <a id="xerces-c" class="soft_anch">`xerces-c`</a> | -&nbsp;`3.2.1` | [Website](https://xerces.apache.org/xerces-c/index.html) | Xerces-C++ is a validating XML parser written in a portable subset of C++. 
+**sdk** | <a id="google-cloud-sdk" class="soft_anch">`google-cloud-sdk`</a> | -&nbsp;`240.0.0` | [Website](https://cloud.google.com/sdk) | Command-line interface for Google Cloud Platform products and services. 
