@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Thursday, March 28 2019, we provide 505 software packages, in 7 categories, covering 58 fields of science:*
+*As of Tuesday, April 09 2019, we provide 506 software packages, in 7 categories, covering 58 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -74,6 +74,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **database** | <a id="mariadb" class="soft_anch">`mariadb`</a> | -&nbsp;`10.2.11` | [Website](https://www.mariadb.org) | MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/mariadb)
 **database** | <a id="postgresql" class="soft_anch">`postgresql`</a> | -&nbsp;`10.5` | [Website](https://postgresql.org) | PostgreSQL is a powerful, open source object-relational database system with a strong focus on reliability, feature robustness, and performance. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/postgresql)
 **database** | <a id="sqlite" class="soft_anch">`sqlite`</a> | -&nbsp;`3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
+**file management** | <a id="duc" class="soft_anch">`duc`</a> | -&nbsp;`1.4.4` | [Website](https://duc.zevv.nl) | Duc is a collection of tools for indexing, inspecting and visualizing disk usage. 
 **file management** | <a id="fpart" class="soft_anch">`fpart`</a> | -&nbsp;`0.9.3` | [Website](https://github.com/martymac/fpart) | fpart sorts files and packs them into partitions. 
 **file management** | <a id="py-pcircle" class="soft_anch">`py-pcircle`</a> | -&nbsp;`0.17_py27` | [Website](https://github.com/olcf/pcircle) | pcircle contains a suite of file system tools developed at OLCF to take advantage of highly scalable parallel file system such as Lustre. 
 **file transfer** | <a id="gdrive" class="soft_anch">`gdrive`</a> | -&nbsp;`2.1.0` | [Website](https://github.com/prasmussen/gdrive) | gdrive is a command line utility for interacting with Google Drive. 
