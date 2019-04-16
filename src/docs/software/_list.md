@@ -1,13 +1,13 @@
 
 ## Categories
 
-*As of Tuesday, April 09 2019, we provide 506 software packages, in 7 categories, covering 58 fields of science:*
+*As of Monday, April 15 2019, we provide 509 software packages, in 7 categories, covering 59 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, materials science, photonics</small>
-* [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, phylogenetics</small>
+* [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, pathology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>cheminformatics, computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
 * [`devel`](#devel) <small>build, compiler, data, data analytics, debug, framework, language, lib, mpi, networking, parser, sdk</small>
 
@@ -138,6 +138,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="mesa" class="soft_anch">`mesa`</a> | -&nbsp;`17.1.6` | [Website](https://www.mesa3d.org) | Mesa is an open-source implementation of the OpenGL, Vulkan and other specifications. 
 **libs** | <a id="ncurses" class="soft_anch">`ncurses`</a> | -&nbsp;`6.0` | [Website](https://www.gnu.org/software/ncurses) | The ncurses (new curses) library is a free software emulation of curses in System V Release 4.0 (SVr4), and more. 
 **libs** | <a id="nettle" class="soft_anch">`nettle`</a> | -&nbsp;`3.3` | [Website](http://www.lysator.liu.se/~nisse/nettle/) | Nettle is a cryptographic library that is designed to fit easily in more or less any context. 
+**libs** | <a id="openjpeg" class="soft_anch">`openjpeg`</a> | -&nbsp;`2.3.1` | [Website](https://github.com/uclouvain/openjpeg) | OpenJPEG is an open-source JPEG 2000 codec written in C language. 
 **libs** | <a id="orbit" class="soft_anch">`orbit`</a> | -&nbsp;`2.14.19` | [Website](https://projects.gnome.org/ORBit2) | ORBit2 is a CORBA 2.4-compliant Object Request Broker (ORB) featuring mature C, C++ and Python bindings. 
 **libs** | <a id="pango" class="soft_anch">`pango`</a> | -&nbsp;`1.40.10` | [Website](http://www.pango.org) | Pango is a library for laying out and rendering of text, with an emphasis on internationalization. 
 **libs** | <a id="pcre" class="soft_anch">`pcre`</a> | -&nbsp;`8.40` | [Website](http://www.pcre.org/) | The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5. 
@@ -300,10 +301,12 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **neurology** | <a id="fsl" class="soft_anch">`fsl`</a> | -&nbsp;`5.0.10` | [Website](https://fsl.fmrib.ox.ac.uk/fsl) | FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. 
 **neurology** | <a id="mricron" class="soft_anch">`mricron`</a> | -&nbsp;`20160502` | [Website](https://www.nitrc.org/projects/mricron) | MRIcron is a cross-platform NIfTI format image viewer. 
 **neurology** | <a id="mrtrix" class="soft_anch">`mrtrix`</a> | -&nbsp;`0.3.16` | [Website](http://www.mrtrix.org) | MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses. 
+**neurology** | <a id="py-caiman" class="soft_anch">`py-caiman`</a> | -&nbsp;`1.4.4_py36` | [Website](https://github.com/flatironinstitute/CaImAn/) | A Python toolbox for large scale Calcium Imaging data Analysis and behavioral analysis. 
 **neurology** | <a id="py-mdt" class="soft_anch">`py-mdt`</a> | -&nbsp;`0.10.9_py36` | [Website](https://github.com/cbclab/MDT) | The Maastricht Diffusion Toolbox, MDT, is a framework and library for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging (MRI) modeling. 
 **neurology** | <a id="py-nipype" class="soft_anch">`py-nipype`</a> | -&nbsp;`1.1.3_py27`<br/>-&nbsp;`1.1.3_py36` | [Website](https://nipype.readthedocs.io/en/latest/index.html) | Nipype is a Python project that provides a uniform interface to existing neuroimaging software and facilitates interaction between these packages within a single workflow. 
 **neurology** | <a id="spm" class="soft_anch">`spm`</a> | -&nbsp;`12` | [Website](http://www.fil.ion.ucl.ac.uk/spm/) | The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. 
 **neurology** | <a id="workbench" class="soft_anch">`workbench`</a> | -&nbsp;`1.3.1` | [Website](https://www.humanconnectome.org/software/connectome-workbench) | Connectome Workbench is an open source, freely available visualization and discovery tool used to map neuroimaging data, especially data generated by the Human Connectome Project. 
+**pathology** | <a id="openslide" class="soft_anch">`openslide`</a> | -&nbsp;`3.4.1` | [Website](https://openslide.org/) | OpenSlide is a C library that provides a simple interface to read whole-slide images (also known as virtual slides). 
 **phylogenetics** | <a id="py-ete" class="soft_anch">`py-ete`</a> | -&nbsp;`3.0.0_py27` | [Website](http://etetoolkit.org/) | A Python framework for the analysis and visualization of trees. 
 
 ### Chemistry
