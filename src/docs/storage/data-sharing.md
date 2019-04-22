@@ -243,7 +243,34 @@ manual page at [nfs4_acl(5)][url_nfs4_acl_man].
 
 ## Sharing data outside of Sherlock
 
---8<--- "_wip.md"
+If you'd like to share data stored on Sherlock with external collaborators,
+there are two possiblities:
+
+  1. [sponsor a SUNet ID][url_susponsorship][^sunet_level] for these
+     collaborators, and [contact us][url_contact] us to create a account for
+     them on Sherlock.  This will grant them access to your resources on
+     Sherlock (compute as well as storage) and give them access to your group
+     shared files, like any other user in your group.
+
+
+  2. if you don't want to grant full access to your Sherlock resources to your
+     external collaborators, you can use the [Globus data
+     sharing][url_globus_sharing] feature. This won't require your
+     collaborators to get Stanford accounts, and will allow easy sharing of
+     the datasets of your choice.
+
+    !!! warning "Globus Sharing is only available through the Oak endpoint"
+
+        Globus Sharing is only available on [`$OAK`][url_oak], using the [Oak
+        Globus Endpoint][url_oak_endpoint] (`srcc#oak`).
+
+     For complete details about sharing data wih Globus, please see the Globus
+     documentation at https://docs.globus.org/how-to/share-files/
+
+
+
+
+
 
 [comment]: #  ( External collaborators, globus)
 
@@ -254,7 +281,17 @@ manual page at [nfs4_acl(5)][url_nfs4_acl_man].
 [url_unix_perms]:       https://en.wikipedia.org/wiki/File_system_permissions
 [url_contact]:          mailto:srcc-support@stanford.edu
 [url_nfs4_acl_man]:     http://linux.die.net/man/5/nfs4_acl
+[url_susponsorship]:    https://uit.stanford.edu/service/sponsorship
+[url_sunetids]:         https://uit.stanford.edu/service/accounts/sunetids#services
+[url_globus_sharing]:   https://www.globus.org/data-sharing
+[url_oak]:              /storage/filesystems/#oak
+[url_oak_endpoint]:     https://srcc.stanford.edu/private/oak-gateways
 
 
 [comment]: #  (footnotes -----------------------------------------------------)
+
+[^sunet_level]:     a base-level SUNet ID (free) is sufficient to get an
+                    account on Sherlock. For more details about SUNet ID levels
+                    and associated services, please see the [Stanford UIT SUNet
+                    IDs page][url_sunetids].
 
