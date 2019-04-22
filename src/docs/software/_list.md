@@ -1,13 +1,13 @@
 
 ## Categories
 
-*As of Thursday, March 28 2019, we provide 505 software packages, in 7 categories, covering 58 fields of science:*
+*As of Monday, April 22 2019, we provide 512 software packages, in 7 categories, covering 59 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, materials science, photonics</small>
-* [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, phylogenetics</small>
+* [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, pathology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>cheminformatics, computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
 * [`devel`](#devel) <small>build, compiler, data, data analytics, debug, framework, language, lib, mpi, networking, parser, sdk</small>
 
@@ -74,6 +74,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **database** | <a id="mariadb" class="soft_anch">`mariadb`</a> | -&nbsp;`10.2.11` | [Website](https://www.mariadb.org) | MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/mariadb)
 **database** | <a id="postgresql" class="soft_anch">`postgresql`</a> | -&nbsp;`10.5` | [Website](https://postgresql.org) | PostgreSQL is a powerful, open source object-relational database system with a strong focus on reliability, feature robustness, and performance. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/postgresql)
 **database** | <a id="sqlite" class="soft_anch">`sqlite`</a> | -&nbsp;`3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
+**file management** | <a id="duc" class="soft_anch">`duc`</a> | -&nbsp;`1.4.4` | [Website](https://duc.zevv.nl) | Duc is a collection of tools for indexing, inspecting and visualizing disk usage. 
 **file management** | <a id="fpart" class="soft_anch">`fpart`</a> | -&nbsp;`0.9.3` | [Website](https://github.com/martymac/fpart) | fpart sorts files and packs them into partitions. 
 **file management** | <a id="py-pcircle" class="soft_anch">`py-pcircle`</a> | -&nbsp;`0.17_py27` | [Website](https://github.com/olcf/pcircle) | pcircle contains a suite of file system tools developed at OLCF to take advantage of highly scalable parallel file system such as Lustre. 
 **file transfer** | <a id="gdrive" class="soft_anch">`gdrive`</a> | -&nbsp;`2.1.0` | [Website](https://github.com/prasmussen/gdrive) | gdrive is a command line utility for interacting with Google Drive. 
@@ -137,6 +138,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="mesa" class="soft_anch">`mesa`</a> | -&nbsp;`17.1.6` | [Website](https://www.mesa3d.org) | Mesa is an open-source implementation of the OpenGL, Vulkan and other specifications. 
 **libs** | <a id="ncurses" class="soft_anch">`ncurses`</a> | -&nbsp;`6.0` | [Website](https://www.gnu.org/software/ncurses) | The ncurses (new curses) library is a free software emulation of curses in System V Release 4.0 (SVr4), and more. 
 **libs** | <a id="nettle" class="soft_anch">`nettle`</a> | -&nbsp;`3.3` | [Website](http://www.lysator.liu.se/~nisse/nettle/) | Nettle is a cryptographic library that is designed to fit easily in more or less any context. 
+**libs** | <a id="openjpeg" class="soft_anch">`openjpeg`</a> | -&nbsp;`2.3.1` | [Website](https://github.com/uclouvain/openjpeg) | OpenJPEG is an open-source JPEG 2000 codec written in C language. 
 **libs** | <a id="orbit" class="soft_anch">`orbit`</a> | -&nbsp;`2.14.19` | [Website](https://projects.gnome.org/ORBit2) | ORBit2 is a CORBA 2.4-compliant Object Request Broker (ORB) featuring mature C, C++ and Python bindings. 
 **libs** | <a id="pango" class="soft_anch">`pango`</a> | -&nbsp;`1.40.10` | [Website](http://www.pango.org) | Pango is a library for laying out and rendering of text, with an emphasis on internationalization. 
 **libs** | <a id="pcre" class="soft_anch">`pcre`</a> | -&nbsp;`8.40` | [Website](http://www.pcre.org/) | The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5. 
@@ -188,7 +190,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **deep learning** | <a id="torch" class="soft_anch">`torch`</a> | -&nbsp;`20180202` | [Website](http://torch.ch) | Torch is a scientific computing framework with wide support for machine learning algorithms that puts GPUs first. 
 **linear algebra** | <a id="armadillo" class="soft_anch">`armadillo`</a> | -&nbsp;`8.200.1` | [Website](http://arma.sourceforge.net/) | Armadillo is a high quality linear algebra library (matrix maths) for the C++ language, aiming towards a good balance between speed and ease of use. 
 **machine learning** | <a id="py-scikit-learn" class="soft_anch">`py-scikit-learn`</a> | -&nbsp;`0.19.1_py36`<br/>-&nbsp;`0.19.1_py27` | [Website](http://scikit-learn.org) | Scikit-learn is a free software machine learning library for the Python programming language. 
-**numerical analysis** | <a id="matlab" class="soft_anch">`matlab`</a>^<b class="lic"></b>^ | -&nbsp;`R2017a`<br/>-&nbsp;`R2017b`<br/>-&nbsp;`R2018a` | [Website](https://www.mathworks.com/products/matlab.html) | MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment and fourth-generation programming language. 
+**numerical analysis** | <a id="matlab" class="soft_anch">`matlab`</a>^<b class="lic"></b>^ | -&nbsp;`R2017a`<br/>-&nbsp;`R2017b`<br/>-&nbsp;`R2018a`<br/>-&nbsp;`R2019a` | [Website](https://www.mathworks.com/products/matlab.html) | MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment and fourth-generation programming language. 
 **numerical analysis** | <a id="octave" class="soft_anch">`octave`</a> | -&nbsp;`4.2.1` | [Website](https://www.gnu.org/software/octave/) | GNU Octave is a high-level language primarily intended for numerical computations. 
 **numerical library** | <a id="arpack" class="soft_anch">`arpack`</a> | -&nbsp;`3.5.0` | [Website](https://github.com/opencollab/arpack-ng) | Collection of Fortran77 subroutines designed to solve large scale eigenvalue problems. 
 **numerical library** | <a id="fftw" class="soft_anch">`fftw`</a> | -&nbsp;`3.3.6` | [Website](http://www.fftw.org/) | The Fastest Fourier Transform in the West (FFTW) is a software library for computing discrete Fourier transforms (DFTs). 
@@ -299,10 +301,13 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **neurology** | <a id="fsl" class="soft_anch">`fsl`</a> | -&nbsp;`5.0.10` | [Website](https://fsl.fmrib.ox.ac.uk/fsl) | FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. 
 **neurology** | <a id="mricron" class="soft_anch">`mricron`</a> | -&nbsp;`20160502` | [Website](https://www.nitrc.org/projects/mricron) | MRIcron is a cross-platform NIfTI format image viewer. 
 **neurology** | <a id="mrtrix" class="soft_anch">`mrtrix`</a> | -&nbsp;`0.3.16` | [Website](http://www.mrtrix.org) | MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses. 
+**neurology** | <a id="py-caiman" class="soft_anch">`py-caiman`</a> | -&nbsp;`1.4.4_py36` | [Website](https://github.com/flatironinstitute/CaImAn/) | A Python toolbox for large scale Calcium Imaging data Analysis and behavioral analysis. 
 **neurology** | <a id="py-mdt" class="soft_anch">`py-mdt`</a> | -&nbsp;`0.10.9_py36` | [Website](https://github.com/cbclab/MDT) | The Maastricht Diffusion Toolbox, MDT, is a framework and library for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging (MRI) modeling. 
 **neurology** | <a id="py-nipype" class="soft_anch">`py-nipype`</a> | -&nbsp;`1.1.3_py27`<br/>-&nbsp;`1.1.3_py36` | [Website](https://nipype.readthedocs.io/en/latest/index.html) | Nipype is a Python project that provides a uniform interface to existing neuroimaging software and facilitates interaction between these packages within a single workflow. 
 **neurology** | <a id="spm" class="soft_anch">`spm`</a> | -&nbsp;`12` | [Website](http://www.fil.ion.ucl.ac.uk/spm/) | The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. 
 **neurology** | <a id="workbench" class="soft_anch">`workbench`</a> | -&nbsp;`1.3.1` | [Website](https://www.humanconnectome.org/software/connectome-workbench) | Connectome Workbench is an open source, freely available visualization and discovery tool used to map neuroimaging data, especially data generated by the Human Connectome Project. 
+**pathology** | <a id="openslide" class="soft_anch">`openslide`</a> | -&nbsp;`3.4.1` | [Website](https://openslide.org/) | OpenSlide is a C library that provides a simple interface to read whole-slide images (also known as virtual slides). 
+**pathology** | <a id="py-openslide-python" class="soft_anch">`py-openslide-python`</a> | -&nbsp;`1.1.1_py36`<br/>-&nbsp;`1.1.1_py27` | [Website](https://openslide.org/api/python/) | OpenSlide Python is a Python interface to the OpenSlide library. 
 **phylogenetics** | <a id="py-ete" class="soft_anch">`py-ete`</a> | -&nbsp;`3.0.0_py27` | [Website](http://etetoolkit.org/) | A Python framework for the analysis and visualization of trees. 
 
 ### Chemistry
