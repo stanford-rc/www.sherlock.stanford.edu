@@ -273,16 +273,16 @@ Globus.org server. Please see the [Globus CLI documentation][url_globus_cli] for
 more details.
 
 
-## Data Transfer Node (DTN)
+## Data Transfer Nodes (DTNs)
 
-A dedicated Data Transfer Node is available on Sherlock, to provide exclusive
-resources for large-scale data transfers.
+A pool of dedicated Data Transfer Nodes is available on Sherlock, to provide
+exclusive resources for large-scale data transfers.
 
-The main benefit of using it is that
-transfer tasks can't be disrupted by other users interactive tasks or
-filesystem access and I/O-related workloads on the login nodes.
+The main benefit of using it is that transfer tasks can't be disrupted by other
+users interactive tasks or filesystem access and I/O-related workloads on the
+login nodes.
 
-By using the Sherlock DTN, you'll make sure that your data flows will go
+By using the Sherlock DTNs, you'll make sure that your data flows will go
 through a computer whose sole purpose is to move data around.
 
 It supports:
@@ -293,7 +293,7 @@ It supports:
 * [Globus](#globus)
 
 
-To transfer files via the DTN, simply use `dtn.sherlock.stanford.edu` as a
+To transfer files via the DTNs, simply use `dtn.sherlock.stanford.edu` as a
 remote server hostname. For instance:
 
 ```
@@ -302,12 +302,12 @@ $ scp foo <sunetid>@dtn.sherlock.stanford.edu:~/foo
 
 !!! Warning "No shell"
 
-    The DTN doesn't provide any interactive shell, so connecting via SSH
+    The DTNs don't provide any interactive shell, so connecting via SSH
     directly won't work. It will only accept `scp`, `sftp`, `rsync` of `bbcp`
     connections.
 
 One important difference to keep in mind when transferring files through the
-Sherlock DTN is that the default destination path for files, unless specified,
+Sherlock DTNs is that the default destination path for files, unless specified,
 is the user `$SCRATCH` directory, not `$HOME`.
 
 That means that the following command:
@@ -316,7 +316,7 @@ $ scp foo <sunetid>@dtn.sherlock.stanford.edu:
 ```
 will create the `foo` file in  `$SCRATCH/foo`, and not in `$HOME/foo`.
 
-You can transfer file to your `$HOME` directory via the DTN by specifying the
+You can transfer file to your `$HOME` directory via the DTNs by specifying the
 full path as the destination:
 ```
 $ scp foo <sunetid>@dtn.sherlock.stanford.edu:$HOME/foo
