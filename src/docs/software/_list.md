@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, April 19 2019, we provide 511 software packages, in 7 categories, covering 59 fields of science:*
+*As of Monday, April 22 2019, we provide 512 software packages, in 7 categories, covering 59 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -190,7 +190,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **deep learning** | <a id="torch" class="soft_anch">`torch`</a> | -&nbsp;`20180202` | [Website](http://torch.ch) | Torch is a scientific computing framework with wide support for machine learning algorithms that puts GPUs first. 
 **linear algebra** | <a id="armadillo" class="soft_anch">`armadillo`</a> | -&nbsp;`8.200.1` | [Website](http://arma.sourceforge.net/) | Armadillo is a high quality linear algebra library (matrix maths) for the C++ language, aiming towards a good balance between speed and ease of use. 
 **machine learning** | <a id="py-scikit-learn" class="soft_anch">`py-scikit-learn`</a> | -&nbsp;`0.19.1_py36`<br/>-&nbsp;`0.19.1_py27` | [Website](http://scikit-learn.org) | Scikit-learn is a free software machine learning library for the Python programming language. 
-**numerical analysis** | <a id="matlab" class="soft_anch">`matlab`</a>^<b class="lic"></b>^ | -&nbsp;`R2017a`<br/>-&nbsp;`R2017b`<br/>-&nbsp;`R2018a` | [Website](https://www.mathworks.com/products/matlab.html) | MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment and fourth-generation programming language. 
+**numerical analysis** | <a id="matlab" class="soft_anch">`matlab`</a>^<b class="lic"></b>^ | -&nbsp;`R2017a`<br/>-&nbsp;`R2017b`<br/>-&nbsp;`R2018a`<br/>-&nbsp;`R2019a` | [Website](https://www.mathworks.com/products/matlab.html) | MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment and fourth-generation programming language. 
 **numerical analysis** | <a id="octave" class="soft_anch">`octave`</a> | -&nbsp;`4.2.1` | [Website](https://www.gnu.org/software/octave/) | GNU Octave is a high-level language primarily intended for numerical computations. 
 **numerical library** | <a id="arpack" class="soft_anch">`arpack`</a> | -&nbsp;`3.5.0` | [Website](https://github.com/opencollab/arpack-ng) | Collection of Fortran77 subroutines designed to solve large scale eigenvalue problems. 
 **numerical library** | <a id="fftw" class="soft_anch">`fftw`</a> | -&nbsp;`3.3.6` | [Website](http://www.fftw.org/) | The Fastest Fourier Transform in the West (FFTW) is a software library for computing discrete Fourier transforms (DFTs). 
