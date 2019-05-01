@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, April 24 2019, we provide 514 software packages, in 7 categories, covering 59 fields of science:*
+*As of Wednesday, May 01 2019, we provide 514 software packages, in 7 categories, covering 59 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -403,10 +403,10 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **lib** | <a id="trilinos" class="soft_anch">`trilinos`</a> | -&nbsp;`12.12.1` | [Website](https://trilinos.org/) | Trilinos is a collection of open-source software libraries, called packages, intended to be used as building blocks for the development of scientific applications. 
 **lib** | <a id="zeromq" class="soft_anch">`zeromq`</a> | -&nbsp;`4.2.2` | [Website](http://zeromq.org) | ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous messaging library, aimed at use in distributed or concurrent applications. 
 **mpi** | <a id="impi" class="soft_anch">`impi`</a> | -&nbsp;`2017.u2`<br/>-&nbsp;`2018.u1`<br/>-&nbsp;`2018`<br/>-&nbsp;`2019` | [Website](https://software.intel.com/en-us/intel-mpi-library) | Intel® MPI Library is a multi-fabric message passing library that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification. 
-**mpi** | <a id="openmpi" class="soft_anch">`openmpi`</a> | -&nbsp;`2.0.2`<br/>-&nbsp;`2.1.1`<br/>-&nbsp;`3.0.1`<br/>-&nbsp;`4.0.0`<br/>-&nbsp;`4.0.1`<br/>-&nbsp;`3.1.2` | [Website](https://www.openmpi.org) | The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. 
+**mpi** | <a id="openmpi" class="soft_anch">`openmpi`</a> | -&nbsp;`2.0.2`<br/>-&nbsp;`2.1.1`<br/>-&nbsp;`3.0.1`<br/>-&nbsp;`4.0.1`<br/>-&nbsp;`3.1.2` | [Website](https://www.openmpi.org) | The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. 
 **mpi** | <a id="py-mpi4py" class="soft_anch">`py-mpi4py`</a> | -&nbsp;`3.0.0_py27` | [Website](https://bitbucket.org/mpi4py/mpi4py) | MPI for Python provides Python bindings for the Message Passing Interface (MPI) standard. It is implemented on top of the MPI-1/2/3 specification and exposes an API which grounds on the standard MPI-2 C++ bindings. 
 **networking** | <a id="gasnet" class="soft_anch">`gasnet`</a> | -&nbsp;`1.30.0` | [Website](https://gasnet.lbl.gov) | GASNet is a language-independent, low-level networking layer that provides network-independent, high-performance communication primitives tailored for implementing parallel global address space SPMD languages and libraries. 
-**networking** | <a id="libfabric" class="soft_anch">`libfabric`</a> | -&nbsp;`1.6.0`<br/>-&nbsp;`1.6.2` | [Website](https://ofiwg.github.io/libfabric/) | The Open Fabrics Interfaces (OFI) is a framework focused on exporting fabric communication services to applications. Libfabric is the library that defines and exports the user-space API of OFI. 
+**networking** | <a id="libfabric" class="soft_anch">`libfabric`</a> | -&nbsp;`1.6.0`<br/>-&nbsp;`1.6.2`<br/>-&nbsp;`1.7.1` | [Website](https://ofiwg.github.io/libfabric/) | The Open Fabrics Interfaces (OFI) is a framework focused on exporting fabric communication services to applications. Libfabric is the library that defines and exports the user-space API of OFI. 
 **networking** | <a id="ucx" class="soft_anch">`ucx`</a> | -&nbsp;`1.2.1`<br/>-&nbsp;`1.4.0`<br/>-&nbsp;`1.3.1` | [Website](http://www.openucx.org) | UCX is a communication library implementing high-performance messaging for MPI/PGAS frameworks. 
 **parser** | <a id="xerces-c" class="soft_anch">`xerces-c`</a> | -&nbsp;`3.2.1` | [Website](https://xerces.apache.org/xerces-c/index.html) | Xerces-C++ is a validating XML parser written in a portable subset of C++. 
 **sdk** | <a id="google-cloud-sdk" class="soft_anch">`google-cloud-sdk`</a> | -&nbsp;`240.0.0` | [Website](https://cloud.google.com/sdk) | Command-line interface for Google Cloud Platform products and services. 
