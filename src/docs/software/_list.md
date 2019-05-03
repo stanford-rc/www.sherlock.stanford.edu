@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Thursday, May 02 2019, we provide 516 software packages, in 7 categories, covering 59 fields of science:*
+*As of Friday, May 03 2019, we provide 518 software packages, in 7 categories, covering 59 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -83,7 +83,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **file transfer** | <a id="mpifileutils" class="soft_anch">`mpifileutils`</a> | -&nbsp;`20170210` | [Website](https://github.com/hpc/mpifileutils) | mpiFileUtils is a suite of MPI-based tools to manage large datasets, which may vary from large directory trees to large files. 
 **file transfer** | <a id="py-globus-cli" class="soft_anch">`py-globus-cli`</a> | -&nbsp;`1.2.0`<br/>-&nbsp;`1.9.0_py27`<br/>-&nbsp;`1.9.0_py36` | [Website](https://github.com/globus/globus-cli) | A command line wrapper over the Globus SDK for Python. 
 **file transfer** | <a id="rclone" class="soft_anch">`rclone`</a> | -&nbsp;`1.39`<br/>-&nbsp;`1.43.1` | [Website](https://rclone.org) | Rclone is a command line program to sync files and directories to and from: Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon Drive, Microsoft One Drive, Hubic, Backblaze B2, Yandex Disk, or the local filesystem. 
-**framework** | <a id="mono" class="soft_anch">`mono`</a> | -&nbsp;`5.12.0.301` | [Website](https://www.mono-project.com) | Mono is an open source implementation of Microsoft's .NET Framework based on the ECMA standards for C# and the Common Language Runtime. 
+**framework** | <a id="mono" class="soft_anch">`mono`</a> | -&nbsp;`5.12.0.301`<br/>-&nbsp;`5.20.1.19` | [Website](https://www.mono-project.com) | Mono is an open source implementation of Microsoft's .NET Framework based on the ECMA standards for C# and the Common Language Runtime. 
 **language** | <a id="tcltk" class="soft_anch">`tcltk`</a> | -&nbsp;`8.6.6` | [Website](https://www.tcl.tk) | Tcl (Tool Command Language) is a dynamic programming language, suitable for web and desktop applications, networking, administration, testing. Tk is a graphical user interface toolkit. 
 **libs** | <a id="apr" class="soft_anch">`apr`</a> | -&nbsp;`1.6.3` | [Website](https://apr.apache.org/) | The Apache Portable Runtime is a supporting library for the Apache web server. It provides a set of APIs that map to the underlying operating system. 
 **libs** | <a id="apr-util" class="soft_anch">`apr-util`</a> | -&nbsp;`1.6.1` | [Website](https://apr.apache.org/) | The Apache Portable Runtime is a supporting library for the Apache web server. It provides a set of APIs that map to the underlying operating system. 
@@ -369,7 +369,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **language** | <a id="go" class="soft_anch">`go`</a> | -&nbsp;`1.9` | [Website](http://golang.org) | Go is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
 **language** | <a id="guile" class="soft_anch">`guile`</a> | -&nbsp;`2.0.11`<br/>-&nbsp;`2.2.2` | [Website](https://www.gnu.org/software/guile/) | GNU Guile is the preferred extension system for the GNU Project, which features an implementation of the Scheme programming language. 
 **language** | <a id="java" class="soft_anch">`java`</a> | -&nbsp;`1.8.0_131` | [Website](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. 
-**language** | <a id="julia" class="soft_anch">`julia`</a> | -&nbsp;`0.6.4`<br/>-&nbsp;`1.0.0` | [Website](https://julialang.org) | Julia is a high-level, high-performance dynamic programming language for numerical computing. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/julia)
+**language** | <a id="julia" class="soft_anch">`julia`</a> | -&nbsp;`0.6.4`<br/>-&nbsp;`1.0.0`<br/>-&nbsp;`1.1.0` | [Website](https://julialang.org) | Julia is a high-level, high-performance dynamic programming language for numerical computing. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/julia)
 **language** | <a id="lua" class="soft_anch">`lua`</a> | -&nbsp;`5.3.4` | [Website](https://www.lua.org) | Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description. 
 **language** | <a id="luarocks" class="soft_anch">`luarocks`</a> | -&nbsp;`2.4.3` | [Website](https://luarocks.org/) | LuaRocks is the package manager for Lua modules. 
 **language** | <a id="manticore" class="soft_anch">`manticore`</a> | -&nbsp;`20180301` | [Website](http://manticore.cs.uchicago.edu/) | Manticore is a high-level parallel programming language aimed at general-purpose applications running on multi-core processors. 
