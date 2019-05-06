@@ -1,10 +1,10 @@
 
 ## Categories
 
-*As of Monday, May 06 2019, we provide 519 software packages, in 7 categories, covering 59 fields of science:*
+*As of Monday, May 06 2019, we provide 520 software packages, in 7 categories, covering 60 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
-* [`system`](#system) <small>benchmark, compression, containers, database, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
+* [`system`](#system) <small>benchmark, compression, containers, database, doc, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, materials science, photonics</small>
 * [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, pathology, phylogenetics</small>
@@ -74,6 +74,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **database** | <a id="mariadb" class="soft_anch">`mariadb`</a> | -&nbsp;`10.2.11` | [Website](https://www.mariadb.org) | MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/mariadb)
 **database** | <a id="postgresql" class="soft_anch">`postgresql`</a> | -&nbsp;`10.5` | [Website](https://postgresql.org) | PostgreSQL is a powerful, open source object-relational database system with a strong focus on reliability, feature robustness, and performance. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/postgresql)
 **database** | <a id="sqlite" class="soft_anch">`sqlite`</a> | -&nbsp;`3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
+**doc** | <a id="texinfo" class="soft_anch">`texinfo`</a> | -&nbsp;`6.6` | [Website](https://www.gnu.org/software/texinfo/) | Texinfo is the official documentation format of the GNU project. 
 **file management** | <a id="duc" class="soft_anch">`duc`</a> | -&nbsp;`1.4.4` | [Website](https://duc.zevv.nl) | Duc is a collection of tools for indexing, inspecting and visualizing disk usage. 
 **file management** | <a id="fpart" class="soft_anch">`fpart`</a> | -&nbsp;`0.9.3` | [Website](https://github.com/martymac/fpart) | fpart sorts files and packs them into partitions. 
 **file management** | <a id="py-pcircle" class="soft_anch">`py-pcircle`</a> | -&nbsp;`0.17_py27` | [Website](https://github.com/olcf/pcircle) | pcircle contains a suite of file system tools developed at OLCF to take advantage of highly scalable parallel file system such as Lustre. 
