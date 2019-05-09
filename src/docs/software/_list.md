@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Monday, May 06 2019, we provide 520 software packages, in 7 categories, covering 60 fields of science:*
+*As of Thursday, May 09 2019, we provide 522 software packages, in 7 categories, covering 60 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, compression, containers, database, doc, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -398,7 +398,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **lib** | <a id="py-netcdf4" class="soft_anch">`py-netcdf4`</a> | -&nbsp;`1.3.1_py36`<br/>-&nbsp;`1.3.1_py27` | [Website](https://unidata.github.io/netcdf4-python/) | netcdf4-python is a Python interface to the netCDF C library. 
 **lib** | <a id="py-numba" class="soft_anch">`py-numba`</a> | -&nbsp;`0.35.0_py36`<br/>-&nbsp;`0.35.0_py27` | [Website](http://numba.pydata.org) | Numba is a compiler for Python array and numerical functions that gives you the power to speed up your applications with high performance functions written directly in Python.. 
 **lib** | <a id="py-pycuda" class="soft_anch">`py-pycuda`</a> | -&nbsp;`2017.1.1_py27` | [Website](https://mathema.tician.de/software/pycuda/) | PyCUDA lets you access Nvidia‘s CUDA parallel computation API from Python. 
-**lib** | <a id="py-scikit-image" class="soft_anch">`py-scikit-image`</a> | -&nbsp;`0.13.0_py27`<br/>-&nbsp;`0.14.0_py27` | [Website](http://scikit-image.org/) | scikit-image is a collection of algorithms for image processing. 
+**lib** | <a id="py-scikit-image" class="soft_anch">`py-scikit-image`</a> | -&nbsp;`0.13.0_py27`<br/>-&nbsp;`0.14.0_py27`<br/>-&nbsp;`0.15.0_py27`<br/>-&nbsp;`0.15.0_py36` | [Website](http://scikit-image.org/) | scikit-image is a collection of algorithms for image processing. 
 **lib** | <a id="rabbitmq" class="soft_anch">`rabbitmq`</a> | -&nbsp;`3.7.13` | [Website](http://rabbitmq.com) | RabbitMQ is an open-source message broker. 
 **lib** | <a id="swig" class="soft_anch">`swig`</a> | -&nbsp;`3.0.12` | [Website](http://www.swig.org) | SWIG is an interface compiler that connects programs written in C and C++ with scripting languages such as Perl, Python, Ruby, and Tcl. 
 **lib** | <a id="tbb" class="soft_anch">`tbb`</a> | -&nbsp;`2017.u2`<br/>-&nbsp;`2018.u1`<br/>-&nbsp;`2018`<br/>-&nbsp;`2019` | [Website](https://software.intel.com/en-us/intel-tbb) | Intel® Threading Building Blocks (Intel® TBB) is a widely used C++ library for shared-memory parallel programming and heterogeneous computing (intra-node distributed memory programming). 
