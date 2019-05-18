@@ -10,11 +10,13 @@
 </script>
 <style>
 .status-widget__state {
-  font-size: 1.6rem;
+  font-size: 1em;
+  font-weight: bold;
 }
 .status-widget__led {
   height: 12px;
   width:  11px;
+  margin-left: 5px;
 }
 .status-widget__issue {
   line-height: normal;
