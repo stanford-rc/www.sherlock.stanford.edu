@@ -386,7 +386,7 @@ documentation][url_rclone].
 [url_globus]:       https://www.globus.org
 [url_globus_doc]:   https://www.globus.org/how-it-works
 [url_globus_cli]:   https://docs.globus.org/faq/command-line-interface/
-[url_globus_login]: https://auth.globus.org/p/login
+[url_globus_login]: https://app.globus.org/
 [url_globus_xfer_mgmt]:   https://www.globus.org/app/endpoints
 [url_globus_xfer_start]:  https://www.globus.org/app/transfer
 [url_bbcp]:         https://www.slac.stanford.edu/~abh/bbcp
