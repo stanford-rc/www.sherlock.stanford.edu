@@ -1,10 +1,10 @@
 
 ## Categories
 
-*As of Thursday, May 09 2019, we provide 522 software packages, in 7 categories, covering 60 fields of science:*
+*As of Monday, June 03 2019, we provide 528 software packages, in 7 categories, covering 61 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
-* [`system`](#system) <small>benchmark, compression, containers, database, doc, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
+* [`system`](#system) <small>benchmark, benchmarks, compression, containers, database, doc, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, materials science, photonics</small>
 * [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, pathology, phylogenetics</small>
@@ -57,6 +57,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 :----- | :----------- | :------ | :--- | :----------
 **benchmark** | <a id="hp2p" class="soft_anch">`hp2p`</a> | -&nbsp;`3.2` | [Website](https://github.com/cea-hpc/hp2p) | Heavy Peer To Peer: a MPI based benchmark for network diagnostic. 
 **benchmark** | <a id="mprime" class="soft_anch">`mprime`</a> | -&nbsp;`29.4` | [Website](https://www.mersenne.org/) | mprime is used by GIMPS, a distributed computing project dedicated to finding new Mersenne prime numbers, and which is commonly used as a stability testing utility. 
+**benchmarks** | <a id="osu-micro-benchmarks" class="soft_anch">`osu-micro-benchmarks`</a> | -&nbsp;`5.6.1` | [Website](http://mvapich.cse.ohio-state.edu/benchmarks/) | The OSU MicroBenchmarks carry out a variety of message passing performance tests using MPI. 
 **compression** | <a id="libarchive" class="soft_anch">`libarchive`</a> | -&nbsp;`3.3.2` | [Website](https://www.libarchive.org/) | The libarchive project develops a portable, efficient C library that can read and write streaming archives in a variety of formats. 
 **compression** | <a id="libzip" class="soft_anch">`libzip`</a> | -&nbsp;`1.5.1` | [Website](http://libzip.org) | libzip is a C library for reading, creating, and modifying zip archives. 
 **compression** | <a id="lz4" class="soft_anch">`lz4`</a> | -&nbsp;`1.8.0` | [Website](https://www.lz4.org) | LZ4 is lossless compression algorithm. 
@@ -76,6 +77,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **database** | <a id="sqlite" class="soft_anch">`sqlite`</a> | -&nbsp;`3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
 **doc** | <a id="texinfo" class="soft_anch">`texinfo`</a> | -&nbsp;`6.6` | [Website](https://www.gnu.org/software/texinfo/) | Texinfo is the official documentation format of the GNU project. 
 **file management** | <a id="duc" class="soft_anch">`duc`</a> | -&nbsp;`1.4.4` | [Website](https://duc.zevv.nl) | Duc is a collection of tools for indexing, inspecting and visualizing disk usage. 
+**file management** | <a id="exa" class="soft_anch">`exa`</a> | -&nbsp;`0.8.0` | [Website](https://github.com/ogham/exa) | exa is a replacement for ls written in Rust. 
 **file management** | <a id="fpart" class="soft_anch">`fpart`</a> | -&nbsp;`0.9.3` | [Website](https://github.com/martymac/fpart) | fpart sorts files and packs them into partitions. 
 **file management** | <a id="py-pcircle" class="soft_anch">`py-pcircle`</a> | -&nbsp;`0.17_py27` | [Website](https://github.com/olcf/pcircle) | pcircle contains a suite of file system tools developed at OLCF to take advantage of highly scalable parallel file system such as Lustre. 
 **file transfer** | <a id="gdrive" class="soft_anch">`gdrive`</a> | -&nbsp;`2.1.0` | [Website](https://github.com/prasmussen/gdrive) | gdrive is a command line utility for interacting with Google Drive. 
@@ -168,6 +170,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **tools** | <a id="motif" class="soft_anch">`motif`</a> | -&nbsp;`2.3.7` | [Website](https://motif.ics.com) | Motif is the toolkit for the Common Desktop Environment. 
 **tools** | <a id="parallel" class="soft_anch">`parallel`</a> | -&nbsp;`20180122` | [Website](https://www.gnu.org/software/parallel/) | GNU parallel is a shell tool for executing jobs in parallel using one or more computers. 
 **tools** | <a id="qt" class="soft_anch">`qt`</a> | -&nbsp;`5.9.1` | [Website](https://www.qt.io) | QT is a cross-platform application framework that is used for developing application software that can be run on various software and hardware platforms. 
+**tools** | <a id="ripgrep" class="soft_anch">`ripgrep`</a> | -&nbsp;`11.0.1` | [Website](https://github.com/BurntSushi/ripgrep) | ripgrep recursively searches directories for a regex pattern. 
 **tools** | <a id="rocksdb" class="soft_anch">`rocksdb`</a> | -&nbsp;`5.7.3` | [Website](https://rocksdb.org) | A library that provides an embeddable, persistent key-value store for fast storage. 
 **tools** | <a id="x11" class="soft_anch">`x11`</a> | -&nbsp;`7.7` | [Website](https://www.x.org) | The X.Org project provides an open source implementation of the X Window System. 
 **tools** | <a id="xkeyboard-config" class="soft_anch">`xkeyboard-config`</a> | -&nbsp;`2.21` | [Website](https://www.freedesktop.org/wiki/Software/XKeyboardConfig/) | The non-arch keyboard configuration database for X Window. 
@@ -365,6 +368,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **debug** | <a id="gdb" class="soft_anch">`gdb`</a> | -&nbsp;`8.2.1` | [Website](https://www.gnu.org/software/gdb/) | GDB is the GNU Project debugger. 
 **debug** | <a id="valgrind" class="soft_anch">`valgrind`</a> | -&nbsp;`3.14.0` | [Website](http://valgrind.org/) | Valgrind is an instrumentation framework for building dynamic analysis tools. 
 **framework** | <a id="dotnet" class="soft_anch">`dotnet`</a> | -&nbsp;`2.1.500` | [Website](https://dotnet.microsoft.com/) | .NET is a free, cross-platform, open source developer platform for building many different types of applications. 
+**language** | <a id="chapel" class="soft_anch">`chapel`</a> | -&nbsp;`1.19.0` | [Website](https://chapel-lang.org/) | Chapel is a modern programming language designed for productive parallel computing at scale. 
 **language** | <a id="cuda" class="soft_anch">`cuda`</a> | -&nbsp;`8.0.61`<br/>-&nbsp;`9.1.85`<br/>-&nbsp;`9.2.88`<br/>-&nbsp;`9.2.148`<br/>-&nbsp;`10.0.130`<br/>-&nbsp;`10.1.105`<br/>-&nbsp;`9.0.176` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
 **language** | <a id="erlang" class="soft_anch">`erlang`</a> | -&nbsp;`21.3` | [Website](http://erlang.org/) | Erlang is a programming language used to build massively scalable soft real-time systems with requirements on high availability. 
 **language** | <a id="go" class="soft_anch">`go`</a> | -&nbsp;`1.9` | [Website](http://golang.org) | Go is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
@@ -382,6 +386,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **language** | <a id="py-jupyter" class="soft_anch">`py-jupyter`</a> | -&nbsp;`1.0.0_py36`<br/>-&nbsp;`1.0.0_py27` | [Website](https://jupyter.org) | Jupyter is a browser-based interactive notebook for programming, mathematics, and data science. It supports a number of languages via plugins. 
 **language** | <a id="python" class="soft_anch">`python`</a> | -&nbsp;`3.6.1`<br/>-&nbsp;`2.7.13` | [Website](https://www.python.org) | Python is an interpreted, interactive, object-oriented programming language. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/python)
 **language** | <a id="ruby" class="soft_anch">`ruby`</a> | -&nbsp;`2.4.1` | [Website](https://www.ruby-lang.org) | A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. 
+**language** | <a id="rust" class="soft_anch">`rust`</a> | -&nbsp;`1.35.0` | [Website](https://www.rust-lang.org/) | The GNU Compiler Collection includes front ends for C, C++, Fortran, Java, and Go, as well as libraries for these languages (libstdc++, libgcj,...). 
 **language** | <a id="scala" class="soft_anch">`scala`</a> | -&nbsp;`2.12.6` | [Website](https://www.scala-lang.org) | Scala combines object-oriented and functional programming in one concise, high-level language. 
 **lib** | <a id="ant" class="soft_anch">`ant`</a> | -&nbsp;`1.10.1` | [Website](https://ant.apache.org/) | Apache Ant is a Java library and command-line tool whose mission is to drive processes described in build files as targets and extension points dependent upon each other. 
 **lib** | <a id="boost" class="soft_anch">`boost`</a> | -&nbsp;`1.64.0`<br/>-&nbsp;`1.69.0` | [Website](http://www.boost.org) | Boost is a set of libraries for the C++ programming language that provide support for tasks and structures such as linear algebra, pseudorandom number generation, multithreading, image processing, regular expressions, and unit testing. 
