@@ -287,8 +287,8 @@ through a computer whose sole purpose is to move data around.
 
 It supports:
 
-* SSH-based protocols (such as the ones [described above](#ssh-based
-  protocols))
+* SSH-based protocols (such as the ones [described
+  above](#ssh-based-protocols))
 * [BBCP][url_bbcp]
 * [Globus](#globus)
 
