@@ -74,8 +74,8 @@ of rules and limits, the scheduler will then try to match the jobs' resource
 requirements with available resources such as [CPUs][g_cpu], memory or
 computing accelerators such as [GPUs][g_gpu]. It will then execute the user
 defined tasks on the selected resources, and generate output files in one of
-the different [storage spaces][url_storage] available on the cluster, for the
-user to review and analyze.
+the different [storage locations][url_storage] available on the cluster, for
+the user to review and analyze.
 
 [g_cpu]:        glossary#cpu
 [g_gpu]:        glossary#gpu
@@ -223,34 +223,33 @@ by the maintenance window would be pushed after it.
 
 ### Common questions
 
-??? question "Why doing maintenances at all?"
+**Q: Why doing maintenances at all?**
 
-    Due to growth in our compute environment and the increasing complexity of
-    the systems we deploy, we felt it prudent to arrange for a regular time
-    when we could comfortably and without pressure fix problems or update
-    facilities with minimal impact to our customers. Most, if not all, major
-    HPC centers have regular maintenance schedules.  We also need to enforce
-    the [Minimum Security][url_minsec] rules edicted by the Stanford
-    Information Security Office, which mandate deployment of security patches
-    in a timely manner.
+**A**: Due to growth in our compute environment and the increasing complexity
+of the systems we deploy, we felt it prudent to arrange for a regular time when
+we could comfortably and without pressure fix problems or update facilities
+with minimal impact to our customers. Most, if not all, major HPC centers have
+regular maintenance schedules.  We also need to enforce the [Minimum
+Security][url_minsec] rules edicted by the Stanford Information Security
+Office, which mandate deployment of security patches in a timely manner.
 
-??? question "Why Tuesdays 8am-12am? Why not do this late at night?"
+**Q: Why Tuesdays 8am-12am? Why not do this late at night?**
 
-    We have observed that the least busy time for our services is at the
-    beginning of the week in the morning hours. Using this time period should
-    not interrupt most of our users. If the remote possibility of a problem
-    that extends past the scheduled downtime occurs, we would have our full
-    staff fresh and available to assist in repairs and quickly restore service.
+**A:** We have observed that the least busy time for our services is at the
+beginning of the week in the morning hours. Using this time period should not
+interrupt most of our users. If the remote possibility of a problem that
+extends past the scheduled downtime occurs, we would have our full staff fresh
+and available to assist in repairs and quickly restore service.
 
-??? question "I have jobs running, what will happen to them?"
+**Q: I have jobs running, what will happen to them?**
 
-    For long-running jobs, we strongly recommend checkpointing your results on
-    a periodic basis. Besides, we will place a reservation in the scheduler for
-    each maintenance that would prevent jobs to run past it. This means that
-    the scheduler will only allow jobs to run if they can finish by the time
-    the maintenance starts. If you submit a long job soon before the
-    maintenance, it will be delayed until after the maintenance. That will
-    ensure that no work is lost when the maintence starts.
+**A:** For long-running jobs, we strongly recommend checkpointing your results
+on a periodic basis. Besides, we will place a reservation in the scheduler for
+each maintenance that would prevent jobs to run past it. This means that the
+scheduler will only allow jobs to run if they can finish by the time the
+maintenance starts. If you submit a long job soon before the maintenance, it
+will be delayed until after the maintenance. That will ensure that no work is
+lost when the maintence starts.
 
 
 
