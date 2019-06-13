@@ -172,30 +172,24 @@ workflows, it can accommodate up to about 850 compute nodes.
 
 As nodes get added to Sherlock, the number of available ports decreases, and at
 some point, the fabric gets full and no more nodes can be added. Sherlock
-reached that stage in late 2016, which prompted the installation of a whole new
-fabric, to continue adding nodes to the cluster.
+reached that stage for the first time in late 2016, which prompted the
+installation of a whole new fabric, to allow for further system expansion.
 
 This kind of evolution is the perfect opportunity to upgrade other components
-too: management software, ancillary services architecture and
-user applications were completely overhauled and a new, completely separate
-cluster was kick-started. Sherlock 2.0 is a complete refresh of Sherlock, using
-a different set of hardware and software, while conserving the same storage
-infrastructure, to ease the transition process.
-
-!!! tip "Transition to Sherlock 2.0"
-
-    For users who are already familiar with Sherlock, a [transition
-    guide][url_transition] lists all the differences and the important
-    information for starting on Sherlock 2.0.
+too: management software, ancillary services architecture and user
+applications. In January 2017, those components were completely overhauled and
+a new, completely separate cluster was kick-started, using using a different
+set of hardware and software, while conserving the same storage infrastructure,
+to ease the transition process.
 
 After a transition period, the older Sherlock hardware, compute and login
-nodes, will be merged in the new cluster, and from a logical perspective
-(connection, job scheduling and computing resources), both will form a single
-cluster again.
+nodes, have been be merged in the new cluster, and from a logical perspective
+(connection, job scheduling and computing resources), nodes attached to each of
+the fabrics have been reunited to form a single cluster again.
 
-As Sherlock continues to evolve and grow, the new fabric will certainly get
-full again, and the same process will happen again to start the next generation
-of Sherlock.
+As Sherlock continues to evolve and grow, the new fabric will also approach
+capacity again, and the same process will happen again to start the next
+generation of Sherlock.
 
 
 ## Maintenances and upgrades
@@ -264,7 +258,6 @@ lost when the maintence starts.
 [url_minsec]:     https://uit.stanford.edu/guide/securitystandards
 [url_admin]:  	  https://adminguide.stanford.edu
 [url_fairshare]:  /docs/advanced-topics/scheduler#fair-share
-[url_transition]: /docs/overview/transition
 [url_farmshare]:  https://uit.stanford.edu/service/sharedcomputing
 
 [url_HIPAA]: https://en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act
