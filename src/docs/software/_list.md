@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Monday, June 03 2019, we provide 528 software packages, in 7 categories, covering 61 fields of science:*
+*As of Thursday, June 13 2019, we provide 529 software packages, in 7 categories, covering 61 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, benchmarks, compression, containers, database, doc, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -194,7 +194,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **deep learning** | <a id="torch" class="soft_anch">`torch`</a> | -&nbsp;`20180202` | [Website](http://torch.ch) | Torch is a scientific computing framework with wide support for machine learning algorithms that puts GPUs first. 
 **linear algebra** | <a id="armadillo" class="soft_anch">`armadillo`</a> | -&nbsp;`8.200.1` | [Website](http://arma.sourceforge.net/) | Armadillo is a high quality linear algebra library (matrix maths) for the C++ language, aiming towards a good balance between speed and ease of use. 
 **machine learning** | <a id="py-scikit-learn" class="soft_anch">`py-scikit-learn`</a> | -&nbsp;`0.19.1_py36`<br/>-&nbsp;`0.19.1_py27` | [Website](http://scikit-learn.org) | Scikit-learn is a free software machine learning library for the Python programming language. 
-**numerical analysis** | <a id="matlab" class="soft_anch">`matlab`</a>^<b class="lic"></b>^ | -&nbsp;`R2017a`<br/>-&nbsp;`R2017b`<br/>-&nbsp;`R2018a`<br/>-&nbsp;`R2019a` | [Website](https://www.mathworks.com/products/matlab.html) | MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment and fourth-generation programming language. 
+**numerical analysis** | <a id="matlab" class="soft_anch">`matlab`</a>^<b class="lic"></b>^ | -&nbsp;`R2017a`<br/>-&nbsp;`R2017b`<br/>-&nbsp;`R2018a`<br/>-&nbsp;`R2019a` | [Website](https://www.mathworks.com/products/matlab.html) | MATLAB is a multi-paradigm numerical computing environment and proprietary programming language developed by MathWorks. 
 **numerical analysis** | <a id="octave" class="soft_anch">`octave`</a> | -&nbsp;`4.2.1` | [Website](https://www.gnu.org/software/octave/) | GNU Octave is a high-level language primarily intended for numerical computations. 
 **numerical library** | <a id="arpack" class="soft_anch">`arpack`</a> | -&nbsp;`3.5.0` | [Website](https://github.com/opencollab/arpack-ng) | Collection of Fortran77 subroutines designed to solve large scale eigenvalue problems. 
 **numerical library** | <a id="fftw" class="soft_anch">`fftw`</a> | -&nbsp;`3.3.6` | [Website](http://www.fftw.org/) | The Fastest Fourier Transform in the West (FFTW) is a software library for computing discrete Fourier transforms (DFTs). 
@@ -344,6 +344,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **build** | <a id="bazel" class="soft_anch">`bazel`</a> | -&nbsp;`0.16.1` | [Website](https://bazel.build/) | Bazel is a fast, scalable, multi-language and extensible build system. 
 **build** | <a id="cmake" class="soft_anch">`cmake`</a> | -&nbsp;`3.8.1`<br/>-&nbsp;`3.11.1`<br/>-&nbsp;`3.13.1` | [Website](https://www.cmake.org) | CMake is an extensible, open-source system that manages the build process in an operating system and in a compiler-independent manner. 
 **build** | <a id="kerl" class="soft_anch">`kerl`</a> | -&nbsp;`1.8.5` | [Website](https://github.com/kerl/kerl) | Kerl is a tool to easily build and install Erlang/OTP instances. 
+**build** | <a id="ninja" class="soft_anch">`ninja`</a> | -&nbsp;`1.9.0` | [Website](https://ninja-build.org/) | Ninja is a small build system with a focus on speed. 
 **build** | <a id="scons" class="soft_anch">`scons`</a> | -&nbsp;`2.5.1_py36`<br/>-&nbsp;`2.5.1_py27` | [Website](http://www.scons.org) | SCons is an Open Source software construction tool. 
 **compiler** | <a id="gcc" class="soft_anch">`gcc`</a> | -&nbsp;`7.1.0`<br/>-&nbsp;`7.3.0`<br/>-&nbsp;`8.1.0`<br/>-&nbsp;`9.1.0`<br/>-&nbsp;`6.3.0` | [Website](http://gcc.gnu.org) | The GNU Compiler Collection includes front ends for C, C++, Fortran, Java, and Go, as well as libraries for these languages (libstdc++, libgcj,...). 
 **compiler** | <a id="icc" class="soft_anch">`icc`</a> | -&nbsp;`2017.u2`<br/>-&nbsp;`2018.u1`<br/>-&nbsp;`2018`<br/>-&nbsp;`2019` | [Website](https://software.intel.com/en-us/c-compilers) | Intel C++ Compiler, also known as icc or icl, is a group of C and C++ compilers from Intel 
