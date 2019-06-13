@@ -221,7 +221,6 @@ Here's what it looks like in motion:
 [url_condo]:        /docs/overview/concepts#the-condominium-model
 [url_concepts]:     /docs/overview/concepts
 [url_glossary]:     /docs/overview/glossary
-[url_transition]:   /docs/overview/transition
 [url_prereq]:       /docs/getting-started/
 [url_connect]:      /docs/getting-started/connecting
 [url_submit]:       /docs/getting-started/submitting
