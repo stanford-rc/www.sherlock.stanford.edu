@@ -152,7 +152,71 @@ account.
 [comment]: #_
 
 
+## Resources Available
 
+Whether you are submitting a [batch job](#batch-jobs), [recurring job](#recurring-jobs),
+or [interactive job](#interactive-jobs), it's important to know the resources that
+are available to you. For this reason, we provide
+[sh_part](https://news.sherlock.stanford.edu/posts/a-better-view-at-sherlock-s-resources),
+or a simple script to help answer questions such as:
+
+ - How many jobs are running?
+ - What partitions do I have access to?
+ - How many CPUs can I use?
+ - Where should I submit my jobs?
+
+
+`sh_part` is a command available to you that will make it easy
+to answer these questions.
+
+> But what is a partition?
+
+A partition is exactly as you might guess - an allocation or designation of nodes
+into some logical grouping. For example, the "normal" partition coincides
+with the Sherlock compute nodes that jobs are submit to by default. If you are a 
+member of a lab that has invested in Sherlock resources, a partition might be
+named after your lab. A partition also might refer to a group of GPU nodes (`gpu`),
+or nodes with higher memory (`highmem`).
+
+!!! Info
+ 
+    When we ask for a partition, we are requesting to use one of a particular set
+    of nodes on Sherlock such as those owned by a particular PI, or with
+    a special grouping such as "GPU" or "high memory."
+
+It follows that we will be best empowered to ask for the partition that we need if
+we know what partitions are available to us. This is where `sh_part` comes handy!
+You can run it on any login or compute node to see what partitions are available to you:
+
+```bash
+$ sh_part
+       QUEUE   FREE  TOTAL   FREE  TOTAL RESORC  OTHER MAXJOBTIME   CORES      NODE   GRES
+   PARTITION  CORES  CORES  NODES  NODES PENDNG PENDNG  DAY-HR:MN PERNODE    MEM-GB (COUNT)
+     normal*     30   1600      0     76   2801   2278    7-00:00   20-24   128-191 -
+     bigmem       0     88      0      2     90      1    1-00:00   32-56  512-3072 -
+        dev      50     56      2      3     32      0    0-02:00   16-20       128 -
+        gpu      62    140      0      7    121      0    7-00:00   16-24   191-256 gpu:8(1),gpu:4(6)
+```
+
+Above, we see that we can submit a job to "normal," "bigmem," "dev," or "gpu." We
+also get a glimpse of information that is useful such as the maximum amount of time
+we are allowed to ask for (`MAXJOBTIME`), the number of other jobs already in the
+queue, along with the ranges of memory afforded by the nodes of each partition.
+A `GRES` you can think of as a node feature (discussed more below). Specifically:
+
+  - in the `QUEUE PARTITION` column, the * character indicates the default partition.
+  - the `RESOURCE PENDING` column shows the core count of pending jobs that are waiting on resources,
+  - the `OTHER PENDING` column lists core counts for jobs that are pending for other reasons, such as licenses, user, group or any other limit,
+  - the `GRES` column shows the number and type of GRES available in that partition, and the number of nodesthat feature that specific GRES combination in paranteses. So for instance, in the output above, the gpu 
+partition features ` node with 8 GPUs, and 6 nodes with 4 GPUs each.
+
+With `sh_part`, you should be able to quickly see the partitions and timings available for
+submitting jobs. If you have any questions or want to suggest changes to the documentation
+here, please don't hesitate to 
+[open an issue](https://github.com/stanford-rc/www.sherlock.stanford.edu/issues).
+
+`sh_part` is based on the [spart](https://github.com/mercanca/spart) tool developed
+by Ahmet Mercan. We are grateful for his work!
 
 ## Recurring jobs
 
