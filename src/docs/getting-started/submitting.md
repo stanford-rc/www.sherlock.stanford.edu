@@ -151,10 +151,10 @@ Congratulations, you've submitted your first batch job on Sherlock!
 Actually, quite a lot. Although you now know how to submit a simple batch job,
 there are many other options and areas to explore in the next sections:
 
-* [Data transfer][url_transfer]
-* [Storage][url_storage]
-* [Running jobs][url_runningjobs]
-
+ * [Data transfer][url_transfer]
+ * [Storage][url_storage]
+ * [Running jobs][url_runningjobs]
+ * [Batch Job Examples](/docs/user-guide/examples/batch-job-examples/)
 
 
 [comment]: #  (link URLs -----------------------------------------------------)

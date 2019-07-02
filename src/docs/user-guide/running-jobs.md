@@ -152,7 +152,7 @@ account.
 [comment]: #_
 
 
-
+For quick examples, see the [batch job examples page](/docs/user-guide/examples/batch-job-examples/).
 
 ## Recurring jobs
 
