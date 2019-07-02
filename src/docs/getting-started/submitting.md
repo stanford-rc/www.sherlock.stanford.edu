@@ -105,6 +105,9 @@ editor][url_texteditors] such as `nano` or `vim`, and save it as `submit.sh`.
     line.  Always put your `#SBATCH` parameters at the top of your batch
     script.
 
+For a small set of examples, see [this post](https://ask.cyberinfrastructure.org/t/where-can-i-find-examples-of-sbatch-submission-job-scripts-for-the-sherlock-cluster/642) on Ask Cyberinfrastructure. Please
+share your scripts there if you think they might be useful to others.
+
 ### Job submission
 
 Once the submission script is written properly, you can submit it to the
