@@ -47,12 +47,16 @@ through a job scheduler using a [fair-share algorithm][url_fairshare].
 
 !!! danger "High Risk data"
 
-    Sherlock is **NOT** [HIPAA][url_HIPAA] compliant and shouldn't be used to
-    process [PHI][url_PHI] nor [PII][url_PII].  The system is approved for
-    computing with Low and Moderate Risk data only, and is **not suitable to
-    process High Risk data**.  For more information about data risk
-    classifications, see the [Information Security Risk Classification
-    page][url_risk].
+    Sherlock is **NOT** approved to store or process [HIPAA][url_HIPAA],
+    [PHI][url_PHI], [PII][url_PII] nor any kind of [High Risk][url_datarisk]
+    data.  The system is approved for computing with Low and Moderate Risk data
+    only, and is **not suitable to process High Risk data**.
+
+    :fa-exclamation-circle: **Users are responsible for ensuring the compliance
+    of their own data.**
+
+    For more information about data risk classifications, see the [Information
+    Security Risk Classification page][url_risk].
 
 ## What's a cluster?
 
@@ -255,6 +259,7 @@ lost when the maintence starts.
 [url_srcc]:    	  https://srcc.stanford.edu/
 [url_orders]:	  https://srcc.stanford.edu/private/sherlock-qtr-order
 [url_risk]:  	  https://uit.stanford.edu/guide/riskclassifications
+[url_datarisk]:   https://uit.stanford.edu/guide/riskclassifications#data-classification-examples
 [url_minsec]:     https://uit.stanford.edu/guide/securitystandards
 [url_admin]:  	  https://adminguide.stanford.edu
 [url_fairshare]:  /docs/advanced-topics/scheduler#fair-share
