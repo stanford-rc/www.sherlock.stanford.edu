@@ -1,10 +1,10 @@
 
 ## Categories
 
-*As of Thursday, June 13 2019, we provide 529 software packages, in 7 categories, covering 61 fields of science:*
+*As of Friday, July 05 2019, we provide 530 software packages, in 7 categories, covering 62 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
-* [`system`](#system) <small>benchmark, benchmarks, compression, containers, database, doc, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
+* [`system`](#system) <small>benchmark, benchmarks, compression, containers, database, doc, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, geophysics, geoscience, materials science, photonics</small>
 * [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, pathology, phylogenetics</small>
@@ -76,6 +76,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **database** | <a id="postgresql" class="soft_anch">`postgresql`</a> | -&nbsp;`10.5` | [Website](https://postgresql.org) | PostgreSQL is a powerful, open source object-relational database system with a strong focus on reliability, feature robustness, and performance. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/postgresql)
 **database** | <a id="sqlite" class="soft_anch">`sqlite`</a> | -&nbsp;`3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
 **doc** | <a id="texinfo" class="soft_anch">`texinfo`</a> | -&nbsp;`6.6` | [Website](https://www.gnu.org/software/texinfo/) | Texinfo is the official documentation format of the GNU project. 
+**document processing** | <a id="lyx" class="soft_anch">`lyx`</a> | -&nbsp;`2.3.2` | [Website](http://www.lyx.org) | LyX is a document processor. 
 **file management** | <a id="duc" class="soft_anch">`duc`</a> | -&nbsp;`1.4.4` | [Website](https://duc.zevv.nl) | Duc is a collection of tools for indexing, inspecting and visualizing disk usage. 
 **file management** | <a id="exa" class="soft_anch">`exa`</a> | -&nbsp;`0.8.0` | [Website](https://github.com/ogham/exa) | exa is a replacement for ls written in Rust. 
 **file management** | <a id="fpart" class="soft_anch">`fpart`</a> | -&nbsp;`0.9.3` | [Website](https://github.com/martymac/fpart) | fpart sorts files and packs them into partitions. 
