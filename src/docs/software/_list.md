@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, July 05 2019, we provide 530 software packages, in 7 categories, covering 62 fields of science:*
+*As of Tuesday, July 16 2019, we provide 534 software packages, in 7 categories, covering 62 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, benchmarks, compression, containers, database, doc, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -81,6 +81,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **file management** | <a id="exa" class="soft_anch">`exa`</a> | -&nbsp;`0.8.0` | [Website](https://github.com/ogham/exa) | exa is a replacement for ls written in Rust. 
 **file management** | <a id="fpart" class="soft_anch">`fpart`</a> | -&nbsp;`0.9.3` | [Website](https://github.com/martymac/fpart) | fpart sorts files and packs them into partitions. 
 **file management** | <a id="py-pcircle" class="soft_anch">`py-pcircle`</a> | -&nbsp;`0.17_py27` | [Website](https://github.com/olcf/pcircle) | pcircle contains a suite of file system tools developed at OLCF to take advantage of highly scalable parallel file system such as Lustre. 
+**file management** | <a id="rmlint" class="soft_anch">`rmlint`</a> | -&nbsp;`2.8.0` | [Website](https://rmlint.readthedocs.io/) | rmlint finds space waste and other broken things on your filesystem and offers to remove it. 
 **file transfer** | <a id="gdrive" class="soft_anch">`gdrive`</a> | -&nbsp;`2.1.0` | [Website](https://github.com/prasmussen/gdrive) | gdrive is a command line utility for interacting with Google Drive. 
 **file transfer** | <a id="gsutil" class="soft_anch">`gsutil`</a> | -&nbsp;`4.31` | [Website](https://cloud.google.com/storage/docs/gsutil) | gsutil is a Python application that lets you access Cloud Storage from the command line. 
 **file transfer** | <a id="lftp" class="soft_anch">`lftp`</a> | -&nbsp;`4.8.1` | [Website](https://lftp.yar.ru/) | LFTP is a sophisticated file transfer program supporting a number of network protocols (ftp, http, sftp, fish, torrent). 
@@ -116,6 +117,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="hunspell" class="soft_anch">`hunspell`</a> | -&nbsp;`1.6.2` | [Website](https://hunspell.github.io/) | Hunspell is a spell checker. 
 **libs** | <a id="hyphen" class="soft_anch">`hyphen`</a> | -&nbsp;`2.8.8` | [Website](https://github.com/hunspell/hyphen) | Hyphen is a hyphenation library to use converted TeX hyphenation patterns. 
 **libs** | <a id="icu" class="soft_anch">`icu`</a> | -&nbsp;`59.1` | [Website](http://site.icu-project.org) | ICU is a set of C/C++ and Java libraries providing Unicode and Globalization support for software applications. 
+**libs** | <a id="json-glib" class="soft_anch">`json-glib`</a> | -&nbsp;`1.4.4` | [Website](https://wiki.gnome.org/Projects/JsonGlib) | JSON-GLib is a library providing serialization and deserialization support for the JavaScript Object Notation (JSON) format described by RFC 4627. 
 **libs** | <a id="libaio" class="soft_anch">`libaio`</a> | -&nbsp;`0.3.111` | [Website](https://pagure.io/libaio) | libaio provides the Linux-native API for async I/O. 
 **libs** | <a id="libepoxy" class="soft_anch">`libepoxy`</a> | -&nbsp;`1.4.1` | [Website](https://github.com/anholt/libepoxy) | Epoxy is a library for handling OpenGL function pointer management for you. 
 **libs** | <a id="libexif" class="soft_anch">`libexif`</a> | -&nbsp;`0.6.21` | [Website](https://github.com/libexif/libexif) | A library for parsing, editing, and saving EXIF data. 
@@ -149,6 +151,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="popt" class="soft_anch">`popt`</a> | -&nbsp;`1.16` | [Website](http://rpm5.org/files/popt) | Library for parsing command line options. 
 **libs** | <a id="py-lmdb" class="soft_anch">`py-lmdb`</a> | -&nbsp;`0.93` | [Website](https://lmdb.readthedocs.io/en/release/) | Universal Python binding for the LMDB 'Lightning' Database. 
 **libs** | <a id="py-mako" class="soft_anch">`py-mako`</a> | -&nbsp;`1.0.7_py36`<br/>-&nbsp;`1.0.7_py27` | [Website](http://www.makotemplates.org/) | Mako is a template library written in Python. It provides a familiar, non-XML syntax which compiles into Python modules for maximum performance. 
+**libs** | <a id="py-pygobject" class="soft_anch">`py-pygobject`</a> | -&nbsp;`3.32.2_py36` | [Website](https://pygobject.readthedocs.io/) | PyGObject is a Python package which provides bindings for GObject based libraries such as GTK, GStreamer, WebKitGTK, GLib, GIO and many more. 
 **libs** | <a id="py-pyqt5" class="soft_anch">`py-pyqt5`</a> | -&nbsp;`5.9.1_py36` | [Website](https://www.riverbankcomputing.com/software/pyqt/) | PyQt5 is a comprehensive set of Python bindings for Qt v5. 
 **libs** | <a id="readline" class="soft_anch">`readline`</a> | -&nbsp;`7.0` | [Website](https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html) | The GNU Readline library provides a set of functions for use by applications that allow users to edit command lines as they are typed in. 
 **libs** | <a id="snappy" class="soft_anch">`snappy`</a> | -&nbsp;`1.1.7` | [Website](https://github.com/google/snappy) | A fast compressor/decompressor. 
@@ -346,7 +349,8 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **build** | <a id="cmake" class="soft_anch">`cmake`</a> | -&nbsp;`3.8.1`<br/>-&nbsp;`3.11.1`<br/>-&nbsp;`3.13.1` | [Website](https://www.cmake.org) | CMake is an extensible, open-source system that manages the build process in an operating system and in a compiler-independent manner. 
 **build** | <a id="kerl" class="soft_anch">`kerl`</a> | -&nbsp;`1.8.5` | [Website](https://github.com/kerl/kerl) | Kerl is a tool to easily build and install Erlang/OTP instances. 
 **build** | <a id="ninja" class="soft_anch">`ninja`</a> | -&nbsp;`1.9.0` | [Website](https://ninja-build.org/) | Ninja is a small build system with a focus on speed. 
-**build** | <a id="scons" class="soft_anch">`scons`</a> | -&nbsp;`2.5.1_py36`<br/>-&nbsp;`2.5.1_py27` | [Website](http://www.scons.org) | SCons is an Open Source software construction tool. 
+**build** | <a id="py-meson" class="soft_anch">`py-meson`</a> | -&nbsp;`0.51.1_py36` | [Website](https://mesonbuild.com/) | Meson is an open source build system meant to be both extremely fast, and, even more importantly, as user friendly as possible. 
+**build** | <a id="py-scons" class="soft_anch">`py-scons`</a> | -&nbsp;`3.0.5_py36`<br/>-&nbsp;`3.0.5_py27` | [Website](http://www.scons.org) | SCons is an Open Source software construction tool. 
 **compiler** | <a id="gcc" class="soft_anch">`gcc`</a> | -&nbsp;`7.1.0`<br/>-&nbsp;`7.3.0`<br/>-&nbsp;`8.1.0`<br/>-&nbsp;`9.1.0`<br/>-&nbsp;`6.3.0` | [Website](http://gcc.gnu.org) | The GNU Compiler Collection includes front ends for C, C++, Fortran, Java, and Go, as well as libraries for these languages (libstdc++, libgcj,...). 
 **compiler** | <a id="icc" class="soft_anch">`icc`</a> | -&nbsp;`2017.u2`<br/>-&nbsp;`2018.u1`<br/>-&nbsp;`2018`<br/>-&nbsp;`2019` | [Website](https://software.intel.com/en-us/c-compilers) | Intel C++ Compiler, also known as icc or icl, is a group of C and C++ compilers from Intel 
 **compiler** | <a id="ifort" class="soft_anch">`ifort`</a> | -&nbsp;`2017.u2`<br/>-&nbsp;`2018.u1`<br/>-&nbsp;`2018`<br/>-&nbsp;`2019` | [Website](https://software.intel.com/en-us/fortran-compilers) | Intel Fortran Compiler, also known as ifort, is a group of Fortran compilers from Intel 
