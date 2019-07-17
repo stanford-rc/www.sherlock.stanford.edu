@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, July 16 2019, we provide 534 software packages, in 7 categories, covering 62 fields of science:*
+*As of Wednesday, July 17 2019, we provide 536 software packages, in 7 categories, covering 62 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, benchmarks, compression, containers, database, doc, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -77,6 +77,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **database** | <a id="sqlite" class="soft_anch">`sqlite`</a> | -&nbsp;`3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
 **doc** | <a id="texinfo" class="soft_anch">`texinfo`</a> | -&nbsp;`6.6` | [Website](https://www.gnu.org/software/texinfo/) | Texinfo is the official documentation format of the GNU project. 
 **document processing** | <a id="lyx" class="soft_anch">`lyx`</a> | -&nbsp;`2.3.2` | [Website](http://www.lyx.org) | LyX is a document processor. 
+**document processing** | <a id="texlive" class="soft_anch">`texlive`</a> | -&nbsp;`2019` | [Website](https://www.tug.org/texlive/) | TeX Live is an easy way to get up and running with the TeX document production system. 
 **file management** | <a id="duc" class="soft_anch">`duc`</a> | -&nbsp;`1.4.4` | [Website](https://duc.zevv.nl) | Duc is a collection of tools for indexing, inspecting and visualizing disk usage. 
 **file management** | <a id="exa" class="soft_anch">`exa`</a> | -&nbsp;`0.8.0` | [Website](https://github.com/ogham/exa) | exa is a replacement for ls written in Rust. 
 **file management** | <a id="fpart" class="soft_anch">`fpart`</a> | -&nbsp;`0.9.3` | [Website](https://github.com/martymac/fpart) | fpart sorts files and packs them into partitions. 
@@ -228,7 +229,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **optimization** | <a id="gurobi" class="soft_anch">`gurobi`</a> | -&nbsp;`7.5.1`<br/>-&nbsp;`8.0.1_py27`<br/>-&nbsp;`8.0.1_py36` | [Website](http://www.gurobi.com) | The Gurobi Optimizer is a commercial optimization solver for mathematical programming. 
 **optimization** | <a id="knitro" class="soft_anch">`knitro`</a> | -&nbsp;`10.3.0` | [Website](https://www.artelys.com/en/optimization-tools/knitro) | Artelys Knitro is an optimization solver for difficult large-scale nonlinear problems. 
 **scientific computing** | <a id="py-scipystack" class="soft_anch">`py-scipystack`</a> | -&nbsp;`1.0_py36`<br/>-&nbsp;`1.0_py27` | [Website](https://www.scipy.org) | The SciPy Stack is a collection of open source software for scientific computing in Python. It provides the following packages: numpy, scipy, matplotlib, ipython, jupyter, pandas, sympy and nose. 
-**statistics** | <a id="R" class="soft_anch">`R`</a> | -&nbsp;`3.4.0`<br/>-&nbsp;`3.5.1` | [Website](http://r-project.org) | R is a free software environment for statistical computing and graphics. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/R)
+**statistics** | <a id="R" class="soft_anch">`R`</a> | -&nbsp;`3.4.0`<br/>-&nbsp;`3.6.1`<br/>-&nbsp;`3.5.1` | [Website](http://r-project.org) | R is a free software environment for statistical computing and graphics. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/R)
 **statistics** | <a id="datamash" class="soft_anch">`datamash`</a> | -&nbsp;`1.3` | [Website](https://www.gnu.org/software/datamash/) | GNU datamash is a command-line program which performs basic numeric, textual and statistical operations on input textual data files. 
 **statistics** | <a id="jags" class="soft_anch">`jags`</a> | -&nbsp;`4.3.0` | [Website](http://mcmc-jags.sourceforge.net/) | Just another Gibbs sampler (JAGS) is a program for simulation from Bayesian hierarchical models using Markov chain Monte Carlo (MCMC). 
 **statistics** | <a id="py-rpy2" class="soft_anch">`py-rpy2`</a> | -&nbsp;`2.8.6_py27`<br/>-&nbsp;`2.9.2_py36` | [Website](https://rpy2.bitbucket.io) | rpy2 is an interface to R running embedded in a Python process. 
