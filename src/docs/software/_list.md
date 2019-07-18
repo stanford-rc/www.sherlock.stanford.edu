@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, July 17 2019, we provide 536 software packages, in 7 categories, covering 62 fields of science:*
+*As of Thursday, July 18 2019, we provide 537 software packages, in 7 categories, covering 62 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, benchmarks, compression, containers, database, doc, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -323,7 +323,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
 **cheminformatics** | <a id="py-rdkit" class="soft_anch">`py-rdkit`</a> | -&nbsp;`2018.09.1_py36`<br/>-&nbsp;`2018.09.1_py27` | [Website](http://www.rdkit.org) | RDKit is a collection of cheminformatics and machine-learning software written in C++ and Python. 
-**computational chemistry** | <a id="gaussian" class="soft_anch">`gaussian`</a>^<b class="lic"></b>^ | -&nbsp;`g16` | [Website](https://www.gaussian.com) | Gaussian is a general purpose computational chemistry software package. 
+**computational chemistry** | <a id="gaussian" class="soft_anch">`gaussian`</a>^<b class="lic"></b>^ | -&nbsp;`g16.A03`<br/>-&nbsp;`g16.B01` | [Website](https://www.gaussian.com) | Gaussian is a general purpose computational chemistry software package. 
 **computational chemistry** | <a id="libint" class="soft_anch">`libint`</a> | -&nbsp;`1.1.4`<br/>-&nbsp;`2.0.3` | [Website](https://sourceforge.net/p/libint/home/) | Libint computes molecular integrals. 
 **computational chemistry** | <a id="libxc" class="soft_anch">`libxc`</a> | -&nbsp;`3.0.0` | [Website](http://octopus-code.org/wiki/Libxc) | Libxc is a library of exchange-correlation functionals for density-functional theory. 
 **computational chemistry** | <a id="nwchem" class="soft_anch">`nwchem`</a> | -&nbsp;`6.8` | [Website](http://www.nwchem-sw.org) | NWChem is an ab initio computational chemistry software package which also includes quantum chemical and molecular dynamics functionality. 
