@@ -1,12 +1,12 @@
 
 ## Categories
 
-*As of Thursday, July 18 2019, we provide 537 software packages, in 7 categories, covering 62 fields of science:*
+*As of Thursday, July 18 2019, we provide 539 software packages, in 7 categories, covering 63 fields of science:*
 
 * [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, benchmarks, compression, containers, database, doc, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
-* [`physics`](#physics) <small>astronomy, geophysics, geoscience, materials science, photonics</small>
+* [`physics`](#physics) <small>astronomy, climate modeling, geophysics, geoscience, materials science, photonics</small>
 * [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, pathology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>cheminformatics, computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
 * [`devel`](#devel) <small>build, compiler, data, data analytics, debug, framework, language, lib, mpi, networking, parser, sdk</small>
@@ -244,6 +244,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
 **astronomy** | <a id="heasoft" class="soft_anch">`heasoft`</a> | -&nbsp;`6.22.1` | [Website](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/) | HEAsoft is a Unified Release of the FTOOLS (General and mission-specific tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks for X-ray astronomical spectral, timing, and imaging data analysis) software packages. 
+**climate modeling** | <a id="cdo" class="soft_anch">`cdo`</a> | -&nbsp;`1.9.7.1` | [Website](https://code.mpimet.mpg.de/projects/cdo) | CDO is a collection of command line Operators to manipulate and analyse Climate and NWP model Data. 
 **geophysics** | <a id="opensees" class="soft_anch">`opensees`</a> | -&nbsp;`2.5.0` | [Website](http://opensees.berkeley.edu/) | OpenSees is a software framework for developing applications to simulate the performance of structural and geotechnical systems subjected to earthquakes. 
 **geoscience** | <a id="gdal" class="soft_anch">`gdal`</a> | -&nbsp;`2.2.1` | [Website](http://www.gdal.org) | GDAL is a translator library for raster and vector geospatial data formats. 
 **geoscience** | <a id="geos" class="soft_anch">`geos`</a> | -&nbsp;`3.6.2` | [Website](https://trac.osgeo.org/geos) | GEOS (Geometry Engine - Open Source) is a C++ port of Java Topology Suite (JTS). 
@@ -363,6 +364,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **data** | <a id="hdf5" class="soft_anch">`hdf5`</a> | -&nbsp;`1.10.0p1`<br/>-&nbsp;`1.10.2` | [Website](https://www.hdfgroup.org/hdf5) | HDF5 is a data model, library, and file format for storing and managing data. It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O and for high volume and complex data. 
 **data** | <a id="hiredis" class="soft_anch">`hiredis`</a> | -&nbsp;`0.13.3` | [Website](https://github.com/redis/hiredis) | Hiredis is a minimalistic C client library for the Redis database. 
 **data** | <a id="ncl" class="soft_anch">`ncl`</a> | -&nbsp;`6.4.0` | [Website](http://www.ncl.ucar.edu/) | NCL is a free interpreted language designed specifically for scientific data processing and visualization. 
+**data** | <a id="nco" class="soft_anch">`nco`</a> | -&nbsp;`4.8.0` | [Website](http://nco.sourceforge.net/) | The NCO toolkit manipulates and analyzes data stored in netCDF-accessible formats. 
 **data** | <a id="netcdf" class="soft_anch">`netcdf`</a> | -&nbsp;`4.4.1.1` | [Website](https://www.unidata.ucar.edu/software/netcdf) | NetCDF is a set of software libraries and self-describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. 
 **data** | <a id="pnetcdf" class="soft_anch">`pnetcdf`</a> | -&nbsp;`1.8.1` | [Website](http://cucis.ece.northwestern.edu/projects/PnetCDF/) | Parallel netCDF (PnetCDF) is a parallel I/O library for accessing NetCDF files in CDF-1, 2, and 5 formats. 
 **data** | <a id="protobuf" class="soft_anch">`protobuf`</a> | -&nbsp;`3.4.0` | [Website](https://developers.google.com/protocol-buffers/) | Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data. 
