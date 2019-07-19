@@ -1,9 +1,9 @@
 
 ## Categories
 
-*As of Thursday, July 18 2019, we provide 539 software packages, in 7 categories, covering 63 fields of science:*
+*As of Friday, July 19 2019, we provide 542 software packages, in 7 categories, covering 65 fields of science:*
 
-* [`viz`](#viz) <small>graphs, imaging, molecular visualization, plotting, remote display</small>
+* [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>benchmark, benchmarks, compression, containers, database, doc, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, climate modeling, geophysics, geoscience, materials science, photonics</small>
@@ -42,6 +42,8 @@
 ### Viz
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
+**data** | <a id="ncview" class="soft_anch">`ncview`</a> | -&nbsp;`2.1.7` | [Website](http://meteora.ucsd.edu/~pierce/ncview_home_page.html) | Ncview is a visual browser for netCDF format files. 
+**gis** | <a id="panoply" class="soft_anch">`panoply`</a> | -&nbsp;`4.10.8` | [Website](https://www.giss.nasa.gov/tools/panoply/) | Panoply plots geo-referenced and other arrays from netCDF, HDF, GRIB, and other datasets. 
 **graphs** | <a id="graphviz" class="soft_anch">`graphviz`</a> | -&nbsp;`2.40.1` | [Website](https://www.graphviz.org/) | Graphviz is open source graph visualization software. 
 **imaging** | <a id="py-pillow" class="soft_anch">`py-pillow`</a> | -&nbsp;`5.1.0_py36`<br/>-&nbsp;`5.1.0_py27` | [Website](https://python-pillow.org) | Pillow is a friendly PIL (Python Imaging Library) fork. 
 **molecular visualization** | <a id="pymol" class="soft_anch">`pymol`</a>^<b class="lic"></b>^ | -&nbsp;`1.8.6.2` | [Website](https://pymol.org) | PyMOL is a Python-enhanced molecular graphics tool. 
@@ -363,7 +365,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **data** | <a id="h5utils" class="soft_anch">`h5utils`</a> | -&nbsp;`1.12.1` | [Website](http://ab-initio.mit.edu/wiki/index.php/H5utils) | h5utils is a set of utilities for visualization and conversion of scientific data in the free, portable HDF5 format. 
 **data** | <a id="hdf5" class="soft_anch">`hdf5`</a> | -&nbsp;`1.10.0p1`<br/>-&nbsp;`1.10.2` | [Website](https://www.hdfgroup.org/hdf5) | HDF5 is a data model, library, and file format for storing and managing data. It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O and for high volume and complex data. 
 **data** | <a id="hiredis" class="soft_anch">`hiredis`</a> | -&nbsp;`0.13.3` | [Website](https://github.com/redis/hiredis) | Hiredis is a minimalistic C client library for the Redis database. 
-**data** | <a id="ncl" class="soft_anch">`ncl`</a> | -&nbsp;`6.4.0` | [Website](http://www.ncl.ucar.edu/) | NCL is a free interpreted language designed specifically for scientific data processing and visualization. 
+**data** | <a id="ncl" class="soft_anch">`ncl`</a> | -&nbsp;`6.4.0`<br/>-&nbsp;`6.6.2` | [Website](http://www.ncl.ucar.edu/) | NCL is a free interpreted language designed specifically for scientific data processing and visualization. 
 **data** | <a id="nco" class="soft_anch">`nco`</a> | -&nbsp;`4.8.0` | [Website](http://nco.sourceforge.net/) | The NCO toolkit manipulates and analyzes data stored in netCDF-accessible formats. 
 **data** | <a id="netcdf" class="soft_anch">`netcdf`</a> | -&nbsp;`4.4.1.1` | [Website](https://www.unidata.ucar.edu/software/netcdf) | NetCDF is a set of software libraries and self-describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. 
 **data** | <a id="pnetcdf" class="soft_anch">`pnetcdf`</a> | -&nbsp;`1.8.1` | [Website](http://cucis.ece.northwestern.edu/projects/PnetCDF/) | Parallel netCDF (PnetCDF) is a parallel I/O library for accessing NetCDF files in CDF-1, 2, and 5 formats. 
