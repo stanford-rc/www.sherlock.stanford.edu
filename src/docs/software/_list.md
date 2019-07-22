@@ -1,10 +1,10 @@
 
 ## Categories
 
-*As of Friday, July 19 2019, we provide 542 software packages, in 7 categories, covering 65 fields of science:*
+*As of Monday, July 22 2019, we provide 544 software packages, in 7 categories, covering 66 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
-* [`system`](#system) <small>benchmark, benchmarks, compression, containers, database, doc, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
+* [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, climate modeling, geophysics, geoscience, materials science, photonics</small>
 * [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, pathology, phylogenetics</small>
@@ -57,6 +57,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 ### System
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
+**backup** | <a id="restic" class="soft_anch">`restic`</a> | -&nbsp;`0.9.5` | [Website](https://restic.net) | Fast, secure, efficient backup program. 
 **benchmark** | <a id="hp2p" class="soft_anch">`hp2p`</a> | -&nbsp;`3.2` | [Website](https://github.com/cea-hpc/hp2p) | Heavy Peer To Peer: a MPI based benchmark for network diagnostic. 
 **benchmark** | <a id="mprime" class="soft_anch">`mprime`</a> | -&nbsp;`29.4` | [Website](https://www.mersenne.org/) | mprime is used by GIMPS, a distributed computing project dedicated to finding new Mersenne prime numbers, and which is commonly used as a stability testing utility. 
 **benchmarks** | <a id="osu-micro-benchmarks" class="soft_anch">`osu-micro-benchmarks`</a> | -&nbsp;`5.6.1` | [Website](http://mvapich.cse.ohio-state.edu/benchmarks/) | The OSU MicroBenchmarks carry out a variety of message passing performance tests using MPI. 
@@ -238,7 +239,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **statistics** | <a id="r-rstan" class="soft_anch">`r-rstan`</a> | -&nbsp;`2.17.3` | [Website](http://mc-stan.org/users/interfaces/rstan) | RStan is the R interface to Stan, an open-source software for facilitating statistical inference at the frontiers of applied statistics. 
 **statistics** | <a id="rstudio" class="soft_anch">`rstudio`</a> | -&nbsp;`1.1.423` | [Website](http://www.rstudio.com) | RStudio is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management. 
 **statistics** | <a id="sas" class="soft_anch">`sas`</a>^<b class="lic"></b>^ | -&nbsp;`9.4` | [Website](http://www.sas.com/) | SAS is a software suite developed by SAS Institute for advanced analytics, multivariate analyses, business intelligence, data management, and predictive analytics. 
-**statistics** | <a id="stata" class="soft_anch">`stata`</a>^<b class="lic"></b>^ | -&nbsp;`14`<br/>-&nbsp;`15` | [Website](https://www.stata.com) | Stata is a complete, integrated statistical software package that provides everything you need for data analysis, data management, and graphics. 
+**statistics** | <a id="stata" class="soft_anch">`stata`</a>^<b class="lic"></b>^ | -&nbsp;`14`<br/>-&nbsp;`16`<br/>-&nbsp;`15` | [Website](https://www.stata.com) | Stata is a complete, integrated statistical software package that provides everything you need for data analysis, data management, and graphics. 
 **symbolic** | <a id="libmatheval" class="soft_anch">`libmatheval`</a> | -&nbsp;`1.1.11` | [Website](https://www.gnu.org/software/libmatheval/) | GNU libmatheval is a library (callable from C and Fortran) to parse and evaluate symbolic expressions input as text. 
 **symbolic** | <a id="py-sympy" class="soft_anch">`py-sympy`</a> | -&nbsp;`1.1.1_py27`<br/>-&nbsp;`1.1.1_py36` | [Website](http://www.sympy.org) | SymPy is a Python library for symbolic mathematics. 
 
