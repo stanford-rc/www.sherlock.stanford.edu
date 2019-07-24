@@ -1,10 +1,10 @@
 
 ## Categories
 
-*As of Monday, July 22 2019, we provide 544 software packages, in 7 categories, covering 66 fields of science:*
+*As of Wednesday, July 24 2019, we provide 547 software packages, in 7 categories, covering 67 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
-* [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
+* [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
 * [`physics`](#physics) <small>astronomy, climate modeling, geophysics, geoscience, materials science, photonics</small>
 * [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, pathology, phylogenetics</small>
@@ -79,6 +79,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **database** | <a id="postgresql" class="soft_anch">`postgresql`</a> | -&nbsp;`10.5` | [Website](https://postgresql.org) | PostgreSQL is a powerful, open source object-relational database system with a strong focus on reliability, feature robustness, and performance. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/postgresql)
 **database** | <a id="sqlite" class="soft_anch">`sqlite`</a> | -&nbsp;`3.18.0` | [Website](https://www.sqlite.org) | SQLite is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. 
 **doc** | <a id="texinfo" class="soft_anch">`texinfo`</a> | -&nbsp;`6.6` | [Website](https://www.gnu.org/software/texinfo/) | Texinfo is the official documentation format of the GNU project. 
+**document management** | <a id="pandoc" class="soft_anch">`pandoc`</a> | -&nbsp;`2.7.3` | [Website](https://pandoc.org) | Pandoc is a universal document converter. 
 **document processing** | <a id="lyx" class="soft_anch">`lyx`</a> | -&nbsp;`2.3.2` | [Website](http://www.lyx.org) | LyX is a document processor. 
 **document processing** | <a id="texlive" class="soft_anch">`texlive`</a> | -&nbsp;`2019` | [Website](https://www.tug.org/texlive/) | TeX Live is an easy way to get up and running with the TeX document production system. 
 **file management** | <a id="duc" class="soft_anch">`duc`</a> | -&nbsp;`1.4.4` | [Website](https://duc.zevv.nl) | Duc is a collection of tools for indexing, inspecting and visualizing disk usage. 
@@ -301,6 +302,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **genomics** | <a id="salmon" class="soft_anch">`salmon`</a> | -&nbsp;`0.12.0` | [Website](https://combine-lab.github.io/salmon) | Highly-accurate & wicked fast transcript-level quantification from RNA-seq reads using lightweight alignments. 
 **genomics** | <a id="samtools" class="soft_anch">`samtools`</a> | -&nbsp;`1.6`<br/>-&nbsp;`1.8` | [Website](https://github.com/samtools/samtools) | Tools (written in C using htslib) for manipulating next-generation sequencing data. 
 **genomics** | <a id="sentieon" class="soft_anch">`sentieon`</a>^<b class="lic"></b>^ | -&nbsp;`201808.01` | [Website](https://www.sentieon.com/) | Sentieon Genomics software is a set of software tools that perform analysis of genomic data obtained from DNA sequencing. 
+**genomics** | <a id="shapeit" class="soft_anch">`shapeit`</a> | -&nbsp;`4.0.0` | [Website](https://odelaneau.github.io/shapeit4/) | SHAPEIT4 is a fast and accurate method for estimation of haplotypes (aka phasing) for SNP array and high coverage sequencing data. 
 **genomics** | <a id="star" class="soft_anch">`star`</a> | -&nbsp;`2.5.4b` | [Website](https://github.com/alexdobin/STAR) | STAR: ultrafast universal RNA-seq aligner. 
 **genomics** | <a id="tophat" class="soft_anch">`tophat`</a> | -&nbsp;`2.1.1` | [Website](http://ccb.jhu.edu/software/tophat/index.shtml) | TopHat is a fast splice junction mapper for RNA-Seq reads. 
 **genomics** | <a id="trim_galore" class="soft_anch">`trim_galore`</a> | -&nbsp;`0.5.0` | [Website](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/) | Trim Galore! is a wrapper script to automate quality and adapter trimming as well as quality control, with some added functionality to remove biased methylation positions for RRBS sequence files. 
@@ -385,6 +387,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **language** | <a id="erlang" class="soft_anch">`erlang`</a> | -&nbsp;`21.3` | [Website](http://erlang.org/) | Erlang is a programming language used to build massively scalable soft real-time systems with requirements on high availability. 
 **language** | <a id="go" class="soft_anch">`go`</a> | -&nbsp;`1.9` | [Website](http://golang.org) | Go is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
 **language** | <a id="guile" class="soft_anch">`guile`</a> | -&nbsp;`2.0.11`<br/>-&nbsp;`2.2.2` | [Website](https://www.gnu.org/software/guile/) | GNU Guile is the preferred extension system for the GNU Project, which features an implementation of the Scheme programming language. 
+**language** | <a id="haskell" class="soft_anch">`haskell`</a> | -&nbsp;`8.6.5` | [Website](https://www.haskell.org/) | Haskell is a statically typed, purely functional programming language with type inference and lazy evaluation. 
 **language** | <a id="java" class="soft_anch">`java`</a> | -&nbsp;`1.8.0_131` | [Website](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. 
 **language** | <a id="julia" class="soft_anch">`julia`</a> | -&nbsp;`0.6.4`<br/>-&nbsp;`1.0.0`<br/>-&nbsp;`1.1.0` | [Website](https://julialang.org) | Julia is a high-level, high-performance dynamic programming language for numerical computing. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/julia)
 **language** | <a id="lua" class="soft_anch">`lua`</a> | -&nbsp;`5.3.4` | [Website](https://www.lua.org) | Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description. 
@@ -398,7 +401,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **language** | <a id="py-jupyter" class="soft_anch">`py-jupyter`</a> | -&nbsp;`1.0.0_py36`<br/>-&nbsp;`1.0.0_py27` | [Website](https://jupyter.org) | Jupyter is a browser-based interactive notebook for programming, mathematics, and data science. It supports a number of languages via plugins. 
 **language** | <a id="python" class="soft_anch">`python`</a> | -&nbsp;`3.6.1`<br/>-&nbsp;`2.7.13` | [Website](https://www.python.org) | Python is an interpreted, interactive, object-oriented programming language. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/python)
 **language** | <a id="ruby" class="soft_anch">`ruby`</a> | -&nbsp;`2.4.1` | [Website](https://www.ruby-lang.org) | A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. 
-**language** | <a id="rust" class="soft_anch">`rust`</a> | -&nbsp;`1.35.0` | [Website](https://www.rust-lang.org/) | The GNU Compiler Collection includes front ends for C, C++, Fortran, Java, and Go, as well as libraries for these languages (libstdc++, libgcj,...). 
+**language** | <a id="rust" class="soft_anch">`rust`</a> | -&nbsp;`1.35.0` | [Website](https://www.rust-lang.org/) | A language empowering everyone to build reliable and efficient software. 
 **language** | <a id="scala" class="soft_anch">`scala`</a> | -&nbsp;`2.12.6` | [Website](https://www.scala-lang.org) | Scala combines object-oriented and functional programming in one concise, high-level language. 
 **lib** | <a id="ant" class="soft_anch">`ant`</a> | -&nbsp;`1.10.1` | [Website](https://ant.apache.org/) | Apache Ant is a Java library and command-line tool whose mission is to drive processes described in build files as targets and extension points dependent upon each other. 
 **lib** | <a id="boost" class="soft_anch">`boost`</a> | -&nbsp;`1.64.0`<br/>-&nbsp;`1.69.0` | [Website](http://www.boost.org) | Boost is a set of libraries for the C++ programming language that provide support for tasks and structures such as linear algebra, pseudorandom number generation, multithreading, image processing, regular expressions, and unit testing. 
