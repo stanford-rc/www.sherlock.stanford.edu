@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, July 24 2019, we provide 547 software packages, in 7 categories, covering 67 fields of science:*
+*As of Wednesday, July 24 2019, we provide 548 software packages, in 7 categories, covering 67 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -334,7 +334,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **computational chemistry** | <a id="libxc" class="soft_anch">`libxc`</a> | -&nbsp;`3.0.0` | [Website](http://octopus-code.org/wiki/Libxc) | Libxc is a library of exchange-correlation functionals for density-functional theory. 
 **computational chemistry** | <a id="nwchem" class="soft_anch">`nwchem`</a> | -&nbsp;`6.8` | [Website](http://www.nwchem-sw.org) | NWChem is an ab initio computational chemistry software package which also includes quantum chemical and molecular dynamics functionality. 
 **computational chemistry** | <a id="py-ase" class="soft_anch">`py-ase`</a> | -&nbsp;`3.14.1_py27` | [Website](https://wiki.fysik.dtu.dk/ase/) | The Atomic Simulation Environment (ASE) is a set of tools and Python modules for setting up, manipulating, running, visualizing and analyzing atomistic simulations. 
-**computational chemistry** | <a id="schrodinger" class="soft_anch">`schrodinger`</a>^<b class="lic"></b>^ | -&nbsp;`2017-3`<br/>-&nbsp;`2018-1`<br/>-&nbsp;`2018-2` | [Website](https://www.schrodinger.com) | Schrödinger Suites (Small-molecule Drug Discovery Suite, Material Science Suite, Biologics Suite) provide a set of molecular modelling software. 
+**computational chemistry** | <a id="schrodinger" class="soft_anch">`schrodinger`</a>^<b class="lic"></b>^ | -&nbsp;`2017-3`<br/>-&nbsp;`2018-1`<br/>-&nbsp;`2018-2`<br/>-&nbsp;`2019-2` | [Website](https://www.schrodinger.com) | Schrödinger Suites (Small-molecule Drug Discovery Suite, Material Science Suite, Biologics Suite) provide a set of molecular modelling software. 
 **computational chemistry** | <a id="vasp" class="soft_anch">`vasp`</a>^<b class="lic"></b>^ | -&nbsp;`5.4.1` | [Website](https://www.vasp.at) | The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic scale materials modelling, e.g. electronic structure calculations and quantum-mechanical molecular dynamics, from first principles. 
 **cristallography** | <a id="vesta" class="soft_anch">`vesta`</a> | -&nbsp;`3.4.4` | [Website](http://jp-minerals.org/vesta/en/) | VESTA is a 3D visualization program for structural models, volumetric data such as electron/nuclear densities, and crystal morphologies. 
 **electrostatics** | <a id="apbs" class="soft_anch">`apbs`</a> | -&nbsp;`1.5` | [Website](http://www.poissonboltzmann.org/) | APBS solves the equations of continuum electrostatics for large biomolecular assemblages. 
