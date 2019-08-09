@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, July 24 2019, we provide 548 software packages, in 7 categories, covering 67 fields of science:*
+*As of Friday, August 09 2019, we provide 553 software packages, in 7 categories, covering 68 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -9,7 +9,7 @@
 * [`physics`](#physics) <small>astronomy, climate modeling, geophysics, geoscience, materials science, photonics</small>
 * [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, pathology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>cheminformatics, computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
-* [`devel`](#devel) <small>build, compiler, data, data analytics, debug, framework, language, lib, mpi, networking, parser, sdk</small>
+* [`devel`](#devel) <small>build, compiler, data, data analytics, debug, framework, language, lib, mpi, networking, parser, runtime, sdk</small>
 
 
 !!! warning "Licensed software"
@@ -60,6 +60,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **backup** | <a id="restic" class="soft_anch">`restic`</a> | -&nbsp;`0.9.5` | [Website](https://restic.net) | Fast, secure, efficient backup program. 
 **benchmark** | <a id="hp2p" class="soft_anch">`hp2p`</a> | -&nbsp;`3.2` | [Website](https://github.com/cea-hpc/hp2p) | Heavy Peer To Peer: a MPI based benchmark for network diagnostic. 
 **benchmark** | <a id="mprime" class="soft_anch">`mprime`</a> | -&nbsp;`29.4` | [Website](https://www.mersenne.org/) | mprime is used by GIMPS, a distributed computing project dedicated to finding new Mersenne prime numbers, and which is commonly used as a stability testing utility. 
+**benchmarks** | <a id="mpibench" class="soft_anch">`mpibench`</a> | -&nbsp;`20190729` | [Website](https://github.com/LLNL/mpiBench) | Times MPI collectives over a series of message sizes. 
 **benchmarks** | <a id="osu-micro-benchmarks" class="soft_anch">`osu-micro-benchmarks`</a> | -&nbsp;`5.6.1` | [Website](http://mvapich.cse.ohio-state.edu/benchmarks/) | The OSU MicroBenchmarks carry out a variety of message passing performance tests using MPI. 
 **compression** | <a id="libarchive" class="soft_anch">`libarchive`</a> | -&nbsp;`3.3.2` | [Website](https://www.libarchive.org/) | The libarchive project develops a portable, efficient C library that can read and write streaming archives in a variety of formats. 
 **compression** | <a id="libzip" class="soft_anch">`libzip`</a> | -&nbsp;`1.5.1` | [Website](http://libzip.org) | libzip is a C library for reading, creating, and modifying zip archives. 
@@ -90,7 +91,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **file transfer** | <a id="gdrive" class="soft_anch">`gdrive`</a> | -&nbsp;`2.1.0` | [Website](https://github.com/prasmussen/gdrive) | gdrive is a command line utility for interacting with Google Drive. 
 **file transfer** | <a id="gsutil" class="soft_anch">`gsutil`</a> | -&nbsp;`4.31` | [Website](https://cloud.google.com/storage/docs/gsutil) | gsutil is a Python application that lets you access Cloud Storage from the command line. 
 **file transfer** | <a id="lftp" class="soft_anch">`lftp`</a> | -&nbsp;`4.8.1` | [Website](https://lftp.yar.ru/) | LFTP is a sophisticated file transfer program supporting a number of network protocols (ftp, http, sftp, fish, torrent). 
-**file transfer** | <a id="mpifileutils" class="soft_anch">`mpifileutils`</a> | -&nbsp;`20170210` | [Website](https://github.com/hpc/mpifileutils) | mpiFileUtils is a suite of MPI-based tools to manage large datasets, which may vary from large directory trees to large files. 
+**file transfer** | <a id="mpifileutils" class="soft_anch">`mpifileutils`</a> | -&nbsp;`0.9.1`<br/>-&nbsp;`20170210` | [Website](https://github.com/hpc/mpifileutils) | mpiFileUtils is a suite of MPI-based tools to manage large datasets, which may vary from large directory trees to large files. 
 **file transfer** | <a id="py-globus-cli" class="soft_anch">`py-globus-cli`</a> | -&nbsp;`1.2.0`<br/>-&nbsp;`1.9.0_py27`<br/>-&nbsp;`1.9.0_py36` | [Website](https://github.com/globus/globus-cli) | A command line wrapper over the Globus SDK for Python. 
 **file transfer** | <a id="rclone" class="soft_anch">`rclone`</a> | -&nbsp;`1.39`<br/>-&nbsp;`1.43.1` | [Website](https://rclone.org) | Rclone is a command line program to sync files and directories to and from: Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon Drive, Microsoft One Drive, Hubic, Backblaze B2, Yandex Disk, or the local filesystem. 
 **framework** | <a id="mono" class="soft_anch">`mono`</a> | -&nbsp;`5.12.0.301`<br/>-&nbsp;`5.20.1.19` | [Website](https://www.mono-project.com) | Mono is an open source implementation of Microsoft's .NET Framework based on the ECMA standards for C# and the Common Language Runtime. 
@@ -206,7 +207,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **numerical analysis** | <a id="matlab" class="soft_anch">`matlab`</a>^<b class="lic"></b>^ | -&nbsp;`R2017a`<br/>-&nbsp;`R2017b`<br/>-&nbsp;`R2018a`<br/>-&nbsp;`R2019a` | [Website](https://www.mathworks.com/products/matlab.html) | MATLAB is a multi-paradigm numerical computing environment and proprietary programming language developed by MathWorks. 
 **numerical analysis** | <a id="octave" class="soft_anch">`octave`</a> | -&nbsp;`4.2.1` | [Website](https://www.gnu.org/software/octave/) | GNU Octave is a high-level language primarily intended for numerical computations. 
 **numerical library** | <a id="arpack" class="soft_anch">`arpack`</a> | -&nbsp;`3.5.0` | [Website](https://github.com/opencollab/arpack-ng) | Collection of Fortran77 subroutines designed to solve large scale eigenvalue problems. 
-**numerical library** | <a id="fftw" class="soft_anch">`fftw`</a> | -&nbsp;`3.3.6` | [Website](http://www.fftw.org/) | The Fastest Fourier Transform in the West (FFTW) is a software library for computing discrete Fourier transforms (DFTs). 
+**numerical library** | <a id="fftw" class="soft_anch">`fftw`</a> | -&nbsp;`3.3.6`<br/>-&nbsp;`3.3.8` | [Website](http://www.fftw.org/) | The Fastest Fourier Transform in the West (FFTW) is a software library for computing discrete Fourier transforms (DFTs). 
 **numerical library** | <a id="glpk" class="soft_anch">`glpk`</a> | -&nbsp;`4.63` | [Website](http://www.openblas.net/) | The GLPK (GNU Linear Programming Kit) package is intended for solving large-scale linear programming (LP), mixed integer programming (MIP), and other related problems. 
 **numerical library** | <a id="gmp" class="soft_anch">`gmp`</a> | -&nbsp;`6.1.2` | [Website](https://gmplib.org) | GMP is a free library for arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating-point numbers. 
 **numerical library** | <a id="gsl" class="soft_anch">`gsl`</a> | -&nbsp;`1.16`<br/>-&nbsp;`2.3` | [Website](https://www.gnu.org/software/gsl) | The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers. The library provides a wide range of mathematical routines such as random number generators, special functions and least-squares fitting. 
@@ -383,7 +384,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **debug** | <a id="valgrind" class="soft_anch">`valgrind`</a> | -&nbsp;`3.14.0` | [Website](http://valgrind.org/) | Valgrind is an instrumentation framework for building dynamic analysis tools. 
 **framework** | <a id="dotnet" class="soft_anch">`dotnet`</a> | -&nbsp;`2.1.500` | [Website](https://dotnet.microsoft.com/) | .NET is a free, cross-platform, open source developer platform for building many different types of applications. 
 **language** | <a id="chapel" class="soft_anch">`chapel`</a> | -&nbsp;`1.19.0` | [Website](https://chapel-lang.org/) | Chapel is a modern programming language designed for productive parallel computing at scale. 
-**language** | <a id="cuda" class="soft_anch">`cuda`</a> | -&nbsp;`8.0.61`<br/>-&nbsp;`9.1.85`<br/>-&nbsp;`9.2.88`<br/>-&nbsp;`9.2.148`<br/>-&nbsp;`10.0.130`<br/>-&nbsp;`10.1.105`<br/>-&nbsp;`9.0.176` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
+**language** | <a id="cuda" class="soft_anch">`cuda`</a> | -&nbsp;`8.0.61`<br/>-&nbsp;`9.1.85`<br/>-&nbsp;`9.2.88`<br/>-&nbsp;`9.2.148`<br/>-&nbsp;`10.0.130`<br/>-&nbsp;`10.1.105`<br/>-&nbsp;`10.1.168`<br/>-&nbsp;`9.0.176` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
 **language** | <a id="erlang" class="soft_anch">`erlang`</a> | -&nbsp;`21.3` | [Website](http://erlang.org/) | Erlang is a programming language used to build massively scalable soft real-time systems with requirements on high availability. 
 **language** | <a id="go" class="soft_anch">`go`</a> | -&nbsp;`1.9` | [Website](http://golang.org) | Go is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
 **language** | <a id="guile" class="soft_anch">`guile`</a> | -&nbsp;`2.0.11`<br/>-&nbsp;`2.2.2` | [Website](https://www.gnu.org/software/guile/) | GNU Guile is the preferred extension system for the GNU Project, which features an implementation of the Scheme programming language. 
@@ -431,4 +432,5 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **networking** | <a id="libfabric" class="soft_anch">`libfabric`</a> | -&nbsp;`1.6.0`<br/>-&nbsp;`1.6.2`<br/>-&nbsp;`1.7.1` | [Website](https://ofiwg.github.io/libfabric/) | The Open Fabrics Interfaces (OFI) is a framework focused on exporting fabric communication services to applications. Libfabric is the library that defines and exports the user-space API of OFI. 
 **networking** | <a id="ucx" class="soft_anch">`ucx`</a> | -&nbsp;`1.2.1`<br/>-&nbsp;`1.4.0`<br/>-&nbsp;`1.3.1` | [Website](http://www.openucx.org) | UCX is a communication library implementing high-performance messaging for MPI/PGAS frameworks. 
 **parser** | <a id="xerces-c" class="soft_anch">`xerces-c`</a> | -&nbsp;`3.2.1` | [Website](https://xerces.apache.org/xerces-c/index.html) | Xerces-C++ is a validating XML parser written in a portable subset of C++. 
+**runtime** | <a id="starpu" class="soft_anch">`starpu`</a> | -&nbsp;`1.3.2` | [Website](https://gforge.inria.fr/projects/starpu/) | StarPU is a unified runtime system that offers support for heterogeneous multicore architectures 
 **sdk** | <a id="google-cloud-sdk" class="soft_anch">`google-cloud-sdk`</a> | -&nbsp;`240.0.0` | [Website](https://cloud.google.com/sdk) | Command-line interface for Google Cloud Platform products and services. 
