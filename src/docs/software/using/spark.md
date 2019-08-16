@@ -46,7 +46,7 @@ task within that allocation:
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=8
 #SBATCH --time=10
-
+module load java
 module load spark
 
 # This syntax tells spark to use all cpu cores on the node.
