@@ -104,7 +104,25 @@ editor][url_texteditors] such as `nano` or `vim`, and save it as `submit.sh`.
     Slurm will ignore all `#SBATCH` directives after the first non-comment
     line.  Always put your `#SBATCH` parameters at the top of your batch
     script.
+!!! warning "Spaces in parameters will cause SLURM directives to be ignored"
 
+    Slurm will ignore all `#SBATCH` directives after the first line containing 
+    white space.  For example-
+    
+    `#SBATCH --job-name=Big simulation`
+    
+    will cause all #SBATCH directives below this line to be ignored and the job 
+    will be submitted with all default parameters.  On Sherlock that is
+    2 hours, normal partition, 4 GB memory and one CPU
+    
+    Always used "-"s or "_"s  For example-
+    `#SBATCH --job-name=Big_simulation`
+    
+    This is also true for all parameters passed to `#SBATCH`
+    For example-
+    #SBATCH --mem=16G B
+    will cause the sbatch to fail silently and resort to running the with all default parameters.
+    
 ### Job submission
 
 Once the submission script is written properly, you can submit it to the
