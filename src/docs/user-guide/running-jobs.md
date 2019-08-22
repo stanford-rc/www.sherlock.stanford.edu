@@ -25,6 +25,32 @@ Acceptable use of login nodes include:
     CPU time, memory and run time) exceed those limits.
 
 
+## Resource Limits
+
+There are CPU, memory, time and job limits on Sherlock. 
+
+ 
+|   Name |    MaxTRESPU |  MaxSubmitPU | MaxJobsPU |    MaxWall  |   MaxTRESPA  | MaxSubmitPA  
+| ---------- | ------- |  ----------- | --------- | ----------- | ------------- | ----------- |
+normal  |     cpu=256   |     1000   |   |      2-00:00:00 |      cpu=512  |      2000 
+dev | cpu=4,mem=16G   |        2   |       |    02:00:00  |   cpu=99999  |        32 
+long  |      cpu=32     |     20      |  16  | 7-00:00:00      |    |              40 
+bigmem  |      mem=3T     |     10    |   |     1-00:00:00    |    mem=6T    |      20 
+gpu  |  gres/gpu=8     |     50       |   |  2-00:00:00  | gres/gpu=24    |     100
+owner  |  cpu=99999     |   3000       |   |  7-00:00:00   |  cpu=99999     |   5000
+owners  |    cpu=8192     |   3000       |  |   2-00:00:00   |   cpu=8192     |   5000 
+
+For example, on the normal partition a user can use a maximum of 256 CPUs, submit a maximum of 1000 jobs for up to 2 days.  A user's PI acount can run a maximum of 512 CPUs at once and submit up to 2000 jobs.  More information on the values:
+
+```
+man sacctmgr
+```
+
+To find the most current limits:
+```
+sacctmgr show qos format=Name,MaxTRESPerUser,MaxSubmitJobsPerUser,MaxJobsPerUser,MaxWall,MaxTRESPA,MaxSubmitJobsPerAccount
+```
+
 ## Slurm commands
 
 Slurm allows requesting resources and submitting jobs in a variety of ways. The
