@@ -203,7 +203,7 @@ The table below summarizes the advantages and inconvenients of each approach:
 | Dedicated resources for the task      | <b class="no">:fa-times:</b> | <b class="yes">:fa-check:</b> |
 | Persistent across node redeployments  | <b class="no">:fa-times:</b> | <b class="yes">:fa-check:</b> |
 | Unique, controlled execution          | <b class="no">:fa-times:</b> | <b class="yes">:fa-check:</b> |
-| Potential execution delay             | <b class="yes">:fa-check:</b> | <b class="no">:fa-times:</b> |
+| Precise schedule                      | <b class="yes">:fa-check:</b> | <b class="no">:fa-times:</b> |
 
 ### Example
 
