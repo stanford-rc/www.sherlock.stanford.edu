@@ -339,7 +339,7 @@ done
 
 !!! danger "Long running processes need to run in the background"
 
-    If your job's actual paylod (the application or command you want to run) is
+    If your job's actual payload (the application or command you want to run) is
     running continuously for the whole duration of the job, it needs to be
     executed in the background, so the trap can be processed.
 
@@ -423,7 +423,7 @@ Mon Nov  5 10:38:11 PST 2018: normal execution
 Mon Nov  5 10:39:11 PST 2018: normal execution
 ```
 
-The job runs for 5 minutes, then received the `SIGUSR`` signal, is re-queued,
+The job runs for 5 minutes, then received the `SIGUSR1` signal, is re-queued,
 restarts for 5 minutes, and so on, until it's properly `scancel`led.
 
 
