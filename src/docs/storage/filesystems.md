@@ -14,7 +14,7 @@ the Sherlock's filesystems.
 | ----------------- | --- |
 | **Type**          | Isilon high speed NFS file system |
 | **Quota**         | 15 GB for the whole `$HOME` directory |
-| **Snapshots**     | yes *(cf. [Snapshots](data-protection#snapshots) for more info)* |
+| **Snapshots**     | yes *(cf. [Snapshots][url_snapshots]) for more info)* |
 | **Backups**       | off-site replication |
 | **Purge policy**  | not purged |
 | **Scope**         | all login and compute nodes |
@@ -56,7 +56,7 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 | ----------------- | --- |
 | **Type**          | Isilon high speed NFS file system |
 | **Quota**         | 1 TB for the whole `$GROUP_HOME` directory |
-| **Snapshots**     | yes *(cf. [Snapshots](data-protection#snapshots) for more info)* |
+| **Snapshots**     | yes *(cf. [Snapshots][url_snapshots]) for more info)* |
 | **Backups**       | off-site replication |
 | **Purge policy**  | not purged |
 | **Scope**         | all login and compute nodes |
@@ -372,6 +372,7 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 [url_oak]:              https://oak-storage.stanford.edu
 [url_oak_snap]:         https://srcc.stanford.edu/oak-rsnapshot
 [url_check_quotas]:     /docs/storage/#checking-quotas
+[url_snapshots]:        /docs/storage/data-protection/#snapshots
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
