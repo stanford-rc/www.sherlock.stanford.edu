@@ -209,7 +209,7 @@ need a real password, though. So please make sure to replace the
     MariaDB. Note that anybody knowing that password will be allowed to connect
     to your MariaDB instances and modify data in the tables.
 
-    * do **NOT** use `my-secure-password`
+    * do **NOT** literally use `my-secure-password`
     * do **NOT** use your SUNet ID password
 
 Once you've chosen your password, you can start the `mysqld` process on a
@@ -308,9 +308,6 @@ MariaDB [(none)]>
 That's it! You can now run SQL queries from anywhere on Sherlock to your own
 MariaDB instance.
 
-
-
-!!! tip "SQL data is persistent"
 
 ### Persistent DB instances
 
