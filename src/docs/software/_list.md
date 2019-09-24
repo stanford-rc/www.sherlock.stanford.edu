@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, September 13 2019, we provide 558 software packages, in 7 categories, covering 68 fields of science:*
+*As of Tuesday, September 24 2019, we provide 563 software packages, in 7 categories, covering 68 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -160,8 +160,10 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="py-pygobject" class="soft_anch">`py-pygobject`</a> | `3.32.2_py36` | [Website](https://pygobject.readthedocs.io/) | PyGObject is a Python package which provides bindings for GObject based libraries such as GTK, GStreamer, WebKitGTK, GLib, GIO and many more. 
 **libs** | <a id="py-pyqt5" class="soft_anch">`py-pyqt5`</a> | `5.9.1_py36` | [Website](https://www.riverbankcomputing.com/software/pyqt/) | PyQt5 is a comprehensive set of Python bindings for Qt v5. 
 **libs** | <a id="readline" class="soft_anch">`readline`</a> | `7.0` | [Website](https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html) | The GNU Readline library provides a set of functions for use by applications that allow users to edit command lines as they are typed in. 
+**libs** | <a id="serf" class="soft_anch">`serf`</a> | `1.3.9` | [Website](https://serf.apache.org/) | The serf library is a high performance C-based HTTP client library built upon the Apache Portable Runtime (APR) library. 
 **libs** | <a id="snappy" class="soft_anch">`snappy`</a> | `1.1.7` | [Website](https://github.com/google/snappy) | A fast compressor/decompressor. 
 **libs** | <a id="talloc" class="soft_anch">`talloc`</a> | `2.1.14` | [Website](https://talloc.samba.org) | talloc is a hierarchical, reference counted memory pool system with destructors. 
+**libs** | <a id="utf8proc" class="soft_anch">`utf8proc`</a> | `2.4.0` | [Website](https://juliastrings.github.io/utf8proc/) | iutf8proc is a small, clean C library that provides Unicode normalization, case-folding, and other operations for data in the UTF-8 encoding. 
 **media** | <a id="ffmpeg" class="soft_anch">`ffmpeg`</a> | `4.0` | [Website](https://www.ffmpeg.org) | FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. 
 **media** | <a id="libsndfile" class="soft_anch">`libsndfile`</a> | `1.0.28` | [Website](http://www.mega-nerd.com/libsndfile) | Libsndfile is a C library for reading and writing files containing sampled sound (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface. 
 **performance** | <a id="likwid" class="soft_anch">`likwid`</a> | `4.3.2` | [Website](https://github.com/RRZE-HPC/likwid) | Likwid is a simple toolsuite of command line applications for performance oriented programmers. 
@@ -170,7 +172,8 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **scm** | <a id="git" class="soft_anch">`git`</a> | `2.12.2` | [Website](http://git-scm.com) | Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. 
 **scm** | <a id="git-lfs" class="soft_anch">`git-lfs`</a> | `2.4.0` | [Website](https://git-lfs.github.com/) | Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server. 
 **scm** | <a id="mercurial" class="soft_anch">`mercurial`</a> | `4.5.3` | [Website](https://www.mercurial-scm.org/) | Mercurial is a free, distributed source control management tool. 
-**scm** | <a id="subversion" class="soft_anch">`subversion`</a> | `1.9.7` | [Website](https://subversion.apache.org/) | Subversion is an open source version control system. 
+**scm** | <a id="subversion" class="soft_anch">`subversion`</a> | `1.9.7`<br/>`1.12.2` | [Website](https://subversion.apache.org/) | Subversion is an open source version control system. 
+**tools** | <a id="clinfo" class="soft_anch">`clinfo`</a> | `2.2.18.04.06` | [Website](https://github.com/Oblomov/clinfo) | clinfo is a simple command-line application that enumerates all possible (known) properties of the OpenCL platform and devices available on the system. 
 **tools** | <a id="curl" class="soft_anch">`curl`</a> | `7.54.0` | [Website](https://curl.haxx.se/) | curl is an open source command line tool and library for transferring data with URL syntax. 
 **tools** | <a id="expat" class="soft_anch">`expat`</a> | `2.2.3` | [Website](http://libexpat.github.io) | Expat is a stream-oriented XML parser library written in C. 
 **tools** | <a id="graphicsmagick" class="soft_anch">`graphicsmagick`</a> | `1.3.26` | [Website](http://www.graphicsmagick.org/) | GraphicsMagick is the swiss army knife of image processing. 
@@ -313,7 +316,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **genomics** | <a id="vcflib" class="soft_anch">`vcflib`</a> | `1.0.0` | [Website](https://github.com/vcflib/vcflib) | A C++ library for parsing and manipulating VCF files. 
 **genomics** | <a id="vcftools" class="soft_anch">`vcftools`</a> | `0.1.15` | [Website](https://vcftools.github.io) | VCFtools is a program package designed for working with VCF files, such as those generated by the 1000 Genomes Project. 
 **neurology** | <a id="afni" class="soft_anch">`afni`</a> | `17.2.07`<br/>`18.2.04` | [Website](https://afni.nimh.nih.gov) | AFNI (Analysis of Functional NeuroImages) is a set of C programs for processing, analyzing, and displaying functional MRI (FMRI) data - a technique for mapping human brain activity. 
-**neurology** | <a id="ants" class="soft_anch">`ants`</a> | `2.1.0` | [Website](https://stnava.github.io/ANTs) | ANTs computes high-dimensional mappings to capture the statistics of brain structure and function. 
+**neurology** | <a id="ants" class="soft_anch">`ants`</a> | `2.1.0`<br/>`2.3.1` | [Website](https://stnava.github.io/ANTs) | ANTs computes high-dimensional mappings to capture the statistics of brain structure and function. 
 **neurology** | <a id="dcm2niix" class="soft_anch">`dcm2niix`</a> | `1.0.20171215` | [Website](https://github.com/rordenlab/dcm2niix) | dcm2niix is a program esigned to convert neuroimaging data from the DICOM format to the NIfTI format. 
 **neurology** | <a id="freesurfer" class="soft_anch">`freesurfer`</a> | `6.0.0` | [Website](https://surfer.nmr.mgh.harvard.edu/) | An open source software suite for processing and analyzing (human) brain MRI images. 
 **neurology** | <a id="fsl" class="soft_anch">`fsl`</a> | `5.0.10` | [Website](https://fsl.fmrib.ox.ac.uk/fsl) | FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. 
