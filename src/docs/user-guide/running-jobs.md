@@ -40,7 +40,7 @@ gpu  |  gres/gpu=8     |     50       |   |  2-00:00:00  | gres/gpu=24    |     
 owner  |  cpu=99999     |   3000       |   |  7-00:00:00   |  cpu=99999     |   5000
 owners  |    cpu=8192     |   3000       |  |   2-00:00:00   |   cpu=8192     |   5000 
 
-For example, on the normal partition a user can use a maximum of 256 CPUs, submit a maximum of 1000 jobs for up to 2 days.  A user's PI acount can run a maximum of 512 CPUs at once and submit up to 2000 jobs.  More information on the values:
+For example, on the normal partition a user can use a maximum of 256 CPUs, submit a maximum of 1000 jobs for up to 2 days.  A user's PI account can run a maximum of 512 CPUs at once and submit up to 2000 jobs.  To see more information on the values:
 
 ```
 man sacctmgr
