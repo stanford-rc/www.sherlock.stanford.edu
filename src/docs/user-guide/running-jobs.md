@@ -66,18 +66,23 @@ request more CPU cores, more nodes, or even run in a different partition.
 
 ```
 $ sdev -h
-sdev: start an interactive shell on a compute node
+sdev: start an interactive shell on a compute node.
 
 Usage: sdev [OPTIONS]
     Optional arguments:
-        -n      number of CPU cores to request (default: 1)
+        -c      number of CPU cores to request (OpenMP/pthreads, default: 1)
+        -n      number of tasks to request (MPI ranks, default: 1)
         -N      number of nodes to request (default: 1)
         -m      memory amount to request (default: 4GB)
         -p      partition to run the job in (default: dev)
-        -t      time limit (default: 01:00:00, ie. 1 hour)
+        -t      time limit (default: 01:00:00)
         -r      allocate resources from the named reservation (default: none)
         -J      job name (default: sdev)
         -q      quality of service to request for the job (default: normal)
+
+    Note: the default partition only allows for limited amount of resources.
+    If you need more, your job will be rejected unless you specify an
+    alternative partition with -p.
 
 ```
 
