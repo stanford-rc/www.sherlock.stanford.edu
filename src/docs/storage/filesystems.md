@@ -337,7 +337,7 @@ node until the last job from the user terminates.
 | ----------------- | --- |
 | **Type**          | Parallel, capacitive Lustre filesystem |
 | **Quota**         | amount purchased *(in 10 TB increments)* |
-| **Snapshots**     | optional[^oak_snap] |
+| **Snapshots**     | **NO** |
 | **Backups**       | **NO** |
 | **Purge policy**  | not purged |
 | **Scope**         | all login and compute nodes <br/>*(also available through gateways outside of Sherlock)* |
@@ -370,14 +370,11 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_oak]:              https://oak-storage.stanford.edu
-[url_oak_snap]:         https://srcc.stanford.edu/oak-rsnapshot
 [url_check_quotas]:     /docs/storage/#checking-quotas
 [url_snapshots]:        /docs/storage/data-protection/#snapshots
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
-[^oak_snap]: Snapshots on `$OAK` require additional storage space. Please see
-  the [Oak Snapshots Feature][url_oak_snap] page for details.
 [^metadata]: Metadata are data such as a file's size, name, path, owner,
   permissions, etc.
 
