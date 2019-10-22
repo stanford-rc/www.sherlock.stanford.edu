@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Monday, October 21 2019, we provide 571 software packages, in 7 categories, covering 68 fields of science:*
+*As of Tuesday, October 22 2019, we provide 572 software packages, in 7 categories, covering 68 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -93,7 +93,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **file transfer** | <a id="lftp" class="soft_anch">`lftp`</a> | `4.8.1` | [Website](https://lftp.yar.ru/) | LFTP is a sophisticated file transfer program supporting a number of network protocols (ftp, http, sftp, fish, torrent). 
 **file transfer** | <a id="mpifileutils" class="soft_anch">`mpifileutils`</a> | `0.9.1`<br/>`20170210` | [Website](https://github.com/hpc/mpifileutils) | mpiFileUtils is a suite of MPI-based tools to manage large datasets, which may vary from large directory trees to large files. 
 **file transfer** | <a id="py-globus-cli" class="soft_anch">`py-globus-cli`</a> | `1.2.0`<br/>`1.9.0_py27`<br/>`1.9.0_py36` | [Website](https://github.com/globus/globus-cli) | A command line wrapper over the Globus SDK for Python. 
-**file transfer** | <a id="rclone" class="soft_anch">`rclone`</a> | `1.39`<br/>`1.43.1` | [Website](https://rclone.org) | Rclone is a command line program to sync files and directories to and from: Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon Drive, Microsoft One Drive, Hubic, Backblaze B2, Yandex Disk, or the local filesystem. 
+**file transfer** | <a id="rclone" class="soft_anch">`rclone`</a> | `1.39`<br/>`1.43.1`<br/>`1.49.5` | [Website](https://rclone.org) | Rclone is a command line program to sync files and directories to and from: Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon Drive, Microsoft One Drive, Hubic, Backblaze B2, Yandex Disk, or the local filesystem. 
 **framework** | <a id="mono" class="soft_anch">`mono`</a> | `5.12.0.301`<br/>`5.20.1.19` | [Website](https://www.mono-project.com) | Mono is an open source implementation of Microsoft's .NET Framework based on the ECMA standards for C# and the Common Language Runtime. 
 **language** | <a id="tcltk" class="soft_anch">`tcltk`</a> | `8.6.6` | [Website](https://www.tcl.tk) | Tcl (Tool Command Language) is a dynamic programming language, suitable for web and desktop applications, networking, administration, testing. Tk is a graphical user interface toolkit. 
 **libs** | <a id="apr" class="soft_anch">`apr`</a> | `1.6.3` | [Website](https://apr.apache.org/) | The Apache Portable Runtime is a supporting library for the Apache web server. It provides a set of APIs that map to the underlying operating system. 
