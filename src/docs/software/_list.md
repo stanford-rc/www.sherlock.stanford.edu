@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, October 22 2019, we provide 572 software packages, in 7 categories, covering 68 fields of science:*
+*As of Friday, November 01 2019, we provide 573 software packages, in 7 categories, covering 68 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -371,7 +371,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **compiler** | <a id="ifort" class="soft_anch">`ifort`</a> | `2017.u2`<br/>`2018.u1`<br/>`2018`<br/>`2019` | [Website](https://software.intel.com/en-us/fortran-compilers) | Intel Fortran Compiler, also known as ifort, is a group of Fortran compilers from Intel 
 **compiler** | <a id="llvm" class="soft_anch">`llvm`</a> | `3.8.1`<br/>`4.0.0`<br/>`5.0.0`<br/>`7.0.0` | [Website](http://llvm.org) | The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler, 
 **compiler** | <a id="nagfor" class="soft_anch">`nagfor`</a> | `npl6a61na` | [Website](https://www.nag.com/nag-compiler) | The NAG Fortran Compiler is a full standard implementation of the ISO Fortran 95 language with the addition of all of Fortran 2003, most of Fortran 2008 and OpenMP 3.0 and 3.1. 
-**compiler** | <a id="pgi" class="soft_anch">`pgi`</a> | `17.4`<br/>`18.4` | [Website](http://pgroup.com) | PGI compilers and tools, including Open MPI (Community Edition). 
+**compiler** | <a id="pgi" class="soft_anch">`pgi`</a> | `17.4`<br/>`18.4`<br/>`19.4` | [Website](http://pgroup.com) | PGI compilers and tools, including Open MPI (Community Edition). 
 **compiler** | <a id="smlnj" class="soft_anch">`smlnj`</a> | `110.81` | [Website](http://smlnj.org/) | Standard ML of New Jersey (abbreviated SML/NJ) is a compiler for the Standard ML '97 programming language. 
 **data** | <a id="h5utils" class="soft_anch">`h5utils`</a> | `1.12.1` | [Website](http://ab-initio.mit.edu/wiki/index.php/H5utils) | h5utils is a set of utilities for visualization and conversion of scientific data in the free, portable HDF5 format. 
 **data** | <a id="hdf5" class="soft_anch">`hdf5`</a> | `1.10.0p1`<br/>`1.10.2` | [Website](https://www.hdfgroup.org/hdf5) | HDF5 is a data model, library, and file format for storing and managing data. It supports an unlimited variety of datatypes, and is designed for flexible and efficient I/O and for high volume and complex data. 
