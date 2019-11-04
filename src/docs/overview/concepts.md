@@ -10,7 +10,7 @@ members and their research teams to support sponsored research.
 
     Users interested in using computing resources in such contexts are
     encouraged to investigate [FarmShare][url_farmshare], Stanford’s community
-    computing environment, which is primarily intended for to support
+    computing environment, which is primarily intended for supporting
     coursework.
 
 It is open to the Stanford community as a computing resource to support
