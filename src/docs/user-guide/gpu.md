@@ -1,8 +1,8 @@
 To support the latest computing evolutions in many fields of science, Sherlock
-provides GPU nodes that can be used to run a variety of GPU-accelerated
-applications. Those nodes are available to everyone, but are a scarce,
-highly-demanded resource, so getting access to them may require some wait time
-in queue.
+features a number of compute nodes with [GPUs][url_gpus] that can be used to
+run a variety of GPU-accelerated applications. Those nodes are available to
+everyone, but are a scarce, highly-demanded resource, so getting access to them
+may require some wait time in queue.
 
 !!! info "Getting your own GPU nodes"
 
@@ -18,24 +18,15 @@ running on Sherlock can submit a job there. As owners contribute to expand
 Sherlock, more GPU nodes are added to the `owners` partition, for use by PI
 groups which purchased their own compute nodes.
 
-!!! tip "More GPU types to come"
-
-    As we merge cluster nodes during Phase 2, the existing Sherlock 1.0 GPU
-    nodes will be added to the `gpu` partition on Sherlock 2.0
-
-There currently are two types of GPUs available in the `gpu` partition:
-
-* NVIDIA Tesla P100-PCIe[^p100], for applications requiring double-precision
-  (64-bit) and deep-learning training workloads,
-* NVIDIA Tesla P40[^p40], for single- or half-precision (32, 16-bit) workloads
-  and deep-learning inference jobs.
-
+There are a variety of different GPU configuration available in the `gpu`
+partition. To see the available GPU types, please see the [GPU
+types](#gpu-types) section.
 
 
 ## Submitting a GPU job
 
-To submit a GPU job, you'll need to use the `--gres` option in your batch script
-or command line submission options.
+To submit a GPU job, you'll need to use the `--gpus` (or `-G`) option in your
+batch script or command line submission options.
 
 For instance, the following script will request one GPU for two hours in the
 `gpu` partition, and run the GPU-enabled version of `gromacs`:
@@ -44,7 +35,7 @@ For instance, the following script will request one GPU for two hours in the
 #!/bin/bash
 #SBATCH -p gpu
 #SBATCH -c 10
-#SBATCH --gres gpu:1
+#SBATCH -G 1
 
 ml load gromacs/2016.3
 
@@ -56,7 +47,7 @@ instance, the following command will display details about the GPUs allocated
 to your job:
 
 ```
-$ srun -p gpu --gres gpu:2 nvidia-smi
+$ srun -p gpu --gpus 2 nvidia-smi
 Fri Jul 28 12:41:49 2017
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 375.51                 Driver Version: 375.51                    |
@@ -99,7 +90,7 @@ As for any other compute node, you can submit an interactive job and request a
 shell on a GPU node with the following command:
 
 ```
-$ srun -p gpu --gres gpu:1 --pty bash
+$ srun -p gpu --gpus 1 --pty bash
 srun: job 38068928 queued and waiting for resources
 srun: job 38068928 has been allocated resources
 $ nvidia-smi --query-gpu=index,name --format=csv,noheader
@@ -150,14 +141,14 @@ to be requested in your jobs.
 
 
 For instance, to request a Tesla GPU for you job, you can use the following
-submisison options:
+submission options:
 
 ```
-$ srun -p owners --gres gpu:1 -C GPU_BRD:TESLA nvidia-smi -L
+$ srun -p owners -G 1 -C GPU_BRD:TESLA nvidia-smi -L
 GPU 0: Tesla P100-SXM2-16GB (UUID: GPU-4f91f58f-f3ea-d414-d4ce-faf587c5c4d4)
 ```
 
-!!! warning "Unsatisfiable contraints"
+!!! warning "Unsatisfiable constraints"
 
     If you specify a constraint that can't be satisfied in the partition you're
     submitting your job to, the job will be rejected by the scheduler.     For
@@ -165,7 +156,7 @@ GPU 0: Tesla P100-SXM2-16GB (UUID: GPU-4f91f58f-f3ea-d414-d4ce-faf587c5c4d4)
     features Tesla GPUs, will result in an error:
 
     ```
-    $ srun -p gpu --gres gpu:1 -C GPU_BRD:GEFORCE nvidia-smi -L
+    $ srun -p gpu -G 1 -C GPU_BRD:GEFORCE nvidia-smi -L
     srun: error: Unable to allocate resources: Requested node configuration is not available
     ```
 
@@ -195,7 +186,7 @@ By default, or if the `--gpu_cmode` option is not specified, GPUs will be set
 in the "Exclusive Process" mode, as demonstrated by this example command:
 
 ```
-$ srun -p gpu --gres gpu:1 nvidia-smi
+$ srun -p gpu -G 1 nvidia-smi
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 387.26                 Driver Version: 387.26                    |
 |-------------------------------+----------------------+----------------------+
@@ -211,7 +202,7 @@ With the `--gpu_cmode` option, the scheduler will set the GPU compute mode to
 the desired value before execution:
 
 ```
-$ srun -p gpu --gres gpu:1 --gpu_cmode=shared nvidia-smi
+$ srun -p gpu -G 1 --gpu_cmode=shared nvidia-smi
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 387.26                 Driver Version: 387.26                    |
 |-------------------------------+----------------------+----------------------+
@@ -231,10 +222,59 @@ $ srun -p gpu --gres gpu:1 --gpu_cmode=shared nvidia-smi
     Sherlock, which is "Exclusive Process".
 
 
+### Advanced options
+
+A number of submission options are available when submitting GPU jobs, to
+request specific resource mapping or task binding options.
+
+Here are some examples to allocate a set of resources as a function of the
+number of requested GPUs:
+
+  * `--cpus-per-gpu`: requests a number of CPUs per allocated GPU.
+
+    For instance, the following options will allocate 2 GPUs and 4 CPUs:
+    ```
+    $ salloc -p gpu -G 2 --cpus-per-gpu=2
+    ```
+
+  * `--gpus-per-node`: requests a number of GPUs per node,
+  * `--gpus-per-task`: requests a number of GPUs per spawned task,
+  * `--mem-per-gpu`: allocates (host) memory per allocated GPU.
+
+Other options can help set particular GPU properties (topology, frequency...):
+
+  * `--gpu-bind`: specify task/GPU binding mode.
+
+    By default every spawned task can access every GPU allocated to the job.
+    This option can help making sure that tasks are bound to the closest GPU,
+    for better performance.
+
+  * `--gpu-freq`: specify GPU and memory frequency. For instance:
+
+    ```
+    $ srun -p test -G 1 --gpu-freq=highm1,verbose /bin/true
+    GpuFreq=memory_freq:2600,graphics_freq:758
+    ```
+
+Those options are all available to the `srun`/`sbatch`/`salloc` commands, and
+more details about each of them can be found in the [Slurm
+documentation][url_slurm_srun].
+
+!!! warning "Conflicting options"
+
+    Given the multitude of options, it's very easy to submit a job with
+    conflicting options.  In most cases the job will be rejected.
+
+    For instance:
+    ```
+    $ sbatch --gpus-per-task=1 --cpus-per-gpu=2  --cpus-per-task=1 ...
+    ```
+    Here, the first two options implicitly set `cpu-per-task` to 2, while the
+    third option explicitly sets `cpus-per-task` to 1. So the job's
+    requirements are conflicting and can't be satisfied.
+
 
 ## Environment and diagnostic tools
-
---8<--- "_wip.md"
 
 
 ### `nvtop`
@@ -261,22 +301,18 @@ user's GPU code is running.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
+[url_gpu]:          //blogs.nvidia.com/blog/2009/12/16/whats-the-difference-between-a-cpu-and-a-gpu/
 [url_condo]:        /docs/overview/concepts/#the-condominium-model
 [url_modules]:      /docs/software/modules
-[url_p100]:         //images.nvidia.com/content/tesla/pdf/nvidia-tesla-p100-PCIe-datasheet.pdf
-[url_p40]:          //images.nvidia.com/content/pdf/tesla/184427-Tesla-P40-Datasheet-NV-Final-Letter-Web.pdf
 [url_slurm_sbatch]: //slurm.schedmd.com/sbatch.html#OPT_constraint
-[url_gpu_cmodes]:   http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-modes
-[url_nvtop]:        https://github.com/Syllo/nvtop
-[url_htop]:         https://hisham.hm/htop/
+[url_slurm_srun]:   //slurm.schedmd.com/srun.html#OPT_gpus
+[url_gpu_cmodes]:   //docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-modes
+[url_nvtop]:        //github.com/Syllo/nvtop
+[url_htop]:         //hisham.hm/htop/
 
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
-[^p100]: See the complete [Tesla P100 technical specifications][url_p100] for
-  details.
-[^p40]: See the complete [Tesla P40 technical specifications][url_p40] for
-  details.
 [^node_feat]: See `node_feat -h` for more details.
 [^values]: The lists of values provided in the table are non exhaustive.
 [^gpu_cmodes]: The list of available GPU compute modes and relevant details are
