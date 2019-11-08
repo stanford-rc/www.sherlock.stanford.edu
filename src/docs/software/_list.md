@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, November 08 2019, we provide 574 software packages, in 7 categories, covering 68 fields of science:*
+*As of Friday, November 08 2019, we provide 575 software packages, in 7 categories, covering 68 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -252,7 +252,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 ### Physics
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
-**astronomy** | <a id="heasoft" class="soft_anch">`heasoft`</a> | `6.22.1` | [Website](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/) | HEAsoft is a Unified Release of the FTOOLS (General and mission-specific tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks for X-ray astronomical spectral, timing, and imaging data analysis) software packages. 
+**astronomy** | <a id="heasoft" class="soft_anch">`heasoft`</a> | `6.22.1`<br/>`6.26.1` | [Website](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/) | HEAsoft is a Unified Release of the FTOOLS (General and mission-specific tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks for X-ray astronomical spectral, timing, and imaging data analysis) software packages. 
 **climate modeling** | <a id="cdo" class="soft_anch">`cdo`</a> | `1.9.7.1` | [Website](https://code.mpimet.mpg.de/projects/cdo) | CDO is a collection of command line Operators to manipulate and analyse Climate and NWP model Data. 
 **geophysics** | <a id="opensees" class="soft_anch">`opensees`</a> | `2.5.0` | [Website](http://opensees.berkeley.edu/) | OpenSees is a software framework for developing applications to simulate the performance of structural and geotechnical systems subjected to earthquakes. 
 **geoscience** | <a id="gdal" class="soft_anch">`gdal`</a> | `2.2.1` | [Website](http://www.gdal.org) | GDAL is a translator library for raster and vector geospatial data formats. 
