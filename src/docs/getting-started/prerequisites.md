@@ -110,6 +110,7 @@ A few tutorials we recommend are:
 
 More specifically about HPC and Research Computing:
 
+* [Intro to HPC at Stanford][url_tuto_7] (SRCC)
 * [Intro to HPC][url_tuto_5] (HPC Carpentry)
 * [HPC in a day][url_tuto_4] (Software Carpentry}
 * [Research Computing Q&A][url_tuto_6] (Ask.Cyberinfrastructure)
@@ -162,6 +163,7 @@ For an introduction to shell scripting, you can refer to:
 [url_tuto_4]:       https://psteinb.github.io/hpc-in-a-day/
 [url_tuto_5]:       https://hpc-carpentry.github.io/hpc-intro/
 [url_tuto_6]:       https://ask.cyberinfrastructure.org/latest
+[url_tuto_7]:       https://srcc.stanford.edu/private/intro-hpc
 
 
 [url_nano]:         https://wiki.gentoo.org/wiki/Nano/Basics_Guide
