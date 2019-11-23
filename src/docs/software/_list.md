@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, November 08 2019, we provide 575 software packages, in 7 categories, covering 68 fields of science:*
+*As of Friday, November 22 2019, we provide 576 software packages, in 7 categories, covering 68 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -391,7 +391,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **debug** | <a id="valgrind" class="soft_anch">`valgrind`</a> | `3.14.0` | [Website](http://valgrind.org/) | Valgrind is an instrumentation framework for building dynamic analysis tools. 
 **framework** | <a id="dotnet" class="soft_anch">`dotnet`</a> | `2.1.500` | [Website](https://dotnet.microsoft.com/) | .NET is a free, cross-platform, open source developer platform for building many different types of applications. 
 **language** | <a id="chapel" class="soft_anch">`chapel`</a> | `1.19.0` | [Website](https://chapel-lang.org/) | Chapel is a modern programming language designed for productive parallel computing at scale. 
-**language** | <a id="cuda" class="soft_anch">`cuda`</a> | `8.0.61`<br/>`9.1.85`<br/>`9.2.88`<br/>`9.2.148`<br/>`10.0.130`<br/>`10.1.105`<br/>`10.1.168`<br/>`9.0.176` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
+**language** | <a id="cuda" class="soft_anch">`cuda`</a> | `8.0.61`<br/>`9.1.85`<br/>`9.2.88`<br/>`9.2.148`<br/>`10.0.130`<br/>`10.1.105`<br/>`10.1.168`<br/>`10.2.89`<br/>`9.0.176` | [Website](https://developer.nvidia.com/cuda-toolkit) | CUDA is a parallel computing platform and application programming interface (API) model created by Nvidia. It allows software developers and software engineers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing. 
 **language** | <a id="erlang" class="soft_anch">`erlang`</a> | `21.3` | [Website](http://erlang.org/) | Erlang is a programming language used to build massively scalable soft real-time systems with requirements on high availability. 
 **language** | <a id="go" class="soft_anch">`go`</a> | `1.9` | [Website](http://golang.org) | Go is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
 **language** | <a id="guile" class="soft_anch">`guile`</a> | `2.0.11`<br/>`2.2.2` | [Website](https://www.gnu.org/software/guile/) | GNU Guile is the preferred extension system for the GNU Project, which features an implementation of the Scheme programming language. 
