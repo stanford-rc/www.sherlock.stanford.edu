@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, November 22 2019, we provide 576 software packages, in 7 categories, covering 68 fields of science:*
+*As of Wednesday, November 27 2019, we provide 577 software packages, in 7 categories, covering 68 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -280,6 +280,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **genomics** | <a id="bcftools" class="soft_anch">`bcftools`</a> | `1.6`<br/>`1.8` | [Website](https://github.com/samtools/bcftools) | BCFtools is a program for variant calling and manipulating files in the Variant Call Format (VCF) and its binary counterpart BCF. 
 **genomics** | <a id="bcl2fastq" class="soft_anch">`bcl2fastq`</a> | `2.20` | [Website](https://support.illumina.com/downloads/bcl2fastq-conversion-software-v2-20.html) | The bcl2fastq2 conversion software can be used to convert BCL files from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems. 
 **genomics** | <a id="bedtools" class="soft_anch">`bedtools`</a> | `2.27.1` | [Website](https://bedtools.readthedocs.io) | The bedtools utilities are a swiss-army knife of tools for a wide-range of genomics analysis tasks. 
+**genomics** | <a id="bgen" class="soft_anch">`bgen`</a> | `1.1.4` | [Website](https://bitbucket.org/gavinband/bgen/) | bgen is the reference implementation of the BGEN format, a binary file format for imputed genotype and haplotype data. 
 **genomics** | <a id="bowtie" class="soft_anch">`bowtie`</a> | `1.2.2` | [Website](http://bowtie-bio.sourceforge.net/) | Bowtie is an ultrafast, memory-efficient short read aligner. 
 **genomics** | <a id="bowtie2" class="soft_anch">`bowtie2`</a> | `2.3.4.1` | [Website](http://bowtie-bio.sourceforge.net/bowtie2) | Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences. 
 **genomics** | <a id="bwa" class="soft_anch">`bwa`</a> | `0.7.17` | [Website](http://bio-bwa.sourceforge.net/) | BWA (Burrows-Wheeler Aligner) is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. 
