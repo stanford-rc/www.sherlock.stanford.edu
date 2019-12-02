@@ -102,10 +102,10 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 | Characteristics   |   |
 | ----------------- | --- |
 | **Type**          | Parallel, high-performance Lustre file system |
-| **Quota**         | 20 TB per user (based on file ownership) |
+| **Quota**         | 100 TB / 50,000,000 inodes[^inodes] |
 | **Snapshots**     | **NO** |
 | **Backups**       | **NO** |
-| **Purge policy**  | data not modified in the last 6 months are automatically purged |
+| **Purge policy**  | data not modified in the last 90 days are automatically purged |
 | **Scope**         | all login and compute nodes |
 
 
@@ -135,17 +135,12 @@ $ sh_quota -f SCRATCH
 ```
 See the [Checking Quotas][url_check_quotas] section for more details.
 
-**NB**: user quotas are based on file ownership, meaning that all files
-belonging to a given user will count towards her user quota, no matter
-where they're located on the file system. That means that if you have files
-in `$GROUP_SCRATCH`, those will also count toward your user quota.
-
 
 ### Expiration policy
 
 !!! Danger "Inactive files are automatically purged"
 
-    Files that are **not modified in the last 6 months** will be automatically
+    Files that are **not modified in the last 90 days** will be automatically
     deleted from the filesystem.
 
 To manage available space and maintain optimal performance for all jobs, all
@@ -155,10 +150,10 @@ deleted from the filesystem.
 
 File activity is defined based on the last time a file's contents (the actual
 data in the file) have been modified. Meaning that **files whose contents have
-not been modified in the previous 6 months will be automatically deleted.**
+not been modified in the previous 90 days will be automatically deleted.**
 
 Each time a file's contents are modified, the expiration countdown is reset,
-and the file gets another 6-month of lifetime.
+and the file gets another 90-day of lifetime.
 
 !!! important "Metadata changes don't qualify as an update"
 
@@ -215,10 +210,10 @@ automatic purges.
 | Characteristics   |     |
 | ----------------- | --- |
 | **Type**          | Parallel, high-performance Lustre file system |
-| **Quota**         | 30 TB per group (based on file ownership) |
+| **Quota**         | 100 TB / 50,000,000 inodes[^inodes] |
 | **Snapshots**     | **NO** |
 | **Backups**       | **NO** |
-| **Purge policy**  | data not accessed in the last 6 months are automatically purged |
+| **Purge policy**  | data not accessed in the last 90 days are automatically purged |
 | **Scope**         | all login and compute nodes |
 
 
@@ -243,11 +238,6 @@ $ sh_quota -f GROUP_SCRATCH
 ```
 See the [Checking Quotas][url_check_quotas] section for more details.
 
-
-**NB**: group quotas are based on file ownership, meaning that all files
-belonging to a given group will count towards the group quota, no matter where
-they're located on the file system. That means that all the files that belong
-to each of the group members will count toward the group quota.
 
 ### Expiration policy
 
@@ -378,3 +368,5 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 [^metadata]: Metadata are data such as a file's size, name, path, owner,
   permissions, etc.
 
+[^inodes]: An inode (index node) is a data structure in a Unix-style file
+  system that describes a file-system object such as a file or a directory.

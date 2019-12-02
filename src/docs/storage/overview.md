@@ -12,6 +12,10 @@ directories in these file systems to store their data.
     actively being computed on with Sherlock, and should not be used as a
     target for backups from other systems.
 
+    If you're looking for a long-term storage solution for reserach data, SRCC
+    offers the [Oak storage system](url_oak), which is specifically intended
+    for this usage.
+
 Those file systems are shared with other users, and are subject to quota limits
 and for some of them, purge policies (time-residency limits).
 
@@ -53,23 +57,32 @@ same PI group. User locations are only accessible by the user.
 
 ### Quotas and limits
 
-| Name           | Quota type | Quota value | Retention |
-| -------------- | ---------- | ----------: | --------- |
-|`$HOME`         | directory  |       15 GB | $\infty$  |
-|`$GROUP_HOME`   | directory  |        1 TB | $\infty$  |
-|`$SCRATCH`      | user       |       20 TB | [time limited][url_purge] |
-|`$GROUP_SCRATCH`| group      |       30 TB | [time limited][url_purge] |
-|`$L_SCRATCH`    | n/a        |         n/a | job lifetime  |
-|`$OAK`          | group      | amount purchased | $\infty$ |
+!!! info
+
+    Quotas are applied on both volume (the amount of data stored in bytes) and
+    inode: an inode (index node) is a data structure in a Unix-style file
+    system that describes a file-system object such as a file or a directory.
+    In practice, each filesystem entry (file, directory, link) counts as an
+    inode.
+
+| Name           | Quota type | Volume quota | Inode quota | Retention |
+| -------------- | ---------- | -----------: | ----------: | --------- |
+|`$HOME`         | directory  |        15 GB | n/a         | $\infty$  |
+|`$GROUP_HOME`   | directory  |         1 TB | n/a         | $\infty$  |
+|`$SCRATCH`      | directory  |       100 TB | 50 million  | [time limited][url_purge] |
+|`$GROUP_SCRATCH`| directory  |       100 TB | 50 million  | [time limited][url_purge] |
+|`$L_SCRATCH`    | n/a        |          n/a | n/a         | job lifetime  |
+|`$OAK`          | group      | amount purchased | function of the volume purchased | $\infty$ |
+
 
 Quota types:
 
-* **user**: based on files ownership and account for all the files that
-  belong to a given user.
-* **group**: based on files ownership and account for all the files that
-  belong to a given group.
+
+
 * **directory**: based on files location and account for all the files
   that are in a given directory.
+* **group**: based on files ownership and account for all the files that
+  belong to a given group.
 
 Retention types:
 
@@ -93,11 +106,11 @@ $ sh_quota
 +---------------------------------------------------------------------------+
 |   Filesystem |  volume /   limit                  | inodes /  limit       |
 +---------------------------------------------------------------------------+
-          HOME |  14.3GB /  15.0GB [|||||||||  95%] |      - /      - (  -%)
-    GROUP_HOME | 355.2GB /   1.0TB [|||        34%] |      - /      - (  -%)
-       SCRATCH |  45.3GB /  20.0TB [            0%] | 100.1M /  20.5G (  0%)
- GROUP_SCRATCH | 729.4GB /  30.0TB [            2%] | 318.7M /  30.7G (  1%)
-           OAK |  21.4TB /  27.9TB [|||||||    76%] |   2.3G /   4.6G ( 49%)
+          HOME |   9.4GB /  15.0GB [||||||     62%] |      - /      - (  -%)
+    GROUP_HOME | 562.6GB /   1.0TB [|||||      56%] |      - /      - (  -%)
+       SCRATCH |  65.0GB / 100.0TB [            0%] | 143.8K /  50.0M (  0%)
+ GROUP_SCRATCH | 172.2GB / 100.0TB [            0%] |  53.4K /  50.0M (  0%)
+           OAK |  30.8TB / 240.0TB [|          12%] |   6.6M /  36.0M ( 18%)
 +---------------------------------------------------------------------------+
 ```
 
