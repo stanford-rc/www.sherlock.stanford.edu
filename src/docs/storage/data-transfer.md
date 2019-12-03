@@ -11,7 +11,7 @@ limits on the login nodes, larger transfer may not work as expected.
 
 For transferring large amounts of data, Sherlock features a specific [Data
 Transfer Node](#dtn), with dedicated bandwidth, as well as a managed [Globus
-Online endpoint](#globus), that can be used for scheduled, unattended data
+endpoint](#globus), that can be used for scheduled, unattended data
 transfers.
 
 We also provide tools on Sherlock to transfer data to various [Cloud
@@ -209,27 +209,26 @@ Globus improves SSH-based file transfer protocols by providing the following
 features:
 
 * automates large data transfers,
-* can resume failed transfers,
+* handles transient errors, and can resume failed transfers,
 * simplifies the implementation of high-performance transfers between computing
   centers.
 
-Globus Online is a Software as a Service (SaaS) deployment of the Globus
-Toolkit which provides end-users with a browser interface to initiate data
-transfers between endpoints registered with the Globus Alliance. Globus Online
-allows registered users to "drag and drop" files from one endpoint to another.
+Globus is a Software as a Service (SaaS) system that provides end-users with a browser interface to initiate data
+transfers between endpoints. Globus
+allows users to "drag and drop" files from one endpoint to another.
 Endpoints are terminals for data; they can be laptops or supercomputers, and
-anything in between. The servers at Globus.org act as
-intermediaries-negotiating, monitoring and optimizing transfers through
+anything in between. The Globus web service 
+negotiates, monitors, and optimizes transfers through
 firewalls and across network address translation (NAT). Under certain
-circumstances with high performance hardware transfer rates exceeding 1 GB/s
-are possible. For more information about Globus, please see the [Globus.org's
+circumstances, with high performance hardware transfer rates exceeding 1 GB/s
+are possible. For more information about Globus, please see the [Globus
 documentation][url_globus_doc].
 
 #### Authentication
 
-To use Globus Online, you will first need to authenticate at
-[Globus.org][url_globus]. You can either sign up for a Globus.org account, or
-use your SUNet ID account for authentication to Globus Online (which will be
+To use Globus, you will first need to authenticate at
+[Globus.org][url_globus]. You can either sign up for a Globus account, or
+use your SUNet ID account for authentication to Globus (which will be
 required to authenticate to the Sherlock endpoint).
 
 To use your SUNet ID, choose "Stanford University" from the drop down menu at
@@ -242,9 +241,9 @@ the [Login page][url_globus_login] and follow the instructions from there.
     The Globus endpoint name for Sherlock is `SRCC Sherlock` (aka
     `srcc#sherlock`)
 
-You can use Globus Online to transfer data between your local workstation
+You can use Globus to transfer data between your local workstation
 (e.g., your laptop or desktop) and Sherlock. In this workflow, you
-configure your local workstation as a Globus endpoint using Globus Connect.
+configure your local workstation as a Globus endpoint by installing the Globus Connect software.
 
 1. Log in to [Globus.org][url_globus_login]
 2. Use the [Manage Endpoints][url_globus_xfer_mgmt] interface to "add Globus
@@ -257,12 +256,12 @@ configure your local workstation as a Globus endpoint using Globus Connect.
 You can also transfer data between two remote endpoints, by choosing another
 endpoint you have access to instead of your local machine.
 
-#### CLI
+#### CLI and API
 
-Globus also provides a command-line interface as an alternative to its web
-interface. This command-line interface is provided over an SSH connection to a
-Globus.org server. Please see the [Globus CLI documentation][url_globus_cli] for
-more details.
+Globus also provides a command-line interface (CLI) and application programming
+interface (API) as an alternative to its web
+interface. Please see the [Globus CLI documentation][url_globus_cli] and
+[Globus API documentation][url_globus_api] for more details.
 
 
 ## Data Transfer Nodes (DTNs)
@@ -375,11 +374,12 @@ documentation][url_rclone].
 [url_sshfs_windows]:https://github.com/billziss-gh/sshfs-win
 [url_sshfs_tuto]:   https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
 [url_globus]:       https://www.globus.org
+[url_globus_api]:   https://docs.globus.org/api/transfer/
 [url_globus_doc]:   https://www.globus.org/how-it-works
 [url_globus_cli]:   https://docs.globus.org/faq/command-line-interface/
 [url_globus_login]: https://app.globus.org/
-[url_globus_xfer_mgmt]:   https://www.globus.org/app/endpoints
-[url_globus_xfer_start]:  https://www.globus.org/app/transfer
+[url_globus_xfer_mgmt]:   https://app.globus.org/endpoints
+[url_globus_xfer_start]:  https://app.globus.org/file-manager
 [url_bbcp]:         https://www.slac.stanford.edu/~abh/bbcp
 [url_rclone]:       https://rclone.org/
 [url_gdrive]:       https://github.com/prasmussen/gdrive
