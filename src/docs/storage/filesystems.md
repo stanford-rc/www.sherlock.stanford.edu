@@ -179,7 +179,7 @@ Filesystem purges are a continuous process: they don't run at particular times,
 but are carried out in a permanent background fashion. Files are not
 necessarily deleted right away when they become eligible for deletion.  For
 instance, if you create a file on February 1st and don't ever modify it
-afterwards, it will be automatically become eligible for deletion on August
+afterwards, it will be automatically become eligible for deletion on May
 1st, and can be deleted anytime after this date.
 
 Empty directories that would remain after all their files have been purged are
