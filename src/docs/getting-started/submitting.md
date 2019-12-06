@@ -99,30 +99,32 @@ allocated. Then, a second job step will start the `sleep` command.
 You can create this job submission script on Sherlock using a [text
 editor][url_texteditors] such as `nano` or `vim`, and save it as `submit.sh`.
 
-!!! warning "Slurm directives must be at the top of the script"
+!!! warning "`#SBATCH` directives syntax"
 
-    Slurm will ignore all `#SBATCH` directives after the first non-comment
-    line.  Always put your `#SBATCH` parameters at the top of your batch
+    **`#SBATCH` directives must be at the top of the script**
+
+    : Slurm will ignore all `#SBATCH` directives after the first non-comment
+    line (that is, the first line in the script that doesn't start with a `#`
+    character). Always put your `#SBATCH` parameters at the top of your batch
     script.
-!!! warning "Spaces in parameters will cause SLURM directives to be ignored"
 
-    Slurm will ignore all `#SBATCH` directives after the first line containing 
-    white space.  For example-
-    
-    `#SBATCH --job-name=Big simulation`
-    
-    will cause all #SBATCH directives below this line to be ignored and the job 
-    will be submitted with all default parameters.  On Sherlock that is
-    2 hours, normal partition, 4 GB memory and one CPU
-    
-    Always used "-"s or "_"s  For example-
-    `#SBATCH --job-name=Big_simulation`
-    
-    This is also true for all parameters passed to `#SBATCH`
-    For example-
-    #SBATCH --mem=16G B
-    will cause the sbatch to fail silently and resort to running the with all default parameters.
-    
+    **Spaces in parameters will cause `#SBATCH` directives to be ignored**
+
+    : Slurm will ignore all `#SBATCH` directives after the first white space.
+    For instance directives like those:
+    ```
+    #SBATCH --job-name=big job
+    ```
+    ```
+    #SBATCH --mem=16 GB
+    ```
+    ```
+    #SBATCH --partition=normal, owners
+    ```
+    will cause all following `#SBATCH` directives to be ignored and the
+    job to be submitted with the default parameters.
+
+
 ### Job submission
 
 Once the submission script is written properly, you can submit it to the
@@ -191,4 +193,3 @@ there are many other options and areas to explore in the next sections:
 
 [^man_sbatch]: You can get the complete list of parameters by referring to the
   `sbatch` manual page (`man sbatch`).
-
