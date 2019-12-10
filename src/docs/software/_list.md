@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, November 27 2019, we provide 577 software packages, in 7 categories, covering 68 fields of science:*
+*As of Tuesday, December 10 2019, we provide 578 software packages, in 7 categories, covering 68 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -289,7 +289,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **genomics** | <a id="fastqc" class="soft_anch">`fastqc`</a> | `0.11.8` | [Website](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) | FastQC aims to provide a simple way to do some quality control checks on raw sequence data coming from high throughput sequencing pipelines. 
 **genomics** | <a id="fastx_toolkit" class="soft_anch">`fastx_toolkit`</a> | `0.0.14` | [Website](http://hannonlab.cshl.edu/fastx_toolkit/) | The FASTX-Toolkit is a collection of command line tools for Short-Reads FASTA/FASTQ files preprocessing. 
 **genomics** | <a id="freebayes" class="soft_anch">`freebayes`</a> | `1.2.0` | [Website](https://github.com/ekg/freebayes) | FreeBayes is a Bayesian genetic variant detector designed to find small polymorphisms. 
-**genomics** | <a id="gatk" class="soft_anch">`gatk`</a> | `4.1.0.0` | [Website](https://software.broadinstitute.org/gatk/) | GATK (Genome Analysis Toolkit) offers a wide variety of tools with a primary focus on variant discovery and genotyping. 
+**genomics** | <a id="gatk" class="soft_anch">`gatk`</a> | `4.1.0.0`<br/>`4.1.4.1` | [Website](https://software.broadinstitute.org/gatk/) | GATK (Genome Analysis Toolkit) offers a wide variety of tools with a primary focus on variant discovery and genotyping. 
 **genomics** | <a id="hic-pro" class="soft_anch">`hic-pro`</a> | `2.10.0` | [Website](https://github.com/nservant/HiC-Pro) | HiC-Pro: An optimized and flexible pipeline for Hi-C data processing. 
 **genomics** | <a id="hisat2" class="soft_anch">`hisat2`</a> | `2.1.0` | [Website](http://ccb.jhu.edu/software/hisat2) | HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes (as well as to a single reference genome). 
 **genomics** | <a id="htslib" class="soft_anch">`htslib`</a> | `1.6`<br/>`1.8` | [Website](https://github.com/samtools/htslib) | C library for high-throughput sequencing data formats. 
