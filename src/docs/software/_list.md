@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, December 10 2019, we provide 578 software packages, in 7 categories, covering 68 fields of science:*
+*As of Thursday, December 12 2019, we provide 579 software packages, in 7 categories, covering 68 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -164,7 +164,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="snappy" class="soft_anch">`snappy`</a> | `1.1.7` | [Website](https://github.com/google/snappy) | A fast compressor/decompressor. 
 **libs** | <a id="talloc" class="soft_anch">`talloc`</a> | `2.1.14` | [Website](https://talloc.samba.org) | talloc is a hierarchical, reference counted memory pool system with destructors. 
 **libs** | <a id="utf8proc" class="soft_anch">`utf8proc`</a> | `2.4.0` | [Website](https://juliastrings.github.io/utf8proc/) | iutf8proc is a small, clean C library that provides Unicode normalization, case-folding, and other operations for data in the UTF-8 encoding. 
-**media** | <a id="ffmpeg" class="soft_anch">`ffmpeg`</a> | `4.0` | [Website](https://www.ffmpeg.org) | FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. 
+**media** | <a id="ffmpeg" class="soft_anch">`ffmpeg`</a> | `4.0`<br/>`4.2.1` | [Website](https://www.ffmpeg.org) | FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. 
 **media** | <a id="libsndfile" class="soft_anch">`libsndfile`</a> | `1.0.28` | [Website](http://www.mega-nerd.com/libsndfile) | Libsndfile is a C library for reading and writing files containing sampled sound (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface. 
 **performance** | <a id="likwid" class="soft_anch">`likwid`</a> | `4.3.2` | [Website](https://github.com/RRZE-HPC/likwid) | Likwid is a simple toolsuite of command line applications for performance oriented programmers. 
 **resource monitoring** | <a id="nvtop" class="soft_anch">`nvtop`</a> | `0.2.2`<br/>`1.0.0` | [Website](https://github.com/Syllo/nvtop) | Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA GPUs. 
