@@ -125,8 +125,8 @@ error:
 
     ssh: connect to host login.sherlock.stanford.edu port 22: Connection refused
 
-IP blocked by this mechanism will automatically be authorized again after some
-time.
+IP blocked by this mechanism will automatically be authorized again after a few
+minutes.
 
 !!! warning "SSHFS on macOS"
 
