@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Thursday, January 16 2020, we provide 580 software packages, in 7 categories, covering 68 fields of science:*
+*As of Friday, January 24 2020, we provide 581 software packages, in 7 categories, covering 68 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -199,7 +199,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **deep learning** | <a id="py-horovod" class="soft_anch">`py-horovod`</a> | `0.12.1_py36`<br/>`0.12.1_py27` | [Website](https://github.com/uber/horovod) | Horovod is a distributed training framework for TensorFlow. The goal of Horovod is to make distributed Deep Learning fast and easy to use. 
 **deep learning** | <a id="py-keras" class="soft_anch">`py-keras`</a> | `2.0.8_py27`<br/>`2.1.5_py36`<br/>`2.2.4_py27`<br/>`2.2.4_py36`<br/>`2.1.5_py27` | [Website](http://keras.io) | Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. 
 **deep learning** | <a id="py-onnx" class="soft_anch">`py-onnx`</a> | `1.0.1_py27` | [Website](https://onnx.ai) | ONNX is a open format to represent deep learning models. 
-**deep learning** | <a id="py-pytorch" class="soft_anch">`py-pytorch`</a> | `0.2.0_py27`<br/>`0.2.0_py36`<br/>`0.3.0_py36`<br/>`1.0.0_py27`<br/>`1.0.0_py36`<br/>`0.3.0_py27` | [Website](http://pytorch.org) | PyTorch is a deep learning framework that puts Python first. 
+**deep learning** | <a id="py-pytorch" class="soft_anch">`py-pytorch`</a> | `0.2.0_py27`<br/>`0.2.0_py36`<br/>`0.3.0_py36`<br/>`1.0.0_py27`<br/>`1.0.0_py36`<br/>`1.4.0_py36`<br/>`0.3.0_py27` | [Website](http://pytorch.org) | PyTorch is a deep learning framework that puts Python first. 
 **deep learning** | <a id="py-tensorboardx" class="soft_anch">`py-tensorboardx`</a> | `1.8_py27` | [Website](https://tensorboardx.readthedocs.io) | TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet, NumPy...) 
 **deep learning** | <a id="py-tensorflow" class="soft_anch">`py-tensorflow`</a> | `1.4.0_py27`<br/>`1.5.0_py27`<br/>`1.5.0_py36`<br/>`1.6.0_py36`<br/>`1.7.0_py27`<br/>`1.8.0_py27`<br/>`1.9.0_py27`<br/>`1.9.0_py36`<br/>`1.12.0_py27`<br/>`1.12.0_py36`<br/>`2.0.0_py36`<br/>`1.6.0_py27` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
 **deep learning** | <a id="py-tensorlayer" class="soft_anch">`py-tensorlayer`</a> | `1.6.3_py27` | [Website](http://tensorlayer.org) | TensorLayer is a Deep Learning (DL) and Reinforcement Learning (RL) library extended from Google TensorFlow. 
