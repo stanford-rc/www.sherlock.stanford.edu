@@ -29,7 +29,7 @@
 
 ## Scheduled maintenances
 
-[Maintenance operations and upgrades](concepts#maintenances-and-upgrades) are
+[Maintenance operations and upgrades][url_maintenances-and-upgrades] are
 scheduled on Sherlock on a regular basis.  Per the University's [Minimum
 Security policies][url_minsec], we deploy security patches on Sherlock as
 required for compliance.
@@ -46,7 +46,7 @@ For more details about Sherlock components and services, see the [status
 dashboard][url_status].
 
 [url_status]:  https://status.sherlock.stanford.edu
-
+[url_maintenances-and-upgrades]: /docs/overview/concepts/#maintenances-and-upgrades
 ## Current usage
 
 <iframe
