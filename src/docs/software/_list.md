@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, January 24 2020, we provide 581 software packages, in 7 categories, covering 68 fields of science:*
+*As of Monday, January 27 2020, we provide 583 software packages, in 7 categories, covering 68 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -45,7 +45,8 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **data** | <a id="ncview" class="soft_anch">`ncview`</a> | `2.1.7` | [Website](http://meteora.ucsd.edu/~pierce/ncview_home_page.html) | Ncview is a visual browser for netCDF format files. 
 **gis** | <a id="panoply" class="soft_anch">`panoply`</a> | `4.10.8` | [Website](https://www.giss.nasa.gov/tools/panoply/) | Panoply plots geo-referenced and other arrays from netCDF, HDF, GRIB, and other datasets. 
 **graphs** | <a id="graphviz" class="soft_anch">`graphviz`</a> | `2.40.1` | [Website](https://www.graphviz.org/) | Graphviz is open source graph visualization software. 
-**imaging** | <a id="py-pillow" class="soft_anch">`py-pillow`</a> | `5.1.0_py36`<br/>`5.1.0_py27` | [Website](https://python-pillow.org) | Pillow is a friendly PIL (Python Imaging Library) fork. 
+**imaging** | <a id="py-pillow" class="soft_anch">`py-pillow`</a> | `5.1.0_py36`<br/>`7.0.0_py36`<br/>`5.1.0_py27` | [Website](https://python-pillow.org) | Pillow is a friendly PIL (Python Imaging Library) fork. 
+**imaging** | <a id="py-pillow-simd" class="soft_anch">`py-pillow-simd`</a> | `7.0.0.post3_py36` | [Website](https://github.com/uploadcare/pillow-simd) | Pillow-SIMD is an optimized version of Pillow 
 **molecular visualization** | <a id="pymol" class="soft_anch">`pymol`</a>^<b class="lic"></b>^ | `1.8.6.2` | [Website](https://pymol.org) | PyMOL is a Python-enhanced molecular graphics tool. 
 **plotting** | <a id="gnuplot" class="soft_anch">`gnuplot`</a> | `5.2.0` | [Website](http://www.gnuplot.info) | Gnuplot is a portable command-line driven graphing utility for Linux, OS/2, MS Windows, OSX, VMS, and many other platforms. 
 **plotting** | <a id="grace" class="soft_anch">`grace`</a> | `5.1.25` | [Website](http://plasma-gate.weizmann.ac.il/Grace) | Grace is a WYSIWYG tool to make two-dimensional plots of numerical data. 
