@@ -37,6 +37,6 @@ examples.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_modules]:         modules
+[url_modules]:         /docs/software/modules/
 [url_installations]:   /docs/software#installation-requests
 [url_matlab_sherlock]: https://srcc.stanford.edu/private/matlab-licensing-sherlock
