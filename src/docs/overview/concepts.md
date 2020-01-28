@@ -81,12 +81,12 @@ defined tasks on the selected resources, and generate output files in one of
 the different [storage locations][url_storage] available on the cluster, for
 the user to review and analyze.
 
-[g_cpu]:        glossary#cpu
-[g_gpu]:        glossary#gpu
-[g_login]:      glossary#login-nodes
-[g_ssh]:        glossary#ssh
-[g_jobs]:       glossary#job
-[g_scheduler]:  glossary#scheduler
+[g_cpu]:        /docs/overview/glossary#cpu
+[g_gpu]:        /docs/overview/glossary#gpu
+[g_login]:      /docs/overview/glossary#login-nodes
+[g_ssh]:        /docs/overview/glossary#ssh
+[g_jobs]:       /docs/overview/glossary#job
+[g_scheduler]:  /docs/overview/glossary#scheduler
 [url_storage]:  /docs/storage/
 
 
