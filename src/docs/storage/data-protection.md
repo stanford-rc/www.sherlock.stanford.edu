@@ -127,7 +127,7 @@ Suggested options to backup your data include:
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_datatransfer]:     data-transfer#cloud-storage
+[url_datatransfer]:     /docs/storage/data-transfer
 [url_oak]:              https://oak-storage.stanford.edu
 [url_uit_storage]:      https://uit.stanford.edu/service/storage
 [url_uit_backup]:       https://uit.stanford.edu/services/category/backup-and-storage
