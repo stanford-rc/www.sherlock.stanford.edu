@@ -207,11 +207,11 @@ our environment.
 !!! info "Maintenance schedule"
 
      As often as possible, maintenances will take place on the **first Tuesday
-     of every month, from 8am to 12am**, and will be announced 2 weeks in
+     of every month, from 08:00 to 12:00** (noon), and will be announced 2 weeks in
      advance, through the usual communication channels.
 
 In case an exceptional amount of work is required, the maintenance window could
-be extended to 10 hours (from 8am to 6pm).
+be extended to 10 hours (from 08:00 to 18:00).
 
 During these times, access to Sherlock will be unavailable, login will be
 disabled and jobs won't run. A reservation will be placed in the scheduler so
@@ -231,7 +231,7 @@ regular maintenance schedules.  We also need to enforce the [Minimum
 Security][url_minsec] rules edicted by the Stanford Information Security
 Office, which mandate deployment of security patches in a timely manner.
 
-**Q: Why Tuesdays 8am-12am? Why not do this late at night?**
+**Q: Why Tuesdays 08:00-12:00? Why not do this late at night?**
 
 **A:** We have observed that the least busy time for our services is at the
 beginning of the week in the morning hours. Using this time period should not
