@@ -163,7 +163,8 @@ can run on multiple cores, within the same node.
 
 : A partition is a set of compute nodes within a cluster with a
 common feature. For example, compute nodes with GPU, or compute nodes belonging
-to same owner,  could form a partition.
+to same owner,  could form a partition. On Sherlock you can see detailed partition information with the 
+`sh_part` command and the `sinfo` commands
 
 #### QOS
 
