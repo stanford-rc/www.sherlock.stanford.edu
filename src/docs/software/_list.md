@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, December 10 2019, we provide 578 software packages, in 7 categories, covering 68 fields of science:*
+*As of Monday, January 27 2020, we provide 583 software packages, in 7 categories, covering 68 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -45,7 +45,8 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **data** | <a id="ncview" class="soft_anch">`ncview`</a> | `2.1.7` | [Website](http://meteora.ucsd.edu/~pierce/ncview_home_page.html) | Ncview is a visual browser for netCDF format files. 
 **gis** | <a id="panoply" class="soft_anch">`panoply`</a> | `4.10.8` | [Website](https://www.giss.nasa.gov/tools/panoply/) | Panoply plots geo-referenced and other arrays from netCDF, HDF, GRIB, and other datasets. 
 **graphs** | <a id="graphviz" class="soft_anch">`graphviz`</a> | `2.40.1` | [Website](https://www.graphviz.org/) | Graphviz is open source graph visualization software. 
-**imaging** | <a id="py-pillow" class="soft_anch">`py-pillow`</a> | `5.1.0_py36`<br/>`5.1.0_py27` | [Website](https://python-pillow.org) | Pillow is a friendly PIL (Python Imaging Library) fork. 
+**imaging** | <a id="py-pillow" class="soft_anch">`py-pillow`</a> | `5.1.0_py36`<br/>`7.0.0_py36`<br/>`5.1.0_py27` | [Website](https://python-pillow.org) | Pillow is a friendly PIL (Python Imaging Library) fork. 
+**imaging** | <a id="py-pillow-simd" class="soft_anch">`py-pillow-simd`</a> | `7.0.0.post3_py36` | [Website](https://github.com/uploadcare/pillow-simd) | Pillow-SIMD is an optimized version of Pillow 
 **molecular visualization** | <a id="pymol" class="soft_anch">`pymol`</a>^<b class="lic"></b>^ | `1.8.6.2` | [Website](https://pymol.org) | PyMOL is a Python-enhanced molecular graphics tool. 
 **plotting** | <a id="gnuplot" class="soft_anch">`gnuplot`</a> | `5.2.0` | [Website](http://www.gnuplot.info) | Gnuplot is a portable command-line driven graphing utility for Linux, OS/2, MS Windows, OSX, VMS, and many other platforms. 
 **plotting** | <a id="grace" class="soft_anch">`grace`</a> | `5.1.25` | [Website](http://plasma-gate.weizmann.ac.il/Grace) | Grace is a WYSIWYG tool to make two-dimensional plots of numerical data. 
@@ -164,7 +165,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="snappy" class="soft_anch">`snappy`</a> | `1.1.7` | [Website](https://github.com/google/snappy) | A fast compressor/decompressor. 
 **libs** | <a id="talloc" class="soft_anch">`talloc`</a> | `2.1.14` | [Website](https://talloc.samba.org) | talloc is a hierarchical, reference counted memory pool system with destructors. 
 **libs** | <a id="utf8proc" class="soft_anch">`utf8proc`</a> | `2.4.0` | [Website](https://juliastrings.github.io/utf8proc/) | iutf8proc is a small, clean C library that provides Unicode normalization, case-folding, and other operations for data in the UTF-8 encoding. 
-**media** | <a id="ffmpeg" class="soft_anch">`ffmpeg`</a> | `4.0` | [Website](https://www.ffmpeg.org) | FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. 
+**media** | <a id="ffmpeg" class="soft_anch">`ffmpeg`</a> | `4.0`<br/>`4.2.1` | [Website](https://www.ffmpeg.org) | FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. 
 **media** | <a id="libsndfile" class="soft_anch">`libsndfile`</a> | `1.0.28` | [Website](http://www.mega-nerd.com/libsndfile) | Libsndfile is a C library for reading and writing files containing sampled sound (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface. 
 **performance** | <a id="likwid" class="soft_anch">`likwid`</a> | `4.3.2` | [Website](https://github.com/RRZE-HPC/likwid) | Likwid is a simple toolsuite of command line applications for performance oriented programmers. 
 **resource monitoring** | <a id="nvtop" class="soft_anch">`nvtop`</a> | `0.2.2`<br/>`1.0.0` | [Website](https://github.com/Syllo/nvtop) | Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA GPUs. 
@@ -199,7 +200,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **deep learning** | <a id="py-horovod" class="soft_anch">`py-horovod`</a> | `0.12.1_py36`<br/>`0.12.1_py27` | [Website](https://github.com/uber/horovod) | Horovod is a distributed training framework for TensorFlow. The goal of Horovod is to make distributed Deep Learning fast and easy to use. 
 **deep learning** | <a id="py-keras" class="soft_anch">`py-keras`</a> | `2.0.8_py27`<br/>`2.1.5_py36`<br/>`2.2.4_py27`<br/>`2.2.4_py36`<br/>`2.1.5_py27` | [Website](http://keras.io) | Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. 
 **deep learning** | <a id="py-onnx" class="soft_anch">`py-onnx`</a> | `1.0.1_py27` | [Website](https://onnx.ai) | ONNX is a open format to represent deep learning models. 
-**deep learning** | <a id="py-pytorch" class="soft_anch">`py-pytorch`</a> | `0.2.0_py27`<br/>`0.2.0_py36`<br/>`0.3.0_py36`<br/>`1.0.0_py27`<br/>`1.0.0_py36`<br/>`0.3.0_py27` | [Website](http://pytorch.org) | PyTorch is a deep learning framework that puts Python first. 
+**deep learning** | <a id="py-pytorch" class="soft_anch">`py-pytorch`</a> | `0.2.0_py27`<br/>`0.2.0_py36`<br/>`0.3.0_py36`<br/>`1.0.0_py27`<br/>`1.0.0_py36`<br/>`1.4.0_py36`<br/>`0.3.0_py27` | [Website](http://pytorch.org) | PyTorch is a deep learning framework that puts Python first. 
 **deep learning** | <a id="py-tensorboardx" class="soft_anch">`py-tensorboardx`</a> | `1.8_py27` | [Website](https://tensorboardx.readthedocs.io) | TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet, NumPy...) 
 **deep learning** | <a id="py-tensorflow" class="soft_anch">`py-tensorflow`</a> | `1.4.0_py27`<br/>`1.5.0_py27`<br/>`1.5.0_py36`<br/>`1.6.0_py36`<br/>`1.7.0_py27`<br/>`1.8.0_py27`<br/>`1.9.0_py27`<br/>`1.9.0_py36`<br/>`1.12.0_py27`<br/>`1.12.0_py36`<br/>`2.0.0_py36`<br/>`1.6.0_py27` | [Website](https://www.tensorflow.org) | TensorFlow™ is an open source software library for numerical computation using data flow graphs. 
 **deep learning** | <a id="py-tensorlayer" class="soft_anch">`py-tensorlayer`</a> | `1.6.3_py27` | [Website](http://tensorlayer.org) | TensorLayer is a Deep Learning (DL) and Reinforcement Learning (RL) library extended from Google TensorFlow. 

@@ -182,7 +182,7 @@ there are many other options and areas to explore in the next sections:
 [url_slurm]:  https://slurm.schedmd.com
 [url_top500]: https://top500.org
 
-[url_texteditors]:    prerequisites/#text-editors
+[url_texteditors]:    /docs/getting-started/prerequisites/#text-editors
 [url_running]:        /docs/user-guide/running-jobs/
 
 [url_transfer]:       /docs/storage/data-transfer
