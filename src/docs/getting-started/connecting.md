@@ -107,7 +107,25 @@ If your second factor is accepted, you'll see the following message:
 
     Success. Logging you in...
 
-### Authentication failures
+### Troubleshooting
+
+#### Timeouts
+
+
+If you ever encounter timeout errors when connecting to Sherlock, like
+these:
+```
+$ ssh login.sherlock.stanford.edu
+ssh: connect to host login.sherlock.stanford.edu port 22: Operation timed out
+
+```
+you can try to either:
+
+* switch to a wired connection if you're connecting over wifi,
+* connect via the [Stanford VPN][url_vpn]
+
+
+#### Authentication failures
 
 !!! danger "Excessive authentication failures"
 
@@ -138,8 +156,6 @@ time.
 
     Make sure to unmount your SSHFS drives before putting your macOS system
     to sleep to avoid this situation.
-
-
 
 
 !!! info "VPN"
