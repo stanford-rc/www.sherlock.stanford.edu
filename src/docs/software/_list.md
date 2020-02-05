@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Monday, January 27 2020, we provide 583 software packages, in 7 categories, covering 68 fields of science:*
+*As of Wednesday, February 05 2020, we provide 584 software packages, in 7 categories, covering 68 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -399,7 +399,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **language** | <a id="guile" class="soft_anch">`guile`</a> | `2.0.11`<br/>`2.2.2` | [Website](https://www.gnu.org/software/guile/) | GNU Guile is the preferred extension system for the GNU Project, which features an implementation of the Scheme programming language. 
 **language** | <a id="haskell" class="soft_anch">`haskell`</a> | `8.6.5` | [Website](https://www.haskell.org/) | Haskell is a statically typed, purely functional programming language with type inference and lazy evaluation. 
 **language** | <a id="java" class="soft_anch">`java`</a> | `1.8.0_131` | [Website](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. 
-**language** | <a id="julia" class="soft_anch">`julia`</a> | `0.6.4`<br/>`1.0.0`<br/>`1.1.0`<br/>`1.2.0` | [Website](https://julialang.org) | Julia is a high-level, high-performance dynamic programming language for numerical computing. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/julia)
+**language** | <a id="julia" class="soft_anch">`julia`</a> | `0.6.4`<br/>`1.0.0`<br/>`1.1.0`<br/>`1.2.0`<br/>`1.3.1` | [Website](https://julialang.org) | Julia is a high-level, high-performance dynamic programming language for numerical computing. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/julia)
 **language** | <a id="lua" class="soft_anch">`lua`</a> | `5.3.4` | [Website](https://www.lua.org) | Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description. 
 **language** | <a id="luarocks" class="soft_anch">`luarocks`</a> | `2.4.3` | [Website](https://luarocks.org/) | LuaRocks is the package manager for Lua modules. 
 **language** | <a id="manticore" class="soft_anch">`manticore`</a> | `20180301` | [Website](http://manticore.cs.uchicago.edu/) | Manticore is a high-level parallel programming language aimed at general-purpose applications running on multi-core processors. 
