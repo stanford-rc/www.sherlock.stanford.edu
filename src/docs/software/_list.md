@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, February 05 2020, we provide 584 software packages, in 7 categories, covering 68 fields of science:*
+*As of Wednesday, February 05 2020, we provide 583 software packages, in 7 categories, covering 68 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -243,7 +243,6 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **statistics** | <a id="datamash" class="soft_anch">`datamash`</a> | `1.3` | [Website](https://www.gnu.org/software/datamash/) | GNU datamash is a command-line program which performs basic numeric, textual and statistical operations on input textual data files. 
 **statistics** | <a id="jags" class="soft_anch">`jags`</a> | `4.3.0` | [Website](http://mcmc-jags.sourceforge.net/) | Just another Gibbs sampler (JAGS) is a program for simulation from Bayesian hierarchical models using Markov chain Monte Carlo (MCMC). 
 **statistics** | <a id="py-rpy2" class="soft_anch">`py-rpy2`</a> | `2.8.6_py27`<br/>`2.9.2_py36` | [Website](https://rpy2.bitbucket.io) | rpy2 is an interface to R running embedded in a Python process. 
-**statistics** | <a id="r-rstan" class="soft_anch">`r-rstan`</a> | `2.17.3` | [Website](http://mc-stan.org/users/interfaces/rstan) | RStan is the R interface to Stan, an open-source software for facilitating statistical inference at the frontiers of applied statistics. 
 **statistics** | <a id="rstudio" class="soft_anch">`rstudio`</a> | `1.1.423` | [Website](http://www.rstudio.com) | RStudio is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management. 
 **statistics** | <a id="sas" class="soft_anch">`sas`</a>^<b class="lic"></b>^ | `9.4` | [Website](http://www.sas.com/) | SAS is a software suite developed by SAS Institute for advanced analytics, multivariate analyses, business intelligence, data management, and predictive analytics. 
 **statistics** | <a id="stata" class="soft_anch">`stata`</a>^<b class="lic"></b>^ | `14`<br/>`16`<br/>`15` | [Website](https://www.stata.com) | Stata is a complete, integrated statistical software package that provides everything you need for data analysis, data management, and graphics. 
