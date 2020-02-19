@@ -161,9 +161,12 @@ can run on multiple cores, within the same node.
 
 #### Partition
 
-: A partition is a set of compute nodes within a cluster with a
-common feature. For example, compute nodes with GPU, or compute nodes belonging
-to same owner,  could form a partition.
+: A partition is a set of compute nodes within a cluster with a common feature.
+For example, compute nodes with GPU, or compute nodes belonging to same owner,
+could form a partition.
+
+    On Sherlock, you can see detailed partition information with the
+[`sh_part`][url_sh_part] or `sinfo` commands.
 
 #### QOS
 
@@ -214,3 +217,6 @@ schedule a MPI process, that in turn can use several CPUs.  By contrast, a
 multi-threaded program is composed of only one task, which uses several CPUs.
 
 
+[comment]: #  (link URLs -----------------------------------------------------)
+
+[url_sh_part]: /docs/user-guide/running-jobs/#available-resources
