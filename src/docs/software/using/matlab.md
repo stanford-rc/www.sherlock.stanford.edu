@@ -1,11 +1,10 @@
 ## Overview
 
-[MATLAB][url_matlab] (_matrix laboratory_) is a multi-paradigm numerical
-computing environment and proprietary programming language developed by
-[MathWorks][url_mathworks]. MATLAB allows matrix manipulations, plotting of
-functions and data, implementation of algorithms, creation of user interfaces,
-and interfacing with programs written in other languages.
+Below is an overview of the steps for using [Matlab][url_matlab] on Sherlock.
 
+    1. Check to see if you are in the sw_matlab group with the id
+    2. Purchase Matlab license and/or send srcc-support@stanford.edu cc software@stanford.edu your receipt/license info
+    3. module load and run Matlab
 
 
 ## MATLAB Licensing on Sherlock
