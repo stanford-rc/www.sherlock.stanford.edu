@@ -188,7 +188,7 @@ results.
 
 [url_matlab]:           https://www.mathworks.com/matlab
 [url_mathworks]:        https://www.mathworks.com/
-[url_matilab_cmd]:      https://www.mathworks.com/help/matlab/ref/matlablinux.html
+[url_matlab_cmd]:      https://www.mathworks.com/help/matlab/ref/matlablinux.html
 [url_matlab_options]:   https://www.mathworks.com/help/matlab/matlab_env/startup-options.html
 [url_software]:         https://uit.stanford.edu/service/softwarelic
 [url_X11_UIT]:          https://uit.stanford.edu/service/sharedcomputing/moreX
