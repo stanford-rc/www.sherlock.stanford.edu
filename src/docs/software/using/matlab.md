@@ -6,6 +6,11 @@ computing environment and proprietary programming language developed by
 functions and data, implementation of algorithms, creation of user interfaces,
 and interfacing with programs written in other languages.
 
+Below is an overview of the steps for using MATLAB on Sherlock.
+
+   1. check to see if you can load the `matlab` module,
+   2. if you can't, please see the first section below,
+   3. load the module, and run `matlab`
 
 
 ## MATLAB Licensing on Sherlock
