@@ -1,87 +1,95 @@
 ## Overview
 
-Below is an overview for using Matlab on Sherlock.
-1. Check to see if you are in the sw_matlab group with the id command
-2. Purchase Matlab license and send srcc-support@stanford.edu cc'ing software@stanford.edu your receipt/license
-3. module load and run Matlab
+[MATLAB][url_matlab] (_matrix laboratory_) is a multi-paradigm numerical
+computing environment and proprietary programming language developed by
+[MathWorks][url_mathworks]. MATLAB allows matrix manipulations, plotting of
+functions and data, implementation of algorithms, creation of user interfaces,
+and interfacing with programs written in other languages.
 
 
-## Matlab Licensing on Sherlock
 
-Matlab is available if your PI has purchased a license (approximately $70/user) for any group members that will run 
-Matlab on Sherlock. 
-In order to use Matlab we need to verify that your PI group has a current Matlab license either purchased from Stanford 
-Software Licensing or Matworks directly.
+## MATLAB Licensing on Sherlock
 
-To purchase from the Stanford Software Store go to: https://stanford.onthehub.com/WebStore/Welcome.aspx.  
+MATLAB is a commercial software suite, which requires users to purchase a
+license before they can use it. **Groups are responsible for procuring their
+own licenses to use on Sherlock.**
 
-After your purchase, contact us (srcc-support@stanford.edu) to request Matlab access and cc Stanford Software Licensing 
-(software@stanford.edu ).  Include your license ID or receipt in the email. 
+MATLAB is licensed at the group-level on Sherlock. Meaning that all the members
+of an authorized group will get access to MATLAB.
 
-Once verified, we will add you to the sw_matlab group on Sherlock.  ***Note:*** your group may have already purchased a license.  
-To see if you can run Matlab and are in this group type id in your Sherlock shell session: 
+!!! tip "How many licenses should a group purchase?"
 
+    We usually recommend groups to purchase as many licenses as they will have
+    users running MATLAB on Sherlock.
+
+MATLAB licenses can be purchased through [Stanford Software
+Licensing][url_software] by visiting:
+https://stanford.onthehub.com/WebStore/Welcome.aspx.
+
+After your purchase, you can [contact us][url_contact] to request MATLAB
+access. Please CC Stanford Software Licensing (software@stanford.edu), and
+include your license ID or receipt in the email, for verification.
+
+Once we get approval from the Software License team, all the members of your
+group will be granted access to MATLAB on Sherlock.
+
+### Verifying access
+
+When you've been granted access to MATLAB, you will be able to load the
+`matlab` module with the following command:
 ```
-$ id
+$ ml matlab
 ```
-If you see **sw_matlab** you can run Matlab on Sherlock.
-```
-$uid=28622(yourSUNet) etc...98009(sw_matlab),99001(sh_users)
-```
-## Matlab Usage
+If this command produces an error emssage, please [contact us][url_contact].
 
-The Matlab [module][url_modules] can be
-loaded with:
+
+
+## MATLAB Usage
+
+Once your group has been granted access, the MATLAB [module][url_modules] can
+be loaded with:
 
 ```
 $ ml load matlab
 ```
 
-This will load the current default version.  For a list of available versions run `ml spider matlab` at the Sherlock
-prompt, or refer to the [Software list page][url_software_list].
+This will load the current default version. For a list of available versions
+run `ml spider matlab` at the Sherlock prompt, or refer to the [Software list
+page][url_software_list].
 
 
-
-You will need to use Matlab on a dev or [compute node][url_node] and *not* a login node.  If you use it on a login node you will see:
+Running MATLAB directly on login nodes is not supported and will produce the
+following message:
 ```
 -----------------------------------------------------------------------
- WARNING: running Matlab directly on login nodes is not supported.
+ WARNING: running MATLAB directly on login nodes is not supported.
  Please make sure you request an interactive session on a compute node
- with "sdev" for instance) before launching Matlab interactively.
+ with "sdev" for instance) before launching MATLAB interactively.
 -----------------------------------------------------------------------
 ```
-Once you are on a dev or compute node and your environment is configured (_ie._ when the `matlab` module is loaded), Matlab
-can be started by simply typing matlab at the shell prompt.  To get an interactive session:
+
+You will need to [submit a job][url_submit] or request an [interactive
+session][url_interactive] on a [compute node][url_node] before you can start
+MATLAB.
+
+Once you are on a compute node and your environment is configured (_ie._ when
+the `matlab` module is loaded), MATLAB can be started by simply typing `matlab`
+at the shell prompt.
 
 ```
-$sdev
-srun: job 59701124 queued and waiting for resources
-srun: job 59701124 has been allocated resources
-```
-If you want an interactive node other than a dev node, for instance your PI's node or an idle node in the "owners" partition
-use srun with "--pty bash" as the last 2 arguments:
-```
-srun -p <PI's partition name> --time=1:00:00 --pty bash
-```
-
-Note:  you can see what partitions you can run on and if your PI is an [owner][url_owners] and thus has a partition with the `sh_part` command.
-
-
-Load the Matlab module:
-
-```
-$ml load matlab
+$ sdev
+$ ml load matlab
 $ matlab
 MATLAB is selecting SOFTWARE OPENGL rendering.
-                                                                                   < M A T L A B (R) >
-                                                                         Copyright 1984-2019 The MathWorks, Inc.
-                                                                         R2019a (9.6.0.1072779) 64-bit (glnxa64)
-                                                                                      March 8, 2019
- 
+                          < M A T L A B (R) >
+                Copyright 1984-2019 The MathWorks, Inc.
+                R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                             March 8, 2019
+
 To get started, type doc.
 For product information, visit www.mathworks.com.
- 
->> 
+
+>>
 ```
 
 For a listing of command line options:
@@ -90,47 +98,47 @@ For a listing of command line options:
 $ matlab -help
 ```
 
-#### Running a Matlab script
+#### Running a MATLAB script
 
-There are several ways to launch a Matlab script on the [command line][url_mathworks_cmd]:
+There are several ways to launch a MATLAB script on the command line, as
+documented in the [MATLAB documentation][url_matlab_cmd]:
 
 | Method | Output |
 | ------ | ------ |
-| `matlab -nodesktop < script.m`| displayed on screen, on `stdout`, have Matlab run the code in script.m|
-| ` matlab -nodisplay`| Start the JVM software without starting the MATLAB desktop. 
-| ` matlab -nojvm`| do not start the JVM. 
+| `matlab -nodesktop < script.m` | MATLAB will run the code from `script.m` and display output on `stdout` |
+| `matlab -nodisplay`| Start MATLAB in CLI mode, without its graphical desktop environment |
+| `matlab -nojvm`| do not start the JVM[^JVM] |
 
-More Matlab [options][url_matlab_options]
 
-#### Matlab GUI
+#### MATLAB GUI
 
-It's often best to use your laptop or desktop to develop, debug Matlab and  visualize the output.  If you do need to use
-the Matlab GUI on a large cluster like Sherlock, you will need to use a standard ssh client such as the "Terminal" application on MacOS
-or MobaXTerm on Windows and not Sherlock's [Sherlock onDemand][urlOpen onDemand] shell access app.
-You will need to enable X11 forwarding by connecting to Sherlock with the **-X** option to the ssh command on your 
-laptop/desktop and load the x11 module in the system module group, and of course Matlab:
+It's often best to use your laptop or desktop to develop, debug MATLAB and
+visualize the output. If you do need to use the MATLAB GUI on a large cluster
+like Sherlock, you will need to enable X11 forwarding in your [SSH
+client][url_ssh_client].
+
+For instance:
 
 ```
-ssh -X <YourSUNetID>@login.sherlock.stanford.edu
+$ ssh -X <YourSUNetID>@login.sherlock.stanford.edu
 ```
 
-Once on Sherlock:
+And then, once on Sherlock:
 
 ```
 $ ml load matlab
-$ ml load system x11
 $ matlab
 ```
 
-More info on [X11 forwarding][url_X11_forwarding].
+For more info on X11 forwarding, you can refer to this [UIT page][url_X11_UIT].
 
 
 
-#### Submitting a Matlab job
+#### Submitting a MATLAB job
 
-Here is an example Matlab batch script that is submitted with `sbatch`. 
+Here is an example MATLAB batch script that can submitted with `sbatch`:
 
-```
+```shell
 #!/bin/bash
 #SBATCH --job-name=matlab_test
 #SBATCH --output=matlab_test."%j".out
@@ -140,47 +148,62 @@ Here is an example Matlab batch script that is submitted with `sbatch`.
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=8GB
 #SBATCH --mail-type=ALL
+
 module load matlab
 matlab -nodisplay < example.m
 ```
 
-This simple job, named "matlab_test" will [submit][url_submit] the Matlab script "example.m" to the scheduler, to the normal [partition][url_partition] 
-for 10 minutes and use one [CPU][url_sbatch_CPU] and 8GB of RAM.  It will send you an email (to whatever email you used wen you signed up for Sherlock) 
-when it begins, ends or fails.  
+This simple job, named `matlab_test` will run a MATLAB script named `example.m`
+in the `normal` [partition][url_partition], for a duration of 10 minutes, and
+use 1 [CPU][url_sbatch_CPU] and 8GB of RAM.  It will send you an email (to
+whatever email you used wen you signed up for Sherlock) when it begins, ends or
+fails.
 
-Additionally to aid in debugging, it will log any errors and output to the files matlab_test.JOBID.out/err with the job's SLURM job ID appended
-to the filename (%j).  Note, there are **many** options and resources (CPUs, RAM, time) you can control within the 
-[sbatch][url_sbatch_docs] script.
+Additionally, to aid in debugging, it will log any errors and output to the
+files `matlab_test.JOBID.{out,err}` with the jobid appended to the
+filename (`%j`).  Note, there are **many** options and resources (CPUs, RAM,
+time) you can control within the [sbatch][url_sbatch_docs] script.
 
-To create the sbatch scrip, open a [text editor][url_text_editor] on Sherlock, for example nano, vim, vi or the Sherlock onDemand File manager App 
+To create the script, open a [text editor][url_text_editor] on Sherlock, copy
+the contents of the script, and save it as `matlab_test.sbatch`
 
-```
-$ nano matlab_test.sbatch
-```
-
-Save matlab_test.sbatch
-
-Submit the job with the sbatch command:
+Then, submit the job with the `sbatch` command:
 ```
 $ sbatch matlab_test.sbatch
-$ Submitted batch job 59942277
-$
+Submitted batch job 59942277
 ```
+
+You can check the status of the job with the [`squeue`][url_squeue] command,
+and check the contents of the `matlab_test.JOBID.{out,err}` files to see the
+results.
+
 
 
 [comment]: #  (link URLs ----------------------------------------------------- )
-[url_matlab_options]:     https://www.mathworks.com/help/matlab/matlab_env/startup-options.html
-[url_sbatch_CPU]:        https://slurm.schedmd.com/cpu_management.html
+
+[url_matlab]:           https://www.mathworks.com/matlab
+[url_mathworks]:        https://www.mathworks.com/
+[url_matilab_cmd]:      https://www.mathworks.com/help/matlab/ref/matlablinux.html
+[url_matlab_options]:   https://www.mathworks.com/help/matlab/matlab_env/startup-options.html
+[url_software]:         https://uit.stanford.edu/service/softwarelic
+[url_X11_UIT]:          https://uit.stanford.edu/service/sharedcomputing/moreX
+[url_contact]:          srcc-support@stanford.edu
+[url_submit]:           /docs/getting-started/submitting/#batch-scripts
+[url_node]:             /docs/user-guide/running-jobs/#compute-nodes
+[url_interactive]:      /docs/user-guide/running-jobs/#interactive-jobs
+[url_ssh_client]:       /docs/getting-started/prerequisites/#ssh-clients
+[url_sbatch_CPU]:       https://slurm.schedmd.com/cpu_management.html
 [url_sbatch_docs]:      https://slurm.schedmd.com/sbatch.html
-[url_mathworks_cmd]:     https://www.mathworks.com/help/matlab/ref/matlablinux.html
-[url_X11_forwarding]:    https://uit.stanford.edu/service/sharedcomputing/moreX 
-[urlOpen onDemand]:      https://login.sherlock.stanford.edu
 [url_modules]:          /docs/software/modules
 [url_software_list]:    /docs/software/list
-[url_storage]:          /docs/storage
-[url_gpu]:              /docs/user-guide/gpu
 [url_text_editor]:      /docs/getting-started/prerequisites/#text-editors
-[url_submit]:        /docs/getting-started/submitting/#batch-scripts
-[url_node]:         /docs/user-guide/running-jobs/#compute-nodes
-[url_owners]:      /docs/overview/concepts/#the-condominium-model
-[url_partition]:    /docs/overview/glossary/#partition
+[url_partition]:        /docs/overview/glossary/#partition
+[url_squeue]:           /docs/getting-started/submitting/#check-the-job
+
+
+[comment]: #  (footnotes -----------------------------------------------------)
+
+[^JVM]: MATLAB uses the Java® Virtual Machine (JVM™) software to run the
+  desktop and to display graphics. The `-nojvm` option enables you to start
+  MATLAB without the JVM. Using this option minimizes memory usage and improves
+  initial start-up speed, but restricts functionality.
