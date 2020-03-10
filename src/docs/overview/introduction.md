@@ -168,11 +168,19 @@ solution on your own.
       it.
 
 
-Office hours are held twice a week, in [Polya Hall][url_polya], room 255
-(2nd floor):
 
-* Tuesdays, from 10am to 11am
-* Thursdays from 3pm to 4pm
+We are having office hours via [Zoom][url_zoom] for the time being.  Below are the Zoom links for our Tuesday and Thursday office hours.
+
+Tuesday 10-11am
+
+https://stanford.zoom.us/j/901884213
+
+Thursday 3-4pm
+
+https://stanford.zoom.us/j/681964418
+
+Of course, you can always get Sherlock help via our ticketing system: srcc-support@stanford.edu
+That way, you can include detailed descriptions of the problem or question, valuable output and error messages and any steps you took when you encountered your error.
 
 
 
@@ -210,7 +218,7 @@ Here's what it looks like in motion:
 </script>
 
 [comment]: #  (link URLs -----------------------------------------------------)
-
+[url_zoom]:          https://stanford.zoom.us/
 [url_srcc]:         //srcc.stanford.edu
 [url_contact]:      mailto:srcc-support@stanford.edu
 [url_docs]:         //www.sherlock.stanford.edu/docs
