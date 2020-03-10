@@ -131,11 +131,14 @@ As a member of the Sherlock community, you're also automatically subscribed to:
 
 ### Office hours
 
-!!! warning "We can't accommodate walk-ins"
+!!! bug "COVID-19 update"
 
-    We're unfortunately not staffed to accommodate walk-ins, so please make
-    sure that you're planning to stop by **during** office hours. We will not be
-    able to help you otherwise.
+    **We'll be holding remote office hours via [Zoom][url_zoom], for the time
+    being.** Here are the Zoom links for our Tuesday and Thursday office hours:
+
+    * Tuesday 10-11am: https://stanford.zoom.us/j/901884213
+    * Thursday 3-4pm:  https://stanford.zoom.us/j/681964418
+
 
 Sending a question to srcc-support@stanford.edu is always the best first option
 for questions.  That way you can include detailed descriptions of the problem
@@ -151,14 +154,19 @@ ticketing system.  In office hours some problems can indeed be solved quickly
 or progress can be made so that you can then work self-sufficiently towards a
 solution on your own.
 
+
 !!! tip "What to expect from office hours"
+
+    * We can't accomodate walk-ins: we're unfortunately not staffed to
+      accommodate walk-ins, so please make sure that you're planning to stop by
+      **during** office hours. We will not be able to help you otherwise.
 
     * We can rarely help with application-specific or algorithm problems.
 
     * You should plan your projects sufficiently in advance and not come to
       office hours at the last minute before a deadline. Sherlock is a busy
-      resource with over 3,500 users and you should not expect your jobs to
-      complete before a given date.
+      resource with several thousand users and you should not expect your jobs
+      to complete before a given date.
 
     * Not all questions and problems can be solved or answered during office
       hours, especially ones involving hardware, filesystem or network issues.
@@ -166,22 +174,6 @@ solution on your own.
       components, that are constantly being monitored by our team. You can be
       sure that when Sherlock has an issue, we are aware of it and working on
       it.
-
-
-
-We are having office hours via [Zoom][url_zoom] for the time being.  Below are the Zoom links for our Tuesday and Thursday office hours.
-
-Tuesday 10-11am
-
-https://stanford.zoom.us/j/901884213
-
-Thursday 3-4pm
-
-https://stanford.zoom.us/j/681964418
-
-Of course, you can always get Sherlock help via our ticketing system: srcc-support@stanford.edu
-That way, you can include detailed descriptions of the problem or question, valuable output and error messages and any steps you took when you encountered your error.
-
 
 
 
