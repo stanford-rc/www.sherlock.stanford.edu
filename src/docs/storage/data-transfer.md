@@ -195,7 +195,7 @@ and then should not be typed in).
 
     And to unmount it:
     ```
-    $ fusermount -u ~/sherlock_home
+    $ umount ~/sherlock_home
     ```
 
     For more information about using SSHFS on your local machine, you can
