@@ -26,28 +26,28 @@ explicitly or accessed with `cd`:
 
 ```
 $ cd $HOME
-$ ls -ald .snapshot/home*
+$ ls -ald .snapshot/users*
 [...]
-drwx------ 118 sunetid group  6680 Jul 21 11:16 .snapshot/home.daily.20170721
-drwx------ 118 sunetid group  6702 Jul 21 16:19 .snapshot/home.daily.20170722
-drwx------ 118 sunetid group  6702 Jul 21 16:19 .snapshot/home.daily.20170723
-drwx------ 118 sunetid group  6702 Jul 24 10:57 .snapshot/home.daily.20170724
-drwx------ 118 sunetid group  6702 Jul 24 10:57 .snapshot/home.daily.latest
-drwx------ 118 sunetid group  6702 Jul 21 16:19 .snapshot/home.hourly.20170722-16:00
-drwx------ 118 sunetid group  6702 Jul 21 16:19 .snapshot/home.hourly.20170722-17:00
-drwx------ 118 sunetid group  6702 Jul 21 16:19 .snapshot/home.hourly.20170722-18:00
-drwx------ 118 sunetid group  6702 Jul 21 16:19 .snapshot/home.hourly.20170722-19:00
-drwx------ 118 sunetid group  6702 Jul 21 16:19 .snapshot/home.hourly.20170722-20:00
+drwx------ 118 sunetid group  6680 Jul 21 11:16 .snapshot/users.daily.20170721
+drwx------ 118 sunetid group  6702 Jul 21 16:19 .snapshot/users.daily.20170722
+drwx------ 118 sunetid group  6702 Jul 21 16:19 .snapshot/users.daily.20170723
+drwx------ 118 sunetid group  6702 Jul 24 10:57 .snapshot/users.daily.20170724
+drwx------ 118 sunetid group  6702 Jul 24 10:57 .snapshot/users.daily.latest
+drwx------ 118 sunetid group  6702 Jul 21 16:19 .snapshot/users.hourly.20170722-16:00
+drwx------ 118 sunetid group  6702 Jul 21 16:19 .snapshot/users.hourly.20170722-17:00
+drwx------ 118 sunetid group  6702 Jul 21 16:19 .snapshot/users.hourly.20170722-18:00
+drwx------ 118 sunetid group  6702 Jul 21 16:19 .snapshot/users.hourly.20170722-19:00
+drwx------ 118 sunetid group  6702 Jul 21 16:19 .snapshot/users.hourly.20170722-20:00
 [...]
-$ cd .snapshot/home.daily.latest
+$ cd .snapshot/users.daily.latest
 ```
 
 For instance:
 
-* the `$HOME/.snapshot/home.daily.latest` directory is the latest daily
+* the `$HOME/.snapshot/users.daily.latest` directory is the latest daily
   snapshot available, and store the contents of the $HOME directory as they
   were when the last daily snapshot was taken,
-* the `$HOME/foo/.snapshot/home.hourly.20170722-18:00` can be used to retrieve
+* the `$HOME/foo/.snapshot/users.hourly.20170722-18:00` can be used to retrieve
   the contents of the `$HOME/foo` directory as it was at 6pm on July 22th,
   2017.
 
@@ -63,11 +63,11 @@ Examples:
 * to restore the last known version of `$HOME/foo/bar`:
 
     ```
-    $ cp $HOME/foo/.snapshot/home.hourly.latest/bar $HOME/foo/bar
+    $ cp $HOME/foo/.snapshot/users.hourly.latest/bar $HOME/foo/bar
     ```
     or
     ```
-    $ cp $HOME/.snapshot/foo/home.hourly.latest/bar $HOME/foo/bar
+    $ cp $HOME/.snapshot/foo/users.hourly.latest/bar $HOME/foo/bar
 
     ```
     (both commands are equivalent)
@@ -77,7 +77,7 @@ Examples:
 
     ```
     $ SNAP_DATE=$(date +%Y%m%d -d "2 days ago")
-    $ cp $HOME/.snapshot/home.daily.${SNAP_DATE}/.bashrc $HOME/.bashrc
+    $ cp $HOME/.snapshot/users.daily.${SNAP_DATE}/.bashrc $HOME/.bashrc
     ```
 
 ### Snapshot policy
