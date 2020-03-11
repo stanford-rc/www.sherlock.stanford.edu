@@ -45,7 +45,7 @@ $ cd .snapshot/users.daily.latest
 For instance:
 
 * the `$HOME/.snapshot/users.daily.latest` directory is the latest daily
-  snapshot available, and store the contents of the $HOME directory as they
+  snapshot available, and stores the contents of the $HOME directory as they
   were when the last daily snapshot was taken,
 * the `$HOME/foo/.snapshot/users.hourly.20170722-18:00` can be used to retrieve
   the contents of the `$HOME/foo` directory as it was at 6pm on July 22th,
