@@ -11,11 +11,11 @@ Sherlock.
 
 If for any reason, you want to directly connect to a specific login node
 and bypass the automatic load-balanced dispatching of new connections
-(which we don't recommend), you can use that login node's hostname
+(which **we don't recommend**), you can use that login node's hostname
 explicitly. For instance:
 
 ```
-$ ssh <sunetid>@ln01.sherlock.stanford.edu
+$ ssh <sunetid>@ln21.sherlock.stanford.edu
 ```
 
 This can be useful if you run long-standing processes on the login nodes, such
