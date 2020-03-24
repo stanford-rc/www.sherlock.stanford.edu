@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, March 24 2020, we provide 605 software packages, in 7 categories, covering 69 fields of science:*
+*As of Tuesday, March 24 2020, we provide 607 software packages, in 7 categories, covering 69 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, checkpointing, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -167,6 +167,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="snappy" class="soft_anch">`snappy`</a> | `1.1.7` | [Website](https://github.com/google/snappy) | A fast compressor/decompressor. 
 **libs** | <a id="talloc" class="soft_anch">`talloc`</a> | `2.1.14` | [Website](https://talloc.samba.org) | talloc is a hierarchical, reference counted memory pool system with destructors. 
 **libs** | <a id="utf8proc" class="soft_anch">`utf8proc`</a> | `2.4.0` | [Website](https://juliastrings.github.io/utf8proc/) | iutf8proc is a small, clean C library that provides Unicode normalization, case-folding, and other operations for data in the UTF-8 encoding. 
+**libs** | <a id="wxwidgets" class="soft_anch">`wxwidgets`</a> | `3.0.4` | [Website](https://www.wxwidgets.org/) | wxWidgets is a C++ library that lets developers create applications for Windows, macOS, Linux and other platforms with a single code base. 
 **media** | <a id="ffmpeg" class="soft_anch">`ffmpeg`</a> | `4.0`<br/>`4.2.1` | [Website](https://www.ffmpeg.org) | FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. 
 **media** | <a id="libsndfile" class="soft_anch">`libsndfile`</a> | `1.0.28` | [Website](http://www.mega-nerd.com/libsndfile) | Libsndfile is a C library for reading and writing files containing sampled sound (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface. 
 **performance** | <a id="likwid" class="soft_anch">`likwid`</a> | `4.3.2` | [Website](https://github.com/RRZE-HPC/likwid) | Likwid is a simple toolsuite of command line applications for performance oriented programmers. 
@@ -274,6 +275,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **computational biology** | <a id="imp" class="soft_anch">`imp`</a> | `2.8.0` | [Website](https://integrativemodeling.org/) | IMP's broad goal is to contribute to a comprehensive structural characterization of biomolecules ranging in size and complexity from small peptides to large macromolecular assemblies, by integrating data from diverse biochemical and biophysical experiments. 
 **computational biology** | <a id="py-biopython" class="soft_anch">`py-biopython`</a> | `1.70_py27` | [Website](http://biopython.org) | Biopython is a set of freely available tools for biological computation written in Python. 
 **computational biology** | <a id="rosetta" class="soft_anch">`rosetta`</a> | `3.8` | [Website](https://www.rosettacommons.org) | Rosetta is the premier software suite for modeling macromolecular structures. As a flexible, multi-purpose application, it includes tools for structure prediction, design, and remodeling of proteins and nucleic acids. 
+**cryo-em** | <a id="ctffind" class="soft_anch">`ctffind`</a> | `4.1.13` | [Website](https://grigoriefflab.umassmed.edu/ctf_estimation_ctffind_ctftilt) | ctffind is a program for finding CTFs of electron micrographs. 
 **cryo-em** | <a id="eman2" class="soft_anch">`eman2`</a> | `2.2` | [Website](http://blake.bcm.edu/emanwiki/EMAN2) | EMAN2 is a broadly based greyscale scientific image processing suite with a primary focus on processing data from transmission electron microscopes. 
 **cryo-em** | <a id="imod" class="soft_anch">`imod`</a> | `4.9.12` | [Website](http://bio3d.colorado.edu/imod) | IMOD is a set of image processing, modeling and display programs used for tomographic reconstruction and for 3D reconstruction of EM serial sections and optical sections. 
 **cryo-em** | <a id="relion" class="soft_anch">`relion`</a> | `2.0.3`<br/>`2.1` | [Website](http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page) | RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a stand-alone computer program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class averages in electron cryo-microscopy (cryo-EM). 
