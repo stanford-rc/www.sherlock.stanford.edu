@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, March 24 2020, we provide 607 software packages, in 7 categories, covering 69 fields of science:*
+*As of Tuesday, March 24 2020, we provide 608 software packages, in 7 categories, covering 69 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, checkpointing, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -278,6 +278,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **cryo-em** | <a id="ctffind" class="soft_anch">`ctffind`</a> | `4.1.13` | [Website](https://grigoriefflab.umassmed.edu/ctf_estimation_ctffind_ctftilt) | ctffind is a program for finding CTFs of electron micrographs. 
 **cryo-em** | <a id="eman2" class="soft_anch">`eman2`</a> | `2.2` | [Website](http://blake.bcm.edu/emanwiki/EMAN2) | EMAN2 is a broadly based greyscale scientific image processing suite with a primary focus on processing data from transmission electron microscopes. 
 **cryo-em** | <a id="imod" class="soft_anch">`imod`</a> | `4.9.12` | [Website](http://bio3d.colorado.edu/imod) | IMOD is a set of image processing, modeling and display programs used for tomographic reconstruction and for 3D reconstruction of EM serial sections and optical sections. 
+**cryo-em** | <a id="motioncor2" class="soft_anch">`motioncor2`</a> | `1.3.1` | [Website](https://emcore.ucsf.edu/ucsf-motioncor2) | MotionCor2 is a multi-GPU accelerated program which corrects anisotropic image motion at the single pixel level. 
 **cryo-em** | <a id="relion" class="soft_anch">`relion`</a> | `2.0.3`<br/>`2.1` | [Website](http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page) | RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a stand-alone computer program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class averages in electron cryo-microscopy (cryo-EM). 
 **genomics** | <a id="angsd" class="soft_anch">`angsd`</a> | `0.919` | [Website](http://www.popgen.dk/angsd/index.php/ANGSD) | ANGSD is a software for analyzing next generation sequencing data. 
 **genomics** | <a id="augustus" class="soft_anch">`augustus`</a> | `3.3.2` | [Website](https://github.com/Gaius-Augustus/Augustus) | AUGUSTUS is a program that predicts genes in eukaryotic genomic sequences. 
