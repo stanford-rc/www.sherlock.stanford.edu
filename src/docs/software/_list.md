@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, March 24 2020, we provide 609 software packages, in 7 categories, covering 69 fields of science:*
+*As of Wednesday, March 25 2020, we provide 609 software packages, in 7 categories, covering 69 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, checkpointing, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -23,6 +23,16 @@
     [contact us](mailto:srcc-support@stanford.edu) and see the [Stanford
     Software Licensing page](https://uit.stanford.edu/service/softwarelic) for
     purchasing information.
+
+
+!!! info "Additional features"
+
+    Some of the modules listed below have been built to support specific
+    architectures or parallel execution modes:
+
+      * modules marked with ^<b class="gpu"></b>^ support GPU acceleration
+      * modules marked with ^<b class="mpi"></b>^ support MPI parallel
+        execution
 
 
 <!-- color styles for module properties -->
