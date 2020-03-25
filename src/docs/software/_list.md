@@ -27,7 +27,6 @@
 
 <!-- color styles for module properties -->
 <style>
-<style>
 .mpi  { color: darkblue; }
 .gpu  { color: darkgreen; }
 .lic  { color: darkred; }
