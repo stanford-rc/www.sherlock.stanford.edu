@@ -25,7 +25,7 @@
     purchasing information.
 
 
-!!! info "Additional features"
+!!! tip "Additional features"
 
     Some of the modules listed below have been built to support specific
     architectures or parallel execution modes:
