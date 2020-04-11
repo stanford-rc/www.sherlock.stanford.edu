@@ -1,12 +1,12 @@
 
 ## Categories
 
-*As of Friday, April 10 2020, we provide 613 software packages, in 7 categories, covering 69 fields of science:*
+*As of Friday, April 10 2020, we provide 614 software packages, in 7 categories, covering 70 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, checkpointing, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
-* [`physics`](#physics) <small>astronomy, climate modeling, geophysics, geoscience, materials science, photonics</small>
+* [`physics`](#physics) <small>CFD, astronomy, climate modeling, geophysics, geoscience, materials science, photonics</small>
 * [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, pathology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>cheminformatics, computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
 * [`devel`](#devel) <small>build, compiler, data, data analytics, debug, framework, language, lib, mpi, networking, parser, runtime, sdk</small>
@@ -266,6 +266,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 ### Physics
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
+**CFD** | <a id="su2" class="soft_anch">`su2`</a> | `7.0.3` | [Website](https://su2code.github.io/) | SU2: An Open-Source Suite for Multiphysics Simulation and Design 
 **astronomy** | <a id="heasoft" class="soft_anch">`heasoft`</a> | `6.22.1`<br/>`6.26.1` | [Website](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/) | HEAsoft is a Unified Release of the FTOOLS (General and mission-specific tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks for X-ray astronomical spectral, timing, and imaging data analysis) software packages. 
 **climate modeling** | <a id="cdo" class="soft_anch">`cdo`</a> | `1.9.7.1` | [Website](https://code.mpimet.mpg.de/projects/cdo) | CDO is a collection of command line Operators to manipulate and analyse Climate and NWP model Data. 
 **geophysics** | <a id="opensees" class="soft_anch">`opensees`</a>^<b class="mpi"></b>^ | `2.5.0` | [Website](http://opensees.berkeley.edu/) | OpenSees is a software framework for developing applications to simulate the performance of structural and geotechnical systems subjected to earthquakes. 
