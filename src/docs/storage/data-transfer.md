@@ -327,18 +327,16 @@ services, we also provide a set of utilities that can help.
     account. See the [University IT Google Drive page][url_uit_gdrive] for more
     details.
 
-We provide the `gdrive` tool on Sherlock to interact with Google Drive. You'll
-just need to load the `gdrive` module to be able to use it to move your
+We provide the `rclone` tool on Sherlock to interact with Google Drive. You'll
+just need to load the `rclone` module to be able to use it to move your
 files from/to Google Drive:
 
 ```
-$ module load system gdrive
-$ gdrive help
+$ module load system rclone
+$ rclone --help
 ```
-
-For more details about how to use `gdrive`, please see the [official
-documentation][url_gdrive].
-
+ !!! important "The gdrive program has been blocked by Google. Please use [rclone][url_rclone] instead"
+ 
 
 ### Other services
 
@@ -382,7 +380,6 @@ documentation][url_rclone].
 [url_globus_xfer_start]:  https://app.globus.org/file-manager
 [url_bbcp]:         https://www.slac.stanford.edu/~abh/bbcp
 [url_rclone]:       https://rclone.org/
-[url_gdrive]:       https://github.com/prasmussen/gdrive
 [url_uit_gdrive]:   https://uit.stanford.edu/service/googleapps/drive
 
 

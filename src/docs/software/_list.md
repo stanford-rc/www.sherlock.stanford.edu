@@ -1,12 +1,12 @@
 
 ## Categories
 
-*As of Wednesday, March 25 2020, we provide 609 software packages, in 7 categories, covering 69 fields of science:*
+*As of Friday, April 10 2020, we provide 614 software packages, in 7 categories, covering 70 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, checkpointing, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
-* [`physics`](#physics) <small>astronomy, climate modeling, geophysics, geoscience, materials science, photonics</small>
+* [`physics`](#physics) <small>CFD, astronomy, climate modeling, geophysics, geoscience, materials science, photonics</small>
 * [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, pathology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>cheminformatics, computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
 * [`devel`](#devel) <small>build, compiler, data, data analytics, debug, framework, language, lib, mpi, networking, parser, runtime, sdk</small>
@@ -187,6 +187,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **scm** | <a id="git" class="soft_anch">`git`</a> | `2.12.2` | [Website](http://git-scm.com) | Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. 
 **scm** | <a id="git-lfs" class="soft_anch">`git-lfs`</a> | `2.4.0` | [Website](https://git-lfs.github.com/) | Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server. 
 **scm** | <a id="mercurial" class="soft_anch">`mercurial`</a> | `4.5.3` | [Website](https://www.mercurial-scm.org/) | Mercurial is a free, distributed source control management tool. 
+**scm** | <a id="py-dvc" class="soft_anch">`py-dvc`</a> | `0.91.1_py36` | [Website](https://dvc.org/) | Data Version Control or DVC is an open-source tool for data science and machine learning projects. 
 **scm** | <a id="subversion" class="soft_anch">`subversion`</a> | `1.9.7`<br/>`1.12.2` | [Website](https://subversion.apache.org/) | Subversion is an open source version control system. 
 **tools** | <a id="clinfo" class="soft_anch">`clinfo`</a>^<b class="gpu"></b>^ | `2.2.18.04.06` | [Website](https://github.com/Oblomov/clinfo) | clinfo is a simple command-line application that enumerates all possible (known) properties of the OpenCL platform and devices available on the system. 
 **tools** | <a id="curl" class="soft_anch">`curl`</a> | `7.54.0` | [Website](https://curl.haxx.se/) | curl is an open source command line tool and library for transferring data with URL syntax. 
@@ -265,6 +266,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 ### Physics
 Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;name | <img style="float:left;min-width:90px;visibility:hidden">Version(s) | URL  | Description
 :----- | :----------- | :------ | :--- | :----------
+**CFD** | <a id="su2" class="soft_anch">`su2`</a> | `7.0.3` | [Website](https://su2code.github.io/) | SU2: An Open-Source Suite for Multiphysics Simulation and Design 
 **astronomy** | <a id="heasoft" class="soft_anch">`heasoft`</a> | `6.22.1`<br/>`6.26.1` | [Website](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/) | HEAsoft is a Unified Release of the FTOOLS (General and mission-specific tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks for X-ray astronomical spectral, timing, and imaging data analysis) software packages. 
 **climate modeling** | <a id="cdo" class="soft_anch">`cdo`</a> | `1.9.7.1` | [Website](https://code.mpimet.mpg.de/projects/cdo) | CDO is a collection of command line Operators to manipulate and analyse Climate and NWP model Data. 
 **geophysics** | <a id="opensees" class="soft_anch">`opensees`</a>^<b class="mpi"></b>^ | `2.5.0` | [Website](http://opensees.berkeley.edu/) | OpenSees is a software framework for developing applications to simulate the performance of structural and geotechnical systems subjected to earthquakes. 
@@ -414,7 +416,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **language** | <a id="guile" class="soft_anch">`guile`</a> | `2.0.11`<br/>`2.2.2` | [Website](https://www.gnu.org/software/guile/) | GNU Guile is the preferred extension system for the GNU Project, which features an implementation of the Scheme programming language. 
 **language** | <a id="haskell" class="soft_anch">`haskell`</a> | `8.6.5` | [Website](https://www.haskell.org/) | Haskell is a statically typed, purely functional programming language with type inference and lazy evaluation. 
 **language** | <a id="java" class="soft_anch">`java`</a> | `1.8.0_131` | [Website](http://www.oracle.com/technetwork/java/index.html) | Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[14] and specifically designed to have as few implementation dependencies as possible. 
-**language** | <a id="julia" class="soft_anch">`julia`</a> | `0.6.4`<br/>`1.0.0`<br/>`1.1.0`<br/>`1.2.0`<br/>`1.3.1` | [Website](https://julialang.org) | Julia is a high-level, high-performance dynamic programming language for numerical computing. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/julia)
+**language** | <a id="julia" class="soft_anch">`julia`</a> | `0.6.4`<br/>`1.0.0`<br/>`1.1.0`<br/>`1.2.0`<br/>`1.3.1`<br/>`1.4.0` | [Website](https://julialang.org) | Julia is a high-level, high-performance dynamic programming language for numerical computing. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/julia)
 **language** | <a id="lua" class="soft_anch">`lua`</a> | `5.3.4` | [Website](https://www.lua.org) | Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming, and data description. 
 **language** | <a id="luarocks" class="soft_anch">`luarocks`</a> | `2.4.3` | [Website](https://luarocks.org/) | LuaRocks is the package manager for Lua modules. 
 **language** | <a id="manticore" class="soft_anch">`manticore`</a> | `20180301` | [Website](http://manticore.cs.uchicago.edu/) | Manticore is a high-level parallel programming language aimed at general-purpose applications running on multi-core processors. 
@@ -424,6 +426,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **language** | <a id="py-cython" class="soft_anch">`py-cython`</a> | `0.27.3_py36`<br/>`0.27.3_py27` | [Website](http://cython.org/) | Cython is an optimising static compiler for both the Python programming language and the extended Cython programming language (based on Pyrex). 
 **language** | <a id="py-ipython" class="soft_anch">`py-ipython`</a> | `6.1.0_py36`<br/>`5.4.1_py27` | [Website](https://ipython.org) | IPython is a command shell for interactive computing in multiple programming languages, originally developed for the Python programming language. 
 **language** | <a id="py-jupyter" class="soft_anch">`py-jupyter`</a> | `1.0.0_py36`<br/>`1.0.0_py27` | [Website](https://jupyter.org) | Jupyter is a browser-based interactive notebook for programming, mathematics, and data science. It supports a number of languages via plugins. 
+**language** | <a id="py-jupyterlmod" class="soft_anch">`py-jupyterlmod`</a> | `1.8.0_py27`<br/>`1.8.0_py36` | [Website](https://github.com/cmd-ntrf/jupyter-lmod) | Jupyter interactive notebook server extension that allows user to interact with environment modules before launching kernels. 
 **language** | <a id="python" class="soft_anch">`python`</a> | `3.6.1`<br/>`2.7.13` | [Website](https://www.python.org) | Python is an interpreted, interactive, object-oriented programming language. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/python)
 **language** | <a id="ruby" class="soft_anch">`ruby`</a> | `2.4.1` | [Website](https://www.ruby-lang.org) | A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. 
 **language** | <a id="rust" class="soft_anch">`rust`</a> | `1.35.0` | [Website](https://www.rust-lang.org/) | A language empowering everyone to build reliable and efficient software. 
