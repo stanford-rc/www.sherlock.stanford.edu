@@ -11,7 +11,10 @@ odd, please [let us know][url_contact].
     When encountering issues with software, if the misbehavior involves an
     error message, the first step should always be to look up the error message
     online.  There's a good chance somebody stumbled upon the same hurdles
-    before, and may even provide some fix or workaround.
+    before, and may even provide some fix or workaround. One of the most helpful
+    Google searches is "<your application> + sbatch".  For example if you're having
+    trouble submitting jobs or allocating resources (CPUs, time, memory) with cellranger, 
+    Google "cellranger sbatch" to see how others have successfully run your application on a cluster.
 
 If you're facing issues you can't figure out, we're here to help. Feel free to
 email us at srcc-support@stanford.edu, but please keep the following points in
