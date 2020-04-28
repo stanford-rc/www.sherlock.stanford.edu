@@ -219,7 +219,7 @@ compute node.
     run computationally intensive tasks. Those should be submitted to the
     scheduler which will dispatch them on compute nodes.
 
-By contrast, the shell prompt on a login node looks like this:
+By contrast, the shell prompt on a compute node looks like this:
 
 <!-- manual coloring -->
 <pre style="padding: 10.5px 12px">
