@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, April 10 2020, we provide 614 software packages, in 7 categories, covering 70 fields of science:*
+*As of Tuesday, May 05 2020, we provide 617 software packages, in 7 categories, covering 70 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, checkpointing, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -292,7 +292,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **cryo-em** | <a id="imod" class="soft_anch">`imod`</a>^<b class="gpu"></b>^ | `4.9.12` | [Website](http://bio3d.colorado.edu/imod) | IMOD is a set of image processing, modeling and display programs used for tomographic reconstruction and for 3D reconstruction of EM serial sections and optical sections. 
 **cryo-em** | <a id="motioncor2" class="soft_anch">`motioncor2`</a>^<b class="gpu"></b>^ | `1.3.1` | [Website](https://emcore.ucsf.edu/ucsf-motioncor2) | MotionCor2 is a multi-GPU accelerated program which corrects anisotropic image motion at the single pixel level. 
 **cryo-em** | <a id="relion" class="soft_anch">`relion`</a>^<b class="gpu"></b>^^<b class="mpi"></b>^ | `2.0.3`<br/>`2.1` | [Website](http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page) | RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a stand-alone computer program that employs an empirical Bayesian approach to refinement of (multiple) 3D reconstructions or 2D class averages in electron cryo-microscopy (cryo-EM). 
-**genomics** | <a id="angsd" class="soft_anch">`angsd`</a> | `0.919` | [Website](http://www.popgen.dk/angsd/index.php/ANGSD) | ANGSD is a software for analyzing next generation sequencing data. 
+**genomics** | <a id="angsd" class="soft_anch">`angsd`</a> | `0.919`<br/>`0.931` | [Website](http://www.popgen.dk/angsd/index.php/ANGSD) | ANGSD is a software for analyzing next generation sequencing data. 
 **genomics** | <a id="augustus" class="soft_anch">`augustus`</a> | `3.3.2` | [Website](https://github.com/Gaius-Augustus/Augustus) | AUGUSTUS is a program that predicts genes in eukaryotic genomic sequences. 
 **genomics** | <a id="bamtools" class="soft_anch">`bamtools`</a> | `2.5.1` | [Website](https://github.com/pezmaster31/bamtools) | BamTools is a project that provides both a C++ API and a command-line toolkit for reading, writing, and manipulating BAM (genome alignment) files. 
 **genomics** | <a id="bcftools" class="soft_anch">`bcftools`</a> | `1.6`<br/>`1.8` | [Website](https://github.com/samtools/bcftools) | BCFtools is a program for variant calling and manipulating files in the Variant Call Format (VCF) and its binary counterpart BCF. 
@@ -310,7 +310,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **genomics** | <a id="gatk" class="soft_anch">`gatk`</a> | `4.1.0.0`<br/>`4.1.4.1` | [Website](https://software.broadinstitute.org/gatk/) | GATK (Genome Analysis Toolkit) offers a wide variety of tools with a primary focus on variant discovery and genotyping. 
 **genomics** | <a id="hic-pro" class="soft_anch">`hic-pro`</a> | `2.10.0` | [Website](https://github.com/nservant/HiC-Pro) | HiC-Pro: An optimized and flexible pipeline for Hi-C data processing. 
 **genomics** | <a id="hisat2" class="soft_anch">`hisat2`</a> | `2.1.0` | [Website](http://ccb.jhu.edu/software/hisat2) | HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes (as well as to a single reference genome). 
-**genomics** | <a id="htslib" class="soft_anch">`htslib`</a> | `1.6`<br/>`1.8` | [Website](https://github.com/samtools/htslib) | C library for high-throughput sequencing data formats. 
+**genomics** | <a id="htslib" class="soft_anch">`htslib`</a> | `1.6`<br/>`1.8`<br/>`1.10.2` | [Website](https://github.com/samtools/htslib) | C library for high-throughput sequencing data formats. 
 **genomics** | <a id="jellyfish" class="soft_anch">`jellyfish`</a> | `2.2.10` | [Website](https://github.com/gmarcais/Jellyfish) | A fast multi-threaded k-mer counter. 
 **genomics** | <a id="kallisto" class="soft_anch">`kallisto`</a> | `0.44.0` | [Website](https://pachterlab.github.io/kallisto/) | kallisto is a program for quantifying abundances of transcripts from RNA-Seq data using high-throughput sequencing reads. 
 **genomics** | <a id="mixcr" class="soft_anch">`mixcr`</a> | `2.1.12` | [Website](https://milaboratory.com/software/mixcr/) | MiXCR is a universal framework that processes big immunome data from raw sequences to quantitated clonotypes. 
@@ -428,7 +428,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **language** | <a id="py-jupyter" class="soft_anch">`py-jupyter`</a> | `1.0.0_py36`<br/>`1.0.0_py27` | [Website](https://jupyter.org) | Jupyter is a browser-based interactive notebook for programming, mathematics, and data science. It supports a number of languages via plugins. 
 **language** | <a id="py-jupyterlmod" class="soft_anch">`py-jupyterlmod`</a> | `1.8.0_py27`<br/>`1.8.0_py36` | [Website](https://github.com/cmd-ntrf/jupyter-lmod) | Jupyter interactive notebook server extension that allows user to interact with environment modules before launching kernels. 
 **language** | <a id="python" class="soft_anch">`python`</a> | `3.6.1`<br/>`2.7.13` | [Website](https://www.python.org) | Python is an interpreted, interactive, object-oriented programming language. <br/>[Usage on Sherlock](https://www.sherlock.stanford.edu/docs/software/using/python)
-**language** | <a id="ruby" class="soft_anch">`ruby`</a> | `2.4.1` | [Website](https://www.ruby-lang.org) | A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. 
+**language** | <a id="ruby" class="soft_anch">`ruby`</a> | `2.4.1`<br/>`2.7.1` | [Website](https://www.ruby-lang.org) | A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. 
 **language** | <a id="rust" class="soft_anch">`rust`</a> | `1.35.0` | [Website](https://www.rust-lang.org/) | A language empowering everyone to build reliable and efficient software. 
 **language** | <a id="scala" class="soft_anch">`scala`</a> | `2.12.6` | [Website](https://www.scala-lang.org) | Scala combines object-oriented and functional programming in one concise, high-level language. 
 **lib** | <a id="ant" class="soft_anch">`ant`</a> | `1.10.1` | [Website](https://ant.apache.org/) | Apache Ant is a Java library and command-line tool whose mission is to drive processes described in build files as targets and extension points dependent upon each other. 
