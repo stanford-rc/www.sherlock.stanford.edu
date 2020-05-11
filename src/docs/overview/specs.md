@@ -10,14 +10,14 @@
 
 ## In a nutshell
 
-Sherlock features more than 1,000 compute nodes, 18,000+ CPU cores, 120TB of
-total memory, 400+ GPUs, for a total computing power of more than 1 Petaflop.
+Sherlock features more than 1,300 compute nodes, 26,000+ CPU cores, 230TB of
+total memory, 470+ GPUs, for a total computing power of more than 1 Petaflop.
 That would rank it in the Top500 list of the most powerful supercomputers in
 the world.
 
-A parallel high-performance filesystem of more than 3 PB, delivering over
-20GB/s of sustained I/O bandwidth, provides scratch storage for more than 2,300
-users, and 400 PI groups.
+A parallel high-performance filesystem of more than 5 PB, delivering over
+20GB/s of sustained I/O bandwidth, provides scratch storage for more than 4,800
+users, and 790 PI groups.
 
 ## Computing
 
