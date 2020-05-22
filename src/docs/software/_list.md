@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, May 22 2020, we provide 620 software packages, in 7 categories, covering 71 fields of science:*
+*As of Friday, May 22 2020, we provide 621 software packages, in 7 categories, covering 71 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, checkpointing, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -240,7 +240,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **numerical library** | <a id="nagfl" class="soft_anch">`nagfl`</a> | `fll6i26dcl` | [Website](https://www.nag.com/nag-fortran-library) | The NAG Fortran Library is the largest and most comprehensive collection of numerical and statistical algorithms in Fortran. 
 **numerical library** | <a id="nagfs" class="soft_anch">`nagfs`</a> | `fsl6i26dcl` | [Website](https://www.nag.com/nag-library-smp-multicore) | The NAG Library for SMP & Multicore is based on, and includes, the full functionality of the NAG Fortran Library. 
 **numerical library** | <a id="nagmb" class="soft_anch">`nagmb`</a> | `MBL6I25DNL` | [Website](https://www.nag.com/nag-toolbox-matlab) | The NAG C Library is the largest and most comprehensive collection of mathematical and statistical algorithms for C and C++. 
-**numerical library** | <a id="openblas" class="soft_anch">`openblas`</a> | `0.2.19`<br/>`0.3.4` | [Website](http://www.openblas.net/) | OpenBLAS is an optimized BLAS library 
+**numerical library** | <a id="openblas" class="soft_anch">`openblas`</a> | `0.2.19`<br/>`0.3.4`<br/>`0.3.9` | [Website](http://www.openblas.net/) | OpenBLAS is an optimized BLAS library 
 **numerical library** | <a id="parmetis" class="soft_anch">`parmetis`</a>^<b class="mpi"></b>^ | `4.0.3` | [Website](http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview) | ParMETIS is an MPI-based parallel library that implements a variety of algorithms for partitioning unstructured graphs, meshes, and for computing fill-reducing orderings of sparse matrices. 
 **numerical library** | <a id="py-numpy" class="soft_anch">`py-numpy`</a> | `1.14.3_py36`<br/>`1.17.2_py36`<br/>`1.18.1_py36`<br/>`1.14.3_py27` | [Website](http://www.numpy.org) | NumPy is the fundamental package for scientific computing with Python. 
 **numerical library** | <a id="py-pyublas" class="soft_anch">`py-pyublas`</a> | `2017.1_py27` | [Website](https://mathema.tician.de/software/pyublas/) | PyUblas provides a seamless glue layer between Numpy and Boost.Ublas for use with Boost.Python. 
