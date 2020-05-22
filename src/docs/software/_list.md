@@ -1,12 +1,12 @@
 
 ## Categories
 
-*As of Tuesday, May 05 2020, we provide 617 software packages, in 7 categories, covering 70 fields of science:*
+*As of Friday, May 22 2020, we provide 620 software packages, in 7 categories, covering 71 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, checkpointing, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
 * [`math`](#math) <small>computational geometry, deep learning, linear algebra, machine learning, numerical analysis, numerical library, optimization, scientific computing, statistics, symbolic</small>
-* [`physics`](#physics) <small>CFD, astronomy, climate modeling, geophysics, geoscience, materials science, photonics</small>
+* [`physics`](#physics) <small>CFD, astronomy, climate modeling, geophysics, geoscience, materials science, particle, photonics</small>
 * [`biology`](#biology) <small>clinical science, computational biology, cryo-em, genomics, neurology, pathology, phylogenetics</small>
 * [`chemistry`](#chemistry) <small>cheminformatics, computational chemistry, cristallography, electrostatics, molecular dynamics, quantum chemistry</small>
 * [`devel`](#devel) <small>build, compiler, data, data analytics, debug, framework, language, lib, mpi, networking, parser, runtime, sdk</small>
@@ -63,7 +63,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **plotting** | <a id="gnuplot" class="soft_anch">`gnuplot`</a> | `5.2.0` | [Website](http://www.gnuplot.info) | Gnuplot is a portable command-line driven graphing utility for Linux, OS/2, MS Windows, OSX, VMS, and many other platforms. 
 **plotting** | <a id="grace" class="soft_anch">`grace`</a> | `5.1.25` | [Website](http://plasma-gate.weizmann.ac.il/Grace) | Grace is a WYSIWYG tool to make two-dimensional plots of numerical data. 
 **plotting** | <a id="py-basemap" class="soft_anch">`py-basemap`</a> | `1.1.0_py36`<br/>`1.1.0_py27` | [Website](https://matplotlib.org/basemap/) | The matplotlib basemap toolkit is a library for plotting 2D data on maps in Python. 
-**plotting** | <a id="py-matplotlib" class="soft_anch">`py-matplotlib`</a> | `2.1.2_py27`<br/>`2.1.2_py36`<br/>`2.2.2_py36`<br/>`3.1.1_py36`<br/>`2.2.2_py27` | [Website](http://matplotlib.org) | Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. 
+**plotting** | <a id="py-matplotlib" class="soft_anch">`py-matplotlib`</a> | `2.1.2_py27`<br/>`2.1.2_py36`<br/>`2.2.2_py36`<br/>`3.1.1_py36`<br/>`3.2.1_py36`<br/>`2.2.2_py27` | [Website](http://matplotlib.org) | Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. 
 **plotting** | <a id="py-plotly" class="soft_anch">`py-plotly`</a> | `2.4.1_py27` | [Website](https://plot.ly/python/) | Plotly's Python graphing library makes interactive, publication-quality graphs online. 
 **remote display** | <a id="virtualgl" class="soft_anch">`virtualgl`</a> | `2.5.2` | [Website](http://www.virtualgl.org) | VirtualGL is an open source toolkit that gives any Unix or Linux remote display software the ability to run OpenGL applications with full 3D hardware acceleration. 
 
@@ -277,6 +277,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **geoscience** | <a id="py-pyproj" class="soft_anch">`py-pyproj`</a> | `1.9.5.1_py36`<br/>`1.9.5.1_py27` | [Website](https://github.com/jswhit/pyproj) | Python interface to PROJ4 library for cartographic transformations. 
 **geoscience** | <a id="udunits" class="soft_anch">`udunits`</a> | `2.2.26` | [Website](https://www.unidata.ucar.edu/software/udunits/) | The UDUNITS package from Unidata is a C-based package for the programatic handling of units of physical quantities. 
 **materials science** | <a id="atat" class="soft_anch">`atat`</a> | `3.36` | [Website](https://www.brown.edu/Departments/Engineering/Labs/avdw/atat/) | Alloy Theoretic Automated Toolkit: a software toolkit for modeling coupled configurational and vibrational disorder in alloy systems. 
+**particle** | <a id="openmc" class="soft_anch">`openmc`</a> | `0.10.0` | [Website](https://github.com/openmc-dev/openmc) | OpenMC is a Monte Carlo particle transport simulation code focused on neutron criticality calculations. 
 **photonics** | <a id="meep" class="soft_anch">`meep`</a>^<b class="mpi"></b>^ | `1.3`<br/>`1.4.3` | [Website](https://github.com/stevengj/meep) | Meep is a free finite-difference time-domain (FDTD) simulation software package to model electromagnetic systems. 
 **photonics** | <a id="mpb" class="soft_anch">`mpb`</a>^<b class="mpi"></b>^ | `1.5`<br/>`1.6.2` | [Website](https://github.com/stevengj/mpb) | MPB is a free software package for computing the band structures, or dispersion relations, and electromagnetic modes of periodic dielectric structures, on both serial and parallel computers. 
 
@@ -401,7 +402,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **data** | <a id="netcdf" class="soft_anch">`netcdf`</a> | `4.4.1.1` | [Website](https://www.unidata.ucar.edu/software/netcdf) | NetCDF is a set of software libraries and self-describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. 
 **data** | <a id="pnetcdf" class="soft_anch">`pnetcdf`</a>^<b class="mpi"></b>^ | `1.8.1` | [Website](http://cucis.ece.northwestern.edu/projects/PnetCDF/) | Parallel netCDF (PnetCDF) is a parallel I/O library for accessing NetCDF files in CDF-1, 2, and 5 formats. 
 **data** | <a id="protobuf" class="soft_anch">`protobuf`</a> | `3.4.0` | [Website](https://developers.google.com/protocol-buffers/) | Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data. 
-**data** | <a id="py-pandas" class="soft_anch">`py-pandas`</a> | `0.23.0_py27`<br/>`0.23.0_py36` | [Website](https://pandas.pydata.org/) | pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language. 
+**data** | <a id="py-pandas" class="soft_anch">`py-pandas`</a> | `0.23.0_py27`<br/>`0.23.0_py36`<br/>`1.0.3_py36` | [Website](https://pandas.pydata.org/) | pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language. 
 **data** | <a id="py-protobuf" class="soft_anch">`py-protobuf`</a> | `3.4.0_py36`<br/>`3.6.1_py27`<br/>`3.6.1_py36`<br/>`3.4.0_py27` | [Website](https://developers.google.com/protocol-buffers) | Python bindings for Google's Protocol Buffers data interchange format. 
 **data** | <a id="redis" class="soft_anch">`redis`</a> | `4.0.1` | [Website](https://redis.io) | Redis is an open source, in-memory data structure store, used as a database, cache and message broker. 
 **data analytics** | <a id="hadoop" class="soft_anch">`hadoop`</a> | `3.1.0` | [Website](https://hadoop.apache.org/) | The Apache Hadoop software library is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. 
