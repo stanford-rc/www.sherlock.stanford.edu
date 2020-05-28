@@ -103,19 +103,21 @@ hello world
 
 Here's an example Julia sbatch script that can be submitted via `sbatch`:
 
-```bash tab="julia_test.sbatch"
-#!/bin/bash
 
-#SBATCH --time=00:10:00
-#SBATCH --mem=4G
-#SBATCH --output=julia_test.log
+=== "julia_test.sbatch"
+    ```bash
+    #!/bin/bash
 
-# load the module
-ml julia
+    #SBATCH --time=00:10:00
+    #SBATCH --mem=4G
+    #SBATCH --output=julia_test.log
 
-# run the Julia application
-srun julia helloworld.jl
-```
+    # load the module
+    ml julia
+
+    # run the Julia application
+    srun julia helloworld.jl
+    ```
 
 You can save this script as `julia_test.sbatch` and submit it to the scheduler
 with:
@@ -257,15 +259,16 @@ with the process id and the node it's executing on, in parallel:
 
 You can submit the following job:
 
-```bash tab="julia_test.sbatch"
-#!/bin/bash
-#SBATCH --nodes 2
-#SBATCH --ntasks-per-node 4
-#SBATCH --time 5:0
+=== "julia_test.sbatch"
+    ```bash
+    #!/bin/bash
+    #SBATCH --nodes 2
+    #SBATCH --ntasks-per-node 4
+    #SBATCH --time 5:0
 
-ml julia
-julia --machine-file <(srun hostname -s)  ./julia_parallel_test.jl
-```
+    ml julia
+    julia --machine-file <(srun hostname -s)  ./julia_parallel_test.jl
+    ```
 
 Save as `julia_test.sbatch`, and then:
 

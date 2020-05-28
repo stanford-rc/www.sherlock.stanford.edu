@@ -71,25 +71,26 @@ Here's an example R batch script that can be submitted via `sbatch`. It runs a
 simple matrix multiplication example, and demonstrate how to feed R code as a
 [HEREDOC][url_heredoc] to R directly, so no intermediate R script is necessary:
 
-```bash tab="R-test.sbatch"
-#!/bin/bash
+=== "R-test.sbatch"
+    ```bash
+    #!/bin/bash
 
-#SBATCH --time=00:10:00
-#SBATCH --mem=10G
-#SBATCH --output=R-test.log
+    #SBATCH --time=00:10:00
+    #SBATCH --mem=10G
+    #SBATCH --output=R-test.log
 
-# load the module
-ml R
+    # load the module
+    ml R
 
-# run R code
-R --no-save << EOF
-set.seed (1)
-m <- 4000
-n <- 4000
-A <- matrix (runif (m*n),m,n)
-system.time (B <- crossprod(A))
-EOF
-```
+    # run R code
+    R --no-save << EOF
+    set.seed (1)
+    m <- 4000
+    n <- 4000
+    A <- matrix (runif (m*n),m,n)
+    system.time (B <- crossprod(A))
+    EOF
+    ```
 
 You can save this script as `R-test.sbatch` and submit it to the scheduler with:
 ```
@@ -348,53 +349,55 @@ Sherlock (more nodes or CPU cores can be requested, as needed).
 
 Save the two scripts below in a directory on Sherlock:
 
-```R tab="doParallel_test.R"
-# Example doParallel script
+=== "doParallel_test.R"
+    ```R
+    # Example doParallel script
 
-if(!require(doParallel)) install.packages("doParallel")
-library(doParallel)
+    if(!require(doParallel)) install.packages("doParallel")
+    library(doParallel)
 
-# use the environment variable SLURM_NTASKS_PER_NODE to set
-# the number of cores to use
-registerDoParallel(cores=(Sys.getenv("SLURM_NTASKS_PER_NODE")))
+    # use the environment variable SLURM_NTASKS_PER_NODE to set
+    # the number of cores to use
+    registerDoParallel(cores=(Sys.getenv("SLURM_NTASKS_PER_NODE")))
 
-# bootstrap iteration example
-x <- iris[which(iris[,5] != "setosa"), c(1,5)]
-iterations <- 10000# Number of iterations to run
+    # bootstrap iteration example
+    x <- iris[which(iris[,5] != "setosa"), c(1,5)]
+    iterations <- 10000# Number of iterations to run
 
-# parallel loop
-# note the '%dopar%' instruction
-parallel_time <- system.time({
-  r <- foreach(icount(iterations), .combine=cbind) %dopar% {
-    ind <- sample(100, 100, replace=TRUE)
-    result1 <- glm(x[ind,2]~x[ind,1], family=binomial(logit))
-    coefficients(result1)
-  }
-})[3]
+    # parallel loop
+    # note the '%dopar%' instruction
+    parallel_time <- system.time({
+      r <- foreach(icount(iterations), .combine=cbind) %dopar% {
+        ind <- sample(100, 100, replace=TRUE)
+        result1 <- glm(x[ind,2]~x[ind,1], family=binomial(logit))
+        coefficients(result1)
+      }
+    })[3]
 
-# show the number of parallel workers to be used
-getDoParWorkers()
+    # show the number of parallel workers to be used
+    getDoParWorkers()
 
-# execute the function
-parallel_time
-```
+    # execute the function
+    parallel_time
+    ```
 
-```bash tab="doParallel_test.sbatch"
-#!/bin/bash
+=== "doParallel_test.sbatch"
+    ```bash
+    #!/bin/bash
 
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=16
-#SBATCH --output=doParallel_test.log
+    #SBATCH --nodes=1
+    #SBATCH --ntasks-per-node=16
+    #SBATCH --output=doParallel_test.log
 
-# --ntasks-per-node will be used in doParallel_test.R to specify the number
-# of cores to use on the machine.
+    # --ntasks-per-node will be used in doParallel_test.R to specify the number
+    # of cores to use on the machine.
 
-# load modules
-ml R/3.5.1
+    # load modules
+    ml R/3.5.1
 
-# execute script
-Rscript doParallel_test.R
-```
+    # execute script
+    Rscript doParallel_test.R
+    ```
 
 And then submit the job with:
 ```
@@ -447,44 +450,46 @@ Once the package is installed, the following scripts demonstrate a very basic
 `Rmpi` example.
 
 
-```R tab="Rmpi-test.R"
-# Example Rmpi script
+=== "Rmpi-test.R"
+    ```R
+    # Example Rmpi script
 
-if (!require("Rmpi")) install.packages("Rmpi")
-library(Rmpi)
+    if (!require("Rmpi")) install.packages("Rmpi")
+    library(Rmpi)
 
-# initialize an Rmpi environment
-ns <- mpi.universe.size() - 1
-mpi.spawn.Rslaves(nslaves=ns, needlog=TRUE)
+    # initialize an Rmpi environment
+    ns <- mpi.universe.size() - 1
+    mpi.spawn.Rslaves(nslaves=ns, needlog=TRUE)
 
-# send these commands to the slaves
-mpi.bcast.cmd( id <- mpi.comm.rank() )
-mpi.bcast.cmd( ns <- mpi.comm.size() )
-mpi.bcast.cmd( host <- mpi.get.processor.name() )
+    # send these commands to the slaves
+    mpi.bcast.cmd( id <- mpi.comm.rank() )
+    mpi.bcast.cmd( ns <- mpi.comm.size() )
+    mpi.bcast.cmd( host <- mpi.get.processor.name() )
 
-# all slaves execute this command
-mpi.remote.exec(paste("I am", id, "of", ns, "running on", host))
+    # all slaves execute this command
+    mpi.remote.exec(paste("I am", id, "of", ns, "running on", host))
 
-# close down the Rmpi environment
-mpi.close.Rslaves(dellog = FALSE)
-mpi.exit()
-```
+    # close down the Rmpi environment
+    mpi.close.Rslaves(dellog = FALSE)
+    mpi.exit()
+    ```
 
-```bash tab="Rmpi-test.sbatch"
-#!/bin/bash
+=== "Rmpi-test.sbatch"
+    ```bash
+    #!/bin/bash
 
-#SBATCH --nodes=2
-#SBATCH --ntasks=4
-#SBATCH --output=Rmpi-test.log
+    #SBATCH --nodes=2
+    #SBATCH --ntasks=4
+    #SBATCH --output=Rmpi-test.log
 
-## load modules
-# openmpi is not loaded by default with R, so it must be loaded explicitely
-ml R openmpi
+    ## load modules
+    # openmpi is not loaded by default with R, so it must be loaded explicitely
+    ml R openmpi
 
-## run script
-# we use '-np 1' since Rmpi does its own task management
-mpirun -np 1 Rscript Rmpi-test.R
-```
+    ## run script
+    # we use '-np 1' since Rmpi does its own task management
+    mpirun -np 1 Rscript Rmpi-test.R
+    ```
 
 You can save those scripts as `Rmpi-test.R` and
 `Rmpi-test.sbatch` and then submit your job with:
@@ -519,45 +524,47 @@ Here's a quick example that compares running a matrix multiplication on a CPU
 and on a GPU using R. It requires [submitting a job to a GPU node][url_gpu] and
 the [`gpuR`][url_gpuR] R package.
 
-```R tab='gpuR-test.R'
-# Example gpuR script
+=== "gpuR-test.R"
+    ```R
+    # Example gpuR script
 
-if (!require("gpuR")) install.packages("gpuR")
-library(gpuR)
+    if (!require("gpuR")) install.packages("gpuR")
+    library(gpuR)
 
-print("CPU times")
-for(i in seq(1:7)) {
-    ORDER = 64*(2^i)
-    A = matrix(rnorm(ORDER^2), nrow=ORDER)
-    B = matrix(rnorm(ORDER^2), nrow=ORDER)
-    print(paste(i, sprintf("%5.2f", system.time({C = A %*% B})[3])))
-}
+    print("CPU times")
+    for(i in seq(1:7)) {
+        ORDER = 64*(2^i)
+        A = matrix(rnorm(ORDER^2), nrow=ORDER)
+        B = matrix(rnorm(ORDER^2), nrow=ORDER)
+        print(paste(i, sprintf("%5.2f", system.time({C = A %*% B})[3])))
+    }
 
-print("GPU times")
-for(i in seq(1:7)) {
-    ORDER = 64*(2^i)
-    A = matrix(rnorm(ORDER^2), nrow=ORDER)
-    B = matrix(rnorm(ORDER^2), nrow=ORDER)
-    gpuA = gpuMatrix(A, type="double")
-    gpuB = gpuMatrix(B, type="double")
-    print(paste(i, sprintf("%5.2f", system.time({gpuC = gpuA %*% gpuB})[3])))
-}
-```
+    print("GPU times")
+    for(i in seq(1:7)) {
+        ORDER = 64*(2^i)
+        A = matrix(rnorm(ORDER^2), nrow=ORDER)
+        B = matrix(rnorm(ORDER^2), nrow=ORDER)
+        gpuA = gpuMatrix(A, type="double")
+        gpuB = gpuMatrix(B, type="double")
+        print(paste(i, sprintf("%5.2f", system.time({gpuC = gpuA %*% gpuB})[3])))
+    }
+    ```
 
-```bash tab='gpuR-test.sbatch'
-#!/bin/bash
+=== "gpuR-test.sbatch"
+    ```bash
+    #!/bin/bash
 
-#SBATCH --partition gpu
-#SBATCH --mem 8GB
-#SBATCH --gres gpu:1
-#SBATCH --output=gpuR-test.log
+    #SBATCH --partition gpu
+    #SBATCH --mem 8GB
+    #SBATCH --gres gpu:1
+    #SBATCH --output=gpuR-test.log
 
-## load modules
-# cuda is not loaded by default with R, so it must be loaded explicitely
-ml R cuda
+    ## load modules
+    # cuda is not loaded by default with R, so it must be loaded explicitely
+    ml R cuda
 
-Rscript gpuR-test.R
-```
+    Rscript gpuR-test.R
+    ```
 
 After submitting the job with `sbatch gpuR-test.sbatch`, the output file should
 contain something like this:

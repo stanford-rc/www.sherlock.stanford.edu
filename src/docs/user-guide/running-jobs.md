@@ -260,22 +260,23 @@ The script below presents an example of such a recurring, self-resubmitting
 job, that would emulate a `cron` task. It will append a timestamped line to a
 `cron.log` file in your `$HOME` directory and run every 7 days.
 
-```bash tab="cron.sbatch"
-#!/bin/bash
-#SBATCH --job-name=cron
-#SBATCH --begin=now+7days
-#SBATCH --dependency=singleton
-#SBATCH --time=00:02:00
-#SBATCH --mail-type=FAIL
+=== "cron.sbatch"
+    ```bash
+    #!/bin/bash
+    #SBATCH --job-name=cron
+    #SBATCH --begin=now+7days
+    #SBATCH --dependency=singleton
+    #SBATCH --time=00:02:00
+    #SBATCH --mail-type=FAIL
 
 
-## Insert the command to run below. Here, we're just storing the date in a
-## cron.log file
-date -R >> $HOME/cron.log
+    ## Insert the command to run below. Here, we're just storing the date in a
+    ## cron.log file
+    date -R >> $HOME/cron.log
 
-## Resubmit the job for the next execution
-sbatch $0
-```
+    ## Resubmit the job for the next execution
+    sbatch $0
+    ```
 
 If the job payload (here the `date` command) fails for some reason and
 generates and error, the job will not be resubmitted, and the user will be
@@ -359,32 +360,32 @@ Here's the recurring job example from above, modified to:
 2. re-submit itself upon receiving that `SIGUSR1` signal (with the `trap`
    command)
 
-```bash tab="persistent.sbatch"
-#!/bin/bash
-#
-#SBATCH --job-name=persistent
-#SBATCH --dependency=singleton
-#SBATCH --time=00:05:00
-#SBATCH --signal=B:SIGUSR1@90
+=== "persistent.sbatch"
+    ```bash
+    #!/bin/bash
+    #
+    #SBATCH --job-name=persistent
+    #SBATCH --dependency=singleton
+    #SBATCH --time=00:05:00
+    #SBATCH --signal=B:SIGUSR1@90
 
-# catch the SIGUSR1 signal
-_resubmit() {
-    ## Resubmit the job for the next execution
-    echo "$(date): job $SLURM_JOBID received SIGUSR1 at $(date), re-submitting"
-    sbatch $0
-}
-trap _resubmit SIGUSR1
+    # catch the SIGUSR1 signal
+    _resubmit() {
+        ## Resubmit the job for the next execution
+        echo "$(date): job $SLURM_JOBID received SIGUSR1 at $(date), re-submitting"
+        sbatch $0
+    }
+    trap _resubmit SIGUSR1
 
-## Insert the command to run below. Here, we're just outputing the date every
-## 10 seconds, forever
+    ## Insert the command to run below. Here, we're just outputing the date every
+    ## 10 seconds, forever
 
-echo "$(date): job $SLURM_JOBID starting on $SLURM_NODELIST"
-while true; do
-    echo "$(date): normal execution"
-    sleep 60
-done
-
-```
+    echo "$(date): job $SLURM_JOBID starting on $SLURM_NODELIST"
+    while true; do
+        echo "$(date): normal execution"
+        sleep 60
+    done
+    ```
 
 !!! danger "Long running processes need to run in the background"
 
@@ -432,30 +433,30 @@ only one `$JOBID` to track for that database server job.
 
 The previous [example](#example_1) can then be modified as follows:
 
-```bash tab="persistent.sbatch" hl_lines="10"
-#!/bin/bash
-#SBATCH --job-name=persistent
-#SBATCH --dependency=singleton
-#SBATCH --time=00:05:00
-#SBATCH --signal=B:SIGUSR1@90
+=== "persistent.sbatch"
+    ```bash hl_lines="10"
+    #!/bin/bash
+    #SBATCH --job-name=persistent
+    #SBATCH --dependency=singleton
+    #SBATCH --time=00:05:00
+    #SBATCH --signal=B:SIGUSR1@90
 
-# catch the SIGUSR1 signal
-_requeue() {
-    echo "$(date): job $SLURM_JOBID received SIGUSR1, re-queueing"
-    scontrol requeue $SLURM_JOBID
-}
-trap '_requeue' SIGUSR1
+    # catch the SIGUSR1 signal
+    _requeue() {
+        echo "$(date): job $SLURM_JOBID received SIGUSR1, re-queueing"
+        scontrol requeue $SLURM_JOBID
+    }
+    trap '_requeue' SIGUSR1
 
-## Insert the command to run below. Here, we're just outputing the date every
-## 60 seconds, forever
+    ## Insert the command to run below. Here, we're just outputing the date every
+    ## 60 seconds, forever
 
-echo "$(date): job $SLURM_JOBID starting on $SLURM_NODELIST"
-while true; do
-    echo "$(date): normal execution"
-    sleep 60
-done
-
-```
+    echo "$(date): job $SLURM_JOBID starting on $SLURM_NODELIST"
+    while true; do
+        echo "$(date): normal execution"
+        sleep 60
+    done
+    ```
 
 Submitting that job will produce an output similar to this:
 

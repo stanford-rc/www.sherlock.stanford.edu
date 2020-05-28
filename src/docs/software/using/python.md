@@ -250,12 +250,13 @@ pretty convenient to install several dependencies at once.
 In order to do this, create a text file called `requirements.txt` and place
 each package you would like to install on its own line:
 
-```tab="requirements.txt"
-numpy
-scikit-learn
-keras
-tensorflow
-```
+=== "requirements.txt"
+    ```
+    numpy
+    scikit-learn
+    keras
+    tensorflow
+    ```
 
 You can now install your modules like so:
 ```
