@@ -414,14 +414,14 @@ submitting the same script using a varying number of CPU cores:
 
 ```
 $ for i in 2 4 8 16; do
-	sbatch --out=doP_${i}.out --ntasks-per-node=$i doParallel_test.sbatch
+    sbatch --out=doP_${i}.out --ntasks-per-node=$i doParallel_test.sbatch
 done
 ```
 
 When the jobs are done:
 ```
 $ for i in 2 4 8 16; do
-	printf "%2i cores: %4.1fs\n" $i $(tail -n1 doP_$i.out)
+    printf "%2i cores: %4.1fs\n" $i $(tail -n1 doP_$i.out)
 done
  2 cores: 13.6s
  4 cores:  7.8s
@@ -587,15 +587,15 @@ which shows a decent speedup for running on a GPU for the largest matrix sizes.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_r]:       	https://www.r-project.org/
-[url_r_docs]:  	https://stat.ethz.ch/R-manual/
-[url_s]: 		http://ect.bell-labs.com/sl/S/
-[url_heredoc]:	https://en.wikipedia.org/wiki/Here_document
-[url_doparallel]: https://cran.r-project.org/web/packages/doParallel/index.html
-[url_cran]:  	https://cran.r-project.org/
-[url_dplyr]:    https://github.com/tidyverse/dplyr
-[url_rmpi]:     https://cran.r-project.org/web/packages/Rmpi
-[url_gpur]:     https://cran.r-project.org/web/packages/gpuR
+[url_r]:                //www.r-project.org/
+[url_r_docs]:           //stat.ethz.ch/R-manual/
+[url_s]:                /ect.bell-labs.com/sl/S/
+[url_heredoc]:          //en.wikipedia.org/wiki/Here_document
+[url_doparallel]:       //cran.r-project.org/web/packages/doParallel/index.html
+[url_cran]:             //cran.r-project.org/
+[url_dplyr]:            //github.com/tidyverse/dplyr
+[url_rmpi]:             //cran.r-project.org/web/packages/Rmpi
+[url_gpur]:             //cran.r-project.org/web/packages/gpuR
 
 [url_modules]:          /docs/software/modules
 [url_software_list]:    /docs/software/list
