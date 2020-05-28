@@ -216,28 +216,7 @@ multi-process program is made of several tasks. A task is typically used to
 schedule a MPI process, that in turn can use several CPUs.  By contrast, a
 multi-threaded program is composed of only one task, which uses several CPUs.
 
-## Acronyms
-
-| Acronym | Term  |
-|:--------|:------|
-| 2FA   | Two-Factor Authentication |
-| CPU   | Central Processing Unit |
-| DTN   | Data Transfer Node |
-| EDR   | Enhanced Data Rate (100Gb/s Infiniband)|
-| FDR   | Full Data Rate (56Gb/s Infiniband) |
-| GPU   | Graphical Processing Unit |
-| HDR   | High Data Rate (200Gb/s Infiniband) |
-| HPC   | High Performance Computing |
-| IB    | [Infiniband][url_ib] |
-| I/O   | Input Output |
-| IP    | [Internet Protocol][url_ip] |
-| MPI   | [Message Passing Interface][url_mpi] |
-| NUMA  | Non-Uniform Memory Access |
-| OS    | Operating System |
-| PI    | Principal Investigator |
-| RAM   | Random Access Memory |
-| SSH   | Secure Shell |
-
+--8<--- "_acronyms.md"
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
