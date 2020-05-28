@@ -31,6 +31,11 @@ members of the authorized group will get access to MATLAB.
     will be granted access to MATLAB on Sherlock.
 
 
+> **Note**: a number of free, open-source alternatives exist and can be used
+in many situations: [Octave][url_octave], [R][url_R], [Julia][url_julia], or
+[Python][url_python] are all available on Sherlock, and can often replace
+MATLAB with good results.
+
 
 ### Using MATLAB
 
@@ -145,14 +150,13 @@ matlab -nodisplay < example.m
 
 This simple job, named `matlab_test` will run a MATLAB script named `example.m`
 in the `normal` [partition][url_partition], for a duration of 10 minutes, and
-use 1 [CPU][url_sbatch_CPU] and 8GB of RAM.  It will send you an email (to
+use 1 [CPU][url_cpu] and 8GB of RAM.  It will send you an email (to
 whatever email you used wen you signed up for Sherlock) when it begins, ends or
 fails.
 
 Additionally, to aid in debugging, it will log any errors and output to the
 files `matlab_test.JOBID.{out,err}` with the jobid appended to the
-filename (`%j`).  Note, there are **many** options and resources (CPUs, RAM,
-time) you can control within the [sbatch][url_sbatch_docs] script.
+filename (`%j`).
 
 To create the script, open a [text editor][url_text_editor] on Sherlock, copy
 the contents of the script, and save it as `matlab_test.sbatch`
@@ -178,17 +182,22 @@ results.
 [url_matlab_options]:   //www.mathworks.com/help/matlab/matlab_env/startup-options.html
 [url_software]:         //uit.stanford.edu/service/softwarelic
 [url_X11_UIT]:          //uit.stanford.edu/service/sharedcomputing/moreX
+[url_octave]:           //www.gnu.org/software/octave/
+
 [url_contact]:          mailto:srcc-support@stanford.edu
+
+[url_R]:                /docs/software/using/R
+[url_julia]:            /docs/software/using/julia
+[url_python]:           /docs/software/using/python
 [url_submit]:           /docs/getting-started/submitting/#batch-scripts
 [url_node]:             /docs/user-guide/running-jobs/#compute-nodes
 [url_interactive]:      /docs/user-guide/running-jobs/#interactive-jobs
 [url_ssh_client]:       /docs/getting-started/prerequisites/#ssh-clients
-[url_sbatch_CPU]:       //slurm.schedmd.com/cpu_management.html
-[url_sbatch_docs]:      //slurm.schedmd.com/sbatch.html
 [url_modules]:          /docs/software/modules
 [url_software_list]:    /docs/software/list
 [url_text_editor]:      /docs/getting-started/prerequisites/#text-editors
 [url_partition]:        /docs/overview/glossary/#partition
+[url_cpu]:              /docs/overview/glossary/#cpu
 [url_squeue]:           /docs/getting-started/submitting/#check-the-job
 
 
