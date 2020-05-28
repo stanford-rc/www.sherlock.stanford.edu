@@ -115,6 +115,7 @@ $ ssh -X <YourSUNetID>@login.sherlock.stanford.edu
 And then, once on Sherlock:
 
 ```
+$ sdev
 $ ml load matlab
 $ matlab
 ```
