@@ -102,8 +102,8 @@ typical computer.
 
 : Infiniband is a networking standard that features high bandwidth and low
 latency. The current Infiniband devices are capable of transferring data at up
-to 100 Gbits/sec with less than a microsecond latency. As of this writing, the
-popular Infiniband versions are FDR (Fourteen Data Rate) with 56 Gbits/sec and
+to 200 Gbits/sec with less than a microsecond latency. As of this writing, the
+popular Infiniband versions are HDR (High Data Rate) with 200 Gbits/sec and
 EDR (Enhanced Data Rate) with 100 Gbits/sec.
 
 #### IOPS
@@ -216,7 +216,32 @@ multi-process program is made of several tasks. A task is typically used to
 schedule a MPI process, that in turn can use several CPUs.  By contrast, a
 multi-threaded program is composed of only one task, which uses several CPUs.
 
+## Acronyms
+
+| Acronym | Term  |
+|:--------|:------|
+| 2FA   | Two-Factor Authentication |
+| CPU   | Central Processing Unit |
+| DTN   | Data Transfer Node |
+| EDR   | Enhanced Data Rate (100Gb/s Infiniband)|
+| FDR   | Full Data Rate (56Gb/s Infiniband) |
+| GPU   | Graphical Processing Unit |
+| HDR   | High Data Rate (200Gb/s Infiniband) |
+| HPC   | High Performance Computing |
+| IB    | [Infiniband][url_ib] |
+| I/O   | Input Output |
+| IP    | [Internet Protocol][url_ip] |
+| MPI   | [Message Passing Interface][url_mpi] |
+| NUMA  | Non-Uniform Memory Access |
+| OS    | Operating System |
+| PI    | Principal Investigator |
+| RAM   | Random Access Memory |
+| SSH   | Secure Shell |
+
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_sh_part]: /docs/user-guide/running-jobs/#available-resources
+[url_ib]:       //www.infinibandta.org/about-infiniband/
+[url_ip]:       //tools.ietf.org/html/rfc791
+[url_mpi]:      //www.mpi-forum.org
+[url_sh_part]:  /docs/user-guide/running-jobs/#available-resources
