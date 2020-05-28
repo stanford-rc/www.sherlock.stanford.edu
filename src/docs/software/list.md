@@ -17,26 +17,9 @@ loaded by default. See the [Modules page][url_modules] for further details and
 examples.
 
 
-!!! warning "Licensed software"
-
-    Access to software modules marked with ^<b class="lic"></b>^ in the tables
-    below is restricted to properly licensed user groups.
-
-    The SRCC is not funded to provide commercial software on Sherlock and
-    researchers are responsible for the costs of purchasing and renewing
-    commercial software licenses. For more information, please feel free to
-    [contact us](mailto:srcc-support@stanford.edu) and see the [Stanford
-    Software Licensing page](https://uit.stanford.edu/service/softwarelic) for
-    purchasing information.
-
-    In particular, more information about Matlab licensing on Sherlock is
-    available on [SRCC website][url_matlab_sherlock] (login required).
-
-
 --8<--- "software/_list.md"
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_modules]:         /docs/software/modules/
 [url_installations]:   /docs/software#installation-requests
-[url_matlab_sherlock]: https://srcc.stanford.edu/private/matlab-licensing-sherlock
