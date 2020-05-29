@@ -80,10 +80,10 @@ $ cpanm -U DateTime::TimeZone
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_perl_docs]:    https://www.perl.org/docs.html
-[url_cpan]:         https://www.cpan.org/
-[url_cpanminus]:    https://metacpan.org/pod/App::cpanminus
-[url_locallib]:     https://metacpan.org/pod/App::cpanminus
+[url_perl_docs]:    //www.perl.org/docs.html
+[url_cpan]:         //www.cpan.org/
+[url_cpanminus]:    //metacpan.org/pod/App::cpanminus
+[url_locallib]:     //metacpan.org/pod/App::cpanminus
 
 
 [comment]: #  (footnotes -----------------------------------------------------)
@@ -94,4 +94,4 @@ $ cpanm -U DateTime::TimeZone
   and open source.
 
 
-
+--8<--- "_acronyms.md"

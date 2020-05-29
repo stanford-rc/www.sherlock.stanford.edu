@@ -57,3 +57,6 @@ dashboard][url_status].
   src="https://srcc-lookout.stanford.edu/public/dashboard-solo/db/sherlock-public-dashboard?panelId=4&theme=light"
   width="68%" height="200px" frameborder="0">
 </iframe>
+
+
+--8<--- "_acronyms.md"

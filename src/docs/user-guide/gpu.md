@@ -317,3 +317,6 @@ user's GPU code is running.
 [^values]: The lists of values provided in the table are non exhaustive.
 [^gpu_cmodes]: The list of available GPU compute modes and relevant details are
   available in the [CUDA Toolkit Documentation][url_gpu_cmodes]
+
+
+--8<--- "_acronyms.md"

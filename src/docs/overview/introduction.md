@@ -235,3 +235,5 @@ Here's what it looks like in motion:
 
 [^shu_ml]: This mailing-list is moderated.
 
+
+--8<--- "_acronyms.md"

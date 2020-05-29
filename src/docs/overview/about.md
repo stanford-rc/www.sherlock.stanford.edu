@@ -105,7 +105,12 @@ Yep, you got that right, [Richard Hendricks][url_richard] wanted to use our
 very own Sherlock. Kudos to the show's crew and whomever did the research and
 got it right, you made our day.
 
+[comment]: #  (link URLs -----------------------------------------------------)
+
 [url_ep38]:     //www.hbo.com/silicon-valley/episodes/4/38-server-error
 [url_sv]:       //www.hbo.com/silicon-valley
 [url_richard]:  //www.hbo.com/silicon-valley/cast-and-crew/thomas-middleditch
 [url_quote]:    //www.theguardian.com/tv-and-radio/2010/jul/17/benedict-cumberbatch-sherlock-holmes
+
+
+--8<--- "_acronyms.md"

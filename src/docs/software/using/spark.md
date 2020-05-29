@@ -136,6 +136,9 @@ stop-master.sh
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_compute_node]: /docs/overview/glossary/#node
-[url_spark]:        http://spark.apache.org/
+[url_spark]:        //spark.apache.org/
 
+[url_compute_node]: /docs/overview/glossary/#node
+
+
+--8<--- "_acronyms.md"

@@ -252,6 +252,7 @@ lost when the maintence starts.
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
+
 [email]:          mailto:srcc-support@stanford.edu
 [url_provost]: 	  https://provost.stanford.edu/
 [url_dor]:     	  https://doresearch.stanford.edu/research-offices/dor-office-vice-provost-and-dean-research
@@ -268,3 +269,6 @@ lost when the maintence starts.
 [url_HIPAA]: https://en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act
 [url_PHI]:   https://en.wikipedia.org/wiki/Protected_health_information
 [url_PII]:   https://en.wikipedia.org/wiki/Personally_identifiable_information
+
+
+--8<--- "_acronyms.md"

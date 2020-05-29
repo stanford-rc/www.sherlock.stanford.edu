@@ -425,21 +425,21 @@ the [Singularity documentation][url_singularity_build].
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_singularity]:        https://www.sylabs.io
-[url_singularity_docs]:   https://www.sylabs.io/docs
-[url_singularity_docker]: https://www.sylabs.io/guides/latest/user-guide/singularity_and_docker.html
-[url_singularity_build]:  https://www.sylabs.io/guides/2.6/user-guide/build_a_container.html
-[url_containers]:         https://en.wikipedia.org/wiki/Linux_containers
-[url_docker]:			  https://www.docker.com
-[url_docker_hub]:         https://hub.docker.com
-[url_singularity_hub]:    https://singularity-hub.org
-[url_ngc]:                https://ngc.nvidia.com
-[url_openfoam]:           https://openfoam.org/
-[url_ngc]:                https://www.nvidia.com/en-us/gpu-cloud
-[url_ngc_auth]:           https://docs.nvidia.com/ngc/ngc-getting-started-guide/index.html
-[url_namd]:               https://www.ks.uiuc.edu/Research/namd/
-[url_sc18]:               https://sc18.supercomputing.org/
-[url_containernative]:    https://news.sherlock.stanford.edu/posts/sherlock-goes-container-native
+[url_singularity]:        //www.sylabs.io
+[url_singularity_docs]:   //www.sylabs.io/docs
+[url_singularity_docker]: //www.sylabs.io/guides/latest/user-guide/singularity_and_docker.html
+[url_singularity_build]:  //www.sylabs.io/guides/2.6/user-guide/build_a_container.html
+[url_containers]:         //en.wikipedia.org/wiki/Linux_containers
+[url_docker]:			  //www.docker.com
+[url_docker_hub]:         //hub.docker.com
+[url_singularity_hub]:    //singularity-hub.org
+[url_ngc]:                //ngc.nvidia.com
+[url_openfoam]:           //openfoam.org/
+[url_ngc]:                //www.nvidia.com/en-us/gpu-cloud
+[url_ngc_auth]:           //docs.nvidia.com/ngc/ngc-getting-started-guide/index.html
+[url_namd]:               //www.ks.uiuc.edu/Research/namd/
+[url_sc18]:               //sc18.supercomputing.org/
+[url_containernative]:    //news.sherlock.stanford.edu/posts/sherlock-goes-container-native
 
 
 [url_modules]:			  /docs/software/modules
@@ -450,3 +450,5 @@ the [Singularity documentation][url_singularity_build].
 
 [^modules]: For more information about using modules on Sherlock,
   please see the [software modules documentation][url_modules].
+
+--8<--- "_acronyms.md"

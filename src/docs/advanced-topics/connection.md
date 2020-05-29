@@ -218,3 +218,6 @@ notifications are not available.
 [^os_support]: Those instructions should work on Linux :fa-linux: and MacOs
   :fa-apple: computers. For Windows :fa-windows:, we recommend using the WSL,
   as described in the [Prerequisites][url_prereq] page.
+
+
+--8<--- "_acronyms.md"

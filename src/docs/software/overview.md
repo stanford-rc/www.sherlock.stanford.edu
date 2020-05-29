@@ -81,5 +81,4 @@ group on Sherlock, please [let us know][url_contact], and we'll get in touch.
   duties, typically within two to three weeks of being received.
 
 
-
-
+--8<--- "_acronyms.md"

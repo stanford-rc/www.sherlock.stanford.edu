@@ -127,15 +127,16 @@ Suggested options to backup your data include:
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_datatransfer]:     /docs/storage/data-transfer
-[url_oak]:              https://oak-storage.stanford.edu
-[url_uit_storage]:      https://uit.stanford.edu/service/storage
-[url_uit_backup]:       https://uit.stanford.edu/services/category/backup-and-storage
-[url_cloud]:
+[url_oak]:              //oak-storage.stanford.edu
+[url_uit_storage]:      //uit.stanford.edu/service/storage
+[url_uit_backup]:       //uit.stanford.edu/services/category/backup-and-storage
 
+[url_datatransfer]:     /docs/storage/data-transfer
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
 [^snap_policy]: The snapshot policy is subject to change and may be adjusted as
            the storage system usage conditions evolve.
 
+
+--8<--- "_acronyms.md"

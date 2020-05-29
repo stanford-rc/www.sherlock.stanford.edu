@@ -511,3 +511,6 @@ restarts for 5 minutes, and so on, until it's properly `scancel`led.
 
 [^signal_delay]: Due to the resolution of event handling by the scheduler, the
   signal may be sent up to 60 seconds earlier than specified.
+
+
+--8<--- "_acronyms.md"

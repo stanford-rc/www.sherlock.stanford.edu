@@ -23,3 +23,5 @@ examples.
 
 [url_modules]:         /docs/software/modules/
 [url_installations]:   /docs/software#installation-requests
+
+--8<--- "_acronyms.md"

@@ -370,3 +370,6 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 
 [^inodes]: An inode (index node) is a data structure in a Unix-style file
   system that describes a file-system object such as a file or a directory.
+
+
+--8<--- "_acronyms.md"

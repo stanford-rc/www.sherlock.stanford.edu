@@ -193,3 +193,6 @@ there are many other options and areas to explore in the next sections:
 
 [^man_sbatch]: You can get the complete list of parameters by referring to the
   `sbatch` manual page (`man sbatch`).
+
+
+--8<--- "_acronyms.md"

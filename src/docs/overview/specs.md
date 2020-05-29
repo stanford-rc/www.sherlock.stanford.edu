@@ -92,3 +92,6 @@ files and directories from both Sherlock 1.0 and Sherlock 2.0 nodes.
 [^4650v4]:  four-socket Intel(r) Xeon(r) [E5-4650v4][url_4650v4] processors (14-core Broadwell, 2.20 GHz)
 [^2697Av4]: two-socket Intel(r) Xeon(r) [E5-2697Av4][url_2697Av4] processors (16-core Broadwell, 2.60 GHz)
 
+
+
+--8<--- "_acronyms.md"

@@ -299,10 +299,13 @@ process: 1 on host sh-06-33.int
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
-[url_julia]:        http://julialang.org/
-[url_julia_docs]:   https://docs.julialang.org/
-[url_julia_pkgs]:   https://pkg.julialang.org/
+[url_julia]:        //julialang.org/
+[url_julia_docs]:   //docs.julialang.org/
+[url_julia_pkgs]:   //pkg.julialang.org/
+[url_helloworld]:   //en.wikipedia.org/wiki/%22Hello,_World!%22_program
 
-[url_helloworld]:   https://en.wikipedia.org/wiki/%22Hello,_World!%22_program
 [url_modules]:      /docs/software/modules
 [url_software_list]:/docs/software/list
+
+
+--8<--- "_acronyms.md"

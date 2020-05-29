@@ -210,3 +210,6 @@ results.
   desktop and to display graphics. The `-nojvm` option enables you to start
   MATLAB without the JVM. Using this option minimizes memory usage and improves
   initial start-up speed, but restricts functionality.
+
+
+--8<--- "_acronyms.md"

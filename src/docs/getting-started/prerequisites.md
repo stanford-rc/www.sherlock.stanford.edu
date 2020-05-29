@@ -166,3 +166,6 @@ For an introduction to shell scripting, you can refer to:
 
 [url_nano]:         https://wiki.gentoo.org/wiki/Nano/Basics_Guide
 [url_vim]:          https://wiki.gentoo.org/wiki/Vim/Guide
+
+
+--8<--- "_acronyms.md"

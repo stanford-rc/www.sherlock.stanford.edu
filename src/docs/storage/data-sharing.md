@@ -295,3 +295,5 @@ there are two possiblities:
                     and associated services, please see the [Stanford UIT SUNet
                     IDs page][url_sunetids].
 
+
+--8<--- "_acronyms.md"

@@ -63,3 +63,6 @@ simultaneously, on the 10 CPUs that each of the job array item will be allocated
 In the end, you'll have run the same number of `app` instances, but you'll have
 divided the number of jobs submitted by 10, and allow you to submit the same
 amount of work to the scheduler, while staying under the submission limits.
+
+
+--8<--- "_acronyms.md"

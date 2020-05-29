@@ -56,3 +56,6 @@ from the start. This will help us get to your problem immediately.
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_contact]:      mailto:srcc-support@stanford.edu
+
+
+--8<--- "_acronyms.md"

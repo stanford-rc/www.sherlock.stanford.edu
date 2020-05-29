@@ -313,3 +313,6 @@ To run Tensorboard via Sherlock OnDemand:
 
 [^oak_access]:      if you have access to the [Oak storage system][url_oak].
 
+
+
+--8<--- "_acronyms.md"

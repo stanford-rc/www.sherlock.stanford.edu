@@ -295,17 +295,17 @@ $ pip uninstall -r requirements.txt
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_python]:         https://www.python.org/
-[url_python_docs]:    https://www.python.org/doc
-[url_pip]:            https://pip.pypa.io/en/stable/
-[url_pip_docs]:       https://pip.pypa.io/en/stable/user_guide/
-[url_pypi]:           https://pypi.python.org/pypi
-[url_pep394]:         https://www.python.org/dev/peps/pep-0394
+[url_python]:         //www.python.org/
+[url_python_docs]:    //www.python.org/doc
+[url_pip]:            //pip.pypa.io/en/stable/
+[url_pip_docs]:       //pip.pypa.io/en/stable/user_guide/
+[url_pypi]:           //pypi.python.org/pypi
+[url_pep394]:         //www.python.org/dev/peps/pep-0394
 
-[url_numpy]:          http://www.numpy.org/
-[url_scipy]:          https://www.scipy.org/
-[url_tensorflow]:     https://www.tensorflow.org
-[url_httpie]:         https://httpie.org/
+[url_numpy]:          /www.numpy.org/
+[url_scipy]:          //www.scipy.org/
+[url_tensorflow]:     //www.tensorflow.org
+[url_httpie]:         //httpie.org/
 
 [url_modules]:        /docs/software/list
 [url_module_numpy]:   /docs/software/list/#py-numpy
@@ -316,3 +316,6 @@ $ pip uninstall -r requirements.txt
 
 [^pythonpath]: This line can also be added to a user's `~/.profile` file, for a
   more permanent setting.
+
+
+--8<--- "_acronyms.md"

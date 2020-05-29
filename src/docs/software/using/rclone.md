@@ -291,7 +291,10 @@ Manager on the [Sherlock OnDemand](url_ondemand) interface.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_rclone]:    https://github.com/ncw/rclone
-[url_install_rclone]:    https://rclone.org/install/
+[url_rclone]:           //github.com/ncw/rclone
+[url_install_rclone]:   //rclone.org/install/
 
-[url_ondemand]:     //login.sherlock.stanford.edu
+[url_ondemand]:         //login.sherlock.stanford.edu
+
+
+--8<--- "_acronyms.md"

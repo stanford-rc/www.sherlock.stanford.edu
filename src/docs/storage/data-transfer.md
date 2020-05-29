@@ -217,7 +217,7 @@ Globus is a Software as a Service (SaaS) system that provides end-users with a b
 transfers between endpoints. Globus
 allows users to "drag and drop" files from one endpoint to another.
 Endpoints are terminals for data; they can be laptops or supercomputers, and
-anything in between. The Globus web service 
+anything in between. The Globus web service
 negotiates, monitors, and optimizes transfers through
 firewalls and across network address translation (NAT). Under certain
 circumstances, with high performance hardware transfer rates exceeding 1 GB/s
@@ -336,7 +336,7 @@ $ module load system rclone
 $ rclone --help
 ```
  !!! important "The gdrive program has been blocked by Google. Please use [rclone][url_rclone] instead"
- 
+
 
 ### Other services
 
@@ -389,3 +389,5 @@ documentation][url_rclone].
 [^fetch_su]: Fetch is a commercial program, and is available as part of
   the [Essential Stanford Software][url_fetch_su] bundle.
 
+
+--8<--- "_acronyms.md"

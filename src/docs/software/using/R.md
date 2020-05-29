@@ -72,7 +72,8 @@ simple matrix multiplication example, and demonstrate how to feed R code as a
 [HEREDOC][url_heredoc] to R directly, so no intermediate R script is necessary:
 
 === "R-test.sbatch"
-    ```bash
+
+   ```bash
     #!/bin/bash
 
     #SBATCH --time=00:10:00
@@ -350,6 +351,7 @@ Sherlock (more nodes or CPU cores can be requested, as needed).
 Save the two scripts below in a directory on Sherlock:
 
 === "doParallel_test.R"
+
     ```R
     # Example doParallel script
 
@@ -382,6 +384,7 @@ Save the two scripts below in a directory on Sherlock:
     ```
 
 === "doParallel_test.sbatch"
+
     ```bash
     #!/bin/bash
 
@@ -451,6 +454,7 @@ Once the package is installed, the following scripts demonstrate a very basic
 
 
 === "Rmpi-test.R"
+
     ```R
     # Example Rmpi script
 
@@ -475,6 +479,7 @@ Once the package is installed, the following scripts demonstrate a very basic
     ```
 
 === "Rmpi-test.sbatch"
+
     ```bash
     #!/bin/bash
 
@@ -525,6 +530,7 @@ and on a GPU using R. It requires [submitting a job to a GPU node][url_gpu] and
 the [`gpuR`][url_gpuR] R package.
 
 === "gpuR-test.R"
+
     ```R
     # Example gpuR script
 
@@ -551,6 +557,7 @@ the [`gpuR`][url_gpuR] R package.
     ```
 
 === "gpuR-test.sbatch"
+
     ```bash
     #!/bin/bash
 
@@ -608,3 +615,6 @@ which shows a decent speedup for running on a GPU for the largest matrix sizes.
 [url_software_list]:    /docs/software/list
 [url_storage]:          /docs/storage
 [url_gpu]:              /docs/user-guide/gpu
+
+
+--8<--- "_acronyms.md"

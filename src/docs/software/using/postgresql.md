@@ -274,11 +274,13 @@ jobs][url_recurring_jobs] and submit long-running database instances.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_postgresql]:       https://www.postgresql.org/
-[url_postgresql_docs]:  https://postgresql.com/docs/
+[url_postgresql]:       //www.postgresql.org/
+[url_postgresql_docs]:  //postgresql.com/docs/
+[url_heredoc]:          //en.wikipedia.org/wiki/Here_document
 
 [url_compute_node]:     /docs/overview/glossary/#node
-[url_heredoc]:          https://en.wikipedia.org/wiki/Here_document
-
 [url_storage]:          /docs/storage
 [url_recurring_jobs]:   /docs/user-guide/running-jobs/#recurring-jobs
+
+
+--8<--- "_acronyms.md"
