@@ -227,7 +227,7 @@ virtualenv 15.1.0  /share/software/user/open/python/2.7.13/lib/python2.7/site-pa
 
     For instance, if you installed Python packages in `$GROUP_HOME/python`:
     ```
-    $ export PATH=$GROUP_HOME/python/bin
+    $ export PATH=$GROUP_HOME/python/bin:$PATH
     ```
 
 
