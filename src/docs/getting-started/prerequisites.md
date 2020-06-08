@@ -10,8 +10,8 @@ To start using Sherlock, you will need:
         A SUNet ID is a unique 3-8 character account name that identifies you
         as a member of the Stanford community, with access to the Stanford
         University Network of computing resources and services. Not to be
-        confused with University ID, a 8-digit number that appears on your
-        Stanford ID Card, your SUNet ID is a permanent and visible part of your
+        confused with University ID (a 8-digit number that appears on your
+        Stanford ID Card), your SUNet ID is a permanent and visible part of your
         Stanford identity and often appears in your Stanford email address (eg.
         sunetid@stanford.edu).
 
