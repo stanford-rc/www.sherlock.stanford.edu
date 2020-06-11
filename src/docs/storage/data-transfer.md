@@ -335,8 +335,6 @@ files from/to Google Drive:
 $ module load system rclone
 $ rclone --help
 ```
- !!! important "The gdrive program has been blocked by Google. Please use [rclone][url_rclone] instead"
-
 
 ### Other services
 
