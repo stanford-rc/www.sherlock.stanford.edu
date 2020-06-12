@@ -13,5 +13,8 @@
 *[NUMA]: Non-Uniform Memory Access
 *[OS]: Operating System
 *[PI]: Principal Investigator
+*[PO]: Purchase Order
 *[RAM]: Random Access Memory
+*[SMP]: Shared Memory Parallelism
+*[SRCC]: Stanford Research Computing Center
 *[SSH]: Secure Shell
