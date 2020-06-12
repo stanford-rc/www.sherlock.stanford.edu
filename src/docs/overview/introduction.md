@@ -136,8 +136,8 @@ As a member of the Sherlock community, you're also automatically subscribed to:
     **We'll be holding remote office hours via [Zoom][url_zoom], for the time
     being.** Here are the Zoom links for our Tuesday and Thursday office hours:
 
-    * Tuesday 10-11am: https://stanford.zoom.us/j/901884213
-    * Thursday 3-4pm:  https://stanford.zoom.us/j/681964418
+    * Tuesday 10-11am: https://stanford.zoom.us/j/901884213?pwd=ejN4c1RxdDFMN0pYeTVpR3FpWk5zUT09
+    * Thursday 3-4pm:  https://stanford.zoom.us/j/681964418?pwd=LytodUtxSWw0YkVTS2hJMGNzdCt0dz09
 
 
 Sending a question to srcc-support@stanford.edu is always the best first option
