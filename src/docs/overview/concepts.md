@@ -59,7 +59,7 @@ through a job scheduler using a [fair-share algorithm][url_fairshare].
     Security Risk Classification page][url_risk].
 
 
-## Investing into Sherlock
+## Investing in Sherlock
 
 For users who need more than casual access to a shared computing environment,
 Sherlock also offers Faculty members the possibility to invest into additional,
