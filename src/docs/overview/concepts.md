@@ -62,7 +62,7 @@ through a job scheduler using a [fair-share algorithm][url_fairshare].
 ## Investing in Sherlock
 
 For users who need more than casual access to a shared computing environment,
-Sherlock also offers Faculty members the possibility to invest into additional,
+Sherlock also offers Faculty members the possibility to invest in additional,
 dedicated computing resources.
 
 Unlike traditional clusters, Sherlock is a collaborative system where the
