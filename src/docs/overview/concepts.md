@@ -66,13 +66,16 @@ Sherlock also offers Faculty members the possibility to invest in additional,
 dedicated computing resources.
 
 Unlike traditional clusters, Sherlock is a collaborative system where the
-majority of nodes are purchased and shared by the cluster users. When a user (typically a PI)
-purchases one or more nodes, they become an *owner*. Owners can choose from a standard set of server configurations supported by SRCC staff (known as the Sherlock *catalog*) to add to the cluster.
-```.
+majority of nodes are purchased and shared by the cluster users. When a user
+(typically a PI) purchases one or more nodes, they become an *owner*. Owners
+choose from a standard set of server configurations supported by SRCC staff
+(known as the Sherlock *catalog*) to add to the cluster.
 
-This model also allows Sherlock owners to benefit from the scale of the cluster
-by giving them access to more compute nodes than their individual purchase,
-which gives them much greater flexibility than owning a standalone cluster.
+When they're not in use, PI-purchased compute nodes can be used by other
+owners. This model also allows Sherlock owners to benefit from the scale of the
+cluster by giving them access to more compute nodes than their individual
+purchase, which gives them much greater flexibility than owning a standalone
+cluster.
 
 !!! info "The majority of Sherlock nodes are owners nodes"
 
@@ -177,8 +180,8 @@ the system.
 !!! info "Maintenance schedule"
 
     As often as possible, maintenances will take place on the **first Tuesday
-    of every month, from 08:00 to 12:00 Pacific time** (noon), and will be announced 2 weeks
-    in advance, through the usual communication channels.
+    of every month, from 08:00 to 12:00 Pacific time** (noon), and will be
+    announced 2 weeks in advance, through the usual communication channels.
 
 In case an exceptional amount of work is required, the maintenance window could
 be extended to 10 hours (from 08:00 to 18:00).
