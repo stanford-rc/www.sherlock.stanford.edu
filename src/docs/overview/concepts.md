@@ -177,7 +177,7 @@ the system.
 !!! info "Maintenance schedule"
 
     As often as possible, maintenances will take place on the **first Tuesday
-    of every month, from 08:00 to 12:00** (noon), and will be announced 2 weeks
+    of every month, from 08:00 to 12:00 Pacific time** (noon), and will be announced 2 weeks
     in advance, through the usual communication channels.
 
 In case an exceptional amount of work is required, the maintenance window could
