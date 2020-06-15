@@ -229,7 +229,7 @@ Here's what it looks like in motion:
 [url_news]:         //news.sherlock.stanford.edu
 [url_status]:       //status.sherlock.stanford.edu
 
-[url_invest]:       /docs/overview/concepts#investing-into-sherlock
+[url_invest]:       /docs/overview/concepts#investing-in-sherlock
 [url_concepts]:     /docs/overview/concepts
 [url_glossary]:     /docs/overview/tech/glossary
 [url_prereq]:       /docs/getting-started/
