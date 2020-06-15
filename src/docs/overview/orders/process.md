@@ -85,7 +85,9 @@ There are two components in the cost of a compute node purchase:
 !!! info "No recurring fees"
 
     There is currently no recurring fee associated with purchasing compute
-    nodes on Sherlock.
+    nodes on Sherlock. In particular, there is no CPU.hour charge, purchased
+    nodes are available to their owners 100% of the time, at no additional
+    cost.
 
     Currently, there are no user, administrative or management fees associated
     with ongoing system administration of the Sherlock environment. However,

@@ -49,10 +49,22 @@ or even departmental basis.
 
 ### How much does it cost?
 
-Sherlock is free to use for anyone doing sponsored research at Stanford. Any
-faculty member can request access for research purposes, and get an account
+Sherlock is **free** to use for anyone doing sponsored research at Stanford.
+Any faculty member can request access for research purposes, and get an account
 with a base storage allocation and unlimited compute time on the global, shared
 pool of resources.
+
+!!! info "No CPU.hour charge"
+
+    Unlike all Cloud Service Providers and many HPC systems, there is no usage
+    charge on Sherlock.
+
+    When you submit your work on Sherlock, you don't need to keep an eye on the
+    clock and worry about how much that run will cost you. There is no limit on
+    the total amount of computing you can run on the cluster, as long as
+    resources are available, and there's no charge to use them, no matter how
+    large or small your computations are.
+
 
 In case those free resources are not sufficient, Stanford Research Computing
 offers Faculty members the [opportunity to invest][url_invest] into the
