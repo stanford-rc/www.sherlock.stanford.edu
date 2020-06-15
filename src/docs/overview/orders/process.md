@@ -127,7 +127,7 @@ pandemic-related supply-chain disruptions notwithstanding).
 
 ### Required information
 
-To place an order, we'll of the following bits of information:
+To place an order, we'll need the following information:
 
   * The SUNet ID of the PI making the purchase request
   * A PTA[^PTA] number to charge the hardware (capital) portion of the purchase
