@@ -55,8 +55,8 @@ with a base storage allocation and unlimited compute time on the global, shared
 pool of resources.
 
 In case those free resources are not sufficient, Stanford Research Computing
-provides faculty with the [opportunity to purchase][url_condo] from a [catalog
-a recommended configurations][url_catalog], for the use of their research
+offers Faculty members the [opportunity to invest][url_invest] into the
+cluster, and get access to additional computing resources for their research
 teams. Using a traditional compute cluster condominium model, participating
 faculty and their teams get priority access to the resources they purchase.
 When they're idle, those resources are available to use by other owners on the
@@ -175,11 +175,9 @@ solution on your own.
       sure that when Sherlock has an issue, we are aware of it and working on
       it.
 
-
-
 ## Quick Start
 
-If you're in a rush, here's a 3-step ultra-quick start:
+If you're in a rush[^account], here's a 3-step ultra-quick start:
 
 1. connect to Sherlock
    ```
@@ -200,6 +198,7 @@ If you're in a rush, here's a 3-step ultra-quick start:
 
 Congrats! You ran your first job on Sherlock!
 
+### Replay
 
 Here's what it looks like in motion:
 <script type="text/javascript"
@@ -209,6 +208,7 @@ Here's what it looks like in motion:
     async>
 </script>
 
+
 [comment]: #  (link URLs -----------------------------------------------------)
 [url_zoom]:          https://stanford.zoom.us/
 [url_srcc]:         //srcc.stanford.edu
@@ -216,11 +216,10 @@ Here's what it looks like in motion:
 [url_docs]:         //www.sherlock.stanford.edu/docs
 [url_news]:         //news.sherlock.stanford.edu
 [url_status]:       //status.sherlock.stanford.edu
-[url_catalog]:      //srcc.stanford.edu/private/sherlock-qtr-order
 
-[url_condo]:        /docs/overview/concepts#the-condominium-model
+[url_invest]:       /docs/overview/concepts#investing-into-sherlock
 [url_concepts]:     /docs/overview/concepts
-[url_glossary]:     /docs/overview/glossary
+[url_glossary]:     /docs/overview/tech/glossary
 [url_prereq]:       /docs/getting-started/
 [url_connect]:      /docs/getting-started/connecting
 [url_submit]:       /docs/getting-started/submitting
@@ -234,6 +233,9 @@ Here's what it looks like in motion:
 [comment]: #  (footnotes -----------------------------------------------------)
 
 [^shu_ml]: This mailing-list is moderated.
+
+[^account]: even in a rush, you'll still need an account on the cluster. See
+  the [Prerequisites][url_prereq] page for details.
 
 
 --8<--- "_acronyms.md"

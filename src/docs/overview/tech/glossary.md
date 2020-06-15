@@ -1,3 +1,34 @@
+## What's a cluster?
+
+A computing cluster is a federation of multiple compute nodes (independent
+computers), most commonly linked together through a high-performance
+interconnect network.
+
+What makes it a "super-computer" is the ability for a program to address
+resources (such as memory, CPU cores) located in different compute nodes,
+through the high-performance interconnect network.
+
+![overview](img/cluster_overview.png)
+
+On a computing cluster, users typically connect to [login nodes][g_login],
+using a secure remote login protocol such as [SSH][g_ssh]. Unlike in
+traditional interactive environments, users then need to prepare [compute
+jobs][g_jobs] to submit to a [resource scheduler][g_scheduler]. Based on a set
+of rules and limits, the scheduler will then try to match the jobs' resource
+requirements with available resources such as [CPUs][g_cpu], memory or
+computing accelerators such as [GPUs][g_gpu]. It will then execute the user
+defined tasks on the selected resources, and generate output files in one of
+the different [storage locations][url_storage] available on the cluster, for
+the user to review and analyze.
+
+[g_cpu]:        /docs/overview/glossary#cpu
+[g_gpu]:        /docs/overview/glossary#gpu
+[g_login]:      /docs/overview/glossary#login-nodes
+[g_ssh]:        /docs/overview/glossary#ssh
+[g_jobs]:       /docs/overview/glossary#job
+[g_scheduler]:  /docs/overview/glossary#scheduler
+[url_storage]:  /docs/storage/
+
 ## Cluster components
 
 The terms that are typically used to describe cluster components could be
