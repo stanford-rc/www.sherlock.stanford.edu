@@ -14,7 +14,9 @@ purchase, but can access more nodes for their research if they need to. This
 provides the PI with much greater flexibility than owning a standalone cluster.
 
 
-## Service term
+## Conditions
+
+### Service term
 
 !!! warning "Compute nodes are purchased for a duration of 4 years"
 
@@ -148,8 +150,8 @@ And we'll be in touch shortly!
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_order_form]:   //forms.gle/Vds7RrK2aEBcpU978
-[url_catalog]:      //docs.google.com/spreadsheets/d/11CqpWe0XLoEbJEDAac6ag5nbrctkkZSJgRtG4hKh34w/view#gid=1718466470
+[url_order_form]:   /docs/overview/orders/form/
+[url_catalog]:      /docs/overview/orders/catalog
 [url_pta]:          //web.stanford.edu/group/fms/fingate/staff/acctstructure/PTA_req_process.html
 
 [^service_fee]:     **infrastructure fees** are considered non-capital for cost
