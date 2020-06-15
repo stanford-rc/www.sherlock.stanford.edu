@@ -125,20 +125,21 @@ pandemic-related supply-chain disruptions notwithstanding).
 
 To place an order, we'll of the following bits of information:
 
-1. The SUNet ID of the PI making the purchase request,
-2. A PTA[^PTA] number to charge the hardware (capital) portion of the purchase
-2. A PTA[^PTA] number to charge the per-node infrastructure fees (non-capital).
-   It could be the same PTA that is used for the capital portion of the
-   purchase, or a different one,
+  * The SUNet ID of the PI making the purchase request
+  * A PTA[^PTA] number to charge the hardware (capital) portion of the purchase
+  * A PTA[^PTA] number to charge the per-node infrastructure fees (non-capital)
+    <br/>_It could be the same PTA used for the capital portion of the
+    purchase, or a different one_
 
 ### Placing an order
 
 To start ordering compute nodes for Sherlock, please:
 
-1. review the [Sherlock compute nodes catalog][url_catalog] (_SUNet ID required_).
+1. **check the [Sherlock compute nodes catalog][url_catalog]** (_SUNet ID
+   required_) to review configurations and prices
 
-2. use the [order form][url_order_form] (_SUNet ID required_) to submit your
-   request and provide the [required information](#required-information).
+2. **use the [order form][url_order_form]** (_SUNet ID required_) to submit
+   your request and provide the [required information](#required-information)
 
 And we'll be in touch shortly!
 
@@ -150,13 +151,11 @@ And we'll be in touch shortly!
 [url_order_form]:   //forms.gle/Vds7RrK2aEBcpU978
 [url_catalog]:      //docs.google.com/spreadsheets/d/11CqpWe0XLoEbJEDAac6ag5nbrctkkZSJgRtG4hKh34w/view#gid=1718466470
 [url_pta]:          //web.stanford.edu/group/fms/fingate/staff/acctstructure/PTA_req_process.html
-[url_dpa]:          //https://doresearch.stanford.edu/research-offices/property-management-office-pmo
 
 [^service_fee]:     **infrastructure fees** are considered non-capital for cost
   accounting purposes and may incur indirect cost burdens on cost-reimbursable
   contracts and grants.
 [^PTA]: PTA is an acronym used for a [Project-Task-Award][url_pta] combination
   representing an account in the Stanford Financial system.
-[^DPA]: Your [Department Property Administrator][url_dpa]
 
 
