@@ -5,8 +5,8 @@ programming language developed by [MathWorks][url_mathworks].
 
 ### More documentation
 
-The following documentation is specifically intended for using Python on
-Sherlock. For more complete documentation about Python in general, please see
+The following documentation is specifically intended for using Matlab on
+Sherlock. For more complete documentation about Matlab in general, please see
 the official [MATLAB documentation][url_matlab_doc].
 
 ## MATLAB on Sherlock
