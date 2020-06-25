@@ -123,6 +123,8 @@ resources about using `vim`
 * [Nano guide][url_nano] (Gentoo wiki)
 * [Vim guide][url_vim] (Gentoo wiki)
 
+Note: you can also create/edit files with the [Sherlock OnDemand File editor][url_Ondemand_files]
+
 
 ### Shell scripting
 
@@ -166,6 +168,7 @@ For an introduction to shell scripting, you can refer to:
 
 [url_nano]:         https://wiki.gentoo.org/wiki/Nano/Basics_Guide
 [url_vim]:          https://wiki.gentoo.org/wiki/Vim/Guide
+[url_Ondemand_files]:   https://www.sherlock.stanford.edu/docs/user-guide/ondemand/#managing-files             
 
 
 --8<--- "_acronyms.md"
