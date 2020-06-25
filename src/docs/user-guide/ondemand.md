@@ -6,6 +6,18 @@ submit and monitor your jobs, see their output, check the status of the job
 queue, run a Jupyter notebook and much more, without logging in to Sherlock the
 traditional way, via a SSH terminal connection.
 
+!!! quote
+
+    In neuroimaging there are a number of software pipelines that output HTML
+    reports heavy on images files. Sherlock OnDemand allows users to check
+    those as they appear on their `$SCRATCH` folder, for quick quality control,
+    instead of having to mount remote filesystems, download data locally or
+    move to any other storage location. Since the data itself is already quite
+    big and costly to move, OnDemand is extremely helpful for fast assessment.
+
+    _-- Carolina Ramirez, Williams PANLab_
+
+
 ### More documentation
 <div style="float:right">
 [![ood](img/ood_logo.png)][url_ood]
