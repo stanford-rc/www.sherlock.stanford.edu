@@ -62,6 +62,40 @@ below:
 | `G4FP32` | Base GPU configuration | Single-precision (FP32) GPU-accelerated applications (CryoEM, MD...) with low GPU memory requirements | ++"$$"++ |
 | `G4FP64` | High-end GPU configuration | AI, ML/DL and GPU-accelerated HPC codes requiring double-precision (FP64) and larger amounts of GPU memory | ++"$$$"++ |
 
+??? tip "Choosing the best node configuration for your needs"
+
+    Although some configurations may appear cheaper when looking at the
+    dollar/core ratio, this is not the only point to consider when determining
+    the best configuration for your workload.
+
+    *Performance per core*
+
+    : There are other factors to take into account, notably the memory and I/O
+    bandwidth per core, which could be lower on higher core-count
+    configurations like `CPERF`. With multiple times more cores than `CBASE`,
+    they still provide the same total amount of bandwidth to remote and local
+    storage, as well as, to a lesser extend, to memory.  Higher core-count CPUs
+    also often offer lower core frequencies, which combined with less bandwidth
+    per core, may result in lower performance for serial jobs.
+
+    : `CPERF` nodes are an excellent fit for multi-threaded applications that
+    don't span multiple nodes. But for more diverse workloads, they don't offer
+    the same level of flexibility than the `CBASE` nodes, which can run a mix
+    of serial, multi-threaded and MPI applications equally well.
+
+    *Availability*
+
+    : Another important factor to take into account is that less nodes for a
+    given number of cores offers less resilience against potential hardware
+    failures: if a 128-core node becomes unavailable for some reason, that's
+    128 cores that nobody can use while the node is being repaired. But with
+    128 cores in 4x 32-core nodes, if a node fails, there are still 96 cores
+    that can be used.
+
+    We'll be happy to help you determine the best configuration for your
+    computing needs, feel free to [reach out][email] to schedule a
+    consultation.
+
 Configuration details for the different compute node types are listed in the
 [Sherlock compute nodes catalog][url_catalog] (_SUNet ID required[^sunet]_).
 
@@ -155,6 +189,7 @@ And we'll be in touch shortly!
 [url_order_form]:   /docs/overview/orders/form/
 [url_catalog]:      /docs/overview/orders/catalog
 [url_pta]:          //web.stanford.edu/group/fms/fingate/staff/acctstructure/PTA_req_process.html
+[email]:            mailto:srcc-support@stanford.edu
 
 [^service_fee]:     **infrastructure fees** are considered non-capital for cost
   accounting purposes and may incur indirect cost burdens on cost-reimbursable
