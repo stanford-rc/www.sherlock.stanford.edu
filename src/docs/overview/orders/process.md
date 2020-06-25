@@ -45,7 +45,7 @@ tested and validated on Sherlock and that aim to cover most computing needs.
 !!! info "Sherlock catalog"
 
     Complete details are available in the **[Sherlock compute nodes
-    catalog][url_catalog]** (_SUNet ID required_)
+    catalog][url_catalog]** (_SUNet ID required[^sunet]_)
 
 ### Configurations
 
@@ -63,12 +63,12 @@ below:
 | `G4FP64` | High-end GPU configuration | AI, ML/DL and GPU-accelerated HPC codes requiring double-precision (FP64) and larger amounts of GPU memory | ++"$$$"++ |
 
 Configuration details for the different compute node types are listed in the
-[Sherlock compute nodes catalog][url_catalog] (_SUNet ID required_).
+[Sherlock compute nodes catalog][url_catalog] (_SUNet ID required[^sunet]_).
 
 ### Prices
 
 Prices for the different compute node types are listed in the [Sherlock compute
-nodes catalog][url_catalog] (_SUNet ID required_). They include tax and
+nodes catalog][url_catalog] (_SUNet ID required[^sunet]_). They include tax and
 shipping fees, and are subject to change when quoted: they tend to follow the
 market-wide variations induced by global political and economical events, which
 are way outside of our control. Prices are provided there as a guideline for
@@ -161,5 +161,4 @@ And we'll be in touch shortly!
   contracts and grants.
 [^PTA]: PTA is an acronym used for a [Project-Task-Award][url_pta] combination
   representing an account in the Stanford Financial system.
-
-
+[^sunet]: document restricted to `@stanford.edu` accounts.
