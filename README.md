@@ -15,12 +15,39 @@ process, please see [INTERNALS.md](INTERNALS.md)
 
 ## How to contribute
 
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 We're following the fork, commit, pull-request classical GitHub workflow, as
 described in the [Forking projects][url_gh_guide] GitHub guide:
 
 1. [Fork the repository on GitHub][url_fork]
 2. Make your changes, commit and push them to your repository
 3. Create a new Pull Request
+
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/kcgthb"><img src="https://avatars1.githubusercontent.com/u/186807?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kilian Cavalotti</b></sub></a><br /><a href="https://github.com/stanford-rc/www.sherlock.stanford.edu/commits?author=kcgthb" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/mpiercy"><img src="https://avatars0.githubusercontent.com/u/4501682?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mark Piercy</b></sub></a><br /><a href="https://github.com/stanford-rc/www.sherlock.stanford.edu/commits?author=mpiercy" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/thiell"><img src="https://avatars1.githubusercontent.com/u/1494929?v=4?s=100" width="100px;" alt=""/><br /><sub><b>thiell</b></sub></a><br /><a href="https://github.com/stanford-rc/www.sherlock.stanford.edu/commits?author=thiell" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://vsoch.github.io"><img src="https://avatars0.githubusercontent.com/u/814322?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vanessasaurus</b></sub></a><br /><a href="https://github.com/stanford-rc/www.sherlock.stanford.edu/commits?author=vsoch" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/biosafetylvl5"><img src="https://avatars0.githubusercontent.com/u/9918036?v=4?s=100" width="100px;" alt=""/><br /><sub><b>BSL-5</b></sub></a><br /><a href="https://github.com/stanford-rc/www.sherlock.stanford.edu/commits?author=biosafetylvl5" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://bentyeh.github.io"><img src="https://avatars3.githubusercontent.com/u/8296169?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Benjamin Yeh</b></sub></a><br /><a href="https://github.com/stanford-rc/www.sherlock.stanford.edu/commits?author=bentyeh" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/ianfoster"><img src="https://avatars2.githubusercontent.com/u/2997421?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ian Foster</b></sub></a><br /><a href="https://github.com/stanford-rc/www.sherlock.stanford.edu/commits?author=ianfoster" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/romxero"><img src="https://avatars2.githubusercontent.com/u/1442911?v=4?s=100" width="100px;" alt=""/><br /><sub><b>_RC_</b></sub></a><br /><a href="https://github.com/stanford-rc/www.sherlock.stanford.edu/commits?author=romxero" title="Documentation">📖</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 
 ### Step by step instructions
