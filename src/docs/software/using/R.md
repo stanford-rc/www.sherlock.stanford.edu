@@ -202,6 +202,57 @@ Loading required package: parallel
 >
 ```
 
+#### Package dependencies
+
+Sometimes when installing R packages, other software is needed for the installation and/or compilation.  For example the package `sf`.  If you try to install it:
+
+```
+install.packages("sf", repos = "http://cran.us.r-project.org")
+```
+
+You will see the error:
+
+```
+Configuration failed because libudunits2.so was not found. Try installing:...
+```
+
+and:
+
+```
+configure: error: gdal-config not found or not executable.
+```
+
+This is because `sf` needs udunits and gdal (and a few others) in order to compile and install successfully.  Fortunately we already have udunits and gdal installed on Sherlock as modules.  When you see  "not found" or  "not executable." errors you should always search our modules with module spider first:
+
+```
+module spider udunits
+```
+
+```
+----------------------------------------------------------------------------
+  udunits: udunits/2.2.26
+----------------------------------------------------------------------------
+    Description:
+      The UDUNITS package from Unidata is a C-based package for the
+      programatic handling of units of physical quantities.
+
+
+    You will need to load all module(s) on any one of the lines below before the "udunits/2.2.26" module is available to load.
+
+      physics
+
+```
+
+So exit R, load udunits, gdal and install sf again and the errors will go away.
+
+```
+ml load physics udunits gdal
+```
+
+Sometimes it's a matter of trial and error when installing R packages with many dependencies.  You may have to load R, install packages, search modules, load modules, install packages again and so forth.  Fortunately you will only need to do this once and many R package dependencies are already installed as modules, you just need to search for them with ``module spider`` and load them.
+
+
+
 ##### Alternative installation path
 
 To install R packages in a different location, you'll need to create that
