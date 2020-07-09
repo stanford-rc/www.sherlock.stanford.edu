@@ -212,7 +212,7 @@ install.packages("sf", repos = "http://cran.us.r-project.org")
 
 You will see the error:
 
-```
+```R
 Configuration failed because libudunits2.so was not found. Try installing:...
 ```
 
