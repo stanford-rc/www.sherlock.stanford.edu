@@ -228,7 +228,7 @@ This is because `sf` needs udunits and gdal (and a few others) in order to compi
 module spider udunits
 ```
 
-```
+```bash
 ----------------------------------------------------------------------------
   udunits: udunits/2.2.26
 ----------------------------------------------------------------------------
