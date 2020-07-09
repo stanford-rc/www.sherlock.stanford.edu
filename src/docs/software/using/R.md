@@ -224,7 +224,7 @@ configure: error: gdal-config not found or not executable.
 
 This is because `sf` needs udunits and gdal (and a few others) in order to compile and install successfully.  Fortunately we already have udunits and gdal installed on Sherlock as modules.  When you see  "not found" or  "not executable." errors you should always search our modules with module spider first:
 
-```
+```bash
 module spider udunits
 ```
 
