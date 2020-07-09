@@ -175,7 +175,7 @@ results.
 
 You can run your MATLAB code across multiple CPUs on Sherlock using [parfor][url_parfor] loops.  Users can run on as many CPUs that are on a node in a single job.  The key is to grab the [SLURM environmental variable][url_SLURM_ENV] ``$SLURM_CPUS_PER_TASK`` and create the worker pool in your MATLAB code with:
 
-```
+```matlab
 parpool('local', str2num(getenv('SLURM_CPUS_PER_TASK')))
 ```
 Here is an sbatch that will use 16 CPUs on a node at once to run a simple MATLAB parfor enabled script.
