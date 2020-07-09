@@ -218,7 +218,7 @@ Configuration failed because libudunits2.so was not found. Try installing:...
 
 and:
 
-```
+```R
 configure: error: gdal-config not found or not executable.
 ```
 
