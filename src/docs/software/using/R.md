@@ -245,7 +245,7 @@ module spider udunits
 
 So exit R, load udunits, gdal and install sf again and the errors will go away.
 
-```
+```bash
 ml load physics udunits gdal
 ```
 
