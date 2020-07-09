@@ -206,7 +206,7 @@ Loading required package: parallel
 
 Sometimes when installing R packages, other software is needed for the installation and/or compilation.  For example the package `sf`.  If you try to install it:
 
-```
+```R
 install.packages("sf", repos = "http://cran.us.r-project.org")
 ```
 
