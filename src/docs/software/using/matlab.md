@@ -230,7 +230,7 @@ exit;
 Save as pfor.m
 
 Submit the job:
-```
+```bash
 sbatch parfor.sbatch
 ```
 
