@@ -180,7 +180,7 @@ parpool('local', str2num(getenv('SLURM_CPUS_PER_TASK')))
 ```
 Here is an sbatch that will use 16 CPUs on a node at once to run a simple MATLAB parfor enabled script.
 
-```
+```bash
 #!/bin/bash
 #SBATCH -J pfor_matlab
 #SBATCH -o pfor".%j".out
