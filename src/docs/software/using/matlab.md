@@ -129,7 +129,9 @@ For more info on X11 forwarding, you can refer to this [UIT page][url_X11_UIT].
 
 
 
-#### Submitting a MATLAB job
+### Examples
+
+#### Simple MATLAB job
 
 Here is an example MATLAB batch script that can submitted with `sbatch`:
 
@@ -171,15 +173,26 @@ You can check the status of the job with the [`squeue`][url_squeue] command,
 and check the contents of the `matlab_test.JOBID.{out,err}` files to see the
 results.
 
-#### Using multiple CPUs with MATLAB's parfor loop
 
-You can run your MATLAB code across multiple CPUs on Sherlock using [parfor][url_parfor] loops.  Users can run on as many CPUs that are on a node in a single job.  The key is to grab the [SLURM environmental variable][url_SLURM_ENV] ``$SLURM_CPUS_PER_TASK`` and create the worker pool in your MATLAB code with:
+#### Parallel loop
+
+You can run your MATLAB code across multiple CPUs on Sherlock using
+[`parfor`][url_parfor] loops, to take advantage of the multiple CPU cores that
+each node features. You can submit a job requesting as many CPUs as there are
+on a node in a single job.  The key is to grab the [SLURM environment
+variable][url_SLURM_ENV] `$SLURM_CPUS_PER_TASK` and create the worker pool in
+your MATLAB code with:
 
 ```matlab
 parpool('local', str2num(getenv('SLURM_CPUS_PER_TASK')))
 ```
-Here is an sbatch that will use 16 CPUs on a node at once to run a simple MATLAB parfor enabled script.
 
+Here is an example of a `sbatch` submission script that requests 16 CPUs on a
+node, and runs a simple MATLAB script using `parfor`.
+
+Save the two scripts below as `parfor.sbatch` and `parfor.m`:
+
+=== `parfor.sbatch`
 ```bash
 #!/bin/bash
 #SBATCH -J pfor_matlab
@@ -189,14 +202,12 @@ Here is an sbatch that will use 16 CPUs on a node at once to run a simple MATLAB
 #SBATCH -p normal
 #SBATCH -c 16
 #SBATCH --mail-type=ALL
+
 module load matlab
-matlab -nosplash -nodesktop -r "pfor"
+matlab -nosplash -nodesktop -r parfor.m
 ```
 
-Save as parfor.sbatch
-
-MATLAB code:
-
+=== `parfor.m`
 ```matlab
 %============================================================================
 % Parallel Monte Carlo calculation of PI
@@ -224,20 +235,19 @@ fprintf('The computed value of pi is %8.7f.n',myPI);
 fprintf('The parallel Monte-Carlo method is executed in %8.2f seconds.n', T);
 delete(gcp);
 exit;
-
 ```
 
-Save as pfor.m
 
-Submit the job:
+You can now submit the job with the following command:
 ```bash
 sbatch parfor.sbatch
 ```
 
-If you run ``htop`` or ``pstree -u $USER`` on the compute node that is running your job, you will see all 16 cores allocated to your MATLAB code.
+If you run `htop` or `pstree -u $USER` on the compute node that is running your
+job, you will see all 16 cores allocated to your MATLAB code.
 
-You can find more examples of parfor sbatch scripts with a [Google search][url_parfor_google_search]
-
+You can also try that same job with different numbers of CPUs, and see how well
+it scales.
 
 [comment]: #  (link URLs ----------------------------------------------------- )
 
@@ -267,7 +277,6 @@ You can find more examples of parfor sbatch scripts with a [Google search][url_p
 [url_squeue]:           /docs/getting-started/submitting/#check-the-job
 [url_parfor]:           https://www.mathworks.com/help/parallel-computing/parfor.html
 [url_SLURM_ENV]:        https://slurm.schedmd.com/sbatch.html#lbAJ
-[url_parfor_google_search]:     https://www.google.com/search?q=matlab+parpool+sbatch
 
 
 
