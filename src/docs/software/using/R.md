@@ -202,33 +202,30 @@ Loading required package: parallel
 >
 ```
 
-#### Package dependencies
+##### Package dependencies
 
-Sometimes when installing R packages, other software is needed for the installation and/or compilation.  For example the package `sf`.  If you try to install it:
-
-```R
-install.packages("sf", repos = "http://cran.us.r-project.org")
-```
-
-You will see the error:
+Sometimes when installing R packages, other software is needed for the
+installation and/or compilation.  For instance, when trying to install the `sf`
+package, you may encounter the following error messages:
 
 ```R
+> install.packages("sf")
+[...]
 Configuration failed because libudunits2.so was not found. Try installing:...
-```
-
-and:
-
-```R
+[...]
 configure: error: gdal-config not found or not executable.
 ```
 
-This is because `sf` needs udunits and gdal (and a few others) in order to compile and install successfully.  Fortunately we already have udunits and gdal installed on Sherlock as modules.  When you see  "not found" or  "not executable." errors you should always search our modules with module spider first:
+This is because `sf` needs a few dependencies, like `udunits` and `gdal`. in
+order to compile and install successfully.  Fortunately those dependencies are
+already available as modules on Sherlock.
+
+Whenever you see "not found" errors, you may want to try searching the modules
+inventory with `module spider`:
 
 ```bash
-module spider udunits
-```
+$ module spider udunits
 
-```bash
 ----------------------------------------------------------------------------
   udunits: udunits/2.2.26
 ----------------------------------------------------------------------------
@@ -237,19 +234,31 @@ module spider udunits
       programatic handling of units of physical quantities.
 
 
-    You will need to load all module(s) on any one of the lines below before the "udunits/2.2.26" module is available to load.
+    You will need to load all module(s) on any one of the lines below before
+    the "udunits/2.2.26" module is available to load.
 
       physics
 
 ```
 
-So exit R, load udunits, gdal and install sf again and the errors will go away.
+So for `sf`, in order to load the dependencies, exit `R`, load the `udunits`
+and `gdal` modules, and try installing `sf` again:
 
 ```bash
-ml load physics udunits gdal
+$ ml load physics udunits gdal
+$ ml R
+$ R
+> install.packages("sf")
 ```
 
-Sometimes it's a matter of trial and error when installing R packages with many dependencies.  You may have to load R, install packages, search modules, load modules, install packages again and so forth.  Fortunately you will only need to do this once and many R package dependencies are already installed as modules, you just need to search for them with ``module spider`` and load them.
+Sometimes, getting dependencies right is a matter of trial and error.  You may
+have to load R, install packages, search modules, load modules, install
+packages again and so forth.  Fortunately, R packages only need to be installed
+once, and many R package dependencies are already available as modules on
+Sherlock, you just need to search for them with `module spider` and load them.
+
+And in case you're stuck, you can of course always [send us an
+email][url_support] and we'll be happy to assist.
 
 
 
@@ -661,6 +670,7 @@ which shows a decent speedup for running on a GPU for the largest matrix sizes.
 [url_dplyr]:            //github.com/tidyverse/dplyr
 [url_rmpi]:             //cran.r-project.org/web/packages/Rmpi
 [url_gpur]:             //cran.r-project.org/web/packages/gpuR
+[url_support]:          mailto:srcc-support@stanford.edu
 
 [url_modules]:          /docs/software/modules
 [url_software_list]:    /docs/software/list
