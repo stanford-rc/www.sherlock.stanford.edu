@@ -129,7 +129,9 @@ For more info on X11 forwarding, you can refer to this [UIT page][url_X11_UIT].
 
 
 
-#### Submitting a MATLAB job
+### Examples
+
+#### Simple MATLAB job
 
 Here is an example MATLAB batch script that can submitted with `sbatch`:
 
@@ -172,6 +174,80 @@ and check the contents of the `matlab_test.JOBID.{out,err}` files to see the
 results.
 
 
+#### Parallel loop
+
+You can run your MATLAB code across multiple CPUs on Sherlock using
+[`parfor`][url_parfor] loops, to take advantage of the multiple CPU cores that
+each node features. You can submit a job requesting as many CPUs as there are
+on a node in a single job.  The key is to grab the [SLURM environment
+variable][url_SLURM_ENV] `$SLURM_CPUS_PER_TASK` and create the worker pool in
+your MATLAB code with:
+
+```matlab
+parpool('local', str2num(getenv('SLURM_CPUS_PER_TASK')))
+```
+
+Here is an example of a `sbatch` submission script that requests 16 CPUs on a
+node, and runs a simple MATLAB script using `parfor`.
+
+Save the two scripts below as `parfor.sbatch` and `parfor.m`:
+
+=== `parfor.sbatch`
+```bash
+#!/bin/bash
+#SBATCH -J pfor_matlab
+#SBATCH -o pfor".%j".out
+#SBATCH -e pfor".%j".err
+#SBATCH -t 20:00
+#SBATCH -p normal
+#SBATCH -c 16
+#SBATCH --mail-type=ALL
+
+module load matlab
+matlab -nosplash -nodesktop -r parfor.m
+```
+
+=== `parfor.m`
+```matlab
+%============================================================================
+% Parallel Monte Carlo calculation of PI
+%============================================================================
+parpool('local', str2num(getenv('SLURM_CPUS_PER_TASK')))
+R = 1;
+darts = 1e7;
+count = 0;
+tic
+parfor i = 1:darts
+   % Compute the X and Y coordinates of where the dart hit the...............
+   % square using Uniform distribution.......................................
+   x = R*rand(1);
+   y = R*rand(1);
+   if x^2 + y^2 <= R^2
+      % Increment the count of darts that fell inside of the.................
+      % circle...............................................................
+     count = count + 1; % Count is a reduction variable.
+   end
+end
+% Compute pi.................................................................
+myPI = 4*count/darts;
+T = toc;
+fprintf('The computed value of pi is %8.7f.n',myPI);
+fprintf('The parallel Monte-Carlo method is executed in %8.2f seconds.n', T);
+delete(gcp);
+exit;
+```
+
+
+You can now submit the job with the following command:
+```bash
+sbatch parfor.sbatch
+```
+
+If you run `htop` or `pstree -u $USER` on the compute node that is running your
+job, you will see all 16 cores allocated to your MATLAB code.
+
+You can also try that same job with different numbers of CPUs, and see how well
+it scales.
 
 [comment]: #  (link URLs ----------------------------------------------------- )
 
@@ -199,6 +275,9 @@ results.
 [url_partition]:        /docs/overview/glossary/#partition
 [url_cpu]:              /docs/overview/glossary/#cpu
 [url_squeue]:           /docs/getting-started/submitting/#check-the-job
+[url_parfor]:           https://www.mathworks.com/help/parallel-computing/parfor.html
+[url_SLURM_ENV]:        https://slurm.schedmd.com/sbatch.html#lbAJ
+
 
 
 [comment]: #  (footnotes -----------------------------------------------------)
