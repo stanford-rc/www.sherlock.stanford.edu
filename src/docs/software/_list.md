@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, July 15 2020, we provide 628 software packages, in 7 categories, covering 71 fields of science:*
+*As of Tuesday, July 21 2020, we provide 630 software packages, in 7 categories, covering 71 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, checkpointing, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -74,7 +74,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **benchmark** | <a id="hp2p" class="soft_anch">`hp2p`</a>^<b class="mpi"></b>^ | `3.2` | [Website](https://github.com/cea-hpc/hp2p) | Heavy Peer To Peer: a MPI based benchmark for network diagnostic. 
 **benchmark** | <a id="mprime" class="soft_anch">`mprime`</a> | `29.4` | [Website](https://www.mersenne.org/) | mprime is used by GIMPS, a distributed computing project dedicated to finding new Mersenne prime numbers, and which is commonly used as a stability testing utility. 
 **benchmarks** | <a id="mpibench" class="soft_anch">`mpibench`</a>^<b class="mpi"></b>^ | `20190729` | [Website](https://github.com/LLNL/mpiBench) | Times MPI collectives over a series of message sizes. 
-**benchmarks** | <a id="osu-micro-benchmarks" class="soft_anch">`osu-micro-benchmarks`</a>^<b class="gpu"></b>^^<b class="mpi"></b>^ | `5.6.1` | [Website](http://mvapich.cse.ohio-state.edu/benchmarks/) | The OSU MicroBenchmarks carry out a variety of message passing performance tests using MPI. 
+**benchmarks** | <a id="osu-micro-benchmarks" class="soft_anch">`osu-micro-benchmarks`</a>^<b class="gpu"></b>^^<b class="mpi"></b>^ | `5.6.1`<br/>`5.6.3` | [Website](http://mvapich.cse.ohio-state.edu/benchmarks/) | The OSU MicroBenchmarks carry out a variety of message passing performance tests using MPI. 
 **checkpointing** | <a id="dmtcp" class="soft_anch">`dmtcp`</a> | `2.6.0` | [Website](http://dmtcp.sourceforge.net/) | DMTCP (Distributed MultiThreaded Checkpointing) transparently checkpoints a single-host or distributed computation in user-space -- with no modifications to user code or to the O/S. 
 **compression** | <a id="libarchive" class="soft_anch">`libarchive`</a> | `3.3.2`<br/>`3.4.2` | [Website](https://www.libarchive.org/) | The libarchive project develops a portable, efficient C library that can read and write streaming archives in a variety of formats. 
 **compression** | <a id="libzip" class="soft_anch">`libzip`</a> | `1.5.1` | [Website](http://libzip.org) | libzip is a C library for reading, creating, and modifying zip archives. 
@@ -159,6 +159,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **libs** | <a id="libtiff" class="soft_anch">`libtiff`</a> | `4.0.8` | [Website](http://simplesystems.org/libtiff/) | libtiff provides support for the Tag Image File Format (TIFF), a widely used format for storing image data. 
 **libs** | <a id="libunistring" class="soft_anch">`libunistring`</a> | `0.9.7` | [Website](https://www.gnu.org/software/libunistring/) | Libunistring provides functions for manipulating Unicode strings and for manipulating C strings according to the Unicode standard. 
 **libs** | <a id="libuuid" class="soft_anch">`libuuid`</a> | `1.0.3` | [Website](https://sourceforge.net/projects/libuuid) | Portable uuid C library. 
+**libs** | <a id="libuv" class="soft_anch">`libuv`</a> | `1.38.1` | [Website](https://github.com/libuv/libuv) | libuv is a multi-platform support library with a focus on asynchronous I/O. 
 **libs** | <a id="libwebp" class="soft_anch">`libwebp`</a> | `0.6.1` | [Website](https://developers.google.com/speed/webp) | WebP is a modern image format that provides superior lossless and lossy compression for images on the web. 
 **libs** | <a id="libxml2" class="soft_anch">`libxml2`</a> | `2.9.4` | [Website](http://xmlsoft.org/) | Libxml2 is a XML C parser and toolkit. 
 **libs** | <a id="libxslt" class="soft_anch">`libxslt`</a> | `1.1.32` | [Website](http://xmlsoft.org/libxslt) | Libxslt is the XSLT C library developed for the GNOME project. XSLT itself is a an XML language to define transformation for XML. 
