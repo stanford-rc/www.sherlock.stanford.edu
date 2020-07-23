@@ -14,6 +14,8 @@ jobs a single user (and a single group) can have in queue at any given time.
 This helps ensuring that the scheduler is able to continue operating in an
 optimal fashion, without being overloaded by a single user or group.
 
+To see CPU/GPU, job submission, memory and time limits on Sherlock you can use the `sh_part` command.  This command will also show you what partitions you have access to.
+
 ### Minimizing the number of jobs in queue
 
 It's generally a good practice to try reducing the number of jobs submitted to
