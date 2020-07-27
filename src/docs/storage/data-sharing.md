@@ -277,7 +277,7 @@ there are two possiblities:
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_rhel_posix_acl]:   https://access.redhat.com/documentation/en-US/Red_Hat_Storage/2.0/html/Administration_Guide/ch09s05.html
+[url_rhel_posix_acl]:   https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-access_control_lists#acls-setting
 [url_unix_perms]:       https://en.wikipedia.org/wiki/File_system_permissions
 [url_contact]:          mailto:srcc-support@stanford.edu
 [url_nfs4_acl_man]:     http://linux.die.net/man/5/nfs4_acl
