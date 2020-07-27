@@ -310,12 +310,13 @@ node until the last job from the user terminates.
 !!! summary
 
     `$OAK` is SRCC's research data storage offering. It provides an affordable,
-    long-term storage option for labs and reserachers, and is ideally suited to
-    host large datasets, or curated, post-processed results from job campaigns,
-    as well as final results used for publication.
+    longer-term storage option for labs and researchers, and is ideally suited
+    to host large datasets, or curated, post-processed results from job
+    campaigns, as well as final results used for publication. Easily order
+    `$OAK` online using the [Oak Storage Service page][url_oak].
 
 
-!!! warning "OAK is opt-in"
+!!! warning "Oak is opt-in"
 
     `$OAK` is available as an option on Sherlock. Meaning that only members of
     groups which have purchased storage on Oak can access this filesystem.  For
@@ -328,7 +329,7 @@ node until the last job from the user terminates.
 | **Type**          | Parallel, capacitive Lustre filesystem |
 | **Quota**         | amount purchased *(in 10 TB increments)* |
 | **Snapshots**     | **NO** |
-| **Backups**       | **NO** |
+| **Backups**       | [option][url_contact]: cloud backup using restic |
 | **Purge policy**  | not purged |
 | **Scope**         | all login and compute nodes <br/>*(also available through gateways outside of Sherlock)* |
 
@@ -347,6 +348,13 @@ at the end of the job campaign.
 We strongly recommend using `$OAK` to reference your group home directory in
 scripts, rather than its explicit path.
 
+`$OAK` is not backed up or replicated, by design. Deleted files cannot be
+recovered. We recommend all researchers to keep a copy of their important
+files in Google Drive. For added data protection on Oak, SRCC now also offers
+a managed "backup to the cloud" option (for an additional service fee + cloud
+storage fees). [Contact us][url_contact] for more information.
+
+
 ### Checking quota usage
 
 The `sh_quota` tool can be used to display quota usage on `$OAK`
@@ -359,7 +367,8 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_oak]:              https://oak-storage.stanford.edu
+[url_contact]:          mailto:srcc-support@stanford.edu
+[url_oak]:              https://uit.stanford.edu/service/oak-storage
 [url_check_quotas]:     /docs/storage/#checking-quotas
 [url_snapshots]:        /docs/storage/data-protection/#snapshots
 

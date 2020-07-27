@@ -37,7 +37,7 @@ and for some of them, purge policies (time-residency limits).
 |`$HOME`, `$GROUP_HOME`    | [NFS][url_NFS]       | <b class="yes">:fa-check:</b> / <b class="yes">:fa-check:</b> | Low | Small, important files (source code, executables, configuration files...) | Free |
 |`$SCRATCH`, `$GROUP_SCRATCH` | [Lustre][url_lustre] | <b class="no">:fa-times:</b> / <b class="no">:fa-times:</b> | High bandwidth | Large, temporary files (checkpoints, raw application output...) | Free |
 |`$L_SCRATCH`              | Local SSD    | <b class="no">:fa-times:</b> / <b class="no">:fa-times:</b> | Low latency, high IOPS | Job specific output requiring high IOPS | Free |
-|`$OAK`                    | [Lustre][url_lustre] | <b class="no">:fa-times:</b> / option | Moderate | Long term storage of research data | Based on volume[^oak_sd] |
+|`$OAK`                    | [Lustre][url_lustre] | option (restic) / <b class="no">:fa-times:</b> | Moderate | Long term storage of research data | Based on volume[^oak_sd] |
 
 
 ### Access scope
