@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, July 31 2020, we provide 639 software packages, in 7 categories, covering 72 fields of science:*
+*As of Friday, July 31 2020, we provide 640 software packages, in 7 categories, covering 72 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, benchmarks, checkpointing, compression, containers, database, doc, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -345,7 +345,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **neurology** | <a id="afni" class="soft_anch">`afni`</a> | `17.2.07`<br/>`18.2.04` | [Website](https://afni.nimh.nih.gov) | AFNI (Analysis of Functional NeuroImages) is a set of C programs for processing, analyzing, and displaying functional MRI (FMRI) data - a technique for mapping human brain activity. 
 **neurology** | <a id="ants" class="soft_anch">`ants`</a> | `2.1.0`<br/>`2.3.1` | [Website](https://stnava.github.io/ANTs) | ANTs computes high-dimensional mappings to capture the statistics of brain structure and function. 
 **neurology** | <a id="dcm2niix" class="soft_anch">`dcm2niix`</a> | `1.0.20171215` | [Website](https://github.com/rordenlab/dcm2niix) | dcm2niix is a program esigned to convert neuroimaging data from the DICOM format to the NIfTI format. 
-**neurology** | <a id="freesurfer" class="soft_anch">`freesurfer`</a> | `6.0.0` | [Website](https://surfer.nmr.mgh.harvard.edu/) | An open source software suite for processing and analyzing (human) brain MRI images. 
+**neurology** | <a id="freesurfer" class="soft_anch">`freesurfer`</a> | `7.1.1`<br/>`6.0.0` | [Website](https://surfer.nmr.mgh.harvard.edu/) | An open source software suite for processing and analyzing (human) brain MRI images. 
 **neurology** | <a id="fsl" class="soft_anch">`fsl`</a>^<b class="gpu"></b>^ | `5.0.10` | [Website](https://fsl.fmrib.ox.ac.uk/fsl) | FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. 
 **neurology** | <a id="mricron" class="soft_anch">`mricron`</a> | `20160502` | [Website](https://www.nitrc.org/projects/mricron) | MRIcron is a cross-platform NIfTI format image viewer. 
 **neurology** | <a id="mrtrix" class="soft_anch">`mrtrix`</a> | `0.3.16` | [Website](http://www.mrtrix.org) | MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses. 
