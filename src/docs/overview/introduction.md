@@ -129,16 +129,9 @@ srcc-support@stanford.edu and **mentioning Sherlock**.
     received, so we can help you better.  For more details, see the
     [Troubleshooting][url_troubleshoot] page.
 
-As a member of the Sherlock community, you're also automatically subscribed to:
-
-* the [sherlock-announce][url_sha_ml] mailing-list, which is only used by the
-  SRCC team to send   important announcements about Sherlock,
-* the [sherlock-users][url_shu_ml] mailing list[^shu_ml], which is used to
-  connect Sherlock users together. If you have a general
-  question about software used on Sherlock, want to reach out to the other
-  Sherlock users to share tips and good practices, tutorials or other info,
-  please feel free to do so through this mailing-list.
-
+As a member of the Sherlock community, you're also automatically subscribed to
+the [sherlock-announce][url_sha_ml] mailing-list, which is only used by the
+SRCC team to send important announcements about Sherlock,
 
 
 ### Office hours
@@ -146,12 +139,12 @@ As a member of the Sherlock community, you're also automatically subscribed to:
 !!! bug "COVID-19 update"
 
     **We'll be holding remote office hours via [Zoom][url_zoom], for the time
-    being.** 
+    being.**
 
     * Tuesday 10-11am
-    * Thursday 3-4pm  
-    
-    Office Hours Zoom link: https://stanford.zoom.us/j/95962823750?pwd=cFM2U2ZRQ243Zkx0Ry83akdtWU9zUT09
+    * Thursday 3-4pm
+
+    Click here to join the **[Sherlock Office Hours Zoom][url_oh_zoom]**
 
 
 Sending a question to srcc-support@stanford.edu is always the best first option
@@ -188,6 +181,29 @@ solution on your own.
       components, that are constantly being monitored by our team. You can be
       sure that when Sherlock has an issue, we are aware of it and working on
       it.
+
+
+## User community
+
+Sherlock is present on the [Stanford Slack Grid][url_su_slack], and you're more
+than welcome to join the following channels:
+
+  * **[`#sherlock-announce`][url_sl_sha]**, for announcements related to
+    Sherlock and its surrounding services,
+  * **[`#sherlock-users`][url_sl_shu]**, as a place for Sherlock users to
+    connect directly with each other. If you have a general question about
+    software used on Sherlock, want to reach out to other Sherlock users to
+    share tips, good practices, tutorials or other info, please feel free to
+    do so there.
+
+For more details about the SRCC Slack Workspace, and instructions on how to
+join this workspace and its channels, please see https://srcc.stanford.edu/support.
+
+!!! warning "Slack is not an official support channel"
+
+    Please note that while SRCC staff will monitor these channels, the official
+    way to get support is still to email us at srcc-support@stanford.edu.
+
 
 ## Quick Start
 
@@ -243,10 +259,13 @@ Here's what it looks like in motion:
 [url_sha_ml]:       //mailman.stanford.edu/mailman/listinfo/sherlock-announce
 [url_polya]:        //campus-map.stanford.edu/?id=14-160&lat=37.42898333&lng=-122.17752929&zoom=17&srch=polya%20hall
 
+[url_oh_zoom]:      //stanford.zoom.us/j/95962823750?pwd=cFM2U2ZRQ243Zkx0Ry83akdtWU9zUT09
+
+[url_su_slack]:     //uit.stanford.edu/service/slack
+[url_sl_sha]:       //srcc.slack.com/archives/C01862L37CN
+[url_sl_shu]:       //srcc.slack.com/archives/C0192KNKYSU
 
 [comment]: #  (footnotes -----------------------------------------------------)
-
-[^shu_ml]: This mailing-list is moderated.
 
 [^account]: even in a rush, you'll still need an account on the cluster. See
   the [Prerequisites][url_prereq] page for details.
