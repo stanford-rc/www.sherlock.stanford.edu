@@ -13,23 +13,8 @@ the official [MATLAB documentation][url_matlab_doc].
 
 ### Licensing
 
-MATLAB is a commercial software suite, which requires users to purchase a
-license before they can use it. MATLAB is licensed at the group-level on
-Sherlock, meaning that once a group is granted access to the software, all the
-members of the authorized group will get access to MATLAB.
-
-!!! warning "Groups are responsible for procuring their own licenses"
-
-    MATLAB licenses[^lic_num] can be purchased through [Stanford Software
-    Licensing][url_software] by visiting the following link:
-    https://stanford.onthehub.com/WebStore/Welcome.aspx.
-
-    After your purchase, you can [contact us][url_contact] to request MATLAB
-    access. Please CC Stanford Software Licensing (software@stanford.edu), and
-    include your license ID or receipt in the email, for verification. Once we
-    get approval from the Software License team, all the members of your group
-    will be granted access to MATLAB on Sherlock.
-
+MATLAB is a commercial software suite, which is now [available to no cost for
+all Stanford Faculty, students, and staff][url_matlab_nocost].
 
 > **Note**: a number of free, open-source alternatives exist and can be used
 in many situations: [Octave][url_octave], [R][url_R], [Julia][url_julia], or
@@ -39,8 +24,7 @@ MATLAB with good results.
 
 ### Using MATLAB
 
-Once your group has been granted access, the MATLAB [module][url_modules] can
-be loaded with:
+The MATLAB [module][url_modules] can be loaded with:
 
 ```
 $ ml load matlab
@@ -257,6 +241,7 @@ it scales.
 [url_matlab_doc]:       //www.mathworks.com/help/matlab/
 [url_matlab_options]:   //www.mathworks.com/help/matlab/matlab_env/startup-options.html
 [url_software]:         //uit.stanford.edu/service/softwarelic
+[url_matlab_nocost]:    //uit.stanford.edu/news/get-matlab-and-simulink-no-charge
 [url_X11_UIT]:          //uit.stanford.edu/service/sharedcomputing/moreX
 [url_octave]:           //www.gnu.org/software/octave/
 
@@ -281,9 +266,6 @@ it scales.
 
 
 [comment]: #  (footnotes -----------------------------------------------------)
-
-[^lic_num]: We usually recommend groups to purchase as many licenses as groups
-  will have users running MATLAB on Sherlock.
 
 [^JVM]: MATLAB uses the Java® Virtual Machine (JVM™) software to run the
   desktop and to display graphics. The `-nojvm` option enables you to start
