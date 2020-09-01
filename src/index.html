@@ -49,45 +49,41 @@
   <!-- noticeable.io widget (changelog) -->
   <script async="" defer="" src="https://cdn.noticeable.io/v1/noticeable-widget.js"></script>
 
-  <!-- UserVoice widget -->
-  <script async>
-    // Include the UserVoice JavaScript SDK (only needed once on a page)
-    UserVoice = window.UserVoice||[];(
-      function() {
-        var uv=document.createElement('script');
-        uv.type='text/javascript';
-        uv.async=true;
-        uv.src='//widget.uservoice.com/4a4IvDVZKokz6bHpdbN6Q.js';
-        var s=document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(uv,s)
-      }
-    )();
-    UserVoice.push(['set', {
-      accent_color: '#8C1515',
-      ticket_custom_fields: {
-        'System': 'Sherlock'
-      },
-      strings: {
-        contact_message_placeholder: 'How could we help you?'
-      }
-    }]);
-    var mesg_tmpl = 'Please indicate your name, SUNet ID, and PI, and we\'ll get back to you. Your PI\'s approval will be required.'
-    for (i=1; i<=3; i++) {
-        UserVoice.push(['addTrigger', '#account_request'+i, {
-          position: 'top',
-          width: '300px',
-          height: '350px',
-          screenshot_enabled: false,
-          ticket_custom_fields: {
-            'System': 'Sherlock'
-          },
-          strings: {
-            contact_title: 'Sherlock account request',
-            contact_message_placeholder: mesg_tmpl
-          }
-        }]);
-    }
+  <!-- Freshdesk widget -->
+  <script>
+  // add help widget to DOM
+  document.addEventListener("DOMContentLoaded", function() {
+	document.getElementById("support").addEventListener("click", function(){
+		FreshworksWidget('clear', 'ticketForm');		
+		FreshworksWidget('open');		
+	});
+	[].forEach.call(document.getElementsByClassName("account"), 
+		function(el) {
+		  el.addEventListener("click", function() {
+    		frw_account();
+          }) 
+        });
+	});
+    function frw_account() {
+		FreshworksWidget('hide', 'ticketForm', ['attachment-container']);
+		FreshworksWidget('prefill', 'ticketForm', {
+			subject: 'Sherlock account request',
+			type: 'Account creation',
+			confirmation: "Thanks! We'll be in touch soon.",
+			description: "Hi! \nI'd like to request an account on Sherlock. \n\
+I understand I'll need to get approval from a sponsoring Faculty member." 
+		});
+		FreshworksWidget('open');		
+	}
   </script>
+  <!-- initialize help widget -->
+  <script>
+	window.fwSettings={ 'widget_id':47000001678, };
+	!function(){ if("function"!=typeof window.FreshworksWidget){
+			var n=function(){n.q.push(arguments)};
+			n.q=[],window.FreshworksWidget=n } }() 
+  </script>
+  <script type='text/javascript' src='https://widget.freshworks.com/widgets/47000001678.js' async defer></script>
 
   <!-- Google Analytics -->
   <script>
@@ -159,7 +155,7 @@
             <span class="navbar-separator"></span>
           </li>
           <li>
-            <a class="page-scroll" href="" data-uv-trigger>Support</a>
+            <a class="page-scroll" id="support" style="cursor:pointer">Support</a>
           </li>
           <li>
             <a class="page-scroll" href="//srcc.stanford.edu">SRCC</a>
@@ -189,7 +185,7 @@
         teams.</div>
 
         <a href="#services" class="page-scroll btn btn-xl">Really? Tell me more</a>
-        <a id="account_request1" href="" class="page-scroll btn btn-xl">Request an account</a>
+        <a class="page-scroll btn btn-xl account">Request an account</a>
       </div>
     </div>
   </header>
@@ -315,8 +311,8 @@
             500 most powerful computer systems in the world.</p>
 
           <h3 id="start" class="airy">Ok, how do I start?</h3>
-            <p class="text-muted">You can <a id="account_request2"
-            href="">request an account</a> right now, take a look at the <a
+            <p class="text-muted">You can <a class="account">request an 
+			account</a> right now, take a look at the <a
             href="docs/">documentation</a>, and drop us an <a
             href="mailto:srcc-support@stanford.edu">email</a> if
             you have any question.</p> 
@@ -451,7 +447,7 @@
               </div>
             </li>
             <li class="timeline-inverted">
-              <div class="timeline-image" id="account_request3" style="cursor:pointer">
+              <div class="timeline-image account" style="cursor:pointer">
                 <h4>Come
                   <br>join us
                   <br>today!
