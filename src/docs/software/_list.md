@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Wednesday, August 19 2020, we provide 650 software packages, in 7 categories, covering 71 fields of science:*
+*As of Thursday, September 03 2020, we provide 650 software packages, in 7 categories, covering 71 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, checkpointing, compression, containers, database, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -103,10 +103,11 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **file management** | <a id="py-pcircle" class="soft_anch">`py-pcircle`</a>^<b class="mpi"></b>^ | `0.17_py27` | [Website](https://github.com/olcf/pcircle) | pcircle contains a suite of file system tools developed at OLCF to take advantage of highly scalable parallel file system such as Lustre. 
 **file management** | <a id="rmlint" class="soft_anch">`rmlint`</a> | `2.8.0` | [Website](https://rmlint.readthedocs.io/) | rmlint finds space waste and other broken things on your filesystem and offers to remove it. 
 **file transfer** | <a id="aria2" class="soft_anch">`aria2`</a> | `1.35.0` | [Website](https://aria2.github.io/) | aria2 is a lightweight multi-protocol & multi-source command-line download utility. 
+**file transfer** | <a id="aspera-cli" class="soft_anch">`aspera-cli`</a> | `3.9.6` | [Website](https://www.ibm.com/support/knowledgecenter/SS4F2E) | The IBM Aspera Command-Line Interface (the Aspera CLI) is a collection of Aspera tools for performing high-speed, secure data transfers from the command line. 
 **file transfer** | <a id="gdrive" class="soft_anch">`gdrive`</a> | `2.1.0` | [Website](https://github.com/prasmussen/gdrive) | gdrive is a command line utility for interacting with Google Drive. 
 **file transfer** | <a id="gsutil" class="soft_anch">`gsutil`</a> | `4.31` | [Website](https://cloud.google.com/storage/docs/gsutil) | gsutil is a Python application that lets you access Cloud Storage from the command line. 
 **file transfer** | <a id="lftp" class="soft_anch">`lftp`</a> | `4.8.1` | [Website](https://lftp.yar.ru/) | LFTP is a sophisticated file transfer program supporting a number of network protocols (ftp, http, sftp, fish, torrent). 
-**file transfer** | <a id="mpifileutils" class="soft_anch">`mpifileutils`</a>^<b class="mpi"></b>^ | `0.9.1`<br/>`0.10`<br/>`20170210` | [Website](https://github.com/hpc/mpifileutils) | mpiFileUtils is a suite of MPI-based tools to manage large datasets, which may vary from large directory trees to large files. 
+**file transfer** | <a id="mpifileutils" class="soft_anch">`mpifileutils`</a>^<b class="mpi"></b>^ | `0.10.1` | [Website](https://github.com/hpc/mpifileutils) | mpiFileUtils is a suite of MPI-based tools to manage large datasets, which may vary from large directory trees to large files. 
 **file transfer** | <a id="py-globus-cli" class="soft_anch">`py-globus-cli`</a> | `1.2.0`<br/>`1.9.0_py27`<br/>`1.9.0_py36` | [Website](https://github.com/globus/globus-cli) | A command line wrapper over the Globus SDK for Python. 
 **file transfer** | <a id="rclone" class="soft_anch">`rclone`</a> | `1.39`<br/>`1.43.1`<br/>`1.49.5` | [Website](https://rclone.org) | Rclone is a command line program to sync files and directories to and from: Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon Drive, Microsoft One Drive, Hubic, Backblaze B2, Yandex Disk, or the local filesystem. 
 **framework** | <a id="mono" class="soft_anch">`mono`</a> | `5.12.0.301`<br/>`5.20.1.19` | [Website](https://www.mono-project.com) | Mono is an open source implementation of Microsoft's .NET Framework based on the ECMA standards for C# and the Common Language Runtime. 
@@ -381,6 +382,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **molecular dynamics** | <a id="qbox" class="soft_anch">`qbox`</a>^<b class="mpi"></b>^ | `1.65.0` | [Website](http://www.qboxcode.org) | Qbox is a First-Principles Molecular Dynamics code. 
 **molecular dynamics** | <a id="quip" class="soft_anch">`quip`</a>^<b class="mpi"></b>^ | `20170901` | [Website](https://github.com/libAtoms/QUIP) | The QUIP package is a collection of software tools to carry out molecular dynamics simulations. 
 **quantum chemistry** | <a id="cp2k" class="soft_anch">`cp2k`</a>^<b class="gpu"></b>^^<b class="mpi"></b>^ | `4.1` | [Website](http://www.cp2k.org) | CP2K is a quantum chemistry and solid state physics software package that can perform atomistic simulations of solid state, liquid, molecular, periodic, material, crystal, and biological systems. 
+**quantum chemistry** | <a id="orca" class="soft_anch">`orca`</a>^<b class="mpi"></b>^ | `4.2.1` | [Website](https://orcaforum.kofo.mpg.de/) | ORCA is a flexible, efficient and easy-to-use general purpose tool for quantum chemistry. 
 **quantum chemistry** | <a id="quantum-espresso" class="soft_anch">`quantum-espresso`</a>^<b class="mpi"></b>^ | `6.2.1` | [Website](https://www.quantum-espresso.org) | Quantum ESPRESSO is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials. 
 **quantum chemistry** | <a id="quantum-espresso_gpu" class="soft_anch">`quantum-espresso_gpu`</a>^<b class="gpu"></b>^^<b class="mpi"></b>^ | `1.1` | [Website](https://github.com/fspiga/qe-gpu) | GPU-accelerated Quantum ESPRESSO using CUDA FORTRAN 
 
