@@ -12,7 +12,7 @@ the Sherlock's filesystems.
 
 | Characteristics   |     |
 | ----------------- | --- |
-| **Type**          | Isilon high speed NFS file system |
+| **Type**          | high speed, distributed NFS file system |
 | **Quota**         | 15 GB for the whole `$HOME` directory |
 | **Snapshots**     | yes *(cf. [Snapshots][url_snapshots]) for more info)* |
 | **Backups**       | off-site replication |
@@ -54,7 +54,7 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 
 | Characteristics   |     |
 | ----------------- | --- |
-| **Type**          | Isilon high speed NFS file system |
+| **Type**          | high speed, distributed NFS file system |
 | **Quota**         | 1 TB for the whole `$GROUP_HOME` directory |
 | **Snapshots**     | yes *(cf. [Snapshots][url_snapshots]) for more info)* |
 | **Backups**       | off-site replication |
@@ -101,7 +101,7 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 
 | Characteristics   |   |
 | ----------------- | --- |
-| **Type**          | Parallel, high-performance Lustre file system |
+| **Type**          | P(arallel, high-performance Lustre file system |
 | **Quota**         | 100 TB / 50,000,000 inodes[^inodes] |
 | **Snapshots**     | **NO** |
 | **Backups**       | **NO** |
@@ -209,7 +209,7 @@ automatic purges.
 
 | Characteristics   |     |
 | ----------------- | --- |
-| **Type**          | Parallel, high-performance Lustre file system |
+| **Type**          | parallel, high-performance Lustre file system |
 | **Quota**         | 100 TB / 50,000,000 inodes[^inodes] |
 | **Snapshots**     | **NO** |
 | **Backups**       | **NO** |
@@ -257,7 +257,7 @@ more details.
 
 | Characteristics   |     |
 | ----------------- | --- |
-| **Type**          | Local filesystem, specific to each node, based on SSD |
+| **Type**          | local filesystem, specific to each node, based on SSD |
 | **Quota**         | n/a (usable space limited by the size of the physical storage devices, typically around 150 GB) |
 | **Snapshots**     | **NO** |
 | **Backups**       | **NO** |
@@ -310,27 +310,32 @@ node until the last job from the user terminates.
 !!! summary
 
     `$OAK` is SRCC's research data storage offering. It provides an affordable,
-    long-term storage option for labs and reserachers, and is ideally suited to
-    host large datasets, or curated, post-processed results from job campaigns,
-    as well as final results used for publication.
+    longer-term storage option for labs and researchers, and is ideally suited
+    to host large datasets, or curated, post-processed results from job
+    campaigns, as well as final results used for publication.
 
+!!! important "Order `$OAK`"
 
-!!! warning "OAK is opt-in"
+    **Oak storage can be easily ordered online using the [Oak Storage Service
+    page][url_oak].**
 
-    `$OAK` is available as an option on Sherlock. Meaning that only members of
-    groups which have purchased storage on Oak can access this filesystem.  For
+    _`$OAK` is opt-in and is available as an option on Sherlock. Meaning that
+    only members of groups which have purchased storage on Oak can access this
+    filesystem._
+
+    For
     complete details and characteristics, including pricing, please refer to
     the [Oak Storage Service page][url_oak].
 
 
 | Characteristics   |   |
 | ----------------- | --- |
-| **Type**          | Parallel, capacitive Lustre filesystem |
+| **Type**          | parallel, capacitive Lustre filesystem |
 | **Quota**         | amount purchased *(in 10 TB increments)* |
 | **Snapshots**     | **NO** |
-| **Backups**       | **NO** |
+| **Backups**       | optional cloud backup available <br/>_please [contact us][url_contact] for details_ |
 | **Purge policy**  | not purged |
-| **Scope**         | all login and compute nodes <br/>*(also available through gateways outside of Sherlock)* |
+| **Scope**         | all login and compute nodes <br/>_also available through gateways outside of Sherlock_ |
 
 
 ### Recommended usage
@@ -347,6 +352,21 @@ at the end of the job campaign.
 We strongly recommend using `$OAK` to reference your group home directory in
 scripts, rather than its explicit path.
 
+!!! warning "`$OAK` is not backed up"
+
+    `$OAK` is not backed up or replicated, by design, and deleted files cannot
+    be recovered. We recommend all researchers to keep an additional copy of their
+    important files (for instance, in [Google Drive][url_gdrive]).
+
+!!! tip "Cloud backup option"
+
+    For additional data security, SRCC now offers "cloud backup" of Oak data as
+    a managed service option. For an additional monthly fee, data on Oak can be
+    backed up to the cloud (researchers are responsible for cloud storage
+    costs). Please [contact us][url_contact] if you'd like additional
+    information.
+
+
 ### Checking quota usage
 
 The `sh_quota` tool can be used to display quota usage on `$OAK`
@@ -359,9 +379,11 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_oak]:              https://oak-storage.stanford.edu
+[url_contact]:          mailto:srcc-support@stanford.edu
+[url_oak]:              https://uit.stanford.edu/service/oak-storage
 [url_check_quotas]:     /docs/storage/#checking-quotas
 [url_snapshots]:        /docs/storage/data-protection/#snapshots
+[url_gdrive]:           /docs/storage/data-transfer/#google-drive
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
