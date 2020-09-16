@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Tuesday, September 08 2020, we provide 646 software packages, in 7 categories, covering 71 fields of science:*
+*As of Wednesday, September 16 2020, we provide 642 software packages, in 7 categories, covering 71 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, checkpointing, compression, containers, database, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -74,7 +74,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **benchmark** | <a id="hp2p" class="soft_anch">`hp2p`</a>^<b class="mpi"></b>^ | `3.2` | [Website](https://github.com/cea-hpc/hp2p) | Heavy Peer To Peer: a MPI based benchmark for network diagnostic. 
 **benchmark** | <a id="mpibench" class="soft_anch">`mpibench`</a>^<b class="mpi"></b>^ | `20190729` | [Website](https://github.com/LLNL/mpiBench) | Times MPI collectives over a series of message sizes. 
 **benchmark** | <a id="mprime" class="soft_anch">`mprime`</a> | `29.4` | [Website](https://www.mersenne.org/) | mprime is used by GIMPS, a distributed computing project dedicated to finding new Mersenne prime numbers, and which is commonly used as a stability testing utility. 
-**benchmark** | <a id="osu-micro-benchmarks" class="soft_anch">`osu-micro-benchmarks`</a>^<b class="gpu"></b>^^<b class="mpi"></b>^ | `5.6.1`<br/>`5.6.3` | [Website](http://mvapich.cse.ohio-state.edu/benchmarks/) | The OSU MicroBenchmarks carry out a variety of message passing performance tests using MPI. 
+**benchmark** | <a id="osu-micro-benchmarks" class="soft_anch">`osu-micro-benchmarks`</a>^<b class="mpi"></b>^ | `5.6.1`<br/>`5.6.3` | [Website](http://mvapich.cse.ohio-state.edu/benchmarks/) | The OSU MicroBenchmarks carry out a variety of message passing performance tests using MPI. 
 **checkpointing** | <a id="dmtcp" class="soft_anch">`dmtcp`</a> | `2.6.0` | [Website](http://dmtcp.sourceforge.net/) | DMTCP (Distributed MultiThreaded Checkpointing) transparently checkpoints a single-host or distributed computation in user-space -- with no modifications to user code or to the O/S. 
 **compression** | <a id="libarchive" class="soft_anch">`libarchive`</a> | `3.3.2`<br/>`3.4.2` | [Website](https://www.libarchive.org/) | The libarchive project develops a portable, efficient C library that can read and write streaming archives in a variety of formats. 
 **compression** | <a id="libzip" class="soft_anch">`libzip`</a> | `1.5.1` | [Website](http://libzip.org) | libzip is a C library for reading, creating, and modifying zip archives. 
@@ -200,7 +200,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **tools** | <a id="leveldb" class="soft_anch">`leveldb`</a> | `1.20` | [Website](https://symas.com/lightning-memory-mapped-database/) | Symas LMDB is an extraordinarily fast, memory-efficient database we developed for the Symas OpenLDAP Project. 
 **tools** | <a id="lmdb" class="soft_anch">`lmdb`</a> | `0.9.21` | [Website](https://symas.com/lightning-memory-mapped-database/) | Symas LMDB is an extraordinarily fast, memory-efficient database we developed for the Symas OpenLDAP Project. 
 **tools** | <a id="motif" class="soft_anch">`motif`</a> | `2.3.7` | [Website](https://motif.ics.com) | Motif is the toolkit for the Common Desktop Environment. 
-**tools** | <a id="parallel" class="soft_anch">`parallel`</a> | `20180122` | [Website](https://www.gnu.org/software/parallel/) | GNU parallel is a shell tool for executing jobs in parallel using one or more computers. 
+**tools** | <a id="parallel" class="soft_anch">`parallel`</a> | `20180122`<br/>`20200822` | [Website](https://www.gnu.org/software/parallel/) | GNU parallel is a shell tool for executing jobs in parallel using one or more computers. 
 **tools** | <a id="qt" class="soft_anch">`qt`</a> | `5.9.1` | [Website](https://www.qt.io) | QT is a cross-platform application framework that is used for developing application software that can be run on various software and hardware platforms. 
 **tools** | <a id="ripgrep" class="soft_anch">`ripgrep`</a> | `11.0.1` | [Website](https://github.com/BurntSushi/ripgrep) | ripgrep recursively searches directories for a regex pattern. 
 **tools** | <a id="rocksdb" class="soft_anch">`rocksdb`</a> | `5.7.3` | [Website](https://rocksdb.org) | A library that provides an embeddable, persistent key-value store for fast storage. 
@@ -468,7 +468,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **mpi** | <a id="py-mpi4py" class="soft_anch">`py-mpi4py`</a>^<b class="mpi"></b>^ | `3.0.0_py27`<br/>`3.0.3_py36` | [Website](https://bitbucket.org/mpi4py/mpi4py) | MPI for Python provides Python bindings for the Message Passing Interface (MPI) standard. It is implemented on top of the MPI-1/2/3 specification and exposes an API which grounds on the standard MPI-2 C++ bindings. 
 **networking** | <a id="gasnet" class="soft_anch">`gasnet`</a>^<b class="mpi"></b>^ | `1.30.0` | [Website](https://gasnet.lbl.gov) | GASNet is a language-independent, low-level networking layer that provides network-independent, high-performance communication primitives tailored for implementing parallel global address space SPMD languages and libraries. 
 **networking** | <a id="libfabric" class="soft_anch">`libfabric`</a> | `1.6.0`<br/>`1.6.2`<br/>`1.7.1`<br/>`1.9.1`<br/>`1.10.1` | [Website](https://ofiwg.github.io/libfabric/) | The Open Fabrics Interfaces (OFI) is a framework focused on exporting fabric communication services to applications. Libfabric is the library that defines and exports the user-space API of OFI. 
-**networking** | <a id="ucx" class="soft_anch">`ucx`</a> | `1.2.1`<br/>`1.4.0`<br/>`1.6.0`<br/>`1.7.0`<br/>`1.8.0`<br/>`1.8.1`<br/>`1.3.1` | [Website](http://www.openucx.org) | UCX is a communication library implementing high-performance messaging for MPI/PGAS frameworks. 
+**networking** | <a id="ucx" class="soft_anch">`ucx`</a> | `1.3.1`<br/>`1.8.1` | [Website](http://www.openucx.org) | UCX is a communication library implementing high-performance messaging for MPI/PGAS frameworks. 
 **parser** | <a id="xerces-c" class="soft_anch">`xerces-c`</a> | `3.2.1` | [Website](https://xerces.apache.org/xerces-c/index.html) | Xerces-C++ is a validating XML parser written in a portable subset of C++. 
 **profiling** | <a id="amd-uprof" class="soft_anch">`amd-uprof`</a> | `3.3.462` | [Website](https://developer.amd.com/amd-uprof/) | AMD uProf is a performance analysis tool for applications. 
 **runtime** | <a id="starpu" class="soft_anch">`starpu`</a>^<b class="mpi"></b>^ | `1.3.2` | [Website](https://gforge.inria.fr/projects/starpu/) | StarPU is a unified runtime system that offers support for heterogeneous multicore architectures 
