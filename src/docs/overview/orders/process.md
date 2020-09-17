@@ -60,7 +60,8 @@ below:
 | `CPERF` | High-end configuration | Multi-threaded applications requiring higher numbers of CPU cores | ++"$$"++ |
 | `CBIGMEM` | Large-memory configuration | Serial or multi-threaded applications requiring terabytes of memory (genome assembly, etc...) | ++"$$$$"++ |
 | `G4FP32` | Base GPU configuration | Single-precision (FP32) GPU-accelerated applications (CryoEM, MD...) with low GPU memory requirements | ++"$$"++ |
-| `G4FP64` | High-end GPU configuration | AI, ML/DL and GPU-accelerated HPC codes requiring double-precision (FP64) and larger amounts of GPU memory | ++"$$$"++ |
+| `G4FP64` | HPC GPU configuration | AI, ML/DL and GPU-accelerated HPC codes requiring double-precision (FP64) and larger amounts of GPU memory | ++"$$$"++ |
+| `G4TF64`<br/>`G8TF64` | Best-in-class GPU configuration | AI, ML/DL and GPU-accelerated HPC codes requiring double-precision (FP64), large amounts of GPU memory, and heavy multi-GPU scaling | ++"$$$$"++ |
 
 ??? tip "Choosing the best node configuration for your needs"
 
@@ -83,7 +84,7 @@ below:
     the same level of flexibility than the `CBASE` nodes, which can run a mix
     of serial, multi-threaded and MPI applications equally well.
 
-    *Availability*
+    *Resources availability*
 
     : Another important factor to take into account is that less nodes for a
     given number of cores offers less resilience against potential hardware
