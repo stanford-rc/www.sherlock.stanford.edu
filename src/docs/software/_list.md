@@ -1,7 +1,7 @@
 
 ## Categories
 
-*As of Friday, September 18 2020, we provide 644 software packages, in 7 categories, covering 71 fields of science:*
+*As of Friday, September 18 2020, we provide 645 software packages, in 7 categories, covering 71 fields of science:*
 
 * [`viz`](#viz) <small>data, gis, graphs, imaging, molecular visualization, plotting, remote display</small>
 * [`system`](#system) <small>backup, benchmark, checkpointing, compression, containers, database, document management, document processing, file management, file transfer, framework, language, libs, media, performance, resource monitoring, scm, tools</small>
@@ -104,6 +104,7 @@ Field  | <img style="float:left;min-width:110px;visibility:hidden">Module&nbsp;n
 **file management** | <a id="rmlint" class="soft_anch">`rmlint`</a> | `2.8.0` | [Website](https://rmlint.readthedocs.io/) | rmlint finds space waste and other broken things on your filesystem and offers to remove it. 
 **file transfer** | <a id="aria2" class="soft_anch">`aria2`</a> | `1.35.0` | [Website](https://aria2.github.io/) | aria2 is a lightweight multi-protocol & multi-source command-line download utility. 
 **file transfer** | <a id="aspera-cli" class="soft_anch">`aspera-cli`</a> | `3.9.6` | [Website](https://www.ibm.com/support/knowledgecenter/SS4F2E) | The IBM Aspera Command-Line Interface (the Aspera CLI) is a collection of Aspera tools for performing high-speed, secure data transfers from the command line. 
+**file transfer** | <a id="aws-cli" class="soft_anch">`aws-cli`</a> | `2.0.50` | [Website](https://github.com/aws/aws-cli) | This package provides a unified command line interface to Amazon Web Services. 
 **file transfer** | <a id="gsutil" class="soft_anch">`gsutil`</a> | `4.31` | [Website](https://cloud.google.com/storage/docs/gsutil) | gsutil is a Python application that lets you access Cloud Storage from the command line. 
 **file transfer** | <a id="lftp" class="soft_anch">`lftp`</a> | `4.8.1` | [Website](https://lftp.yar.ru/) | LFTP is a sophisticated file transfer program supporting a number of network protocols (ftp, http, sftp, fish, torrent). 
 **file transfer** | <a id="mpifileutils" class="soft_anch">`mpifileutils`</a>^<b class="mpi"></b>^ | `0.10.1` | [Website](https://github.com/hpc/mpifileutils) | mpiFileUtils is a suite of MPI-based tools to manage large datasets, which may vary from large directory trees to large files. 
