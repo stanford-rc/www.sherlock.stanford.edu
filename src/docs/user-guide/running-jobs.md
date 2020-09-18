@@ -477,8 +477,17 @@ The job runs for 5 minutes, then received the `SIGUSR1` signal, is re-queued,
 restarts for 5 minutes, and so on, until it's properly `scancel`led.
 
 
-[comment]: #  (TODO: batch jobs, resource requirements, partitions, qos, limits, mail...)
+!!! info "Keeping output/error logs across restarts"
 
+    By default, the job's output and error files (the ones specified with
+    `--output` and `--error`) will be overwritten each time the job is
+    restarted.
+
+    To conserve the previous logs when the job restarts, you can
+    use the following directive in your sbatch script:
+    ```
+    #SBATCH --open-mode=append`
+    ```
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
