@@ -406,6 +406,18 @@ Here's the recurring job example from above, modified to:
     wait
     ```
 
+!!! tip "Keeping output/error logs across restarts"
+
+    By default, the job's output and error files (the ones specified with
+    `--output` and `--error`) will be overwritten each time the job is
+    restarted.
+
+    To conserve the previous logs when the job restarts, you can
+    use the following directive in your sbatch script:
+    ```
+    #SBATCH --open-mode=append`
+    ```
+
 
 ### Persistent `$JOBID`
 
@@ -476,18 +488,6 @@ Mon Nov  5 10:39:11 PST 2018: normal execution
 The job runs for 5 minutes, then received the `SIGUSR1` signal, is re-queued,
 restarts for 5 minutes, and so on, until it's properly `scancel`led.
 
-
-!!! info "Keeping output/error logs across restarts"
-
-    By default, the job's output and error files (the ones specified with
-    `--output` and `--error`) will be overwritten each time the job is
-    restarted.
-
-    To conserve the previous logs when the job restarts, you can
-    use the following directive in your sbatch script:
-    ```
-    #SBATCH --open-mode=append`
-    ```
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
