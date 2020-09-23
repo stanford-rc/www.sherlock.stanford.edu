@@ -141,15 +141,6 @@ SRCC team to send important announcements about Sherlock,
     **We'll be holding remote office hours via [Zoom][url_zoom], for the time
     being.**
 
-    * Tuesday 10-11am
-    * Thursday 3-4pm
-
-    Click here to join the **[Sherlock Office Hours Zoom][url_oh_zoom]**
-    
-    You can also make an [appointment][SRCC_office_hours_appointment_url] for office hours if you like.
-   
-
-
 Sending a question to srcc-support@stanford.edu is always the best first option
 for questions.  That way you can include detailed descriptions of the problem
 or question, valuable output and error messages and any steps you took when you
@@ -157,13 +148,21 @@ encountered your error.  Also, everyone on our team will see your ticket,
 enabling the most appropriate group member to respond.
 
 Office hours are a good place for more generalized questions about Sherlock,
-Slurm, Linux usage, data storage, queue structures/scheduling, job
-optimization and general capabilities of Sherlock.  It's also useful for more
-technically nuanced questions that may not be easily answered with our
-ticketing system.  In office hours some problems can indeed be solved quickly
-or progress can be made so that you can then work self-sufficiently towards a
-solution on your own.
+Slurm, Linux usage, data storage, queue structures/scheduling, job optimization
+and general capabilities of Sherlock. It's also useful for more technically
+nuanced questions that may not be easily answered with our ticketing system. In
+office hours some problems can indeed be solved quickly or progress can be made
+so that you can then work self-sufficiently towards a solution on your own.
 
+!!! info "Office hours times"
+
+    Click here to join the **[Sherlock Office Hours Zoom][url_oh_zoom]**
+
+    * Tuesday 10-11am
+    * Thursday 3-4pm
+
+    You can also make an **[appointment][url_calendar]** with Sherlock's support
+    team if you'd like.
 
 !!! tip "What to expect from office hours"
 
@@ -263,7 +262,7 @@ Here's what it looks like in motion:
 [url_polya]:        //campus-map.stanford.edu/?id=14-160&lat=37.42898333&lng=-122.17752929&zoom=17&srch=polya%20hall
 
 [url_oh_zoom]:      //stanford.zoom.us/j/95962823750?pwd=cFM2U2ZRQ243Zkx0Ry83akdtWU9zUT09
-[SRCC_office_hours_appointment_url]: https://calendly.com/srcc-officehours/sherlock
+[url_calendar]:     //calendly.com/srcc-officehours/sherlock
 
 [url_su_slack]:     //uit.stanford.edu/service/slack
 [url_sl_sha]:       //srcc.slack.com/archives/C01862L37CN
