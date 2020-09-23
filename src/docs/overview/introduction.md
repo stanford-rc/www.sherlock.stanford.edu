@@ -145,6 +145,9 @@ SRCC team to send important announcements about Sherlock,
     * Thursday 3-4pm
 
     Click here to join the **[Sherlock Office Hours Zoom][url_oh_zoom]**
+    
+    You can also make an [appointment][SRCC_office_hours_appointment_url] for office hours if you like.
+   
 
 
 Sending a question to srcc-support@stanford.edu is always the best first option
@@ -260,6 +263,7 @@ Here's what it looks like in motion:
 [url_polya]:        //campus-map.stanford.edu/?id=14-160&lat=37.42898333&lng=-122.17752929&zoom=17&srch=polya%20hall
 
 [url_oh_zoom]:      //stanford.zoom.us/j/95962823750?pwd=cFM2U2ZRQ243Zkx0Ry83akdtWU9zUT09
+[SRCC_office_hours_appointment_url]: https://calendly.com/srcc-officehours/sherlock
 
 [url_su_slack]:     //uit.stanford.edu/service/slack
 [url_sl_sha]:       //srcc.slack.com/archives/C01862L37CN
