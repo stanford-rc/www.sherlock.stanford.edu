@@ -37,6 +37,21 @@ and failed hardware will be disabled or removed from the system.
 
 
 
+### Shared ownership
+
+!!! warning "Minimum order of one node per PI"
+
+    The number of nodes in a shared order must be greater or equal to the
+    number of purchasing PI groups.
+
+
+For operational, administrative as well as usability reasons, we do not support
+shared ownership of equipment. Meaning that multiple PI groups cannot purchase
+and share a single compute node. Shared orders have a minimum of one node per
+purchasing PI group.
+
+
+
 ## Compute nodes catalog
 
 SRCC offers a select number of compute node configurations that have been
