@@ -9,7 +9,7 @@ recommended location for user-installed software is the
 `$GROUP_HOME` [group shared directory][url_grp_home], which is snapshotted and
 replicated off-site, and can easily be shared with members of a research group.
 
---8<--- "_wip.md"
+--8<--- "includes/_wip.md"
 
 [comment]: #  (TODO: info about compilers, prefix, cmake, `system` module category, custom modules)
 
@@ -21,4 +21,4 @@ replicated off-site, and can easily be shared with members of a research group.
 [url_grp_home]:     /docs/storage/filesystems/#group_home
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

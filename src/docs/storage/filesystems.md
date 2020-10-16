@@ -379,7 +379,7 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_contact]:          mailto:srcc-support@stanford.edu
+[url_contact]:          mailto:{{ support_email }}
 [url_oak]:              https://uit.stanford.edu/service/oak-storage
 [url_check_quotas]:     /docs/storage/#checking-quotas
 [url_snapshots]:        /docs/storage/data-protection/#snapshots
@@ -394,4 +394,4 @@ See the [Checking Quotas][url_check_quotas] section for more details.
   system that describes a file-system object such as a file or a directory.
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

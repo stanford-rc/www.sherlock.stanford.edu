@@ -255,4 +255,4 @@ multi-threaded program is composed of only one task, which uses several CPUs.
 [url_sh_part]:  /docs/user-guide/running-jobs/#available-resources
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

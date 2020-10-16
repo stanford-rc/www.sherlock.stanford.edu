@@ -34,10 +34,10 @@ and for some of them, purge policies (time-residency limits).
 
 | Name                     | Type                 | Backups / Snapshots | Performance | Purpose | Cost |
 | ------------------------ |--------------------- |------------------ | ----------- | ------- | ---- |
-|`$HOME`, `$GROUP_HOME`    | [NFS][url_NFS]       | <b class="yes">:fa-check:</b> / <b class="yes">:fa-check:</b> | low | small, important files (source code, executables, configuration files...) | free |
-|`$SCRATCH`, `$GROUP_SCRATCH` | [Lustre][url_lustre] | <b class="no">:fa-times:</b> / <b class="no">:fa-times:</b> | high bandwidth | large, temporary files (checkpoints, raw application output...) | free |
-|`$L_SCRATCH`              | local SSD    | <b class="no">:fa-times:</b> / <b class="no">:fa-times:</b> | low latency, high IOPS | job specific output requiring high IOPS | free |
-|`$OAK`                    | [Lustre][url_lustre] | option / <b class="no">:fa-times:</b> | moderate | long term storage of research data | volume-based[^oak_sd] |
+|`$HOME`, `$GROUP_HOME`    | [NFS][url_NFS]       | <b class="yes">:fontawesome-solid-check:</b> / <b class="yes">:fontawesome-solid-check:</b> | low | small, important files (source code, executables, configuration files...) | free |
+|`$SCRATCH`, `$GROUP_SCRATCH` | [Lustre][url_lustre] | <b class="no">:fontawesome-solid-times:</b> / <b class="no">:fontawesome-solid-times:</b> | high bandwidth | large, temporary files (checkpoints, raw application output...) | free |
+|`$L_SCRATCH`              | local SSD    | <b class="no">:fontawesome-solid-times:</b> / <b class="no">:fontawesome-solid-times:</b> | low latency, high IOPS | job specific output requiring high IOPS | free |
+|`$OAK`                    | [Lustre][url_lustre] | option / <b class="no">:fontawesome-solid-times:</b> | moderate | long term storage of research data | volume-based[^oak_sd] |
 
 
 ### Access scope
@@ -242,4 +242,4 @@ Transfer][url_data_sshfs] page.
            please see the [Oak Service Description page][url_oak].
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

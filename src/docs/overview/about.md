@@ -98,8 +98,8 @@ And finally, we couldn't resist to the pleasure of citing the most
 prestigious accomplishment of Sherlock to date: a mention in [HBO's Silicon
 Valley][url_sv] [Season 4 finale][url_ep38]!
 
-![screencap](/img/richard.png)
-![screencap](/img/bighead.png)
+![screencap](img/richard.png)
+![screencap](img/bighead.png)
 
 Yep, you got that right, [Richard Hendricks][url_richard] wanted to use our
 very own Sherlock. Kudos to the show's crew and whomever did the research and
@@ -113,4 +113,4 @@ got it right, you made our day.
 [url_quote]:    //www.theguardian.com/tv-and-radio/2010/jul/17/benedict-cumberbatch-sherlock-holmes
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

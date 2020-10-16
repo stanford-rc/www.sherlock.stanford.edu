@@ -670,7 +670,7 @@ which shows a decent speedup for running on a GPU for the largest matrix sizes.
 [url_dplyr]:            //github.com/tidyverse/dplyr
 [url_rmpi]:             //cran.r-project.org/web/packages/Rmpi
 [url_gpur]:             //cran.r-project.org/web/packages/gpuR
-[url_support]:          mailto:srcc-support@stanford.edu
+[url_support]:          mailto:{{ support_email }}
 
 [url_modules]:          /docs/software/modules
 [url_software_list]:    /docs/software/list
@@ -678,4 +678,4 @@ which shows a decent speedup for running on a GPU for the largest matrix sizes.
 [url_gpu]:              /docs/user-guide/gpu
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

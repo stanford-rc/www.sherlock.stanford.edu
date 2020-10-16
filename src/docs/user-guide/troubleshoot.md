@@ -19,7 +19,7 @@ odd, please [let us know][url_contact].
     see how others have successfully run your application on a cluster.
 
 If you're facing issues you can't figure out, we're here to help. Feel free to
-email us at srcc-support@stanford.edu, but please keep the following points in
+email us at {{ support_email }}, but please keep the following points in
 mind to ensure a timely and relevant response to your support requests.
 
 !!! warning "Please provide relevant information"
@@ -55,7 +55,7 @@ from the start. This will help us get to your problem immediately.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_contact]:      mailto:srcc-support@stanford.edu
+[url_contact]:      mailto:{{ support_email }}
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

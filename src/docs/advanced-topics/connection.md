@@ -144,7 +144,6 @@ login.sherlock.stanford.edu` block in your configuration file, simply add the
 ```
 Host login.sherlock.stanford.edu
     ControlMaster auto
-    ControlPersist yes
     ControlPath ~/.ssh/%l%r@%h:%p
 ```
 
@@ -215,9 +214,9 @@ notifications are not available.
   security services. It allows program to interact with security services such
   as Kerberos for user authentication.
 
-[^os_support]: Those instructions should work on Linux :fa-linux: and MacOs
-  :fa-apple: computers. For Windows :fa-windows:, we recommend using the WSL,
+[^os_support]: Those instructions should work on Linux :fontawesome-brands-linux: and MacOs
+  :fontawesome-brands-apple: computers. For Windows :fontawesome-brands-windows:, we recommend using the WSL,
   as described in the [Prerequisites][url_prereq] page.
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

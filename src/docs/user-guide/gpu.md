@@ -319,4 +319,4 @@ user's GPU code is running.
   available in the [CUDA Toolkit Documentation][url_gpu_cmodes]
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

@@ -38,7 +38,7 @@ To start using Sherlock, you will need:
 ## How to request an account
 
 To request an account, the sponsoring Stanford faculty member should email
-srcc-support@stanford.edu, specifying the names and SUNet IDs of
+{{ support_email }}, specifying the names and SUNet IDs of
 his/her research team members needing an account.
 
 Sherlock is open to the Stanford community as a computing resource to support
@@ -60,19 +60,19 @@ close any Sherlock account whose SUNet ID is expired.
 ## SSH clients
 
 
-### Linux :fa-linux:
+### Linux :fontawesome-brands-linux:
 
 Linux distributions usually come with a version of the [OpenSSH][url_openssh]
 client already installed. So no additional software installation is required.
 If not, please refer to your distribution's documentation to install it.
 
-### MacOS :fa-apple:
+### MacOS :fontawesome-brands-apple:
 
 MacOS systems usually come with a version of the [OpenSSH][url_openssh] client
 already installed. So no additional software installation is required
 
 
-### Windows :fa-windows:
+### Windows :fontawesome-brands-windows:
 
 Microsoft Windows doesn't provide any SSH client by default. To install one,
 you have several options, depending on the version of Windows.
@@ -172,4 +172,4 @@ For an introduction to shell scripting, you can refer to:
 [url_ood_files]:    https://www.sherlock.stanford.edu/docs/user-guide/ondemand/#managing-files
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

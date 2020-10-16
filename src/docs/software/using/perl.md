@@ -94,4 +94,4 @@ $ cpanm -U DateTime::TimeZone
   and open source.
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

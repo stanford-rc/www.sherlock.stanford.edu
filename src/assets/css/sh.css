@@ -1,0 +1,65 @@
+:root { 
+  /* theme colors */
+  --md-primary-fg-color:               #8c1515; 
+  --md-primary-fg-color--light:        #b1040e;
+  --md-primary-fg-color--dark:         #820000;
+
+  --md-accent-fg-color:                #b1040e;
+  --md-accent-fg-color--transparent:   #b1040e0a;
+
+}
+
+/* title style */
+.md-header-nav__title,
+.md-header-nav__topic {
+  font-family: Bangers, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+}
+.md-header-nav__title {
+  padding: 0;
+}
+
+/* Sherlock admonition */
+.md-typeset .admonition.sherlock,
+.md-typeset details.sherlock {
+  border-color: #8c1515;
+}
+.md-typeset .sherlock > .admonition-title,
+.md-typeset .sherlock > summary {
+  background-color: #82000010;
+}
+.md-typeset .sherlock > .admonition-title::before,
+.md-typeset .sherlock > summary::before {
+  -webkit-mask-image: unset;
+          mask-image: unset;
+  background-color: transparent;
+  background-image: url('/img/logo_small.png');
+  background-size:  20px;
+}
+
+/* pulsate */
+@keyframes pulsate {
+  0%, 40%, 80%, 100% {
+    transform: scale(1);
+  }
+  20%, 60% {
+    transform: scale(1.15);
+  }
+}
+.pulsate {
+  color: #dd2e44;
+  animation: pulsate 1000ms infinite;
+}
+
+/* rotate */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.rotate {
+  animation: rotation 2s infinite linear;
+}

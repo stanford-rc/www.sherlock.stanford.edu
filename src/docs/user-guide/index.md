@@ -1,1 +1,0 @@
-redirect: running-jobs/

@@ -297,4 +297,4 @@ Manager on the [Sherlock OnDemand](url_ondemand) interface.
 [url_ondemand]:         //login.sherlock.stanford.edu
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

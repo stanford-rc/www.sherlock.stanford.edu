@@ -339,4 +339,4 @@ jobs][url_recurring_jobs] and submit long-running database instances.
 [url_recurring_jobs]:   /docs/user-guide/running-jobs/#recurring-jobs
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

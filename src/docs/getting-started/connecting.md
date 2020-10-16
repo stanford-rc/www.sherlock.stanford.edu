@@ -42,7 +42,7 @@ node. You should be automatically directed to the least-loaded login node at
 the moment of your connection, which should give you the best possible
 environment to work.
 
---8<--- "_host_keys.md"
+--8<--- "includes/_host_keys.md"
 
 
 ### Authentication
@@ -191,7 +191,7 @@ by the following *message of the day*:
   See https://privacy.stanford.edu/faqs/hipaa-faqs for more information.
 -----------------------------------------------------------------------------
 
-  Support           email: srcc-support@stanford.edu
+  Support           email: {{ support_email }}
   ========   office hours: Tuesdays 10-11am, Thursdays 3-4pm,
                            room 255 @ Polya Hall
 
@@ -245,7 +245,7 @@ section][url_submit].
 [url_twostep]:      https://uit.stanford.edu/service/webauth/twostep
 [url_login]:        /docs/overview/glossary/#login-nodes
 [url_submit]:       /docs/getting-started/submitting
-[url_contact]:      mailto:srcc-support@stanford.edu
+[url_contact]:      mailto:{{ support_email }}
 [url_sshfs]:        /docs/storage/data-transfer#sshfs
 [url_vpn]:          https://uit.stanford.edu/service/vpn
 
@@ -259,4 +259,4 @@ interoperability with third-party SSH clients.
  Connection Options][url_other_auth] page.
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

@@ -1,1 +1,0 @@
-redirect: /docs/storage/

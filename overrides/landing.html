@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport"    content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="{{ config.site_description }}">
+    <meta name="author"      content="{{ config.site_author }}">
+
+    <title>{{ config.site_name }}</title>
+
+    <link rel="icon" type="image/x-icon" href="{{ config.theme.favicon }}">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Bangers">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,100,300,700">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/css/landing.css">
+    <link rel="stylesheet" href="https://www.stanford.edu/su-identity/css/su-identity.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.google_analytics[0] }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "{{ config.google_analytics[0] }}");
+    </script>
+
+  </head>
+
+  <body id="page-top" class="index">
+
+
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand page-scroll" href="#page-top">
+              <img src="{{ config.theme.logo }}" height="30" alt="">{{ page.meta.title }}
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div class="nav navbar-nav navbar-right"></div>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="hidden"><a href="#page-top"></a></li>
+            {% for link in page.meta.nav_links %}
+            <li>
+              {%- if link.name == "sep" -%}
+              <span class="navbar-separator"></span>
+              {%- else -%}
+              <a class="page-scroll" id="nav-{{ link.name }}" href="{{ link.url }}">{{ link.name }}
+              {%- if link.icon  -%}
+                <span class="navbar-icon">
+                {%- if link.icon.startswith("brand-") -%}
+                <i class="fab fa-{{ link.icon[6:] }}" data-fa-transform="right-4"></i>
+                {%- else -%}
+                <i class="fas fa-{{ link.icon }}" data-fa-transform="right-4"></i>
+                {%- endif -%}
+              </span>
+              {%- endif -%}
+              </a>
+              {%- if link.post %}{{ link.post }}{% endif %}
+              {%- endif -%}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <div class="container">
+        <div class="intro-text">
+          <img height="180" src="{{ config.theme.logo_hero }}" alt="">
+          <div class="intro-heading">{{ page.meta.title }}</div>
+          <div class="intro-subtitle">{{ page.meta.subtitle }}</div>
+          <div class="intro-content">{{ page.meta.desc }}</div>
+          <a href="#services" class="page-scroll btn btn-xl">{{- page.meta.buttons_info }}</a>
+          <a class="page-scroll btn btn-xl account">{{- page.meta.buttons_account }}</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">{{ page.meta.services_title }}</h2>
+            <h3 class="section-subheading text-muted">
+              {{- page.meta.services_subtext }}</h3>
+          </div>
+        </div>
+        <div class="row text-center">
+          {% for service in page.meta.services %}
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="fa fa-{{ service.icon }} fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">{{ service.title }}</h4>
+            <p class="text-muted">{{ service.text }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section id="info" class="bg-light-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">{{ page.meta.info_title }}</h2>
+            <h3 class="section-subheading text-muted">{{ page.meta.info_subtext }}</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">{{ page.content }}</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SU footer -->
+    <div id="global-footer">
+      <div class="container">
+        <div class="row">
+          <div id="bottom-logo" class="span2">
+            <a href="//www.stanford.edu">
+              <img src="//www.stanford.edu/su-identity/images/footer-stanford-logo@2x.png" alt="Stanford University" width="105" height="49"/>
+            </a>
+          </div>
+          <div id="bottom-text" class="span10">
+            <ul>
+              <li class="home"><a href="//www.stanford.edu">SU Home</a></li>
+              <li class="maps alt"><a href="//visit.stanford.edu/basics">Maps &amp; Directions</a></li>
+              <li class="search-stanford"><a href="//www.stanford.edu/search/">Search Stanford</a></li>
+              <li class="terms alt"><a href="//www.stanford.edu/site/terms.html">Terms of Use</a></li>
+              <li class="emergency-info"><a href="//emergency.stanford.edu">Emergency Info</a></li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+          <p class="copyright vcard">&copy; <span class="fn org">Stanford University</span>, 
+            <span class="adr"><span class="locality">Stanford</span>, <span class="region">California</span>
+            <span class="postal-code">94305</span></span>.&nbsp;&nbsp; <span id="copyright-complaint">
+            <a href="https://uit.stanford.edu/security/copyright-infringement"
+               class="copyright-complaint" >Copyright Complaints</a></span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <script crossorigin="anonymous" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script crossorigin="anonymous" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script crossorigin="anonymous" src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script async defer crossorigin="anonymous" src="//cdn.noticeable.io/v1/noticeable-widget.js"></script>
+  <script async defer crossorigin="anonymous" src="//widget.freshworks.com/widgets/47000001678.js"></script>
+  <script async defer crossorigin="anonymous" src="//use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+  <script src="//libraries.hund.io/status-js/status-3.8.2.js"></script>
+  <script src="assets/js/landing.js"></script>
+
+</html>

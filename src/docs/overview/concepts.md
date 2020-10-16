@@ -52,8 +52,8 @@ through a job scheduler using a [fair-share algorithm][url_fairshare].
     data.  The system is approved for computing with Low and Moderate Risk data
     only, and is **not suitable to process High Risk data**.
 
-    :fa-exclamation-circle: **Users are responsible for ensuring the compliance
-    of their own data.**
+    :fontawesome-solid-exclamation-circle: **Users are responsible for ensuring
+    the compliance of their own data.**
 
     For more information about data risk classifications, see the [Information
     Security Risk Classification page][url_risk].
@@ -227,7 +227,7 @@ lost when the maintenance starts.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[email]:          mailto:srcc-support@stanford.edu
+[email]:          mailto:{{ support_email }}
 [url_provost]: 	  //provost.stanford.edu/
 [url_dor]:     	  //doresearch.stanford.edu/research-offices/dor-office-vice-provost-and-dean-research
 [url_uit]:	   	  //uit.stanford.edu
@@ -245,4 +245,4 @@ lost when the maintenance starts.
 [url_PII]:   //en.wikipedia.org/wiki/Personally_identifiable_information
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

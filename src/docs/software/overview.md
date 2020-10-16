@@ -64,7 +64,7 @@ group on Sherlock, please [let us know][url_contact], and we'll get in touch.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_contact]:        mailto:srcc-support@stanford.edu
+[url_contact]:        mailto:{{ support_email }}
 [url_software_lic]:   https://uit.stanford.edu/service/softwarelic
 [url_storage]:        /docs/storage
 [url_list]:           /docs/software/list
@@ -81,4 +81,4 @@ group on Sherlock, please [let us know][url_contact], and we'll get in touch.
   duties, typically within two to three weeks of being received.
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

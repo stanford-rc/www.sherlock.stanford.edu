@@ -308,4 +308,4 @@ process: 1 on host sh-06-33.int
 [url_software_list]:/docs/software/list
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

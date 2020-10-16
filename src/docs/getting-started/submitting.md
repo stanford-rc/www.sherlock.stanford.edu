@@ -195,4 +195,4 @@ there are many other options and areas to explore in the next sections:
   `sbatch` manual page (`man sbatch`).
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

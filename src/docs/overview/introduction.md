@@ -119,7 +119,7 @@ performed on Sherlock acknowledge this. The following wording is suggested:
 ### Email <small>(recommended)</small>
 
 Research Computing support can be reached by sending an email to
-srcc-support@stanford.edu and **mentioning Sherlock**.
+{{ support_email }} and **mentioning Sherlock**.
 
 
 !!! important "How to submit effective support requests"
@@ -141,7 +141,7 @@ SRCC team to send important announcements about Sherlock,
     **We'll be holding remote office hours via [Zoom][url_zoom], for the time
     being.**
 
-Sending a question to srcc-support@stanford.edu is always the best first option
+Sending a question to {{ support_email }} is always the best first option
 for questions.  That way you can include detailed descriptions of the problem
 or question, valuable output and error messages and any steps you took when you
 encountered your error.  Also, everyone on our team will see your ticket,
@@ -204,7 +204,7 @@ join this workspace and its channels, please see https://srcc.stanford.edu/suppo
 !!! warning "Slack is not an official support channel"
 
     Please note that while SRCC staff will monitor these channels, the official
-    way to get support is still to email us at srcc-support@stanford.edu.
+    way to get support is still to email us at {{ support_email }}.
 
 
 ## Quick Start
@@ -244,7 +244,7 @@ Here's what it looks like in motion:
 [comment]: #  (link URLs -----------------------------------------------------)
 [url_zoom]:          https://stanford.zoom.us/
 [url_srcc]:         //srcc.stanford.edu
-[url_contact]:      mailto:srcc-support@stanford.edu
+[url_contact]:      mailto:{{ support_email }}
 [url_docs]:         //www.sherlock.stanford.edu/docs
 [url_news]:         //news.sherlock.stanford.edu
 [url_status]:       //status.sherlock.stanford.edu
@@ -274,4 +274,4 @@ Here's what it looks like in motion:
   the [Prerequisites][url_prereq] page for details.
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

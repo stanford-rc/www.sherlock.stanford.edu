@@ -451,4 +451,4 @@ the [Singularity documentation][url_singularity_build].
 [^modules]: For more information about using modules on Sherlock,
   please see the [software modules documentation][url_modules].
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

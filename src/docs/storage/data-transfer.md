@@ -28,7 +28,7 @@ prompt, omitting the initial `$` character (it just indicates a command prompt,
 and then should not be typed in).
 
 
---8<--- "_host_keys.md"
+--8<--- "includes/_host_keys.md"
 
 
 ### SSH-based protocols
@@ -88,10 +88,10 @@ and then should not be typed in).
 
     A variety of graphical SFTP clients are available for different OSes:
 
-    * [WinSCP][url_winscp] :fa-windows:
-    * [SecureFX][url_securefx] :fa-windows:,
-    * [Fetch][url_fetch][^fetch_su] :fa-apple:
-    * [CyberDuck][url_cyberduck] :fa-apple:
+    * [WinSCP][url_winscp] :fontawesome-brands-windows:
+    * [SecureFX][url_securefx] :fontawesome-brands-windows:,
+    * [Fetch][url_fetch][^fetch_su] :fontawesome-brands-apple:
+    * [CyberDuck][url_cyberduck] :fontawesome-brands-apple:
 
     When setting up your connection to Sherlock in the above programs, use the
     following information:
@@ -169,9 +169,9 @@ and then should not be typed in).
     software that wouldn't work comfortably enough over a forwarded X11
     connection.
 
-    SSHFS is available for [Linux][url_sshfs_linux] :fa-linux:,
-    [MacOS][url_sshfs_macos] :fa-apple:, and [Windows][url_sshfs_windows]
-    :fa-windows:.
+    SSHFS is available for [Linux][url_sshfs_linux] :fontawesome-brands-linux:,
+    [MacOS][url_sshfs_macos] :fontawesome-brands-apple:, and [Windows][url_sshfs_windows]
+    :fontawesome-brands-windows:.
 
     !!! warning "SSHFS on macOS"
 
@@ -388,4 +388,4 @@ documentation][url_rclone].
   the [Essential Stanford Software][url_fetch_su] bundle.
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

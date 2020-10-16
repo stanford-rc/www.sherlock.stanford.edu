@@ -384,7 +384,7 @@ $ ml av
 [url_lmod_user]:    //lmod.readthedocs.io/en/latest/010_user.html
 [url_list]:         /docs/software/list/
 [url_install]:      /docs/software/install
-[url_contact]:      mailto:srcc-support@stanford.edu
+[url_contact]:      mailto:{{ support_email }}
 
 
 [comment]: #  (footnotes -----------------------------------------------------)
@@ -398,4 +398,4 @@ $ ml av
   module, they must specify the `--force` option.
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

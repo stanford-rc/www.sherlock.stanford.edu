@@ -141,4 +141,4 @@ stop-master.sh
 [url_compute_node]: /docs/overview/glossary/#node
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

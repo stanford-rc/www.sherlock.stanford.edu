@@ -7,24 +7,26 @@ site_author:      Kilian Cavalotti
 site_url:         https://www.sherlock.stanford.edu/
 
 # Repository
-#   - repo_url point to the public organization page, so anyone can get to it
-#   - edit_url points to the sherlock private repo, so only authorized users can edit content
-repo_name:        'SRCC <i class="fa fa-heart-o"></i> Open Source'
-repo_url:         'https://github.com/stanford-rc'
-edit_uri:         'www.sherlock.stanford.edu/edit/docs/src/'
+repo_name: SRCC // Open Source
+repo_url:  https://github.com/stanford-rc
+edit_uri:  www.sherlock.stanford.edu/edit/docs/src/
 
 # Copyright
-copyright:        "Copyright &copy; 2014 - 2020 &mdash; <a href='mailto:srcc-support@stanford.edu'>Stanford Research Computing Center</a>"
+copyright: >-
+  Copyright &copy; 2014 - 2020 &mdash;
+  <a href='mailto:srcc-support@stanford.edu'>Stanford Research Computing Center</a>
 
 # Google Analytics
-google_analytics: ['UA-68034405-2', auto]
+google_analytics:
+  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+  - auto
 
-# Documentation and theme directories
-docs_dir:   src
-site_dir:   site
+# Configuration
+docs_dir: src
+site_dir: site
 theme:
-  name: null
-  custom_dir: theme
+  name: material
+  custom_dir: overrides
 
   # 404 page
   static_templates:
@@ -32,95 +34,118 @@ theme:
 
   # Don't include MkDocs' JavaScript
   include_search_page: false
+  search_index_only: true
 
   language: en
-  feature:
-    tabs: false
-  palette:
-    primary: stanford
-    accent:  stanford
+  features:
+    - navigation.instant
   font:
     text: Roboto
     code: Roboto Mono
-  favicon:  'img/logo_small.png'
-  logo:     'img/logo_small.png'
+  favicon: /assets/img/logo_small.png
+  logo:    /assets/img/logo_small.png
+  logo_hero: /assets/img/logo.png
+  icon:
+    repo: fontawesome/brands/github
 
+# Customization
 extra_css:
-  - ''
-extra_javascript:
-  - ''
+  - /assets/css/sh.css
 
-# Plugins
-plugins:
-  - search
-  - minify:
-      minify_html: true
-      minify_js: true
-
-
-# Options
 extra:
-  search:
-    language: 'en'
-    tokenizer: '[\s\_\-\.]+'
-  made_in: "<a href='https://www.google.com/maps/place/Stanford,+CA'>Stanford, California</a>"
+  made_in: >-
+    <a href='https://www.google.com/maps/place/Stanford,+CA'>Stanford, California</a>
+  support_email: srcc-support@stanford.edu
+  manifest: manifest.webmanifest
   social:
-    - type: 'globe'
-      link: 'https://srcc.stanford.edu'
-    - type: 'github'
-      link: 'https://github.com/stanford-rc'
-    - type: 'twitter'
-      link: 'https://twitter.com/StanfordCompute'
-    - type: 'linkedin'
-      link: 'https://www.linkedin.com/school/1792/'
-  manifest: 'manifest.webmanifest'
+    - icon: fontawesome/solid/globe-americas
+      link: https://srcc.stanford.edu
+      name: SRCC website
+    - icon: fontawesome/brands/github
+      link: https://github.com/stanford-rc
+      name: SRCC on GitHub
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/StanfordCompute
+      name: SRCC on Twitter
+    - icon: fontawesome/brands/slack
+      link: https://srcc.slack.com/
+      name: SRCC Users Slack workspace
 
 # Extensions
 markdown_extensions:
-  - fontawesome_markdown
-  - codehilite:
-      guess_lang: False
-  - admonition
-  - def_list
-  - footnotes
-  - abbr
-  - meta
-  - toc:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.abbr
+  - markdown.extensions.toc:
       permalink: "#"
       toc_depth: 4
-  - pymdownx.arithmatex
-  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
   - pymdownx.critic
+  - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+  - pymdownx.highlight
   - pymdownx.inlinehilite
+  - pymdownx.keys
   - pymdownx.magiclink:
-      repo_url_shortener: True
-      provider: 'github'
-      user: 'stanford-rc'
-      repo: 'sherlock'
+      repo_url_shortener: true
+      provider: github
+      user: stanford-rc
+      repo: sherlock
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.snippets:
-      base_path: src/docs/
+      check_paths: true
   - pymdownx.superfences
-  - pymdownx.tasklist:
-      custom_checkbox: True
   - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.tilde
-  - pymdownx.keys
   - pymdownx.escapeall:
-      hardbreak: True
-      nbsp:      True
+      hardbreak: true
+      nbsp:      true
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\-\.]+'
+  - minify:
+      minify_html: true
+      minify_js: true
+  - macros:
+      include_yaml:
+        - includes/data/software.yml
+  - redirects:
+      redirect_maps:
+        docs/index.md:                   docs/overview/introduction.md
+        docs/overview/index.md:          docs/overview/introduction.md
+        docs/overview/orders/process.md: docs/overview/orders.md
+        docs/overview/orders/catalog.md: https://docs.google.com/spreadsheets/d/11CqpWe0XLoEbJEDAac6ag5nbrctkkZSJgRtG4hKh34w
+        docs/overview/orders/form.md:    https://docs.google.com/forms/d/e/1FAIpQLSd95TJaPbStWEZAUYHXNQedp9lQJMsTjyISjKmRMSpmL0rVqg/viewform
+        catalog.md:                      https://docs.google.com/spreadsheets/d/11CqpWe0XLoEbJEDAac6ag5nbrctkkZSJgRtG4hKh34w
+        order_form.md:                   https://docs.google.com/forms/d/e/1FAIpQLSd95TJaPbStWEZAUYHXNQedp9lQJMsTjyISjKmRMSpmL0rVqg/viewform
+        docs/overview/tech/index.md:     docs/overview/tech/specs.md
+        docs/getting-started/index.md:   docs/getting-started/prerequisites.md
+        docs/user-guide/index.md:        docs/user-guide/running-jobs.md
+        docs/storage/index.md:           docs/storage/overview.md
+        docs/software/index.md:          docs/software/overview.md
+        docs/software/containers.md:     docs/software/using/singularity.md
+        docs/advanced-topics/index.md:   docs/advanced-topics/connection.md
 
 
-# Page tree
 #
-# /!\ IMPORTANT: keep the /docs/ prefix, as /index.html is not managed by
-# mkdocs (landing page)
+# Page tree
 #
 
 nav:
@@ -128,9 +153,9 @@ nav:
     - Introduction:      docs/overview/introduction.md
     - Concepts:          docs/overview/concepts.md
     - Ordering nodes:
-      - Process:         docs/overview/orders/process.md
-      - Catalog:         docs/overview/orders/catalog.md
-      - Order form:      docs/overview/orders/form.md
+      - Process:         docs/overview/orders.md
+      - Catalog:         /catalog/
+      - Order form:      /order_form/
     - Technical:
       - Specs:           docs/overview/tech/specs.md
       - Status:          docs/overview/tech/status.md
@@ -158,7 +183,7 @@ nav:
     - List:              docs/software/list.md
     - Modules:           docs/software/modules.md
     - Installation:      docs/software/install.md
-    - Containers:        docs/software/containers.md
+    - Containers:        docs/software/using/singularity.md
     - Usage:
       - R:               docs/software/using/R.md
       - Julia:           docs/software/using/julia.md
@@ -172,8 +197,8 @@ nav:
       - PostgreSQL:      docs/software/using/postgresql.md
   - Advanced topics:
     - Connection:        docs/advanced-topics/connection.md
-      #    - Checkpointing:     docs/advanced-topics/checkpoint.md
     - Job management:    docs/advanced-topics/job-management.md
+#    - Checkpointing:     docs/advanced-topics/checkpoint.md
 #    - Scheduler:         docs/advanced-topics/scheduler.md
 #    - Owners:            docs/advanced-topics/owners.md
-
+#- News:       https://news.sherlock.stanford.edu

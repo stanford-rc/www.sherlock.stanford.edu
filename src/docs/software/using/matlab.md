@@ -245,7 +245,7 @@ it scales.
 [url_X11_UIT]:          //uit.stanford.edu/service/sharedcomputing/moreX
 [url_octave]:           //www.gnu.org/software/octave/
 
-[url_contact]:          mailto:srcc-support@stanford.edu
+[url_contact]:          mailto:{{ support_email }}
 
 [url_R]:                /docs/software/using/R
 [url_julia]:            /docs/software/using/julia
@@ -273,4 +273,4 @@ it scales.
   initial start-up speed, but restricts functionality.
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

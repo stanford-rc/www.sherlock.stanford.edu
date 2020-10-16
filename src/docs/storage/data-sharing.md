@@ -279,7 +279,7 @@ there are two possiblities:
 
 [url_rhel_posix_acl]:   https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-access_control_lists#acls-setting
 [url_unix_perms]:       https://en.wikipedia.org/wiki/File_system_permissions
-[url_contact]:          mailto:srcc-support@stanford.edu
+[url_contact]:          mailto:{{ support_email }}
 [url_nfs4_acl_man]:     http://linux.die.net/man/5/nfs4_acl
 [url_susponsorship]:    https://uit.stanford.edu/service/sponsorship
 [url_sunetids]:         https://uit.stanford.edu/service/accounts/sunetids#services
@@ -296,4 +296,4 @@ there are two possiblities:
                     IDs page][url_sunetids].
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"

@@ -153,7 +153,7 @@ account.
 
 ## Batch jobs
 
---8<--- "_wip.md"
+--8<--- "includes/_wip.md"
 [comment]: #_
 
 
@@ -248,11 +248,11 @@ The table below summarizes the advantages and inconvenients of each approach:
 
 |     | Cron tasks | Recurring jobs |
 | --- | :--------: | :------------: |
-| Authorized on Sherlock                | <b class="no">:fa-times:</b> | <b class="yes">:fa-check:</b> |
-| Dedicated resources for the task      | <b class="no">:fa-times:</b> | <b class="yes">:fa-check:</b> |
-| Persistent across node redeployments  | <b class="no">:fa-times:</b> | <b class="yes">:fa-check:</b> |
-| Unique, controlled execution          | <b class="no">:fa-times:</b> | <b class="yes">:fa-check:</b> |
-| Precise schedule                      | <b class="yes">:fa-check:</b> | <b class="no">:fa-times:</b> |
+| Authorized on Sherlock                | <b class="no">:fontawesome-solid-times:</b> | <b class="yes">:fontawesome-solid-check:</b> |
+| Dedicated resources for the task      | <b class="no">:fontawesome-solid-times:</b> | <b class="yes">:fontawesome-solid-check:</b> |
+| Persistent across node redeployments  | <b class="no">:fontawesome-solid-times:</b> | <b class="yes">:fontawesome-solid-check:</b> |
+| Unique, controlled execution          | <b class="no">:fontawesome-solid-times:</b> | <b class="yes">:fontawesome-solid-check:</b> |
+| Precise schedule                      | <b class="yes">:fontawesome-solid-check:</b> | <b class="no">:fontawesome-solid-times:</b> |
 
 ### Example
 
@@ -406,18 +406,6 @@ Here's the recurring job example from above, modified to:
     wait
     ```
 
-!!! tip "Keeping output/error logs across restarts"
-
-    By default, the job's output and error files (the ones specified with
-    `--output` and `--error`) will be overwritten each time the job is
-    restarted.
-
-    To conserve the previous logs when the job restarts, you can
-    use the following directive in your sbatch script:
-    ```
-    #SBATCH --open-mode=append`
-    ```
-
 
 ### Persistent `$JOBID`
 
@@ -489,6 +477,9 @@ The job runs for 5 minutes, then received the `SIGUSR1` signal, is re-queued,
 restarts for 5 minutes, and so on, until it's properly `scancel`led.
 
 
+[comment]: #  (TODO: batch jobs, resource requirements, partitions, qos, limits, mail...)
+
+
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_sbatch]:   https://slurm.schedmd.com/sbatch.html
@@ -522,4 +513,4 @@ restarts for 5 minutes, and so on, until it's properly `scancel`led.
   signal may be sent up to 60 seconds earlier than specified.
 
 
---8<--- "_acronyms.md"
+--8<--- "includes/_acronyms.md"
