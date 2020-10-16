@@ -38,8 +38,8 @@ jobs:
           mkdocs --version
           
       # Send Slack notification
-      - uses: 8398a7/action-slack@v2
-        if: always()
+      - uses: iRoachie/slack-github-actions@v2.0.0
+        if: ${{ always() }}
         with:
           status: ${{ job.status }}
           author_name: ${{ github.actor }}
