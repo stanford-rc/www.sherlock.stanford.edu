@@ -2,7 +2,7 @@
 > This repository contains the source files for the Sherlock website and
 > documentation at https://www.sherlock.stanford.edu
 
-[![Build Status][img_docs_buildstatus]][url_travis_branches]
+![deploy](https://github.com/stanford-rc/www.sherlock.stanford.edu/workflows/deploy/badge.svg)
 
 The [Sherlock documentation][url_docs] is generated from
 [MarkDown][url_markdown] documents hosted in this repository.
@@ -154,9 +154,6 @@ back to your repository on GitHub.
 [url_gh_guide]:         https://guides.github.com/activities/forking/
 [url_gh_pr]:            https://help.github.com/articles/creating-a-pull-request-from-a-fork/
 [url_workflow]:         https://gist.github.com/Chaser324/ce0505fbed06b947d962
-
-[url_travis_branches]:  https://travis-ci.org/stanford-rc/www.sherlock.stanford.edu/branches
-[img_docs_buildstatus]: https://travis-ci.org/stanford-rc/www.sherlock.stanford.edu.svg?branch=docs
 
 [url_srcc]:             https://srcc.stanford.edu
 [url_docs]:             https://www.sherlock.stanford.edu/docs
