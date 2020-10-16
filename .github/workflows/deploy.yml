@@ -42,7 +42,6 @@ jobs:
         if: ${{ always() }}
         with:
           status: ${{ job.status }}
-          author_name: ${{ github.actor }}
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
