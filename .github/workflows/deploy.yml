@@ -1,11 +1,13 @@
 name: deploy
 on:
-  - push
+  workflow_dispatch:
+  push:
+    branches: 
+      - main
 
 # Environment
 env:
   CI: true
-  NODE_VERSION: 10.x
   PYTHON_VERSION: 3.x
 
 # Jobs to run
@@ -13,7 +15,6 @@ jobs:
 
   # Build and deploy site
   deploy:
-    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
 
@@ -29,9 +30,19 @@ jobs:
       - run: |
           pip install -r requirements.txt
 
-      # Build documentation
+      # Build site
       - env:
           GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
         run: |
           mkdocs gh-deploy --force
           mkdocs --version
+          
+      # Send Slack notification
+      - uses: 8398a7/action-slack@v2
+        if: always()
+        with:
+          status: ${{ job.status }}
+          author_name: ${{ github.actor }}
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
