@@ -12,7 +12,7 @@
 }
 </style>
 <img id="logo_head" align="right" width="220px"
-     alt="Sherlock" src="/img/logo.png">
+     alt="Sherlock" src="/assets/img/logo.png">
 <!-- resuming normal Markdown operations -->
 
 
