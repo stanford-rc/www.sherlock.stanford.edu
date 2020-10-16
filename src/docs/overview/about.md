@@ -45,16 +45,12 @@ day:
 <!-- HTML styles for icons, pics and tables -->
 <style>
 img[alt="favicon"] {
-    bottom: -3px;
-    height: 18px;
-    position:relative;
+    vertical-align: middle;
+    height: 1rem;
 }
 img[alt="screencap"] {
     width: 320px;
     margin: 5px;
-}
-.md-typeset__table{
-    width: 100%;
 }
 </style>
 
@@ -65,9 +61,10 @@ img[alt="screencap"] {
 
 The Sherlock website and documentation also rely on the following projects:
 
-* [MkDocs](//mkdocs.org)
-* [Material for MkDocs](//squidfunk.github.io/mkdocs-material/)
-* [Agency Bootstrap](//startbootstrap.com/template-overviews/agency/)
+
+|       |       |
+| :---: | :---: |
+| ![favicon](//www.mkdocs.org/img/favicon.ico) [MkDocs](//mkdocs.org/) | ![favicon](//squidfunk.github.io/mkdocs-material/assets/favicon.png) [Material for MkDocs](//squidfunk.github.io/mkdocs-material/) |
 
 
 ## Why the Sherlock name?
