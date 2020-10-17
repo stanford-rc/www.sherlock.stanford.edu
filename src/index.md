@@ -20,7 +20,7 @@ nav_links:
     - name: status
       url: 'https://status.sherlock.stanford.edu'
       post: >-
-        <span id="status-widget"/>
+        <span id="status-widget"></span>
     - name: news
       url: 'https://news.sherlock.stanford.edu'
       post: >-
@@ -35,7 +35,7 @@ nav_links:
       url: '#'
       icon: question-circle
     - name: slack
-      url: 'https:///srcc.slack.com'
+      url: 'https://srcc.slack.com'
       icon: brand-slack
     - name: sep
 
