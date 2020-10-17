@@ -58,7 +58,7 @@ tested and validated on Sherlock and that aim to cover most computing needs.
 !!! info "Sherlock catalog"
 
     Complete details are available in the **[Sherlock compute nodes
-    catalog][url_catalog]** (_SUNet ID required[^sunet]_)
+    catalog][url_catalog]** :octicons-lock-16:[^sunet]
 
 ### Configurations
 
@@ -111,12 +111,12 @@ below:
     consultation.
 
 Configuration details for the different compute node types are listed in the
-[Sherlock compute nodes catalog][url_catalog] (_SUNet ID required[^sunet]_).
+[Sherlock compute nodes catalog][url_catalog] :octicons-lock-16:[^sunet]
 
 ### Prices
 
 Prices for the different compute node types are listed in the [Sherlock compute
-nodes catalog][url_catalog] (_SUNet ID required[^sunet]_). They include tax and
+nodes catalog][url_catalog] :octicons-lock-16:[^sunet]. They include tax and
 shipping fees, and are subject to change when quoted: they tend to follow the
 market-wide variations induced by global political and economical events, which
 are way outside of our control. Prices are provided there as a guideline for
@@ -187,11 +187,18 @@ To place an order, we'll need the following information:
 
 To start ordering compute nodes for Sherlock, please:
 
-1. **check the [Sherlock compute nodes catalog][url_catalog]** (_SUNet ID
-   required_) to review configurations and prices
+1. **check the [Sherlock compute nodes catalog][url_catalog]**
+   :octicons-lock-16:[^sunet] to review prices and choose the configurations
+   you'd like to purchase
 
-2. **use the [order form][url_order_form]** (_SUNet ID required_) to submit
-   your request and provide the [required information](#required-information)
+    [Choose :fontawesome-solid-stream:][url_catalog]{: .md-button .md-button .md-button--primary }
+
+2. **use the [order form][url_order_form]** :octicons-lock-16:[^sunet] to
+   submit your request and provide the [required
+   information](#required-information)
+
+    [Order :fontawesome-solid-shopping-cart:][url_order_form]{: .md-button .md-button--primary }
+
 
 And we'll be in touch shortly!
 
@@ -200,8 +207,8 @@ And we'll be in touch shortly!
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_order_form]:   /docs/overview/orders/form/
-[url_catalog]:      /docs/overview/orders/catalog
+[url_order_form]:   /order_form
+[url_catalog]:      /catalog
 [url_pta]:          //web.stanford.edu/group/fms/fingate/staff/acctstructure/PTA_req_process.html
 [email]:            mailto:{{ support_email }}
 
@@ -210,4 +217,4 @@ And we'll be in touch shortly!
   contracts and grants.
 [^PTA]: PTA is an acronym used for a [Project-Task-Award][url_pta] combination
   representing an account in the Stanford Financial system.
-[^sunet]: document restricted to `@stanford.edu` accounts.
+[^sunet]: **SUNet ID required**, document restricted to `@stanford.edu` accounts.
