@@ -240,19 +240,14 @@ times, though, so most users find this an acceptable trade-off.
 
 The table below summarizes the advantages and inconvenients of each approach:
 
-<!-- color styles for yes/no checks -->
-<style>
-.yes { color: darkgreen; }
-.no  { color: darkred;   }
-</style>
 
 |     | Cron tasks | Recurring jobs |
 | --- | :--------: | :------------: |
-| Authorized on Sherlock                | <b class="no">:fontawesome-solid-times:</b> | <b class="yes">:fontawesome-solid-check:</b> |
-| Dedicated resources for the task      | <b class="no">:fontawesome-solid-times:</b> | <b class="yes">:fontawesome-solid-check:</b> |
-| Persistent across node redeployments  | <b class="no">:fontawesome-solid-times:</b> | <b class="yes">:fontawesome-solid-check:</b> |
-| Unique, controlled execution          | <b class="no">:fontawesome-solid-times:</b> | <b class="yes">:fontawesome-solid-check:</b> |
-| Precise schedule                      | <b class="yes">:fontawesome-solid-check:</b> | <b class="no">:fontawesome-solid-times:</b> |
+| Authorized on Sherlock                | :fontawesome-solid-times:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
+| Dedicated resources for the task      | :fontawesome-solid-times:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
+| Persistent across node redeployments  | :fontawesome-solid-times:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
+| Unique, controlled execution          | :fontawesome-solid-times:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
+| Precise schedule                      | :fontawesome-solid-check:{: .chk_yes :}| :fontawesome-solid-times:{: .chk_no :}  |
 
 ### Example
 

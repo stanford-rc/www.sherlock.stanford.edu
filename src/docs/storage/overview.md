@@ -24,20 +24,12 @@ and for some of them, purge policies (time-residency limits).
 
 ### Features and purpose
 
-<!-- color styles for yes/no checks -->
-<style>
-.yes { color: darkgreen; }
-.no  { color: darkred;   }
-.md-typeset code { word-break: keep-all; }
-</style>
-
-
 | Name                     | Type                 | Backups / Snapshots | Performance | Purpose | Cost |
 | ------------------------ |--------------------- |------------------ | ----------- | ------- | ---- |
-|`$HOME`, `$GROUP_HOME`    | [NFS][url_NFS]       | <b class="yes">:fontawesome-solid-check:</b> / <b class="yes">:fontawesome-solid-check:</b> | low | small, important files (source code, executables, configuration files...) | free |
-|`$SCRATCH`, `$GROUP_SCRATCH` | [Lustre][url_lustre] | <b class="no">:fontawesome-solid-times:</b> / <b class="no">:fontawesome-solid-times:</b> | high bandwidth | large, temporary files (checkpoints, raw application output...) | free |
-|`$L_SCRATCH`              | local SSD    | <b class="no">:fontawesome-solid-times:</b> / <b class="no">:fontawesome-solid-times:</b> | low latency, high IOPS | job specific output requiring high IOPS | free |
-|`$OAK`                    | [Lustre][url_lustre] | option / <b class="no">:fontawesome-solid-times:</b> | moderate | long term storage of research data | volume-based[^oak_sd] |
+|`$HOME`, `$GROUP_HOME`    | [NFS][url_NFS]       | :fontawesome-solid-check:{: .chk_yes :} / :fontawesome-solid-check:{: .chk_yes :} | low | small, important files (source code, executables, configuration files...) | free |
+|`$SCRATCH`, `$GROUP_SCRATCH` | [Lustre][url_lustre] | :fontawesome-solid-times:{: .chk_no :} / :fontawesome-solid-times:{: .chk_no :} | high bandwidth | large, temporary files (checkpoints, raw application output...) | free |
+|`$L_SCRATCH`              | local SSD    | :fontawesome-solid-times:{: .chk_no :} / :fontawesome-solid-times:{: .chk_no :} | low latency, high IOPS | job specific output requiring high IOPS | free |
+|`$OAK`                    | [Lustre][url_lustre] | option / :fontawesome-solid-times:{: .chk_no :} | moderate | long term storage of research data | volume-based[^oak_sd] |
 
 
 ### Access scope
