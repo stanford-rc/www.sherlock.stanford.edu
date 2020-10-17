@@ -51,7 +51,7 @@ RStudio sessions.
 
 ![ood_dashboard](img/ood_dashboard.png)
 
-To end your Sherlock OnDemand session, click on the ["Log Out"](url_ood_logout)
+To end your Sherlock OnDemand session, click on the ["Log Out"][url_ood_logout]
 link at the top right of the Dashboard window and close your browser.
 
 
@@ -148,7 +148,7 @@ that you want to submit to the scheduler.
 
 If you need more resources than the defaults, you must include options to
 change them in the job script. For more details, see the [Running
-jobs](url_running_jobs) section.
+jobs][url_running_jobs] section.
 
 You can edit the script in several ways:
 * click the blue **Edit Files** button at the top of the **Jobs** tab in the

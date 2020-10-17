@@ -21,12 +21,12 @@ defined tasks on the selected resources, and generate output files in one of
 the different [storage locations][url_storage] available on the cluster, for
 the user to review and analyze.
 
-[g_cpu]:        /docs/overview/glossary#cpu
-[g_gpu]:        /docs/overview/glossary#gpu
-[g_login]:      /docs/overview/glossary#login-nodes
-[g_ssh]:        /docs/overview/glossary#ssh
-[g_jobs]:       /docs/overview/glossary#job
-[g_scheduler]:  /docs/overview/glossary#scheduler
+[g_cpu]:        /docs/overview/tech/glossary#cpu
+[g_gpu]:        /docs/overview/tech/glossary#gpu
+[g_login]:      /docs/overview/tech/glossary#login-nodes
+[g_ssh]:        /docs/overview/tech/glossary#ssh
+[g_jobs]:       /docs/overview/tech/glossary#job
+[g_scheduler]:  /docs/overview/tech/glossary#scheduler
 [url_storage]:  /docs/storage/
 
 ## Cluster components

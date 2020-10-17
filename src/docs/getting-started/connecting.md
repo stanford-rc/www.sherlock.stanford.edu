@@ -175,29 +175,31 @@ by the following *message of the day*:
 ```
 
              --*-*- Stanford Research Computing Center -*-*--
-                ____  _               _            _
-               / ___|| |__   ___ _ __| | ___   ___| | __
-               \___ \| '_ \ / _ \ '__| |/ _ \ / __| |/ /
-                ___) | | | |  __/ |  | | (_) | (__|   <
-               |____/|_| |_|\___|_|  |_|\___/ \___|_|\_\ 2.0
+                  ____  _               _            _
+                 / ___|| |__   ___ _ __| | ___   ___| | __
+                 \___ \| '_ \ / _ \ '__| |/ _ \ / __| |/ /
+                  ___) | | | |  __/ |  | | (_) | (__|   <
+                 |____/|_| |_|\___|_|  |_|\___/ \___|_|\_\
 
 -----------------------------------------------------------------------------
-  This system is for authorized users only and you are expected to comply
-  with all Stanford computing, network and research policies.
-  For more info, see https://acomp.stanford.edu/about/policy and
-  https://doresearch.stanford.edu/policies/research-policy-handbook
+  This system is for authorized users only and users must comply with all
+  Stanford computing, network and research policies. All activity may be
+  recorded for security and monitoring purposes. For more information, see
+  https://doresearch.stanford.edu/policies/research-policy-handbook and
+  https://adminguide.stanford.edu/chapter-6/subchapter-2/policy-6-2-1
 -----------------------------------------------------------------------------
-  This system is *NOT* HIPAA compliant and shouldn't be used to process PHI
-  See https://privacy.stanford.edu/faqs/hipaa-faqs for more information.
+  Sherlock is *NOT* approved for storing or processing HIPAA, PHI, PII nor
+  any kind of High Risk data. Users are responsible for the compliance of
+  their data.
+  See https://uit.stanford.edu/guide/riskclassifications for details.
 -----------------------------------------------------------------------------
 
-  Support           email: {{ support_email }}
-  ========   office hours: Tuesdays 10-11am, Thursdays 3-4pm,
-                           room 255 @ Polya Hall
+        Docs         https://www.sherlock.stanford.edu/docs
+        Support      https://www.sherlock.stanford.edu/docs/#support
 
-  Web                 www: https://www.sherlock.stanford.edu
-  ========           news: https://news.sherlock.stanford.edu
-                   status: https://status.sherlock.stanford.edu
+        Web          https://www.sherlock.stanford.edu
+        News         https://news.sherlock.stanford.edu
+        Status       https://status.sherlock.stanford.edu
 
 -----------------------------------------------------------------------------
 ```
@@ -205,9 +207,9 @@ by the following *message of the day*:
 Once authenticated to Sherlock, you'll see the following prompt:
 
 <!-- manual coloring -->
-<pre style="padding: 10.5px 12px">
-[<font color=lawngreen>&lt;sunetid&gt;</font>@sh-ln01 <font color=red>login!</font> ~]$
-</pre>
+<code>
+[<font color=green>&lt;sunetid&gt;</font>@sh03-ln01 <font color=red>login!</font> ~]$
+</code>
 
 It indicates the name of the login node you've been connected to, and a
 reminder that you're actually connected to a [login node][url_login], not a
@@ -222,9 +224,9 @@ compute node.
 By contrast, the shell prompt on a compute node looks like this:
 
 <!-- manual coloring -->
-<pre style="padding: 10.5px 12px">
-[<font color=lawngreen>&lt;sunetid&gt;</font>@sh-101-01 ~]$
-</pre>
+<code>
+[<font color=green>&lt;sunetid&gt;</font>@sh03-01n01 ~]$
+</code>
 
 
 ## Start computing
@@ -243,7 +245,7 @@ section][url_submit].
 [url_sunet]:        https://uit.stanford.edu/service/accounts/sunetids
 [url_minsec]:       https://uit.stanford.edu/guide/securitystandards
 [url_twostep]:      https://uit.stanford.edu/service/webauth/twostep
-[url_login]:        /docs/overview/glossary/#login-nodes
+[url_login]:        /docs/overview/tech/glossary/#login-nodes
 [url_submit]:       /docs/getting-started/submitting
 [url_contact]:      mailto:{{ support_email }}
 [url_sshfs]:        /docs/storage/data-transfer#sshfs

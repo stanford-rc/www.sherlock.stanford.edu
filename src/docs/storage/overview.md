@@ -13,7 +13,7 @@ directories in these file systems to store their data.
     target for backups from other systems.
 
     If you're looking for a long-term storage solution for reserach data, SRCC
-    offers the [Oak storage system](url_oak), which is specifically intended
+    offers the [Oak storage system][url_oak], which is specifically intended
     for this usage.
 
 Those file systems are shared with other users, and are subject to quota limits

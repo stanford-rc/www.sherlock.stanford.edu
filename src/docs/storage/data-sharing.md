@@ -262,7 +262,7 @@ there are two possiblities:
     !!! warning "Globus Sharing is only available through the Oak endpoint"
 
         Globus Sharing is only available on [`$OAK`][url_oak], using the [Oak
-        Globus Endpoint][url_oak_endpoint] (`srcc#oak`).
+        Globus Endpoint][url_oak_endpoint] :octicons-lock-16:[^sunet] (`srcc#oak`).
 
      For complete details about sharing data wih Globus, please see the Globus
      documentation at https://docs.globus.org/how-to/share-files/
@@ -277,15 +277,15 @@ there are two possiblities:
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_rhel_posix_acl]:   https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-access_control_lists#acls-setting
-[url_unix_perms]:       https://en.wikipedia.org/wiki/File_system_permissions
+[url_rhel_posix_acl]:   //access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-access_control_lists#acls-setting
+[url_unix_perms]:       //en.wikipedia.org/wiki/File_system_permissions
 [url_contact]:          mailto:{{ support_email }}
-[url_nfs4_acl_man]:     http://linux.die.net/man/5/nfs4_acl
-[url_susponsorship]:    https://uit.stanford.edu/service/sponsorship
-[url_sunetids]:         https://uit.stanford.edu/service/accounts/sunetids#services
-[url_globus_sharing]:   https://www.globus.org/data-sharing
-[url_oak]:              /storage/filesystems/#oak
-[url_oak_endpoint]:     https://srcc.stanford.edu/private/oak-gateways
+[url_nfs4_acl_man]:     //linux.die.net/man/5/nfs4_acl
+[url_susponsorship]:    //uit.stanford.edu/service/sponsorship
+[url_sunetids]:         //uit.stanford.edu/service/accounts/sunetids#services
+[url_globus_sharing]:   //www.globus.org/data-sharing
+[url_oak]:              /docs/storage/filesystems/#oak
+[url_oak_endpoint]:     //srcc.stanford.edu/private/oak-gateways
 
 
 [comment]: #  (footnotes -----------------------------------------------------)
@@ -294,6 +294,7 @@ there are two possiblities:
                     account on Sherlock. For more details about SUNet ID levels
                     and associated services, please see the [Stanford UIT SUNet
                     IDs page][url_sunetids].
+[^sunet]:           SUNet ID required
 
 
 --8<--- "includes/_acronyms.md"

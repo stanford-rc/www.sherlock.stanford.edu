@@ -237,7 +237,7 @@ lost when the maintenance starts.
 [url_minsec]:     //uit.stanford.edu/guide/securitystandards
 [url_admin]:  	  //adminguide.stanford.edu
 [url_farmshare]:  //uit.stanford.edu/service/sharedcomputing
-[url_fairshare]:  /docs/advanced-topics/scheduler#fair-share
+[url_fairshare]:  //slurm.schedmd.com/fair_tree.html
 [url_orders]:	  /docs/overview/orders
 
 [url_HIPAA]: //en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act
