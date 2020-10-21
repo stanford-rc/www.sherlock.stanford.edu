@@ -7,7 +7,7 @@
 The [Sherlock documentation][url_docs] is generated from
 [MarkDown][url_markdown] documents hosted in this repository.
 
-![screenshot](https://user-images.githubusercontent.com/186807/38383523-97c021fc-38c1-11e8-8bc5-a77255a3f9d7.png)
+![screenshot](https://user-images.githubusercontent.com/186807/96660514-95d9bc80-12fe-11eb-947a-bc12f4ce2650.png)
 
 For more details about the internal structure of the website and building
 process, please see [INTERNALS.md](INTERNALS.md)
