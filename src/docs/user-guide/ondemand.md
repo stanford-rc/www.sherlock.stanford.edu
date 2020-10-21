@@ -19,11 +19,9 @@ traditional way, via a SSH terminal connection.
 
 
 ### More documentation
-<div style="float:right">
-[![ood](img/ood_logo.png)][url_ood]
-</div>
 [Open OnDemand][url_ood] was created by the [Ohio Supercomputer
 Center][url_osc].
+[![ood](img/ood_logo.png)][url_ood]{: .fl_right :}
 
 
 The following documentation is specifically intended for using OnDemand on
