@@ -36,10 +36,10 @@ the use of their own custom software installations.
     For more information about building your own software on Sherlock, please
     see the [Software Installation page](/docs/software/install).
 
-If the software you need is not in the [list of available software](list), and
-you have trouble installing it on your own, please [contact us][url_contact]
-with ^^complete details about the package^^, and we will try to help you
-install it.
+If the software you need is not in the [list of available software][url_list],
+and you have trouble installing it on your own, please [contact
+us][url_contact] with ^^as much details about the package as possible^^, and we
+will try to help you install it.
 
 If it's a widely used software that could benefit multiple users across
 different scientific communities, we will consider install it globally as
