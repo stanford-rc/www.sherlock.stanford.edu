@@ -39,7 +39,7 @@ count }} fields of science:_
 
 !!! warning "Licensed software"
 
-    Access to software modules marked with ^<b class="lic"></b>^ in the tables
+    Access to software modules marked with ^<b class="sw_lic"></b>^ in the tables
     below is restricted to properly licensed user groups.
 
     SRCC is not funded to provide commercial software on Sherlock and
@@ -55,45 +55,28 @@ count }} fields of science:_
     Some of the modules listed below have been built to support specific
     architectures or parallel execution modes:
 
-      * versions marked with ^<b class="gpu"></b>^ support GPU acceleration
-      * versions marked with ^<b class="mpi"></b>^ support MPI parallel
+      * versions marked with ^<b class="sw_gpu"></b>^ support GPU acceleration
+      * versions marked with ^<b class="sw_mpi"></b>^ support MPI parallel
         execution
-      * versions marked with ^<b class="def"></b>^ are the default version for
+      * versions marked with ^<b class="sw_def"></b>^ are the default version for
         the module
-
-<!-- color styles for module properties -->
-<style>
-.mpi  { color: darkblue; }
-.gpu  { color: darkgreen; }
-.lic  { color: darkred; }
-.def  { color: gray; }
-.mpi:after { content: "mpi" }
-.gpu:after { content: "gpu" }
-.lic:after { content: "lic" }
-.def:after { content: "def" }
-</style>
-
-
-
-{# macros_info() #}
-
 
 {% set h_name = '<img style="float:left;min-width:110px;visibility:hidden"/>Module&nbsp;name' %}
 {% set h_vers = '<img style="float:left;min-width:90px;visibility:hidden"/>Version(s)' %}
 
 {% macro version_properties(v) -%}
-    {%- if v.markedDefault is true -%}^<b class="def"></b>^{%- endif -%}
+    {%- if v.markedDefault is true -%}^<b class="sw_def"></b>^{%- endif -%}
     {%- if v.properties -%}
-        {%- if v.properties.arch     and v.properties.arch.gpu     -%}^<b class="gpu"></b>^{%- endif -%}
-        {%- if v.properties.parallel and v.properties.parallel.mpi -%}^<b class="mpi"></b>^{%- endif -%}
-        {%- if v.properties.license  and v.properties.license.restricted -%}^<b class="lic"></b>^{%- endif -%}
+        {%- if v.properties.arch     and v.properties.arch.gpu     -%}^<b class="sw_gpu"></b>^{%- endif -%}
+        {%- if v.properties.parallel and v.properties.parallel.mpi -%}^<b class="sw_mpi"></b>^{%- endif -%}
+        {%- if v.properties.license  and v.properties.license.restricted -%}^<b class="sw_lic"></b>^{%- endif -%}
     {%- endif -%}
 {%- endmacro %}
 
 {% macro module_line(p) -%}
     **{{ p.categories.split(',') | last | trim }}** | <a id="{{ p.package }}">`
     {{- p.package }}`</a> |
-    {%- for v in p.versions -%}
+    {%- for v in p.versions | sort(attribute="markedDefault", reverse=true) -%}
       `{{ v.versionName }}`{{ version_properties(v) }}<br/>
     {%- endfor -%}
     | [Website]({{ p.url }}) | {{ p.description }}
