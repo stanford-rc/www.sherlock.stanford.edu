@@ -5,14 +5,18 @@ we recommend using [SSH-based file transfer commands](#ssh-based protocols),
 such as `scp`, `sftp`, or `rsync`.  They will provide the best
 performance for data transfers from and to campus.
 
-Most casual data transfers could be done through the login nodes, by pointing
-your transfer tool to `login.sherlock.stanford.edu`. But because of resource
-limits on the login nodes, larger transfer may not work as expected.
 
-For transferring large amounts of data, Sherlock features a specific [Data
-Transfer Node](#dtn), with dedicated bandwidth, as well as a managed [Globus
-endpoint](#globus), that can be used for scheduled, unattended data
-transfers.
+!!! important "For large transfers, using DTNs is recommended"
+
+    Most casual data transfers could be done through the login nodes, by
+    pointing your transfer tool to `login.sherlock.stanford.edu`. But because
+    of resource limits on the login nodes, larger transfer may not work as
+    expected.
+
+    For transferring large amounts of data, Sherlock features a specific [Data
+    Transfer Node](#dtn), with dedicated bandwidth, as well as a managed
+    [Globus endpoint](#globus), that can be used for scheduled, unattended data
+    transfers.
 
 We also provide tools on Sherlock to transfer data to various [Cloud
 providers](#cloud-backups), such as AWS, Google Drive, Dropbox, Box, etc.
@@ -33,11 +37,11 @@ and then should not be typed in).
 
 ### SSH-based protocols
 
-!!! important "Login name"
+!!! important "User name"
 
     In all the examples below, you'll need to replace `<sunetid>` by your
     actual SUNet ID. If you happen to use the same login name on your local
-    machine, you can omit it..
+    machine, you can omit it.
 
 #### SCP (Secure Copy)
 
@@ -266,6 +270,12 @@ interface. Please see the [Globus CLI documentation][url_globus_cli] and
 
 ## Data Transfer Nodes (DTNs)
 
+!!! Warning "No shell"
+
+    The DTNs don't provide any interactive shell, so connecting via SSH
+    directly won't work. It will only accept `scp`, `sftp`, `rsync` of `bbcp`
+    connections.
+
 A pool of dedicated Data Transfer Nodes is available on Sherlock, to provide
 exclusive resources for large-scale data transfers.
 
@@ -291,27 +301,23 @@ remote server hostname. For instance:
 $ scp foo <sunetid>@dtn.sherlock.stanford.edu:~/foo
 ```
 
-!!! Warning "No shell"
+!!! Important "$HOME on DTNs"
 
-    The DTNs don't provide any interactive shell, so connecting via SSH
-    directly won't work. It will only accept `scp`, `sftp`, `rsync` of `bbcp`
-    connections.
+    One important difference to keep in mind when transferring files through the
+    Sherlock DTNs is that the default destination path for files, unless specified,
+    is the user `$SCRATCH` directory, not `$HOME`.
 
-One important difference to keep in mind when transferring files through the
-Sherlock DTNs is that the default destination path for files, unless specified,
-is the user `$SCRATCH` directory, not `$HOME`.
+    That means that the following command:
+    ```
+    $ scp foo <sunetid>@dtn.sherlock.stanford.edu:
+    ```
+    will create the `foo` file in  `$SCRATCH/foo`, and not in `$HOME/foo`.
 
-That means that the following command:
-```
-$ scp foo <sunetid>@dtn.sherlock.stanford.edu:
-```
-will create the `foo` file in  `$SCRATCH/foo`, and not in `$HOME/foo`.
-
-You can transfer file to your `$HOME` directory via the DTNs by specifying the
-full path as the destination:
-```
-$ scp foo <sunetid>@dtn.sherlock.stanford.edu:$HOME/foo
-```
+    You can transfer file to your `$HOME` directory via the DTNs by specifying the
+    full path as the destination:
+    ```
+    $ scp foo <sunetid>@dtn.sherlock.stanford.edu:$HOME/foo
+    ```
 
 ## Cloud storage
 
