@@ -216,7 +216,7 @@ Configuration failed because libudunits2.so was not found. Try installing:...
 configure: error: gdal-config not found or not executable.
 ```
 
-This is because `sf` needs a few dependencies, like `udunits` and `gdal`. in
+This is because `sf` needs a few dependencies, like `udunits` and `gdal` in
 order to compile and install successfully.  Fortunately those dependencies are
 already available as modules on Sherlock.
 
