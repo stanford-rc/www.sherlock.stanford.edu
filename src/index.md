@@ -139,5 +139,5 @@ your request, and we'll get back to you.
 [url_srcc]:     //srcc.stanford.edu
 [url_purchase]: /docs/overview/orders/
 [url_catalog]:  /catalog
-[url_order]:    /order_form
+[url_order]:    /order
 
