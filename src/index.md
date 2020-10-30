@@ -5,8 +5,8 @@ title: Sherlock
 subtitle: The HPC cluster for all your computing needs
 desc: >-
   Need to access computing resources to support your sponsored or departmental
-  research at Stanford? You may want to try out the Sherlock cluster! Purchased
-  and supported with seed funding from the Provost, Sherlock is a shared
+  research at Stanford? You may want to try out the Sherlock cluster! Funded
+  and supported by the Provost and Dean of Research, Sherlock is a shared
   computing cluster available for use by all Stanford faculty and their
   research teams.
 
@@ -67,6 +67,20 @@ info_subtext: All about Sherlock
 
 ---
 
+### What is Sherlock?
+
+Sherlock is a shared computing cluster available for use by all Stanford
+Faculty members and their research teams, for sponsored or departmental faculty
+research.  All research teams on Sherlock have access to a base set of managed
+computing resources, GPU-based servers, and a multi-petabyte, high-performance
+parallel file system for short-term storage.
+
+Faculty can supplement these shared nodes by purchasing additional servers, and
+become Sherlock owners. By investing in the cluster, PI groups not only receive
+exclusive access to the nodes they purchase, but also get access to all of the
+other owner compute nodes when they're not in use, thus giving them access to
+the whole breadth of Sherlock resources.
+
 
 ### Why should I use Sherlock?
 
@@ -88,6 +102,7 @@ benefit from economies of scale, as well as to access larger, professionally
 managed computing resources that what would not be available on an individual
 or even departmental basis.
 
+
 ### How much does it cost?
 
 **Sherlock is free to use for anyone doing sponsored research at Stanford.**
@@ -106,6 +121,7 @@ them. When this happens, those other owners jobs are killed to free up
 resources. Participating owner PIs also have shared access to the original base
 Sherlock nodes, along with everyone else.
 
+
 ### How big is it?
 
 Quite big! It's actually difficult to give a precise answer, as Sherlock is
@@ -120,11 +136,13 @@ to the tech specs section of the documentation. But with a computing power over
 2.3 Petaflops, Sherlock would have its place in the Top500 list of the 500 most
 powerful computer systems in the world.
 
+
 ### OK, I'm sold, how do I start?
 
 You can request an account right now, take a look at the
 [documentation](/docs), and drop us an [email](mailto:{{ support_email }}) if
 you have any questions.
+
 
 ### I want my own nodes!
 
