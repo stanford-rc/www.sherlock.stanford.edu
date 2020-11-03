@@ -92,7 +92,9 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 !!! danger "Purge policy"
 
     **Files are automatically purged from `$SCRATCH`** after an inactivity
-    period.
+    period.  Files in `$SCRATCH` that are not modified after 90 days are deleted.  
+    The contents of the file must change, the Linux `touch` command will not modify 
+    file contents or extend the file's purge date.   
 
     `$SCRATCH` is not meant to store permanent data, and should only be used
     for data associated with currently running jobs. It's not a target for
