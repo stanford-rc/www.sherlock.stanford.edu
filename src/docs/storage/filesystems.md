@@ -92,18 +92,21 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 !!! danger "Purge policy"
 
     **Files are automatically purged from `$SCRATCH`** after an inactivity
-    period.  Files in `$SCRATCH` that are not modified after 90 days are deleted.  
-    The contents of the file must change, the Linux `touch` command will not modify 
-    file contents or extend the file's purge date.   
+    period:
+
+    - files that are not modified after 90 days are automatically deleted,
+    - contents need to change for a file to be considered modified. The `touch`
+      command does not modify file contents and thus does not extend a file's
+      lifetime ont he filesystem.
 
     `$SCRATCH` is not meant to store permanent data, and should only be used
     for data associated with currently running jobs. It's not a target for
     backups, archived data, etc. See the [Expiration
-    Policy](#expiration_policy) section for details.
+    Policy](#expiration-policy) section for details.
 
 | Characteristics   |   |
 | ----------------- | --- |
-| **Type**          | P(arallel, high-performance Lustre file system |
+| **Type**          | Parallel, high-performance Lustre file system |
 | **Quota**         | 100 TB / 50,000,000 inodes[^inodes] |
 | **Snapshots**     | **NO** |
 | **Backups**       | **NO** |
