@@ -97,7 +97,7 @@ See the [Checking Quotas][url_check_quotas] section for more details.
     - files that are not modified after 90 days are automatically deleted,
     - contents need to change for a file to be considered modified. The `touch`
       command does not modify file contents and thus does not extend a file's
-      lifetime ont he filesystem.
+      lifetime on the filesystem.
 
     `$SCRATCH` is not meant to store permanent data, and should only be used
     for data associated with currently running jobs. It's not a target for
