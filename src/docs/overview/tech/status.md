@@ -49,11 +49,11 @@ dashboard][url_status].
 [url_maintenances-and-upgrades]: /docs/overview/concepts/#maintenances-and-upgrades
 ## Current usage
 
-<iframe
+<iframe style="float:left;"
   src="https://srcc-lookout.stanford.edu/public/dashboard-solo/db/sherlock-public-dashboard?panelId=3&theme=light"
   width="28%" height="200px" frameborder="0">
 </iframe>
-<iframe
+<iframe style="float:right;"
   src="https://srcc-lookout.stanford.edu/public/dashboard-solo/db/sherlock-public-dashboard?panelId=4&theme=light"
   width="68%" height="200px" frameborder="0">
 </iframe>
