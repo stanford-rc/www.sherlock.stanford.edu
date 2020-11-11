@@ -224,7 +224,7 @@ Transfer][url_data_sshfs] page.
 
 [url_NFS]:              //en.wikipedia.org/wiki/Network_File_System
 [url_lustre]:           //en.wikipedia.org/wiki/Lustre_(file_system)
-[url_oak]:              //oak-storage.stanford.edu
+[url_oak]:              //uit.stanford.edu/service/oak-storage
 [url_data_sshfs]:       /docs/storage/data-transfer#sshfs
 [url_purge]:            /docs/storage/filesystems/#expiration-policy
 

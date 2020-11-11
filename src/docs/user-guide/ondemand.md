@@ -307,12 +307,12 @@ To run Tensorboard via Sherlock OnDemand:
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_oak]:          https://oak-storage.stanford.edu
-[url_osc]:          https://www.osc.edu
-[url_ood]:          https://openondemand.org
-[url_ood_docs]:     https://www.osc.edu/resources/online_portals/ondemand
+[url_oak]:          //uit.stanford.edu/service/oak-storage
+[url_osc]:          //www.osc.edu
+[url_ood]:          //openondemand.org
+[url_ood_docs]:     //www.osc.edu/resources/online_portals/ondemand
 
-[url_ood_logout]:   https://login.sherlock.stanford.edu/logout
+[url_ood_logout]:   //login.sherlock.stanford.edu/logout
 
 [url_storage]:      /docs/storage
 [url_gssapi]:       /docs/advanced-topics/connection/#gssapi
