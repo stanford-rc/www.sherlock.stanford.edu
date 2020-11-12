@@ -51,7 +51,7 @@ generations, with numerous contributions from many research groups on campus.
 
 | Type           | Qty  | Details |
 | ---            | ---: |         |
-| login nodes    | {{ get_value("interfaces", "login nodes") }} :octicons-server-24: | `sherlock.stanford.edu` (load-balanced) |
+| [login nodes][url_login] | {{ get_value("interfaces", "login nodes") }} :octicons-server-24: | `sherlock.stanford.edu` (load-balanced) |
 | [data transfer nodes][url_dtn] | {{ get_value("interfaces", "data transfer nodes (DTNs)") }} :octicons-server-24: | dedicated bandwidth for large data transfers |
 
 ### Computing
@@ -118,6 +118,7 @@ files and directories from both Sherlock 1.0 and Sherlock 2.0 nodes.
 [url_status]:  https://status.sherlock.stanford.edu
 [url_gpus]:    /docs/user-guide/gpu
 [url_storage]: /docs/storage
+[url_login]:   /docs/user-guide/running-jobs/#login-nodes
 [url_dtn]:     /docs/storage/data-transfer#data-transfer-node-dtn
 [url_oak]:     //uit.stanford.edu/service/oak-storage
 [url_clugens]: /docs/overview/concepts/#cluster-generations
