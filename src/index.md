@@ -120,24 +120,47 @@ configurations][url_catalog], for the use of their research teams. Using a
 traditional compute cluster condominium model, participating faculty and their
 teams get priority access to the resources they purchase. When those resources
 are idle, other "owners" can use them, until the purchasing owner wants to use
-them. When this happens, those other owners jobs are killed to free up
+them. When this happens, those other owners jobs are re-queued to free up
 resources. Participating owner PIs also have shared access to the original base
 Sherlock nodes, along with everyone else.
 
 
 ### How big is it?
 
-Quite big! It's actually difficult to give a precise answer, as Sherlock is
-constantly evolving with new hardware additions.
+{% set public_cores = numbers | selectattr("name", "==", "partitions")
+                              | map(attribute="fields") | first
+                              | rejectattr("name", "==", "owners")
+                              | sum(attribute="cores")
+                              | round(-2, "floor") | int %}
 
-As of mid-2020, Sherlock features over 5,000 CPU cores available to all
-researchers, and more than 25,000 additional nodes available to Sherlock
+{% set owner_cores = numbers  | selectattr("name", "==", "partitions")
+                              | map(attribute="fields") | first
+                              | selectattr("name", "==", "owners")
+                              | map(attribute="cores") | first
+                              | round(-2, "floor") | int %}
+
+{% set pflops = numbers | selectattr("name", "==", "computing")
+                              | map(attribute="fields") | first
+                              | selectattr("name", "==", "PFLOPs")
+                              | map(attribute="value") | first
+                              | round(1, "floor") %}
+
+
+
+Quite big! It's actually difficult to give a definitive answer, as Sherlock is
+constantly evolving and expanding with new hardware additions.
+
+As of {{ git.date.strftime("%B %Y") }}, Sherlock features over {{
+"{:,}".format(public_cores) }} CPU cores available to all researchers, and more
+than {{ "{:,}".format(owner_cores) }}  additional cores available to Sherlock
 owners, faculty who have augmented the cluster with their own purchases.
 
 For more details about Sherlock size and technical specifications, please refer
-to the tech specs section of the documentation. But with a computing power over
-2.3 Petaflops, Sherlock would have its place in the Top500 list of the 500 most
-powerful computer systems in the world.
+to the [tech specs][url_specs] section of the documentation. And for even more
+numbers and figures, checkout the [Sherlock by the numbers][url_numbers] page.
+But with a computing power over {{ pflops }} Petaflops, Sherlock would have its
+place in the Top500 list of the 500 most powerful computer systems in the
+world.
 
 
 ### OK, I'm sold, how do I start?
@@ -161,4 +184,5 @@ your request, and we'll get back to you.
 [url_purchase]: /docs/overview/orders/
 [url_catalog]:  /catalog
 [url_order]:    /order
-
+[url_specs]:    /docs/overview/tech/specs
+[url_numbers]:  /docs/overview/tech/numbers

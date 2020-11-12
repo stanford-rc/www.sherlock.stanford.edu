@@ -1,62 +1,100 @@
 # Technical specifications
 
-!!! note
+{% macro get_value(category, item, attr="value", rnd=0, fmt="{:,}") -%}
+    {%- set val = numbers | selectattr("name", "==", category)
+                          | map(attribute="fields") | first
+                          | selectattr("name", "==", item)
+                          | map(attribute=attr) | first -%}
+    {%- if val is number -%} {# round numbers #}
+        {%- if '.' not in val|string -%} {# convert ints back to int #}
+            {%- set val = val | round(rnd, "floor") | int -%}
+        {%- else -%} {# keep floats as is #}
+            {%- set val = val | round(rnd, "floor") -%}
+        {%- endif -%}
+    {%- endif -%}
+    {{ fmt.format(val) }}
+{%- endmacro -%}
 
-    Sherlock is driven by contributions from individual PIs and groups, and as
-    such, is constantly evolving.  The technical specifications outlined here
-    are subject to change, and may not be an accurate representation of the
-    current cluster configuration. The numbers provided on this page are as of
-    **June 2017**.
 
 ## In a nutshell
 
-Sherlock features more than 1,000 compute nodes, 18,000+ CPU cores, 120TB of
-total memory, 400+ GPUs, for a total computing power of more than 1 Petaflop.
-That would rank it in the Top500 list of the most powerful supercomputers in
-the world.
+Sherlock features over **{{ get_value("computing", "compute nodes", rnd=-2)
+}}** compute nodes, **{{ get_value("computing", "CPU cores", rnd=-2) }}+** CPU
+cores and **{{ get_value("computing", "GPUs", rnd=-2) }}+** GPUs, for a total
+computing power of more than **{{ get_value("computing", "PFLOPs", rnd=1) }}**
+Petaflops. That would rank it in the Top500 list of the most powerful
+supercomputers in the world.
 
-A parallel high-performance filesystem of more than 3 PB, delivering over
-20GB/s of sustained I/O bandwidth, provides scratch storage for more than 2,300
-users, and 400 PI groups.
+The cluster currently extends {{ get_value("networking", "Infiniband switches",
+"desc", fmt="{}") }}. A **{{ get_value("storage", "`$SCRATCH`", fmt="{}") |
+filesizeformat }}** {{ get_value("storage", "`$SCRATCH`", "desc", fmt="{}") }},
+provides scratch storage for more than **{{ get_value("users", "user accounts",
+rnd=-2) }}** users, and **{{ get_value("users", "PI groups", rnd=-2) }}** PI
+groups.
 
-## Computing
+
+## Resources
 
 The Sherlock cluster has been initiated in January 2014 with a base of freely
-available computing resources and the accompanying networking and storage
-infrastructure. It has since been expanded with additions from multiple PI
-groups to reach the capacity of its Infinband network in December 2016.
+available computing resources (about 2,000 CPU cores) and the accompanying
+networking and storage infrastructure (about 1 PB of shared storage).
 
-!!! info "Sherlock 2.0"
+Since then, it's been constantly expanding, spawning multiple cluster
+generations, with numerous contributions from many research groups on campus.
 
-    A new Infiniband fabric has been installed in early 2017, as the foundation
-    for Sherlock 2.0. The existing nodes will join that new cluster in the
-    second half of 2017, at which point both clusters will be merged.
+!!! sherlock "Cluster generations"
 
-### Sherlock 1.0
+    For more information about Sherlock's ongoing evolution and expansion,
+    please see [Cluster generations][url_clugens].
+
+### Interface
+
 | Type           | Qty  | Details |
 | ---            | ---: |         |
-| login nodes    | 4    | `sherlock.stanford.edu` (load-balanced) |
-| [data transfer node][url_dtn] | 1 | dedicated bandwidth for large data transfers |
-| compute nodes  | 120  | 16 cores[^2650v2], 64 GB RAM, 100 GB local SSD |
-| *bigmem* nodes | 2    | 32 cores[^4640], 1.5 TB RAM, 13TB of local storage |
-| [GPU nodes][url_gpus] | 5 | 16 cores[^2650v2], 64 GB RAM, 200 GB local SSD, 8 GPUs<br/>*NVIDIA Tesla K20Xm, K80, or GeForce GTX TITAN Black* |
-| owners nodes   | 716  | various CPU/memory configs, *bigmem* and GPU nodes |
-| interconnect   |      | 2:1 oversubscribed FDR Infiniband fabric (56 GB/s) |
-| operating system |    | CentOS 6.x |
+| login nodes    | {{ get_value("interfaces", "login nodes") }} :octicons-server-24: | `sherlock.stanford.edu` (load-balanced) |
+| [data transfer nodes][url_dtn] | {{ get_value("interfaces", "data transfer nodes (DTNs)") }} :octicons-server-24: | dedicated bandwidth for large data transfers |
 
-### Sherlock 2.0
-| Type           | Qty  | Details |
-| ---            | ---: |         |
-| login nodes    | 2    | `login.sherlock.stanford.edu` (load-balanced) |
-| compute nodes  | 60   | 20 cores[^2640v4], 128 GB RAM, 200 GB local SSD |
-| *bigmem* nodes | 2    | 56 cores[^4650v4], 3.0 TB RAM, 200 GB local SSD<br/>32 cores[^2697Av4], 512 GB RAM, 200GB local SSD|
-| [GPU nodes][url_gpus] | 2 | 20 cores[^2640v4], 128 GB RAM, 200 GB local SSD, 4 GPUs<br/>*NVIDIA Tesla P100-PCIE-16GB, Tesla P40* |
-| owners nodes   | 160  | various CPU/memory configs, *bigmem* and GPU nodes |
-| interconnect   |      | 2:1 oversubscribed EDR Infiniband fabric (100 GB/s) |
-| operating system |    | CentOS 7.x |
+### Computing
+
+!!! info "Access to computing resources"
+
+    Computing resources marked with :material-lock-open-outline:{: .chk_yes :}
+    below are freely available to every Sherlock user. Resources marked with
+    :material-lock-outline:{: .chk_no :} are only accessible to Sherlock
+    [owners][url_owners] and their research teams.
 
 
-## Storage
+
+<style>
+th:nth-child(2)  { min-width: 0 !important;
+</style>
+
+| Type  | Access | Nodes | CPU cores | Details |
+| ---   | :---:   | ---:  | ---:      | ---     |
+{%- set partitions = numbers | selectattr("name", "==", "partitions") | first -%}
+{%- for part in partitions.fields %}
+| {{ part.desc }}<br/><small>**`{{ part.name }}`** partition</small>  | {{ part.access
+        | replace("public",  ":material-lock-open-outline:{: .chk_yes :}")
+        | replace("private", ":material-lock-outline:{: .chk_no :}") -}}
+| {{- '{:,}'.format(part.nodes) }} :octicons-server-24: | {{ '{:,}'.format(part.cores) }} :octicons-cpu-24: | <small>
+    {%- if part.name != "owners" -%}
+        {{ part.details | replace("\n","<br/>")
+                        | replace(" nodes w/", "x")
+                        | replace("-core", " :octicons-cpu-24:")
+                        | replace(" GPUs"," :material-expansion-card:")
+                        | replace("IB, ", "IB<br/><span style='visibility: hidden'>- </span>")
+        }}
+    {%- else -%}
+        {%- set d = part.details -%}
+        {{ d.split("\n")|length }} different node configurations, including GPU and _bigmem_ nodes
+    {%- endif -%}
+</small> |
+{%- endfor %}
+| **Total** | | **{{ get_value("computing", "compute nodes") }} :octicons-server-24:** | **{{ get_value("computing", "CPU cores") }} :octicons-cpu-24:** | |
+
+
+
+### Storage
 
 !!! info "More information"
 
@@ -66,10 +104,13 @@ groups to reach the capacity of its Infinband network in December 2016.
 Storage components are common to both clusters, meaning users can find the same
 files and directories from both Sherlock 1.0 and Sherlock 2.0 nodes.
 
-* Highly-available NFS filesystem for user and group home directories (with hourly
-  snapshots and off-site replication)
-* High-performance Lustre scratch filesystem (3 PB, 20+GB/s sustained I/O bandwidth, 18 I/O servers, 1,080 disks)
+* Highly-available NFS filesystem for user and group home directories (with
+  hourly snapshots and off-site replication)
+* High-performance Lustre scratch filesystem ({{ get_value("storage",
+  "`$SCRATCH`", fmt="{}") | filesizeformat }} {{ get_value("storage",
+  "`$SCRATCH`", "desc", fmt="{}") }})
 * Direct access to SRCC's [Oak][url_oak] long-term research data storage system
+  ({{ get_value("storage", "`$OAK`", fmt="{}") | filesizeformat }})
 
 
 
@@ -80,20 +121,7 @@ files and directories from both Sherlock 1.0 and Sherlock 2.0 nodes.
 [url_dtn]:     /docs/storage/data-transfer#data-transfer-node-dtn
 [url_oak]:     //uit.stanford.edu/service/oak-storage
 [url_clugens]: /docs/overview/concepts/#cluster-generations
-
-
-[url_2650v2]:  https://ark.intel.com/products/75269/Intel-Xeon-Processor-E5-2650-v2-20M-Cache-2_60-GHz
-[url_2640v4]:  https://ark.intel.com/products/92984/Intel-Xeon-Processor-E5-2640-v4-25M-Cache-2_40-GHz
-[url_2697Av4]: https://ark.intel.com/products/91768/Intel-Xeon-Processor-E5-2697A-v4-40M-Cache-2_60-GHz
-[url_4640]:    https://ark.intel.com/products/64603/Intel-Xeon-Processor-E5-4640-20M-Cache-2_40-GHz-8_00-GTs-Intel-QPI
-[url_4650v4]:  https://ark.intel.com/products/93809/Intel-Xeon-Processor-E5-4650-v4-35M-Cache-2_20-GHz
-
-[comment]: # (footnodes ------------------------------------------------------)
-[^2650v2]:  two-socket Intel(r) Xeon(r) [E5-2650v2][url_2650v2] processors (8-core Ivy-Bridge, 2.60 GHz)
-[^4640]:    four-socket Intel(r) Xeon(r) [E5-4640][url_4640] processors (8-core Sandy-Bridge, 2.40 GHz)
-[^2640v4]:  two-socket Intel(r) Xeon(r) [E5-2640v4][url_2640v4] processors (10-core Broadwell, 2.40 GHz)
-[^4650v4]:  four-socket Intel(r) Xeon(r) [E5-4650v4][url_4650v4] processors (14-core Broadwell, 2.20 GHz)
-[^2697Av4]: two-socket Intel(r) Xeon(r) [E5-2697Av4][url_2697Av4] processors (16-core Broadwell, 2.60 GHz)
+[url_owners]:  /docs/overview/concepts/#investing-in-sherlock
 
 
 
