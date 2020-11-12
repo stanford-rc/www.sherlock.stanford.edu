@@ -30,6 +30,9 @@ nav_links:
     - name: docs
       url: '/docs'
       icon: book
+    - name: shell
+      url: '/shell'
+      icon: terminal
     - name: sep
     - name: support
       url: '#'
