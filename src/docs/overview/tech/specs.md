@@ -108,7 +108,7 @@ files and directories from both Sherlock 1.0 and Sherlock 2.0 nodes.
   hourly snapshots and off-site replication)
 * High-performance Lustre scratch filesystem ({{ get_value("storage",
   "`$SCRATCH`", fmt="{}") | filesizeformat }} {{ get_value("storage",
-  "`$SCRATCH`", "desc", fmt="{}") }})
+  "`$SCRATCH`", "desc", fmt="{}") | replace("**","") }})
 * Direct access to SRCC's [Oak][url_oak] long-term research data storage system
   ({{ get_value("storage", "`$OAK`", fmt="{}") | filesizeformat }})
 
