@@ -12,7 +12,7 @@ directories in these file systems to store their data.
     actively being computed on with Sherlock, and should not be used as a
     target for backups from other systems.
 
-    If you're looking for a long-term storage solution for reserach data, SRCC
+    If you're looking for a long-term storage solution for research data, SRCC
     offers the [Oak storage system][url_oak], which is specifically intended
     for this usage.
 
