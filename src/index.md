@@ -127,19 +127,19 @@ Sherlock nodes, along with everyone else.
 
 ### How big is it?
 
-{% set public_cores = numbers | selectattr("name", "==", "partitions")
+{% set public_cores = facts | selectattr("name", "==", "partitions")
                               | map(attribute="fields") | first
                               | rejectattr("name", "==", "owners")
                               | sum(attribute="cores")
                               | round(-2, "floor") | int %}
 
-{% set owner_cores = numbers  | selectattr("name", "==", "partitions")
+{% set owner_cores = facts    | selectattr("name", "==", "partitions")
                               | map(attribute="fields") | first
                               | selectattr("name", "==", "owners")
                               | map(attribute="cores") | first
                               | round(-2, "floor") | int %}
 
-{% set pflops = numbers | selectattr("name", "==", "computing")
+{% set pflops = facts         | selectattr("name", "==", "computing")
                               | map(attribute="fields") | first
                               | selectattr("name", "==", "PFLOPs")
                               | map(attribute="value") | first
@@ -157,7 +157,7 @@ owners, faculty who have augmented the cluster with their own purchases.
 
 For more details about Sherlock size and technical specifications, please refer
 to the [tech specs][url_specs] section of the documentation. And for even more
-numbers and figures, checkout the [Sherlock by the numbers][url_numbers] page.
+numbers and figures, checkout the [Sherlock facts][url_facts] page.
 But with a computing power over {{ pflops }} Petaflops, Sherlock would have its
 place in the Top500 list of the 500 most powerful computer systems in the
 world.
@@ -185,4 +185,4 @@ your request, and we'll get back to you.
 [url_catalog]:  /catalog
 [url_order]:    /order
 [url_specs]:    /docs/overview/tech/specs
-[url_numbers]:  /docs/overview/tech/numbers
+[url_facts]:    /docs/overview/tech/facts

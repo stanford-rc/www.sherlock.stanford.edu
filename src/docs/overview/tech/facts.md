@@ -1,11 +1,11 @@
-# Sherlock <small>by the numbers</small>
+# Sherlock facts
 {% if git.status -%}
 <small>_as of {{ git.date.strftime("%B %Y") }}_</small>
 {%- endif %}
 {: style="margin-top: -2.5rem;"}
 
 
-{% for category in numbers if category.name != "partitions" %}
+{% for category in facts if category.name != "partitions" %}
 ## :fontawesome-solid-{{ category.icon|default(category.name) }}: {{ category.name|capitalize }}
   {% for field in category.fields -%}
     {%- set fmt = field.fmt|default("{:,}") %}

@@ -1,7 +1,7 @@
 # Technical specifications
 
 {% macro get_value(category, item, attr="value", rnd=0, fmt="{:,}") -%}
-    {%- set val = numbers | selectattr("name", "==", category)
+    {%- set val = facts   | selectattr("name", "==", category)
                           | map(attribute="fields") | first
                           | selectattr("name", "==", item)
                           | map(attribute=attr) | first -%}
@@ -71,7 +71,7 @@ th:nth-child(2)  { min-width: 0 !important;
 
 | Type  | Access | Nodes | CPU cores | Details |
 | ---   | :---:   | ---:  | ---:      | ---     |
-{%- set partitions = numbers | selectattr("name", "==", "partitions") | first -%}
+{%- set partitions = facts | selectattr("name", "==", "partitions") | first -%}
 {%- for part in partitions.fields %}
 | {{ part.desc }}<br/><small>**`{{ part.name }}`** partition</small>  | {{ part.access
         | replace("public",  ":material-lock-open-outline:{: .chk_yes :}")
