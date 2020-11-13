@@ -148,13 +148,12 @@ There are two components in the cost of a compute node purchase:
 
 Purchasing nodes on Sherlock is usually a 5-step process:
 
-* [ ] PI determines the number and types of nodes they'd like to purchase and
-  contacts SRCC to provide financial information,
-* [ ] SRCC requests a formal quote from the vendors to finalize pricing and
-communicate it back to the PI for approval,
-* [ ] SRCC submits a Stanford PO to the vendor,
-* [ ] SRCC takes delivery of the hardware and proceeds to its installation
-* [ ] SRCC notifies the PI that their nodes are ready to be used.
+  1. the PI use the [order form][url_order_form] to submit an order,
+  2. SRCC requests a formal vendor quote to finalize pricing and communicate it
+     back to the PI for approval,
+  3. SRCC submits a Stanford PO to the vendor,
+  4. SRCC takes delivery of the hardware and proceeds to its installation,
+  5. SRCC notifies the PI that their nodes are ready to be used.
 
 The typical delay between a PO submission to the vendor and the availability of
 the compute nodes to the PIs is usually between 4 and 8 weeks (global
@@ -185,20 +184,39 @@ To place an order, we'll need the following information:
 
 ### Placing an order
 
-To start ordering compute nodes for Sherlock, please:
+To start ordering compute nodes for Sherlock:
 
-1. **check the [Sherlock compute nodes catalog][url_catalog]**
-   :octicons-lock-16:[^sunet] to review prices and choose the configurations
-   you'd like to purchase
+<style>
+.md-button {
+    min-width: 8rem;
+    text-align: center;
+}
+.steps {
+    width: 50%;
+    padding: 10px;
+}
+@media screen and (max-width: 992px) {
+    .steps {
+        width: 100%;
+        float: none !important;
+    }
+}
+</style>
 
-    [Choose :fontawesome-solid-stream:][url_catalog]{: .md-button .md-button .md-button--primary }
+<div markdown="1" class="steps" style="float:left">
+:material-numeric-1-circle: **check the [Sherlock catalog][url_catalog]**
+:octicons-lock-16:[^sunet] to review prices and select your configurations
 
-2. **use the [order form][url_order_form]** :octicons-lock-16:[^sunet] to
-   submit your request and provide the [required
-   information](#required-information)
+[Choose :fontawesome-solid-stream:][url_catalog]{: .md-button .md-button .md-button--primary }
+</div>
+<div markdown="1" class="steps" style="float:right">
+:material-numeric-2-circle: **fill in the [order form][url_order_form]**
+:octicons-lock-16:[^sunet] to submit your request and provide the [required
+information](#required-information)
 
-    [Order :fontawesome-solid-shopping-cart:][url_order_form]{: .md-button .md-button--primary }
-
+[Order :fontawesome-solid-shopping-cart:][url_order_form]{: .md-button .md-button--primary }
+</div>
+<div style="clear:both"></div>
 
 And we'll be in touch shortly!
 
