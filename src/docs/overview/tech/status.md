@@ -27,26 +27,21 @@
 }
 </style>
 
-## Scheduled maintenances
-
-[Maintenance operations and upgrades][url_maintenances-and-upgrades] are
-scheduled on Sherlock on a regular basis.  Per the University's [Minimum
-Security policies][url_minsec], we deploy security patches on Sherlock as
-required for compliance.
-
-
-[url_minsec]:  https://uit.stanford.edu/guide/securitystandards
-
-
 ## Components and services
+
+!!! info "Scheduled maintenances"
+
+    [Maintenance operations and upgrades][url_maintenances-and-upgrades] are
+    scheduled on Sherlock on a regular basis.  Per the University's [Minimum
+    Security policies][url_minsec], we deploy security patches on Sherlock as
+    required for compliance.
+
 
 Sherlock status is <span id="sh_status"></span>
 
 For more details about Sherlock components and services, see the [status
 dashboard][url_status].
 
-[url_status]:  https://status.sherlock.stanford.edu
-[url_maintenances-and-upgrades]: /docs/overview/concepts/#maintenances-and-upgrades
 ## Current usage
 
 <iframe style="float:left;"
@@ -58,5 +53,11 @@ dashboard][url_status].
   width="68%" height="200px" frameborder="0">
 </iframe>
 
+
+[comment]: #  (link URLs -----------------------------------------------------)
+
+[url_minsec]:  https://uit.stanford.edu/guide/securitystandards
+[url_status]:  https://status.sherlock.stanford.edu
+[url_maintenances-and-upgrades]: /docs/overview/concepts/#maintenances-and-upgrades
 
 --8<--- "includes/_acronyms.md"
