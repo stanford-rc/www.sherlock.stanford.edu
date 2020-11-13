@@ -4,8 +4,18 @@
 {%- endif %}
 {: style="margin-top: -2.5rem;"}
 
+<style>
+.facts { width: 50% }
+@media screen and (max-width: 992px) {
+    .facts {
+        width: 100%;
+        float: none !important;
+    }
+}
+</style>
 
 {% for category in facts if category.name != "partitions" %}
+<div markdown="1" class="facts" style="float: {{ loop.cycle('left', 'right') }}">
 ## :fontawesome-solid-{{ category.icon|default(category.name) }}: {{ category.name|capitalize }}
   {% for field in category.fields -%}
     {%- set fmt = field.fmt|default("{:,}") %}
@@ -18,8 +28,7 @@
      {{ field.desc }}
      {: .number_desc :}{% endif %}
   {% endfor %}
-
+</div>
+{{ loop.cycle('', '<div style="clear: both"></div>') }}
 {% endfor %}
-
-
 
