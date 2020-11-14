@@ -27,7 +27,6 @@
 }
 </style>
 
-## Components and services
 
 !!! info "Scheduled maintenances"
 
@@ -36,6 +35,7 @@
     Security policies][url_minsec], we deploy security patches on Sherlock as
     required for compliance.
 
+## Components and services
 
 Sherlock status is <span id="sh_status"></span>
 
