@@ -5,10 +5,14 @@
 {: style="margin-top: -2.5rem;"}
 
 <style>
-.facts { width: 50% }
+.facts {
+    width: 50%;
+    padding-right: 4em;
+}
 @media screen and (max-width: 992px) {
     .facts {
         width: 100%;
+        padding-right: 2em;
         float: none !important;
     }
 }
