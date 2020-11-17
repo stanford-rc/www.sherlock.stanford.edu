@@ -73,9 +73,8 @@ simple matrix multiplication example, and demonstrate how to feed R code as a
 
 === "R-test.sbatch"
 
-   ```bash
-    #!/bin/bash
-
+    ``` bash
+    #!/usr/bin/bash
     #SBATCH --time=00:10:00
     #SBATCH --mem=10G
     #SBATCH --output=R-test.log
