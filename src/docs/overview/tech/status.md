@@ -49,7 +49,7 @@ dashboard][url_status].
   width="28%" height="200px" frameborder="0">
 </iframe>
 <iframe style="float:right;"
-  src="https://srcc-lookout.stanford.edu/public/dashboard-solo/db/sherlock-public-dashboard?panelId=4&theme=light"
+  src="https://srcc-lookout.stanford.edu/public/dashboard-solo/db/sherlock-public-dashboard?panelId=11&theme=light"
   width="68%" height="200px" frameborder="0">
 </iframe>
 
