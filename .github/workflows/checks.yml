@@ -11,32 +11,38 @@ env:
 
 jobs:
 
-  build:
+  build:  # --------------------------------------------------------------------
     runs-on: ubuntu-latest
     steps:
-
-      - name: checkout
-        uses: actions/checkout@v2
-
-      - name: setup
-        uses: actions/setup-python@v1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
         with:
           python-version: ${{ env.PYTHON_VERSION }}
-
-      - name: install
-        run: |
+      - run: |
           pip install -r requirements.txt
-
-      - name: lint
-        run: |
+      - run: |
           mkdocs --version
           mkdocs build --strict --verbose
-          
-      - name: slack_notification
-        uses: iRoachie/slack-github-actions@v2.0.0
-        if: ${{ always() }}
+
+    lint: # --------------------------------------------------------------------
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: github/super-linter@v3
+          env:
+            DEFAULT_BRANCH: main
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
+
+    notification: # ------------------------------------------------------------
+      runs-on: ubuntu-latest
+      needs: [build, lint]
+      if: always()
+      steps:
+      - uses: technote-space/workflow-conclusion-action@v2
+      - uses: iRoachie/slack-github-actions@v2.0.1
         with:
           status: ${{ job.status }}
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
