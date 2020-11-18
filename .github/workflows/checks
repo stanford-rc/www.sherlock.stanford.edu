@@ -1,0 +1,42 @@
+name: checks
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+
+env:
+  CI: true
+  PYTHON_VERSION: 3.x
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: setup
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: install
+        run: |
+          pip install -r requirements.txt
+
+      - name: lint
+        run: |
+          mkdocs --version
+          mkdocs build --strict --verbose
+          
+      - name: slack_notification
+        uses: iRoachie/slack-github-actions@v2.0.0
+        if: ${{ always() }}
+        with:
+          status: ${{ job.status }}
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
