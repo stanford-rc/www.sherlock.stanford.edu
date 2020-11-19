@@ -2,7 +2,7 @@ name: deploy
 on:
   workflow_dispatch:
   push:
-    branches: 
+    branches:
       - main
     paths:
       - 'mkdocs.yml'
@@ -42,8 +42,8 @@ jobs:
         run: |
           mkdocs gh-deploy --force
           mkdocs --version
-          
-      # Send Slack notification
+
+# Send Slack notification
       - uses: iRoachie/slack-github-actions@v2.0.0
         if: ${{ always() }}
         with:
