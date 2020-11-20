@@ -99,7 +99,8 @@ See the [Checking Quotas][url_check_quotas] section for more details.
     **Files are automatically purged from `$SCRATCH`** after an inactivity
     period:
 
-    - files that are not modified after 90 days are automatically deleted,
+    - files that are not modified after {{ purge_days }} days are automatically
+      deleted,
     - contents need to change for a file to be considered modified. The `touch`
       command does not modify file contents and thus does not extend a file's
       lifetime on the filesystem.
@@ -115,7 +116,7 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 | **Quota**         | 100 TB / 50,000,000 inodes[^inodes] |
 | **Snapshots**     | **NO** |
 | **Backups**       | **NO** |
-| **Purge policy**  | data not modified in the last 90 days are automatically purged |
+| **Purge policy**  | data not modified in the last {{ purge_days }} days are automatically purged |
 | **Scope**         | all login and compute nodes |
 
 
@@ -152,8 +153,8 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 
 !!! Danger "Inactive files are automatically purged"
 
-    Files that are **not modified in the last 90 days** will be automatically
-    deleted from the filesystem.
+    Files that are **not modified in the last {{ purge_days }} days** will be
+    automatically deleted from the filesystem.
 
 To manage available space and maintain optimal performance for all jobs, all
 files on `$SCRATCH` are subject to automatic purges. Meaning that after a
@@ -162,10 +163,11 @@ deleted from the filesystem.
 
 File activity is defined based on the last time a file's contents (the actual
 data in the file) have been modified. Meaning that **files whose contents have
-not been modified in the previous 90 days will be automatically deleted.**
+not been modified in the previous {{ purge_days }} days will be automatically
+deleted.**
 
 Each time a file's contents are modified, the expiration countdown is reset,
-and the file gets another 90-day of lifetime.
+and the file gets another {{ purge_days }}-day of lifetime.
 
 !!! important "Metadata changes don't qualify as an update"
 
@@ -225,7 +227,7 @@ automatic purges.
 | **Quota**         | 100 TB / 50,000,000 inodes[^inodes] |
 | **Snapshots**     | **NO** |
 | **Backups**       | **NO** |
-| **Purge policy**  | data not accessed in the last 90 days are automatically purged |
+| **Purge policy**  | data not accessed in the last {{ purge_days }} days are automatically purged |
 | **Scope**         | all login and compute nodes |
 
 
@@ -396,7 +398,7 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_contact]:          mailto:{{ support_email }}
-[url_oak]:              <https://uit.stanford.edu/service/oak-storage>
+[url_oak]:              //uit.stanford.edu/service/oak-storage
 [url_check_quotas]:     /docs/storage/#checking-quotas
 [url_snapshots]:        /docs/storage/data-protection/#snapshots
 [url_gdrive]:           /docs/storage/data-transfer/#google-drive
