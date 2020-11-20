@@ -1,4 +1,4 @@
-name: test
+name: check
 
 # restricting branches prevents jobs from being run twice since
 # a push to a pull request triggers two events.
@@ -44,15 +44,13 @@ jobs:
       - uses: avto-dev/markdown-lint@v1
         with:
           config: .markdownlintrc
-      
 
 
   linkcheck: # -------------------------------------------------------------
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-                
-            
+
 
   notification: # ------------------------------------------------------------
     runs-on: ubuntu-20.04
@@ -61,7 +59,7 @@ jobs:
     steps:
       - uses: technote-space/workflow-conclusion-action@v2
       - uses: iRoachie/slack-github-actions@v2.0.1
-        #if: env.WORKFLOW_CONCLUSION == 'failure' 
+        #if: env.WORKFLOW_CONCLUSION == 'failure'
         with:
           status: ${{ env.WORKFLOW_CONCLUSION }}
         env:
