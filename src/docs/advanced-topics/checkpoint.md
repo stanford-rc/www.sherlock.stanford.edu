@@ -73,7 +73,7 @@ Benefits of checkpointing and restarting jobs with DMTCP will provide:
 
 Here are the general steps required to run a program with checkpointing:
 
-```bash
+```shell
 
 ### start dmtcp_coordinator in the background
 $ dmtcp_coordinator --daemon --exit-on-last $@ 1>/dev/null 2>&1
@@ -87,7 +87,7 @@ $ dmtcp_command --bcheckpoint
 
 And to restart the application from the latest checkpoint:
 
-```bash
+```shell
 ### restart
 $ ./dmtcp_restart_script.sh
 ```

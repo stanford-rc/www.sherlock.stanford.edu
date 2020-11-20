@@ -1,4 +1,6 @@
 # Sherlock facts
+<!-- markdownlint-disable MD013 MD037 -->
+
 {% if git.status -%}
 <small>_as of {{ git.date.strftime("%B %Y") }}_</small>
 {%- endif %}

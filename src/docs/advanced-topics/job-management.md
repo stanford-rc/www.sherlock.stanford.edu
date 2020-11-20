@@ -2,7 +2,8 @@
 
 You may have encountered situations where your jobs get rejected at submission
 with errors like this:
-```
+
+```shell
 sbatch: error: MaxSubmitJobsPerAccount
 sbatch: error: MaxSubmitJobsPerUser
 ```
@@ -52,10 +53,10 @@ done
 wait # important to make sure the job doesn't exit before the background tasks are done
 ```
 
-  * `--array=1-100:10` will use job array indexes 0, 10, 20 ... 90
-  * `-n 10` will make sure each job can be subdivided in 10 1-CPU steps
-  * the `for` loop will launch 10 tasks, with indexes from
-    `SLURM_ARRAY_TASK_ID` to `SLURM_ARRAY_TASK_ID + 9`.
+* `--array=1-100:10` will use job array indexes 0, 10, 20 ... 90
+* `-n 10` will make sure each job can be subdivided in 10 1-CPU steps
+* the `for` loop will launch 10 tasks, with indexes from `SLURM_ARRAY_TASK_ID`
+  to `SLURM_ARRAY_TASK_ID + 9`.
 
 This would submit a 10-task array job, each of them running 10 steps
 simultaneously, on the 10 CPUs that each of the job array item will be allocated.

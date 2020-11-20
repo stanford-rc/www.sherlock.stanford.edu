@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD024 -->
 The following sections describe the characteristics and best uses of each of
 the Sherlock's filesystems.
 
@@ -34,9 +35,11 @@ scripts, rather than its explicit path.
 ### Checking quota usage
 
 The `sh_quota` tool can be used to display quota usage on `$HOME`
-```
+
+```shell
 $ sh_quota -f HOME
 ```
+
 See the [Checking Quotas][url_check_quotas] section for more details.
 
 -----
@@ -67,15 +70,17 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 `$GROUP_HOME` is best suited for group shared source code, common software
 installations, shared data sets and scripts.
 
-We strongly recommend using `$GROUP_HOME` to reference your group home directory in
-scripts, rather than its explicit path.
+We strongly recommend using `$GROUP_HOME` to reference your group home
+directory in scripts, rather than its explicit path.
 
 ### Checking quota usage
 
 The `sh_quota` tool can be used to display quota usage on `$GROUP_HOME`
-```
+
+```shell
 $ sh_quota -f GROUP_HOME
 ```
+
 See the [Checking Quotas][url_check_quotas] section for more details.
 
 
@@ -135,9 +140,11 @@ scripts, rather than its explicit path.
 ### Checking quota usage
 
 The `sh_quota` tool can be used to display quota usage on `$SCRATCH`
-```
+
+```shell
 $ sh_quota -f SCRATCH
 ```
+
 See the [Checking Quotas][url_check_quotas] section for more details.
 
 
@@ -238,9 +245,11 @@ directory in scripts, rather than its explicit path.
 ### Checking quota usage
 
 The `sh_quota` tool can be used to display quota usage on `$GROUP_SCRATCH`
-```
+
+```shell
 $ sh_quota -f GROUP_SCRATCH
 ```
+
 See the [Checking Quotas][url_check_quotas] section for more details.
 
 
@@ -375,9 +384,11 @@ scripts, rather than its explicit path.
 ### Checking quota usage
 
 The `sh_quota` tool can be used to display quota usage on `$OAK`
-```
+
+```shell
 $ sh_quota -f OAK
 ```
+
 See the [Checking Quotas][url_check_quotas] section for more details.
 
 
@@ -385,7 +396,7 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_contact]:          mailto:{{ support_email }}
-[url_oak]:              https://uit.stanford.edu/service/oak-storage
+[url_oak]:              <https://uit.stanford.edu/service/oak-storage>
 [url_check_quotas]:     /docs/storage/#checking-quotas
 [url_snapshots]:        /docs/storage/data-protection/#snapshots
 [url_gdrive]:           /docs/storage/data-transfer/#google-drive

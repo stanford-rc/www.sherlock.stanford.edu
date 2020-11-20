@@ -15,8 +15,8 @@ img[alt="logo"] {
 [![logo](img/srcc.png)][url_srcc]
 
 The Stanford Research Computing Center ([SRCC][url_srcc]) is a joint effort of
-the [Dean of Research]() and [IT Services][url_uit] to build and support a
-comprehensive program to advance computational research at Stanford.  That
+the [Dean of Research][url_dor] and [IT Services][url_uit] to build and support
+a comprehensive program to advance computational research at Stanford.  That
 includes offering and supporting traditional high performance computing (HPC)
 systems, as well as systems for high throughput and data-intensive computing.
 

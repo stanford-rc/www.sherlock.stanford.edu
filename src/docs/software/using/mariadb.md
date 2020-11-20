@@ -42,7 +42,7 @@ For this, you'll need to create a `.my.cnf` file in your home directory.
 Assuming you'll want to store your database files in a `db/` directory in your
 `$SCRATCH` folder, you can run the following commands:
 
-```
+```shell
 $ export DB_DIR=$SCRATCH/db
 $ mkdir $DB_DIR
 
@@ -81,11 +81,11 @@ Once you have the `.my.cnf` file in place, you need to initialize your database
 with some internal data that MariaDB needs. In the same terminal, run the
 following commands:
 
-```
+```shell
 $ ml system mariadb
 $ $MARIADB_DIR/scripts/mysql_install_db --basedir=$MARIADB_DIR  --datadir=$DB_DIR
 
-```
+```shell
 
 #### Start the server
 
@@ -93,11 +93,11 @@ You can now start the MariaDB server. For this, first get an allocation on a
 compute node, note the hostname of the compute node your job has been
 allocated, load the `mariadb` module, and then run the `mysqld_safe` process:
 
-```
+```shell
 $ srun --pty bash
 $ echo $SLURM_JOB_NODELIST
 sh-01-01
-$ ml system mariadb 
+$ ml system mariadb
 $ mysqld_safe
 180705 18:14:27 mysqld_safe Logging to '/home/users/kilian/db/mysqld.log'.
 180705 18:14:28 mysqld_safe Starting mysqld daemon with databases from /home/users/kilian/db/
@@ -120,7 +120,7 @@ From another terminal on Sherlock, connect to your job's compute node (here,
 it's `sh-01-01`, as shown above), load the `mariadb` module, and then run the
 `mysql` command: it will open the MariaDB shell, ready to run your SQL queries:
 
-```
+```shell
 $ ssh sh-01-01
 $ ml system mariadb
 $ mysql
@@ -134,7 +134,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 MariaDB [(none)]>
 
-```
+```shell
 
 
 Once you're done with your MariaDB instance, you can just terminate your job,
@@ -165,7 +165,7 @@ over the network rather than through a local socket.
 Like in the single-node case, you need to create a `~/.my.cnf` file, but
 without the `skip-networking` directive.
 
-```
+```shell
 $ export DB_DIR=$SCRATCH/db
 $ mkdir $DB_DIR
 
@@ -187,7 +187,7 @@ EOF
 
 And then initiate the database:
 
-```
+```shell
 $ ml system mariadb
 $ $MARIADB_DIR/scripts/mysql_install_db --basedir=$MARIADB_DIR  --datadir=$DB_DIR
 ```
@@ -215,7 +215,7 @@ need a real password, though. So please make sure to replace the
 Once you've chosen your password, you can start the `mysqld` process on a
 compute node, like before:
 
-```
+```shell
 $ srun --pty bash
 $ echo $SLURM_JOB_NODELIST
 sh-01-01
@@ -226,7 +226,7 @@ $ mysqld_safe
 And then, from another terminal, run the following commands to secure access to
 your MariaDB database.
 
-```
+```shell
 $ ssh sh-01-01
 $ mysql -u root << EOF
 UPDATE mysql.user SET Password=PASSWORD(RAND()) WHERE User='root';
@@ -245,7 +245,7 @@ start a dedicated MariaDB server job.
 
 You can use the following `mariadb.sbatch` job as a template:
 
-```bash
+```shell
 #!/bin/bash
 
 #SBATCH --job-name=mariadb
@@ -258,7 +258,7 @@ mysqld_safe
 
 and submit it with:
 
-```
+```shell
 $ sbatch mariadb.sbatch
 ```
 
@@ -282,7 +282,8 @@ or a batch job, using the `mysql` CLI or any application binding in any
 language, you should be able to connect to your running MariaDB instance,
 
 First, identify the node your job is running on with `squeue`:
-```
+
+```shell
 $ squeue -u $USER -n mariadb
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
           21383445    normal  mariadb   kilian  R       0:07      1 sh-01-02
@@ -290,7 +291,7 @@ $ squeue -u $USER -n mariadb
 
 and then, point your MariaDB client to that node:
 
-```
+```shell
 $ ml system mariadb
 $ mysql -h sh-01-02 -p
 Enter password:

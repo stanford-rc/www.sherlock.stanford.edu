@@ -39,7 +39,7 @@ node][url_compute_node], which makes for a fairly simply sbatch script. The
 following example will start a 8-core job on a single node, and run a Spark
 task within that allocation:
 
-```bash
+```shell
 #!/bin/bash
 
 #SBATCH --job-name=spark_singlenode
@@ -65,7 +65,7 @@ To start a Spark cluster and run a task on multiple nodes, more preliminary
 steps are necessary. Here's an example script that will span 2 nodes, start 2
 Spark workers on each node, and allow each worker to use 8 cores:
 
-```bash
+```shell
 #!/bin/bash
 #SBATCH --nodes=2
 #SBATCH --mem-per-cpu=4G

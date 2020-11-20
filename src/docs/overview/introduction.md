@@ -7,7 +7,7 @@
         display: none;
     }
 }
-#logo_head {
+# logo_head {
     margin-top: -50px;
 }
 </style>
@@ -190,16 +190,16 @@ so that you can then work self-sufficiently towards a solution on your own.
 Sherlock is present on the [Stanford Slack Grid][url_su_slack], and you're more
 than welcome to join the following channels:
 
-  * **[`#sherlock-announce`][url_sl_sha]**, for announcements related to
+* **[`#sherlock-announce`][url_sl_sha]**, for announcements related to
     Sherlock and its surrounding services,
-  * **[`#sherlock-users`][url_sl_shu]**, as a place for Sherlock users to
+* **[`#sherlock-users`][url_sl_shu]**, as a place for Sherlock users to
     connect directly with each other. If you have a general question about
     software used on Sherlock, want to reach out to other Sherlock users to
     share tips, good practices, tutorials or other info, please feel free to
     do so there.
 
 For more details about the SRCC Slack Workspace, and instructions on how to
-join this workspace and its channels, please see https://srcc.stanford.edu/support.
+join this workspace and its channels, please see <https://srcc.stanford.edu/support>.
 
 !!! warning "Slack is not an official support channel"
 
@@ -212,17 +212,20 @@ join this workspace and its channels, please see https://srcc.stanford.edu/suppo
 If you're in a rush[^account], here's a 3-step ultra-quick start:
 
 1. connect to Sherlock
-   ```
+
+   ```shell
    $ ssh login.sherlock.stanford.edu
    ```
 
 2. get an interactive session on a compute node
-   ```
+
+   ```shell
    [kilian@sh-ln01 login! ~]$ sdev
    ```
 
 3. run a command
-   ```
+
+   ```shell
    [kilian@sh-101-58 ~]$ module load python
    [kilian@sh-101-58 ~]$ python -c "print('Hello Sherlock')"
    Hello Sherlock

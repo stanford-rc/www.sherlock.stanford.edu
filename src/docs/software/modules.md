@@ -47,7 +47,8 @@ latest bioinformatics packages.
 For instance, to be able to load the `gromacs` module, you'll first need to
 load the `chemistry` module. This can be done in a single command, by
 specifying first the category, then the actual application module name:
-```
+
+```shell
 $ module load chemistry gromacs
 ```
 
@@ -129,7 +130,8 @@ You can search through all the available modules for either:
 * any string within modules names and descriptions, using `module keyword`
 
 For instance, if you want to know how to load the `gromacs` module, you can do:
-```
+
+```shell
 $ module spider gromacs
 ```
 
@@ -137,7 +139,8 @@ If you don't know the module name, or want to list all the modules that contain
 a specific string of characters in their name or description, you can use
 `module keyword`. For instance, the following command will list all the modules
 providing a BLAS library:
-```
+
+```shell
 $ module keyword blas
 ```
 
@@ -148,7 +151,7 @@ $ module keyword blas
 
 To list all the modules that can be loaded, you can do:
 
-```
+```shell
 $ ml av
 
 -- math -- numerical libraries, statistics, deep-learning, computer science ---
@@ -188,7 +191,7 @@ any of the "keys".
 
 To search for a specific string in modules names and descriptions, you can run:
 
-```
+```shell
 $ module keyword numpy
 ---------------------------------------------------------------------------
 
@@ -232,9 +235,11 @@ The following modules match your search criteria: "compiler"
 
 ---------------------------------------------------------------------------
 ```
+
 To get information about a specific module, especially how to load it, the
 following command can be used:
-```
+
+```shell
 $ module spider gromacs
 
 -------------------------------------------------------------------------------
@@ -258,7 +263,7 @@ $ module spider gromacs
 
 Loading a category module allows to get access to field-specific software:
 
-```
+```shell
 $ ml chemistry
 $ ml av
 
@@ -287,6 +292,7 @@ $ ml av
 
 [...]
 ```
+
 ### Reseting the modules environment
 
 If you want to reset your modules environment as it was when you initially
@@ -310,7 +316,7 @@ scripts.
 `module load` commands should be placed right after `#SBATCH` directives and
 before the actual executable calls. For instance:
 
-```bash
+```shell
 #!/bin/bash
 #SBATCH ...
 #SBATCH ...
@@ -341,7 +347,7 @@ lab name.
 
 For instance, listing the available lab modules can be done with:
 
-```
+```shell
 $ ml labs
 $ ml av
 -------------------- labs -- lab-contributed software ----------------------
@@ -350,7 +356,7 @@ $ ml av
 
 To get information about a specific lab module:
 
-```
+```shell
 $ ml show poldrack
 ----------------------------------------------------------------------------
    /share/software/modules/labs/poldrack.lua:
@@ -365,7 +371,7 @@ whatis("Description: Software modules contributed by the Poldrack Lab.")
 
 And to list the available software modules contributed by the lab:
 
-```
+```shell
 $ ml poldrack
 $ ml av
 

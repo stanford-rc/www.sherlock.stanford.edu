@@ -9,7 +9,7 @@ Perl provides a framework allowing users to easily extend the language by
 installing new modules in their local environment. The Comprehensive Perl
 Archive Network (CPAN[^cpan]) is an archive of over 25,000 distributions of
 software written in Perl, as well as documentation for it. It is searchable at
-http://metacpan.org or http://search.cpan.org and mirrored in over 270
+<http://metacpan.org> or <http://search.cpan.org> and mirrored in over 270
 locations around the world.
 
 
@@ -51,7 +51,7 @@ modules locally.
 As an example, to install the `DateTime::TimeZone` module, you can do the
 following:
 
-```
+```shell
 $ ml perl
 $ cpanm DateTime::TimeZone
 ```
@@ -64,7 +64,7 @@ syntax is required.
 For instance, to check that the `DateTime::TimeZone` module is correctly
 installed:
 
-```
+```shell
 $ perl -MDateTime::TimeZone -e 'print $DateTime::TimeZone::VERSION . "\n"';
 2.13
 ```
@@ -73,7 +73,7 @@ $ perl -MDateTime::TimeZone -e 'print $DateTime::TimeZone::VERSION . "\n"';
 
 To uninstall a Perl module:
 
-```
+```shell
 $ cpanm -U DateTime::TimeZone
 ```
 

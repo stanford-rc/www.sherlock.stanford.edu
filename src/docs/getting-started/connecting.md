@@ -33,7 +33,7 @@ typing the `ssh` command in a terminal window.
 To login to Sherlock, open a terminal and type the following command, where
 `<sunetid>` should be replaced by your *actual* SUNet ID:
 
-```bash
+```shell
 $ ssh <sunetid>@login.sherlock.stanford.edu
 ```
 
@@ -56,13 +56,13 @@ SSH.[^auth_methods].
 Upon connection, you will be asked for your SUNet ID password with the
 following prompt:
 
-```
+```shell
 <sunetid>@login.sherlock.stanford.edu's password:
 ```
 
 Enter your password, and if it's correct, you should see the following line:
 
-```
+```shell
 Authenticated with partial success.
 ```
 
@@ -82,7 +82,7 @@ two-step][url_twostep] page.
 After successfully entering your password, you'll be prompted for your second
 authentication factor with a message like this:
 
-```
+```shell
 Duo two-factor login for <sunetid>
 
 Enter a passcode or select one of the following options:
@@ -114,11 +114,13 @@ If your second factor is accepted, you'll see the following message:
 
 If you ever encounter timeout errors when connecting to Sherlock, like
 these:
-```
+
+```shell
 $ ssh login.sherlock.stanford.edu
 ssh: connect to host login.sherlock.stanford.edu port 22: Operation timed out
 
 ```
+
 you can try to either:
 
 * switch to a wired connection if you're connecting over wifi,
@@ -172,7 +174,7 @@ minutes.
 Congratulations! You've successfully connected to Sherlock. You'll be greeted
 by the following *message of the day*:
 
-```
+```shell
 
              --*-*- Stanford Research Computing Center -*-*--
                   ____  _               _            _
@@ -207,9 +209,11 @@ by the following *message of the day*:
 Once authenticated to Sherlock, you'll see the following prompt:
 
 <!-- manual coloring -->
+<!-- markdownlint-disable MD013 -->
 <code>
 [<font color=green>&lt;sunetid&gt;</font>@sh03-ln01 <font color=red>login!</font> ~]$
 </code>
+<!-- markdownlint-enable MD013 -->
 
 It indicates the name of the login node you've been connected to, and a
 reminder that you're actually connected to a [login node][url_login], not a
@@ -241,15 +245,15 @@ section][url_submit].
 [url_account]:      /docs/getting-started/prerequisites#how-to-request-an-account
 [url_avoid_duo]:    /docs/advanced-topics/connection#avoiding-multiple-duo-prompts
 [url_other_auth]:   /docs/advanced-topics/connection#authentication-methods
-[url_suaccounts]:   https://accounts.stanford.edu/
-[url_sunet]:        https://uit.stanford.edu/service/accounts/sunetids
-[url_minsec]:       https://uit.stanford.edu/guide/securitystandards
-[url_twostep]:      https://uit.stanford.edu/service/webauth/twostep
+[url_suaccounts]:   //accounts.stanford.edu/
+[url_sunet]:        //uit.stanford.edu/service/accounts/sunetids
+[url_minsec]:       //uit.stanford.edu/guide/securitystandards
+[url_twostep]:      //uit.stanford.edu/service/webauth/twostep
 [url_login]:        /docs/overview/tech/glossary/#login-nodes
 [url_submit]:       /docs/getting-started/submitting
 [url_contact]:      mailto:{{ support_email }}
 [url_sshfs]:        /docs/storage/data-transfer#sshfs
-[url_vpn]:          https://uit.stanford.edu/service/vpn
+[url_vpn]:          //uit.stanford.edu/service/vpn
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

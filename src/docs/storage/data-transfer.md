@@ -217,13 +217,12 @@ features:
 * simplifies the implementation of high-performance transfers between computing
   centers.
 
-Globus is a Software as a Service (SaaS) system that provides end-users with a browser interface to initiate data
-transfers between endpoints. Globus
-allows users to "drag and drop" files from one endpoint to another.
-Endpoints are terminals for data; they can be laptops or supercomputers, and
-anything in between. The Globus web service
-negotiates, monitors, and optimizes transfers through
-firewalls and across network address translation (NAT). Under certain
+Globus is a Software as a Service (SaaS) system that provides end-users with a
+browser interface to initiate data transfers between endpoints. Globus allows
+users to "drag and drop" files from one endpoint to another. Endpoints are
+terminals for data; they can be laptops or supercomputers, and anything in
+between. The Globus web service negotiates, monitors, and optimizes transfers
+through firewalls and across network address translation (NAT). Under certain
 circumstances, with high performance hardware transfer rates exceeding 1 GB/s
 are possible. For more information about Globus, please see the [Globus
 documentation][url_globus_doc].
@@ -245,9 +244,9 @@ the [Login page][url_globus_login] and follow the instructions from there.
     The Globus endpoint name for Sherlock is `SRCC Sherlock` (aka
     `srcc#sherlock`)
 
-You can use Globus to transfer data between your local workstation
-(e.g., your laptop or desktop) and Sherlock. In this workflow, you
-configure your local workstation as a Globus endpoint by installing the Globus Connect software.
+You can use Globus to transfer data between your local workstation (e.g., your
+laptop or desktop) and Sherlock. In this workflow, you configure your local
+workstation as a Globus endpoint by installing the Globus Connect software.
 
 1. Log in to [Globus.org][url_globus_login]
 2. Use the [Manage Endpoints][url_globus_xfer_mgmt] interface to "add Globus
@@ -297,7 +296,7 @@ It supports:
 To transfer files via the DTNs, simply use `dtn.sherlock.stanford.edu` as a
 remote server hostname. For instance:
 
-```
+```shell
 $ scp foo <sunetid>@dtn.sherlock.stanford.edu:~/foo
 ```
 
@@ -337,7 +336,7 @@ We provide the `rclone` tool on Sherlock to interact with Google Drive. You'll
 just need to load the `rclone` module to be able to use it to move your
 files from/to Google Drive:
 
-```
+```shell
 $ module load system rclone
 $ rclone --help
 ```
@@ -349,7 +348,7 @@ If you need to access other cloud storage services, you can use
 Google Drive, Amazon S3, Box, Dropbox, Google Cloud Storage, Amazon Drive,
 Microsoft OneDrive and many more.
 
-```
+```shell
 $ ml load system rclone
 $ rclone -h
 ```

@@ -29,6 +29,7 @@ software_modules.categories | count }} categories, covering {{ all_fields |
 count }} fields of science:_
 
 
+<!-- markdownlint-disable MD032 -->
 {% for c in software_modules.categories|sort(attribute='name') %}
 * [`{{ c.name }}`](#{{ c.name }}) <small>
     {{ c.packages | map(attribute='categories')
@@ -36,6 +37,7 @@ count }} fields of science:_
                   | unique | sort | join(', ') }}
   </small>
 {% endfor %}
+<!-- markdownlint-enable MD032 -->
 
 !!! warning "Licensed software"
 
@@ -61,6 +63,7 @@ count }} fields of science:_
       * versions marked with ^<b class="sw_def"></b>^ are the default version for
         the module
 
+<!-- markdownlint-disable MD013 -->
 {% set h_name = '<img style="float:left;min-width:110px;visibility:hidden"/>Module&nbsp;name' %}
 {% set h_vers = '<img style="float:left;min-width:90px;visibility:hidden"/>Version(s)' %}
 
@@ -72,7 +75,9 @@ count }} fields of science:_
         {%- if v.properties.license  and v.properties.license.restricted -%}^<b class="sw_lic"></b>^{%- endif -%}
     {%- endif -%}
 {%- endmacro %}
+<!-- markdownlint-enable MD013 -->
 
+<!-- markdownlint-disable MD038 -->
 {% macro module_line(p) -%}
     **{{ p.categories.split(',') | last | trim }}** | <a id="{{ p.package }}">`
     {{- p.package }}`</a> |
@@ -81,10 +86,12 @@ count }} fields of science:_
     {%- endfor -%}
     | [Website]({{ p.url }}) | {{ p.description }}
 {%- endmacro %}
+<!-- markdownlint-enable MD038 -->
 
 
 {% for c in software_modules.categories|sort(attribute='name') %}
-### **`{{ c.name  }}`**
+
+### **{{ c.name  }}**
 
 Field | {{ h_name }} | {{ h_vers }} | URL | Description
 :---- | :----------- | :----------- | :-- | :----------

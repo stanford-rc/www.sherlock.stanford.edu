@@ -45,7 +45,7 @@ interactively on the command line. They could be an integral
 part of an interactive programming and debugging workflow. The simplest way to
 establish an interactive session on Sherlock is to use the `sdev` command:
 
-```
+```shell
 $ sdev
 ```
 
@@ -64,7 +64,7 @@ If you need more resources[^dev_limits], you can pass options to `sdev`, to
 request more CPU cores, more nodes, or even run in a different partition.
 `sdev -h` will provide more information:
 
-```
+```shell
 $ sdev -h
 sdev: start an interactive shell on a compute node.
 
@@ -84,14 +84,14 @@ Usage: sdev [OPTIONS]
     If you need more, your job will be rejected unless you specify an
     alternative partition with -p.
 
-```
+```shell
 
 Another way to get an interactive session on a compute node is to use `srun` to
 execute a shell through the scheduler. For instance, to start a `bash` session
 on a compute node, with the default resource requirements (one core for 2
 hours), you can run:
 
-```
+```shell
 $ srun --pty bash
 ```
 
@@ -101,7 +101,7 @@ whole range of submission options that `sdev` may not support.
 Finally, if you prefer to submit an existing job script or other executable as
 an interactive job, you can use the `salloc` command:
 
-```
+```shell
 $ salloc script.sh
 ```
 
@@ -112,7 +112,7 @@ allocated node(s). It will only start a new shell on the same node you launched
 variables. So you will typically need to look at them to see
 what nodes have been assigned to your job. For instance:
 
-```
+```shell
 $ salloc
 salloc: Granted job allocation 655914
 $ echo $SLURM_NODELIST
@@ -132,7 +132,7 @@ sh-101-55 ~ $
 If you SSH to a compute node without any active job allocation, you'll be
 greeted by the following message:
 
-```
+```shell
 $ ssh sh-101-01
 Access denied by pam_slurm_adopt: you have no active jobs on this node
 Connection closed
@@ -154,7 +154,6 @@ account.
 ## Batch jobs
 
 --8<--- "includes/_wip.md"
-[comment]: #_
 
 
 ## Available resources
@@ -164,10 +163,10 @@ job](#interactive-jobs), it's important to know the resources that are
 available to you. For this reason, we provide [`sh_part`][url_sh_part], a
 command-line tool to help answer questions such as:
 
- - which [partitions][url_partition] do I have access to?
- - how many jobs are running on them?
- - how many CPUs can I use?
- - where should I submit my jobs?
+* which [partitions][url_partition] do I have access to?
+* how many jobs are running on them?
+* how many CPUs can I use?
+* where should I submit my jobs?
 
 `sh_part` can be executed on any login or compute node to see what partitions
 are available to you, and its output looks like this:
@@ -188,18 +187,18 @@ such as the maximum amount of time allowed in each partition (`MAXJOBTIME`),
 the number of other jobs already in queue, along with the ranges of memory
 available on nodes in each partition.
 
-  - in the `QUEUE PARTITION` column, the `*` character indicates the default
-    partition.
-  - the `RESOURCE PENDING` column shows the core count of pending jobs that are
-    waiting on resources,
-  - the `OTHER PENDING` column lists core counts for jobs that are pending for
-    other reasons, such as licenses, user, group or any other limit,
-  - the `GRES` column shows the number and type of Generic RESsources available
-    in that partition (typically, GPUs), whichi CPU socket tehy're available
-    from, and the number of nodes that feature that specific GRES combination.
-    So for instance, in the output above, `gpu:4(S:0-1)(2)` means that the
-    `gpu` partition features 2 nodes with 4 GPUs each, and that those GPUs are
-    accessible from both CPU sockets (`S:0-1`).
+* in the `QUEUE PARTITION` column, the `*` character indicates the default
+  partition.
+* the `RESOURCE PENDING` column shows the core count of pending jobs that are
+  waiting on resources,
+* the `OTHER PENDING` column lists core counts for jobs that are pending for
+  other reasons, such as licenses, user, group or any other limit,
+* the `GRES` column shows the number and type of Generic RESsources available
+  in that partition (typically, GPUs), whichi CPU socket tehy're available
+  from, and the number of nodes that feature that specific GRES combination.
+  So for instance, in the output above, `gpu:4(S:0-1)(2)` means that the `gpu`
+  partition features 2 nodes with 4 GPUs each, and that those GPUs are
+  accessible from both CPU sockets (`S:0-1`).
 
 
 
@@ -249,29 +248,30 @@ The table below summarizes the advantages and inconvenients of each approach:
 | Unique, controlled execution          | :fontawesome-solid-times:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
 | Precise schedule                      | :fontawesome-solid-check:{: .chk_yes :}| :fontawesome-solid-times:{: .chk_no :}  |
 
-### Example
+### Recurrent job example
 
-The script below presents an example of such a recurring, self-resubmitting
-job, that would emulate a `cron` task. It will append a timestamped line to a
-`cron.log` file in your `$HOME` directory and run every 7 days.
+The script below presents an example of such a recurrent job, that would
+emulate a `cron` task. It will append a timestamped line to a `cron.log` file
+in your `$HOME` directory and run every 7 days.
 
 === "cron.sbatch"
-    ```bash
-    #!/bin/bash
-    #SBATCH --job-name=cron
-    #SBATCH --begin=now+7days
-    #SBATCH --dependency=singleton
-    #SBATCH --time=00:02:00
-    #SBATCH --mail-type=FAIL
+
+```shell
+#!/bin/bash
+#SBATCH --job-name=cron
+#SBATCH --begin=now+7days
+#SBATCH --dependency=singleton
+#SBATCH --time=00:02:00
+#SBATCH --mail-type=FAIL
 
 
-    ## Insert the command to run below. Here, we're just storing the date in a
-    ## cron.log file
-    date -R >> $HOME/cron.log
+## Insert the command to run below. Here, we're just storing the date in a
+## cron.log file
+date -R >> $HOME/cron.log
 
-    ## Resubmit the job for the next execution
-    sbatch $0
-    ```
+## Resubmit the job for the next execution
+sbatch $0
+```
 
 If the job payload (here the `date` command) fails for some reason and
 generates and error, the job will not be resubmitted, and the user will be
@@ -293,7 +293,7 @@ details are given below:
 
 You can save the script as `cron.sbatch` or any other name, and submit it with:
 
-```
+```shell
 $ sbatch cron.sbatch
 ```
 
@@ -301,7 +301,7 @@ It will start running for the first time 7 days after
 you submit it, and it will continue to run until you cancel it with the
 following command (using the job name, as defined by the `--job-name` option):
 
-```
+```shell
 $ scancel -n cron
 ```
 
@@ -345,7 +345,7 @@ when it receives the [`SIGUSR1`][url_signals] signal.
 
 
 
-### Example
+### Persistent job example
 
 Here's the recurring job example from above, modified to:
 
@@ -356,7 +356,7 @@ Here's the recurring job example from above, modified to:
    command)
 
 === "persistent.sbatch"
-    ```bash
+    ```shell
     #!/bin/bash
     #
     #SBATCH --job-name=persistent
@@ -396,7 +396,7 @@ Here's the recurring job example from above, modified to:
     the `while true ... done` loop in the previous example could be replaced by
     something like this:
 
-    ```bash
+    ```shell
     postgres -i -D $DB_DIR &
     wait
     ```
@@ -429,7 +429,7 @@ only one `$JOBID` to track for that database server job.
 The previous [example](#example_1) can then be modified as follows:
 
 === "persistent.sbatch"
-    ```bash hl_lines="10"
+    ```shell hl_lines="10"
     #!/bin/bash
     #SBATCH --job-name=persistent
     #SBATCH --dependency=singleton
@@ -455,7 +455,7 @@ The previous [example](#example_1) can then be modified as follows:
 
 Submitting that job will produce an output similar to this:
 
-```
+```shell
 Mon Nov  5 10:30:59 PST 2018: Job 31182239 starting on sh-06-34
 Mon Nov  5 10:30:59 PST 2018: normal execution
 Mon Nov  5 10:31:59 PST 2018: normal execution

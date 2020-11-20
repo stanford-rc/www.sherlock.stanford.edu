@@ -24,7 +24,7 @@ directory at any level of the hierarchy. Those `.snapshot` directories don't
 appear when listing directory contents with `ls`, but they can be listed
 explicitly or accessed with `cd`:
 
-```
+```shell
 $ cd $HOME
 $ ls -ald .snapshot/users*
 [...]
@@ -62,20 +62,23 @@ Examples:
 
 * to restore the last known version of `$HOME/foo/bar`:
 
-    ```
+    ```shell
     $ cp $HOME/foo/.snapshot/users.hourly.latest/bar $HOME/foo/bar
     ```
+
     or
-    ```
+
+    ```shell
     $ cp $HOME/.snapshot/foo/users.hourly.latest/bar $HOME/foo/bar
 
     ```
+
     (both commands are equivalent)
 
 
 * to restore your `~/.bashrc` file from 2 days ago:
 
-    ```
+    ```shell
     $ SNAP_DATE=$(date +%Y%m%d -d "2 days ago")
     $ cp $HOME/.snapshot/users.daily.${SNAP_DATE}/.bashrc $HOME/.bashrc
     ```

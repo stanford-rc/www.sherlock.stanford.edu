@@ -24,8 +24,8 @@ provides the PI with much greater flexibility than owning a standalone cluster.
 Owners will be notified during the 4th year that their nodes' lifetime is about
 to reach its term, at which point they'll be welcome to either:
 
-  * renew their investment by purchasing new nodes,
-  * continue to use the public portion of Sherlock's resources.
+* renew their investment by purchasing new nodes,
+* continue to use the public portion of Sherlock's resources.
 
 At the end of their service term, compute nodes are physically retired from the
 cluster, to make room for new equipment. Compute nodes may be kept running for
@@ -176,9 +176,9 @@ pandemic-related supply-chain disruptions notwithstanding).
 
 To place an order, we'll need the following information:
 
-  * The SUNet ID of the PI making the purchase request
-  * A PTA[^PTA] number to charge the hardware (capital) portion of the purchase
-  * A PTA[^PTA] number to charge the per-node infrastructure fees (non-capital)
+* The SUNet ID of the PI making the purchase request
+* A PTA[^PTA] number to charge the hardware (capital) portion of the purchase
+* A PTA[^PTA] number to charge the per-node infrastructure fees (non-capital)
     <br/>_It could be the same PTA used for the capital portion of the
     purchase, or a different one_
 
@@ -207,6 +207,7 @@ To start ordering compute nodes for Sherlock:
 :material-numeric-1-circle: **check the [Sherlock catalog][url_catalog]**
 :octicons-lock-16:[^sunet] to review prices and select your configurations
 
+<!-- markdownlint-disable MD013 -->
 [Choose :fontawesome-solid-stream:][url_catalog]{: .md-button .md-button .md-button--primary }
 </div>
 <div markdown="1" class="steps" style="float:right">
@@ -217,6 +218,7 @@ information](#required-information)
 [Order :fontawesome-solid-shopping-cart:][url_order_form]{: .md-button .md-button--primary }
 </div>
 <div style="clear:both"></div>
+<!-- markdownlint-enable MD013 -->
 
 And we'll be in touch shortly!
 

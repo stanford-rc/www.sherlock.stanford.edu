@@ -19,6 +19,7 @@ traditional way, via a SSH terminal connection.
 
 
 ### More documentation
+
 [Open OnDemand][url_ood] was created by the [Ohio Supercomputer
 Center][url_osc].
 [![ood](img/ood_logo.png)][url_ood]{: .fl_right :}
@@ -149,6 +150,7 @@ change them in the job script. For more details, see the [Running
 jobs][url_running_jobs] section.
 
 You can edit the script in several ways:
+
 * click the blue **Edit Files** button at the top of the **Jobs** tab in the
   Jobs Composer window,
 * in the **Jobs** tab in the **Jobs Composer** window, find the **Submit

@@ -40,7 +40,7 @@ below only need to be executed once.
 Assuming you'll want to store your database files in a `db/` directory in your
 `$SCRATCH` folder, you can run the following commands:
 
-```
+```shell
 $ export DB_DIR=$SCRATCH/db
 $ mkdir $DB_DIR
 ```
@@ -49,7 +49,7 @@ Once you have your `$DB_DIR` in place, you need to initialize your database
 with some internal data that PostgreSQL needs. In the same terminal, run the
 following commands:
 
-```
+```shell
 $ ml system postgresql
 $ initdb $DB_DIR
 ```
@@ -60,17 +60,17 @@ You can now start the PostgreSQL server. For this, first get an allocation on a
 compute node, note the hostname of the compute node your job has been
 allocated, load the `postgresql` module, and then run the `postgresql` server:
 
-```
+```shell
 $ srun --pty bash
 $ echo $SLURM_JOB_NODELIST
 sh-01-01
-$ ml system postgresql 
+$ ml system postgresql
 $ export DB_DIR=$SCRATCH/db
 $ postgres -D $DB_DIR
 [...]
 2018-10-09 17:42:08.094 PDT [3841] LOG:  database system is ready to accept connections
 
-```
+```shell
 
 The `postgres` process will be blocking, meaning it will not give the prompt
 back for as long as the PostgreSQL server runs.
@@ -87,7 +87,7 @@ it's `sh-01-01`, as shown above), load the `postgresql` module, and then run
 the `createdb` command: it will create a database that you can use as a
 testbed:
 
-```
+```shell
 $ ssh sh-01-01
 $ ml system postgresql
 $ createdb test_db
@@ -96,7 +96,7 @@ $ createdb test_db
 Once this is done, from the same shell, you can run the `psql` command, which
 will open the PostgreSQL shell, ready to run your SQL queries:
 
-```
+```shell
 $ psql test_db
 psql (10.5)
 Type "help" for help.
@@ -153,7 +153,7 @@ Once you've chosen your password, you can now start the PostgreSQL server on a
 compute, as described in the previous section, initialize the database, and
 set the user password:
 
-```
+```shell
 $ srun --pty bash
 
 $ echo $SLURM_JOB_NODELIST
@@ -171,7 +171,7 @@ $ psql -c "ALTER USER $USER PASSWORD 'my-secure-password';" test_db
 Then, we need to edit the `$DB_DIR/ph_hba.conf` file to allow network access
 for user `$USER`:
 
-```
+```shell
 $ cat << EOF > $DB_DIR/pg_hba.conf
 local   all             all                                     trust
 host    all             all             127.0.0.1/32            trust
@@ -183,7 +183,7 @@ EOF
 Once you've done that, you're ready to terminate that interactive job, and
 start a dedicated PostgreSQL server job.
 
-```
+```shell
 $ pg_ctl stop -D $DB_DIR
 $ logout
 ```
@@ -192,7 +192,7 @@ $ logout
 
 You can use the following `postgresql.sbatch` job as a template:
 
-```bash
+```shell
 #!/bin/bash
 
 #SBATCH --job-name=postgresql
@@ -208,7 +208,7 @@ postgres -i -D $DB_DIR
 
 and submit it with:
 
-```
+```shell
 $ sbatch postgresql.sbatch
 ```
 
@@ -232,7 +232,8 @@ or a batch job, using the `mysql` CLI or any application binding in any
 language, you should be able to connect to your running PostgreSQL instance,
 
 First, identify the node your job is running on with `squeue`:
-```
+
+```shell
 $ squeue -u $USER -n postgresql
              JOBID PARTITION       NAME     USER ST       TIME  NODES NODELIST(REASON)
           21383445    normal postgresql   kilian  R       0:07      1 sh-01-02
@@ -240,7 +241,7 @@ $ squeue -u $USER -n postgresql
 
 and then, point your PostgreSQL client to that node:
 
-```
+```shell
 $ ml system postgresql
 $ mpsql -h sh-06-34  test_db
 Password:

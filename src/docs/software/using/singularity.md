@@ -27,19 +27,19 @@ for a variety of technical reasons, mostly related to security.
 Docker has never been designed nor developed to run in multi-tenants
 environments, and even less on HPC clusters. Specifically:
 
-  * Docker requires a daemon running as `root` on all of the compute nodes,
-    which has serious security implications,
-  * all authenticated actions (such as `login`, `push` ...) are also executed
-    as `root`, meaning that multiple users can't use those functions on the
-    same node,
-  * Docker uses cgroups to isolate containers, as does the Slurm scheduler,
-    which uses cgroups to allocate resources to jobs and enforce limits. Those
-    uses are unfortunately conflicting.
-  * but most importantly, *allowing users to run Docker containers will give
-    them* `root` *privileges* inside that container, which will in turn let them
-    access any of the clusters' filesystems as `root`. This opens the door to
-    user impersonation, inappropriate file tampering or stealing, and is
-    obviously not something that can be allowed on a shared resource.
+* Docker requires a daemon running as `root` on all of the compute nodes, which
+  has serious security implications,
+* all authenticated actions (such as `login`, `push` ...) are also executed as
+  `root`, meaning that multiple users can't use those functions on the same
+  node,
+* Docker uses cgroups to isolate containers, as does the Slurm scheduler, which
+  uses cgroups to allocate resources to jobs and enforce limits. Those uses are
+  unfortunately conflicting.
+* but most importantly, *allowing users to run Docker containers will give
+  them* `root` *privileges* inside that container, which will in turn let them
+  access any of the clusters' filesystems as `root`. This opens the door to
+  user impersonation, inappropriate file tampering or stealing, and is
+  obviously not something that can be allowed on a shared resource.
 
 That last point is certainly the single most important reason why we won't use
 Docker on Sherlock.
@@ -68,13 +68,13 @@ existing Docker containers.
 The main motivation to use Singularity over Docker is the fact that it's been
 developed with HPC systems in mind, to solve those specific problems:
 
-  * security: a user in the container is the same user as the one running the
+* security: a user in the container is the same user as the one running the
   container, so no privilege escalation possible,
-  * ease of deployment: no daemon running as root on each node, a container is
+* ease of deployment: no daemon running as root on each node, a container is
     simply an executable,
-  * no need to mount filesystems or do bind mappings to access devices,
-  * ability to run MPI jobs based on containers,
-  * [and more][url_singularity_docs]...
+* no need to mount filesystems or do bind mappings to access devices,
+* ability to run MPI jobs based on containers,
+* [and more][url_singularity_docs]...
 
 ### More documentation
 
@@ -96,16 +96,16 @@ without the need to load any additional module.
 
 Pre-built containers can be obtained from a variety of sources. For instance:
 
-  * [DockerHub][url_docker_hub] contains containers for various software
-    packages, which can be [directly used with
-    Singularity][url_singularity_docker],
-  * [SingularityHub](https://singularity-hub.org/) is a registry for scientific
-    linux containers,
-  * the [NVIDIA GPU Cloud](https://ngc.nvidia.com/signin/email) registry for
-    GPU-optimized containers,
-  * many individual projects contain specific instructions for installation via
-    Docker and/or Singularity, and may provide pre-built images in other
-    locations.
+* [DockerHub][url_docker_hub] contains containers for various software
+  packages, which can be [directly used with
+  Singularity][url_singularity_docker],
+* [SingularityHub](https://singularity-hub.org/) is a registry for scientific
+  linux containers,
+* the [NVIDIA GPU Cloud](https://ngc.nvidia.com/signin/email) registry for
+  GPU-optimized containers,
+* many individual projects contain specific instructions for installation via
+  Docker and/or Singularity, and may provide pre-built images in other
+  locations.
 
 
 To illustrate how Singularity can import and run Docker containers, here's an
@@ -125,14 +125,14 @@ module. Singularity images can be pulled directly from the compute nodes, and
 Singularity uses multiple CPU cores when assembling the image, so requesting
 multiple cores in your job can make the pull operation faster:
 
-```
+```shell
 $ srun -c 4 --pty bash
 ```
 
 We recommend storing Singularity images in `$GROUP_HOME`, as container images
 can take significant space in your `$HOME` directory.
 
-```
+```shell
 $ mkdir -p $GROUP_HOME/$USER/simg
 $ cd $GROUP_HOME/$USER/simg
 ```
@@ -140,7 +140,7 @@ $ cd $GROUP_HOME/$USER/simg
 Then, the OpenFOAM container could be pulled directly from
 [DockerHub][url_docker_hub] by Singularity. This can take a moment to complete:
 
-```
+```shell
 $ singularity pull docker://openfoam/openfoam6-paraview54
 Docker image path: index.docker.io/openfoam/openfoam6-paraview54:latest
 Cache folder set to /scratch/users/kilian/.singularity/docker
@@ -165,7 +165,7 @@ in a specific directory, you can use the `--pwd /path/` option. For instance,
 we'll create a `/tmp/openfoam_test/` directory to store our tests results (that
 will be wiped out at the end of the job), and start the container shell there:
 
-```
+```shell
 $ mkdir /tmp/openfoam_test
 $ singularity shell --pwd /tmp/openfoam_test openfoam6-paraview54.simg
 Singularity: Invoking an interactive shell within container...
@@ -173,19 +173,19 @@ Singularity openfoam6-paraview54.simg:/tmp/openfoam_test>
 ```
 
 You're now in the container, as denoted by the shell prompt
-(`Singularity[...].simg:[path]>`), which is different from the prompt displayed on the
-compute node (which usually looks like `[login]@[compute_node] [path]$`.
+(`Singularity[...].simg:[path]>`), which is different from the prompt displayed
+on the compute node (which usually looks like `[login]@[compute_node] [path]$`.
 
 OpenFOAM provides a convenience script that can be sourced to make OpenFOAM
 commands directly accessible and set a few useful environment variables:
 
-```
+```shell
 > source /opt/openfoam6/etc/bashrc
 ```
 
 Now, we can run a simple example using OpenFOAM:
 
-```
+```shell
 > cp -r $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily .
 > cd pitzDaily
 > blockMesh
@@ -229,7 +229,8 @@ End
 ```
 
 When the simulation is done, you can exit the container with:
-```
+
+```shell
 > exit
 ```
 
@@ -237,7 +238,7 @@ Because the container can see all the compute node's filesystems, the
 simulation output will be available in `/tmp/openfoam_test` after you exit the
 container:
 
-```
+```shell
 $ ls /tmp/openfoam_test/pitzDaily/postProcessing/
 sets
 ```
@@ -270,7 +271,7 @@ As before, we start by requesting an interactive shell with multiple CPU
 cores, loading the Singularity module and moving the directory where we'll save
 those images:
 
-```
+```shell
 $ srun -c 4 --pty bash
 $ cd $GROUP_HOME/simg
 ```
@@ -289,7 +290,7 @@ found in the [NGC Getting Started Guide][url_ngc_auth].
 You can then set the following environment variable to allow Singularity to
 authenticate with NGC:
 
-```
+```shell
 $ export SINGULARITY_DOCKER_USERNAME='$oauthtoken'
 $ export SINGULARITY_DOCKER_PASSWORD=<NVIDIA NGC API key>
 ```
@@ -304,12 +305,12 @@ Once credentials are set in the environment, container images can be pulled
 from the NGC registry normally.
 
 The general form of the Singularity command used to pull NGC containers is: `$
-singularity pull docker://nvcr.io/<registry>/<app:tag> `
+singularity pull docker://nvcr.io/<registry>/<app:tag>`
 
 For example to pull the [NAMD][url_namd] NGC container tagged with version
 `2.12-171025` the corresponding command would be:
 
-```
+```shell
 $ singularity pull docker://nvcr.io/hpc/namd:2.12-171025
 ```
 
@@ -338,7 +339,7 @@ the container.
 We also need to submit a job requesting a GPU to run GPU-enabled
 containers.  For instance:
 
-```
+```shell
 $ srun -p gpu -c 4 --gres gpu:1 --pty bash
 ```
 
@@ -348,7 +349,7 @@ The NAMD container that was pulled just before can now be started with the
 following commands. We start by creating a temporary directory to hold the
 execution results, and start the container using this as the current directory:
 
-```
+```shell
 $ mkdir /tmp/namd_test
 $ singularity shell --nv --pwd /tmp/namd_test $GROUP_HOME/simg/namd-2.12-171025.simg
 Singularity: Invoking an interactive shell within container...
@@ -359,7 +360,7 @@ Singularity namd-2.12-171025.simg:/tmp/namd_test>
 From there, we can run a NAMD test to verify that everything is working as
 expected.
 
-```
+```shell
 > cp -r /workspace/examples .
 > /opt/namd/namd-multicore +p4 +idlepoll examples/apoa1/apoa1.namd
 Charm++: standalone mode (not using charmrun)
@@ -394,7 +395,8 @@ WallClock: 17.593451  CPUTime: 17.497925  Memory: 559.843750 MB
 The simulation should take a few seconds to run. You can verify that it
 correctly executed on a GPU in the output above. When it's done, you can exit
 the container with:
-```
+
+```shell
 > exit
 ```
 
@@ -402,7 +404,7 @@ Because the container can see all the compute node's filesystems, the
 simulation output will be available in `/tmp/named_test` after you exit the
 container:
 
-```
+```shell
 $ cd /tmp/namd_test/examples/apoa1/
 $ ls apoa1-out*
 apoa1-out.coor  apoa1-out.vel  apoa1-out.xsc
@@ -430,7 +432,7 @@ the [Singularity documentation][url_singularity_build].
 [url_singularity_docker]: //www.sylabs.io/guides/latest/user-guide/singularity_and_docker.html
 [url_singularity_build]:  //www.sylabs.io/guides/2.6/user-guide/build_a_container.html
 [url_containers]:         //en.wikipedia.org/wiki/Linux_containers
-[url_docker]:			  //www.docker.com
+[url_docker]:     //www.docker.com
 [url_docker_hub]:         //hub.docker.com
 [url_singularity_hub]:    //singularity-hub.org
 [url_ngc]:                //ngc.nvidia.com
@@ -442,9 +444,9 @@ the [Singularity documentation][url_singularity_build].
 [url_containernative]:    //news.sherlock.stanford.edu/posts/sherlock-goes-container-native
 
 
-[url_modules]:			  /docs/software/modules
-[url_gpu_job]:			  /docs/user-guide/gpu#submitting-a-gpu-job
-[url_gpu_types]:  	      /docs/user-guide/gpu/#gpu-types
+[url_modules]:     /docs/software/modules
+[url_gpu_job]:     /docs/user-guide/gpu#submitting-a-gpu-job
+[url_gpu_types]:         /docs/user-guide/gpu/#gpu-types
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

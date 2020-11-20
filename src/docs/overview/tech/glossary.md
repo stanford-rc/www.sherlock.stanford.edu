@@ -1,4 +1,5 @@
 ## What's a cluster?
+<!-- markdownlint-disable MD001 -->
 
 A computing cluster is a federation of multiple compute nodes (independent
 computers), most commonly linked together through a high-performance

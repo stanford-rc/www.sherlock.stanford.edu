@@ -14,7 +14,7 @@ and bypass the automatic load-balanced dispatching of new connections
 (which **we don't recommend**), you can use that login node's hostname
 explicitly. For instance:
 
-```
+```shell
 $ ssh <sunetid>@ln21.sherlock.stanford.edu
 ```
 
@@ -67,7 +67,7 @@ steps[^os_support]:
 2. download and install the Stanford `krb5.conf` file, which contains
    information about the Stanford Kerberos environment:
 
-    ```
+    ```shell
     $ sudo curl -o /etc/krb5.conf https://web.stanford.edu/dept/its/support/kerberos/dist/krb5.conf
     ```
 
@@ -76,7 +76,7 @@ steps[^os_support]:
    machine. Using a text editor, you can add the following lines to your
    `~/.ssh/config` file (indentation is important):
 
-    ```
+    ```shell
     Host login.sherlock.stanford.edu
         GSSAPIDelegateCredentials yes
         GSSAPIAuthentication yes
@@ -87,7 +87,7 @@ test that your Kerberos installation works by running `kinit
 <sunetid>@stanford.edu`. You should get a password prompt, and upon success,
 you'll be able to list your Kerberos credentials with the `klist` command:
 
-```
+```shell
 $ kinit kilian@stanford.edu
 Password for kilian@stanford.edu:
 $ klist
@@ -111,7 +111,7 @@ open to Sherlock for several days without any issue.
 
 You're now ready to connect to Sherlock using GSSAPI. Simply SSH as usual:
 
-```
+```shell
 $ ssh <sunetid>@login.sherlock.stanford.edu
 ```
 
@@ -141,7 +141,7 @@ machine to activate the `ControlMaster` option. If you already have a `Host
 login.sherlock.stanford.edu` block in your configuration file, simply add the
 `Control*` option lines in the same block.
 
-```
+```shell
 Host login.sherlock.stanford.edu
     ControlMaster auto
     ControlPath ~/.ssh/%l%r@%h:%p
@@ -155,8 +155,8 @@ prompts once the initial connection is established.
 
 The slight disadvantage of this approach is that once you have a connection
 open to one of Sherlock's login nodes, all your subsequent connections will be
-using the same login node. This will somewhat defeat the purpose of the load-balancing mechanism
-used by the login nodes.
+using the same login node. This will somewhat defeat the purpose of the
+load-balancing mechanism used by the login nodes.
 
 
 !!! tip "Connection failure with `unix_listener` error"
@@ -214,9 +214,10 @@ notifications are not available.
   security services. It allows program to interact with security services such
   as Kerberos for user authentication.
 
-[^os_support]: Those instructions should work on Linux :fontawesome-brands-linux: and MacOs
-  :fontawesome-brands-apple: computers. For Windows :fontawesome-brands-windows:, we recommend using the WSL,
-  as described in the [Prerequisites][url_prereq] page.
+[^os_support]: Those instructions should work on Linux
+  :fontawesome-brands-linux: and MacOs :fontawesome-brands-apple: computers.
+  For Windows :fontawesome-brands-windows:, we recommend using the WSL, as
+  described in the [Prerequisites][url_prereq] page.
 
 
 --8<--- "includes/_acronyms.md"

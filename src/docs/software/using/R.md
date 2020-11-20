@@ -19,7 +19,7 @@ documentation][url_r_docs].
 R is available on Sherlock and the corresponding [module][url_modules] can be
 loaded with:
 
-```
+```shell
 $ ml R
 ```
 
@@ -32,7 +32,7 @@ prompt, or refer to the [Software list page][url_software_list].
 Once your environment is configured (_ie._ when the `R` module is loaded), R
 can be started by simply typing R at the shell prompt:
 
-```
+```shell
 $ R
 
 R version 3.5.1 (2018-07-02) -- "Feather Spray"
@@ -48,7 +48,7 @@ Type 'q()' to quit R.
 
 For a listing of command line options:
 
-```
+```shell
 $ R --help
 ```
 
@@ -93,14 +93,15 @@ simple matrix multiplication example, and demonstrate how to feed R code as a
     ```
 
 You can save this script as `R-test.sbatch` and submit it to the scheduler with:
-```
+
+```shell
 $ sbatch R-test.sbatch
 ```
 
 Once the job is done, you should get a `R-test.out` file in the current
 directory, with the following contents:
 
-```
+```shell
 R version 3.5.1 (2018-07-02) -- "Feather Spray"
 [...]
 > set.seed (1)
@@ -138,7 +139,7 @@ directory.
 To install a R package in your personal environment, the first thing to do is
 load the R module:
 
-```
+```shell
 $ ml R
 ```
 
@@ -146,7 +147,7 @@ Then start a R session, and use the `install.packages()` function at the R
 prompt. For instance, the following example will install the `doParallel`
 package, using the US mirror of the [CRAN repository][url_cran]:
 
-```
+```shell
 $ R
 
 R version 3.5.1 (2018-07-02) -- "Feather Spray"
@@ -156,7 +157,8 @@ R version 3.5.1 (2018-07-02) -- "Feather Spray"
 ```
 
 It should give the following warning:
-```
+
+```shell
 Warning in install.packages("doParallel", repos = "http://cran.us.r-project.org") :
   'lib = "/share/software/user/open/R/3.5.1/lib64/R/library"' is not writable
 Would you like to use a personal library instead? (yes/No/cancel)
@@ -169,7 +171,8 @@ Answering `y` twice will make R create a `~/R/x86_64-pc-linux-gnu-library/3.5`
 directory and instruct it to install future R packages there.
 
 The installation will then proceed:
-```
+
+```shell
 trying URL 'http://cran.us.r-project.org/src/contrib/doParallel_1.0.14.tar.gz'
 Content type 'application/x-gzip' length 173607 bytes (169 KB)
 ==================================================
@@ -192,7 +195,9 @@ The downloaded source packages are in
         ‘/tmp/Rtmp0RHrMZ/downloaded_packages’
 >
 ```
+
 and when it's done, you should be able to load the package within R with:
+
 ```R
 > library(doParallel)
 Loading required package: foreach
@@ -222,7 +227,7 @@ already available as modules on Sherlock.
 Whenever you see "not found" errors, you may want to try searching the modules
 inventory with `module spider`:
 
-```bash
+```shell
 $ module spider udunits
 
 ----------------------------------------------------------------------------
@@ -238,12 +243,12 @@ $ module spider udunits
 
       physics
 
-```
+```shell
 
 So for `sf`, in order to load the dependencies, exit `R`, load the `udunits`
 and `gdal` modules, and try installing `sf` again:
 
-```bash
+```shell
 $ ml load physics udunits gdal
 $ ml R
 $ R
@@ -266,7 +271,7 @@ email][url_support] and we'll be happy to assist.
 To install R packages in a different location, you'll need to create that
 directory, and instruct R to install the packages there:
 
-```
+```shell
 $ mkdir ~/R_libs/
 $ R
 [...]
@@ -281,7 +286,7 @@ Specifying the full destination path for each package installation could
 quickly become tiresome, so to avoid this, you can create a `.Renviron`
 file in your `$HOME` directory, and define your `R_libs` path there:
 
-```
+```shell
 $ cat << EOF > $HOME/.Renviron
 R_LIBS=~/R_libs
 EOF
@@ -370,6 +375,7 @@ To upgrade R packages, you can use the `update.packages()` function within a R
 session.
 
 For instance, to update the `doParallel` package:
+
 ```R
 > update.packages('doParallel')
 ```
@@ -444,7 +450,7 @@ Save the two scripts below in a directory on Sherlock:
 
 === "doParallel_test.sbatch"
 
-    ```bash
+    ```shell
     #!/bin/bash
 
     #SBATCH --nodes=1
@@ -462,12 +468,14 @@ Save the two scripts below in a directory on Sherlock:
     ```
 
 And then submit the job with:
-```
+
+```shell
 $ sbatch doParallel_test.sbatch
 ```
 
 Once the job has completed, the output file should contain something like this:
-```
+
+```shell
 $ cat doParallel_test.out
 [1] "16"
 elapsed
@@ -477,14 +485,15 @@ elapsed
 **Bonus points**: observe the scalability of the `doParallel` loop by
 submitting the same script using a varying number of CPU cores:
 
-```
+```shell
 $ for i in 2 4 8 16; do
     sbatch --out=doP_${i}.out --ntasks-per-node=$i doParallel_test.sbatch
 done
 ```
 
 When the jobs are done:
-```
+
+```shell
 $ for i in 2 4 8 16; do
     printf "%2i cores: %4.1fs\n" $i $(tail -n1 doP_$i.out)
 done
@@ -502,7 +511,8 @@ To distribute parallel R tasks on multiple nodes, you can use the
 
 To install the `Rmpi` package, a module providing MPI library must first be
 loaded. For instance:
-```
+
+```shell
 $ ml openmpi R
 $ R
 > install.packages("Rmpi")
@@ -539,7 +549,7 @@ Once the package is installed, the following scripts demonstrate a very basic
 
 === "Rmpi-test.sbatch"
 
-    ```bash
+    ```shell
     #!/bin/bash
 
     #SBATCH --nodes=2
@@ -557,12 +567,14 @@ Once the package is installed, the following scripts demonstrate a very basic
 
 You can save those scripts as `Rmpi-test.R` and
 `Rmpi-test.sbatch` and then submit your job with:
-```
+
+```shell
 $ sbatch Rmpi-test.sbatch
 ```
 
 When the job is done, its output should look like this:
-```
+
+```shell
 $ cat Rmpi-test.log
         3 slaves are spawned successfully. 0 failed.
 master (rank 0, comm 1) of size 4 is running on: sh-06-33
@@ -617,7 +629,7 @@ the [`gpuR`][url_gpuR] R package.
 
 === "gpuR-test.sbatch"
 
-    ```bash
+    ```shell
     #!/bin/bash
 
     #SBATCH --partition gpu
@@ -634,7 +646,8 @@ the [`gpuR`][url_gpuR] R package.
 
 After submitting the job with `sbatch gpuR-test.sbatch`, the output file should
 contain something like this:
-```
+
+```shell
 [1] "CPU times"
 [1] "1  0.00"
 [1] "2  0.00"

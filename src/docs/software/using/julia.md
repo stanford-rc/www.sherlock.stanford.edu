@@ -19,7 +19,7 @@ documentation][url_julia_docs].
 Julia is available on Sherlock and the corresponding [module][url_modules] can
 be loaded with:
 
-```
+```shell
 $ ml julia
 ```
 
@@ -32,7 +32,7 @@ Sherlock prompt, or refer to the [Software list page][url_software_list].
 Once your environment is configured (_ie._ when the `julia` module is loaded),
 julia can be started by simply typing julia at the shell prompt:
 
-```
+```shell
 $ julia
 
 _
@@ -49,7 +49,7 @@ julia>
 
 For a listing of command line options:
 
-```
+```shell
 $ julia --help
 
 julia [switches] -- [programfile] [args...]
@@ -77,7 +77,7 @@ julia [switches] -- [programfile] [args...]
  -i                        Interactive mode; REPL runs and isinteractive() is true
  -q, --quiet               Quiet startup: no banner, suppress REPL warnings
 
-```
+```shell
 
 #### Running a Julia script
 
@@ -87,14 +87,14 @@ mode.
 Here is an example where we create a simple [Hello World][url_helloworld]
 program and launch it with Julia
 
-```
+```shell
 $ echo 'println("hello world")' > helloworld.jl
 ```
 
 
 That script can now simply be executed by calling `julia <script_name>`:
 
-```
+```shell
 $ julia helloworld.jl
 hello world
 ```
@@ -105,7 +105,7 @@ Here's an example Julia sbatch script that can be submitted via `sbatch`:
 
 
 === "julia_test.sbatch"
-    ```bash
+    ```shell
     #!/bin/bash
 
     #SBATCH --time=00:10:00
@@ -122,14 +122,14 @@ Here's an example Julia sbatch script that can be submitted via `sbatch`:
 You can save this script as `julia_test.sbatch` and submit it to the scheduler
 with:
 
-```
+```shell
 $ sbatch julia_test.sbatch
 ```
 
 Once the job is done, you should get a `julia_test.log` file in the current
 directory, with the following contents:
 
-```
+```shell
 $ cat julia_test.log
 hello world
 ```
@@ -146,7 +146,7 @@ packages.
 
 First import the `Pkg` module:
 
-```
+```shell
 julia> import Pkg
 julia> Pkg.status()
     Status `~/.julia/environments/v1.0/Project.toml`
@@ -163,14 +163,14 @@ julia> Pkg.status()
 You can first check the status of packages installed on Julia using the status
 function of the `Pkg` module:
 
-```
+```shell
 julia> Pkg.status()
 No packages installed.
 ```
 
 You can then add packages using the add function of the `Pkg` module:
 
-```
+```shell
 julia> Pkg.add("Distributions")
 INFO: Cloning cache of Distributions from git://github.com/JuliaStats/Distributions.jl.git
 INFO: Cloning cache of NumericExtensions from git://github.com/lindahua/NumericExtensions.jl.git
@@ -184,7 +184,7 @@ INFO: REQUIRE updated.
 Using the status function again, you can see that the package and its
 dependencies have been installed:
 
-```
+```shell
 julia> Pkg.status()
 Required packages:
  - Distributions                 0.2.7
@@ -197,19 +197,20 @@ Additional packages:
 
 The update function of the `Pkg` module can update all packages installed:
 
-```
+```shell
 julia> Pkg.update()
 INFO: Updating METADATA...
 INFO: Computing changes...
 INFO: Upgrading Distributions: v0.2.8 => v0.2.10
 INFO: Upgrading Stats: v0.2.7 => v0.2.8
 ```
+
 #### Removing packages
 
 The remove function of the `Pkg` module can remove any packages installed as
 well:
 
-```
+```shell
 julia> Pkg.rm("Distributions")
 INFO: Removing Distributions v0.2.7
 INFO: Removing Stats v0.2.6
@@ -253,14 +254,14 @@ Sherlock.
 Given following Julia script (`julia_parallel_test.jl`) that will print a line
 with the process id and the node it's executing on, in parallel:
 
-```
+```shell
 @everywhere println("process: $(myid()) on host $(gethostname())")
 ```
 
 You can submit the following job:
 
 === "julia_test.sbatch"
-    ```bash
+    ```shell
     #!/bin/bash
     #SBATCH --nodes 2
     #SBATCH --ntasks-per-node 4
@@ -272,7 +273,7 @@ You can submit the following job:
 
 Save as `julia_test.sbatch`, and then:
 
-```
+```shell
 $ sbatch  julia_test.sbatch
 ```
 
@@ -285,7 +286,7 @@ It will:
 
 It should output something like this in your job's output file:
 
-```
+```shell
 process: 1 on host sh-06-33.int
       From worker 2:    process: 2 on host sh-06-33.int
       From worker 3:    process: 3 on host sh-06-34.int

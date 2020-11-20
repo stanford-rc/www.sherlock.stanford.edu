@@ -1,6 +1,3 @@
-title: Prerequisites
-----
-
 To start using Sherlock, you will need:
 
 * an active [SUNet ID][url_sunet],

@@ -25,13 +25,13 @@ the other.
 
 You can load either version on Sherlock by doing the following commands:
 
-```
+```shell
 $ ml python/2.7.13
 ```
 
 or
 
-```
+```shell
 $ ml python/3.6.1
 ```
 
@@ -52,7 +52,7 @@ $ ml python/3.6.1
 Once your environment is configured (ie. when the Python module is loaded),
 Python can be started by simply typing `python` at the shell prompt:
 
-```
+```shell
 $ python
 Python 2.7.13 (default, Apr 27 2017, 14:19:21)
 [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)] on linux2
@@ -77,9 +77,11 @@ provided on Sherlock:
 * [TensorFlow][url_tensorflow]
 
 Python modules on Sherlock generally follow the naming scheme below:
-```
+
+```shell
 py-<package_name>/version_py<python_version>
 ```
+
 For instance, NumPy modules are:
 
 * [`py-numpy/1.14.3_py27`][url_module_numpy]
@@ -89,7 +91,7 @@ For instance, NumPy modules are:
 You can list all available module versions for a package with `ml spider
 <package_name>`. For instance:
 
-```
+```shell
 $ ml spider tensorflow
 -------------------------------------------------------------------------------
   py-tensorflow:
@@ -132,12 +134,14 @@ packages once, and they'll be ready to be used on every single node in the
 cluster.
 
 For example:
-```
+
+```shell
 $ pip install --user <package_name>
 ```
 
 For Python 3, use `pip3`:
-```
+
+```shell
 $ pip3 install --user <package_name>
 ```
 
@@ -153,7 +157,7 @@ Python version.
 You can easily see the list of the Python packages installed in your
 environment, and their location, with `pip list`:
 
-```
+```shell
 $ pip list -v
 Package    Version Location                                                            Installer
 ---------- ------- ------------------------------------------------------------------- ---------
@@ -162,7 +166,7 @@ setuptools 28.8.0  /share/software/user/open/python/2.7.13/lib/python2.7/site-pa
 urllib3    1.24    /home/users/kilian/.local/lib/python2.7/site-packages               pip
 virtualenv 15.1.0  /share/software/user/open/python/2.7.13/lib/python2.7/site-packages pip
 
-```
+```shell
 
 
 
@@ -183,15 +187,19 @@ users from the group use it without having to install it themselves.
 
 First, you need to create a directory to store those packages. We'll put it in
 `$GROUP_HOME`:
-```
+
+```shell
 $ mkdir -p $GROUP_HOME/python/
 ```
+
 Then, we load the Python module we need, and we instruct `pip` to install its
 packages in the directory we just created:
-```
+
+```shell
 $ ml python/2.7.13
 $ PYTHONUSERBASE=$GROUP_HOME/python pip install --user urllib3
 ```
+
 We still use the `--user` option, but with `PYTHONUSERBASE` pointing to a
 different directory, `pip` will install packages there.
 
@@ -199,11 +207,14 @@ Now, to be able to use that Python module, since it's not been installed in a
 default directory, you (and all the members of the group who will want to use
 that module) need to set their `PYTHONPATH` to include our new shared
 directory[^pythonpath]:
-```
+
+```shell
 $ export PYTHONPATH=$GROUP_HOME/python/lib/python2.7/site-packages:$PYTHONPATH
 ```
+
 And now, the module should be visible:
-```
+
+```shell
 $ pip list -v
 Package    Version Location                                                            Installer
 ---------- ------- ------------------------------------------------------------------- ---------
@@ -231,18 +242,19 @@ virtualenv 15.1.0  /share/software/user/open/python/2.7.13/lib/python2.7/site-pa
     ```
 
 
-##### Installing packages from GitHub
+##### Installing from GitHub
 
 `pip` also supports installing packages from a variety of sources, including
 GitHub repositories.
 
 For instance, to install [HTTPie][url_httpie], you can do:
-```
+
+```shell
 $ pip install --user git+git://github.com/jkbr/httpie.git
 ```
 
 
-##### Installing a list of modules using a requirement file
+##### Installing from a requirements file
 
 `pip` allows installing a list of packages listed in a file, which can be
 pretty convenient to install several dependencies at once.
@@ -251,15 +263,17 @@ In order to do this, create a text file called `requirements.txt` and place
 each package you would like to install on its own line:
 
 === "requirements.txt"
-    ```
-    numpy
-    scikit-learn
-    keras
-    tensorflow
-    ```
+
+```shell
+numpy
+scikit-learn
+keras
+tensorflow
+```
 
 You can now install your modules like so:
-```
+
+```shell
 $ ml python
 $ pip install--user -r requirements.txt
 ```
@@ -268,17 +282,17 @@ $ pip install--user -r requirements.txt
 
 `pip` can update already installed packages with the following command:
 
-```
+```shell
 $ pip install --user --upgrade <package_name>
 
-```
+```shell
 
 Upgrading packages also works with `requirements.txt` files:
 
-```
+```shell
 $ pip install --user --upgrade -r requirements.txt
 
-```
+```shell
 
 
 #### Uninstalling packages
@@ -286,11 +300,11 @@ $ pip install --user --upgrade -r requirements.txt
 To uninstall a Python package, you can use the `pip uninstall` command (note
 that it doesn't take any `--user` option):
 
-```
+```shell
 $ pip uninstall <package_name>
 $ pip uninstall -r requirements.txt
 
-```
+```shell
 
 
 [comment]: #  (link URLs -----------------------------------------------------)

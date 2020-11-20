@@ -26,7 +26,7 @@ MATLAB with good results.
 
 The MATLAB [module][url_modules] can be loaded with:
 
-```
+```shell
 $ ml load matlab
 ```
 
@@ -54,7 +54,7 @@ Once you are on a compute node and your environment is configured (_ie._ when
 the `matlab` module is loaded), MATLAB can be started by simply typing `matlab`
 at the shell prompt.
 
-```
+```shell
 $ sdev
 $ ml load matlab
 $ matlab
@@ -72,7 +72,7 @@ For product information, visit www.mathworks.com.
 
 For a listing of command line options:
 
-```
+```shell
 $ matlab -help
 ```
 
@@ -97,13 +97,13 @@ client][url_ssh_client].
 
 For instance:
 
-```
+```shell
 $ ssh -X <YourSUNetID>@login.sherlock.stanford.edu
 ```
 
 And then, once on Sherlock:
 
-```
+```shell
 $ sdev
 $ ml load matlab
 $ matlab
@@ -148,7 +148,8 @@ To create the script, open a [text editor][url_text_editor] on Sherlock, copy
 the contents of the script, and save it as `matlab_test.sbatch`
 
 Then, submit the job with the `sbatch` command:
-```
+
+```shell
 $ sbatch matlab_test.sbatch
 Submitted batch job 59942277
 ```
@@ -177,7 +178,8 @@ node, and runs a simple MATLAB script using `parfor`.
 Save the two scripts below as `parfor.sbatch` and `parfor.m`:
 
 === `parfor.sbatch`
-```bash
+
+```shell
 #!/bin/bash
 #SBATCH -J pfor_matlab
 #SBATCH -o pfor".%j".out
@@ -192,6 +194,7 @@ matlab -nosplash -nodesktop -r parfor.m
 ```
 
 === `parfor.m`
+
 ```matlab
 %============================================================================
 % Parallel Monte Carlo calculation of PI
@@ -223,7 +226,8 @@ exit;
 
 
 You can now submit the job with the following command:
-```bash
+
+```shell
 sbatch parfor.sbatch
 ```
 

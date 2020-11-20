@@ -65,7 +65,7 @@ group on Sherlock, please [let us know][url_contact], and we'll get in touch.
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_contact]:        mailto:{{ support_email }}
-[url_software_lic]:   https://uit.stanford.edu/service/softwarelic
+[url_software_lic]:   //uit.stanford.edu/service/softwarelic
 [url_storage]:        /docs/storage
 [url_list]:           /docs/software/list
 [url_modules]:        /docs/software/modules

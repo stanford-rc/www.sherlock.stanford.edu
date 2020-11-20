@@ -1,4 +1,5 @@
 # Technical specifications
+<!-- markdownlint-disable MD013 MD037 -->
 
 {% macro get_value(category, item, attr="value", rnd=0, fmt="{:,}") -%}
     {%- set val = facts   | selectattr("name", "==", category)
