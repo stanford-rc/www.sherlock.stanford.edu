@@ -1,34 +1,35 @@
-name: check
+name: tests
+
+# restricting branches prevents jobs from being run twice since
+# a push to a pull request triggers two events.
 on:
   workflow_dispatch:
+  pull_request:
+    branches:
+      - "*"
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
-env:
-  CI: true
-  PYTHON_VERSION: 3.x
 
 jobs:
 
   build:  # --------------------------------------------------------------------
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v1
+      - uses: actions/setup-python@v2
         with:
-          python-version: ${{ env.PYTHON_VERSION }}
+          python-version: '3.x'
       - run: |
           pip install -r requirements.txt
       - run: |
           mkdocs --version
           mkdocs build --strict --verbose
 
-  lint: # --------------------------------------------------------------------
-    runs-on: ubuntu-latest
+
+  yamllint: # ----------------------------------------------------------------
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - uses: ibiqlik/action-yamllint@v3
@@ -43,15 +44,34 @@ jobs:
               empty-lines:
                 max-end: 2
 
+
+  mklint: # ----------------------------------------------------------------
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: avto-dev/markdown-lint@v1
+        with:
+          config: .markdownlintrc
+      
+
+
+  linkcheck: # -------------------------------------------------------------
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+                
+            
+
   notification: # ------------------------------------------------------------
-    runs-on: ubuntu-latest
-    needs: [build, lint]
+    runs-on: ubuntu-20.04
+    needs: [build, yamllint, mklint, linkcheck]
     if: always()
     steps:
       - uses: technote-space/workflow-conclusion-action@v2
       - uses: iRoachie/slack-github-actions@v2.0.1
+        #if: env.WORKFLOW_CONCLUSION == 'failure' 
         with:
-          status: ${{ job.status }}
+          status: ${{ env.WORKFLOW_CONCLUSION }}
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
