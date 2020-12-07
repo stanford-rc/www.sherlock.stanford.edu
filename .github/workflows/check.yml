@@ -32,8 +32,12 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+      - run: |
+          echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep '.yml' | xargs)"
       - uses: ibiqlik/action-yamllint@v3
+        if: ${{ steps.getfile.outputs.files != '' }}
         with:
+          file_or_dir: ${{ steps.getfile.outputs.files }} 
           config_file: .yamllint
 
 
@@ -41,9 +45,13 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - uses: avto-dev/markdown-lint@v1
+      - run: |
+          echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep '.md' | xargs)"
+      - uses: nosborn/github-action-markdown-cli@v1.1.1
+        if: ${{ steps.getfile.outputs.files != '' }}
         with:
-          config: .markdownlintrc
+          files: ${{ steps.getfile.outputs.files }} 
+          config_file: .markdownlintrc
 
 
   linkcheck: # -------------------------------------------------------------
