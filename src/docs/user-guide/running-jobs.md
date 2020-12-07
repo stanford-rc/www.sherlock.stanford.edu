@@ -73,7 +73,7 @@ Usage: sdev [OPTIONS]
         -c      number of CPU cores to request (OpenMP/pthreads, default: 1)
         -n      number of tasks to request (MPI ranks, default: 1)
         -N      number of nodes to request (default: 1)
-        -m      memory amount to request (default: 4GB)
+        -m      memory amount to request (default: 4G)
         -p      partition to run the job in (default: dev)
         -t      time limit (default: 01:00:00)
         -r      allocate resources from the named reservation (default: none)
