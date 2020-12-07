@@ -152,15 +152,15 @@ constantly evolving and expanding with new hardware additions.
 
 As of {{ git.date.strftime("%B %Y") }}, Sherlock features over {{
 "{:,}".format(public_cores) }} CPU cores available to all researchers, and more
-than {{ "{:,}".format(owner_cores) }}  additional cores available to Sherlock
-owners, faculty who have augmented the cluster with their own purchases.
+than {{ "{:,}".format(owner_cores) }} additional CPU cores available to
+Sherlock owners, faculty who have augmented the cluster with their own
+purchases. With a computing power over {{ pflops }} Petaflops, Sherlock would
+have its place in the Top500 list of the 500 most powerful computer systems in
+the world.
 
 For more details about Sherlock size and technical specifications, please refer
 to the [tech specs][url_specs] section of the documentation. And for even more
-numbers and figures, checkout the [Sherlock facts][url_facts] page.
-But with a computing power over {{ pflops }} Petaflops, Sherlock would have its
-place in the Top500 list of the 500 most powerful computer systems in the
-world.
+numbers and figures, see the [Sherlock facts][url_facts] page.
 
 
 ### OK, I'm sold, how do I start?
