@@ -527,6 +527,8 @@ software_modules:
           performance tests using MPI.
       - markedDefault: false
         properties:
+          arch:
+            gpu: 1
           parallel:
             mpi: 1
         versionName: 5.6.3
@@ -3022,17 +3024,17 @@ software_modules:
       categories: math, optimization
     name: math
   - packages:
-    - description: The UDUNITS package from Unidata is a C-based package for the programatic
-        handling of units of physical quantities.
-      defaultVersionName: 2.2.26
+    - description: OOMMF is a set of portable, extensible public domain micromagnetic
+        program and associated tools.
+      defaultVersionName: 1.2b4
       versions:
       - markedDefault: false
-        description: The UDUNITS package from Unidata is a C-based package for the
-          programatic handling of units of physical quantities.
-        versionName: 2.2.26
-      url: https://www.unidata.ucar.edu/software/udunits/
-      package: udunits
-      categories: physics, geoscience
+        description: OOMMF is a set of portable, extensible public domain micromagnetic
+          program and associated tools.
+        versionName: 1.2b4
+      url: https://math.nist.gov/oommf
+      package: oommf
+      categories: physics, micromagnetics
     - description: CDO is a collection of command line Operators to manipulate and
         analyse Climate and NWP model Data.
       defaultVersionName: 1.9.7.1
@@ -3044,59 +3046,6 @@ software_modules:
       url: https://code.mpimet.mpg.de/projects/cdo
       package: cdo
       categories: physics, climate modeling
-    - description: Python interface to PROJ4 library for cartographic transformations.
-      defaultVersionName: 1.9.5.1_py27
-      package: py-pyproj
-      url: https://github.com/jswhit/pyproj
-      versions:
-      - markedDefault: false
-        description: Python interface to PROJ4 library for cartographic transformations.
-        versionName: 1.9.5.1_py36
-      - markedDefault: true
-        description: Python interface to PROJ4 library for cartographic transformations.
-        versionName: 1.9.5.1_py27
-      categories: physics, geoscience
-    - description: HEAsoft is a Unified Release of the FTOOLS (General and mission-specific
-        tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks
-        for X-ray astronomical spectral, timing, and imaging data analysis) software
-        packages.
-      defaultVersionName: 6.26.1
-      package: heasoft
-      url: https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/
-      versions:
-      - markedDefault: false
-        description: HEAsoft is a Unified Release of the FTOOLS (General and mission-specific
-          tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks
-          for X-ray astronomical spectral, timing, and imaging data analysis) software
-          packages.
-        versionName: 6.22.1
-      - markedDefault: false
-        description: HEAsoft is a Unified Release of the FTOOLS (General and mission-specific
-          tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks
-          for X-ray astronomical spectral, timing, and imaging data analysis) software
-          packages.
-        versionName: 6.26.1
-      categories: physics, astronomy
-    - description: OpenDrift is a software for modeling the trajectories and fate
-        of objects or substances drifting in the ocean, or even in the atmosphere.
-      defaultVersionName: 1.0.3_py27
-      versions:
-      - markedDefault: false
-        description: OpenDrift is a software for modeling the trajectories and fate
-          of objects or substances drifting in the ocean, or even in the atmosphere.
-        versionName: 1.0.3_py27
-      url: https://github.com/OpenDrift/opendrift
-      package: py-opendrift
-      categories: physics, geoscience
-    - description: 'SU2: An Open-Source Suite for Multiphysics Simulation and Design'
-      defaultVersionName: 7.0.3
-      versions:
-      - markedDefault: false
-        description: 'SU2: An Open-Source Suite for Multiphysics Simulation and Design'
-        versionName: 7.0.3
-      url: https://su2code.github.io/
-      package: su2
-      categories: physics, CFD
     - description: This python package collects together a suite of widely used analysis
         tools in Weak Gravitational Lensing.
       defaultVersionName: 1.0_py36
@@ -3132,17 +3081,6 @@ software_modules:
       url: https://www.astropy.org/
       package: py-astropy
       categories: physics, astronomy
-    - description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
-        coupled configurational and vibrational disorder in alloy systems.'
-      defaultVersionName: '3.36'
-      versions:
-      - markedDefault: false
-        description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
-          coupled configurational and vibrational disorder in alloy systems.'
-        versionName: '3.36'
-      url: https://www.brown.edu/Departments/Engineering/Labs/avdw/atat/
-      package: atat
-      categories: physics, materials science
     - description: Meep is a free finite-difference time-domain (FDTD) simulation
         software package to model electromagnetic systems.
       defaultVersionName: 1.4.3
@@ -3164,17 +3102,6 @@ software_modules:
         description: Meep is a free finite-difference time-domain (FDTD) simulation
           software package to model electromagnetic systems.
       categories: physics, photonics
-    - description: GDAL is a translator library for raster and vector geospatial data
-        formats.
-      defaultVersionName: 2.2.1
-      versions:
-      - markedDefault: false
-        description: GDAL is a translator library for raster and vector geospatial
-          data formats.
-        versionName: 2.2.1
-      url: http://www.gdal.org
-      package: gdal
-      categories: physics, geoscience
     - description: MPB is a free software package for computing the band structures,
         or dispersion relations, and electromagnetic modes of periodic dielectric
         structures, on both serial and parallel computers.
@@ -3222,6 +3149,37 @@ software_modules:
       url: https://github.com/openmc-dev/openmc
       package: openmc
       categories: physics, particle
+    - description: The UDUNITS package from Unidata is a C-based package for the programatic
+        handling of units of physical quantities.
+      defaultVersionName: 2.2.26
+      versions:
+      - markedDefault: false
+        description: The UDUNITS package from Unidata is a C-based package for the
+          programatic handling of units of physical quantities.
+        versionName: 2.2.26
+      url: https://www.unidata.ucar.edu/software/udunits/
+      package: udunits
+      categories: physics, geoscience
+    - description: OpenDrift is a software for modeling the trajectories and fate
+        of objects or substances drifting in the ocean, or even in the atmosphere.
+      defaultVersionName: 1.0.3_py27
+      versions:
+      - markedDefault: false
+        description: OpenDrift is a software for modeling the trajectories and fate
+          of objects or substances drifting in the ocean, or even in the atmosphere.
+        versionName: 1.0.3_py27
+      url: https://github.com/OpenDrift/opendrift
+      package: py-opendrift
+      categories: physics, geoscience
+    - description: 'SU2: An Open-Source Suite for Multiphysics Simulation and Design'
+      defaultVersionName: 7.0.3
+      versions:
+      - markedDefault: false
+        description: 'SU2: An Open-Source Suite for Multiphysics Simulation and Design'
+        versionName: 7.0.3
+      url: https://su2code.github.io/
+      package: su2
+      categories: physics, CFD
     - description: OpenSees is a software framework for developing applications to
         simulate the performance of structural and geotechnical systems subjected
         to earthquakes.
@@ -3238,6 +3196,61 @@ software_modules:
       url: http://opensees.berkeley.edu/
       package: opensees
       categories: physics, geophysics
+    - description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
+        coupled configurational and vibrational disorder in alloy systems.'
+      defaultVersionName: '3.36'
+      versions:
+      - markedDefault: false
+        description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
+          coupled configurational and vibrational disorder in alloy systems.'
+        versionName: '3.36'
+      url: https://www.brown.edu/Departments/Engineering/Labs/avdw/atat/
+      package: atat
+      categories: physics, materials science
+    - description: GDAL is a translator library for raster and vector geospatial data
+        formats.
+      defaultVersionName: 2.2.1
+      versions:
+      - markedDefault: false
+        description: GDAL is a translator library for raster and vector geospatial
+          data formats.
+        versionName: 2.2.1
+      url: http://www.gdal.org
+      package: gdal
+      categories: physics, geoscience
+    - description: Python interface to PROJ4 library for cartographic transformations.
+      defaultVersionName: 1.9.5.1_py27
+      package: py-pyproj
+      url: https://github.com/jswhit/pyproj
+      versions:
+      - markedDefault: false
+        description: Python interface to PROJ4 library for cartographic transformations.
+        versionName: 1.9.5.1_py36
+      - markedDefault: true
+        description: Python interface to PROJ4 library for cartographic transformations.
+        versionName: 1.9.5.1_py27
+      categories: physics, geoscience
+    - description: HEAsoft is a Unified Release of the FTOOLS (General and mission-specific
+        tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks
+        for X-ray astronomical spectral, timing, and imaging data analysis) software
+        packages.
+      defaultVersionName: 6.26.1
+      package: heasoft
+      url: https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/
+      versions:
+      - markedDefault: false
+        description: HEAsoft is a Unified Release of the FTOOLS (General and mission-specific
+          tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks
+          for X-ray astronomical spectral, timing, and imaging data analysis) software
+          packages.
+        versionName: 6.22.1
+      - markedDefault: false
+        description: HEAsoft is a Unified Release of the FTOOLS (General and mission-specific
+          tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks
+          for X-ray astronomical spectral, timing, and imaging data analysis) software
+          packages.
+        versionName: 6.26.1
+      categories: physics, astronomy
     name: physics
   - packages:
     - description: OBITools is a set of programs designed for analyzing NGS data in
