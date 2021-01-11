@@ -69,8 +69,7 @@ $ export DB_DIR=$SCRATCH/db
 $ postgres -D $DB_DIR
 [...]
 2018-10-09 17:42:08.094 PDT [3841] LOG:  database system is ready to accept connections
-
-```shell
+```
 
 The `postgres` process will be blocking, meaning it will not give the prompt
 back for as long as the PostgreSQL server runs.

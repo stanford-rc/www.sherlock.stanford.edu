@@ -242,8 +242,7 @@ $ module spider udunits
     the "udunits/2.2.26" module is available to load.
 
       physics
-
-```shell
+```
 
 So for `sf`, in order to load the dependencies, exit `R`, load the `udunits`
 and `gdal` modules, and try installing `sf` again:

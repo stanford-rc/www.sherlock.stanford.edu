@@ -165,9 +165,7 @@ pip        18.1    /share/software/user/open/python/2.7.13/lib/python2.7/site-pa
 setuptools 28.8.0  /share/software/user/open/python/2.7.13/lib/python2.7/site-packages pip
 urllib3    1.24    /home/users/kilian/.local/lib/python2.7/site-packages               pip
 virtualenv 15.1.0  /share/software/user/open/python/2.7.13/lib/python2.7/site-packages pip
-
-```shell
-
+```
 
 
 ##### Alternative installation path
@@ -284,15 +282,13 @@ $ pip install--user -r requirements.txt
 
 ```shell
 $ pip install --user --upgrade <package_name>
-
-```shell
+```
 
 Upgrading packages also works with `requirements.txt` files:
 
 ```shell
 $ pip install --user --upgrade -r requirements.txt
-
-```shell
+```
 
 
 #### Uninstalling packages
@@ -303,8 +299,7 @@ that it doesn't take any `--user` option):
 ```shell
 $ pip uninstall <package_name>
 $ pip uninstall -r requirements.txt
-
-```shell
+```
 
 
 [comment]: #  (link URLs -----------------------------------------------------)

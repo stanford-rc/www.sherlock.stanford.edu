@@ -76,8 +76,7 @@ julia [switches] -- [programfile] [args...]
 
  -i                        Interactive mode; REPL runs and isinteractive() is true
  -q, --quiet               Quiet startup: no banner, suppress REPL warnings
-
-```shell
+```
 
 #### Running a Julia script
 
