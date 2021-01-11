@@ -127,7 +127,7 @@ Here is an example MATLAB batch script that can submitted with `sbatch`:
 #SBATCH --partition=normal
 #SBATCH --time=00:10:00
 #SBATCH --cpus-per-task=1
-#SBATCH --mem=8GB
+#SBATCH --mem=8G
 #SBATCH --mail-type=ALL
 
 module load matlab

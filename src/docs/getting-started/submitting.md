@@ -116,7 +116,7 @@ editor][url_texteditors] such as `nano` or `vim`, and save it as `submit.sh`.
     #SBATCH --job-name=big job
     ```
     ```
-    #SBATCH --mem=16 GB
+    #SBATCH --mem=16 G
     ```
     ```
     #SBATCH --partition=normal, owners
