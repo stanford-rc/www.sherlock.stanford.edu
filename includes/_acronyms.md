@@ -14,6 +14,7 @@
 *[OS]: Operating System
 *[PI]: Principal Investigator
 *[PO]: Purchase Order
+*[PDU]: Power Distribution Unit
 *[RAM]: Random Access Memory
 *[SMP]: Shared Memory Parallelism
 *[SRCC]: Stanford Research Computing Center
