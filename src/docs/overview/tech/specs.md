@@ -102,8 +102,8 @@ th:nth-child(2)  { min-width: 0 !important;
     For more information about storage options on Sherlock, please refer to the
     [Storage section][url_storage] of the documentation.
 
-Storage components are common to both clusters, meaning users can find the same
-files and directories from both Sherlock 1.0 and Sherlock 2.0 nodes.
+Sherlock is architected around shared storage components, meaning that users
+can find the same files and directories from all of the Sherlock nodes.
 
 * Highly-available NFS filesystem for user and group home directories (with
   hourly snapshots and off-site replication)
