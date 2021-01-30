@@ -91,7 +91,7 @@ th:nth-child(2)  { min-width: 0 !important;
     {%- endif -%}
 </small> |
 {%- endfor %}
-| **Total** | | **{{ get_value("computing", "compute nodes") }} :octicons-server-24:** | **{{ get_value("computing", "CPU cores") }} :octicons-cpu-24:** | |
+| **Total** | | **{{ get_value("computing", "compute nodes") }} :octicons-server-24:** | **{{ get_value("computing", "CPU cores") }} :octicons-cpu-24:** | **{{ get_value("computing", "GPUs") }} :material-expansion-card:** |
 
 
 
