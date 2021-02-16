@@ -27,13 +27,10 @@ The scheduler provides three key functions:
 <!-- HTML interlude for the main page logo -->
 <style>
 @media only screen and (max-width: 720px) {
-    #logo_head {
-        display: none;
-    }
+    #slurm_logo { display: none; }
 }
 </style>
-<img id="slurm_logo" align="right" height="115px"
-     alt="Slurm" src="https://slurm.schedmd.com/slurm_logo.png"/>
+![Slurm logo](https://slurm.schedmd.com/slurm_logo.png){: id=slurm_logo align=right width=115px loading=lazy :}
 
 
 Sherlock uses [Slurm][url_slurm], an open-source resource manager and job
