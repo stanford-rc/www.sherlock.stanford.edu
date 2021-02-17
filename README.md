@@ -9,9 +9,6 @@ The [Sherlock documentation][url_docs] is generated from
 
 ![screenshot](https://user-images.githubusercontent.com/186807/96660514-95d9bc80-12fe-11eb-947a-bc12f4ce2650.png)
 
-For more details about the internal structure of the website and building
-process, please see [INTERNALS.md](INTERNALS.md)
-
 
 ## How to contribute
 
