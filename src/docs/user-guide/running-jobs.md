@@ -83,8 +83,7 @@ Usage: sdev [OPTIONS]
     Note: the default partition only allows for limited amount of resources.
     If you need more, your job will be rejected unless you specify an
     alternative partition with -p.
-
-```shell
+```
 
 Another way to get an interactive session on a compute node is to use `srun` to
 execute a shell through the scheduler. For instance, to start a `bash` session
