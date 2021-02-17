@@ -104,17 +104,48 @@ nodes, along with everyone else.
 
 Benefits to owners include:
 
-* Data center hosting, including backup power and cooling,
-* Access to high-performance, large parallel scratch disk space,
-* Priority access to nodes that they own,
-* Background access to any owner nodes that are not in use,
-* System configuration and administration,
-* User support,
-* Standard software stack, appropriate for a range of research needs,
-* Possibility for users to install additional software applications as needed,
+- [x] **immediate access** to the purchased nodes
+- [x] **background access** to all of the other owners' nodes when they're not
+  in use
+- [x] **data center hosting**, including backup power and cooling
+- [x] access to high-performance, large parallel scratch storage space
+- [x] standard software stack, appropriate for a range of research needs
+- [x] possibility for users to install additional software applications as
+  needed
+- [x] system configuration and administration
+- [x] user support
+
+### Limitations
+
+Becoming an owner will **NOT** provide:
+
+:fontawesome-solid-times:{: .chk_no :} **root access**: owner nodes on
+  Sherlock are still managed by SRCC in accordance with Stanford's [Minimum
+Security Standards](url_minsec). Although users are welcome to install (or
+request) any software they may need, purchasing compute nodes on Sherlock does
+not allow `root` access to the nodes.
+
+:fontawesome-solid-times:{: .chk_no :} **running permanent services**:
+  permanent processes such as web servers or databases can only run on owner
+nodes through the scheduler, using [recurring](url_recurring) or
+[persistent](url_persistent). Purchasing compute nodes on Sherlock does not
+provide a way to run anything that couldn't run on publicly-available nodes.
+
+:fontawesome-solid-times:{: .chk_no :} **direct network connectivity** from the
+outside world: owners' nodes are connected to the Sherlock's internal network
+and are not directly accessible from the outside, which means that they can't
+host public services like web or application servers.
+
+:fontawesome-solid-times:{: .chk_no :} **scheduler bypass**: jobs running on
+owners' nodes still need to be submitted to the scheduler. Direct shell access
+to the nodes is not possible outside of scheduled interactive sessions.
+
+:fontawesome-solid-times:{: .chk_no :} **persistent local storage**: [local
+storage space](url_lscratch) provided on the compute nodes is only usable for
+the duration of a job and cannot be used to store long-term data.
 
 
-### How to invest
+### Purchasing nodes
 
 If you are interested in becoming an owner, you can find the latest information
 about ordering Sherlock nodes on the [ordering page][url_orders].
@@ -239,6 +270,9 @@ lost when the maintenance starts.
 [url_farmshare]:  //uit.stanford.edu/service/sharedcomputing
 [url_fairshare]:  //slurm.schedmd.com/fair_tree.html
 [url_orders]:     /docs/overview/orders
+[url_recurring]:  /docs/user-guide/running-jobs/#recurring-jobs
+[url_persistent]: /docs/user-guide/running-jobs/#persistent-jobs
+[url_lscratch]:   /docs/storage/filesystems/#l_scratch
 
 [url_HIPAA]: //en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act
 [url_PHI]:   //en.wikipedia.org/wiki/Protected_health_information

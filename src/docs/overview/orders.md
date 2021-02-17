@@ -33,7 +33,8 @@ an additional year at most after the end of their service term, while PIs plan
 for equipment refresh. Nodes failing during this period may not be repaired,
 and failed hardware will be disabled or removed from the system.
 
-
+Please note that outside of exceptional circumstances, nodes purchased in
+Sherlock cannot be removed from cluster before the end of their service term.
 
 ### Shared ownership
 
