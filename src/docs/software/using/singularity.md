@@ -204,7 +204,7 @@ Build  : 6-1a0c91b3baa8
 Exec   : simpleFoam
 Date   : Oct 05 2018
 Time   : 23:37:30
-Host   : "sh-06-33.int"
+Host   : "sh01-06n33.int"
 PID    : 14670
 I/O    : uncollated
 Case   : /tmp/openfoam_test/pitzDaily
@@ -373,7 +373,7 @@ Did not find +devices i,j,k,... argument, using all
 Pe 1 physical rank 1 will use CUDA device of pe 2
 Pe 3 physical rank 3 will use CUDA device of pe 2
 Pe 0 physical rank 0 will use CUDA device of pe 2
-Pe 2 physical rank 2 binding to CUDA device 0 on sh-114-13.int: 'TITAN Xp'  Mem: 12196MB  Rev: 6.1
+Pe 2 physical rank 2 binding to CUDA device 0 on sh02-14n13.int: 'TITAN Xp'  Mem: 12196MB  Rev: 6.1
 Info: NAMD 2.12 for Linux-x86_64-multicore-CUDA
 [...]
 Info: SIMULATION PARAMETERS:

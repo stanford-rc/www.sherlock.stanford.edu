@@ -115,10 +115,10 @@ what nodes have been assigned to your job. For instance:
 $ salloc
 salloc: Granted job allocation 655914
 $ echo $SLURM_NODELIST
-sh-101-55
-$ ssh sh-101-55
+sh02-01n55
+$ ssh sh02-01n55
 [...]
-sh-101-55 ~ $
+sh02-01n55 ~ $
 ```
 
 #### Connecting to nodes
@@ -132,7 +132,7 @@ If you SSH to a compute node without any active job allocation, you'll be
 greeted by the following message:
 
 ```shell
-$ ssh sh-101-01
+$ ssh sh02-01n01
 Access denied by pam_slurm_adopt: you have no active jobs on this node
 Connection closed
 $

@@ -226,8 +226,8 @@ If you're in a rush[^account], here's a 3-step ultra-quick start:
 3. run a command
 
    ```shell
-   [kilian@sh-101-58 ~]$ module load python
-   [kilian@sh-101-58 ~]$ python -c "print('Hello Sherlock')"
+   [kilian@sh02-01n58 ~]$ module load python
+   [kilian@sh02-01n58 ~]$ python -c "print('Hello Sherlock')"
    Hello Sherlock
    ```
 

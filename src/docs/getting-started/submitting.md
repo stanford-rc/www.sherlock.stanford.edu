@@ -146,7 +146,7 @@ the `squeue -u $USER` command:
 ```shell
 $ squeue -u $USER
      JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-      1377    normal     test   kilian  R       0:12      1 sh-101-01
+      1377    normal     test   kilian  R       0:12      1 sh02-01n01
 ```
 
 The scheduler will automatically create an output file that will contain the
@@ -157,7 +157,7 @@ following commands:
 
 ```shell
 $ cat slurm-1377.out
-sh-101-01
+sh02-01n01
 ```
 
 Congratulations, you've submitted your first batch job on Sherlock!
