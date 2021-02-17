@@ -104,20 +104,32 @@ nodes, along with everyone else.
 
 Benefits to owners include:
 
-- [x] **immediate access** to the purchased nodes
-- [x] **background access** to all of the other owners' nodes when they're not
-  in use
-- [x] **data center hosting**, including backup power and cooling
-- [x] access to high-performance, large parallel scratch storage space
-- [x] standard software stack, appropriate for a range of research needs
-- [x] possibility for users to install additional software applications as
-  needed
-- [x] system configuration and administration
-- [x] user support
+- [x] **no wait time in queue** with immediate and exclusive access to the
+  purchased nodes
+- [x] **access to more resources** with the possibility to submit jobs to the
+  other owners' nodes when they're not in use
+
+Compared to hosting and managing computing resources on your own, purchasing
+nodes on Sherlock provides:
+
+- data center hosting, including backup power and cooling
+- system configuration, maintenance and administration
+- hardware diagnostics and repairs
+
+Those benefits come in addition to the other Sherlock advantages:
+
+- access to high-performance, large parallel scratch storage space
+- access to snapshot'ed, replicated, enterprise-class storage space
+- optimized software stack, especially tailored for a range of research needs
+- tools to build and install additional software applications as needed
+- user support
 
 ### Limitations
 
-Becoming an owner will **NOT** provide:
+!!! danger "Being an owner on Sherlock is different from traditional server hosting."
+
+In particular, purchasing your own compute nodes on Sherlock will **NOT**
+provide:
 
 :fontawesome-solid-times:{: .chk_no :} **root access**: owner nodes on
   Sherlock are still managed by SRCC in accordance with Stanford's [Minimum
@@ -143,6 +155,11 @@ to the nodes is not possible outside of scheduled interactive sessions.
 :fontawesome-solid-times:{: .chk_no :} **persistent local storage**: [local
 storage space](url_lscratch) provided on the compute nodes is only usable for
 the duration of a job and cannot be used to store long-term data.
+
+:fontawesome-solid-times:{: .chk_no :} **additional storage space**: purchasing
+compute nodes on Sherlock does not provide additional storage space. Please
+note that SRCC does offer the possibility for PIs to purchase their own storage
+space on [Oak](url_oak), for their long-term research data needs.
 
 
 ### Purchasing nodes
@@ -273,6 +290,7 @@ lost when the maintenance starts.
 [url_recurring]:  /docs/user-guide/running-jobs/#recurring-jobs
 [url_persistent]: /docs/user-guide/running-jobs/#persistent-jobs
 [url_lscratch]:   /docs/storage/filesystems/#l_scratch
+[url_oak]:        //uit.stanford.edu/service/oak-storage
 
 [url_HIPAA]: //en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act
 [url_PHI]:   //en.wikipedia.org/wiki/Protected_health_information
