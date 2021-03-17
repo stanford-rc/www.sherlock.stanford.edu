@@ -952,24 +952,17 @@ software_modules:
       categories: system, libs
     - description: Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA
         GPUs.
-      defaultVersionName: 1.0.0
-      package: nvtop
-      url: https://github.com/Syllo/nvtop
+      defaultVersionName: 1.1.0
       versions:
       - markedDefault: false
         properties:
           arch:
             gpu: 1
-        versionName: 0.2.2
+        versionName: 1.1.0
         description: Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA
           GPUs.
-      - markedDefault: false
-        properties:
-          arch:
-            gpu: 1
-        versionName: 1.0.0
-        description: Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA
-          GPUs.
+      url: https://github.com/Syllo/nvtop
+      package: nvtop
       categories: system, resource monitoring
     - description: ImageMagick is a free and open-source software suite for displaying,
         converting, and editing raster image and vector image files.
@@ -4804,7 +4797,7 @@ software_modules:
     - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
         collective communication routines, such as all-gather, reduce, broadcast,
         etc., that have been optimized to achieve high bandwidth over PCIe.
-      defaultVersionName: 2.5.6
+      defaultVersionName: 2.8.4
       package: nccl
       url: https://github.com/NVIDIA/nccl
       versions:
@@ -4861,6 +4854,14 @@ software_modules:
           arch:
             gpu: 1
         versionName: 2.5.6
+        description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
+          collective communication routines, such as all-gather, reduce, broadcast,
+          etc., that have been optimized to achieve high bandwidth over PCIe.
+      - markedDefault: false
+        properties:
+          arch:
+            gpu: 1
+        versionName: 2.8.4
         description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
           collective communication routines, such as all-gather, reduce, broadcast,
           etc., that have been optimized to achieve high bandwidth over PCIe.
@@ -5556,7 +5557,7 @@ software_modules:
       categories: devel, lib
     - description: UCX is a communication library implementing high-performance messaging
         for MPI/PGAS frameworks.
-      defaultVersionName: 1.9.0
+      defaultVersionName: 1.10.0
       package: ucx
       url: http://www.openucx.org
       versions:
@@ -5576,6 +5577,13 @@ software_modules:
           arch:
             gpu: 1
         versionName: 1.9.0
+        description: UCX is a communication library implementing high-performance
+          messaging for MPI/PGAS frameworks.
+      - markedDefault: false
+        properties:
+          arch:
+            gpu: 1
+        versionName: 1.10.0
         description: UCX is a communication library implementing high-performance
           messaging for MPI/PGAS frameworks.
       categories: devel, networking
@@ -5827,7 +5835,7 @@ software_modules:
     - description: The Open MPI Project is an open source Message Passing Interface
         implementation that is developed and maintained by a consortium of academic,
         research, and industry partners.
-      defaultVersionName: 4.0.5
+      defaultVersionName: 4.1.0
       package: openmpi
       url: https://www.openmpi.org
       versions:
@@ -5877,6 +5885,17 @@ software_modules:
           implementation that is developed and maintained by a consortium of academic,
           research, and industry partners.
         versionName: 4.0.5
+        properties:
+          arch:
+            gpu: 1
+          parallel:
+            mpi: 1
+      - family: mpi
+        markedDefault: false
+        description: The Open MPI Project is an open source Message Passing Interface
+          implementation that is developed and maintained by a consortium of academic,
+          research, and industry partners.
+        versionName: 4.1.0
         properties:
           arch:
             gpu: 1
