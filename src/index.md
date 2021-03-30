@@ -20,13 +20,11 @@ nav_links:
     - name: status
       url: 'https://status.sherlock.stanford.edu'
       post: >-
-        <span id="status-widget"></span>
+        <span id="status-widget"/>
     - name: news
       url: 'https://news.sherlock.stanford.edu'
       post: >-
-        <noticeable-widget id="news-widget"
-          access-token="AoaqgE2gEgx8fjXbxETY" project-id="bYyIewUV308AvkMztxix" white-label="true">
-        </noticeable-widget>
+        <span id="news-widget"/>
     - name: docs
       url: '/docs'
       icon: book

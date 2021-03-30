@@ -1,3 +1,4 @@
+// navbar display
 !function(t) {
     "use strict";
     t("a.page-scroll").bind("click", function(a) {
