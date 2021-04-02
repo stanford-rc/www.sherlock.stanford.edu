@@ -518,7 +518,7 @@ software_modules:
       categories: system, libs
     - description: The OSU MicroBenchmarks carry out a variety of message passing
         performance tests using MPI.
-      defaultVersionName: 5.6.3
+      defaultVersionName: '5.7'
       package: osu-micro-benchmarks
       url: http://mvapich.cse.ohio-state.edu/benchmarks/
       versions:
@@ -536,6 +536,15 @@ software_modules:
           parallel:
             mpi: 1
         versionName: 5.6.3
+        description: The OSU MicroBenchmarks carry out a variety of message passing
+          performance tests using MPI.
+      - markedDefault: false
+        properties:
+          arch:
+            gpu: 1
+          parallel:
+            mpi: 1
+        versionName: '5.7'
         description: The OSU MicroBenchmarks carry out a variety of message passing
           performance tests using MPI.
       categories: system, benchmark
@@ -3393,19 +3402,17 @@ software_modules:
           technique for mapping human brain activity.
         versionName: 18.2.04
       categories: biology, neurology
-    - description: Connectome Workbench is an open source, freely available visualization
-        and discovery tool used to map neuroimaging data, especially data generated
-        by the Human Connectome Project.
-      defaultVersionName: 1.3.1
+    - description: Fit-Hi-C is a tool for assigning statistical confidence estimates
+        to chromosomal contact maps produced by genome architecture assays.
+      defaultVersionName: 1.1.3_py27
       versions:
       - markedDefault: false
-        description: Connectome Workbench is an open source, freely available visualization
-          and discovery tool used to map neuroimaging data, especially data generated
-          by the Human Connectome Project.
-        versionName: 1.3.1
-      url: https://www.humanconnectome.org/software/connectome-workbench
-      package: workbench
-      categories: biology, neurology
+        description: Fit-Hi-C is a tool for assigning statistical confidence estimates
+          to chromosomal contact maps produced by genome architecture assays.
+        versionName: 1.1.3_py27
+      url: https://github.com/ay-lab/fithic
+      package: py-fithic
+      categories: biology, genomics
     - description: OpenSlide is a C library that provides a simple interface to read
         whole-slide images (also known as virtual slides).
       defaultVersionName: 3.4.1
@@ -3433,6 +3440,19 @@ software_modules:
       url: https://github.com/cbclab/MDT
       package: py-mdt
       categories: biology, neurology
+    - description: The METAL software is designed to facilitate meta-analysis of large
+        datasets (such as several whole genome scans) in a convenient, rapid and memory
+        efficient manner.
+      defaultVersionName: '20110325'
+      versions:
+      - markedDefault: false
+        description: The METAL software is designed to facilitate meta-analysis of
+          large datasets (such as several whole genome scans) in a convenient, rapid
+          and memory efficient manner.
+        versionName: '20110325'
+      url: http://www.sph.umich.edu/csg/abecasis/Metal/
+      package: metal
+      categories: biology, genomics
     - description: Pysam is a python module for reading, manipulating and writing
         genomic data sets.
       defaultVersionName: 0.15.3_py36
@@ -3733,16 +3753,16 @@ software_modules:
       url: https://fsl.fmrib.ox.ac.uk/fsl
       package: fsl
       categories: biology, neurology
-    - description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning
-        sequencing reads to long reference sequences.
-      defaultVersionName: 2.3.4.1
+    - description: The bedtools utilities are a swiss-army knife of tools for a wide-range
+        of genomics analysis tasks.
+      defaultVersionName: 2.27.1
       versions:
       - markedDefault: false
-        description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning
-          sequencing reads to long reference sequences.
-        versionName: 2.3.4.1
-      url: http://bowtie-bio.sourceforge.net/bowtie2
-      package: bowtie2
+        description: The bedtools utilities are a swiss-army knife of tools for a
+          wide-range of genomics analysis tasks.
+        versionName: 2.27.1
+      url: https://bedtools.readthedocs.io
+      package: bedtools
       categories: biology, genomics
     - description: Bowtie is an ultrafast, memory-efficient short read aligner.
       defaultVersionName: 1.2.2
@@ -3903,6 +3923,17 @@ software_modules:
       url: https://www.rosettacommons.org
       package: rosetta
       categories: biology, computational biology
+    - description: kallisto is a program for quantifying abundances of transcripts
+        from RNA-Seq data using high-throughput sequencing reads.
+      defaultVersionName: 0.44.0
+      versions:
+      - markedDefault: false
+        description: kallisto is a program for quantifying abundances of transcripts
+          from RNA-Seq data using high-throughput sequencing reads.
+        versionName: 0.44.0
+      url: https://pachterlab.github.io/kallisto/
+      package: kallisto
+      categories: biology, genomics
     - description: GATK (Genome Analysis Toolkit) offers a wide variety of tools with
         a primary focus on variant discovery and genotyping.
       defaultVersionName: 4.1.4.1
@@ -3918,27 +3949,16 @@ software_modules:
           with a primary focus on variant discovery and genotyping.
         versionName: 4.1.4.1
       categories: biology, genomics
-    - description: The bedtools utilities are a swiss-army knife of tools for a wide-range
-        of genomics analysis tasks.
-      defaultVersionName: 2.27.1
+    - description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning
+        sequencing reads to long reference sequences.
+      defaultVersionName: 2.3.4.1
       versions:
       - markedDefault: false
-        description: The bedtools utilities are a swiss-army knife of tools for a
-          wide-range of genomics analysis tasks.
-        versionName: 2.27.1
-      url: https://bedtools.readthedocs.io
-      package: bedtools
-      categories: biology, genomics
-    - description: kallisto is a program for quantifying abundances of transcripts
-        from RNA-Seq data using high-throughput sequencing reads.
-      defaultVersionName: 0.44.0
-      versions:
-      - markedDefault: false
-        description: kallisto is a program for quantifying abundances of transcripts
-          from RNA-Seq data using high-throughput sequencing reads.
-        versionName: 0.44.0
-      url: https://pachterlab.github.io/kallisto/
-      package: kallisto
+        description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning
+          sequencing reads to long reference sequences.
+        versionName: 2.3.4.1
+      url: http://bowtie-bio.sourceforge.net/bowtie2
+      package: bowtie2
       categories: biology, genomics
     - description: 'STAR: ultrafast universal RNA-seq aligner.'
       defaultVersionName: 2.5.4b
@@ -3963,6 +3983,28 @@ software_modules:
       url: https://emcore.ucsf.edu/ucsf-motioncor2
       package: motioncor2
       categories: biology, cryo-em
+    - description: The bcl2fastq2 conversion software can be used to convert BCL files
+        from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.
+      defaultVersionName: '2.20'
+      versions:
+      - markedDefault: false
+        description: The bcl2fastq2 conversion software can be used to convert BCL
+          files from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.
+        versionName: '2.20'
+      url: https://support.illumina.com/downloads/bcl2fastq-conversion-software-v2-20.html
+      package: bcl2fastq
+      categories: biology, genomics
+    - description: Assessing genome assembly and annotation completeness with Benchmarking
+        Universal Single-Copy Orthologs (BUSCO).
+      defaultVersionName: 3.0.2_py27
+      versions:
+      - markedDefault: false
+        description: Assessing genome assembly and annotation completeness with Benchmarking
+          Universal Single-Copy Orthologs (BUSCO).
+        versionName: 3.0.2_py27
+      url: https://busco.ezlab.org/
+      package: py-busco
+      categories: biology, genomics
     - description: Trim Galore! is a wrapper script to automate quality and adapter
         trimming as well as quality control, with some added functionality to remove
         biased methylation positions for RRBS sequence files.
@@ -3976,17 +4018,6 @@ software_modules:
       url: https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
       package: trim_galore
       categories: biology, genomics
-    - description: Assessing genome assembly and annotation completeness with Benchmarking
-        Universal Single-Copy Orthologs (BUSCO).
-      defaultVersionName: 3.0.2_py27
-      versions:
-      - markedDefault: false
-        description: Assessing genome assembly and annotation completeness with Benchmarking
-          Universal Single-Copy Orthologs (BUSCO).
-        versionName: 3.0.2_py27
-      url: https://busco.ezlab.org/
-      package: py-busco
-      categories: biology, genomics
     - description: MRIcron is a cross-platform NIfTI format image viewer.
       defaultVersionName: '20160502'
       versions:
@@ -3996,16 +4027,20 @@ software_modules:
       url: https://www.nitrc.org/projects/mricron
       package: mricron
       categories: biology, neurology
-    - description: The bcl2fastq2 conversion software can be used to convert BCL files
-        from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.
-      defaultVersionName: '2.20'
+    - description: C library for high-throughput sequencing data formats.
+      defaultVersionName: 1.10.2
+      package: htslib
+      url: https://github.com/samtools/htslib
       versions:
       - markedDefault: false
-        description: The bcl2fastq2 conversion software can be used to convert BCL
-          files from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.
-        versionName: '2.20'
-      url: https://support.illumina.com/downloads/bcl2fastq-conversion-software-v2-20.html
-      package: bcl2fastq
+        description: C library for high-throughput sequencing data formats.
+        versionName: '1.6'
+      - markedDefault: false
+        description: C library for high-throughput sequencing data formats.
+        versionName: '1.8'
+      - markedDefault: false
+        description: C library for high-throughput sequencing data formats.
+        versionName: 1.10.2
       categories: biology, genomics
     - description: Tools (written in C using htslib) for manipulating next-generation
         sequencing data.
@@ -4022,32 +4057,19 @@ software_modules:
           sequencing data.
         versionName: '1.8'
       categories: biology, genomics
-    - description: C library for high-throughput sequencing data formats.
-      defaultVersionName: 1.10.2
-      package: htslib
-      url: https://github.com/samtools/htslib
+    - description: Connectome Workbench is an open source, freely available visualization
+        and discovery tool used to map neuroimaging data, especially data generated
+        by the Human Connectome Project.
+      defaultVersionName: 1.3.1
       versions:
       - markedDefault: false
-        description: C library for high-throughput sequencing data formats.
-        versionName: '1.6'
-      - markedDefault: false
-        description: C library for high-throughput sequencing data formats.
-        versionName: '1.8'
-      - markedDefault: false
-        description: C library for high-throughput sequencing data formats.
-        versionName: 1.10.2
-      categories: biology, genomics
-    - description: BamTools is a project that provides both a C++ API and a command-line
-        toolkit for reading, writing, and manipulating BAM (genome alignment) files.
-      defaultVersionName: 2.5.1
-      versions:
-      - markedDefault: false
-        description: BamTools is a project that provides both a C++ API and a command-line
-          toolkit for reading, writing, and manipulating BAM (genome alignment) files.
-        versionName: 2.5.1
-      url: https://github.com/pezmaster31/bamtools
-      package: bamtools
-      categories: biology, genomics
+        description: Connectome Workbench is an open source, freely available visualization
+          and discovery tool used to map neuroimaging data, especially data generated
+          by the Human Connectome Project.
+        versionName: 1.3.1
+      url: https://www.humanconnectome.org/software/connectome-workbench
+      package: workbench
+      categories: biology, neurology
     - description: Tools for manipulating biological data, particularly multiple sequence
         alignments.
       defaultVersionName: 0.8.1_py27
@@ -4090,16 +4112,16 @@ software_modules:
       url: http://etetoolkit.org/
       package: py-ete
       categories: biology, phylogenetics
-    - description: Fit-Hi-C is a tool for assigning statistical confidence estimates
-        to chromosomal contact maps produced by genome architecture assays.
-      defaultVersionName: 1.1.3_py27
+    - description: BamTools is a project that provides both a C++ API and a command-line
+        toolkit for reading, writing, and manipulating BAM (genome alignment) files.
+      defaultVersionName: 2.5.1
       versions:
       - markedDefault: false
-        description: Fit-Hi-C is a tool for assigning statistical confidence estimates
-          to chromosomal contact maps produced by genome architecture assays.
-        versionName: 1.1.3_py27
-      url: https://github.com/ay-lab/fithic
-      package: py-fithic
+        description: BamTools is a project that provides both a C++ API and a command-line
+          toolkit for reading, writing, and manipulating BAM (genome alignment) files.
+        versionName: 2.5.1
+      url: https://github.com/pezmaster31/bamtools
+      package: bamtools
       categories: biology, genomics
     - description: Tools to process and analyze deep sequencing data.
       defaultVersionName: 3.3.1_py36
@@ -4109,6 +4131,24 @@ software_modules:
         versionName: 3.3.1_py36
       url: https://github.com/deeptools/deepTools/
       package: py-deeptools
+      categories: biology, genomics
+    - description: A single molecule sequence assembler for genomes large and small.
+      defaultVersionName: '1.8'
+      versions:
+      - markedDefault: false
+        description: A single molecule sequence assembler for genomes large and small.
+        versionName: '1.8'
+      url: https://github.com/marbl/canu/
+      package: canu
+      categories: biology, genomics
+    - description: 'HiC-Pro: An optimized and flexible pipeline for Hi-C data processing.'
+      defaultVersionName: 2.10.0
+      versions:
+      - markedDefault: false
+        description: 'HiC-Pro: An optimized and flexible pipeline for Hi-C data processing.'
+        versionName: 2.10.0
+      url: https://github.com/nservant/HiC-Pro
+      package: hic-pro
       categories: biology, genomics
     - description: ANTs computes high-dimensional mappings to capture the statistics
         of brain structure and function.
@@ -4125,15 +4165,6 @@ software_modules:
           of brain structure and function.
         versionName: 2.3.1
       categories: biology, neurology
-    - description: A single molecule sequence assembler for genomes large and small.
-      defaultVersionName: '1.8'
-      versions:
-      - markedDefault: false
-        description: A single molecule sequence assembler for genomes large and small.
-        versionName: '1.8'
-      url: https://github.com/marbl/canu/
-      package: canu
-      categories: biology, genomics
     - description: Admixfrog is a HMM to infer ancestry frogments (fragments) from
         low-coverage, contaminated data.
       defaultVersionName: 0.6.1_py36
@@ -4145,15 +4176,6 @@ software_modules:
       url: https://github.com/BenjaminPeter/admixfrog
       package: py-admixfrog
       categories: biology, population genetics
-    - description: 'HiC-Pro: An optimized and flexible pipeline for Hi-C data processing.'
-      defaultVersionName: 2.10.0
-      versions:
-      - markedDefault: false
-        description: 'HiC-Pro: An optimized and flexible pipeline for Hi-C data processing.'
-        versionName: 2.10.0
-      url: https://github.com/nservant/HiC-Pro
-      package: hic-pro
-      categories: biology, genomics
     name: biology
   - packages:
     - description: GPU-accelerated Quantum ESPRESSO using CUDA FORTRAN
@@ -5346,7 +5368,7 @@ software_modules:
       categories: devel, data analytics
     - description: Mellanox HPC-X toolkit is a comprehensive software package that
         includes MPI and SHMEM/PGAS communications libraries.
-      defaultVersionName: 2.8.0
+      defaultVersionName: 2.8.1
       package: hpcx
       url: https://www.mellanox.com/products/software/hpc-x
       versions:
@@ -5374,7 +5396,7 @@ software_modules:
         markedDefault: false
         description: Mellanox HPC-X toolkit is a comprehensive software package that
           includes MPI and SHMEM/PGAS communications libraries.
-        versionName: 2.8.0
+        versionName: 2.8.1
         properties:
           arch:
             gpu: 1
