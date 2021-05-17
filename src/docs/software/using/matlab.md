@@ -190,7 +190,7 @@ Save the two scripts below as `parfor.sbatch` and `parfor.m`:
 #SBATCH --mail-type=ALL
 
 module load matlab
-matlab -nosplash -nodesktop -r parfor.m
+matlab -nosplash -nodesktop -r parfor
 ```
 
 === `parfor.m`
