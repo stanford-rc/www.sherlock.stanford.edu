@@ -1,4 +1,4 @@
-Sherlock is a resource for ressearch, and as such, it is in perpetual
+Sherlock is a resource for research, and as such, it is in perpetual
 evolution, as hardware, applications, libraries, and modules are added,
 updated, and/or modified on a regular basis.  Sometimes issues can appear where
 none existed before. When you find something missing or a behavior that seems

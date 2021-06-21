@@ -59,7 +59,7 @@ link at the top right of the Dashboard window and close your browser.
 You can get shell access to Sherlock by choosing **Clusters > Sherlock Shell
 Access** from the top menu in the OnDemand **Dashboard**.
 
-In the window that will open, you'll be logged in to one of Sherlock' login
+In the window that will open, you'll be logged in to one of Sherlock's login
 nodes, exactly as if you were using SSH to connect. Except you don't need to
 install any SSH client on your local machine, configure [Kerberos][url_gssapi]
 or deal with your SSH client configuration to [avoid endless two-factor
