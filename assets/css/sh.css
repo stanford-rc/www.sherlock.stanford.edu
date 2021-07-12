@@ -1,0 +1,97 @@
+/* get header font */
+@import url("//fonts.googleapis.com/css?family=Bangers&display=fallback");
+
+  /* theme colors */
+:root {
+  --md-primary-fg-color:               #8c1515;
+  --md-primary-fg-color--light:        #b1040e;
+  --md-primary-fg-color--dark:         #820000;
+
+  --md-accent-fg-color:                #b1040e;
+  --md-accent-fg-color--transparent:   #b1040e0a;
+}
+
+/* title style */
+.md-header-nav__title,
+.md-header-nav__topic {
+  font-family: "Bangers", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+}
+.md-header-nav__title {
+  padding: 0;
+}
+
+/* don't cut words in code */
+.md-typeset code { word-break: keep-all; }
+
+
+/* Sherlock admonition */
+.md-typeset .admonition.sherlock,
+.md-typeset details.sherlock {
+  border-color: #8c1515;
+}
+.md-typeset .sherlock > .admonition-title,
+.md-typeset .sherlock > summary {
+  background-color: #82000010;
+}
+.md-typeset .sherlock > .admonition-title::before,
+.md-typeset .sherlock > summary::before {
+  -webkit-mask-image: unset;
+          mask-image: unset;
+  background-color: transparent;
+  background-image: url('/assets/img/logo_small.png');
+  background-size:  100%;
+}
+
+/* additional styles */
+.chk_yes  { color: darkgreen; }
+.chk_no   { color: darkred;   }
+.fl_left  { float: left;      }
+.fl_right { float: right;     }
+
+.sw_mpi       { color: darkblue;  font-weight: bold; }
+.sw_mpi:after { content: "mpi " }
+.sw_gpu       { color: darkgreen; font-weight: bold; }
+.sw_gpu:after { content: "gpu " }
+.sw_lic       { color: darkred;   font-weight: bold; }
+.sw_lic:after { content: "lic " }
+.sw_def       { color: gray;      font-weight: bold; }
+.sw_def:after { content: "def " }
+
+.number {
+    font-size: 1.2rem;
+    color: var(--md-primary-fg-color);
+}
+.number_desc {
+    font-size: 0.8em;
+    margin-top: -1em !important;
+    color: var(--md-default-fg-color--light);
+}
+
+
+/* pulsate */
+@keyframes pulsate {
+  0%, 40%, 80%, 100% {
+    transform: scale(1);
+  }
+  20%, 60% {
+    transform: scale(1.15);
+  }
+}
+.pulsate {
+  color: #dd2e44;
+  animation: pulsate 1000ms infinite;
+}
+
+/* rotate */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.rotate {
+  animation: rotation 2s infinite linear;
+}
