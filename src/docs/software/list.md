@@ -3,12 +3,18 @@
 The full list of software centrally installed and managed on Sherlock is in the
 tables below.
 
-!!! todo "Work in progress"
+!!! todo "Permanent work in progress"
 
     Software installations on Sherlock are an ever ongoing process. We're
     continuously adding new software to the list. If you're looking for
     something that is not in the list, please take a look
     [here][url_installations] for options.
+
+!!! tip "Subscribe to updates"
+
+    Keep up-to-date with new software installations by following the Sherlock
+    software update [:material-rss: RSS feed](/docs/software/updates.xml)
+
 
 ## Categories
 
