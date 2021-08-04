@@ -1,4 +1,4 @@
-Sherlock is a resource for ressearch, and as such, it is in perpetual
+Sherlock is a resource for research, and as such, it is in perpetual
 evolution, as hardware, applications, libraries, and modules are added,
 updated, and/or modified on a regular basis.  Sometimes issues can appear where
 none existed before. When you find something missing or a behavior that seems
@@ -45,8 +45,9 @@ This typically involves providing the following information:
 
     This is very important. Without proper error messages, there is nothing
     we can do to help. And "*it doesn't work*" is not a proper error
-    message.
-
+    message.  Also, please cut and paste the actual text of the output, commands,
+    and error messages rather than screenshots in your tickets.  
+    That way it is much easier for us to try to replicate your errors.
 
 You can avoid email back and forth where we ask for all the relevant details,
 and thus delay the problem resolution, by providing all this information

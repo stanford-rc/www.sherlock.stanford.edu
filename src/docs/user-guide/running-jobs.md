@@ -193,7 +193,7 @@ available on nodes in each partition.
 * the `OTHER PENDING` column lists core counts for jobs that are pending for
   other reasons, such as licenses, user, group or any other limit,
 * the `GRES` column shows the number and type of Generic RESsources available
-  in that partition (typically, GPUs), whichi CPU socket tehy're available
+  in that partition (typically, GPUs), which CPU socket they're available
   from, and the number of nodes that feature that specific GRES combination.
   So for instance, in the output above, `gpu:4(S:0-1)(2)` means that the `gpu`
   partition features 2 nodes with 4 GPUs each, and that those GPUs are
