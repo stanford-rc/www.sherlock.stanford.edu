@@ -4436,8 +4436,16 @@ software_modules:
       package: nvhpc
       url: https://developer.nvidia.com/hpc-sdk
       versions:
+      - description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
+          Fortran compilers.
+        family: mpi
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '21.7'
       - {description: 'NVIDIA HPC Software Development Kit (SDK) including C, C++,
-          and Fortran compilers.', family: compiler_f, markedDefault: false, versionName: '21.5'}
+          and Fortran compilers.', family: compiler_f, markedDefault: true, versionName: '21.5'}
     - categories: devel, data
       defaultVersionName: 3.4.0
       description: Protocol Buffers (a.k.a., protobuf) are Google's language-neutral,
@@ -4818,6 +4826,9 @@ software_modules:
         markedDefault: false, versionName: 1.0.0_py36}
       - {description: 'Jupyter is a browser-based interactive notebook for programming,
           mathematics, and data science. It supports a number of languages via plugins.',
+        markedDefault: false, versionName: 1.0.0_py39}
+      - {description: 'Jupyter is a browser-based interactive notebook for programming,
+          mathematics, and data science. It supports a number of languages via plugins.',
         markedDefault: true, versionName: 1.0.0_py27}
     - categories: devel, language
       defaultVersionName: 9.0.176
@@ -4924,6 +4935,14 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 11.3.1
+      - description: CUDA is a parallel computing platform and application programming
+          interface (API) model created by Nvidia. It allows software developers and
+          software engineers to use a CUDA-enabled graphics processing unit (GPU)
+          for general purpose processing.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 11.4.1
       - description: CUDA is a parallel computing platform and application programming
           interface (API) model created by Nvidia. It allows software developers and
           software engineers to use a CUDA-enabled graphics processing unit (GPU)
