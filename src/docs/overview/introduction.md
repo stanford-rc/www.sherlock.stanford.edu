@@ -163,6 +163,9 @@ so that you can then work self-sufficiently towards a solution on your own.
 
     You can also make an **[appointment][url_calendar]** with Sherlock's support
     team if you'd like.
+    In order to join our Zoom sessions, you need to have a full service SUNet account.  If you have an @stanford.edu 
+    email address you have a full service SUNet account. 
+    Make sure to authenticate at [url_zoom]  If you do not have a full service account, please contact us at [url_contact]
 
 !!! tip "What to expect from office hours"
 
