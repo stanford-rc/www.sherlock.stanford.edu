@@ -828,7 +828,9 @@ software_modules:
       url: https://proot-me.github.io
       versions:
       - {description: 'PRoot is a user-space implementation of chroot, mount --bind,
-          and binfmt_misc.', markedDefault: false, versionName: 5.1.0}
+          and binfmt_misc.', markedDefault: false, versionName: 5.2.0a}
+      - {description: 'PRoot is a user-space implementation of chroot, mount --bind,
+          and binfmt_misc.', markedDefault: true, versionName: 5.1.0}
     - categories: system, compression
       defaultVersionName: 1.8.0
       description: LZ4 is lossless compression algorithm.
@@ -1711,6 +1713,16 @@ software_modules:
         properties:
           license: {restricted: 1}
         versionName: R2020a
+    - categories: math, optimization
+      defaultVersionName: 3.3.0
+      description: Octeract Engine is a proprietary massively parallel deterministic
+        global optimization solver for general Mixed-Integer Nonlinear Programs (MINLP).
+      package: octeract
+      url: https://octeract.com/
+      versions:
+      - {description: Octeract Engine is a proprietary massively parallel deterministic
+          global optimization solver for general Mixed-Integer Nonlinear Programs
+          (MINLP)., markedDefault: false, versionName: 3.3.0}
     - categories: math, numerical library
       defaultVersionName: 5.2.1
       description: SuperLU is a general purpose library for the direct solution of
@@ -1865,18 +1877,24 @@ software_modules:
           from Bayesian hierarchical models using Markov chain Monte Carlo (MCMC).,
         markedDefault: false, versionName: 4.3.0}
     - categories: math, numerical library
-      defaultVersionName: 2.2.4
-      description: libflame is a portable library for dense matrix computations, providing
-        much of the functionality present in LAPACK
-      package: libflame
-      url: https://github.com/amd/libflame
+      defaultVersionName: 1.14.3_py27
+      description: NumPy is the fundamental package for scientific computing with
+        Python.
+      package: py-numpy
+      url: http://www.numpy.org
       versions:
-      - {description: 'libflame is a portable library for dense matrix computations,
-          providing much of the functionality present in LAPACK', markedDefault: false,
-        versionName: '2.1'}
-      - {description: 'libflame is a portable library for dense matrix computations,
-          providing much of the functionality present in LAPACK', markedDefault: false,
-        versionName: 2.2.4}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.14.3_py36}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.17.2_py36}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.18.1_py36}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.19.2_py36}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.20.3_py39}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: true, versionName: 1.14.3_py27}
     - categories: math, deep learning
       defaultVersionName: 0.12.1_py27
       description: Horovod is a distributed training framework for TensorFlow. The
@@ -2141,15 +2159,15 @@ software_modules:
       versions:
       - {description: qrupdate is a Fortran library for fast updates of QR and Cholesky
           decompositions., markedDefault: false, versionName: 1.1.2}
-    - categories: math, optimization
-      defaultVersionName: 10.3.0
-      description: Artelys Knitro is an optimization solver for difficult large-scale
-        nonlinear problems.
-      package: knitro
-      url: https://www.artelys.com/en/optimization-tools/knitro
+    - categories: math, numerical analysis
+      defaultVersionName: 4.2.1
+      description: GNU Octave is a high-level language primarily intended for numerical
+        computations.
+      package: octave
+      url: https://www.gnu.org/software/octave/
       versions:
-      - {description: Artelys Knitro is an optimization solver for difficult large-scale
-          nonlinear problems., markedDefault: false, versionName: 10.3.0}
+      - {description: GNU Octave is a high-level language primarily intended for numerical
+          computations., markedDefault: false, versionName: 4.2.1}
     - categories: math, numerical library
       defaultVersionName: 0.4_py39
       description: The MPI-IS Mesh Processing Library contains core functions for
@@ -2160,20 +2178,12 @@ software_modules:
       - {description: The MPI-IS Mesh Processing Library contains core functions for
           manipulating meshes and visualizing them., markedDefault: false, versionName: 0.4_py39}
     - categories: math, numerical library
-      defaultVersionName: 4.0.3
-      description: ParMETIS is an MPI-based parallel library that implements a variety
-        of algorithms for partitioning unstructured graphs, meshes, and for computing
-        fill-reducing orderings of sparse matrices.
-      package: parmetis
-      url: http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview
+      defaultVersionName: 5.1.2
+      description: A parallel sparse direct solver.
+      package: mumps
+      url: http://mumps.enseeiht.fr/
       versions:
-      - description: ParMETIS is an MPI-based parallel library that implements a variety
-          of algorithms for partitioning unstructured graphs, meshes, and for computing
-          fill-reducing orderings of sparse matrices.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 4.0.3
+      - {description: A parallel sparse direct solver., markedDefault: false, versionName: 5.1.2}
     - categories: math, numerical library
       defaultVersionName: 3.7.0
       description: Collection of Fortran77 subroutines designed to solve large scale
@@ -2218,21 +2228,21 @@ software_modules:
       - {description: The NAG C Library is the largest and most comprehensive collection
           of mathematical and statistical algorithms for C and C++., markedDefault: false,
         versionName: MBL6I25DNL}
-    - categories: math, numerical library
-      defaultVersionName: 6.0.4
-      description: Software package and libraries for sequential and parallel graph
-        partitioning, static mapping and clustering, sequential mesh and hypergraph
-        partitioning, and sequential and parallel sparse matrix block ordering.
-      package: scotch
-      url: http://www.labri.fr/perso/pelegrin/scotch
+    - categories: math, statistics
+      defaultVersionName: '9.4'
+      description: SAS is a software suite developed by SAS Institute for advanced
+        analytics, multivariate analyses, business intelligence, data management,
+        and predictive analytics.
+      package: sas
+      url: http://www.sas.com/
       versions:
-      - description: Software package and libraries for sequential and parallel graph
-          partitioning, static mapping and clustering, sequential mesh and hypergraph
-          partitioning, and sequential and parallel sparse matrix block ordering.
+      - description: SAS is a software suite developed by SAS Institute for advanced
+          analytics, multivariate analyses, business intelligence, data management,
+          and predictive analytics.
         markedDefault: false
         properties:
-          parallel: {mpi: 1}
-        versionName: 6.0.4
+          license: {restricted: 1}
+        versionName: '9.4'
     - categories: math, numerical library
       defaultVersionName: 3.3.8
       description: The Fastest Fourier Transform in the West (FFTW) is a software
@@ -2298,24 +2308,18 @@ software_modules:
           arch: {gpu: 1}
         versionName: 0.8.1
     - categories: math, numerical library
-      defaultVersionName: 1.14.3_py27
-      description: NumPy is the fundamental package for scientific computing with
-        Python.
-      package: py-numpy
-      url: http://www.numpy.org
+      defaultVersionName: 2.2.4
+      description: libflame is a portable library for dense matrix computations, providing
+        much of the functionality present in LAPACK
+      package: libflame
+      url: https://github.com/amd/libflame
       versions:
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.14.3_py36}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.17.2_py36}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.18.1_py36}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.19.2_py36}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.20.3_py39}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: true, versionName: 1.14.3_py27}
+      - {description: 'libflame is a portable library for dense matrix computations,
+          providing much of the functionality present in LAPACK', markedDefault: false,
+        versionName: '2.1'}
+      - {description: 'libflame is a portable library for dense matrix computations,
+          providing much of the functionality present in LAPACK', markedDefault: false,
+        versionName: 2.2.4}
     - categories: math, numerical library
       defaultVersionName: 2.2.4
       description: BLIS is a portable software framework for instantiating high-performance
@@ -2329,18 +2333,40 @@ software_modules:
       - {description: BLIS is a portable software framework for instantiating high-performance
           BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
         versionName: 2.2.4}
-    - categories: math, deep learning
-      defaultVersionName: 1.8_py27
-      description: TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet, NumPy...)
-      package: py-tensorboardx
-      url: https://tensorboardx.readthedocs.io
+    - categories: math, optimization
+      defaultVersionName: 10.3.0
+      description: Artelys Knitro is an optimization solver for difficult large-scale
+        nonlinear problems.
+      package: knitro
+      url: https://www.artelys.com/en/optimization-tools/knitro
       versions:
-      - description: TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet,
-          NumPy...)
+      - {description: Artelys Knitro is an optimization solver for difficult large-scale
+          nonlinear problems., markedDefault: false, versionName: 10.3.0}
+    - categories: math, numerical library
+      defaultVersionName: 4.0.3
+      description: ParMETIS is an MPI-based parallel library that implements a variety
+        of algorithms for partitioning unstructured graphs, meshes, and for computing
+        fill-reducing orderings of sparse matrices.
+      package: parmetis
+      url: http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview
+      versions:
+      - description: ParMETIS is an MPI-based parallel library that implements a variety
+          of algorithms for partitioning unstructured graphs, meshes, and for computing
+          fill-reducing orderings of sparse matrices.
         markedDefault: false
         properties:
-          arch: {gpu: 1}
-        versionName: 1.8_py27
+          parallel: {mpi: 1}
+        versionName: 4.0.3
+    - categories: math, deep learning
+      defaultVersionName: 1.8.1_py36
+      description: ONNX is a open format to represent deep learning models.
+      package: py-onnx
+      url: https://onnx.ai
+      versions:
+      - {description: ONNX is a open format to represent deep learning models., markedDefault: false,
+        versionName: 1.0.1_py27}
+      - {description: ONNX is a open format to represent deep learning models., markedDefault: false,
+        versionName: 1.8.1_py36}
     - categories: math, optimization
       defaultVersionName: 9.0.3_py36
       description: The Gurobi Optimizer is a commercial optimization solver for mathematical
@@ -2357,16 +2383,6 @@ software_modules:
       - {description: The Gurobi Optimizer is a commercial optimization solver for
           mathematical programming., markedDefault: false, versionName: 9.0.3_py36}
     - categories: math, deep learning
-      defaultVersionName: 1.8.1_py36
-      description: ONNX is a open format to represent deep learning models.
-      package: py-onnx
-      url: https://onnx.ai
-      versions:
-      - {description: ONNX is a open format to represent deep learning models., markedDefault: false,
-        versionName: 1.0.1_py27}
-      - {description: ONNX is a open format to represent deep learning models., markedDefault: false,
-        versionName: 1.8.1_py36}
-    - categories: math, deep learning
       defaultVersionName: '20180202'
       description: Torch is a scientific computing framework with wide support for
         machine learning algorithms that puts GPUs first.
@@ -2379,23 +2395,6 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: '20180202'
-    - categories: math, numerical library
-      defaultVersionName: 5.1.2
-      description: A parallel sparse direct solver.
-      package: mumps
-      url: http://mumps.enseeiht.fr/
-      versions:
-      - {description: A parallel sparse direct solver., markedDefault: false, versionName: 5.1.2}
-    - categories: math, numerical library
-      defaultVersionName: 6.1.2
-      description: GMP is a free library for arbitrary precision arithmetic, operating
-        on signed integers, rational numbers, and floating-point numbers.
-      package: gmp
-      url: https://gmplib.org
-      versions:
-      - {description: 'GMP is a free library for arbitrary precision arithmetic, operating
-          on signed integers, rational numbers, and floating-point numbers.', markedDefault: false,
-        versionName: 6.1.2}
     - categories: math, scientific computing
       defaultVersionName: 1.0_py27
       description: 'The SciPy Stack is a collection of open source software for scientific
@@ -2412,6 +2411,20 @@ software_modules:
           scientific computing in Python. It provides the following packages: numpy,
           scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
         markedDefault: true, versionName: 1.0_py27}
+    - categories: math, deep learning
+      defaultVersionName: 1.0.1_py27
+      description: Theano is a Python library that allows you to define, optimize,
+        and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
+      package: py-theano
+      url: http://deeplearning.net/software/theano
+      versions:
+      - description: Theano is a Python library that allows you to define, optimize,
+          and evaluate mathematical expressions involving multi-dimensional arrays
+          efficiently.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.0.1_py27
     - categories: math, statistics
       defaultVersionName: 3.5.1
       description: R is a free software environment for statistical computing and
@@ -2444,20 +2457,16 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 7.8.0_py36
-    - categories: math, deep learning
-      defaultVersionName: 1.0.1_py27
-      description: Theano is a Python library that allows you to define, optimize,
-        and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
-      package: py-theano
-      url: http://deeplearning.net/software/theano
+    - categories: math, numerical library
+      defaultVersionName: 6.1.2
+      description: GMP is a free library for arbitrary precision arithmetic, operating
+        on signed integers, rational numbers, and floating-point numbers.
+      package: gmp
+      url: https://gmplib.org
       versions:
-      - description: Theano is a Python library that allows you to define, optimize,
-          and evaluate mathematical expressions involving multi-dimensional arrays
-          efficiently.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 1.0.1_py27
+      - {description: 'GMP is a free library for arbitrary precision arithmetic, operating
+          on signed integers, rational numbers, and floating-point numbers.', markedDefault: false,
+        versionName: 6.1.2}
     - categories: math, deep learning
       defaultVersionName: 8.1.1.33
       description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
@@ -2519,21 +2528,21 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 8.1.1.33
-    - categories: math, statistics
-      defaultVersionName: '9.4'
-      description: SAS is a software suite developed by SAS Institute for advanced
-        analytics, multivariate analyses, business intelligence, data management,
-        and predictive analytics.
-      package: sas
-      url: http://www.sas.com/
+    - categories: math, numerical library
+      defaultVersionName: 6.0.4
+      description: Software package and libraries for sequential and parallel graph
+        partitioning, static mapping and clustering, sequential mesh and hypergraph
+        partitioning, and sequential and parallel sparse matrix block ordering.
+      package: scotch
+      url: http://www.labri.fr/perso/pelegrin/scotch
       versions:
-      - description: SAS is a software suite developed by SAS Institute for advanced
-          analytics, multivariate analyses, business intelligence, data management,
-          and predictive analytics.
+      - description: Software package and libraries for sequential and parallel graph
+          partitioning, static mapping and clustering, sequential mesh and hypergraph
+          partitioning, and sequential and parallel sparse matrix block ordering.
         markedDefault: false
         properties:
-          license: {restricted: 1}
-        versionName: '9.4'
+          parallel: {mpi: 1}
+        versionName: 6.0.4
     - categories: math, deep learning
       defaultVersionName: 2.1.5_py27
       description: Keras is a high-level neural networks API, written in Python and
@@ -2685,15 +2694,18 @@ software_modules:
       - {description: 'Armadillo is a high quality linear algebra library (matrix
           maths) for the C++ language, aiming towards a good balance between speed
           and ease of use.', markedDefault: false, versionName: 8.200.1}
-    - categories: math, numerical analysis
-      defaultVersionName: 4.2.1
-      description: GNU Octave is a high-level language primarily intended for numerical
-        computations.
-      package: octave
-      url: https://www.gnu.org/software/octave/
+    - categories: math, deep learning
+      defaultVersionName: 1.8_py27
+      description: TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet, NumPy...)
+      package: py-tensorboardx
+      url: https://tensorboardx.readthedocs.io
       versions:
-      - {description: GNU Octave is a high-level language primarily intended for numerical
-          computations., markedDefault: false, versionName: 4.2.1}
+      - description: TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet,
+          NumPy...)
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.8_py27
     - categories: math, deep learning
       defaultVersionName: 0.3.0_py27
       description: PyTorch is a deep learning framework that puts Python first.
