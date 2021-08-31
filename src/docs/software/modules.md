@@ -336,21 +336,21 @@ software installations, they can create their own module repositories.
 
 See the [Software Installation page][url_install] for more details.
 
-### Lab-provided software
+### Contributed software
 
-PI groups and Labs can share their software installations and modules with the
-whole Sherlock community of users, and let everyone benefit from their tuning
-efforts and software developments.
+PI groups, labs or departments can share their software installations and
+modules with the whole Sherlock community of users, and let everyone benefit
+from their tuning efforts and software developments.
 
-Those modules are available in the specific `labs` category, and organized by
-lab name.
+Those modules are available in the specific `contribs` category, and organized
+by contributor name.
 
-For instance, listing the available lab modules can be done with:
+For instance, listing the available contributed modules can be done with:
 
 ```shell
-$ ml labs
+$ ml contribs
 $ ml av
--------------------- labs -- lab-contributed software ----------------------
+-------------------- contribs -- contributed software ----------------------
    poldrack
 ```
 
@@ -359,12 +359,12 @@ To get information about a specific lab module:
 ```shell
 $ ml show poldrack
 ----------------------------------------------------------------------------
-   /share/software/modules/labs/poldrack.lua:
+   /share/software/modules/contribs/poldrack.lua:
 ----------------------------------------------------------------------------
 prepend_path("MODULEPATH","/home/groups/russpold/modules")
 whatis("Name:        poldrack")
 whatis("Version:     1.0")
-whatis("Category:    labs")
+whatis("Category:    contribs")
 whatis("URL:         https://github.com/poldracklab/lmod_modules")
 whatis("Description: Software modules contributed by the Poldrack Lab.")
 ```
