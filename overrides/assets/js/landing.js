@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("nav-support").addEventListener("click", function(){
         FreshworksWidget('clear', 'ticketForm');
         FreshworksWidget('open');
+        FreshworksWidget('prefill', 'ticketForm', {
+            system: 'Sherlock' });
     });
     [].forEach.call(document.getElementsByClassName("account"),
         function(el) {
