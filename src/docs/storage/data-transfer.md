@@ -241,8 +241,16 @@ the [Login page][url_globus_login] and follow the instructions from there.
 
 !!! info "Endpoint name"
 
-    The Globus endpoint name for Sherlock is `SRCC Sherlock` (aka
-    `srcc#sherlock`)
+    The Globus endpoint name for Sherlock is [`SRCC
+    Sherlock`][url_globus_sherlock].
+
+!!! important "Oak endpoint"
+
+    The Sherlock endpoint only provides access to Sherlock-specific file
+    systems (`$HOME`, `$GROUP_HOME`, `$SCRATCH` and `$GROUP_SCRATCH`).
+    [Oak][url_oak] features its own Globus endpoint: [`SRCC
+    Oak`][url_globus_oak].
+
 
 You can use Globus to transfer data between your local workstation (e.g., your
 laptop or desktop) and Sherlock. In this workflow, you configure your local
@@ -381,10 +389,12 @@ documentation][url_rclone].
 [url_globus_login]: https://app.globus.org/
 [url_globus_xfer_mgmt]:   https://app.globus.org/endpoints
 [url_globus_xfer_start]:  https://app.globus.org/file-manager
+[url_globus_sherlock]:    https://app.globus.org/file-manager?origin_id=6881ae2e-db26-11e5-9772-22000b9da45e
+[url_globus_oak]:         https://app.globus.org/file-manager?origin_id=8b3a8b64-d4ab-4551-b37e-ca0092f769a7
 [url_bbcp]:         https://www.slac.stanford.edu/~abh/bbcp
 [url_rclone]:       https://rclone.org/
 [url_uit_gdrive]:   https://uit.stanford.edu/service/googleapps/drive
-
+[url_oak]:          https://uit.stanford.edu/service/oak-storage
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
