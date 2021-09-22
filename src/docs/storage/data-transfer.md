@@ -19,7 +19,7 @@ performance for data transfers from and to campus.
     transfers.
 
 We also provide tools on Sherlock to transfer data to various [Cloud
-providers](#cloud-backups), such as AWS, Google Drive, Dropbox, Box, etc.
+providers](#cloud-storage), such as AWS, Google Drive, Dropbox, Box, etc.
 
 
 ### Prerequisites
@@ -371,30 +371,30 @@ documentation][url_rclone].
 [url_ssh_clients]:  /docs/getting-started/prerequisites/#ssh-clients
 [url_auth_fail]:    /docs/getting-started/connecting/#authentication-failures
 
-[url_winscp]:       https://winscp.net/eng/docs/introduction
-[url_securefx]:     https://uit.stanford.edu/software/scrt_sfx
-[url_cyberduck]:    http://cyberduck.io/
-[url_fetch]:        http://fetchsoftworks.com/
-[url_fetch_su]:     https://uit.stanford.edu/software/fetch
-[url_sftp_tuto]:    https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server
-[url_rsync_tuto]:   https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps
-[url_sshfs_linux]:  http://fuse.sourceforge.net/sshfs.html
-[url_sshfs_macos]:  https://osxfuse.github.io/
-[url_sshfs_windows]:https://github.com/billziss-gh/sshfs-win
-[url_sshfs_tuto]:   https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
-[url_globus]:       https://www.globus.org
-[url_globus_api]:   https://docs.globus.org/api/transfer/
-[url_globus_doc]:   https://www.globus.org/how-it-works
-[url_globus_cli]:   https://docs.globus.org/faq/command-line-interface/
-[url_globus_login]: https://app.globus.org/
-[url_globus_xfer_mgmt]:   https://app.globus.org/endpoints
-[url_globus_xfer_start]:  https://app.globus.org/file-manager
-[url_globus_sherlock]:    https://app.globus.org/file-manager?origin_id=6881ae2e-db26-11e5-9772-22000b9da45e
-[url_globus_oak]:         https://app.globus.org/file-manager?origin_id=8b3a8b64-d4ab-4551-b37e-ca0092f769a7
-[url_bbcp]:         https://www.slac.stanford.edu/~abh/bbcp
-[url_rclone]:       https://rclone.org/
-[url_uit_gdrive]:   https://uit.stanford.edu/service/googleapps/drive
-[url_oak]:          https://uit.stanford.edu/service/oak-storage
+[url_winscp]:       //winscp.net/eng/docs/introduction
+[url_securefx]:     //uit.stanford.edu/software/scrt_sfx
+[url_cyberduck]:    //cyberduck.io/
+[url_fetch]:        //fetchsoftworks.com/
+[url_fetch_su]:     //uit.stanford.edu/software/fetch
+[url_sftp_tuto]:    //www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server
+[url_rsync_tuto]:   //www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps
+[url_sshfs_linux]:  //fuse.sourceforge.net/sshfs.html
+[url_sshfs_macos]:  //osxfuse.github.io/
+[url_sshfs_windows]://github.com/billziss-gh/sshfs-win
+[url_sshfs_tuto]:   //www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
+[url_globus]:       //www.globus.org
+[url_globus_api]:   //docs.globus.org/api/transfer/
+[url_globus_doc]:   //www.globus.org/how-it-works
+[url_globus_cli]:   //docs.globus.org/faq/command-line-interface/
+[url_globus_login]: //app.globus.org/
+[url_globus_xfer_mgmt]:   //app.globus.org/endpoints
+[url_globus_xfer_start]:  //app.globus.org/file-manager
+[url_globus_sherlock]:    //app.globus.org/file-manager?origin_id=6881ae2e-db26-11e5-9772-22000b9da45e
+[url_globus_oak]:         //app.globus.org/file-manager?origin_id=8b3a8b64-d4ab-4551-b37e-ca0092f769a7
+[url_bbcp]:         //www.slac.stanford.edu/~abh/bbcp
+[url_rclone]:       //rclone.org/
+[url_uit_gdrive]:   //uit.stanford.edu/service/googleapps/drive
+[url_oak]:          //uit.stanford.edu/service/oak-storage
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
