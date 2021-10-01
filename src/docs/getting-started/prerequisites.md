@@ -164,7 +164,7 @@ For an introduction to shell scripting, you can refer to:
 [url_tuto_6]:       https://ask.cyberinfrastructure.org/latest
 
 
-[url_nano]:         https://wiki.gentoo.org/wiki/Nano/Basics_Guide
+[url_nano]:         https://wiki.gentoo.org/wiki/Nano
 [url_vim]:          https://wiki.gentoo.org/wiki/Vim/Guide
 [url_ood_files]:    https://www.sherlock.stanford.edu/docs/user-guide/ondemand/#managing-files
 
