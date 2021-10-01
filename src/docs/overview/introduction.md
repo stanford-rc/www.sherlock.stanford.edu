@@ -109,7 +109,7 @@ performed on Sherlock acknowledge this. The following wording is suggested:
 !!! cite "Acknowledgment"
 
     Some of the computing for this project was performed on the Sherlock
-    cluster.  We would like to thank Stanford University and the Stanford
+    cluster. We would like to thank Stanford University and the Stanford
     Research Computing Center for providing computational resources and support
     that contributed to these research results.
 
@@ -126,7 +126,7 @@ Research Computing support can be reached by sending an email to
 
     To ensure a timely and relevant response, please make sure to include some
     additional details, such as job ids, commands executed and error messages
-    received, so we can help you better.  For more details, see the
+    received, so we can help you better. For more details, see the
     [Troubleshooting][url_troubleshoot] page.
 
 As a member of the Sherlock community, you're also automatically subscribed to
@@ -136,15 +136,10 @@ SRCC team to send important announcements about Sherlock,
 
 ### Office hours
 
-!!! bug "COVID-19 update"
-
-    **We'll be holding remote office hours via [Zoom][url_zoom], for the time
-    being.**
-
 Sending a question to {{ support_email }} is always the best first option
-for questions.  That way you can include detailed descriptions of the problem
+for questions. That way you can include detailed descriptions of the problem
 or question, valuable output and error messages and any steps you took when you
-encountered your error.  Also, everyone on our team will see your ticket,
+encountered your error. Also, everyone on our team will see your ticket,
 enabling the most appropriate group member to respond.
 
 Office hours are a good place for more generalized questions about Sherlock,
@@ -154,6 +149,11 @@ nuanced questions that may not be easily answered with our ticketing system. In
 office hours some problems can indeed be solved quickly or progress can be made
 so that you can then work self-sufficiently towards a solution on your own.
 
+!!! bug "COVID-19 update"
+
+    **We'll be holding remote office hours via [Zoom][url_zoom], for the time
+    being.**
+
 !!! info "Office hours times"
 
     Click here to join the **[Sherlock Office Hours Zoom][url_oh_zoom]**
@@ -161,28 +161,32 @@ so that you can then work self-sufficiently towards a solution on your own.
     * Tuesday 10-11am
     * Thursday 3-4pm
 
-    You can also make an **[appointment][url_calendar]** with Sherlock's support
-    team if you'd like.
+You'll need a [full-service SUNet ID][url_sunet] (basically, a @stanford.edu
+email address) in order to join Office Hours via Zoom. Make sure to
+authenticate at (url_zoom)  If you do not have a full service account, please
+contact us at {{ support_email }}.
 
-!!! tip "What to expect from office hours"
+If you can't make any of the Office Hours sessions, you can also make an
+**[appointment][url_calendar]** with Sherlock's support team.
 
-    * We can't accomodate walk-ins: we're unfortunately not staffed to
-      accommodate walk-ins, so please make sure that you're planning to stop by
-      **during** office hours. We will not be able to help you otherwise.
+#### What to expect
 
-    * We can rarely help with application-specific or algorithm problems.
+* We cannot accomodate walk-ins: we're unfortunately not staffed to accommodate
+  walk-ins, so please make sure that you're planning to stop by **during**
+  office hours. We will not be able to help you otherwise.
 
-    * You should plan your projects sufficiently in advance and not come to
-      office hours at the last minute before a deadline. Sherlock is a busy
-      resource with several thousand users and you should not expect your jobs
-      to complete before a given date.
+* We can rarely help with application-specific or algorithm problems.
 
-    * Not all questions and problems can be solved or answered during office
-      hours, especially ones involving hardware, filesystem or network issues.
-      Sherlock features several thousand computing, networking and storage
-      components, that are constantly being monitored by our team. You can be
-      sure that when Sherlock has an issue, we are aware of it and working on
-      it.
+* You should plan your projects sufficiently in advance and not come to office
+  hours at the last minute before a deadline. Sherlock is a busy resource with
+  several thousand users and you should not expect your jobs to complete before
+  a given date.
+
+* Not all questions and problems can be answered or solved during office hours,
+  especially ones involving hardware, filesystem or network issues. Sherlock
+  features several thousand computing, networking and storage components, that
+  are constantly being monitored by our team. You can be sure that when
+  Sherlock has an issue, we are aware of it and working on it.
 
 
 ## User community
@@ -245,9 +249,7 @@ Here's what it looks like in motion:
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
-[url_zoom]:          https://stanford.zoom.us/
 [url_srcc]:         //srcc.stanford.edu
-[url_contact]:      mailto:{{ support_email }}
 [url_docs]:         //www.sherlock.stanford.edu/docs
 [url_news]:         //news.sherlock.stanford.edu
 [url_status]:       //status.sherlock.stanford.edu
@@ -264,9 +266,11 @@ Here's what it looks like in motion:
 [url_sha_ml]:       //mailman.stanford.edu/mailman/listinfo/sherlock-announce
 [url_polya]:        //campus-map.stanford.edu/?id=14-160&lat=37.42898333&lng=-122.17752929&zoom=17&srch=polya%20hall
 
+[url_zoom]:         //stanford.zoom.us
 [url_oh_zoom]:      //stanford.zoom.us/j/95962823750?pwd=cFM2U2ZRQ243Zkx0Ry83akdtWU9zUT09
 [url_calendar]:     //calendly.com/srcc-officehours/sherlock
 
+[url_sunet]:        //uit.stanford.edu/service/accounts/sunetids#services
 [url_su_slack]:     //uit.stanford.edu/service/slack
 [url_sl_sha]:       //srcc.slack.com/archives/C01862L37CN
 [url_sl_shu]:       //srcc.slack.com/archives/C0192KNKYSU
