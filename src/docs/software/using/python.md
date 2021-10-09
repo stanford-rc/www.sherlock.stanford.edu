@@ -262,12 +262,12 @@ each package you would like to install on its own line:
 
 === "requirements.txt"
 
-```shell
-numpy
-scikit-learn
-keras
-tensorflow
-```
+    ```shell
+    numpy
+    scikit-learn
+    keras
+    tensorflow
+    ```
 
 You can now install your modules like so:
 

@@ -177,52 +177,52 @@ node, and runs a simple MATLAB script using `parfor`.
 
 Save the two scripts below as `parfor.sbatch` and `parfor.m`:
 
-=== `parfor.sbatch`
+=== "parfor.sbatch"
 
-```shell
-#!/bin/bash
-#SBATCH -J pfor_matlab
-#SBATCH -o pfor".%j".out
-#SBATCH -e pfor".%j".err
-#SBATCH -t 20:00
-#SBATCH -p normal
-#SBATCH -c 16
-#SBATCH --mail-type=ALL
+    ``` shell
+    #!/bin/bash
+    #SBATCH -J pfor_matlab
+    #SBATCH -o pfor".%j".out
+    #SBATCH -e pfor".%j".err
+    #SBATCH -t 20:00
+    #SBATCH -p normal
+    #SBATCH -c 16
+    #SBATCH --mail-type=ALL
 
-module load matlab
-matlab -nosplash -nodesktop -r parfor
-```
+    module load matlab
+    matlab -nosplash -nodesktop -r parfor
+    ```
 
-=== `parfor.m`
+=== "parfor.m"
 
-```matlab
-%============================================================================
-% Parallel Monte Carlo calculation of PI
-%============================================================================
-parpool('local', str2num(getenv('SLURM_CPUS_PER_TASK')))
-R = 1;
-darts = 1e7;
-count = 0;
-tic
-parfor i = 1:darts
-   % Compute the X and Y coordinates of where the dart hit the...............
-   % square using Uniform distribution.......................................
-   x = R*rand(1);
-   y = R*rand(1);
-   if x^2 + y^2 <= R^2
-      % Increment the count of darts that fell inside of the.................
-      % circle...............................................................
-     count = count + 1; % Count is a reduction variable.
-   end
-end
-% Compute pi.................................................................
-myPI = 4*count/darts;
-T = toc;
-fprintf('The computed value of pi is %8.7f.n',myPI);
-fprintf('The parallel Monte-Carlo method is executed in %8.2f seconds.n', T);
-delete(gcp);
-exit;
-```
+    ``` matlab
+    %============================================================================
+    % Parallel Monte Carlo calculation of PI
+    %============================================================================
+    parpool('local', str2num(getenv('SLURM_CPUS_PER_TASK')))
+    R = 1;
+    darts = 1e7;
+    count = 0;
+    tic
+    parfor i = 1:darts
+       % Compute the X and Y coordinates of where the dart hit the...............
+       % square using Uniform distribution.......................................
+       x = R*rand(1);
+       y = R*rand(1);
+       if x^2 + y^2 <= R^2
+          % Increment the count of darts that fell inside of the.................
+          % circle...............................................................
+         count = count + 1; % Count is a reduction variable.
+       end
+    end
+    % Compute pi.................................................................
+    myPI = 4*count/darts;
+    T = toc;
+    fprintf('The computed value of pi is %8.7f.n',myPI);
+    fprintf('The parallel Monte-Carlo method is executed in %8.2f seconds.n', T);
+    delete(gcp);
+    exit;
+    ```
 
 
 You can now submit the job with the following command:

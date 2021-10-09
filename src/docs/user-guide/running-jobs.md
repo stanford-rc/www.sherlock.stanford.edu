@@ -255,22 +255,22 @@ in your `$HOME` directory and run every 7 days.
 
 === "cron.sbatch"
 
-```shell
-#!/bin/bash
-#SBATCH --job-name=cron
-#SBATCH --begin=now+7days
-#SBATCH --dependency=singleton
-#SBATCH --time=00:02:00
-#SBATCH --mail-type=FAIL
+    ```shell
+    #!/bin/bash
+    #SBATCH --job-name=cron
+    #SBATCH --begin=now+7days
+    #SBATCH --dependency=singleton
+    #SBATCH --time=00:02:00
+    #SBATCH --mail-type=FAIL
 
 
-## Insert the command to run below. Here, we're just storing the date in a
-## cron.log file
-date -R >> $HOME/cron.log
+    ## Insert the command to run below. Here, we're just storing the date in a
+    ## cron.log file
+    date -R >> $HOME/cron.log
 
-## Resubmit the job for the next execution
-sbatch $0
-```
+    ## Resubmit the job for the next execution
+    sbatch $0
+    ```
 
 If the job payload (here the `date` command) fails for some reason and
 generates and error, the job will not be resubmitted, and the user will be
@@ -355,6 +355,7 @@ Here's the recurring job example from above, modified to:
    command)
 
 === "persistent.sbatch"
+
     ```shell
     #!/bin/bash
     #
@@ -428,6 +429,7 @@ only one `$JOBID` to track for that database server job.
 The previous [example](#example_1) can then be modified as follows:
 
 === "persistent.sbatch"
+
     ```shell hl_lines="10"
     #!/bin/bash
     #SBATCH --job-name=persistent

@@ -104,6 +104,7 @@ Here's an example Julia sbatch script that can be submitted via `sbatch`:
 
 
 === "julia_test.sbatch"
+
     ```shell
     #!/bin/bash
 
@@ -260,6 +261,7 @@ with the process id and the node it's executing on, in parallel:
 You can submit the following job:
 
 === "julia_test.sbatch"
+
     ```shell
     #!/bin/bash
     #SBATCH --nodes 2
