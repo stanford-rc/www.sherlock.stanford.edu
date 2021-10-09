@@ -91,7 +91,7 @@ Retention types:
 To check your quota usage on the different filesystems you have access to, you
 can use the `sh_quota` command:
 
-```shell
+``` shell
 $ sh_quota
 +---------------------------------------------------------------------------+
 | Disk usage for user kilian (group: ruthm)                                 |
@@ -110,7 +110,7 @@ Several options are provided to allow listing quotas for a specific filesystem
 only, or in the context of a different group (for users who are members of
 several PI groups). Please see the `sh_quota` usage information for details:
 
-```shell
+``` shell
 $ sh_quota -h
 sh_quota: display user and group quota information for all accessible filesystems.
 
@@ -128,21 +128,21 @@ Usage: sh_quota [OPTIONS]
 
 For instance, to only display your quota usage on `$HOME`:
 
-```shell
+``` shell
 $ sh_quota -f HOME
 ```
 
 If you belong to multiple groups, you can display the group quotas for your
 secondary groups with:
 
-```shell
+``` shell
 $ sh_quota -g <group_name>
 ```
 
 And finally, for great output control, an option to display quota usage in JSON
 is provided via the `-j` option:
 
-```shell
+``` shell
 $ sh_quota -f SCRATCH -j
 {
   "SCRATCH": {
@@ -199,14 +199,14 @@ work even if the underlying filesystem paths change.
 To see the contents of these variables, you can use the `echo` command. For
 instance, to see the absolute path of your $SCRATCH directory:
 
-```shell
+``` shell
 $ echo $SCRATCH
 /scratch/users/kilian
 ```
 
 Or for instance, to move to your group-shared home directory:
 
-```shell
+``` shell
 $ cd $GROUP_HOME
 ```
 

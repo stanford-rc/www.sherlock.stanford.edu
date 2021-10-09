@@ -45,7 +45,7 @@ interactively on the command line. They could be an integral
 part of an interactive programming and debugging workflow. The simplest way to
 establish an interactive session on Sherlock is to use the `sdev` command:
 
-```shell
+``` shell
 $ sdev
 ```
 
@@ -64,7 +64,7 @@ If you need more resources[^dev_limits], you can pass options to `sdev`, to
 request more CPU cores, more nodes, or even run in a different partition.
 `sdev -h` will provide more information:
 
-```shell
+``` shell
 $ sdev -h
 sdev: start an interactive shell on a compute node.
 
@@ -90,7 +90,7 @@ execute a shell through the scheduler. For instance, to start a `bash` session
 on a compute node, with the default resource requirements (one core for 2
 hours), you can run:
 
-```shell
+``` shell
 $ srun --pty bash
 ```
 
@@ -100,7 +100,7 @@ whole range of submission options that `sdev` may not support.
 Finally, if you prefer to submit an existing job script or other executable as
 an interactive job, you can use the `salloc` command:
 
-```shell
+``` shell
 $ salloc script.sh
 ```
 
@@ -111,7 +111,7 @@ allocated node(s). It will only start a new shell on the same node you launched
 variables. So you will typically need to look at them to see
 what nodes have been assigned to your job. For instance:
 
-```shell
+``` shell
 $ salloc
 salloc: Granted job allocation 655914
 $ echo $SLURM_NODELIST
@@ -131,7 +131,7 @@ sh02-01n55 ~ $
 If you SSH to a compute node without any active job allocation, you'll be
 greeted by the following message:
 
-```shell
+``` shell
 $ ssh sh02-01n01
 Access denied by pam_slurm_adopt: you have no active jobs on this node
 Connection closed
@@ -255,7 +255,7 @@ in your `$HOME` directory and run every 7 days.
 
 === "cron.sbatch"
 
-    ```shell
+    ``` shell
     #!/bin/bash
     #SBATCH --job-name=cron
     #SBATCH --begin=now+7days
@@ -292,7 +292,7 @@ details are given below:
 
 You can save the script as `cron.sbatch` or any other name, and submit it with:
 
-```shell
+``` shell
 $ sbatch cron.sbatch
 ```
 
@@ -300,7 +300,7 @@ It will start running for the first time 7 days after
 you submit it, and it will continue to run until you cancel it with the
 following command (using the job name, as defined by the `--job-name` option):
 
-```shell
+``` shell
 $ scancel -n cron
 ```
 
@@ -356,7 +356,7 @@ Here's the recurring job example from above, modified to:
 
 === "persistent.sbatch"
 
-    ```shell
+    ``` shell
     #!/bin/bash
     #
     #SBATCH --job-name=persistent
@@ -396,7 +396,7 @@ Here's the recurring job example from above, modified to:
     the `while true ... done` loop in the previous example could be replaced by
     something like this:
 
-    ```shell
+    ``` shell
     postgres -i -D $DB_DIR &
     wait
     ```
@@ -430,7 +430,7 @@ The previous [example](#example_1) can then be modified as follows:
 
 === "persistent.sbatch"
 
-    ```shell hl_lines="10"
+    ``` shell hl_lines="10"
     #!/bin/bash
     #SBATCH --job-name=persistent
     #SBATCH --dependency=singleton
@@ -456,7 +456,7 @@ The previous [example](#example_1) can then be modified as follows:
 
 Submitting that job will produce an output similar to this:
 
-```shell
+``` shell
 Mon Nov  5 10:30:59 PST 2018: Job 31182239 starting on sh-06-34
 Mon Nov  5 10:30:59 PST 2018: normal execution
 Mon Nov  5 10:31:59 PST 2018: normal execution

@@ -51,7 +51,7 @@ modules locally.
 As an example, to install the `DateTime::TimeZone` module, you can do the
 following:
 
-```shell
+``` shell
 $ ml perl
 $ cpanm DateTime::TimeZone
 ```
@@ -64,7 +64,7 @@ syntax is required.
 For instance, to check that the `DateTime::TimeZone` module is correctly
 installed:
 
-```shell
+``` shell
 $ perl -MDateTime::TimeZone -e 'print $DateTime::TimeZone::VERSION . "\n"';
 2.13
 ```
@@ -73,7 +73,7 @@ $ perl -MDateTime::TimeZone -e 'print $DateTime::TimeZone::VERSION . "\n"';
 
 To uninstall a Perl module:
 
-```shell
+``` shell
 $ cpanm -U DateTime::TimeZone
 ```
 

@@ -36,7 +36,7 @@ scripts, rather than its explicit path.
 
 The `sh_quota` tool can be used to display quota usage on `$HOME`
 
-```shell
+``` shell
 $ sh_quota -f HOME
 ```
 
@@ -77,7 +77,7 @@ directory in scripts, rather than its explicit path.
 
 The `sh_quota` tool can be used to display quota usage on `$GROUP_HOME`
 
-```shell
+``` shell
 $ sh_quota -f GROUP_HOME
 ```
 
@@ -142,7 +142,7 @@ scripts, rather than its explicit path.
 
 The `sh_quota` tool can be used to display quota usage on `$SCRATCH`
 
-```shell
+``` shell
 $ sh_quota -f SCRATCH
 ```
 
@@ -248,7 +248,7 @@ directory in scripts, rather than its explicit path.
 
 The `sh_quota` tool can be used to display quota usage on `$GROUP_SCRATCH`
 
-```shell
+``` shell
 $ sh_quota -f GROUP_SCRATCH
 ```
 
@@ -387,7 +387,7 @@ scripts, rather than its explicit path.
 
 The `sh_quota` tool can be used to display quota usage on `$OAK`
 
-```shell
+``` shell
 $ sh_quota -f OAK
 ```
 

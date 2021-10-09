@@ -75,7 +75,7 @@ the `srun` command.
 For instance, the following script would request one task with one CPU for 10
 minutes, along with 2 GB of memory, in the default partition:
 
-```shell
+``` shell
 #!/bin/bash
 #
 #SBATCH --job-name=test
@@ -128,7 +128,7 @@ Once the submission script is written properly, you can submit it to the
 scheduler with the `sbatch` command. Upon success, `sbatch` will return the ID
 it has assigned to the job (the jobid).
 
-```shell
+``` shell
 $ sbatch submit.sh
 Submitted batch job 1377
 ```
@@ -143,7 +143,7 @@ goes to the `COMPLETED` state, otherwise, its state is set to `FAILED`.
 You'll be able to check the status of your job and follow its evolution with
 the `squeue -u $USER` command:
 
-```shell
+``` shell
 $ squeue -u $USER
      JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
       1377    normal     test   kilian  R       0:12      1 sh02-01n01
@@ -155,7 +155,7 @@ result of the commands run in the script file. That output file is names
 In the above example, you can list the contents of that output file with the
 following commands:
 
-```shell
+``` shell
 $ cat slurm-1377.out
 sh02-01n01
 ```

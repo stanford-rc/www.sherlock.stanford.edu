@@ -79,7 +79,7 @@ details and examples, please refer to [this documentation][url_rhel_posix_acl].
 In the example below, we allow two users to access a restricted directory
 located at `$GROUP_SCRATCH/restricted-dir/`:
 
-```shell
+``` shell
 $ cd $GROUP_SCRATCH
 
 ### Create new directory
@@ -184,7 +184,7 @@ command. For example, newly created `file1` may have default permissions listed
 by `ls -l` as `-rw-r—r—`. Listing the permissions with `nfs4_getfacl` would
 display the following:
 
-```shell
+``` shell
 $ nfs4_getfacl file1
 A::OWNER@:rwatTnNcCoy
 A:g:GROUP@:rtncy
@@ -196,7 +196,7 @@ NFSv4 provides the shortcuts `R`, `W` and `X` for setting read, write, and
 execute permissions. For example, to add write permissions for the current
 group on `file1`, use `nfs4_setfacl` with the `-a` switch:
 
-```shell
+``` shell
 $ nfs4_setfacl -a A::GROUP@:W file1
 ```
 
@@ -214,7 +214,7 @@ permissions than does the `chmod` command. For example, if user `joe` wants to
 give read and write permissions to `jack` for her directory `private`, she
 would issue:
 
-```shell
+``` shell
 $ nfs4_setfacl -R -a A::jack@sherlock:RW private/
 ```
 
@@ -224,7 +224,7 @@ within `private/` as well.
 To allow `jack` to create files and subdirectories within `private/` with the
 permissions as granted above, inheritance rules need to be applied.
 
-```shell
+``` shell
 $ nfs4_setfacl -R -a A:fdi:jack@sherlock:RW private/
 ```
 

@@ -26,7 +26,7 @@ MATLAB with good results.
 
 The MATLAB [module][url_modules] can be loaded with:
 
-```shell
+``` shell
 $ ml load matlab
 ```
 
@@ -54,7 +54,7 @@ Once you are on a compute node and your environment is configured (_ie._ when
 the `matlab` module is loaded), MATLAB can be started by simply typing `matlab`
 at the shell prompt.
 
-```shell
+``` shell
 $ sdev
 $ ml load matlab
 $ matlab
@@ -72,7 +72,7 @@ For product information, visit www.mathworks.com.
 
 For a listing of command line options:
 
-```shell
+``` shell
 $ matlab -help
 ```
 
@@ -97,13 +97,13 @@ client][url_ssh_client].
 
 For instance:
 
-```shell
+``` shell
 $ ssh -X <YourSUNetID>@login.sherlock.stanford.edu
 ```
 
 And then, once on Sherlock:
 
-```shell
+``` shell
 $ sdev
 $ ml load matlab
 $ matlab
@@ -119,7 +119,7 @@ For more info on X11 forwarding, you can refer to this [UIT page][url_X11_UIT].
 
 Here is an example MATLAB batch script that can submitted with `sbatch`:
 
-```shell
+``` shell
 #!/bin/bash
 #SBATCH --job-name=matlab_test
 #SBATCH --output=matlab_test."%j".out
@@ -149,7 +149,7 @@ the contents of the script, and save it as `matlab_test.sbatch`
 
 Then, submit the job with the `sbatch` command:
 
-```shell
+``` shell
 $ sbatch matlab_test.sbatch
 Submitted batch job 59942277
 ```
@@ -168,7 +168,7 @@ on a node in a single job.  The key is to grab the [SLURM environment
 variable][url_SLURM_ENV] `$SLURM_CPUS_PER_TASK` and create the worker pool in
 your MATLAB code with:
 
-```matlab
+``` matlab
 parpool('local', str2num(getenv('SLURM_CPUS_PER_TASK')))
 ```
 
@@ -227,7 +227,7 @@ Save the two scripts below as `parfor.sbatch` and `parfor.m`:
 
 You can now submit the job with the following command:
 
-```shell
+``` shell
 sbatch parfor.sbatch
 ```
 

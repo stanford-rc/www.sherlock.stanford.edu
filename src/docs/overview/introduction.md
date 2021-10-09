@@ -213,19 +213,19 @@ If you're in a rush[^account], here's a 3-step ultra-quick start:
 
 1. connect to Sherlock
 
-   ```shell
+   ``` shell
    $ ssh login.sherlock.stanford.edu
    ```
 
 2. get an interactive session on a compute node
 
-   ```shell
+   ``` shell
    [kilian@sh-ln01 login! ~]$ sdev
    ```
 
 3. run a command
 
-   ```shell
+   ``` shell
    [kilian@sh02-01n58 ~]$ module load python
    [kilian@sh02-01n58 ~]$ python -c "print('Hello Sherlock')"
    Hello Sherlock

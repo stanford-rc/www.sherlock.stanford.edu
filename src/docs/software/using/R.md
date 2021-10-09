@@ -19,7 +19,7 @@ documentation][url_r_docs].
 R is available on Sherlock and the corresponding [module][url_modules] can be
 loaded with:
 
-```shell
+``` shell
 $ ml R
 ```
 
@@ -32,7 +32,7 @@ prompt, or refer to the [Software list page][url_software_list].
 Once your environment is configured (_ie._ when the `R` module is loaded), R
 can be started by simply typing R at the shell prompt:
 
-```shell
+``` shell
 $ R
 
 R version 3.5.1 (2018-07-02) -- "Feather Spray"
@@ -48,7 +48,7 @@ Type 'q()' to quit R.
 
 For a listing of command line options:
 
-```shell
+``` shell
 $ R --help
 ```
 
@@ -94,14 +94,14 @@ simple matrix multiplication example, and demonstrate how to feed R code as a
 
 You can save this script as `R-test.sbatch` and submit it to the scheduler with:
 
-```shell
+``` shell
 $ sbatch R-test.sbatch
 ```
 
 Once the job is done, you should get a `R-test.out` file in the current
 directory, with the following contents:
 
-```shell
+``` shell
 R version 3.5.1 (2018-07-02) -- "Feather Spray"
 [...]
 > set.seed (1)
@@ -139,7 +139,7 @@ directory.
 To install a R package in your personal environment, the first thing to do is
 load the R module:
 
-```shell
+``` shell
 $ ml R
 ```
 
@@ -147,7 +147,7 @@ Then start a R session, and use the `install.packages()` function at the R
 prompt. For instance, the following example will install the `doParallel`
 package, using the US mirror of the [CRAN repository][url_cran]:
 
-```shell
+``` shell
 $ R
 
 R version 3.5.1 (2018-07-02) -- "Feather Spray"
@@ -158,7 +158,7 @@ R version 3.5.1 (2018-07-02) -- "Feather Spray"
 
 It should give the following warning:
 
-```shell
+``` shell
 Warning in install.packages("doParallel", repos = "http://cran.us.r-project.org") :
   'lib = "/share/software/user/open/R/3.5.1/lib64/R/library"' is not writable
 Would you like to use a personal library instead? (yes/No/cancel)
@@ -172,7 +172,7 @@ directory and instruct it to install future R packages there.
 
 The installation will then proceed:
 
-```shell
+``` shell
 trying URL 'http://cran.us.r-project.org/src/contrib/doParallel_1.0.14.tar.gz'
 Content type 'application/x-gzip' length 173607 bytes (169 KB)
 ==================================================
@@ -198,7 +198,7 @@ The downloaded source packages are in
 
 and when it's done, you should be able to load the package within R with:
 
-```R
+``` R
 > library(doParallel)
 Loading required package: foreach
 Loading required package: iterators
@@ -212,7 +212,7 @@ Sometimes when installing R packages, other software is needed for the
 installation and/or compilation.  For instance, when trying to install the `sf`
 package, you may encounter the following error messages:
 
-```R
+``` R
 > install.packages("sf")
 [...]
 Configuration failed because libudunits2.so was not found. Try installing:...
@@ -227,7 +227,7 @@ already available as modules on Sherlock.
 Whenever you see "not found" errors, you may want to try searching the modules
 inventory with `module spider`:
 
-```shell
+``` shell
 $ module spider udunits
 
 ----------------------------------------------------------------------------
@@ -247,7 +247,7 @@ $ module spider udunits
 So for `sf`, in order to load the dependencies, exit `R`, load the `udunits`
 and `gdal` modules, and try installing `sf` again:
 
-```shell
+``` shell
 $ ml load physics udunits gdal
 $ ml R
 $ R
@@ -270,7 +270,7 @@ email][url_support] and we'll be happy to assist.
 To install R packages in a different location, you'll need to create that
 directory, and instruct R to install the packages there:
 
-```shell
+``` shell
 $ mkdir ~/R_libs/
 $ R
 [...]
@@ -285,7 +285,7 @@ Specifying the full destination path for each package installation could
 quickly become tiresome, so to avoid this, you can create a `.Renviron`
 file in your `$HOME` directory, and define your `R_libs` path there:
 
-```shell
+``` shell
 $ cat << EOF > $HOME/.Renviron
 R_LIBS=~/R_libs
 EOF
@@ -301,7 +301,7 @@ specify this installation path when using `install.packages()` anymore.
     To see the directories where R searches for packages and libraries, you can
     use the following command in R:
 
-    ```R
+    ``` R
     > .libPaths()
     ```
 
@@ -327,7 +327,7 @@ For instance, adding the following contents to your `~/.Rprofile` will make
 sure that every `install.packages()` invocation will use the closest CRAN
 mirror:
 
-```R
+``` R
 ## local creates a new, empty environment
 ## This avoids polluting the global environment with
 ## the object r
@@ -341,7 +341,7 @@ local({
 Once this is set, you only need to specify the name of the package to install,
 and R will use the mirror you defined automatically:
 
-```R
+``` R
 > install.packages("doParallel")
 [...]
 trying URL 'https://cloud.r-project.org/src/contrib/doParallel_1.0.14.tar.gz'
@@ -355,14 +355,14 @@ downloaded 169 KB
 R packages can be directly installed from GitHub using the `devtools` package.
 `devtools` needs to be installed first, with:
 
-```R
+``` R
 > install.packages("devtools")
 ```
 
 And then, you can then install a R package directly from its GitHub repository.
 For instance, to install `dplyr` from [url_dplyr]:
 
-```R
+``` R
 > library(devtools)
 > install_github("tidyverse/dplyr")
 ```
@@ -375,7 +375,7 @@ session.
 
 For instance, to update the `doParallel` package:
 
-```R
+``` R
 > update.packages('doParallel')
 ```
 
@@ -395,7 +395,7 @@ all the packages in your local R library are up to date.
 To remove a package from your local R library, you can use the
 `remove.packages()` function. For instance:
 
-```R
+``` R
 > remove.packages('doParallel')
 ```
 
@@ -416,7 +416,7 @@ Save the two scripts below in a directory on Sherlock:
 
 === "doParallel_test.R"
 
-    ```R
+    ``` R
     # Example doParallel script
 
     if(!require(doParallel)) install.packages("doParallel")
@@ -449,7 +449,7 @@ Save the two scripts below in a directory on Sherlock:
 
 === "doParallel_test.sbatch"
 
-    ```shell
+    ``` shell
     #!/bin/bash
 
     #SBATCH --nodes=1
@@ -468,13 +468,13 @@ Save the two scripts below in a directory on Sherlock:
 
 And then submit the job with:
 
-```shell
+``` shell
 $ sbatch doParallel_test.sbatch
 ```
 
 Once the job has completed, the output file should contain something like this:
 
-```shell
+``` shell
 $ cat doParallel_test.out
 [1] "16"
 elapsed
@@ -484,7 +484,7 @@ elapsed
 **Bonus points**: observe the scalability of the `doParallel` loop by
 submitting the same script using a varying number of CPU cores:
 
-```shell
+``` shell
 $ for i in 2 4 8 16; do
     sbatch --out=doP_${i}.out --ntasks-per-node=$i doParallel_test.sbatch
 done
@@ -492,7 +492,7 @@ done
 
 When the jobs are done:
 
-```shell
+``` shell
 $ for i in 2 4 8 16; do
     printf "%2i cores: %4.1fs\n" $i $(tail -n1 doP_$i.out)
 done
@@ -511,7 +511,7 @@ To distribute parallel R tasks on multiple nodes, you can use the
 To install the `Rmpi` package, a module providing MPI library must first be
 loaded. For instance:
 
-```shell
+``` shell
 $ ml openmpi R
 $ R
 > install.packages("Rmpi")
@@ -523,7 +523,7 @@ Once the package is installed, the following scripts demonstrate a very basic
 
 === "Rmpi-test.R"
 
-    ```R
+    ``` R
     # Example Rmpi script
 
     if (!require("Rmpi")) install.packages("Rmpi")
@@ -548,7 +548,7 @@ Once the package is installed, the following scripts demonstrate a very basic
 
 === "Rmpi-test.sbatch"
 
-    ```shell
+    ``` shell
     #!/bin/bash
 
     #SBATCH --nodes=2
@@ -567,13 +567,13 @@ Once the package is installed, the following scripts demonstrate a very basic
 You can save those scripts as `Rmpi-test.R` and
 `Rmpi-test.sbatch` and then submit your job with:
 
-```shell
+``` shell
 $ sbatch Rmpi-test.sbatch
 ```
 
 When the job is done, its output should look like this:
 
-```shell
+``` shell
 $ cat Rmpi-test.log
         3 slaves are spawned successfully. 0 failed.
 master (rank 0, comm 1) of size 4 is running on: sh-06-33
@@ -601,7 +601,7 @@ the [`gpuR`][url_gpuR] R package.
 
 === "gpuR-test.R"
 
-    ```R
+    ``` R
     # Example gpuR script
 
     if (!require("gpuR")) install.packages("gpuR")
@@ -628,7 +628,7 @@ the [`gpuR`][url_gpuR] R package.
 
 === "gpuR-test.sbatch"
 
-    ```shell
+    ``` shell
     #!/bin/bash
 
     #SBATCH --partition gpu
@@ -646,7 +646,7 @@ the [`gpuR`][url_gpuR] R package.
 After submitting the job with `sbatch gpuR-test.sbatch`, the output file should
 contain something like this:
 
-```shell
+``` shell
 [1] "CPU times"
 [1] "1  0.00"
 [1] "2  0.00"
