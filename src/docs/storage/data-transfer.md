@@ -349,6 +349,15 @@ $ module load system rclone
 $ rclone --help
 ```
 
+### AWS
+
+You can also access AWS storage from the Sherlock command line with the [AWS Command Line Interface][url_aws-cli]:
+
+```shell
+$ module load system aws-cli
+$ aws help
+```
+
 ### Other services
 
 If you need to access other cloud storage services, you can use
@@ -393,6 +402,7 @@ documentation][url_rclone].
 [url_globus_oak]:         //app.globus.org/file-manager?origin_id=8b3a8b64-d4ab-4551-b37e-ca0092f769a7
 [url_bbcp]:         //www.slac.stanford.edu/~abh/bbcp
 [url_rclone]:       //rclone.org/
+[url_aws-cli]:      //aws.amazon.com/cli/
 [url_uit_gdrive]:   //uit.stanford.edu/service/googleapps/drive
 [url_oak]:          //uit.stanford.edu/service/oak-storage
 
