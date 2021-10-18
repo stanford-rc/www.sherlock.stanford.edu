@@ -133,6 +133,15 @@ As a member of the Sherlock community, you're also automatically subscribed to
 the [sherlock-announce][url_sha_ml] mailing-list, which is only used by the
 SRCC team to send important announcements about Sherlock,
 
+### Onboarding sessions
+
+We offer Sherlock onboarding sessions for new uers every first Wednesday of the month 1-2pm PST.  
+This one hour session will be a brief introduction to Sherlock's layout, scheduler limits,
+file systems and some job submission/software installation best practices for new users.
+So, come by if you are new to Sherlock and/or HPC in general.
+ 
+Onboarding session [Zoom link][url_ob_zoom] 
+ 
 
 ### Office hours
 
@@ -268,6 +277,7 @@ Here's what it looks like in motion:
 
 [url_zoom]:         //stanford.zoom.us
 [url_oh_zoom]:      //stanford.zoom.us/j/95962823750?pwd=cFM2U2ZRQ243Zkx0Ry83akdtWU9zUT09
+[url_ob_zoom]:      //stanford.zoom.us/j/97524291024?pwd=Q0g3b2wvSHhPaTdtOElGRVZFOCtqdz09
 [url_calendar]:     //calendly.com/srcc-officehours/sherlock
 
 [url_sunet]:        //uit.stanford.edu/service/accounts/sunetids#services
