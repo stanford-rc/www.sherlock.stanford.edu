@@ -14,12 +14,7 @@ edit_uri:  www.sherlock.stanford.edu/edit/main/src/
 # Copyright
 copyright: >-
   Copyright &copy; 2014 - 2021 &mdash;
-  <a href='mailto:srcc-support@stanford.edu'>Stanford Research Computing Center</a>
-
-# Google Analytics
-google_analytics:
-  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
-  - auto
+  <a href='mailto:srcc-support@stanford.edu'>Stanford Research Computing Center</a><br/>
 
 # Configuration
 docs_dir: src
@@ -37,8 +32,8 @@ theme:
   search_index_only: true
 
   language: en
-  features:
-    - navigation.instant
+    #features:
+    #- navigation.instant
   font:
     text: Roboto
     code: Roboto Mono
@@ -53,6 +48,7 @@ extra_css:
   - /assets/css/sh.css
 
 extra:
+  generator: false
   made_in: >-
     <a href='https://www.google.com/maps/place/Stanford,+CA'>Stanford, California</a>
   support_email: srcc-support@stanford.edu
@@ -71,6 +67,10 @@ extra:
     - icon: fontawesome/brands/slack
       link: https://srcc.slack.com/
       name: SRCC Users Slack workspace
+  analytics:
+    provider: google
+    property: !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+
 
 # Extensions
 markdown_extensions:
@@ -111,7 +111,8 @@ markdown_extensions:
   - pymdownx.snippets:
       check_paths: true
   - pymdownx.superfences
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.escapeall:
