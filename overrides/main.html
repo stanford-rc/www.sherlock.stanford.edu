@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% set extracopyright %}
+	{% if config.extra.made_in %}
+        Made with
+        <span class="twemoji pulsate">
+            {% include ".icons/material/heart.svg" %}
+        </span> in
+        <span class="md-footer-copyright__highlight">
+            {{ config.extra.made_in }}
+        </span>
+	{% endif %}
+{% endset %}
