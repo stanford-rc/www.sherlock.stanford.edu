@@ -171,7 +171,7 @@ so that you can then work self-sufficiently towards a solution on your own.
     * Thursday 3-4pm
 
 You'll need a [full-service SUNet ID][url_sunet] (basically, a @stanford.edu
-email address) in order [authenticate][url_zoom] and join Office Hours via
+email address) in order to [authenticate][url_zoom] and join Office Hours via
 Zoom.  If you do not have a full service account, please contact us at {{
 support_email }}.
 
