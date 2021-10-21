@@ -60,17 +60,3 @@ jobs:
       - uses: actions/checkout@v2
 
 
-  notification: # ------------------------------------------------------------
-    runs-on: ubuntu-20.04
-    needs: [build, yamllint, mklint, linkcheck]
-    if: always()
-    steps:
-      - uses: technote-space/workflow-conclusion-action@v2
-      - uses: iRoachie/slack-github-actions@v2.0.1
-        #if: env.WORKFLOW_CONCLUSION == 'failure'
-        with:
-          status: ${{ env.WORKFLOW_CONCLUSION }}
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
