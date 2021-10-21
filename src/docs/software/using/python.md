@@ -25,13 +25,13 @@ the other.
 
 You can load either version on Sherlock by doing the following commands:
 
-```shell
+``` shell
 $ ml python/2.7.13
 ```
 
 or
 
-```shell
+``` shell
 $ ml python/3.6.1
 ```
 
@@ -52,7 +52,7 @@ $ ml python/3.6.1
 Once your environment is configured (ie. when the Python module is loaded),
 Python can be started by simply typing `python` at the shell prompt:
 
-```shell
+``` shell
 $ python
 Python 2.7.13 (default, Apr 27 2017, 14:19:21)
 [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)] on linux2
@@ -78,7 +78,7 @@ provided on Sherlock:
 
 Python modules on Sherlock generally follow the naming scheme below:
 
-```shell
+``` shell
 py-<package_name>/version_py<python_version>
 ```
 
@@ -91,7 +91,7 @@ For instance, NumPy modules are:
 You can list all available module versions for a package with `ml spider
 <package_name>`. For instance:
 
-```shell
+``` shell
 $ ml spider tensorflow
 -------------------------------------------------------------------------------
   py-tensorflow:
@@ -135,13 +135,13 @@ cluster.
 
 For example:
 
-```shell
+``` shell
 $ pip install --user <package_name>
 ```
 
 For Python 3, use `pip3`:
 
-```shell
+``` shell
 $ pip3 install --user <package_name>
 ```
 
@@ -157,7 +157,7 @@ Python version.
 You can easily see the list of the Python packages installed in your
 environment, and their location, with `pip list`:
 
-```shell
+``` shell
 $ pip list -v
 Package    Version Location                                                            Installer
 ---------- ------- ------------------------------------------------------------------- ---------
@@ -186,14 +186,14 @@ users from the group use it without having to install it themselves.
 First, you need to create a directory to store those packages. We'll put it in
 `$GROUP_HOME`:
 
-```shell
+``` shell
 $ mkdir -p $GROUP_HOME/python/
 ```
 
 Then, we load the Python module we need, and we instruct `pip` to install its
 packages in the directory we just created:
 
-```shell
+``` shell
 $ ml python/2.7.13
 $ PYTHONUSERBASE=$GROUP_HOME/python pip install --user urllib3
 ```
@@ -206,13 +206,13 @@ default directory, you (and all the members of the group who will want to use
 that module) need to set their `PYTHONPATH` to include our new shared
 directory[^pythonpath]:
 
-```shell
+``` shell
 $ export PYTHONPATH=$GROUP_HOME/python/lib/python2.7/site-packages:$PYTHONPATH
 ```
 
 And now, the module should be visible:
 
-```shell
+``` shell
 $ pip list -v
 Package    Version Location                                                            Installer
 ---------- ------- ------------------------------------------------------------------- ---------
@@ -247,7 +247,7 @@ GitHub repositories.
 
 For instance, to install [HTTPie][url_httpie], you can do:
 
-```shell
+``` shell
 $ pip install --user git+git://github.com/jkbr/httpie.git
 ```
 
@@ -262,16 +262,16 @@ each package you would like to install on its own line:
 
 === "requirements.txt"
 
-```shell
-numpy
-scikit-learn
-keras
-tensorflow
-```
+    ``` shell
+    numpy
+    scikit-learn
+    keras
+    tensorflow
+    ```
 
 You can now install your modules like so:
 
-```shell
+``` shell
 $ ml python
 $ pip install--user -r requirements.txt
 ```
@@ -280,13 +280,13 @@ $ pip install--user -r requirements.txt
 
 `pip` can update already installed packages with the following command:
 
-```shell
+``` shell
 $ pip install --user --upgrade <package_name>
 ```
 
 Upgrading packages also works with `requirements.txt` files:
 
-```shell
+``` shell
 $ pip install --user --upgrade -r requirements.txt
 ```
 
@@ -296,7 +296,7 @@ $ pip install --user --upgrade -r requirements.txt
 To uninstall a Python package, you can use the `pip uninstall` command (note
 that it doesn't take any `--user` option):
 
-```shell
+``` shell
 $ pip uninstall <package_name>
 $ pip uninstall -r requirements.txt
 ```

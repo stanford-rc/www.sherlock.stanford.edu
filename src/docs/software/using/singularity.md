@@ -125,14 +125,14 @@ module. Singularity images can be pulled directly from the compute nodes, and
 Singularity uses multiple CPU cores when assembling the image, so requesting
 multiple cores in your job can make the pull operation faster:
 
-```shell
+``` shell
 $ srun -c 4 --pty bash
 ```
 
 We recommend storing Singularity images in `$GROUP_HOME`, as container images
 can take significant space in your `$HOME` directory.
 
-```shell
+``` shell
 $ mkdir -p $GROUP_HOME/$USER/simg
 $ cd $GROUP_HOME/$USER/simg
 ```
@@ -140,7 +140,7 @@ $ cd $GROUP_HOME/$USER/simg
 Then, the OpenFOAM container could be pulled directly from
 [DockerHub][url_docker_hub] by Singularity. This can take a moment to complete:
 
-```shell
+``` shell
 $ singularity pull docker://openfoam/openfoam6-paraview54
 Docker image path: index.docker.io/openfoam/openfoam6-paraview54:latest
 Cache folder set to /scratch/users/kilian/.singularity/docker
@@ -165,7 +165,7 @@ in a specific directory, you can use the `--pwd /path/` option. For instance,
 we'll create a `/tmp/openfoam_test/` directory to store our tests results (that
 will be wiped out at the end of the job), and start the container shell there:
 
-```shell
+``` shell
 $ mkdir /tmp/openfoam_test
 $ singularity shell --pwd /tmp/openfoam_test openfoam6-paraview54.simg
 Singularity: Invoking an interactive shell within container...
@@ -179,13 +179,13 @@ on the compute node (which usually looks like `[login]@[compute_node] [path]$`.
 OpenFOAM provides a convenience script that can be sourced to make OpenFOAM
 commands directly accessible and set a few useful environment variables:
 
-```shell
+``` shell
 > source /opt/openfoam6/etc/bashrc
 ```
 
 Now, we can run a simple example using OpenFOAM:
 
-```shell
+``` shell
 > cp -r $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily .
 > cd pitzDaily
 > blockMesh
@@ -230,7 +230,7 @@ End
 
 When the simulation is done, you can exit the container with:
 
-```shell
+``` shell
 > exit
 ```
 
@@ -238,7 +238,7 @@ Because the container can see all the compute node's filesystems, the
 simulation output will be available in `/tmp/openfoam_test` after you exit the
 container:
 
-```shell
+``` shell
 $ ls /tmp/openfoam_test/pitzDaily/postProcessing/
 sets
 ```
@@ -271,7 +271,7 @@ As before, we start by requesting an interactive shell with multiple CPU
 cores, loading the Singularity module and moving the directory where we'll save
 those images:
 
-```shell
+``` shell
 $ srun -c 4 --pty bash
 $ cd $GROUP_HOME/simg
 ```
@@ -290,7 +290,7 @@ found in the [NGC Getting Started Guide][url_ngc_auth].
 You can then set the following environment variable to allow Singularity to
 authenticate with NGC:
 
-```shell
+``` shell
 $ export SINGULARITY_DOCKER_USERNAME='$oauthtoken'
 $ export SINGULARITY_DOCKER_PASSWORD=<NVIDIA NGC API key>
 ```
@@ -310,7 +310,7 @@ singularity pull docker://nvcr.io/<registry>/<app:tag>`
 For example to pull the [NAMD][url_namd] NGC container tagged with version
 `2.12-171025` the corresponding command would be:
 
-```shell
+``` shell
 $ singularity pull docker://nvcr.io/hpc/namd:2.12-171025
 ```
 
@@ -339,7 +339,7 @@ the container.
 We also need to submit a job requesting a GPU to run GPU-enabled
 containers.  For instance:
 
-```shell
+``` shell
 $ srun -p gpu -c 4 --gres gpu:1 --pty bash
 ```
 
@@ -349,7 +349,7 @@ The NAMD container that was pulled just before can now be started with the
 following commands. We start by creating a temporary directory to hold the
 execution results, and start the container using this as the current directory:
 
-```shell
+``` shell
 $ mkdir /tmp/namd_test
 $ singularity shell --nv --pwd /tmp/namd_test $GROUP_HOME/simg/namd-2.12-171025.simg
 Singularity: Invoking an interactive shell within container...
@@ -360,7 +360,7 @@ Singularity namd-2.12-171025.simg:/tmp/namd_test>
 From there, we can run a NAMD test to verify that everything is working as
 expected.
 
-```shell
+``` shell
 > cp -r /workspace/examples .
 > /opt/namd/namd-multicore +p4 +idlepoll examples/apoa1/apoa1.namd
 Charm++: standalone mode (not using charmrun)
@@ -396,7 +396,7 @@ The simulation should take a few seconds to run. You can verify that it
 correctly executed on a GPU in the output above. When it's done, you can exit
 the container with:
 
-```shell
+``` shell
 > exit
 ```
 
@@ -404,7 +404,7 @@ Because the container can see all the compute node's filesystems, the
 simulation output will be available in `/tmp/named_test` after you exit the
 container:
 
-```shell
+``` shell
 $ cd /tmp/namd_test/examples/apoa1/
 $ ls apoa1-out*
 apoa1-out.coor  apoa1-out.vel  apoa1-out.xsc
