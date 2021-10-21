@@ -135,13 +135,13 @@ SRCC team to send important announcements about Sherlock,
 
 ### Onboarding sessions
 
-We offer Sherlock onboarding sessions for new uers every first Wednesday of the month 1-2pm PST.  
+We offer Sherlock onboarding sessions for new uers every first Wednesday of the month 1-2pm PST.
 This one hour session will be a brief introduction to Sherlock's layout, scheduler limits,
 file systems and some job submission/software installation best practices for new users.
 So, come by if you are new to Sherlock and/or HPC in general.
- 
-Onboarding session [Zoom link][url_ob_zoom] 
- 
+
+Onboarding session [Zoom link][url_ob_zoom]
+
 
 ### Office hours
 
@@ -171,9 +171,9 @@ so that you can then work self-sufficiently towards a solution on your own.
     * Thursday 3-4pm
 
 You'll need a [full-service SUNet ID][url_sunet] (basically, a @stanford.edu
-email address) in order to join Office Hours via Zoom. Make sure to
-authenticate at (url_zoom)  If you do not have a full service account, please
-contact us at {{ support_email }}.
+email address) in order [authenticate][url_zoom] and join Office Hours via
+Zoom.  If you do not have a full service account, please contact us at {{
+support_email }}.
 
 If you can't make any of the Office Hours sessions, you can also make an
 **[appointment][url_calendar]** with Sherlock's support team.
