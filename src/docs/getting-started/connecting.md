@@ -33,7 +33,7 @@ typing the `ssh` command in a terminal window.
 To login to Sherlock, open a terminal and type the following command, where
 `<sunetid>` should be replaced by your *actual* SUNet ID:
 
-```shell
+``` shell
 $ ssh <sunetid>@login.sherlock.stanford.edu
 ```
 
@@ -56,13 +56,13 @@ SSH.[^auth_methods].
 Upon connection, you will be asked for your SUNet ID password with the
 following prompt:
 
-```shell
+``` shell
 <sunetid>@login.sherlock.stanford.edu's password:
 ```
 
 Enter your password, and if it's correct, you should see the following line:
 
-```shell
+``` shell
 Authenticated with partial success.
 ```
 
@@ -82,7 +82,7 @@ two-step][url_twostep] page.
 After successfully entering your password, you'll be prompted for your second
 authentication factor with a message like this:
 
-```shell
+``` shell
 Duo two-factor login for <sunetid>
 
 Enter a passcode or select one of the following options:
@@ -115,7 +115,7 @@ If your second factor is accepted, you'll see the following message:
 If you ever encounter timeout errors when connecting to Sherlock, like
 these:
 
-```shell
+``` shell
 $ ssh login.sherlock.stanford.edu
 ssh: connect to host login.sherlock.stanford.edu port 22: Operation timed out
 
@@ -174,7 +174,7 @@ minutes.
 Congratulations! You've successfully connected to Sherlock. You'll be greeted
 by the following *message of the day*:
 
-```shell
+``` shell
 
              --*-*- Stanford Research Computing Center -*-*--
                   ____  _               _            _

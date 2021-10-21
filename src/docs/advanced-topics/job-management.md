@@ -3,7 +3,7 @@
 You may have encountered situations where your jobs get rejected at submission
 with errors like this:
 
-```shell
+``` shell
 sbatch: error: MaxSubmitJobsPerAccount
 sbatch: error: MaxSubmitJobsPerUser
 ```
@@ -26,7 +26,7 @@ Imagine you have a 100-task array job, where you run 1 `app` task per array
 item, which looks like this:
 
 
-```shell
+``` shell
 #!/bin/bash
 #SBATCH --array=1-100
 #SBATCH -n 1
@@ -41,7 +41,7 @@ be regrouped under the same job array), each using 1 CPU to run 1 task.
 
 Instead of that 100-task array job, you can try something like this:
 
-```shell
+``` shell
 #!/bin/bash
 #SBATCH --array=0-99:10
 #SBATCH -n 10

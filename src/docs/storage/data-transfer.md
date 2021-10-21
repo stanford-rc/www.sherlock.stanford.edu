@@ -304,7 +304,7 @@ It supports:
 To transfer files via the DTNs, simply use `dtn.sherlock.stanford.edu` as a
 remote server hostname. For instance:
 
-```shell
+``` shell
 $ scp foo <sunetid>@dtn.sherlock.stanford.edu:~/foo
 ```
 
@@ -344,7 +344,7 @@ We provide the `rclone` tool on Sherlock to interact with Google Drive. You'll
 just need to load the `rclone` module to be able to use it to move your
 files from/to Google Drive:
 
-```shell
+``` shell
 $ module load system rclone
 $ rclone --help
 ```
@@ -365,7 +365,7 @@ If you need to access other cloud storage services, you can use
 Google Drive, Amazon S3, Box, Dropbox, Google Cloud Storage, Amazon Drive,
 Microsoft OneDrive and many more.
 
-```shell
+``` shell
 $ ml load system rclone
 $ rclone -h
 ```

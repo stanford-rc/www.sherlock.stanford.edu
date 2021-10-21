@@ -12,7 +12,7 @@ community, and walks through transferring files from Box to Sherlock on a Mac.
 
 If you haven't done so already, open up a terminal and shell to sherlock:
 
-```shell
+``` shell
 $ ssh <sunetid>@login.sherlock.stanford.edu
 ```
 
@@ -20,7 +20,7 @@ You then will want to go to a location that has enough room to save the files.
 Since `$HOME` has a smaller limit (and you can lock yourself out if it fills up)
 let's go to the `$SCRATCH` space:
 
-```shell
+``` shell
 $ cd $SCRATCH
 ```
 
@@ -28,13 +28,13 @@ Since we don't want to run anything computationally intensive on a login node,
 let's request an interactive session. You can either ask for one with a
 particular time and partition on the fly:
 
-```shell
+``` shell
 $ srun --partition normal --time 1:00:00 --pty bash
 ```
 
 or ask for a development node for 1 hour:
 
-```shell
+``` shell
 $ sdev
 ```
 
@@ -43,7 +43,7 @@ $ sdev
 Rclone is readily available on Sherlock, but the corresponding module needs to
 be explicitely loaded to be made available in your environment:
 
-```shell
+``` shell
 $ ml load system rclone
 ```
 
@@ -51,14 +51,14 @@ $ ml load system rclone
 
 We can then configure it as follows:
 
-```shell
+``` shell
 $ rclone config
 ```
 
 You'll notice that it's going to store a configuration file in your `$HOME`
 directory:
 
-```shell
+``` shell
 2019/07/09 13:03:56 NOTICE: Config file "/home/users/vsochat/.config/rclone/rclone.conf" not found - using defaults
 ```
 
@@ -67,7 +67,7 @@ directory:
 It will first tell you that there are no "remotes" (cloud endpoints that you
 connect to) found, and you can press "n" to make a new one:
 
-```shell
+``` shell
 No remotes found - make a new one
 n) New remote
 s) Set configuration password
@@ -79,7 +79,7 @@ Next, it asks for a meaningful name. It's recommended to use some combination
 to remind your future self that the endpoint is intended to be from Sherlock,
 and to your cloud provider. For example, I might do:
 
-```shell
+``` shell
 $ name> VanessaSherlockToBox
 ```
 
@@ -88,7 +88,7 @@ the cloud provider that has the files that you want to connect to. There are
 many to choose from! You would want to select the number that corresponds with
 your choice. For example, I'd choose 5 or type "box" to select Box:
 
-```shell
+``` shell
 Type of storage to configure.
 Enter a string value. Press Enter for the default ("").
 Choose a number from below, or type in your own value
@@ -149,7 +149,7 @@ For client id and client secret, we will leave it blank (press ENTER for each)
 to designate that we want to enter it manually when we run it, as opposed to
 saving our credentials somewhere.
 
-```shell
+``` shell
 Box App Client Id.
 Leave blank normally.
 Enter a string value. Press Enter for the default ("").
@@ -163,7 +163,7 @@ client_secret>
 Finally, it will ask you if you want to edit the Advanced config. You can say
 no (n).
 
-```shell
+``` shell
 Edit advanced config? (y/n)
 y) Yes
 n) No
@@ -173,7 +173,7 @@ y/n> n
 And finally, since you are working on a remote and headless machine (Sherlock),
 you should say no to the next answer.
 
-```shell
+``` shell
 Remote config
 Use auto config?
  * Say Y if not sure
@@ -192,14 +192,14 @@ If you have a Mac, you can select _Shell -> New Window -> New Window with
 Profile_. If you have another flavor of Linux (or Windows) then you will need to
 [install rclone][url_install_rclone] locally and then issue this command:
 
-```shell
+``` shell
 $ rclone authorize "box"
 ```
 
 A website will open for you to log in with your cloud provider (e.g., Box),
 and after login, it will tell you to return to your terminal:
 
-```shell
+``` shell
 Success!
 
 
@@ -210,7 +210,7 @@ Back in the (second terminal, not the one on Sherlock) you will see a message
 (that you might have previously missed) about the browser opening, waiting for
 a code, and then you will get the code (replaced below with xxxxxxxx):
 
-```shell
+``` shell
 If your browser doesn't open automatically go to the following link: http://127.0.0.1:53682/auth
 Log in and authorize rclone for access
 Waiting for code...
@@ -223,7 +223,7 @@ Paste the following into your remote machine --->
 You need to copy *the entire thing* between the two brackets "{}" back into the first
 terminal running on Sherlock, which will be showing this:
 
-```shell
+``` shell
 For this to work, you will need rclone available on a machine that has a web browser available.
 Execute the following on your machine:
  rclone authorize "box"
@@ -234,7 +234,7 @@ result>
 After you paste, it will then ask you if it looks ok, and you can type ++y++
 for yes.
 
-```shell
+``` shell
 [VanessaSherlockToBox]
 type = box
 token = {xxxxxxxxxxxxxxxxxxx}
@@ -247,7 +247,7 @@ d) Delete this remote
 And close up with a listing of your current remotes. You can quit ++q++ after
 this, because next we will test our setup.
 
-```shell
+``` shell
 Current remotes:
 
 Name                 Type
@@ -269,7 +269,7 @@ e/n/d/r/c/s/q> q
 Did it work? Let's test listing files for our remote to see (filenames below
 are made up).
 
-```shell
+``` shell
 $ rclone lsd VanessaSherlockToBox: --max-depth 1
           -1 2018-08-09 09:52:01        -1 pancakes
           -1 2019-03-13 23:33:03        -1 miracles
@@ -279,7 +279,7 @@ $ rclone lsd VanessaSherlockToBox: --max-depth 1
 
 Next, let's copy a file to Sherlock.
 
-```shell
+``` shell
 # rclone copy <remote>:<cloud storage path>  <sherlock path>
 $ rclone copy VanessaSherlockToBox:pancakes  /scratch/users/vsochat/pancakes
 ```
