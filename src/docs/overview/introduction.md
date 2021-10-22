@@ -132,12 +132,18 @@ SRCC team to send important announcements about Sherlock,
 
 ### Onboarding sessions
 
-We offer Sherlock onboarding sessions for new uers every first Wednesday of the month 1-2pm PST.
-This one hour session will be a brief introduction to Sherlock's layout, scheduler limits,
-file systems and some job submission/software installation best practices for new users.
-So, come by if you are new to Sherlock and/or HPC in general.
+We offer regular onboarding sessions for new Sherlock users.
 
-Onboarding session [Zoom link][url_ob_zoom]
+!!! info "On-boarding session times"
+
+    On-boarding sessions are offered every first Wednesday of the month, 1pm -
+    2pm PST, via [Zoom][url_ob_zoom]
+
+These one-hour sessions are a brief introduction to Sherlock's layout, its
+scheduler, the different file systems available on the cluster, as well as some
+job submission and software installation best practices for new users. They are
+a good intro course if you are new to Sherlock or HPC in general.
+
 
 
 ### Office hours
