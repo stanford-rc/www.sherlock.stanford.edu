@@ -16,10 +16,6 @@
 <!-- resuming normal Markdown operations -->
 
 
-!!! warning
-    This guide is a work in progress and is not complete yet. We are actively
-    working on adding more content and information.
-
 ## Welcome to Sherlock!
 
 Sherlock is a High-Performance Computing (HPC) cluster, operated by the
@@ -81,7 +77,8 @@ cluster, giving them access to virtually unlimited resources.
 
     If you're looking for information on a specific topic, the Search feature
     of this site will allow you to quickly find the page you're looking for.
-    Just press ++s++ or ++f++ to open the Search bar and start typing.
+    Just press ++s++, ++f++ or ++slash++ to open the Search bar and start
+    typing.
 
 To help users take their first steps on Sherlock, we provide documentation and
 information through various channels:
