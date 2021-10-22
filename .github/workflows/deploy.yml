@@ -11,40 +11,46 @@ on:
       - 'overrides/**'
       - 'src/**'
 
-# Environment
 env:
-  CI: true
   PYTHON_VERSION: 3.x
 
-# Jobs to run
 jobs:
-
-  # Build and deploy site
-  deploy:
+  docs:
+    name: Build and deploy documentation
     runs-on: ubuntu-latest
     steps:
 
-      # Checkout source form GitHub
-      - uses: actions/checkout@v2
+      - name: Checkout source
+        uses: actions/checkout@v2
 
-      # Install Python runtime and dependencies
-      - uses: actions/setup-python@v1
+      - name: Setup Python runtime
+        uses: actions/setup-python@v1
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
-      # Install theme and dependencies
+      - name: Install Python dependencies
       - run: |
           pip install -r requirements.txt
 
-      # Build site
-      - env:
+      #- name: Install Insiders build
+      #  if: github.event.repository.fork == false
+      #  env:
+      #    GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      #  run: |
+      #    git clone --depth 1 https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+      #    pip install -e mkdocs-material-insiders
+      #    cp mkdocs-material-insiders/mkdocs.yml mkdocs.yml
+      #    echo "THEME_DIR=mkdocs-material-insiders/material" >> $GITHUB_ENV
+
+      - name: Deploy site
+        env:
           GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
         run: |
           mkdocs gh-deploy --force
           mkdocs --version
 
-# Send Slack notification
-      - uses: iRoachie/slack-github-actions@v2.0.0
+      - name: Send Slack notification
+        uses: iRoachie/slack-github-actions@v2.0.0
         if: ${{ always() }}
         with:
           status: ${{ job.status }}
