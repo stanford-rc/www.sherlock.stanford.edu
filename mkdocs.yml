@@ -35,12 +35,15 @@ theme:
   language: en
 
   features:
-    - navigation.instant
+    #- navigation.instant
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.indexes
-      #- toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
 
   font:
     text: Roboto
@@ -82,6 +85,38 @@ extra:
   analytics:
     provider: google
     property: !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\-\.]+'
+  - minify:
+      minify_html: true
+      minify_js: true
+  - macros:
+      include_yaml:
+        - includes/data/software.yml
+        - includes/data/facts.yml
+  - redirects:
+      redirect_maps:
+        ondemand.md:                     https://login.sherlock.stanford.edu/
+        shell.md:                        https://login.sherlock.stanford.edu/pun/sys/shell/ssh
+        docs/index.md:                   docs/overview/introduction.md
+        docs/overview/index.md:          docs/overview/introduction.md
+        docs/overview/orders/process.md: docs/overview/orders.md
+        catalog.md:                      https://docs.google.com/spreadsheets/d/11CqpWe0XLoEbJEDAac6ag5nbrctkkZSJgRtG4hKh34w
+        docs/overview/orders/catalog.md: https://docs.google.com/spreadsheets/d/11CqpWe0XLoEbJEDAac6ag5nbrctkkZSJgRtG4hKh34w
+        order.md:                        https://docs.google.com/forms/d/e/1FAIpQLSd95TJaPbStWEZAUYHXNQedp9lQJMsTjyISjKmRMSpmL0rVqg/viewform
+        order_form.md:                   https://docs.google.com/forms/d/e/1FAIpQLSd95TJaPbStWEZAUYHXNQedp9lQJMsTjyISjKmRMSpmL0rVqg/viewform
+        docs/overview/orders/form.md:    https://docs.google.com/forms/d/e/1FAIpQLSd95TJaPbStWEZAUYHXNQedp9lQJMsTjyISjKmRMSpmL0rVqg/viewform
+        docs/overview/tech/index.md:     docs/overview/tech/specs.md
+        docs/getting-started/index.md:   docs/getting-started/prerequisites.md
+        docs/user-guide/index.md:        docs/user-guide/running-jobs.md
+        docs/storage/index.md:           docs/storage/overview.md
+        docs/software/index.md:          docs/software/overview.md
+        docs/software/containers.md:     docs/software/using/singularity.md
+        docs/advanced-topics/index.md:   docs/advanced-topics/connection.md
 
 
 # Extensions
@@ -130,37 +165,6 @@ markdown_extensions:
   - pymdownx.escapeall:
       hardbreak: true
       nbsp:      true
-
-# Plugins
-plugins:
-  - search:
-      separator: '[\s\-\.]+'
-  - minify:
-      minify_html: true
-      minify_js: true
-  - macros:
-      include_yaml:
-        - includes/data/software.yml
-        - includes/data/facts.yml
-  - redirects:
-      redirect_maps:
-        ondemand.md:                     https://login.sherlock.stanford.edu/
-        shell.md:                        https://login.sherlock.stanford.edu/pun/sys/shell/ssh
-        docs/index.md:                   docs/overview/introduction.md
-        docs/overview/index.md:          docs/overview/introduction.md
-        docs/overview/orders/process.md: docs/overview/orders.md
-        catalog.md:                      https://docs.google.com/spreadsheets/d/11CqpWe0XLoEbJEDAac6ag5nbrctkkZSJgRtG4hKh34w
-        docs/overview/orders/catalog.md: https://docs.google.com/spreadsheets/d/11CqpWe0XLoEbJEDAac6ag5nbrctkkZSJgRtG4hKh34w
-        order.md:                        https://docs.google.com/forms/d/e/1FAIpQLSd95TJaPbStWEZAUYHXNQedp9lQJMsTjyISjKmRMSpmL0rVqg/viewform
-        order_form.md:                   https://docs.google.com/forms/d/e/1FAIpQLSd95TJaPbStWEZAUYHXNQedp9lQJMsTjyISjKmRMSpmL0rVqg/viewform
-        docs/overview/orders/form.md:    https://docs.google.com/forms/d/e/1FAIpQLSd95TJaPbStWEZAUYHXNQedp9lQJMsTjyISjKmRMSpmL0rVqg/viewform
-        docs/overview/tech/index.md:     docs/overview/tech/specs.md
-        docs/getting-started/index.md:   docs/getting-started/prerequisites.md
-        docs/user-guide/index.md:        docs/user-guide/running-jobs.md
-        docs/storage/index.md:           docs/storage/overview.md
-        docs/software/index.md:          docs/software/overview.md
-        docs/software/containers.md:     docs/software/using/singularity.md
-        docs/advanced-topics/index.md:   docs/advanced-topics/connection.md
 
 
 #
