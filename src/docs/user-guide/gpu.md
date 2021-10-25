@@ -303,7 +303,7 @@ user's GPU code is running.
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_gpu]:          //blogs.nvidia.com/blog/2009/12/16/whats-the-difference-between-a-cpu-and-a-gpu/
-[url_condo]:        /docs/overview/concepts/#the-condominium-model
+[url_condo]:        /docs/concepts/#the-condominium-model
 [url_modules]:      /docs/software/modules
 [url_slurm_sbatch]: //slurm.schedmd.com/sbatch.html#OPT_constraint
 [url_slurm_srun]:   //slurm.schedmd.com/srun.html#OPT_gpus

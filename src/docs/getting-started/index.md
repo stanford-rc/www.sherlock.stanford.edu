@@ -1,3 +1,7 @@
+# Getting started
+
+## Prerequisites
+
 To start using Sherlock, you will need:
 
 * an active [SUNet ID][url_sunet],
@@ -152,8 +156,8 @@ For an introduction to shell scripting, you can refer to:
 [url_ssh]:          #ssh-clients
 [url_unix]:         #unixlinux-resources
 [url_bash]:         #shell-scripting
-[url_concepts]:     /docs/overview/concepts
-[url_glossary]:     /docs/overview/glossary
+[url_concepts]:     /docs/concepts
+[url_glossary]:     /docs/glossary
 
 [url_scripting]:    http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
 [url_tuto_1]:       http://www.ee.surrey.ac.uk/Teaching/Unix/

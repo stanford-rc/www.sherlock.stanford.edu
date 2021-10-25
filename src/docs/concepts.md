@@ -286,7 +286,7 @@ lost when the maintenance starts.
 [url_admin]:      //adminguide.stanford.edu
 [url_farmshare]:  //uit.stanford.edu/service/sharedcomputing
 [url_fairshare]:  //slurm.schedmd.com/fair_tree.html
-[url_orders]:     /docs/overview/orders
+[url_orders]:     /docs/orders
 [url_recurring]:  /docs/user-guide/running-jobs/#recurring-jobs
 [url_persistent]: /docs/user-guide/running-jobs/#persistent-jobs
 [url_lscratch]:   /docs/storage/filesystems/#l_scratch

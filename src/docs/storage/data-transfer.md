@@ -377,7 +377,7 @@ documentation][url_rclone].
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_ssh_clients]:  /docs/getting-started/prerequisites/#ssh-clients
+[url_ssh_clients]:  /docs/getting-started/#ssh-clients
 [url_auth_fail]:    /docs/getting-started/connecting/#authentication-failures
 
 [url_winscp]:       //winscp.net/eng/docs/introduction

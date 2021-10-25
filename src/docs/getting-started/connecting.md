@@ -241,15 +241,15 @@ section][url_submit].
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_prereq]:       /docs/getting-started/prerequisites
-[url_account]:      /docs/getting-started/prerequisites#how-to-request-an-account
+[url_prereq]:       /docs/getting-started/#prerequisites
+[url_account]:      /docs/getting-started/#how-to-request-an-account
 [url_avoid_duo]:    /docs/advanced-topics/connection#avoiding-multiple-duo-prompts
 [url_other_auth]:   /docs/advanced-topics/connection#authentication-methods
 [url_suaccounts]:   //accounts.stanford.edu/
 [url_sunet]:        //uit.stanford.edu/service/accounts/sunetids
 [url_minsec]:       //uit.stanford.edu/guide/securitystandards
 [url_twostep]:      //uit.stanford.edu/service/webauth/twostep
-[url_login]:        /docs/overview/tech/glossary/#login-nodes
+[url_login]:        /docs/glossary/#login-nodes
 [url_submit]:       /docs/getting-started/submitting
 [url_contact]:      mailto:{{ support_email }}
 [url_sshfs]:        /docs/storage/data-transfer#sshfs

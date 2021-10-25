@@ -203,7 +203,7 @@ notifications are not available.
 [url_tmux]:         https://github.com/tmux/tmux/wiki
 [url_connecting]:   /docs/getting-started/connecting/#authentication
 [url_kerberos]:     https://uit.stanford.edu/service/kerberos
-[url_prereq]:       /docs/getting-started/prerequisites/#windows
+[url_prereq]:       /docs/getting-started/#windows
 [url_vpn]:          https://uit.stanford.edu/service/vpn
 [url_alt2fa]:       https://uit.stanford.edu/service/webauth/twostep
 

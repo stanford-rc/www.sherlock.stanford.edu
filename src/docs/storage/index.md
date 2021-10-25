@@ -1,4 +1,4 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+# Storage <small>on Sherlock</small>
 
 Sherlock provides access to several file systems, each with distinct storage
 characteristics. Each user and PI group get access to a set of pre-defined
@@ -58,13 +58,13 @@ same PI group. User locations are only accessible by the user.
     inode.
 
 | Name           | Quota type | Volume quota | Inode quota | Retention |
-| -------------- | ---------- | -----------: | ----------: | --------- |
-|`$HOME`         | directory  |        15 GB | n/a         | $\infty$  |
-|`$GROUP_HOME`   | directory  |         1 TB | n/a         | $\infty$  |
+| -------------- | ---------- | ------------ | ----------- | --------- |
+|`$HOME`         | directory  |        15 GB | n/a         | :octicons-infinity-16:  |
+|`$GROUP_HOME`   | directory  |         1 TB | n/a         | :octicons-infinity-16:  |
 |`$SCRATCH`      | directory  |       100 TB | 50 million  | [time limited][url_purge] |
 |`$GROUP_SCRATCH`| directory  |       100 TB | 50 million  | [time limited][url_purge] |
 |`$L_SCRATCH`    | n/a        |          n/a | n/a         | job lifetime  |
-|`$OAK`          | group      | amount purchased | function of the volume purchased | $\infty$ |
+|`$OAK`          | group      | amount purchased | function of the volume purchased | :octicons-infinity-16: |
 
 
 Quota types:
@@ -78,7 +78,7 @@ Quota types:
 
 Retention types:
 
-* **$\infty$**: files are kept as long as the user account exists on Sherlock.
+* **:octicons-infinity-16:**: files are kept as long as the user account exists on Sherlock.
 * **time limited**: files are kept for a fixed length of time after they've
   been last modified. Once the limit is reached, files expire and are
   automatically deleted.
@@ -91,7 +91,7 @@ Retention types:
 To check your quota usage on the different filesystems you have access to, you
 can use the `sh_quota` command:
 
-``` shell
+```
 $ sh_quota
 +---------------------------------------------------------------------------+
 | Disk usage for user kilian (group: ruthm)                                 |
@@ -110,7 +110,7 @@ Several options are provided to allow listing quotas for a specific filesystem
 only, or in the context of a different group (for users who are members of
 several PI groups). Please see the `sh_quota` usage information for details:
 
-``` shell
+```
 $ sh_quota -h
 sh_quota: display user and group quota information for all accessible filesystems.
 
@@ -128,21 +128,21 @@ Usage: sh_quota [OPTIONS]
 
 For instance, to only display your quota usage on `$HOME`:
 
-``` shell
+```
 $ sh_quota -f HOME
 ```
 
 If you belong to multiple groups, you can display the group quotas for your
 secondary groups with:
 
-``` shell
+```
 $ sh_quota -g <group_name>
 ```
 
 And finally, for great output control, an option to display quota usage in JSON
 is provided via the `-j` option:
 
-``` shell
+```
 $ sh_quota -f SCRATCH -j
 {
   "SCRATCH": {
@@ -199,14 +199,14 @@ work even if the underlying filesystem paths change.
 To see the contents of these variables, you can use the `echo` command. For
 instance, to see the absolute path of your $SCRATCH directory:
 
-``` shell
+```
 $ echo $SCRATCH
 /scratch/users/kilian
 ```
 
 Or for instance, to move to your group-shared home directory:
 
-``` shell
+```
 $ cd $GROUP_HOME
 ```
 
