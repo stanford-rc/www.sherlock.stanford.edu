@@ -58,6 +58,6 @@ dashboard][url_status].
 
 [url_minsec]:  https://uit.stanford.edu/guide/securitystandards
 [url_status]:  https://status.sherlock.stanford.edu
-[url_maintenances-and-upgrades]: /docs/overview/concepts/#maintenances-and-upgrades
+[url_maintenances-and-upgrades]: /docs/concepts/#maintenances-and-upgrades
 
 --8<--- "includes/_acronyms.md"

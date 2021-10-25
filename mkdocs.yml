@@ -100,23 +100,26 @@ plugins:
         - includes/data/facts.yml
   - redirects:
       redirect_maps:
+        # external URLs
         ondemand.md:                     https://login.sherlock.stanford.edu/
         shell.md:                        https://login.sherlock.stanford.edu/pun/sys/shell/ssh
-        docs/index.md:                   docs/overview/introduction.md
-        docs/overview/index.md:          docs/overview/introduction.md
-        docs/overview/orders/process.md: docs/overview/orders.md
         catalog.md:                      https://docs.google.com/spreadsheets/d/11CqpWe0XLoEbJEDAac6ag5nbrctkkZSJgRtG4hKh34w
-        docs/overview/orders/catalog.md: https://docs.google.com/spreadsheets/d/11CqpWe0XLoEbJEDAac6ag5nbrctkkZSJgRtG4hKh34w
         order.md:                        https://docs.google.com/forms/d/e/1FAIpQLSd95TJaPbStWEZAUYHXNQedp9lQJMsTjyISjKmRMSpmL0rVqg/viewform
-        order_form.md:                   https://docs.google.com/forms/d/e/1FAIpQLSd95TJaPbStWEZAUYHXNQedp9lQJMsTjyISjKmRMSpmL0rVqg/viewform
-        docs/overview/orders/form.md:    https://docs.google.com/forms/d/e/1FAIpQLSd95TJaPbStWEZAUYHXNQedp9lQJMsTjyISjKmRMSpmL0rVqg/viewform
-        docs/overview/tech/index.md:     docs/overview/tech/specs.md
-        docs/getting-started/index.md:   docs/getting-started/prerequisites.md
-        docs/user-guide/index.md:        docs/user-guide/running-jobs.md
-        docs/storage/index.md:           docs/storage/overview.md
-        docs/software/index.md:          docs/software/overview.md
+        # nav refactor, legacy URLs
+        docs/overview/index.md:          docs/index.md
+        docs/overview/introduction.md:   docs/index.md
+        docs/overview/concepts.md:       docs/concepts.md
+        docs/overview/orders.md:         docs/orders.md
+        docs/overview/orders/process.md: docs/orders.md
+        docs/overview/tech/index.md:     docs/tech/index.md
+        docs/overview/tech/facts.md:     docs/tech/facts.md
+        docs/overview/tech/status.md:    docs/tech/status.md
+        docs/overview/tech/glossary.md:  docs/glossary.md
+        docs/overview/about.md:          docs/credits.md
+        docs/getting-started/prerequisites.md: docs/getting-started/index.md
+        docs/storage/overview.md:        docs/storage/index.md
+        docs/software/overview.md:       docs/software/index.md
         docs/software/containers.md:     docs/software/using/singularity.md
-        docs/advanced-topics/index.md:   docs/advanced-topics/connection.md
 
 
 # Extensions
@@ -172,41 +175,39 @@ markdown_extensions:
 #
 
 nav:
-  - Overview:
-      - Introduction:        docs/overview/introduction.md
-      - Concepts:            docs/overview/concepts.md
-      - Ordering nodes:
-          - Process:         docs/overview/orders.md
-          - Catalog:         /catalog/
-          - Order form:      /order_form/
-      - Technical:
-          - Facts:           docs/overview/tech/facts.md
-          - Specs:           docs/overview/tech/specs.md
-          - Status:          docs/overview/tech/status.md
-          - Glossary:        docs/overview/tech/glossary.md
-      - About:               docs/overview/about.md
+  - Home:
+      - docs/index.md
+      - Concepts:            docs/concepts.md
+      - Glossary:            docs/glossary.md
+      - Ordering nodes:      docs/orders.md
+      - Tech specs:
+          - docs/tech/index.md
+          - Facts:           docs/tech/facts.md
+          - Status:          docs/tech/status.md
+      - Credits:             docs/credits.md
   - Getting Started:
-      - Prerequisites:       docs/getting-started/prerequisites.md
+      - docs/getting-started/index.md
       - Connecting:          docs/getting-started/connecting.md
       - Submitting jobs:     docs/getting-started/submitting.md
   - User guide:
       - Running jobs:        docs/user-guide/running-jobs.md
+      - OnDemand:            docs/user-guide/ondemand.md
       - Specialized resources:
           - GPU nodes:       docs/user-guide/gpu.md
-      - OnDemand:            docs/user-guide/ondemand.md
       - Troubleshooting:     docs/user-guide/troubleshoot.md
   - Storage:
-      - Overview:            docs/storage/overview.md
+      - docs/storage/index.md
       - Filesystems:         docs/storage/filesystems.md
       - Data sharing:        docs/storage/data-sharing.md
       - Data protection:     docs/storage/data-protection.md
       - Data transfer:       docs/storage/data-transfer.md
   - Software:
-      - Overview:            docs/software/overview.md
-      - List:                docs/software/list.md
+      - docs/software/index.md
       - Modules:             docs/software/modules.md
+      - List:                docs/software/list.md
       - Installation:        docs/software/install.md
-      - Containers:          docs/software/using/singularity.md
+      - Containers:
+        - Singularity:       docs/software/using/singularity.md
       - Usage:
           - R:               docs/software/using/R.md
           - Julia:           docs/software/using/julia.md
@@ -214,7 +215,6 @@ nav:
           - Perl:            docs/software/using/perl.md
           - Matlab:          docs/software/using/matlab.md
           - Rclone:          docs/software/using/rclone.md
-          - Singularity:     docs/software/using/singularity.md
           - Spark:           docs/software/using/spark.md
           - MariaDB:         docs/software/using/mariadb.md
           - PostgreSQL:      docs/software/using/postgresql.md

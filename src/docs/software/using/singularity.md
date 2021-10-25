@@ -1,3 +1,5 @@
+# Singularity
+
 [Singularity][url_singularity] is a tool for running
 [containers][url_containers] on HPC systems, similar to [Docker][url_docker].
 

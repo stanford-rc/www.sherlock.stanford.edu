@@ -1,3 +1,5 @@
+# Storage <small>on Sherlock</small>
+
 Sherlock provides access to several file systems, each with distinct storage
 characteristics. Each user and PI group get access to a set of pre-defined
 directories in these file systems to store their data.
