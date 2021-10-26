@@ -1,3 +1,5 @@
+# Software <small>on Sherlock</small>
+
 ## Available software
 
 A set of supported software installations is provided for use on Sherlock. This

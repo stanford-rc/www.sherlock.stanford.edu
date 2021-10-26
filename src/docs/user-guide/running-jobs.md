@@ -485,7 +485,7 @@ restarts for 5 minutes, and so on, until it's properly `scancel`led.
 
 [url_mariadb]:  /docs/software/using/mariadb
 [url_pgsql]:    /docs/software/using/postgresql
-[url_partition]:/docs/overview/glossary/#partition
+[url_partition]:/docs/glossary/#partition
 
 [url_sh_part]:  //news.sherlock.stanford.edu/posts/a-better-view-at-sherlock-s-resources
 

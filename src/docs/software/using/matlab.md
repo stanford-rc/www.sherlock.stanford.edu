@@ -257,12 +257,12 @@ it scales.
 [url_submit]:           /docs/getting-started/submitting/#batch-scripts
 [url_node]:             /docs/user-guide/running-jobs/#compute-nodes
 [url_interactive]:      /docs/user-guide/running-jobs/#interactive-jobs
-[url_ssh_client]:       /docs/getting-started/prerequisites/#ssh-clients
+[url_ssh_client]:       /docs/getting-started/#ssh-clients
 [url_modules]:          /docs/software/modules
 [url_software_list]:    /docs/software/list
-[url_text_editor]:      /docs/getting-started/prerequisites/#text-editors
-[url_partition]:        /docs/overview/glossary/#partition
-[url_cpu]:              /docs/overview/glossary/#cpu
+[url_text_editor]:      /docs/getting-started/#text-editors
+[url_partition]:        /docs/glossary/#partition
+[url_cpu]:              /docs/glossary/#cpu
 [url_squeue]:           /docs/getting-started/submitting/#check-the-job
 [url_parfor]:           https://www.mathworks.com/help/parallel-computing/parfor.html
 [url_SLURM_ENV]:        https://slurm.schedmd.com/sbatch.html#lbAJ

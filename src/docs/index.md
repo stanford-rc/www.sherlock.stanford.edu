@@ -266,9 +266,9 @@ Here's what it looks like in motion:
 [url_news]:         //news.sherlock.stanford.edu
 [url_status]:       //status.sherlock.stanford.edu
 
-[url_invest]:       /docs/overview/concepts#investing-in-sherlock
-[url_concepts]:     /docs/overview/concepts
-[url_glossary]:     /docs/overview/tech/glossary
+[url_invest]:       /docs/concepts#investing-in-sherlock
+[url_concepts]:     /docs/concepts
+[url_glossary]:     /docs/glossary
 [url_prereq]:       /docs/getting-started/
 [url_connect]:      /docs/getting-started/connecting
 [url_submit]:       /docs/getting-started/submitting

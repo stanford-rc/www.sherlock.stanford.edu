@@ -122,8 +122,8 @@ can find the same files and directories from all of the Sherlock nodes.
 [url_login]:   /docs/user-guide/running-jobs/#login-nodes
 [url_dtn]:     /docs/storage/data-transfer#data-transfer-node-dtn
 [url_oak]:     //uit.stanford.edu/service/oak-storage
-[url_clugens]: /docs/overview/concepts/#cluster-generations
-[url_owners]:  /docs/overview/concepts/#investing-in-sherlock
+[url_clugens]: /docs/concepts/#cluster-generations
+[url_owners]:  /docs/concepts/#investing-in-sherlock
 
 
 

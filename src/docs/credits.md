@@ -1,18 +1,8 @@
 # About us
 
-<style>
-img[alt="logo"] {
-    width: 400px;
-}
-</style>
-
-<!-- camouflage the header so it appears only in the TOC-->
-<b style="display:none">
 ## SRCC
-</b>
-<!-- end of camouflage -->
 
-[![logo](img/srcc.png)][url_srcc]
+![logo](img/srcc.png){ align=right width=400 loading=lazy }
 
 The Stanford Research Computing Center ([SRCC][url_srcc]) is a joint effort of
 the [Dean of Research][url_dor] and [IT Services][url_uit] to build and support
@@ -54,17 +44,15 @@ img[alt="screencap"] {
 }
 </style>
 
-|       |       |       |       |       |       |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| ![favicon](//zenhub.com/favicon.ico) [ZenHub](//zenhub.com) | ![favicon](//github.com/favicon.ico) [GitHub](//github.com) | ![favicon](//travis-ci.com/images/favicon.png) [Travis CI](//travis-ci.com) | ![favicon](//hund.io/favicon.ico) [Hund](//hund.io) | ![favicon](//images.noticeable.cloud/favicon.ico) [Noticeable](//noticeable.io) | ![favicon](//updown.io/favicon.ico) [updown.io](//updown.io/) |
+* ![favicon](//github.com/favicon.ico) [GitHub](//github.com)
+* ![favicon](//hund.io/favicon.ico) [Hund](//hund.io)
+* ![favicon](//images.noticeable.cloud/favicon.ico) [Noticeable](//noticeable.io)
 
 
 The Sherlock website and documentation also rely on the following projects:
 
-
-|       |       |
-| :---: | :---: |
-| ![favicon](//www.mkdocs.org/img/favicon.ico) [MkDocs](//mkdocs.org/) | ![favicon](//squidfunk.github.io/mkdocs-material/assets/favicon.png) [Material for MkDocs](//squidfunk.github.io/mkdocs-material/) |
+* ![favicon](//www.mkdocs.org/img/favicon.ico) [MkDocs](//mkdocs.org/)
+* ![favicon](//squidfunk.github.io/mkdocs-material/assets/favicon.png) [Material for MkDocs](//squidfunk.github.io/mkdocs-material/)
 
 
 ## Why the Sherlock name?
@@ -99,8 +87,13 @@ Valley][url_sv] [Season 4 finale][url_ep38]!
 ![screencap](img/bighead.png)
 
 Yep, you got that right, [Richard Hendricks][url_richard] wanted to use our
-very own Sherlock. Kudos to the show's crew and whomever did the research and
-got it right, you made our day.
+very own Sherlock!
+
+Kudos to the show's crew and a big thank you to [HBO Data compression
+stars][url_ieee], Professor [Tsachy Weissman][url_tsachy] and Dmitri Pavlichin,
+for this incredible Sherlock shout-out. This has been an everlasting source of
+pride and amazement for the whole SRCC team! :heart:{ .pulsate }
+
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
@@ -108,6 +101,7 @@ got it right, you made our day.
 [url_sv]:       //www.hbo.com/silicon-valley
 [url_richard]:  //www.hbo.com/silicon-valley/cast-and-crew/thomas-middleditch
 [url_quote]:    //www.theguardian.com/tv-and-radio/2010/jul/17/benedict-cumberbatch-sherlock-holmes
-
+[url_tsachy]:   //web.stanford.edu/~tsachy/
+[url_ieee]:     //ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8449030
 
 --8<--- "includes/_acronyms.md"

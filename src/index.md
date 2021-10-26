@@ -179,8 +179,8 @@ your request, and we'll get back to you.
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_srcc]:     //srcc.stanford.edu
-[url_purchase]: /docs/overview/orders/
+[url_purchase]: /docs/orders/
 [url_catalog]:  /catalog
 [url_order]:    /order
-[url_specs]:    /docs/overview/tech/specs
-[url_facts]:    /docs/overview/tech/facts
+[url_specs]:    /docs/tech/
+[url_facts]:    /docs/tech/facts
