@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% set extracopyright %}
-	{% if config.extra.made_in %}
+    {% if config.extra.made_in %}
         Made with
         <span class="twemoji pulsate">
             {% include ".icons/material/heart.svg" %}
@@ -18,5 +18,12 @@
         <span class="md-footer-copyright__highlight">
             {{ config.extra.made_in }}
         </span>
-	{% endif %}
+    {% endif %}
+    {% if config.extra.consent %}
+        {% if config.extra.made_in %}
+        <span style="padding:0 0.8em;"> | </span>
+        {% endif %}
+        <a class="consent" href="#__consent">Change cookie settings</a>
+    {% endif %}
+
 {% endset %}
