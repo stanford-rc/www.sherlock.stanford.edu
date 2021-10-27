@@ -1,3 +1,8 @@
+---
+tags:
+    - tech
+---
+
 # Technical specifications
 <!-- markdownlint-disable MD013 MD037 -->
 

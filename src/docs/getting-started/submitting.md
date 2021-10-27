@@ -1,3 +1,8 @@
+---
+tags:
+    - slurm
+---
+
 ## Principle
 
 !!! danger "Login nodes are not for computing"
