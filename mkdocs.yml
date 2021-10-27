@@ -21,6 +21,7 @@ docs_dir: src
 site_dir: site
 
 theme:
+
   name: material
   custom_dir: overrides
 
@@ -65,6 +66,7 @@ extra_css:
   - /assets/css/sh.css
 
 extra:
+
   analytics:
     provider: google
     property: !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
@@ -77,6 +79,7 @@ extra:
       make our documentation better.
 
   generator: false
+
   social:
     - icon: fontawesome/solid/globe-americas
       link: https://srcc.stanford.edu
@@ -90,6 +93,7 @@ extra:
     - icon: fontawesome/brands/slack
       link: https://srcc.slack.com/
       name: SRCC Users Slack workspace
+
   # custom
   made_in: >-
     <a href='https://www.google.com/maps/place/Stanford,+CA'>Stanford, California</a>
@@ -99,15 +103,18 @@ extra:
 
 # Plugins
 plugins:
+
   - search:
       separator: '[\s\-\.]+'
   - minify:
       minify_html: true
       minify_js: true
+
   - macros:
       include_yaml:
         - includes/data/software.yml
         - includes/data/facts.yml
+
   - redirects:
       redirect_maps:
         # external URLs

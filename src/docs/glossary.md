@@ -248,6 +248,8 @@ multi-process program is made of several tasks. A task is typically used to
 schedule a MPI process, that in turn can use several CPUs.  By contrast, a
 multi-threaded program is composed of only one task, which uses several CPUs.
 
+
+
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_ib]:       //www.infinibandta.org/about-infiniband/
