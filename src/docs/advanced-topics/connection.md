@@ -1,3 +1,8 @@
+---
+tags:
+    - connection
+---
+
 # Advanced connection options
 
 ## Login nodes

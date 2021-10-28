@@ -1,3 +1,8 @@
+---
+tags:
+    - connection
+---
+
 ## Transfer protocols
 
 A number of methods allow transferring data in/out of Sherlock. For most cases,

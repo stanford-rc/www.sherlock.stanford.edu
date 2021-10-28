@@ -1,3 +1,8 @@
+---
+tags:
+    - connection
+---
+
 # Connecting <small>to Sherlock </small>
 
 !!! warning "Sherlock account required"

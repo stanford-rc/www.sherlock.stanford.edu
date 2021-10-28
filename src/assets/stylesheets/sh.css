@@ -11,23 +11,28 @@
 }
 
 /* announce bar */
-.md-announce a,
-.md-announce a:focus,
-.md-announce a:hover { color: currentColor; }
-.md-announce .icon   {
+.md-banner a,
+.md-banner a:focus,
+.md-banner a:hover { color: currentColor; }
+.md-banner .icon   {
     margin-left:  0.2em;
-    color:      #b1040e;
+    color:        #b1040e;
 }
 
 /* title style */
 .md-header__title {
   font-family: "Bangers", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 1.2rem;
+  font-size:   1.2rem;
 }
 .md-header__title .md-ellipsis:after {
     /* prevent text clipping */
     content: '';
     padding: 1px;
+}
+
+/* cookie consent link */
+.md-footer-meta.md-typeset .consent {
+    color: var(--md-footer-fg-color--lighter);
 }
 
 /* don't cut words in code */
@@ -41,14 +46,13 @@
 .md-typeset .sherlock > .admonition-title,
 .md-typeset .sherlock > summary {
   background-color: #82000010;
+  border-color: #8c1515;
 }
 .md-typeset .sherlock > .admonition-title::before,
 .md-typeset .sherlock > summary::before {
-  -webkit-mask-image: unset;
-          mask-image: unset;
-  background-color: transparent;
-  background-image: url('/assets/img/logo_small.png');
-  background-size:  100%;
+  background-color: #8c1515;
+  -webkit-mask-image: var(--md-admonition-icon--sherlock);
+          mask-image: var(--md-admonition-icon--sherlock);
 }
 
 /* additional styles */

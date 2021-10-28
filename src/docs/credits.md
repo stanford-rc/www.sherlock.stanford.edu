@@ -2,7 +2,7 @@
 
 ## SRCC
 
-![logo](img/srcc.png){ align=right width=400 loading=lazy }
+![logo](images/srcc.png){ align=right width=400 loading=lazy }
 
 The Stanford Research Computing Center ([SRCC][url_srcc]) is a joint effort of
 the [Dean of Research][url_dor] and [IT Services][url_uit] to build and support
@@ -51,7 +51,7 @@ img[alt="screencap"] {
 
 The Sherlock website and documentation also rely on the following projects:
 
-* ![favicon](//www.mkdocs.org/img/favicon.ico) [MkDocs](//mkdocs.org/)
+* ![favicon](//www.mkdocs.org/images/favicon.ico) [MkDocs](//mkdocs.org/)
 * ![favicon](//squidfunk.github.io/mkdocs-material/assets/favicon.png) [Material for MkDocs](//squidfunk.github.io/mkdocs-material/)
 
 
@@ -83,8 +83,8 @@ And finally, we couldn't resist to the pleasure of citing the most
 prestigious accomplishment of Sherlock to date: a mention in [HBO's Silicon
 Valley][url_sv] [Season 4 finale][url_ep38]!
 
-![screencap](img/richard.png)
-![screencap](img/bighead.png)
+![screencap](images/richard.png)
+![screencap](images/bighead.png)
 
 Yep, you got that right, [Richard Hendricks][url_richard] wanted to use our
 very own Sherlock!

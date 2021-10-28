@@ -1,3 +1,8 @@
+---
+tags:
+    - slurm
+---
+
 ## Job submission limits
 
 You may have encountered situations where your jobs get rejected at submission

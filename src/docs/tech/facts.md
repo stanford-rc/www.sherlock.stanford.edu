@@ -1,3 +1,8 @@
+---
+tags:
+    - tech
+---
+
 # Sherlock facts
 <!-- markdownlint-disable MD013 MD037 -->
 

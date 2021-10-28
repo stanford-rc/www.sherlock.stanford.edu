@@ -21,6 +21,7 @@ docs_dir: src
 site_dir: site
 
 theme:
+
   name: material
   custom_dir: overrides
 
@@ -35,15 +36,16 @@ theme:
   language: en
 
   features:
-    #- navigation.instant
+    - content.code.annotate
+    - navigation.indexes
+    - navigation.sections
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.sections
-    - navigation.indexes
     - navigation.top
-    - search.suggest
+    - navigation.tracking
     - search.highlight
     - search.share
+    - search.suggest
 
   font:
     text: Roboto
@@ -52,22 +54,56 @@ theme:
   palette:
     - scheme: sherlock
 
-  favicon: /assets/img/logo_small.png
-  logo:    /assets/img/logo_small.png
-  logo_hero: /assets/img/logo.png
+  favicon:    assets/images/logo_small.png
+  logo:       assets/images/logo_small.png
+  logo_hero:  assets/images/logo.png
+
   icon:
+    logo: srcc/mono/sherlock
     repo: fontawesome/brands/github
+    admonition:
+      note:     octicons/note-16
+      abstract: octicons/checklist-16
+      info:     octicons/info-16
+      tip:      octicons/light-bulb-16
+      success:  octicons/check-16
+      question: octicons/question-16
+      warning:  octicons/alert-16
+      failure:  octicons/x-circle-16
+      danger:   octicons/zap-16
+      bug:      octicons/bug-16
+      example:  octicons/beaker-16
+      quote:    octicons/quote-16
+      # custom
+      sherlock: srcc/mono/sherlock
 
 # Customization
 extra_css:
-  - /assets/css/sh.css
+  - /assets/stylesheets/sh.css
 
 extra:
+
+  analytics:
+    provider: google
+    property: !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+#    feedback:
+#      - icon: material/emoticon-happy-outline
+#        name: This page was helpful
+#        data: 1
+#      - icon: material/emoticon-sad-outline
+#        name: This page could be improved
+#        data: 0
+
+  consent:
+    title: Cookie consent
+    description: >
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
   generator: false
-  made_in: >-
-    <a href='https://www.google.com/maps/place/Stanford,+CA'>Stanford, California</a>
-  support_email: srcc-support@stanford.edu
-  purge_days: 90
+
   social:
     - icon: fontawesome/solid/globe-americas
       link: https://srcc.stanford.edu
@@ -81,22 +117,34 @@ extra:
     - icon: fontawesome/brands/slack
       link: https://srcc.slack.com/
       name: SRCC Users Slack workspace
-  analytics:
-    provider: google
-    property: !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+
+  # custom
+  made_in: >-
+    <a href='https://www.google.com/maps/place/Stanford,+CA'>Stanford, California</a>
+  support_email: srcc-support@stanford.edu
+  purge_days: 90
 
 
 # Plugins
 plugins:
+
   - search:
-      separator: '[\s\-\.]+'
+      separator: "[\\s\\-,:!=\\[\\]()\"/]+|\\.(?!\\d)|&[lg]t;|(?!\\b)(?=[A-Z][a-z])"
+
+  - social:
+      cards_color: # https://github.com/squidfunk/mkdocs-material/issues/3159
+        fill: "#8C1515"
+        text: "#FFFFFF"
+
   - minify:
       minify_html: true
       minify_js: true
+
   - macros:
       include_yaml:
         - includes/data/software.yml
         - includes/data/facts.yml
+
   - redirects:
       redirect_maps:
         # external URLs
@@ -121,6 +169,8 @@ plugins:
         docs/software/overview.md:       docs/software/index.md
         docs/software/containers.md:     docs/software/using/singularity.md
 
+  - tags:
+      tags_file: docs/tags.md
 
 # Extensions
 markdown_extensions:
@@ -220,5 +270,5 @@ nav:
           - MariaDB:         docs/software/using/mariadb.md
           - PostgreSQL:      docs/software/using/postgresql.md
   - Advanced topics:
-      - Connection:          docs/advanced-topics/connection.md
+      - Connection options:  docs/advanced-topics/connection.md
       - Job management:      docs/advanced-topics/job-management.md

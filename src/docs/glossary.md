@@ -9,7 +9,7 @@ What makes it a "super-computer" is the ability for a program to address
 resources (such as memory, CPU cores) located in different compute nodes,
 through the high-performance interconnect network.
 
-![overview](img/cluster_overview.png)
+![overview](images/cluster_overview.png)
 
 On a computing cluster, users typically connect to [login nodes][g_login],
 using a secure remote login protocol such as [SSH][g_ssh]. Unlike in
@@ -35,7 +35,7 @@ the user to review and analyze.
 The terms that are typically used to describe cluster components could be
 confusing, so in an effort to clarify things, here's a schema of the most
 important ones, and their definition.
-![components](img/cluster_components.png)
+![components](images/cluster_components.png)
 
 #### CPU
 
@@ -247,6 +247,8 @@ Threads are co-located on the same node.
 multi-process program is made of several tasks. A task is typically used to
 schedule a MPI process, that in turn can use several CPUs.  By contrast, a
 multi-threaded program is composed of only one task, which uses several CPUs.
+
+
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
