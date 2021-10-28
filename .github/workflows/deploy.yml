@@ -13,25 +13,32 @@ on:
 
 
 jobs:
-    deploy:
-      runs-on: ubuntu-latest
-      if: github.event.repository.fork == false
-      steps:
-        - uses: actions/checkout@v2
-        - uses: actions/setup-python@v2
-          with:
-            python-version: 3.x
-        - run: pip install git+https://${GITHUB_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
-        - run: pip install -r requirements.txt
-        - run: mkdocs gh-deploy --force
-          env:
-            GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-        - uses: iRoachie/slack-github-actions@v2.0.0
-          if: ${{ always() }}
-          with:
-            status: ${{ job.status }}
-          env:
-            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.event.repository.fork == false
+
+    env:
+      GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - uses: actions/cache@v2
+        with:
+          key: ${{ github.ref }}
+          path: .cache
+      - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: pip install -r requirements.txt
+      - run: mkdocs gh-deploy --force
+
+      - name: notification
+        uses: iRoachie/slack-github-actions@v2.3.0
+        if: ${{ always() }}
+        with:
+          status: ${{ job.status }}
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
