@@ -11,49 +11,27 @@ on:
       - 'overrides/**'
       - 'src/**'
 
-env:
-  PYTHON_VERSION: 3.x
 
 jobs:
-  docs:
-    name: Build and deploy documentation
-    runs-on: ubuntu-latest
-    steps:
+    deploy:
+      runs-on: ubuntu-latest
+      if: github.event.repository.fork == false
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-python@v2
+          with:
+            python-version: 3.x
+        - run: pip install git+https://${GITHUB_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+        - run: pip install -r requirements.txt
+        - run: mkdocs gh-deploy --force
+          env:
+            GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Checkout source
-        uses: actions/checkout@v2
-
-      - name: Setup Python runtime
-        uses: actions/setup-python@v1
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-
-      - name: Install Python dependencies
-        run: |
-          pip install -r requirements.txt
-
-      #- name: Install Insiders build
-      #  if: github.event.repository.fork == false
-      #  env:
-      #    GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      #  run: |
-      #    git clone --depth 1 https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
-      #    pip install -e mkdocs-material-insiders
-      #    cp mkdocs-material-insiders/mkdocs.yml mkdocs.yml
-      #    echo "THEME_DIR=mkdocs-material-insiders/material" >> $GITHUB_ENV
-
-      - name: Deploy site
-        env:
-          GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
-        run: |
-          mkdocs gh-deploy --force
-          mkdocs --version
-
-      - name: Send Slack notification
-        uses: iRoachie/slack-github-actions@v2.0.0
-        if: ${{ always() }}
-        with:
-          status: ${{ job.status }}
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        - uses: iRoachie/slack-github-actions@v2.0.0
+          if: ${{ always() }}
+          with:
+            status: ${{ job.status }}
+          env:
+            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
