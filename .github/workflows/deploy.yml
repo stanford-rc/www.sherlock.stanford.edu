@@ -13,9 +13,15 @@ on:
 
 
 jobs:
+
   deploy:
     runs-on: ubuntu-latest
     if: github.event.repository.fork == false
+
+    env:
+      GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
@@ -24,11 +30,9 @@ jobs:
       - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
       - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force
-        env:
-          GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-      - uses: iRoachie/slack-github-actions@v2.3.0
+      - name: notification
+        uses: iRoachie/slack-github-actions@v2.3.0
         if: ${{ always() }}
         with:
           status: ${{ job.status }}
