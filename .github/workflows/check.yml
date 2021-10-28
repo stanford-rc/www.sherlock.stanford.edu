@@ -16,16 +16,16 @@ jobs:
 
   build:  # --------------------------------------------------------------------
     runs-on: ubuntu-20.04
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
-      - run: |
-          pip install -r requirements.txt
-      - run: |
-          mkdocs --version
-          mkdocs build --strict --verbose
+          python-version: 3.x
+      - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: pip install -r requirements.txt
+      - run: mkdocs build --strict --verbose
 
 
   yamllint: # ----------------------------------------------------------------
