@@ -1,3 +1,5 @@
+<link rel="alternate" type="application/rss+xml" href="/docs/software/updates.xml">
+
 # Software list
 
 The full list of software centrally installed and managed on Sherlock is in the
