@@ -7,13 +7,14 @@ tables below.
 
     Software installations on Sherlock are an ever ongoing process. We're
     continuously adding new software to the list. If you're looking for
-    something that is not in the list, please take a look
-    [here][url_installations] for options.
+    something that is not in the list, there may be [other
+    options][url_installations].
 
 !!! tip "Subscribe to updates"
 
-    Keep up-to-date with new software installations by following the Sherlock
-    software update [:material-rss: RSS feed](/docs/software/updates.xml)
+    Stay up-to-date with new software installations and updates by following
+    the **[:fontawesome-solid-rss: Sherlock software update RSS
+    feed][url_updates]**.
 
 
 ## Categories
@@ -110,7 +111,9 @@ Field | {{ h_name }} | {{ h_vers }} | URL | Description
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_modules]:         /docs/software/modules/
-[url_installations]:   /docs/software#installation-requests
+[url_modules]:          /docs/software/modules/
+[url_installations]:    /docs/software#installation-requests
+[url_updates]:          /docs/software/updates.xml
+
 
 --8<--- "includes/_acronyms.md"
