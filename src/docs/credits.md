@@ -51,7 +51,7 @@ img[alt="screencap"] {
 
 The Sherlock website and documentation also rely on the following projects:
 
-* ![favicon](//www.mkdocs.org/images/favicon.ico) [MkDocs](//mkdocs.org/)
+* ![favicon](//www.mkdocs.org/img/favicon.ico) [MkDocs](//mkdocs.org/)
 * ![favicon](//squidfunk.github.io/mkdocs-material/assets/favicon.png) [Material for MkDocs](//squidfunk.github.io/mkdocs-material/)
 
 
@@ -89,6 +89,7 @@ Valley][url_sv] [Season 4 finale][url_ep38]!
 Yep, you got that right, [Richard Hendricks][url_richard] wanted to use our
 very own Sherlock!
 
+![compression_stars](images/compression_stars.png){ align=left style="height:100px; margin-top:0" }
 Kudos to the show's crew and a big thank you to [HBO Data compression
 stars][url_ieee], Professor [Tsachy Weissman][url_tsachy] and Dmitri Pavlichin,
 for this incredible Sherlock shout-out. This has been an everlasting source of
