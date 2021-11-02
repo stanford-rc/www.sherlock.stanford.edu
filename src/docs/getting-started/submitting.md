@@ -80,7 +80,7 @@ the `srun` command.
 For instance, the following script would request one task with one CPU for 10
 minutes, along with 2 GB of memory, in the default partition:
 
-``` shell
+``` shell title="submit.sh"
 #!/bin/bash
 #
 #SBATCH --job-name=test
