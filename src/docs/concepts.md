@@ -129,34 +129,38 @@ Those benefits come in addition to the other Sherlock advantages:
 !!! danger "Being an owner on Sherlock is different from traditional server hosting."
 
 In particular, purchasing your own compute nodes on Sherlock will **NOT**
-provide:
+allow:
 
-:fontawesome-solid-times:{: .chk_no :} **root access**: owner nodes on
+:fontawesome-solid-times:{ .chk_no } **root access**: owner nodes on
   Sherlock are still managed by SRCC in accordance with Stanford's [Minimum
 Security Standards](url_minsec). Although users are welcome to install (or
 request) any software they may need, purchasing compute nodes on Sherlock does
 not allow `root` access to the nodes.
 
-:fontawesome-solid-times:{: .chk_no :} **running permanent services**:
+:fontawesome-solid-times:{ .chk_no } **running permanent services**:
   permanent processes such as web servers or databases can only run on owner
 nodes through the scheduler, using [recurring](url_recurring) or
 [persistent](url_persistent). Purchasing compute nodes on Sherlock does not
 provide a way to run anything that couldn't run on publicly-available nodes.
 
-:fontawesome-solid-times:{: .chk_no :} **direct network connectivity** from the
+:fontawesome-solid-times:{ .chk_no } **direct network connectivity** from the
 outside world: owners' nodes are connected to the Sherlock's internal network
 and are not directly accessible from the outside, which means that they can't
 host public services like web or application servers.
 
-:fontawesome-solid-times:{: .chk_no :} **scheduler bypass**: jobs running on
+:fontawesome-solid-times:{ .chk_no } **bypassing the scheduler**: jobs running on
 owners' nodes still need to be submitted to the scheduler. Direct shell access
 to the nodes is not possible outside of scheduled interactive sessions.
 
-:fontawesome-solid-times:{: .chk_no :} **persistent local storage**: [local
+:fontawesome-solid-times:{ .chk_no } **hardware modifications**: the hardware
+components of purchased nodes cannot be changed, removed, swapped or upgraded
+during the nodes' service lifetime.
+
+:fontawesome-solid-times:{ .chk_no } **persistent local storage**: [local
 storage space](url_lscratch) provided on the compute nodes is only usable for
 the duration of a job and cannot be used to store long-term data.
 
-:fontawesome-solid-times:{: .chk_no :} **additional storage space**: purchasing
+:fontawesome-solid-times:{ .chk_no } **additional storage space**: purchasing
 compute nodes on Sherlock does not provide additional storage space. Please
 note that SRCC does offer the possibility for PIs to purchase their own storage
 space on [Oak](url_oak), for their long-term research data needs.
