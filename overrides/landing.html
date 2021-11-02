@@ -34,13 +34,16 @@
     <link rel="stylesheet" href="assets/stylesheets/landing.css">
     <link rel="stylesheet" href="https://www.stanford.edu/su-identity/css/su-identity.css">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.google_analytics[0] }}"></script>
+    {% if config.extra.analytics %}
+    {% set property = config.extra.analytics.property | d("", true) %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ property }}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){ dataLayer.push(arguments); }
-      gtag("js", new Date());
-      gtag("config", "{{ config.google_analytics[0] }}");
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ property }}');
     </script>
+    {% endif %}
 
     <script src="//sdk.noticeable.io/s.js"></script>
     <script>noticeable.render('widget', 'aCWtTbKEqPEWRqlz3Uq6')</script>
