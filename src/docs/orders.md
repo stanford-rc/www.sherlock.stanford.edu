@@ -183,6 +183,10 @@ To place an order, we'll need the following information:
     <br/>_It could be the same PTA used for the capital portion of the
     purchase, or a different one_
 
+Hardware costs could be spread over multiple PTAs (with a maximum of 2 PTAs
+per order). But please note that the infrastructure fees have to be charged to
+a single PTA.
+
 ### Placing an order
 
 To start ordering compute nodes for Sherlock:
