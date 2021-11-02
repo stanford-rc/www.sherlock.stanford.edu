@@ -14,9 +14,10 @@ tables below.
 
 !!! tip "Subscribe to updates"
 
-    Stay up-to-date with new software installations and updates by following
-    the **[:fontawesome-solid-rss: Sherlock software update RSS
-    feed][url_updates]**.
+    :material-rss-box:{ style="float:left; color:#f78422; font-size:1.8rem; margin-right:.8rem"  }
+    Never want to miss a software update again? Stay up-to-date with new
+    software updates by following the **[:fontawesome-solid-rss: Sherlock
+    software update RSS feed][url_updates]**.
 
 
 ## Categories
