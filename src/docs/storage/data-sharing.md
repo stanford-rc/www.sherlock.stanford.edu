@@ -143,6 +143,16 @@ An ACL in NFSv4 is a list of rules setting permissions on files or directories.
 A permission rule, or Access Control Entry (ACE), is of the form
 `type:flags:principle:permissions`.
 
+!! warning "Default permissions on `$GROUP_HOME`"
+
+    By default, the Unix permissions on the root directory `$GROUP_HOME`
+    don't allow read nor traversal access for *others* (*ie.* any user not part
+    of your PI group). If you need to share files with users outside of your
+    own group, please [contact us][url_contact] so we can set the appropriate
+    permissions on your folder.
+
+For `$HOME`, you're the owner of the directory and so you can change the
+permissions yourself.
 
 Commonly used entries for these fields are:
 
