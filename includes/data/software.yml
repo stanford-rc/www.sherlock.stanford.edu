@@ -3184,15 +3184,15 @@ software_modules:
           for processing, analyzing, and displaying functional MRI (FMRI) data - a
           technique for mapping human brain activity.', markedDefault: false, versionName: 21.3.00}
     - categories: biology, genomics
-      defaultVersionName: 1.1.3_py27
-      description: Fit-Hi-C is a tool for assigning statistical confidence estimates
-        to chromosomal contact maps produced by genome architecture assays.
-      package: py-fithic
-      url: https://github.com/ay-lab/fithic
+      defaultVersionName: 2.5.1
+      description: BamTools is a project that provides both a C++ API and a command-line
+        toolkit for reading, writing, and manipulating BAM (genome alignment) files.
+      package: bamtools
+      url: https://github.com/pezmaster31/bamtools
       versions:
-      - {description: Fit-Hi-C is a tool for assigning statistical confidence estimates
-          to chromosomal contact maps produced by genome architecture assays., markedDefault: false,
-        versionName: 1.1.3_py27}
+      - {description: 'BamTools is a project that provides both a C++ API and a command-line
+          toolkit for reading, writing, and manipulating BAM (genome alignment) files.',
+        markedDefault: false, versionName: 2.5.1}
     - categories: biology, pathology
       defaultVersionName: 3.4.1
       description: OpenSlide is a C library that provides a simple interface to read
@@ -3389,17 +3389,18 @@ software_modules:
           parallel: {mpi: 1}
         versionName: '2.1'
     - categories: biology, genomics
-      defaultVersionName: 0.5.0
-      description: Trim Galore! is a wrapper script to automate quality and adapter
-        trimming as well as quality control, with some added functionality to remove
-        biased methylation positions for RRBS sequence files.
-      package: trim_galore
-      url: https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
+      defaultVersionName: '1.8'
+      description: BCFtools is a program for variant calling and manipulating files
+        in the Variant Call Format (VCF) and its binary counterpart BCF.
+      package: bcftools
+      url: https://github.com/samtools/bcftools
       versions:
-      - {description: 'Trim Galore! is a wrapper script to automate quality and adapter
-          trimming as well as quality control, with some added functionality to remove
-          biased methylation positions for RRBS sequence files.', markedDefault: false,
-        versionName: 0.5.0}
+      - {description: BCFtools is a program for variant calling and manipulating files
+          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
+        versionName: '1.6'}
+      - {description: BCFtools is a program for variant calling and manipulating files
+          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
+        versionName: '1.8'}
     - categories: biology, genomics
       defaultVersionName: 0.11.8
       description: FastQC aims to provide a simple way to do some quality control
@@ -3614,22 +3615,16 @@ software_modules:
       versions:
       - {description: MACS (Model-based Analysis of ChIP-Seq) implements a novel ChIP-Seq
           analysis method., markedDefault: false, versionName: 2.1.1_py27}
-    - categories: biology, computational biology
-      defaultVersionName: '3.8'
-      description: Rosetta is the premier software suite for modeling macromolecular
-        structures. As a flexible, multi-purpose application, it includes tools for
-        structure prediction, design, and remodeling of proteins and nucleic acids.
-      package: rosetta
-      url: https://www.rosettacommons.org
+    - categories: biology, genomics
+      defaultVersionName: 2.13.1
+      description: Trinity RNA-Seq de novo transcriptome assembly.
+      package: trinity
+      url: http://trinityrnaseq.github.io
       versions:
-      - description: Rosetta is the premier software suite for modeling macromolecular
-          structures. As a flexible, multi-purpose application, it includes tools
-          for structure prediction, design, and remodeling of proteins and nucleic
-          acids.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: '3.8'
+      - {description: Trinity RNA-Seq de novo transcriptome assembly., markedDefault: false,
+        versionName: 2.8.4}
+      - {description: Trinity RNA-Seq de novo transcriptome assembly., markedDefault: false,
+        versionName: 2.13.1}
     - categories: biology, cryo-em
       defaultVersionName: 4.11.5
       description: IMOD is a set of image processing, modeling and display programs
@@ -3663,34 +3658,42 @@ software_modules:
           from RNA-Seq data using high-throughput sequencing reads., markedDefault: false,
         versionName: 0.44.0}
     - categories: biology, genomics
-      defaultVersionName: 2.13.1
-      description: Trinity RNA-Seq de novo transcriptome assembly.
-      package: trinity
-      url: http://trinityrnaseq.github.io
+      defaultVersionName: 1.1.3_py27
+      description: Fit-Hi-C is a tool for assigning statistical confidence estimates
+        to chromosomal contact maps produced by genome architecture assays.
+      package: py-fithic
+      url: https://github.com/ay-lab/fithic
       versions:
-      - {description: Trinity RNA-Seq de novo transcriptome assembly., markedDefault: false,
-        versionName: 2.8.4}
-      - {description: Trinity RNA-Seq de novo transcriptome assembly., markedDefault: false,
-        versionName: 2.13.1}
+      - {description: Fit-Hi-C is a tool for assigning statistical confidence estimates
+          to chromosomal contact maps produced by genome architecture assays., markedDefault: false,
+        versionName: 1.1.3_py27}
     - categories: biology, genomics
-      defaultVersionName: 2.5.1
-      description: BamTools is a project that provides both a C++ API and a command-line
-        toolkit for reading, writing, and manipulating BAM (genome alignment) files.
-      package: bamtools
-      url: https://github.com/pezmaster31/bamtools
+      defaultVersionName: '1.8'
+      description: Tools (written in C using htslib) for manipulating next-generation
+        sequencing data.
+      package: samtools
+      url: https://github.com/samtools/samtools
       versions:
-      - {description: 'BamTools is a project that provides both a C++ API and a command-line
-          toolkit for reading, writing, and manipulating BAM (genome alignment) files.',
-        markedDefault: false, versionName: 2.5.1}
-    - categories: biology, genomics
-      defaultVersionName: 0.8.1_py27
-      description: Tools for manipulating biological data, particularly multiple sequence
-        alignments.
-      package: py-bx-python
-      url: https://github.com/bxlab/bx-python
+      - {description: Tools (written in C using htslib) for manipulating next-generation
+          sequencing data., markedDefault: false, versionName: '1.6'}
+      - {description: Tools (written in C using htslib) for manipulating next-generation
+          sequencing data., markedDefault: false, versionName: '1.8'}
+    - categories: biology, computational biology
+      defaultVersionName: '3.8'
+      description: Rosetta is the premier software suite for modeling macromolecular
+        structures. As a flexible, multi-purpose application, it includes tools for
+        structure prediction, design, and remodeling of proteins and nucleic acids.
+      package: rosetta
+      url: https://www.rosettacommons.org
       versions:
-      - {description: 'Tools for manipulating biological data, particularly multiple
-          sequence alignments.', markedDefault: false, versionName: 0.8.1_py27}
+      - description: Rosetta is the premier software suite for modeling macromolecular
+          structures. As a flexible, multi-purpose application, it includes tools
+          for structure prediction, design, and remodeling of proteins and nucleic
+          acids.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '3.8'
     - categories: biology, genomics
       defaultVersionName: 0.1.15
       description: VCFtools is a program package designed for working with VCF files,
@@ -3701,6 +3704,18 @@ software_modules:
       - {description: 'VCFtools is a program package designed for working with VCF
           files, such as those generated by the 1000 Genomes Project.', markedDefault: false,
         versionName: 0.1.15}
+    - categories: biology, genomics
+      defaultVersionName: 1.10.2
+      description: C library for high-throughput sequencing data formats.
+      package: htslib
+      url: https://github.com/samtools/htslib
+      versions:
+      - {description: C library for high-throughput sequencing data formats., markedDefault: false,
+        versionName: '1.6'}
+      - {description: C library for high-throughput sequencing data formats., markedDefault: false,
+        versionName: '1.8'}
+      - {description: C library for high-throughput sequencing data formats., markedDefault: false,
+        versionName: 1.10.2}
     - categories: biology, genomics
       defaultVersionName: 2.5.4b
       description: 'STAR: ultrafast universal RNA-seq aligner.'
@@ -3723,17 +3738,13 @@ software_modules:
           arch: {gpu: 1}
         versionName: 1.3.1
     - categories: biology, genomics
-      defaultVersionName: 1.10.2
-      description: C library for high-throughput sequencing data formats.
-      package: htslib
-      url: https://github.com/samtools/htslib
+      defaultVersionName: 3.3.1_py36
+      description: Tools to process and analyze deep sequencing data.
+      package: py-deeptools
+      url: https://github.com/deeptools/deepTools/
       versions:
-      - {description: C library for high-throughput sequencing data formats., markedDefault: false,
-        versionName: '1.6'}
-      - {description: C library for high-throughput sequencing data formats., markedDefault: false,
-        versionName: '1.8'}
-      - {description: C library for high-throughput sequencing data formats., markedDefault: false,
-        versionName: 1.10.2}
+      - {description: Tools to process and analyze deep sequencing data., markedDefault: false,
+        versionName: 3.3.1_py36}
     - categories: biology, genomics
       defaultVersionName: 3.0.2_py27
       description: Assessing genome assembly and annotation completeness with Benchmarking
@@ -3744,13 +3755,14 @@ software_modules:
       - {description: Assessing genome assembly and annotation completeness with Benchmarking
           Universal Single-Copy Orthologs (BUSCO)., markedDefault: false, versionName: 3.0.2_py27}
     - categories: biology, genomics
-      defaultVersionName: 3.3.1_py36
-      description: Tools to process and analyze deep sequencing data.
-      package: py-deeptools
-      url: https://github.com/deeptools/deepTools/
+      defaultVersionName: 2.27.1
+      description: The bedtools utilities are a swiss-army knife of tools for a wide-range
+        of genomics analysis tasks.
+      package: bedtools
+      url: https://bedtools.readthedocs.io
       versions:
-      - {description: Tools to process and analyze deep sequencing data., markedDefault: false,
-        versionName: 3.3.1_py36}
+      - {description: The bedtools utilities are a swiss-army knife of tools for a
+          wide-range of genomics analysis tasks., markedDefault: false, versionName: 2.27.1}
     - categories: biology, genomics
       defaultVersionName: 4.1.4.1
       description: GATK (Genome Analysis Toolkit) offers a wide variety of tools with
@@ -3764,15 +3776,6 @@ software_modules:
       - {description: GATK (Genome Analysis Toolkit) offers a wide variety of tools
           with a primary focus on variant discovery and genotyping., markedDefault: false,
         versionName: 4.1.4.1}
-    - categories: biology, genomics
-      defaultVersionName: 2.27.1
-      description: The bedtools utilities are a swiss-army knife of tools for a wide-range
-        of genomics analysis tasks.
-      package: bedtools
-      url: https://bedtools.readthedocs.io
-      versions:
-      - {description: The bedtools utilities are a swiss-army knife of tools for a
-          wide-range of genomics analysis tasks., markedDefault: false, versionName: 2.27.1}
     - categories: biology, neurology
       defaultVersionName: 1.3.1
       description: Connectome Workbench is an open source, freely available visualization
@@ -3784,19 +3787,32 @@ software_modules:
       - {description: 'Connectome Workbench is an open source, freely available visualization
           and discovery tool used to map neuroimaging data, especially data generated
           by the Human Connectome Project.', markedDefault: false, versionName: 1.3.1}
-    - categories: biology, genomics
-      defaultVersionName: '1.8'
-      description: BCFtools is a program for variant calling and manipulating files
-        in the Variant Call Format (VCF) and its binary counterpart BCF.
-      package: bcftools
-      url: https://github.com/samtools/bcftools
+    - categories: biology, cryo-em
+      defaultVersionName: 0.2.4_py36
+      description: A pipeline for particle detection in cryo-electron microscopy images
+        using convolutional neural networks trained from positive and unlabeled examples.
+      package: py-topaz
+      url: https://github.com/tbepler/topaz
       versions:
-      - {description: BCFtools is a program for variant calling and manipulating files
-          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
-        versionName: '1.6'}
-      - {description: BCFtools is a program for variant calling and manipulating files
-          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
-        versionName: '1.8'}
+      - description: A pipeline for particle detection in cryo-electron microscopy
+          images using convolutional neural networks trained from positive and unlabeled
+          examples.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.2.4_py36
+    - categories: biology, genomics
+      defaultVersionName: 0.5.0
+      description: Trim Galore! is a wrapper script to automate quality and adapter
+        trimming as well as quality control, with some added functionality to remove
+        biased methylation positions for RRBS sequence files.
+      package: trim_galore
+      url: https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
+      versions:
+      - {description: 'Trim Galore! is a wrapper script to automate quality and adapter
+          trimming as well as quality control, with some added functionality to remove
+          biased methylation positions for RRBS sequence files.', markedDefault: false,
+        versionName: 0.5.0}
     - categories: biology, neurology
       defaultVersionName: '20160502'
       description: MRIcron is a cross-platform NIfTI format image viewer.
@@ -3853,16 +3869,14 @@ software_modules:
       - {description: 'HiC-Pro: An optimized and flexible pipeline for Hi-C data processing.',
         markedDefault: false, versionName: 2.10.0}
     - categories: biology, genomics
-      defaultVersionName: '1.8'
-      description: Tools (written in C using htslib) for manipulating next-generation
-        sequencing data.
-      package: samtools
-      url: https://github.com/samtools/samtools
+      defaultVersionName: 0.8.1_py27
+      description: Tools for manipulating biological data, particularly multiple sequence
+        alignments.
+      package: py-bx-python
+      url: https://github.com/bxlab/bx-python
       versions:
-      - {description: Tools (written in C using htslib) for manipulating next-generation
-          sequencing data., markedDefault: false, versionName: '1.6'}
-      - {description: Tools (written in C using htslib) for manipulating next-generation
-          sequencing data., markedDefault: false, versionName: '1.8'}
+      - {description: 'Tools for manipulating biological data, particularly multiple
+          sequence alignments.', markedDefault: false, versionName: 0.8.1_py27}
     - categories: biology, genomics
       defaultVersionName: '1.8'
       description: A single molecule sequence assembler for genomes large and small.
