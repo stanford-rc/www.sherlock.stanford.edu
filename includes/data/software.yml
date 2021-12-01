@@ -154,18 +154,14 @@ software_modules:
   - name: system
     packages:
     - categories: system, libs
-      defaultVersionName: 2.2.3
-      description: Enchant is a library (and command-line program) that wraps a number
-        of different spelling libraries and programs with a consistent interface.
-      package: enchant
-      url: https://abiword.github.io/enchant/
+      defaultVersionName: '3.3'
+      description: Nettle is a cryptographic library that is designed to fit easily
+        in more or less any context.
+      package: nettle
+      url: http://www.lysator.liu.se/~nisse/nettle/
       versions:
-      - {description: Enchant is a library (and command-line program) that wraps a
-          number of different spelling libraries and programs with a consistent interface.,
-        markedDefault: false, versionName: 1.6.1}
-      - {description: Enchant is a library (and command-line program) that wraps a
-          number of different spelling libraries and programs with a consistent interface.,
-        markedDefault: false, versionName: 2.2.3}
+      - {description: Nettle is a cryptographic library that is designed to fit easily
+          in more or less any context., markedDefault: false, versionName: '3.3'}
     - categories: system, libs
       defaultVersionName: 1.4.8
       description: HarfBuzz is an OpenType text shaping engine.
@@ -222,14 +218,22 @@ software_modules:
       - {description: aria2 is a lightweight multi-protocol & multi-source command-line
           download utility., markedDefault: false, versionName: 1.35.0}
     - categories: system, libs
-      defaultVersionName: 1.10.22
-      description: D-Bus is a message bus system, a simple way for applications to
-        talk to one another.
-      package: dbus
-      url: https://www.freedesktop.org/wiki/Software/dbus/
+      defaultVersionName: 1.8.0
+      description: Google Test is Google's C++ test framework.
+      package: googletest
+      url: https://github.com/google/googletest
       versions:
-      - {description: 'D-Bus is a message bus system, a simple way for applications
-          to talk to one another.', markedDefault: false, versionName: 1.10.22}
+      - {description: Google Test is Google's C++ test framework., markedDefault: false,
+        versionName: 1.8.0}
+    - categories: system, libs
+      defaultVersionName: 2.36.4
+      description: Librsvg is a library to render SVG files using cairo as a rendering
+        engine.
+      package: librsvg
+      url: https://wiki.gnome.org/Projects/LibRsvg
+      versions:
+      - {description: Librsvg is a library to render SVG files using cairo as a rendering
+          engine., markedDefault: false, versionName: 2.36.4}
     - categories: system, libs
       defaultVersionName: 7.6.0
       description: The Boehm-Demers-Weiser conservative garbage collector can be used
@@ -416,13 +420,14 @@ software_modules:
       - {description: OpenJPEG is an open-source JPEG 2000 codec written in C language.,
         markedDefault: false, versionName: 2.3.1}
     - categories: system, libs
-      defaultVersionName: 2.61.2
-      description: libsoup is an HTTP client/server library for GNOME.
-      package: libsoup
-      url: https://wiki.gnome.org/LibSoup
+      defaultVersionName: 5.1.4
+      description: GIFLIB is a package of portable tools and library routines for
+        working with GIF images.
+      package: giflib
+      url: http://giflib.sourceforge.net/
       versions:
-      - {description: libsoup is an HTTP client/server library for GNOME., markedDefault: false,
-        versionName: 2.61.2}
+      - {description: GIFLIB is a package of portable tools and library routines for
+          working with GIF images., markedDefault: false, versionName: 5.1.4}
     - categories: system, libs
       defaultVersionName: 1.38.1
       description: libuv is a multi-platform support library with a focus on asynchronous
@@ -433,19 +438,14 @@ software_modules:
       - {description: libuv is a multi-platform support library with a focus on asynchronous
           I/O., markedDefault: false, versionName: 1.38.1}
     - categories: system, libs
-      defaultVersionName: 1.6.29
-      description: libpng is the official PNG reference library. It supports almost
-        all PNG features, is extensible, and has been extensively tested for over
-        20 years.
-      package: libpng
-      url: http://libpng.sourceforge.net
+      defaultVersionName: 1.14.10
+      description: Cairo is a 2D graphics library with support for multiple output
+        devices.
+      package: cairo
+      url: https://www.cairographics.org/
       versions:
-      - {description: 'libpng is the official PNG reference library. It supports almost
-          all PNG features, is extensible, and has been extensively tested for over
-          20 years.', markedDefault: false, versionName: 1.2.57}
-      - {description: 'libpng is the official PNG reference library. It supports almost
-          all PNG features, is extensible, and has been extensively tested for over
-          20 years.', markedDefault: false, versionName: 1.6.29}
+      - {description: Cairo is a 2D graphics library with support for multiple output
+          devices., markedDefault: false, versionName: 1.14.10}
     - categories: system, tools
       defaultVersionName: 2.3.7
       description: Motif is the toolkit for the Common Desktop Environment.
@@ -500,15 +500,17 @@ software_modules:
           arch: {gpu: 1}
           parallel: {mpi: 1}
         versionName: '5.7'
-    - categories: system, libs
-      defaultVersionName: 2.2.5
-      description: GD is an open source code library for the dynamic creation of images
-        by programmers.
-      package: libgd
-      url: https://libgd.github.io/
+    - categories: system, compression
+      defaultVersionName: 1.1.12
+      description: PBZIP2 is a parallel implementation of the bzip2 block-sorting
+        file compressor that uses pthreads and achieves near-linear speedup on SMP
+        machines.
+      package: pbzip2
+      url: https://compression.ca/pbzip2
       versions:
-      - {description: GD is an open source code library for the dynamic creation of
-          images by programmers., markedDefault: false, versionName: 2.2.5}
+      - {description: PBZIP2 is a parallel implementation of the bzip2 block-sorting
+          file compressor that uses pthreads and achieves near-linear speedup on SMP
+          machines., markedDefault: false, versionName: 1.1.12}
     - categories: system, libs
       defaultVersionName: 2.9.91
       description: GConf is a system for storing application preferences.
@@ -890,14 +892,13 @@ software_modules:
       - {description: Remora is a tool to monitor runtime resource utilization., markedDefault: false,
         versionName: 1.8.5}
     - categories: system, libs
-      defaultVersionName: 4.0.8
-      description: libtiff provides support for the Tag Image File Format (TIFF),
-        a widely used format for storing image data.
-      package: libtiff
-      url: http://simplesystems.org/libtiff/
+      defaultVersionName: '1.16'
+      description: Library for parsing command line options.
+      package: popt
+      url: http://rpm5.org/files/popt
       versions:
-      - {description: 'libtiff provides support for the Tag Image File Format (TIFF),
-          a widely used format for storing image data.', markedDefault: false, versionName: 4.0.8}
+      - {description: Library for parsing command line options., markedDefault: false,
+        versionName: '1.16'}
     - categories: system, tools
       defaultVersionName: 7.0.7-2
       description: ImageMagick is a free and open-source software suite for displaying,
@@ -972,17 +973,6 @@ software_modules:
       versions:
       - {description: Data Version Control or DVC is an open-source tool for data
           science and machine learning projects., markedDefault: false, versionName: 0.91.1_py36}
-    - categories: system, libs
-      defaultVersionName: 2.0.3
-      description: THE reference library for reading, displaying, writing and examining
-        Multiple-Image Network Graphics. MNG is the animation extension to the popular
-        PNG image-format.
-      package: libmng
-      url: http://libmng.sourceforge.net
-      versions:
-      - {description: 'THE reference library for reading, displaying, writing and
-          examining Multiple-Image Network Graphics. MNG is the animation extension
-          to the popular PNG image-format.', markedDefault: false, versionName: 2.0.3}
     - categories: system, file transfer
       defaultVersionName: 1.9.0_py36
       description: A command line wrapper over the Globus SDK for Python.
@@ -996,6 +986,17 @@ software_modules:
       - {description: A command line wrapper over the Globus SDK for Python., markedDefault: false,
         versionName: 1.9.0_py36}
     - categories: system, libs
+      defaultVersionName: 2.0.3
+      description: THE reference library for reading, displaying, writing and examining
+        Multiple-Image Network Graphics. MNG is the animation extension to the popular
+        PNG image-format.
+      package: libmng
+      url: http://libmng.sourceforge.net
+      versions:
+      - {description: 'THE reference library for reading, displaying, writing and
+          examining Multiple-Image Network Graphics. MNG is the animation extension
+          to the popular PNG image-format.', markedDefault: false, versionName: 2.0.3}
+    - categories: system, libs
       defaultVersionName: 2.36.8
       description: The GdkPixbuf library provides facilities for loading images in
         a variety of file formats.
@@ -1004,6 +1005,14 @@ software_modules:
       versions:
       - {description: The GdkPixbuf library provides facilities for loading images
           in a variety of file formats., markedDefault: false, versionName: 2.36.8}
+    - categories: system, libs
+      defaultVersionName: 0.6.21
+      description: A library for parsing, editing, and saving EXIF data.
+      package: libexif
+      url: https://github.com/libexif/libexif
+      versions:
+      - {description: 'A library for parsing, editing, and saving EXIF data.', markedDefault: false,
+        versionName: 0.6.21}
     - categories: system, compression
       defaultVersionName: 1.2.11
       description: zlib is designed to be a free, general-purpose, legally unencumbered
@@ -1016,14 +1025,17 @@ software_modules:
           -- that is, not covered by any patents -- lossless data-compression library
           for use on virtually any computer hardware and operating system.', markedDefault: false,
         versionName: 1.2.11}
-    - categories: system, libs
-      defaultVersionName: 0.6.21
-      description: A library for parsing, editing, and saving EXIF data.
-      package: libexif
-      url: https://github.com/libexif/libexif
+    - categories: system, benchmark
+      defaultVersionName: '29.4'
+      description: mprime is used by GIMPS, a distributed computing project dedicated
+        to finding new Mersenne prime numbers, and which is commonly used as a stability
+        testing utility.
+      package: mprime
+      url: https://www.mersenne.org/
       versions:
-      - {description: 'A library for parsing, editing, and saving EXIF data.', markedDefault: false,
-        versionName: 0.6.21}
+      - {description: 'mprime is used by GIMPS, a distributed computing project dedicated
+          to finding new Mersenne prime numbers, and which is commonly used as a stability
+          testing utility.', markedDefault: false, versionName: '29.4'}
     - categories: system, document processing
       defaultVersionName: 0.47.0
       description: Poppler is a PDF rendering library.
@@ -1048,17 +1060,6 @@ software_modules:
       versions:
       - {description: C-based implementation of the GDI+ API, markedDefault: false,
         versionName: '5.6'}
-    - categories: system, benchmark
-      defaultVersionName: '29.4'
-      description: mprime is used by GIMPS, a distributed computing project dedicated
-        to finding new Mersenne prime numbers, and which is commonly used as a stability
-        testing utility.
-      package: mprime
-      url: https://www.mersenne.org/
-      versions:
-      - {description: 'mprime is used by GIMPS, a distributed computing project dedicated
-          to finding new Mersenne prime numbers, and which is commonly used as a stability
-          testing utility.', markedDefault: false, versionName: '29.4'}
     - categories: system, language
       defaultVersionName: 8.6.6
       description: Tcl (Tool Command Language) is a dynamic programming language,
@@ -1070,17 +1071,22 @@ software_modules:
       - {description: 'Tcl (Tool Command Language) is a dynamic programming language,
           suitable for web and desktop applications, networking, administration, testing.
           Tk is a graphical user interface toolkit.', markedDefault: false, versionName: 8.6.6}
-    - categories: system, compression
-      defaultVersionName: 1.1.12
-      description: PBZIP2 is a parallel implementation of the bzip2 block-sorting
-        file compressor that uses pthreads and achieves near-linear speedup on SMP
-        machines.
-      package: pbzip2
-      url: https://compression.ca/pbzip2
+    - categories: system, libs
+      defaultVersionName: 2.12.4
+      description: Fontconfig is a library for configuring and customizing font access.
+      package: fontconfig
+      url: https://www.freedesktop.org/wiki/Software/fontconfig
       versions:
-      - {description: PBZIP2 is a parallel implementation of the bzip2 block-sorting
-          file compressor that uses pthreads and achieves near-linear speedup on SMP
-          machines., markedDefault: false, versionName: 1.1.12}
+      - {description: Fontconfig is a library for configuring and customizing font
+          access., markedDefault: false, versionName: 2.12.4}
+    - categories: system, libs
+      defaultVersionName: 0.6.13
+      description: Libcroco is a standalone css2 parsing and manipulation library.
+      package: libcroco
+      url: https://gitlab.gnome.org/Archive/libcroco
+      versions:
+      - {description: Libcroco is a standalone css2 parsing and manipulation library.,
+        markedDefault: false, versionName: 0.6.13}
     - categories: system, libs
       defaultVersionName: 3.5.9
       description: GnuTLS is a secure communications library implementing the SSL,
@@ -1121,23 +1127,13 @@ software_modules:
       - {description: GNU parallel is a shell tool for executing jobs in parallel
           using one or more computers., markedDefault: false, versionName: '20200822'}
     - categories: system, libs
-      defaultVersionName: 1.14.10
-      description: Cairo is a 2D graphics library with support for multiple output
-        devices.
-      package: cairo
-      url: https://www.cairographics.org/
+      defaultVersionName: 2.61.2
+      description: libsoup is an HTTP client/server library for GNOME.
+      package: libsoup
+      url: https://wiki.gnome.org/LibSoup
       versions:
-      - {description: Cairo is a 2D graphics library with support for multiple output
-          devices., markedDefault: false, versionName: 1.14.10}
-    - categories: system, libs
-      defaultVersionName: 5.1.4
-      description: GIFLIB is a package of portable tools and library routines for
-        working with GIF images.
-      package: giflib
-      url: http://giflib.sourceforge.net/
-      versions:
-      - {description: GIFLIB is a package of portable tools and library routines for
-          working with GIF images., markedDefault: false, versionName: 5.1.4}
+      - {description: libsoup is an HTTP client/server library for GNOME., markedDefault: false,
+        versionName: 2.61.2}
     - categories: system, cloud interface
       defaultVersionName: 2.0.50
       description: This package provides a unified command line interface to Amazon
@@ -1148,22 +1144,25 @@ software_modules:
       - {description: This package provides a unified command line interface to Amazon
           Web Services., markedDefault: false, versionName: 2.0.50}
     - categories: system, libs
-      defaultVersionName: '1.16'
-      description: Library for parsing command line options.
-      package: popt
-      url: http://rpm5.org/files/popt
+      defaultVersionName: 2.2.5
+      description: GD is an open source code library for the dynamic creation of images
+        by programmers.
+      package: libgd
+      url: https://libgd.github.io/
       versions:
-      - {description: Library for parsing command line options., markedDefault: false,
-        versionName: '1.16'}
-    - categories: system, compression
-      defaultVersionName: 1.5.1
-      description: libzip is a C library for reading, creating, and modifying zip
-        archives.
-      package: libzip
-      url: http://libzip.org
+      - {description: GD is an open source code library for the dynamic creation of
+          images by programmers., markedDefault: false, versionName: 2.2.5}
+    - categories: system, libs
+      defaultVersionName: 0.9.1
+      description: libxkbcommon is a keyboard keymap compiler and support library
+        which processes a reduced subset of keymaps as defined by the XKB (X Keyboard
+        Extension) specification.
+      package: libxkbcommon
+      url: https://github.com/xkbcommon/libxkbcommon
       versions:
-      - {description: 'libzip is a C library for reading, creating, and modifying
-          zip archives.', markedDefault: false, versionName: 1.5.1}
+      - {description: libxkbcommon is a keyboard keymap compiler and support library
+          which processes a reduced subset of keymaps as defined by the XKB (X Keyboard
+          Extension) specification., markedDefault: false, versionName: 0.9.1}
     - categories: system, compression
       defaultVersionName: '0.6'
       description: MPIBZIP2 is a parallel implementation of the bzip2 block-sorting
@@ -1179,6 +1178,15 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: '0.6'
+    - categories: system, libs
+      defaultVersionName: 4.0.8
+      description: libtiff provides support for the Tag Image File Format (TIFF),
+        a widely used format for storing image data.
+      package: libtiff
+      url: http://simplesystems.org/libtiff/
+      versions:
+      - {description: 'libtiff provides support for the Tag Image File Format (TIFF),
+          a widely used format for storing image data.', markedDefault: false, versionName: 4.0.8}
     - categories: system, document processing
       defaultVersionName: 9.53.2
       description: Ghostscript is an interpreter for the PostScript language and PDF
@@ -1198,42 +1206,6 @@ software_modules:
       - {description: 'LFTP is a sophisticated file transfer program supporting a
           number of network protocols (ftp, http, sftp, fish, torrent).', markedDefault: false,
         versionName: 4.8.1}
-    - categories: system, scm
-      defaultVersionName: '8.20210622'
-      description: git-annex allows managing files with git, without checking the
-        file contents into git.
-      package: git-annex
-      url: https://git-annex.branchable.com/
-      versions:
-      - {description: 'git-annex allows managing files with git, without checking
-          the file contents into git.', markedDefault: false, versionName: '8.20210622'}
-    - categories: system, tools
-      defaultVersionName: 2.2.3
-      description: Expat is a stream-oriented XML parser library written in C.
-      package: expat
-      url: http://libexpat.github.io
-      versions:
-      - {description: Expat is a stream-oriented XML parser library written in C.,
-        markedDefault: false, versionName: 2.2.3}
-    - categories: system, media
-      defaultVersionName: 1.0.28
-      description: Libsndfile is a C library for reading and writing files containing
-        sampled sound (such as MS Windows WAV and the Apple/SGI AIFF format) through
-        one standard library interface.
-      package: libsndfile
-      url: http://www.mega-nerd.com/libsndfile
-      versions:
-      - {description: Libsndfile is a C library for reading and writing files containing
-          sampled sound (such as MS Windows WAV and the Apple/SGI AIFF format) through
-          one standard library interface., markedDefault: false, versionName: 1.0.28}
-    - categories: system, libs
-      defaultVersionName: 5.9.1_py36
-      description: PyQt5 is a comprehensive set of Python bindings for Qt v5.
-      package: py-pyqt5
-      url: https://www.riverbankcomputing.com/software/pyqt/
-      versions:
-      - {description: PyQt5 is a comprehensive set of Python bindings for Qt v5.,
-        markedDefault: false, versionName: 5.9.1_py36}
     - categories: system, libs
       defaultVersionName: 2.52.3
       description: The GLib library provides core non-graphical functionality such
@@ -1257,27 +1229,63 @@ software_modules:
         versionName: 0.12.0}
       - {description: 'Fast, secure, efficient backup program.', markedDefault: false,
         versionName: 0.12.1}
+    - categories: system, media
+      defaultVersionName: 1.0.28
+      description: Libsndfile is a C library for reading and writing files containing
+        sampled sound (such as MS Windows WAV and the Apple/SGI AIFF format) through
+        one standard library interface.
+      package: libsndfile
+      url: http://www.mega-nerd.com/libsndfile
+      versions:
+      - {description: Libsndfile is a C library for reading and writing files containing
+          sampled sound (such as MS Windows WAV and the Apple/SGI AIFF format) through
+          one standard library interface., markedDefault: false, versionName: 1.0.28}
     - categories: system, libs
-      defaultVersionName: 2.3.3
-      description: The libseccomp library provides an easy to use, platform independent,
-        interface to the Linux Kernel's syscall filtering mechanism..
-      package: libseccomp
-      url: https://github.com/seccomp/libseccomp
+      defaultVersionName: 5.9.1_py36
+      description: PyQt5 is a comprehensive set of Python bindings for Qt v5.
+      package: py-pyqt5
+      url: https://www.riverbankcomputing.com/software/pyqt/
       versions:
-      - {description: 'The libseccomp library provides an easy to use, platform independent,
-          interface to the Linux Kernel''s syscall filtering mechanism..', markedDefault: false,
-        versionName: 2.3.3}
-    - categories: system, benchmark
-      defaultVersionName: '3.2'
-      description: 'Heavy Peer To Peer: a MPI based benchmark for network diagnostic.'
-      package: hp2p
-      url: https://github.com/cea-hpc/hp2p
+      - {description: PyQt5 is a comprehensive set of Python bindings for Qt v5.,
+        markedDefault: false, versionName: 5.9.1_py36}
+    - categories: system, resource monitoring
+      defaultVersionName: 1.1.0
+      description: Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA
+        GPUs.
+      package: nvtop
+      url: https://github.com/Syllo/nvtop
       versions:
-      - description: 'Heavy Peer To Peer: a MPI based benchmark for network diagnostic.'
+      - description: Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA
+          GPUs.
         markedDefault: false
         properties:
-          parallel: {mpi: 1}
-        versionName: '3.2'
+          arch: {gpu: 1}
+        versionName: 1.1.0
+    - categories: system, tools
+      defaultVersionName: '2.21'
+      description: The non-arch keyboard configuration database for X Window.
+      package: xkeyboard-config
+      url: https://www.freedesktop.org/wiki/Software/XKeyboardConfig/
+      versions:
+      - {description: The non-arch keyboard configuration database for X Window.,
+        markedDefault: false, versionName: '2.21'}
+    - categories: system, tools
+      defaultVersionName: 2.2.3
+      description: Expat is a stream-oriented XML parser library written in C.
+      package: expat
+      url: http://libexpat.github.io
+      versions:
+      - {description: Expat is a stream-oriented XML parser library written in C.,
+        markedDefault: false, versionName: 2.2.3}
+    - categories: system, libs
+      defaultVersionName: 1.10.22
+      description: D-Bus is a message bus system, a simple way for applications to
+        talk to one another.
+      package: dbus
+      url: https://www.freedesktop.org/wiki/Software/dbus/
+      versions:
+      - {description: 'D-Bus is a message bus system, a simple way for applications
+          to talk to one another.', markedDefault: false, versionName: 1.10.22}
     - categories: system, database
       defaultVersionName: 2.3.9
       description: unixODBC is an open-source project that implements the ODBC API.
@@ -1335,6 +1343,22 @@ software_modules:
       - {description: Libxslt is the XSLT C library developed for the GNOME project.
           XSLT itself is a an XML language to define transformation for XML., markedDefault: false,
         versionName: 1.1.32}
+    - categories: system, libs
+      defaultVersionName: 1.1.7
+      description: A fast compressor/decompressor.
+      package: snappy
+      url: https://github.com/google/snappy
+      versions:
+      - {description: A fast compressor/decompressor., markedDefault: false, versionName: 1.1.7}
+    - categories: system, compression
+      defaultVersionName: '2.4'
+      description: A parallel implementation of gzip for modern multi-processor, multi-core
+        machines.
+      package: pigz
+      url: https://zlib.net/pigz/
+      versions:
+      - {description: 'A parallel implementation of gzip for modern multi-processor,
+          multi-core machines.', markedDefault: false, versionName: '2.4'}
     - categories: system, tools
       defaultVersionName: '7.7'
       description: The X.Org project provides an open source implementation of the
@@ -1344,24 +1368,6 @@ software_modules:
       versions:
       - {description: The X.Org project provides an open source implementation of
           the X Window System., markedDefault: false, versionName: '7.7'}
-    - categories: system, cloud interface
-      defaultVersionName: 338.0.0
-      description: Command-line interface for Google Cloud Platform products and services.
-      package: google-cloud-sdk
-      url: https://cloud.google.com/sdk
-      versions:
-      - {description: Command-line interface for Google Cloud Platform products and
-          services., markedDefault: false, versionName: 240.0.0}
-      - {description: Command-line interface for Google Cloud Platform products and
-          services., markedDefault: false, versionName: 338.0.0}
-    - categories: system, tools
-      defaultVersionName: '2.21'
-      description: The non-arch keyboard configuration database for X Window.
-      package: xkeyboard-config
-      url: https://www.freedesktop.org/wiki/Software/XKeyboardConfig/
-      versions:
-      - {description: The non-arch keyboard configuration database for X Window.,
-        markedDefault: false, versionName: '2.21'}
     - categories: system, libs
       defaultVersionName: 1.6.2
       description: Hunspell is a spell checker.
@@ -1369,15 +1375,14 @@ software_modules:
       url: https://hunspell.github.io/
       versions:
       - {description: Hunspell is a spell checker., markedDefault: false, versionName: 1.6.2}
-    - categories: system, compression
-      defaultVersionName: 5.2.3
-      description: XZ Utils is free general-purpose data compression software with
-        a high compression ratio.
-      package: xz
-      url: http://tukaani.org/xz/
+    - categories: system, tools
+      defaultVersionName: 11.0.1
+      description: ripgrep recursively searches directories for a regex pattern.
+      package: ripgrep
+      url: https://github.com/BurntSushi/ripgrep
       versions:
-      - {description: XZ Utils is free general-purpose data compression software with
-          a high compression ratio., markedDefault: false, versionName: 5.2.3}
+      - {description: ripgrep recursively searches directories for a regex pattern.,
+        markedDefault: false, versionName: 11.0.1}
     - categories: system, file transfer
       defaultVersionName: 3.9.6
       description: The IBM Aspera Command-Line Interface (the Aspera CLI) is a collection
@@ -1389,6 +1394,28 @@ software_modules:
       - {description: 'The IBM Aspera Command-Line Interface (the Aspera CLI) is a
           collection of Aspera tools for performing high-speed, secure data transfers
           from the command line.', markedDefault: false, versionName: 3.9.6}
+    - categories: system, compression
+      defaultVersionName: 5.2.3
+      description: XZ Utils is free general-purpose data compression software with
+        a high compression ratio.
+      package: xz
+      url: http://tukaani.org/xz/
+      versions:
+      - {description: XZ Utils is free general-purpose data compression software with
+          a high compression ratio., markedDefault: false, versionName: 5.2.3}
+    - categories: system, libs
+      defaultVersionName: 2.2.3
+      description: Enchant is a library (and command-line program) that wraps a number
+        of different spelling libraries and programs with a consistent interface.
+      package: enchant
+      url: https://abiword.github.io/enchant/
+      versions:
+      - {description: Enchant is a library (and command-line program) that wraps a
+          number of different spelling libraries and programs with a consistent interface.,
+        markedDefault: false, versionName: 1.6.1}
+      - {description: Enchant is a library (and command-line program) that wraps a
+          number of different spelling libraries and programs with a consistent interface.,
+        markedDefault: false, versionName: 2.2.3}
     - categories: system, libs
       defaultVersionName: '10.35'
       description: The PCRE22 library is a set of functions that implement regular
@@ -1399,23 +1426,6 @@ software_modules:
       - {description: The PCRE22 library is a set of functions that implement regular
           expression pattern matching using the same syntax and semantics as Perl
           5., markedDefault: false, versionName: '10.35'}
-    - categories: system, libs
-      defaultVersionName: '3.3'
-      description: Nettle is a cryptographic library that is designed to fit easily
-        in more or less any context.
-      package: nettle
-      url: http://www.lysator.liu.se/~nisse/nettle/
-      versions:
-      - {description: Nettle is a cryptographic library that is designed to fit easily
-          in more or less any context., markedDefault: false, versionName: '3.3'}
-    - categories: system, tools
-      defaultVersionName: 11.0.1
-      description: ripgrep recursively searches directories for a regex pattern.
-      package: ripgrep
-      url: https://github.com/BurntSushi/ripgrep
-      versions:
-      - {description: ripgrep recursively searches directories for a regex pattern.,
-        markedDefault: false, versionName: 11.0.1}
     - categories: system, libs
       defaultVersionName: 3.0.0
       description: FreeGLUT is a free-software/open-source alternative to the OpenGL
@@ -1433,14 +1443,16 @@ software_modules:
       versions:
       - {description: Libxml2 is a XML C parser and toolkit., markedDefault: false,
         versionName: 2.9.4}
-    - categories: system, libs
-      defaultVersionName: 1.8.0
-      description: Google Test is Google's C++ test framework.
-      package: googletest
-      url: https://github.com/google/googletest
+    - categories: system, cloud interface
+      defaultVersionName: 338.0.0
+      description: Command-line interface for Google Cloud Platform products and services.
+      package: google-cloud-sdk
+      url: https://cloud.google.com/sdk
       versions:
-      - {description: Google Test is Google's C++ test framework., markedDefault: false,
-        versionName: 1.8.0}
+      - {description: Command-line interface for Google Cloud Platform products and
+          services., markedDefault: false, versionName: 240.0.0}
+      - {description: Command-line interface for Google Cloud Platform products and
+          services., markedDefault: false, versionName: 338.0.0}
     - categories: system, tools
       defaultVersionName: 5.9.1
       description: QT is a cross-platform application framework that is used for developing
@@ -1473,13 +1485,17 @@ software_modules:
       - {description: Mono is an open source implementation of Microsoft's .NET Framework
           based on the ECMA standards for C# and the Common Language Runtime., markedDefault: false,
         versionName: 5.20.1.19}
-    - categories: system, libs
-      defaultVersionName: 1.1.7
-      description: A fast compressor/decompressor.
-      package: snappy
-      url: https://github.com/google/snappy
+    - categories: system, benchmark
+      defaultVersionName: '3.2'
+      description: 'Heavy Peer To Peer: a MPI based benchmark for network diagnostic.'
+      package: hp2p
+      url: https://github.com/cea-hpc/hp2p
       versions:
-      - {description: A fast compressor/decompressor., markedDefault: false, versionName: 1.1.7}
+      - description: 'Heavy Peer To Peer: a MPI based benchmark for network diagnostic.'
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '3.2'
     - categories: system, containers
       defaultVersionName: 1.0.0rc2
       description: libnvidia-container is a library and a simple CLI utility to automatically
@@ -1493,19 +1509,16 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.0.0rc2
-    - categories: system, resource monitoring
-      defaultVersionName: 1.1.0
-      description: Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA
-        GPUs.
-      package: nvtop
-      url: https://github.com/Syllo/nvtop
+    - categories: system, libs
+      defaultVersionName: 2.3.3
+      description: The libseccomp library provides an easy to use, platform independent,
+        interface to the Linux Kernel's syscall filtering mechanism..
+      package: libseccomp
+      url: https://github.com/seccomp/libseccomp
       versions:
-      - description: Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA
-          GPUs.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 1.1.0
+      - {description: 'The libseccomp library provides an easy to use, platform independent,
+          interface to the Linux Kernel''s syscall filtering mechanism..', markedDefault: false,
+        versionName: 2.3.3}
     - categories: system, database
       defaultVersionName: '0.9998'
       description: ODBC driver for SQLite
@@ -1540,6 +1553,20 @@ software_modules:
       versions:
       - {description: A microbenchmark support library, markedDefault: false, versionName: 1.2.0}
     - categories: system, libs
+      defaultVersionName: 1.6.29
+      description: libpng is the official PNG reference library. It supports almost
+        all PNG features, is extensible, and has been extensively tested for over
+        20 years.
+      package: libpng
+      url: http://libpng.sourceforge.net
+      versions:
+      - {description: 'libpng is the official PNG reference library. It supports almost
+          all PNG features, is extensible, and has been extensively tested for over
+          20 years.', markedDefault: false, versionName: 1.2.57}
+      - {description: 'libpng is the official PNG reference library. It supports almost
+          all PNG features, is extensible, and has been extensively tested for over
+          20 years.', markedDefault: false, versionName: 1.6.29}
+    - categories: system, libs
       defaultVersionName: 2.1.14
       description: talloc is a hierarchical, reference counted memory pool system
         with destructors.
@@ -1548,17 +1575,6 @@ software_modules:
       versions:
       - {description: 'talloc is a hierarchical, reference counted memory pool system
           with destructors.', markedDefault: false, versionName: 2.1.14}
-    - categories: system, libs
-      defaultVersionName: 0.9.1
-      description: libxkbcommon is a keyboard keymap compiler and support library
-        which processes a reduced subset of keymaps as defined by the XKB (X Keyboard
-        Extension) specification.
-      package: libxkbcommon
-      url: https://github.com/xkbcommon/libxkbcommon
-      versions:
-      - {description: libxkbcommon is a keyboard keymap compiler and support library
-          which processes a reduced subset of keymaps as defined by the XKB (X Keyboard
-          Extension) specification., markedDefault: false, versionName: 0.9.1}
     - categories: system, file management
       defaultVersionName: 2.8.0
       description: rmlint finds space waste and other broken things on your filesystem
@@ -1608,15 +1624,15 @@ software_modules:
       - {description: 'PyGObject is a Python package which provides bindings for GObject
           based libraries such as GTK, GStreamer, WebKitGTK, GLib, GIO and many more.',
         markedDefault: false, versionName: 3.32.2_py36}
-    - categories: system, compression
-      defaultVersionName: '2.4'
-      description: A parallel implementation of gzip for modern multi-processor, multi-core
-        machines.
-      package: pigz
-      url: https://zlib.net/pigz/
+    - categories: system, scm
+      defaultVersionName: '8.20210622'
+      description: git-annex allows managing files with git, without checking the
+        file contents into git.
+      package: git-annex
+      url: https://git-annex.branchable.com/
       versions:
-      - {description: 'A parallel implementation of gzip for modern multi-processor,
-          multi-core machines.', markedDefault: false, versionName: '2.4'}
+      - {description: 'git-annex allows managing files with git, without checking
+          the file contents into git.', markedDefault: false, versionName: '8.20210622'}
     - categories: system, libs
       defaultVersionName: 1.4.4
       description: JSON-GLib is a library providing serialization and deserialization
@@ -1636,14 +1652,15 @@ software_modules:
       versions:
       - {description: Tools for working with Chromium development., markedDefault: false,
         versionName: '20200731'}
-    - categories: system, libs
-      defaultVersionName: 2.12.4
-      description: Fontconfig is a library for configuring and customizing font access.
-      package: fontconfig
-      url: https://www.freedesktop.org/wiki/Software/fontconfig
+    - categories: system, compression
+      defaultVersionName: 1.5.1
+      description: libzip is a C library for reading, creating, and modifying zip
+        archives.
+      package: libzip
+      url: http://libzip.org
       versions:
-      - {description: Fontconfig is a library for configuring and customizing font
-          access., markedDefault: false, versionName: 2.12.4}
+      - {description: 'libzip is a C library for reading, creating, and modifying
+          zip archives.', markedDefault: false, versionName: 1.5.1}
     - categories: system, libs
       defaultVersionName: 0.3.111
       description: libaio provides the Linux-native API for async I/O.
