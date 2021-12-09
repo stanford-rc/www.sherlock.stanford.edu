@@ -304,7 +304,7 @@ software_modules:
           decryption, signatures, password hashing and more.', markedDefault: false,
         versionName: 1.0.18}
     - categories: system, file transfer
-      defaultVersionName: 0.10.1
+      defaultVersionName: '0.11'
       description: mpiFileUtils is a suite of MPI-based tools to manage large datasets,
         which may vary from large directory trees to large files.
       package: mpifileutils
@@ -316,6 +316,12 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 0.10.1
+      - description: mpiFileUtils is a suite of MPI-based tools to manage large datasets,
+          which may vary from large directory trees to large files.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '0.11'
     - categories: system, file transfer
       defaultVersionName: 1.55.1
       description: 'Rclone is a command line program to sync files and directories
@@ -1704,7 +1710,7 @@ software_modules:
       - {description: 'ORBit2 is a CORBA 2.4-compliant Object Request Broker (ORB)
           featuring mature C, C++ and Python bindings.', markedDefault: false, versionName: 2.14.19}
     - categories: system, compression
-      defaultVersionName: 3.4.2
+      defaultVersionName: 3.5.2
       description: The libarchive project develops a portable, efficient C library
         that can read and write streaming archives in a variety of formats.
       package: libarchive
@@ -1716,6 +1722,9 @@ software_modules:
       - {description: 'The libarchive project develops a portable, efficient C library
           that can read and write streaming archives in a variety of formats.', markedDefault: false,
         versionName: 3.4.2}
+      - {description: 'The libarchive project develops a portable, efficient C library
+          that can read and write streaming archives in a variety of formats.', markedDefault: false,
+        versionName: 3.5.2}
     - categories: system, libs
       defaultVersionName: 3.2.1
       description: libffi is a portable Foreign Function Interface library.
@@ -4386,16 +4395,26 @@ software_modules:
           data format., markedDefault: false, versionName: 3.1.0_py36}
       - {description: The h5py package is a Pythonic interface to the HDF5 binary
           data format., markedDefault: true, versionName: 2.7.1_py27}
-    - categories: devel, language
-      defaultVersionName: 8.6.5
-      description: Haskell is a statically typed, purely functional programming language
-        with type inference and lazy evaluation.
-      package: haskell
-      url: https://www.haskell.org/
+    - categories: devel, lib
+      defaultVersionName: '2019'
+      description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
+        C++ library for shared-memory parallel programming and heterogeneous computing
+        (intra-node distributed memory programming).
+      package: tbb
+      url: https://software.intel.com/en-us/intel-tbb
       versions:
-      - {description: 'Haskell is a statically typed, purely functional programming
-          language with type inference and lazy evaluation.', markedDefault: false,
-        versionName: 8.6.5}
+      - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
+          C++ library for shared-memory parallel programming and heterogeneous computing
+          (intra-node distributed memory programming)., markedDefault: false, versionName: 2017.u2}
+      - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
+          C++ library for shared-memory parallel programming and heterogeneous computing
+          (intra-node distributed memory programming)., markedDefault: false, versionName: 2018.u1}
+      - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
+          C++ library for shared-memory parallel programming and heterogeneous computing
+          (intra-node distributed memory programming)., markedDefault: false, versionName: '2018'}
+      - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
+          C++ library for shared-memory parallel programming and heterogeneous computing
+          (intra-node distributed memory programming)., markedDefault: false, versionName: '2019'}
     - categories: devel, data
       defaultVersionName: 6.6.2
       description: NCL is a free interpreted language designed specifically for scientific
@@ -4491,16 +4510,15 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 1.8.1
-    - categories: devel, lib
-      defaultVersionName: 4.2.2
-      description: ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous
-        messaging library, aimed at use in distributed or concurrent applications.
-      package: zeromq
-      url: http://zeromq.org
+    - categories: devel, data
+      defaultVersionName: 4.0.1
+      description: Redis is an open source, in-memory data structure store, used as
+        a database, cache and message broker.
+      package: redis
+      url: https://redis.io
       versions:
-      - {description: 'ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance
-          asynchronous messaging library, aimed at use in distributed or concurrent
-          applications.', markedDefault: false, versionName: 4.2.2}
+      - {description: 'Redis is an open source, in-memory data structure store, used
+          as a database, cache and message broker.', markedDefault: false, versionName: 4.0.1}
     - categories: devel, debug
       defaultVersionName: 3.14.0
       description: Valgrind is an instrumentation framework for building dynamic analysis
@@ -4701,19 +4719,23 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 3.10.3
-    - categories: devel, language
-      defaultVersionName: 5.4.1_py27
-      description: IPython is a command shell for interactive computing in multiple
-        programming languages, originally developed for the Python programming language.
-      package: py-ipython
-      url: https://ipython.org
+    - categories: devel, data
+      defaultVersionName: 3.4.0_py27
+      description: Python bindings for Google's Protocol Buffers data interchange
+        format.
+      package: py-protobuf
+      url: https://developers.google.com/protocol-buffers
       versions:
-      - {description: 'IPython is a command shell for interactive computing in multiple
-          programming languages, originally developed for the Python programming language.',
-        markedDefault: false, versionName: 6.1.0_py36}
-      - {description: 'IPython is a command shell for interactive computing in multiple
-          programming languages, originally developed for the Python programming language.',
-        markedDefault: true, versionName: 5.4.1_py27}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: false, versionName: 3.4.0_py36}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: false, versionName: 3.6.1_py27}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: false, versionName: 3.6.1_py36}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: false, versionName: 3.15.8_py36}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: true, versionName: 3.4.0_py27}
     - categories: devel, data analytics
       defaultVersionName: 2.3.0
       description: Apache Spark™ is a unified analytics engine for large-scale data
@@ -4954,6 +4976,15 @@ software_modules:
           software., markedDefault: false, versionName: 1.35.0}
       - {description: A language empowering everyone to build reliable and efficient
           software., markedDefault: false, versionName: 1.56.1}
+    - categories: devel, data
+      defaultVersionName: 4.8.0
+      description: The NCO toolkit manipulates and analyzes data stored in netCDF-accessible
+        formats.
+      package: nco
+      url: http://nco.sourceforge.net/
+      versions:
+      - {description: The NCO toolkit manipulates and analyzes data stored in netCDF-accessible
+          formats., markedDefault: false, versionName: 4.8.0}
     - categories: devel, build
       defaultVersionName: 1.8.5
       description: Kerl is a tool to easily build and install Erlang/OTP instances.
@@ -4962,6 +4993,16 @@ software_modules:
       versions:
       - {description: Kerl is a tool to easily build and install Erlang/OTP instances.,
         markedDefault: false, versionName: 1.8.5}
+    - categories: devel, data
+      defaultVersionName: 1.12.1
+      description: h5utils is a set of utilities for visualization and conversion
+        of scientific data in the free, portable HDF5 format.
+      package: h5utils
+      url: http://ab-initio.mit.edu/wiki/index.php/H5utils
+      versions:
+      - {description: 'h5utils is a set of utilities for visualization and conversion
+          of scientific data in the free, portable HDF5 format.', markedDefault: false,
+        versionName: 1.12.1}
     - categories: devel, compiler
       defaultVersionName: 2.2.0
       description: AMD Optimizing C/C++ Compiler - AOCC is a highly optimized C, C++
@@ -4982,6 +5023,14 @@ software_modules:
       url: https://www.gnu.org/software/gdb/
       versions:
       - {description: GDB is the GNU Project debugger., markedDefault: false, versionName: 8.2.1}
+    - categories: devel, lib
+      defaultVersionName: 3.7.13
+      description: RabbitMQ is an open-source message broker.
+      package: rabbitmq
+      url: http://rabbitmq.com
+      versions:
+      - {description: RabbitMQ is an open-source message broker., markedDefault: false,
+        versionName: 3.7.13}
     - categories: devel, data
       defaultVersionName: 1.10.6
       description: HDF5 is a data model, library, and file format for storing and
@@ -5012,15 +5061,6 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 1.10.6
-    - categories: devel, data
-      defaultVersionName: 4.8.0
-      description: The NCO toolkit manipulates and analyzes data stored in netCDF-accessible
-        formats.
-      package: nco
-      url: http://nco.sourceforge.net/
-      versions:
-      - {description: The NCO toolkit manipulates and analyzes data stored in netCDF-accessible
-          formats., markedDefault: false, versionName: 4.8.0}
     - categories: devel, engine
       defaultVersionName: 8.4.371.22
       description: V8 is Google’s open source high-performance JavaScript and WebAssembly
@@ -5030,6 +5070,16 @@ software_modules:
       versions:
       - {description: 'V8 is Google’s open source high-performance JavaScript and
           WebAssembly engine, written in C++.', markedDefault: false, versionName: 8.4.371.22}
+    - categories: devel, lib
+      defaultVersionName: 4.2.2
+      description: ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous
+        messaging library, aimed at use in distributed or concurrent applications.
+      package: zeromq
+      url: http://zeromq.org
+      versions:
+      - {description: 'ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance
+          asynchronous messaging library, aimed at use in distributed or concurrent
+          applications.', markedDefault: false, versionName: 4.2.2}
     - categories: devel, language
       defaultVersionName: 2.2.2
       description: GNU Guile is the preferred extension system for the GNU Project,
@@ -5054,22 +5104,37 @@ software_modules:
       - {description: The Apache Hadoop software library is a framework that allows
           for the distributed processing of large data sets across clusters of computers
           using simple programming models., markedDefault: false, versionName: 3.1.0}
-    - categories: devel, language
-      defaultVersionName: 1.0.0_py27
-      description: Jupyter is a browser-based interactive notebook for programming,
-        mathematics, and data science. It supports a number of languages via plugins.
-      package: py-jupyter
-      url: https://jupyter.org
+    - categories: devel, mpi
+      defaultVersionName: 2.8.1
+      description: Mellanox HPC-X toolkit is a comprehensive software package that
+        includes MPI and SHMEM/PGAS communications libraries.
+      package: hpcx
+      url: https://www.mellanox.com/products/software/hpc-x
       versions:
-      - {description: 'Jupyter is a browser-based interactive notebook for programming,
-          mathematics, and data science. It supports a number of languages via plugins.',
-        markedDefault: false, versionName: 1.0.0_py36}
-      - {description: 'Jupyter is a browser-based interactive notebook for programming,
-          mathematics, and data science. It supports a number of languages via plugins.',
-        markedDefault: false, versionName: 1.0.0_py39}
-      - {description: 'Jupyter is a browser-based interactive notebook for programming,
-          mathematics, and data science. It supports a number of languages via plugins.',
-        markedDefault: true, versionName: 1.0.0_py27}
+      - description: Mellanox HPC-X toolkit is a comprehensive software package that
+          includes MPI and SHMEM/PGAS communications libraries.
+        family: mpi
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 2.6.0
+      - description: Mellanox HPC-X toolkit is a comprehensive software package that
+          includes MPI and SHMEM/PGAS communications libraries.
+        family: mpi
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 2.7.0
+      - description: Mellanox HPC-X toolkit is a comprehensive software package that
+          includes MPI and SHMEM/PGAS communications libraries.
+        family: mpi
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 2.8.1
     - categories: devel, language
       defaultVersionName: 9.0.176
       description: CUDA is a parallel computing platform and application programming
@@ -5199,26 +5264,16 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 9.0.176
-    - categories: devel, lib
-      defaultVersionName: '2019'
-      description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
-        C++ library for shared-memory parallel programming and heterogeneous computing
-        (intra-node distributed memory programming).
-      package: tbb
-      url: https://software.intel.com/en-us/intel-tbb
+    - categories: devel, build
+      defaultVersionName: 1.8.0
+      description: Bazelisk is a wrapper for Bazel written in Go.
+      package: bazelisk
+      url: https://github.com/bazelbuild/bazelisk
       versions:
-      - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
-          C++ library for shared-memory parallel programming and heterogeneous computing
-          (intra-node distributed memory programming)., markedDefault: false, versionName: 2017.u2}
-      - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
-          C++ library for shared-memory parallel programming and heterogeneous computing
-          (intra-node distributed memory programming)., markedDefault: false, versionName: 2018.u1}
-      - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
-          C++ library for shared-memory parallel programming and heterogeneous computing
-          (intra-node distributed memory programming)., markedDefault: false, versionName: '2018'}
-      - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
-          C++ library for shared-memory parallel programming and heterogeneous computing
-          (intra-node distributed memory programming)., markedDefault: false, versionName: '2019'}
+      - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
+        markedDefault: false, versionName: 1.3.0}
+      - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
+        markedDefault: false, versionName: 1.8.0}
     - categories: devel, build
       defaultVersionName: 0.51.1_py36
       description: Meson is an open source build system meant to be both extremely
@@ -5229,33 +5284,6 @@ software_modules:
       - {description: 'Meson is an open source build system meant to be both extremely
           fast, and, even more importantly, as user friendly as possible.', markedDefault: false,
         versionName: 0.51.1_py36}
-    - categories: devel, data
-      defaultVersionName: 1.12.1
-      description: h5utils is a set of utilities for visualization and conversion
-        of scientific data in the free, portable HDF5 format.
-      package: h5utils
-      url: http://ab-initio.mit.edu/wiki/index.php/H5utils
-      versions:
-      - {description: 'h5utils is a set of utilities for visualization and conversion
-          of scientific data in the free, portable HDF5 format.', markedDefault: false,
-        versionName: 1.12.1}
-    - categories: devel, lib
-      defaultVersionName: 3.7.13
-      description: RabbitMQ is an open-source message broker.
-      package: rabbitmq
-      url: http://rabbitmq.com
-      versions:
-      - {description: RabbitMQ is an open-source message broker., markedDefault: false,
-        versionName: 3.7.13}
-    - categories: devel, data
-      defaultVersionName: 4.0.1
-      description: Redis is an open source, in-memory data structure store, used as
-        a database, cache and message broker.
-      package: redis
-      url: https://redis.io
-      versions:
-      - {description: 'Redis is an open source, in-memory data structure store, used
-          as a database, cache and message broker.', markedDefault: false, versionName: 4.0.1}
     - categories: devel, networking
       defaultVersionName: 1.10.0
       description: UCX is a communication library implementing high-performance messaging
@@ -5283,52 +5311,6 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.10.0
-    - categories: devel, lib
-      defaultVersionName: 1.10.0
-      description: CUB is a flexible library of cooperative threadblock primitives
-        and other utilities for CUDA kernel programming.
-      package: cub
-      url: https://nvlabs.github.io/cub/
-      versions:
-      - description: CUB is a flexible library of cooperative threadblock primitives
-          and other utilities for CUDA kernel programming.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 1.7.3
-      - description: CUB is a flexible library of cooperative threadblock primitives
-          and other utilities for CUDA kernel programming.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 1.10.0
-    - categories: devel, language
-      defaultVersionName: 2.7.13
-      description: Python is an interpreted, interactive, object-oriented programming
-        language.
-      package: python
-      url: https://www.python.org
-      versions:
-      - {description: 'Python is an interpreted, interactive, object-oriented programming
-          language.', help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
-        markedDefault: false, versionName: 3.6.1}
-      - {description: 'Python is an interpreted, interactive, object-oriented programming
-          language.', help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
-        markedDefault: false, versionName: 3.9.0}
-      - {description: 'Python is an interpreted, interactive, object-oriented programming
-          language.', help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
-        markedDefault: true, versionName: 2.7.13}
-    - categories: devel, lib
-      defaultVersionName: 1.10.1
-      description: Apache Ant is a Java library and command-line tool whose mission
-        is to drive processes described in build files as targets and extension points
-        dependent upon each other.
-      package: ant
-      url: https://ant.apache.org/
-      versions:
-      - {description: Apache Ant is a Java library and command-line tool whose mission
-          is to drive processes described in build files as targets and extension
-          points dependent upon each other., markedDefault: false, versionName: 1.10.1}
     - categories: devel, mpi
       defaultVersionName: '2019'
       description: Intel® MPI Library is a multi-fabric message passing library that
@@ -5364,31 +5346,48 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: '2019'
-    - categories: devel, lib
-      defaultVersionName: 1.76.0
-      description: Boost is a set of libraries for the C++ programming language that
-        provide support for tasks and structures such as linear algebra, pseudorandom
-        number generation, multithreading, image processing, regular expressions,
-        and unit testing.
-      package: boost
-      url: http://www.boost.org
+    - categories: devel, data
+      defaultVersionName: 3.4.0
+      description: Protocol Buffers (a.k.a., protobuf) are Google's language-neutral,
+        platform-neutral, extensible mechanism for serializing structured data.
+      package: protobuf
+      url: https://developers.google.com/protocol-buffers/
       versions:
-      - {description: 'Boost is a set of libraries for the C++ programming language
-          that provide support for tasks and structures such as linear algebra, pseudorandom
-          number generation, multithreading, image processing, regular expressions,
-          and unit testing.', markedDefault: false, versionName: 1.64.0}
-      - {description: 'Boost is a set of libraries for the C++ programming language
-          that provide support for tasks and structures such as linear algebra, pseudorandom
-          number generation, multithreading, image processing, regular expressions,
-          and unit testing.', markedDefault: false, versionName: 1.69.0}
-      - {description: 'Boost is a set of libraries for the C++ programming language
-          that provide support for tasks and structures such as linear algebra, pseudorandom
-          number generation, multithreading, image processing, regular expressions,
-          and unit testing.', markedDefault: false, versionName: 1.75.0}
-      - {description: 'Boost is a set of libraries for the C++ programming language
-          that provide support for tasks and structures such as linear algebra, pseudorandom
-          number generation, multithreading, image processing, regular expressions,
-          and unit testing.', markedDefault: false, versionName: 1.76.0}
+      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
+          platform-neutral, extensible mechanism for serializing structured data.',
+        markedDefault: false, versionName: 3.4.0}
+    - categories: devel, lib
+      defaultVersionName: 0.3.0
+      description: libcircle is an API for distributing embarrassingly parallel workloads
+        using self-stabilization.
+      package: libcircle
+      url: https://github.com/hpc/libcircle
+      versions:
+      - description: libcircle is an API for distributing embarrassingly parallel
+          workloads using self-stabilization.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 0.3.0
+    - categories: devel, lib
+      defaultVersionName: 1.10.0
+      description: CUB is a flexible library of cooperative threadblock primitives
+        and other utilities for CUDA kernel programming.
+      package: cub
+      url: https://nvlabs.github.io/cub/
+      versions:
+      - description: CUB is a flexible library of cooperative threadblock primitives
+          and other utilities for CUDA kernel programming.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.7.3
+      - description: CUB is a flexible library of cooperative threadblock primitives
+          and other utilities for CUDA kernel programming.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.10.0
     - categories: devel, parser
       defaultVersionName: 3.2.1
       description: Xerces-C++ is a validating XML parser written in a portable subset
@@ -5398,6 +5397,17 @@ software_modules:
       versions:
       - {description: Xerces-C++ is a validating XML parser written in a portable
           subset of C++., markedDefault: false, versionName: 3.2.1}
+    - categories: devel, lib
+      defaultVersionName: 1.10.1
+      description: Apache Ant is a Java library and command-line tool whose mission
+        is to drive processes described in build files as targets and extension points
+        dependent upon each other.
+      package: ant
+      url: https://ant.apache.org/
+      versions:
+      - {description: Apache Ant is a Java library and command-line tool whose mission
+          is to drive processes described in build files as targets and extension
+          points dependent upon each other., markedDefault: false, versionName: 1.10.1}
     - categories: devel, data
       defaultVersionName: 1.3.1_py39
       description: pandas is an open source, BSD-licensed library providing high-performance,
@@ -5429,6 +5439,56 @@ software_modules:
       - {description: 'PHP (recursive acronym for PHP: Hypertext Preprocessor) is
           an open source general-purpose scripting language that is especially suited
           for web development.', markedDefault: false, versionName: 7.3.0}
+    - categories: devel, lib
+      defaultVersionName: 1.0.4
+      description: The Light-weight Group Library provides methods for MPI codes to
+        quickly create and destroy process groups.
+      package: lwgrp
+      url: https://github.com/LLNL/lwgrp
+      versions:
+      - description: The Light-weight Group Library provides methods for MPI codes
+          to quickly create and destroy process groups.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.0.4
+    - categories: devel, lib
+      defaultVersionName: 1.76.0
+      description: Boost is a set of libraries for the C++ programming language that
+        provide support for tasks and structures such as linear algebra, pseudorandom
+        number generation, multithreading, image processing, regular expressions,
+        and unit testing.
+      package: boost
+      url: http://www.boost.org
+      versions:
+      - {description: 'Boost is a set of libraries for the C++ programming language
+          that provide support for tasks and structures such as linear algebra, pseudorandom
+          number generation, multithreading, image processing, regular expressions,
+          and unit testing.', markedDefault: false, versionName: 1.64.0}
+      - {description: 'Boost is a set of libraries for the C++ programming language
+          that provide support for tasks and structures such as linear algebra, pseudorandom
+          number generation, multithreading, image processing, regular expressions,
+          and unit testing.', markedDefault: false, versionName: 1.69.0}
+      - {description: 'Boost is a set of libraries for the C++ programming language
+          that provide support for tasks and structures such as linear algebra, pseudorandom
+          number generation, multithreading, image processing, regular expressions,
+          and unit testing.', markedDefault: false, versionName: 1.75.0}
+      - {description: 'Boost is a set of libraries for the C++ programming language
+          that provide support for tasks and structures such as linear algebra, pseudorandom
+          number generation, multithreading, image processing, regular expressions,
+          and unit testing.', markedDefault: false, versionName: 1.76.0}
+    - categories: devel, language
+      defaultVersionName: 5.3.4
+      description: Lua is a powerful, efficient, lightweight, embeddable scripting
+        language. It supports procedural programming, object-oriented programming,
+        functional programming, data-driven programming, and data description.
+      package: lua
+      url: https://www.lua.org
+      versions:
+      - {description: 'Lua is a powerful, efficient, lightweight, embeddable scripting
+          language. It supports procedural programming, object-oriented programming,
+          functional programming, data-driven programming, and data description.',
+        markedDefault: false, versionName: 5.3.4}
     - categories: devel, profiling
       defaultVersionName: 3.3.462
       description: AMD uProf is a performance analysis tool for applications.
@@ -5462,25 +5522,15 @@ software_modules:
           in C and C++ with scripting languages such as Perl, Python, Ruby, and Tcl.',
         markedDefault: false, versionName: 3.0.12}
     - categories: devel, language
-      defaultVersionName: 5.3.4
-      description: Lua is a powerful, efficient, lightweight, embeddable scripting
-        language. It supports procedural programming, object-oriented programming,
-        functional programming, data-driven programming, and data description.
-      package: lua
-      url: https://www.lua.org
+      defaultVersionName: 8.6.5
+      description: Haskell is a statically typed, purely functional programming language
+        with type inference and lazy evaluation.
+      package: haskell
+      url: https://www.haskell.org/
       versions:
-      - {description: 'Lua is a powerful, efficient, lightweight, embeddable scripting
-          language. It supports procedural programming, object-oriented programming,
-          functional programming, data-driven programming, and data description.',
-        markedDefault: false, versionName: 5.3.4}
-    - categories: devel, language
-      defaultVersionName: 2.4.3
-      description: LuaRocks is the package manager for Lua modules.
-      package: luarocks
-      url: https://luarocks.org/
-      versions:
-      - {description: LuaRocks is the package manager for Lua modules., markedDefault: false,
-        versionName: 2.4.3}
+      - {description: 'Haskell is a statically typed, purely functional programming
+          language with type inference and lazy evaluation.', markedDefault: false,
+        versionName: 8.6.5}
     - categories: devel, data
       defaultVersionName: 0.13.3
       description: Hiredis is a minimalistic C client library for the Redis database.
@@ -5489,6 +5539,14 @@ software_modules:
       versions:
       - {description: Hiredis is a minimalistic C client library for the Redis database.,
         markedDefault: false, versionName: 0.13.3}
+    - categories: devel, language
+      defaultVersionName: 2.4.3
+      description: LuaRocks is the package manager for Lua modules.
+      package: luarocks
+      url: https://luarocks.org/
+      versions:
+      - {description: LuaRocks is the package manager for Lua modules., markedDefault: false,
+        versionName: 2.4.3}
     - categories: devel, language
       defaultVersionName: 1.8.0_131
       description: Java is a general-purpose computer programming language that is
@@ -5581,6 +5639,65 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 1.30.0
+    - categories: devel, lib
+      defaultVersionName: 0.3.1_py36
+      description: schwimmbad provides a uniform interface to parallel processing
+        pools and enables switching easily between local development (e.g., serial
+        processing or with multiprocessing) and deployment on a cluster or supercomputer
+        (via, e.g., MPI or JobLib).
+      package: py-schwimmbad
+      url: http://scikit-image.org/
+      versions:
+      - description: schwimmbad provides a uniform interface to parallel processing
+          pools and enables switching easily between local development (e.g., serial
+          processing or with multiprocessing) and deployment on a cluster or supercomputer
+          (via, e.g., MPI or JobLib).
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 0.3.1_py36
+    - categories: devel, lib
+      defaultVersionName: 0.17.2_py36
+      description: scikit-image is a collection of algorithms for image processing.
+      package: py-scikit-image
+      url: http://scikit-image.org/
+      versions:
+      - {description: scikit-image is a collection of algorithms for image processing.,
+        markedDefault: false, versionName: 0.13.0_py27}
+      - {description: scikit-image is a collection of algorithms for image processing.,
+        markedDefault: false, versionName: 0.14.0_py27}
+      - {description: scikit-image is a collection of algorithms for image processing.,
+        markedDefault: false, versionName: 0.15.0_py27}
+      - {description: scikit-image is a collection of algorithms for image processing.,
+        markedDefault: false, versionName: 0.15.0_py36}
+      - {description: scikit-image is a collection of algorithms for image processing.,
+        markedDefault: false, versionName: 0.17.2_py36}
+    - categories: devel, language
+      defaultVersionName: 5.4.1_py27
+      description: IPython is a command shell for interactive computing in multiple
+        programming languages, originally developed for the Python programming language.
+      package: py-ipython
+      url: https://ipython.org
+      versions:
+      - {description: 'IPython is a command shell for interactive computing in multiple
+          programming languages, originally developed for the Python programming language.',
+        markedDefault: false, versionName: 6.1.0_py36}
+      - {description: 'IPython is a command shell for interactive computing in multiple
+          programming languages, originally developed for the Python programming language.',
+        markedDefault: true, versionName: 5.4.1_py27}
+    - categories: devel, runtime
+      defaultVersionName: 1.3.2
+      description: StarPU is a unified runtime system that offers support for heterogeneous
+        multicore architectures
+      package: starpu
+      url: https://gforge.inria.fr/projects/starpu/
+      versions:
+      - description: StarPU is a unified runtime system that offers support for heterogeneous
+          multicore architectures
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.3.2
     - categories: devel, compiler
       defaultVersionName: 7.0.0
       description: The LLVM Project is a collection of modular and reusable compiler
@@ -5600,62 +5717,6 @@ software_modules:
       - {description: 'The LLVM Project is a collection of modular and reusable compiler
           and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
         markedDefault: false, versionName: 7.0.0}
-    - categories: devel, lib
-      defaultVersionName: 0.17.2_py36
-      description: scikit-image is a collection of algorithms for image processing.
-      package: py-scikit-image
-      url: http://scikit-image.org/
-      versions:
-      - {description: scikit-image is a collection of algorithms for image processing.,
-        markedDefault: false, versionName: 0.13.0_py27}
-      - {description: scikit-image is a collection of algorithms for image processing.,
-        markedDefault: false, versionName: 0.14.0_py27}
-      - {description: scikit-image is a collection of algorithms for image processing.,
-        markedDefault: false, versionName: 0.15.0_py27}
-      - {description: scikit-image is a collection of algorithms for image processing.,
-        markedDefault: false, versionName: 0.15.0_py36}
-      - {description: scikit-image is a collection of algorithms for image processing.,
-        markedDefault: false, versionName: 0.17.2_py36}
-    - categories: devel, data
-      defaultVersionName: 3.4.0
-      description: Protocol Buffers (a.k.a., protobuf) are Google's language-neutral,
-        platform-neutral, extensible mechanism for serializing structured data.
-      package: protobuf
-      url: https://developers.google.com/protocol-buffers/
-      versions:
-      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
-          platform-neutral, extensible mechanism for serializing structured data.',
-        markedDefault: false, versionName: 3.4.0}
-    - categories: devel, runtime
-      defaultVersionName: 1.3.2
-      description: StarPU is a unified runtime system that offers support for heterogeneous
-        multicore architectures
-      package: starpu
-      url: https://gforge.inria.fr/projects/starpu/
-      versions:
-      - description: StarPU is a unified runtime system that offers support for heterogeneous
-          multicore architectures
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 1.3.2
-    - categories: devel, lib
-      defaultVersionName: 0.3.1_py36
-      description: schwimmbad provides a uniform interface to parallel processing
-        pools and enables switching easily between local development (e.g., serial
-        processing or with multiprocessing) and deployment on a cluster or supercomputer
-        (via, e.g., MPI or JobLib).
-      package: py-schwimmbad
-      url: http://scikit-image.org/
-      versions:
-      - description: schwimmbad provides a uniform interface to parallel processing
-          pools and enables switching easily between local development (e.g., serial
-          processing or with multiprocessing) and deployment on a cluster or supercomputer
-          (via, e.g., MPI or JobLib).
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 0.3.1_py36
     - categories: devel, data analytics
       defaultVersionName: '0.3'
       description: 'Launching and controlling spark on HPC clusters '
@@ -5665,16 +5726,14 @@ software_modules:
       - {description: 'Launching and controlling spark on HPC clusters ', markedDefault: false,
         versionName: '0.3'}
     - categories: devel, lib
-      defaultVersionName: 0.1.0
-      description: CUTLASS is a collection of CUDA C++ template abstractions for implementing
-        high-performance matrix-multiplication (GEMM) at all levels and scales within
-        CUDA.
-      package: cutlass
-      url: https://github.com/NVIDIA/cutlass
+      defaultVersionName: 1.1.3
+      description: Datatype Compare (DTCMP) Library for sorting and ranking distributed
+        data using MPI.
+      package: dtcmp
+      url: https://github.com/llnl/dtcmp/
       versions:
-      - {description: CUTLASS is a collection of CUDA C++ template abstractions for
-          implementing high-performance matrix-multiplication (GEMM) at all levels
-          and scales within CUDA., markedDefault: false, versionName: 0.1.0}
+      - {description: Datatype Compare (DTCMP) Library for sorting and ranking distributed
+          data using MPI., markedDefault: false, versionName: 1.1.3}
     - categories: devel, compiler
       defaultVersionName: '2019'
       description: Intel Fortran Compiler, also known as ifort, is a group of Fortran
@@ -5695,16 +5754,16 @@ software_modules:
           Fortran compilers from Intel', family: compiler_f, markedDefault: false,
         versionName: '2019'}
     - categories: devel, lib
-      defaultVersionName: 2.1.12
-      description: The libevent API provides a mechanism to execute a callback function
-        when a specific event occurs on a file descriptor or after a timeout has been
-        reached.
-      package: libevent
-      url: https://libevent.org
+      defaultVersionName: 0.1.0
+      description: CUTLASS is a collection of CUDA C++ template abstractions for implementing
+        high-performance matrix-multiplication (GEMM) at all levels and scales within
+        CUDA.
+      package: cutlass
+      url: https://github.com/NVIDIA/cutlass
       versions:
-      - {description: The libevent API provides a mechanism to execute a callback
-          function when a specific event occurs on a file descriptor or after a timeout
-          has been reached., markedDefault: false, versionName: 2.1.12}
+      - {description: CUTLASS is a collection of CUDA C++ template abstractions for
+          implementing high-performance matrix-multiplication (GEMM) at all levels
+          and scales within CUDA., markedDefault: false, versionName: 0.1.0}
     - categories: devel, build
       defaultVersionName: 3.20.3
       description: CMake is an extensible, open-source system that manages the build
@@ -5724,64 +5783,49 @@ software_modules:
       - {description: 'CMake is an extensible, open-source system that manages the
           build process in an operating system and in a compiler-independent manner.',
         markedDefault: false, versionName: 3.20.3}
-    - categories: devel, data
-      defaultVersionName: 3.4.0_py27
-      description: Python bindings for Google's Protocol Buffers data interchange
-        format.
-      package: py-protobuf
-      url: https://developers.google.com/protocol-buffers
+    - categories: devel, lib
+      defaultVersionName: 2.1.12
+      description: The libevent API provides a mechanism to execute a callback function
+        when a specific event occurs on a file descriptor or after a timeout has been
+        reached.
+      package: libevent
+      url: https://libevent.org
       versions:
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: false, versionName: 3.4.0_py36}
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: false, versionName: 3.6.1_py27}
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: false, versionName: 3.6.1_py36}
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: false, versionName: 3.15.8_py36}
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: true, versionName: 3.4.0_py27}
-    - categories: devel, mpi
-      defaultVersionName: 2.8.1
-      description: Mellanox HPC-X toolkit is a comprehensive software package that
-        includes MPI and SHMEM/PGAS communications libraries.
-      package: hpcx
-      url: https://www.mellanox.com/products/software/hpc-x
+      - {description: The libevent API provides a mechanism to execute a callback
+          function when a specific event occurs on a file descriptor or after a timeout
+          has been reached., markedDefault: false, versionName: 2.1.12}
+    - categories: devel, language
+      defaultVersionName: 2.7.13
+      description: Python is an interpreted, interactive, object-oriented programming
+        language.
+      package: python
+      url: https://www.python.org
       versions:
-      - description: Mellanox HPC-X toolkit is a comprehensive software package that
-          includes MPI and SHMEM/PGAS communications libraries.
-        family: mpi
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 2.6.0
-      - description: Mellanox HPC-X toolkit is a comprehensive software package that
-          includes MPI and SHMEM/PGAS communications libraries.
-        family: mpi
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 2.7.0
-      - description: Mellanox HPC-X toolkit is a comprehensive software package that
-          includes MPI and SHMEM/PGAS communications libraries.
-        family: mpi
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 2.8.1
-    - categories: devel, build
-      defaultVersionName: 1.8.0
-      description: Bazelisk is a wrapper for Bazel written in Go.
-      package: bazelisk
-      url: https://github.com/bazelbuild/bazelisk
+      - {description: 'Python is an interpreted, interactive, object-oriented programming
+          language.', help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
+        markedDefault: false, versionName: 3.6.1}
+      - {description: 'Python is an interpreted, interactive, object-oriented programming
+          language.', help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
+        markedDefault: false, versionName: 3.9.0}
+      - {description: 'Python is an interpreted, interactive, object-oriented programming
+          language.', help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
+        markedDefault: true, versionName: 2.7.13}
+    - categories: devel, language
+      defaultVersionName: 1.0.0_py27
+      description: Jupyter is a browser-based interactive notebook for programming,
+        mathematics, and data science. It supports a number of languages via plugins.
+      package: py-jupyter
+      url: https://jupyter.org
       versions:
-      - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
-        markedDefault: false, versionName: 1.3.0}
-      - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
-        markedDefault: false, versionName: 1.8.0}
+      - {description: 'Jupyter is a browser-based interactive notebook for programming,
+          mathematics, and data science. It supports a number of languages via plugins.',
+        markedDefault: false, versionName: 1.0.0_py36}
+      - {description: 'Jupyter is a browser-based interactive notebook for programming,
+          mathematics, and data science. It supports a number of languages via plugins.',
+        markedDefault: false, versionName: 1.0.0_py39}
+      - {description: 'Jupyter is a browser-based interactive notebook for programming,
+          mathematics, and data science. It supports a number of languages via plugins.',
+        markedDefault: true, versionName: 1.0.0_py27}
     - categories: devel, compiler
       defaultVersionName: '110.81'
       description: Standard ML of New Jersey (abbreviated SML/NJ) is a compiler for
