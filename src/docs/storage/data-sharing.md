@@ -234,7 +234,7 @@ override a users ACE, usually to a less permissive setting.
 For complete documentation and examples on using NFSv4 ACLs, please see the
 manual page at [nfs4_acl(5)][url_nfs4_acl_man].
 
-!! warning "Default permissions on `$GROUP_HOME`"
+!!! warning "Default permissions on `$GROUP_HOME`"
 
     By default, the Unix permissions on the root directory `$GROUP_HOME`
     don't allow read nor traversal access for *others* (*ie.* any user not part
