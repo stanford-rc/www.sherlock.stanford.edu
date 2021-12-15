@@ -4,7 +4,7 @@ name: check
 # a push to a pull request triggers two events.
 on:
   workflow_dispatch:
-  pull_request:
+  pull_request_target:
     branches:
       - "*"
   push:
@@ -16,8 +16,6 @@ jobs:
 
   build:  # --------------------------------------------------------------------
     runs-on: ubuntu-20.04
-    env:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
@@ -27,7 +25,7 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: pip install git+https://${{ secrets.GH_TOKEN }}@github.com/squidfunk/mkdocs-material-insiders.git
       - run: pip install -r requirements.txt
       - run: mkdocs build --strict --verbose
 
