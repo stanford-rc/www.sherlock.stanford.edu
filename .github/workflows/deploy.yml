@@ -31,7 +31,7 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@$(cat .mkdocs-material.version)
       - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force
 
