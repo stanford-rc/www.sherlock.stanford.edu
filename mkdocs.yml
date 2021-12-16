@@ -2,7 +2,7 @@
 
 # Site information
 site_name:        Sherlock
-site_description: Sherlock Cluster documentation
+site_description: User documentation for Sherlock, Stanford's HPC cluster.
 site_author:      Kilian Cavalotti
 site_url:         https://www.sherlock.stanford.edu/
 
@@ -36,8 +36,10 @@ theme:
   language: en
 
   features:
+    - announce.dismiss
     - content.code.annotate
     - navigation.indexes
+   #- navigation.instant # instant loading doesn't work well with our landing page
     - navigation.sections
     - navigation.tabs
     - navigation.tabs.sticky
@@ -212,7 +214,11 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.snippets:
       check_paths: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
