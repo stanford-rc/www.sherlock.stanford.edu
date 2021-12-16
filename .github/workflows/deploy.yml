@@ -1,5 +1,4 @@
 name: deploy
-
 on:
   workflow_dispatch:
   push:
@@ -11,12 +10,13 @@ on:
       - 'includes/**'
       - 'overrides/**'
       - 'src/**'
-      
+
+
 jobs:
 
   deploy:
-    if: github.event.repository.fork == false
     runs-on: ubuntu-latest
+    if: github.event.repository.fork == false
 
     env:
       GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
@@ -27,14 +27,16 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-          cache: 'pip'
-      - run: echo "MKDOCS_MATERIAL_VERSION=$(cat .mkdocs-material.version)" >> $GITHUB_ENV
-      - run: |
-          pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@${MKDOCS_MATERIAL_VERSION}
-          pip install -r requirements.txt
-          mkdocs gh-deploy --force
-       
-      - uses: iRoachie/slack-github-actions@v2.3.0
+      - uses: actions/cache@v2
+        with:
+          key: ${{ github.ref }}
+          path: .cache
+      - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: pip install -r requirements.txt
+      - run: mkdocs gh-deploy --force
+
+      - name: notification
+        uses: iRoachie/slack-github-actions@v2.3.0
         if: ${{ always() }}
         with:
           status: ${{ job.status }}
