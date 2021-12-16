@@ -35,11 +35,13 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - id: getfiles
         run: |
           echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep '.yml' | xargs)"
       - uses: ibiqlik/action-yamllint@v3
-        if: ${{ steps.getfiles.outputs.files != '' }}
+        #if: ${{ steps.getfiles.outputs.files != '' }}
         with:
           file_or_dir: ${{ steps.getfiles.outputs.files }} 
           config_file: .yamllint
@@ -49,11 +51,13 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - id: getfiles
         run: |
           echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep '.md' | xargs)"
       - uses: nosborn/github-action-markdown-cli@v1.1.1
-        if: ${{ steps.getfiles.outputs.files != '' }}
+        #if: ${{ steps.getfiles.outputs.files != '' }}
         with:
           files: ${{ steps.getfiles.outputs.files }} 
           config_file: .markdownlintrc
