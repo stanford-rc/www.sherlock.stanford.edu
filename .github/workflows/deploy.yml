@@ -31,14 +31,11 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: echo "MKDOCS_MATERIAL_VERSION=$(cat .mkdocs-material.version)" >> $GITHUB_ENV
-      - run: | 
-          pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@${MKDOCS_MATERIAL_VERSION}
-          pip install -r requirements.txt
-          mkdocs gh-deploy --force
+      - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: pip install -r requirements.txt
+      - run: mkdocs gh-deploy --force
 
-      - name: notification
-        uses: iRoachie/slack-github-actions@v2.3.0
+      - uses: iRoachie/slack-github-actions@v2.3.0
         if: ${{ always() }}
         with:
           status: ${{ job.status }}
