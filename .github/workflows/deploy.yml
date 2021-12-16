@@ -12,12 +12,8 @@ on:
       - 'overrides/**'
       - 'src/**'
       
-env:
-  PYTHON_VERSION: 3.x
-
 jobs:
   deploy:
-    name: Deploy site
     if: github.event.repository.fork == false
     runs-on: ubuntu-latest
 
@@ -26,28 +22,18 @@ jobs:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        
-      - name: Set up Python runtime
-        uses: actions/setup-python@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
         with:
-          python-version: ${{ env.PYTHON_VERSION }}
+          python-version: 3.x
           cache: 'pip'
-         
-      - name: Set MkDocs Material version
-        run: echo "MKDOCS_MATERIAL_VERSION=$(cat .mkdocs-material.version)" >> $GITHUB_ENV
-        
-      - name: Install dependencies
-        run: |
+      - run: echo "MKDOCS_MATERIAL_VERSION=$(cat .mkdocs-material.version)" >> $GITHUB_ENV
+      - run: |
           pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@${{ env. MKDOCS_MATERIAL_VERSION }}
           pip install -r requirements.txt
-          
-      - name: Build and deploy site
-        run: mkdocs gh-deploy --force
-        
-      - name: Notify
-        uses: iRoachie/slack-github-actions@v2.3.0
+          mkdocs gh-deploy --force
+       
+      - uses: iRoachie/slack-github-actions@v2.3.0
         if: ${{ always() }}
         with:
           status: ${{ job.status }}
