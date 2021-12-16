@@ -27,7 +27,6 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-          cache: 'pip'
       - run: echo "MKDOCS_MATERIAL_VERSION=$(cat .mkdocs-material.version)" >> $GITHUB_ENV
       - run: |
           pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@${MKDOCS_MATERIAL_VERSION}
