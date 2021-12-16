@@ -35,7 +35,8 @@ jobs:
       - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force
 
-      - uses: iRoachie/slack-github-actions@v2.3.0
+      - name: notification
+        uses: iRoachie/slack-github-actions@v2.3.0
         if: ${{ always() }}
         with:
           status: ${{ job.status }}
