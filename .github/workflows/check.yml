@@ -16,15 +16,17 @@ jobs:
 
   build:  # --------------------------------------------------------------------
     runs-on: ubuntu-20.04
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
           cache: 'pip'
-      - run: echo "MKDOCS_MATERIAL_VERSION=$(cat .mkdocs-material.version)" >> $GITHUB_ENV
+      - run: echo "MKM_VER=$(cat .mkdocs-material.version)" >> $GITHUB_ENV
       - run: |
-          pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@${MKDOCS_MATERIAL_VERSION}
+          pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@${MKM_VER}
           pip install -r requirements.txt
           mkdocs gh-deploy --force
 
@@ -33,13 +35,16 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - id: getfiles
         run: |
-          echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep '.yml' | xargs)"
+          echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} \
+                | grep '.yml' | xargs)"
       - uses: ibiqlik/action-yamllint@v3
-        if: ${{ steps.getfiles.outputs.files != '' }}
+        #if: ${{ steps.getfiles.outputs.files != '' }}
         with:
-          file_or_dir: ${{ steps.getfiles.outputs.files }} 
+          file_or_dir: ${{ steps.getfiles.outputs.files }}
           config_file: .yamllint
 
 
@@ -47,13 +52,16 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - id: getfiles
         run: |
-          echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep '.md' | xargs)"
+          echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} \
+                | grep '.md' | xargs)"
       - uses: nosborn/github-action-markdown-cli@v1.1.1
-        if: ${{ steps.getfiles.outputs.files != '' }}
+        #if: ${{ steps.getfiles.outputs.files != '' }}
         with:
-          files: ${{ steps.getfiles.outputs.files }} 
+          files: ${{ steps.getfiles.outputs.files }}
           config_file: .markdownlintrc
 
 
