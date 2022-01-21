@@ -142,7 +142,8 @@ We offer regular onboarding sessions for new Sherlock users.
 These one-hour sessions are a brief introduction to Sherlock's layout, its
 scheduler, the different file systems available on the cluster, as well as some
 job submission and software installation best practices for new users. They are
-a good intro course if you are new to Sherlock or HPC in general.
+a good intro course if you are new to Sherlock or HPC in general.  The on-boarding 
+session recording can be viewed [here][url_ob_video].
 
 
 
@@ -281,6 +282,7 @@ Here's what it looks like in motion:
 [url_zoom]:         //stanford.zoom.us
 [url_oh_zoom]:      //stanford.zoom.us/j/95962823750?pwd=cFM2U2ZRQ243Zkx0Ry83akdtWU9zUT09
 [url_ob_zoom]:      //stanford.zoom.us/j/97524291024?pwd=Q0g3b2wvSHhPaTdtOElGRVZFOCtqdz09
+[url_ob_video]:     https://youtu.be/iqq7GGqMRg8
 [url_calendar]:     //calendly.com/srcc-officehours/sherlock
 
 [url_sunet]:        //uit.stanford.edu/service/accounts/sunetids#services
