@@ -852,7 +852,7 @@ software_modules:
       - {description: exa is a replacement for ls written in Rust., markedDefault: false,
         versionName: 0.8.0}
     - categories: system, file transfer
-      defaultVersionName: 1.9.0_py36
+      defaultVersionName: 3.2.0_py39
       description: A command line wrapper over the Globus SDK for Python.
       package: py-globus-cli
       url: https://github.com/globus/globus-cli
@@ -863,6 +863,10 @@ software_modules:
         versionName: 1.9.0_py27}
       - {description: A command line wrapper over the Globus SDK for Python., markedDefault: false,
         versionName: 1.9.0_py36}
+      - {description: A command line wrapper over the Globus SDK for Python., markedDefault: false,
+        versionName: 3.2.0_py36}
+      - {description: A command line wrapper over the Globus SDK for Python., markedDefault: false,
+        versionName: 3.2.0_py39}
     - categories: system, containers
       defaultVersionName: 5.2.0
       description: PRoot is a user-space implementation of chroot, mount --bind, and
@@ -3762,8 +3766,11 @@ software_modules:
       package: bart
       url: https://mrirecon.github.io/bart/
       versions:
-      - {description: BART is a toolbox for Computational Magnetic Resonance Imaging.,
-        markedDefault: false, versionName: 0.7.00}
+      - description: BART is a toolbox for Computational Magnetic Resonance Imaging.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.7.00
     - categories: biology, cryo-em
       defaultVersionName: 4.11.5
       description: IMOD is a set of image processing, modeling and display programs
