@@ -4073,18 +4073,17 @@ software_modules:
           Sequencing platforms., markedDefault: false, versionName: 2.2.1_py36}
   - name: chemistry
     packages:
-    - categories: chemistry, quantum chemistry
-      defaultVersionName: '1.1'
-      description: GPU-accelerated Quantum ESPRESSO using CUDA FORTRAN
-      package: quantum-espresso_gpu
-      url: https://github.com/fspiga/qe-gpu
+    - categories: chemistry, cheminformatics
+      defaultVersionName: 2018.09.1_py27
+      description: RDKit is a collection of cheminformatics and machine-learning software
+        written in C++ and Python.
+      package: py-rdkit
+      url: http://www.rdkit.org
       versions:
-      - description: GPU-accelerated Quantum ESPRESSO using CUDA FORTRAN
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '1.1'
+      - {description: RDKit is a collection of cheminformatics and machine-learning
+          software written in C++ and Python., markedDefault: false, versionName: 2018.09.1_py36}
+      - {description: RDKit is a collection of cheminformatics and machine-learning
+          software written in C++ and Python., markedDefault: true, versionName: 2018.09.1_py27}
     - categories: chemistry, computational chemistry
       defaultVersionName: 2.0.3
       description: Libint computes molecular integrals.
@@ -4311,6 +4310,19 @@ software_modules:
       versions:
       - {description: A macromolecular superposition library., markedDefault: false,
         versionName: '1.4'}
+    - categories: chemistry, quantum chemistry
+      defaultVersionName: 2.9.7
+      description: OCEAN is a versatile and user-friendly package for calculating
+        core edge spectroscopy including excitonic effects.
+      package: ocean
+      url: http://monalisa.phys.washington.edu/OCEAN/index.html
+      versions:
+      - description: OCEAN is a versatile and user-friendly package for calculating
+          core edge spectroscopy including excitonic effects.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 2.9.7
     - categories: chemistry, molecular dynamics
       defaultVersionName: 7.1.1
       description: A high performance toolkit for molecular simulation.
@@ -4405,17 +4417,18 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 5.0.0
-    - categories: chemistry, cheminformatics
-      defaultVersionName: 2018.09.1_py27
-      description: RDKit is a collection of cheminformatics and machine-learning software
-        written in C++ and Python.
-      package: py-rdkit
-      url: http://www.rdkit.org
+    - categories: chemistry, quantum chemistry
+      defaultVersionName: '1.1'
+      description: GPU-accelerated Quantum ESPRESSO using CUDA FORTRAN
+      package: quantum-espresso_gpu
+      url: https://github.com/fspiga/qe-gpu
       versions:
-      - {description: RDKit is a collection of cheminformatics and machine-learning
-          software written in C++ and Python., markedDefault: false, versionName: 2018.09.1_py36}
-      - {description: RDKit is a collection of cheminformatics and machine-learning
-          software written in C++ and Python., markedDefault: true, versionName: 2018.09.1_py27}
+      - description: GPU-accelerated Quantum ESPRESSO using CUDA FORTRAN
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '1.1'
     - categories: chemistry, computational chemistry
       defaultVersionName: '6.8'
       description: NWChem is an ab initio computational chemistry software package
@@ -4822,17 +4835,13 @@ software_modules:
           format., markedDefault: false, versionName: 3.15.8_py36}
       - {description: Python bindings for Google's Protocol Buffers data interchange
           format., markedDefault: true, versionName: 3.4.0_py27}
-    - categories: devel, data analytics
-      defaultVersionName: 3.2.1
-      description: Apache Spark™ is a unified analytics engine for large-scale data
-        processing.
+    - defaultVersionName: 2.3.0
       package: spark
-      url: https://spark.apache.org
       versions:
-      - {markedDefault: false, versionName: 2.3.0}
       - {description: Apache Spark™ is a unified analytics engine for large-scale
           data processing., help: 'https://www.sherlock.stanford.edu/docs/software/using/spark',
         markedDefault: false, versionName: 3.2.1}
+      - {markedDefault: true, versionName: 2.3.0}
     - categories: devel, networking
       defaultVersionName: 1.11.1
       description: The Open Fabrics Interfaces (OFI) is a framework focused on exporting
@@ -5187,7 +5196,7 @@ software_modules:
           which features an implementation of the Scheme programming language.', markedDefault: false,
         versionName: 2.2.2}
     - categories: devel, data analytics
-      defaultVersionName: 3.3.1
+      defaultVersionName: 3.1.0
       description: The Apache Hadoop software library is a framework that allows for
         the distributed processing of large data sets across clusters of computers
         using simple programming models.
@@ -5196,10 +5205,10 @@ software_modules:
       versions:
       - {description: The Apache Hadoop software library is a framework that allows
           for the distributed processing of large data sets across clusters of computers
-          using simple programming models., markedDefault: false, versionName: 3.1.0}
+          using simple programming models., markedDefault: false, versionName: 3.3.1}
       - {description: The Apache Hadoop software library is a framework that allows
           for the distributed processing of large data sets across clusters of computers
-          using simple programming models., markedDefault: false, versionName: 3.3.1}
+          using simple programming models., markedDefault: true, versionName: 3.1.0}
     - categories: devel, mpi
       defaultVersionName: 2.8.1
       description: Mellanox HPC-X toolkit is a comprehensive software package that
