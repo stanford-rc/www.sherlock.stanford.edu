@@ -61,8 +61,8 @@ same PI group. User locations are only accessible by the user.
 | -------------- | ---------- | ------------ | ----------- | --------- |
 |`$HOME`         | directory  |        15 GB | n/a         | :octicons-infinity-16:  |
 |`$GROUP_HOME`   | directory  |         1 TB | n/a         | :octicons-infinity-16:  |
-|`$SCRATCH`      | directory  |       100 TB | 50 million  | [time limited][url_purge] |
-|`$GROUP_SCRATCH`| directory  |       100 TB | 50 million  | [time limited][url_purge] |
+|`$SCRATCH`      | directory  |       100 TB | 20 million  | [time limited][url_purge] |
+|`$GROUP_SCRATCH`| directory  |       100 TB | 20 million  | [time limited][url_purge] |
 |`$L_SCRATCH`    | n/a        |          n/a | n/a         | job lifetime  |
 |`$OAK`          | group      | amount purchased | function of the volume purchased | :octicons-infinity-16: |
 
@@ -100,8 +100,8 @@ $ sh_quota
 +---------------------------------------------------------------------------+
           HOME |   9.4GB /  15.0GB [||||||     62%] |      - /      - (  -%)
     GROUP_HOME | 562.6GB /   1.0TB [|||||      56%] |      - /      - (  -%)
-       SCRATCH |  65.0GB / 100.0TB [            0%] | 143.8K /  50.0M (  0%)
- GROUP_SCRATCH | 172.2GB / 100.0TB [            0%] |  53.4K /  50.0M (  0%)
+       SCRATCH |  65.0GB / 100.0TB [            0%] | 143.8K /  20.0M (  0%)
+ GROUP_SCRATCH | 172.2GB / 100.0TB [            0%] |  53.4K /  20.0M (  0%)
            OAK |  30.8TB / 240.0TB [|          12%] |   6.6M /  36.0M ( 18%)
 +---------------------------------------------------------------------------+
 ```
