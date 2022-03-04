@@ -287,6 +287,7 @@ Here's what it looks like in motion:
 [url_ob_zoom]:      //stanford.zoom.us/j/97524291024?pwd=Q0g3b2wvSHhPaTdtOElGRVZFOCtqdz09
 [url_ob_slides]:    //srcc.stanford.edu/sites/g/files/sbiybj10261/f/sherlock_onboarding-12-2021.pdf
 [url_ob_record]:    //youtu.be/iqq7GGqMRg8
+
 [url_calendar]:     //calendly.com/srcc-officehours/sherlock
 
 [url_sunet]:        //uit.stanford.edu/service/accounts/sunetids#services

@@ -15,7 +15,7 @@ odd, please [let us know][url_contact].
 
     One of the most helpful Google searches is `your_application sbatch`.  For
     example if you're having trouble submitting jobs or allocating resources
-    (CPUs, time, memory) with Cell Ranger, search for `cellranger sbatch` to
+    (CPUs, time, memory) with Cell Ranger, search for `cell ranger sbatch` to
     see how others have successfully run your application on a cluster.
 
 If you're facing issues you can't figure out, we're here to help. Feel free to

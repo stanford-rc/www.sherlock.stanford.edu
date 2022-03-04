@@ -71,7 +71,7 @@ below:
 | Type | Description | Recommended usage | Price range |
 |----- | ----------- | ----------------- | ----------- |
 | `CBASE` | Base configuration | Best per-core performance for serial applications, multi-threaded (OpenMP) and distributed (MPI) applications.<br/> **Most flexible and cost-effective configuration** | ++"$"++ |
-| `CPERF` | High-end configuration | Multi-threaded applications requiring higher numbers of CPU cores | ++"$$"++ |
+| `CPERF` | High-core count configuration | Multi-threaded applications requiring higher numbers of CPU cores | ++"$$"++ |
 | `CBIGMEM` | Large-memory configuration | Serial or multi-threaded applications requiring terabytes of memory (genome assembly, etc...) | ++"$$$$"++ |
 | `G4FP32` | Base GPU configuration | Single-precision (FP32) GPU-accelerated applications (CryoEM, MD...) with low GPU memory requirements | ++"$$"++ |
 | `G4FP64` | HPC GPU configuration | AI, ML/DL and GPU-accelerated HPC codes requiring double-precision (FP64) and larger amounts of GPU memory | ++"$$$"++ |
