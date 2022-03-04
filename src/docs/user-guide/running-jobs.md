@@ -180,7 +180,7 @@ Because it's a Python 3 script that uses some Numpy code, we need to load the py
 
 sbatch script:
 
-```#!/usr/bin/bash
+```shell
 #!/usr/bin/bash
 #SBATCH --job-name=test_job
 #SBATCH --output=test_job.%j.out
