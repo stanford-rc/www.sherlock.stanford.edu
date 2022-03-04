@@ -146,8 +146,7 @@ a good intro course if you are new to Sherlock or HPC in general.
 
 If you can't attend live on-boarding sessions, you can still take a look at the
 :fontawesome-regular-file-pdf: [on-boarding slides][url_ob_slides] as well as
-to this :fontawesome-brands-youtube: [previous session
-recording][url_ob_record].
+to this :fontawesome-brands-youtube: [session recording][url_ob_record].
 
 
 ### Office hours
