@@ -113,7 +113,7 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 | Characteristics   |   |
 | ----------------- | --- |
 | **Type**          | Parallel, high-performance Lustre file system |
-| **Quota**         | 100 TB / 50,000,000 inodes[^inodes] |
+| **Quota**         | 100 TB / 20,000,000 inodes[^inodes] |
 | **Snapshots**     | **NO** |
 | **Backups**       | **NO** |
 | **Purge policy**  | data not modified in the last {{ purge_days }} days are automatically purged |
@@ -224,7 +224,7 @@ automatic purges.
 | Characteristics   |     |
 | ----------------- | --- |
 | **Type**          | parallel, high-performance Lustre file system |
-| **Quota**         | 100 TB / 50,000,000 inodes[^inodes] |
+| **Quota**         | 100 TB / 20,000,000 inodes[^inodes] |
 | **Snapshots**     | **NO** |
 | **Backups**       | **NO** |
 | **Purge policy**  | data not accessed in the last {{ purge_days }} days are automatically purged |
