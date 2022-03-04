@@ -157,7 +157,72 @@ account.
 
 ## Batch jobs
 
---8<--- "includes/_wip.md"
+
+It's easy to to schedule batch jobs on Sherlock. A job is simply an instance of your program, for example your R, Python or Matlab script that is submitted to and executed by the scheduler (Slurm). When you submit a job with the sbatch command it's called a batch job and it will either run immediately or will pend (wait) in the queue.
+
+The length of time a job will pend is determined by several factors; how many other jobs are in the queue ahead or your job and how many resources your job is requesting are most the most important factors. One key principle when requesting resources is to always try to request as few resources as you need to get your job done. This will ensure your job pends in the queue for as little time as necessary. To get a rough idea of what resources are needed, you can profile your code/jobs in an [sdev session][url_sdev] in real-time with [`htop`][url_htop], [`nvtop`][url_nvtop], [`sacct`][url_sacct] etc. The basic concept is to tell the scheduler what resources your job needs and how long is should run. These resources are:
+
+**CPUs:** How many CPUs the program your are calling the in the sbatch script needs, unless it can utilize multiple CPUs at once you should request a single CPU. Check your code's documentation or try running in an interactive session with [`sdev`][url_sdev] and run htop if you are unsure.
+
+**GPUs:** If your code is GPU enabled, how many GPUs does your code need? Use the diagnostic tool [`nvtop`][url_nvtop] to see if your code is capable of running on multiple GPUs and how much GPU memory it's using in real-time.
+
+**memory (RAM):** How much memory your job will consume. Some things to consider, will it load a large file or matrix into memory? Does it consume a lot of memory on your laptop? Often the default memory is sufficient for many jobs.
+
+**time:** How long will it take for you code to run to completion?
+
+**partition:** What set of compute nodes on Sherlock will you run on, normal, gpu, owners, bigmem? Use the [`sh_part`][url_sh_part] command to see what partitions you are allowed to run on. The default partition on Sherlock is the normal partition.
+
+Next, you tell the scheduler what your job should should do: load modules and run your code. Note that any logic you can code into a bash script with the [bash scripting language][url_bash] can also be coded into an sbatch script.
+
+This example job, will run the Python script mycode.py for 10 minutes on the normal partition using 1 CPU and 8 GB of memory. To aid in debugging we are naming this job "test_job" and appending the Job ID (%j) to the two output files that Slurm creates when a job is run. The output files are written to the directory in which you launched your job in, you can also specify a different path. One file will contain any errors and the other will contain non-error output.
+
+Because it's a Python 3 script that uses some Numpy code, we need to load the python/3.6.1 and the py-numpy/1.19.2_py36 modules. The Python script is then called just as you would on the command line at the end of the sbatch script:
+
+sbatch script:
+
+```shell
+#!/usr/bin/bash
+#SBATCH --job-name=test_job
+#SBATCH --output=test_job.%j.out
+#SBATCH --error=test_job.%j.err
+#SBATCH --time=10:00
+#SBATCH -p normal
+#SBATCH -c 1
+#SBATCH --mem=8GB
+module load python/3.6.1
+module load py-numpy/1.19.2_py36
+python3 mycode.py
+```
+Create and edit the sbatch script with a [text editor][url_texteditors] like vim/nano or the [OnDemand file manager][url_filemanager]. Then save the file, in this example we call it "test.sbatch".
+
+Submit to the scheduler with the [`sbatch`][url_sbatch] command:
+
+```
+$sbatch test.sbatch
+```
+Monitor your job and job ID in the queue with the [squeue][url_squeue] command:
+
+```
+$squeue -u $USER
+   JOBID     PARTITION     NAME     USER    ST       TIME  NODES  NODELIST(REASON)
+   44915821    normal    test_job  <userID>  PD       0:00      1 (Priority)
+```
+
+Notice that the jobs state (ST) in pending (PD)
+
+Once the job starts to run that will chage to R:
+
+```
+$squeue -u $USER
+    JOBID     PARTITION     NAME     USER     ST      TIME  NODES   NODELIST(REASON)
+    44915854    normal test_job  <userID>     R	     0:10	  1     sh02-01n49
+```
+
+Here you can see it has been running (R) on the compute node sh02-01n49 for 10 seconds.  While your job is running you have ssh access to that
+node and can run diagnostic tools such as [`htop`][url_htop] and [`nvtop`][url_nvtop] in order to monitor your job's memory and CPU/GPU utilization in real-time.
+You can also manage this job based on the JobID assigned to it (44915854). For example the job can be cancelled with the [`scancel`][url_scancel] command.
+
+
 
 
 ## Available resources
@@ -489,6 +554,16 @@ restarts for 5 minutes, and so on, until it's properly `scancel`led.
 [url_partition]:/docs/glossary/#partition
 
 [url_sh_part]:  //news.sherlock.stanford.edu/posts/a-better-view-at-sherlock-s-resources
+[url_sdev]: /docs/user-guide/running-jobs/?h=sdev
+[url_filemanager]: /docs/user-guide/ondemand/?h=file+m#managing-files
+[url_htop]: https://htop.dev/
+[url_nvtop]: /docs/user-guide/gpu/?query=nv_top#advanced-options
+[url_sacct]: https://slurm.schedmd.com/sacct.html
+[url_texteditors]: /docs/getting-started/#text-editors
+[url_squeue]: https://slurm.schedmd.com/squeue.html
+[url_bash]: https://www.gnu.org/software/bash/manual/bash.html
+[url_scancel]: https://slurm.schedmd.com/scancel.html
+
 
 
 [comment]: #  (footnotes -----------------------------------------------------)
