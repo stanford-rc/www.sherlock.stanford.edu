@@ -285,7 +285,7 @@ $ rclone copy VanessaSherlockToBox:pancakes  /scratch/users/vsochat/pancakes
 ```
 
 There you go! If you want to interactively browse files, you can use the File
-Manager on the [Sherlock OnDemand](url_ondemand) interface.
+Manager on the [Sherlock OnDemand][url_ondemand] interface.
 
 
 

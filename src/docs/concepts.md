@@ -133,14 +133,14 @@ allow:
 
 :fontawesome-solid-times:{ .chk_no } **root access**: owner nodes on
   Sherlock are still managed by SRCC in accordance with Stanford's [Minimum
-Security Standards](url_minsec). Although users are welcome to install (or
+Security Standards][url_minsec]. Although users are welcome to install (or
 request) any software they may need, purchasing compute nodes on Sherlock does
 not allow `root` access to the nodes.
 
 :fontawesome-solid-times:{ .chk_no } **running permanent services**:
   permanent processes such as web servers or databases can only run on owner
-nodes through the scheduler, using [recurring](url_recurring) or
-[persistent](url_persistent). Purchasing compute nodes on Sherlock does not
+nodes through the scheduler, using [recurring][url_recurring] or
+[persistent][url_persistent]. Purchasing compute nodes on Sherlock does not
 provide a way to run anything that couldn't run on publicly-available nodes.
 
 :fontawesome-solid-times:{ .chk_no } **direct network connectivity** from the
@@ -157,13 +157,13 @@ components of purchased nodes cannot be changed, removed, swapped or upgraded
 during the nodes' service lifetime.
 
 :fontawesome-solid-times:{ .chk_no } **persistent local storage**: [local
-storage space](url_lscratch) provided on the compute nodes is only usable for
+storage space][url_lscratch] provided on the compute nodes is only usable for
 the duration of a job and cannot be used to store long-term data.
 
 :fontawesome-solid-times:{ .chk_no } **additional storage space**: purchasing
 compute nodes on Sherlock does not provide additional storage space. Please
 note that SRCC does offer the possibility for PIs to purchase their own storage
-space on [Oak](url_oak), for their long-term research data needs.
+space on [Oak][url_oak], for their long-term research data needs.
 
 
 ### Purchasing nodes
