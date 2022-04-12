@@ -104,25 +104,25 @@ nodes, along with everyone else.
 
 Benefits to owners include:
 
-- [x] **no wait time in queue** with immediate and exclusive access to the
+* [x] **no wait time in queue** with immediate and exclusive access to the
   purchased nodes
-- [x] **access to more resources** with the possibility to submit jobs to the
+* [x] **access to more resources** with the possibility to submit jobs to the
   other owners' nodes when they're not in use
 
 Compared to hosting and managing computing resources on your own, purchasing
 nodes on Sherlock provides:
 
-- data center hosting, including backup power and cooling
-- system configuration, maintenance and administration
-- hardware diagnostics and repairs
+* data center hosting, including backup power and cooling
+* system configuration, maintenance and administration
+* hardware diagnostics and repairs
 
 Those benefits come in addition to the other Sherlock advantages:
 
-- access to high-performance, large parallel scratch storage space
-- access to snapshot'ed, replicated, enterprise-class storage space
-- optimized software stack, especially tailored for a range of research needs
-- tools to build and install additional software applications as needed
-- user support
+* access to high-performance, large parallel scratch storage space
+* access to snapshot'ed, replicated, enterprise-class storage space
+* optimized software stack, especially tailored for a range of research needs
+* tools to build and install additional software applications as needed
+* user support
 
 ### Limitations
 
