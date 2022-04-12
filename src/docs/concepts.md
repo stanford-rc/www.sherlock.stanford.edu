@@ -1,7 +1,7 @@
 ## Sherlock, a shared resource
 
 Sherlock is a shared compute cluster available for use by all Stanford faculty
-members and their research teams to support sponsored research.
+members and their research teams to support departmental or sponsored research.
 
 !!! warning "Sherlock is a resource for research"
 

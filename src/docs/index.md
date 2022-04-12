@@ -45,10 +45,10 @@ or even departmental basis.
 
 ### How much does it cost?
 
-Sherlock is **free** to use for anyone doing sponsored research at Stanford.
-Any faculty member can request access for research purposes, and get an account
-with a base storage allocation and unlimited compute time on the global, shared
-pool of resources.
+Sherlock is **free** to use for anyone doing departmental or sponsored research
+at Stanford.  Any faculty member can request access for research purposes, and
+get an account with a base storage allocation and unlimited compute time on the
+global, shared pool of resources.
 
 !!! info "No CPU.hour charge"
 
