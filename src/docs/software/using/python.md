@@ -273,7 +273,7 @@ You can now install your modules like so:
 
 ``` shell
 $ ml python
-$ pip install--user -r requirements.txt
+$ pip install --user -r requirements.txt
 ```
 
 #### Upgrading packages
