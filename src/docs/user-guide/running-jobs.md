@@ -223,6 +223,7 @@ node and can run diagnostic tools such as [`htop`][url_htop] and [`nvtop`][url_n
 You can also manage this job based on the JobID assigned to it (44915854). For example the job can be cancelled with the [`scancel`][url_scancel] command.
 
 
+<script type="text/javascript" src="https://asciinema.org/a/TTgy0zbVevurtmAEGAhQDnFLn.js" id="asciicast-TTgy0zbVevurtmAEGAhQDnFLn" data-preload="true" data-speed="2" data-theme="monokai" async> </script> 
 
 
 ## Available resources
