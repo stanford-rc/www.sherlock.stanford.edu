@@ -222,7 +222,7 @@ Here you can see it has been running (R) on the compute node sh02-01n49 for 10 s
 node and can run diagnostic tools such as [`htop`][url_htop] and [`nvtop`][url_nvtop] in order to monitor your job's memory and CPU/GPU utilization in real-time.
 You can also manage this job based on the JobID assigned to it (44915854). For example the job can be cancelled with the [`scancel`][url_scancel] command.
 
-
+[![asciicast](https://asciinema.org/a/TTgy0zbVevurtmAEGAhQDnFLn.svg)](https://asciinema.org/a/TTgy0zbVevurtmAEGAhQDnFLn)
 
 
 ## Available resources
