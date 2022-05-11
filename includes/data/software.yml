@@ -1866,15 +1866,48 @@ software_modules:
           R. It includes a console, syntax-highlighting editor that supports direct
           code execution, as well as tools for plotting, history, debugging and workspace
           management.', markedDefault: false, versionName: 1.3.1093}
-    - categories: math, computational geometry
-      defaultVersionName: 7.6.2
-      description: Open CASCADE Technology (OCCT) is an open-source full-scale 3D
-        geometry library
-      package: opencascade
-      url: https://dev.opencascade.org/
+    - categories: math, numerical analysis
+      defaultVersionName: R2020a
+      description: MATLAB is a multi-paradigm numerical computing environment and
+        proprietary programming language developed by MathWorks.
+      package: matlab
+      url: https://www.mathworks.com/products/matlab.html
       versions:
-      - {description: Open CASCADE Technology (OCCT) is an open-source full-scale
-          3D geometry library, markedDefault: false, versionName: 7.6.2}
+      - description: MATLAB is a multi-paradigm numerical computing environment and
+          proprietary programming language developed by MathWorks.
+        help: https://www.sherlock.stanford.edu/docs/software/using/matlab
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: R2017a
+      - description: MATLAB is a multi-paradigm numerical computing environment and
+          proprietary programming language developed by MathWorks.
+        help: https://www.sherlock.stanford.edu/docs/software/using/matlab
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: R2017b
+      - description: MATLAB is a multi-paradigm numerical computing environment and
+          proprietary programming language developed by MathWorks.
+        help: https://www.sherlock.stanford.edu/docs/software/using/matlab
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: R2018a
+      - description: MATLAB is a multi-paradigm numerical computing environment and
+          proprietary programming language developed by MathWorks.
+        help: https://www.sherlock.stanford.edu/docs/software/using/matlab
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: R2019a
+      - description: MATLAB is a multi-paradigm numerical computing environment and
+          proprietary programming language developed by MathWorks.
+        help: https://www.sherlock.stanford.edu/docs/software/using/matlab
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: R2020a
     - categories: math, optimization
       defaultVersionName: 3.3.0
       description: Octeract Engine is a proprietary massively parallel deterministic
@@ -1940,16 +1973,22 @@ software_modules:
         markedDefault: false, versionName: 1.1.1_py27}
       - {description: SymPy is a Python library for symbolic mathematics., family: sympy,
         markedDefault: false, versionName: 1.1.1_py36}
-    - categories: math, statistics
-      defaultVersionName: 2.9.2_py36
-      description: rpy2 is an interface to R running embedded in a Python process.
-      package: py-rpy2
-      url: https://rpy2.bitbucket.io
+    - categories: math, scientific computing
+      defaultVersionName: 1.0_py27
+      description: 'The SciPy Stack is a collection of open source software for scientific
+        computing in Python. It provides the following packages: numpy, scipy, matplotlib,
+        ipython, jupyter, pandas, sympy and nose.'
+      package: py-scipystack
+      url: https://www.scipy.org
       versions:
-      - {description: rpy2 is an interface to R running embedded in a Python process.,
-        markedDefault: false, versionName: 2.8.6_py27}
-      - {description: rpy2 is an interface to R running embedded in a Python process.,
-        markedDefault: false, versionName: 2.9.2_py36}
+      - {description: 'The SciPy Stack is a collection of open source software for
+          scientific computing in Python. It provides the following packages: numpy,
+          scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
+        markedDefault: false, versionName: 1.0_py36}
+      - {description: 'The SciPy Stack is a collection of open source software for
+          scientific computing in Python. It provides the following packages: numpy,
+          scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
+        markedDefault: true, versionName: 1.0_py27}
     - categories: math, statistics
       defaultVersionName: '15'
       description: Stata is a complete, integrated statistical software package that
@@ -2049,27 +2088,16 @@ software_modules:
       - {description: 'libflame is a portable library for dense matrix computations,
           providing much of the functionality present in LAPACK', markedDefault: false,
         versionName: 3.1.0}
-    - categories: math, deep learning
-      defaultVersionName: 0.12.1_py27
-      description: Horovod is a distributed training framework for TensorFlow. The
-        goal of Horovod is to make distributed Deep Learning fast and easy to use.
-      package: py-horovod
-      url: https://github.com/uber/horovod
+    - categories: math, optimization
+      defaultVersionName: 2.10.0_py39
+      description: Optuna is an automatic hyperparameter optimization software framework,
+        particularly designed for machine learning.
+      package: py-optuna
+      url: https://optuna.readthedocs.io/
       versions:
-      - description: Horovod is a distributed training framework for TensorFlow. The
-          goal of Horovod is to make distributed Deep Learning fast and easy to use.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 0.12.1_py36
-      - description: Horovod is a distributed training framework for TensorFlow. The
-          goal of Horovod is to make distributed Deep Learning fast and easy to use.
-        markedDefault: true
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 0.12.1_py27
+      - {description: 'Optuna is an automatic hyperparameter optimization software
+          framework, particularly designed for machine learning.', markedDefault: false,
+        versionName: 2.10.0_py39}
     - categories: math, numerical library
       defaultVersionName: 1.4.1
       description: 'harminv is a program designed to solve the problem of harmonic
@@ -2345,17 +2373,15 @@ software_modules:
       versions:
       - {description: qrupdate is a Fortran library for fast updates of QR and Cholesky
           decompositions., markedDefault: false, versionName: 1.1.2}
-    - categories: math, optimization
-      defaultVersionName: 10.3.0
-      description: Artelys Knitro is an optimization solver for difficult large-scale
-        nonlinear problems.
-      package: knitro
-      url: https://www.artelys.com/en/optimization-tools/knitro
+    - categories: math, numerical library
+      defaultVersionName: 3.1.3
+      description: FlexiBLAS is a BLAS and LAPACK wrapper library with runtime exchangeable
+        backends.
+      package: flexiblas
+      url: https://github.com/mpimd-csc/flexiblas
       versions:
-      - {description: Artelys Knitro is an optimization solver for difficult large-scale
-          nonlinear problems., markedDefault: false, versionName: 12.4.0}
-      - {description: Artelys Knitro is an optimization solver for difficult large-scale
-          nonlinear problems., markedDefault: true, versionName: 10.3.0}
+      - {description: FlexiBLAS is a BLAS and LAPACK wrapper library with runtime
+          exchangeable backends., family: blas, markedDefault: false, versionName: 3.1.3}
     - categories: math, numerical library
       defaultVersionName: 0.4_py39
       description: The MPI-IS Mesh Processing Library contains core functions for
@@ -2462,6 +2488,15 @@ software_modules:
           on signed integers, rational numbers, and floating-point numbers.', markedDefault: false,
         versionName: 6.2.1}
     - categories: math, numerical library
+      defaultVersionName: dcl6i34ngl
+      description: (Adjoint) Algorithmic Differentiation software tool for computing
+        sensitivities of C++ codes.
+      package: nagdc
+      url: https://www.nag.com/content/algorithmic-differentiation-software
+      versions:
+      - {description: (Adjoint) Algorithmic Differentiation software tool for computing
+          sensitivities of C++ codes., markedDefault: false, versionName: dcl6i34ngl}
+    - categories: math, numerical library
       defaultVersionName: MBL6I25DNL
       description: The NAG C Library is the largest and most comprehensive collection
         of mathematical and statistical algorithms for C and C++.
@@ -2486,39 +2521,49 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 6.0.4
-    - categories: math, optimization
-      defaultVersionName: 2.10.0_py39
-      description: Optuna is an automatic hyperparameter optimization software framework,
-        particularly designed for machine learning.
-      package: py-optuna
-      url: https://optuna.readthedocs.io/
+    - categories: math, deep learning
+      defaultVersionName: 0.12.1_py27
+      description: Horovod is a distributed training framework for TensorFlow. The
+        goal of Horovod is to make distributed Deep Learning fast and easy to use.
+      package: py-horovod
+      url: https://github.com/uber/horovod
       versions:
-      - {description: 'Optuna is an automatic hyperparameter optimization software
-          framework, particularly designed for machine learning.', markedDefault: false,
-        versionName: 2.10.0_py39}
-    - categories: math, optimization
-      defaultVersionName: 9.0.3_py36
-      description: The Gurobi Optimizer is a commercial optimization solver for mathematical
-        programming.
-      package: gurobi
-      url: http://www.gurobi.com
-      versions:
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 7.5.1}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 8.0.1_py27}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 8.0.1_py36}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 9.0.3_py36}
+      - description: Horovod is a distributed training framework for TensorFlow. The
+          goal of Horovod is to make distributed Deep Learning fast and easy to use.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 0.12.1_py36
+      - description: Horovod is a distributed training framework for TensorFlow. The
+          goal of Horovod is to make distributed Deep Learning fast and easy to use.
+        markedDefault: true
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 0.12.1_py27
     - categories: math, numerical library
-      defaultVersionName: 1.0.248
-      description: Extra precise basic linear algebra subroutines.
-      package: xblas
-      url: http://www.netlib.org/xblas
+      defaultVersionName: 1.6.0
+      description: TetGen provides various features to generate good quality and adaptive
+        tetrahedral meshes suitable for numerical methods, such as finite element
+        or finite volume methods.
+      package: tetgen
+      url: http://wias-berlin.de/software/index.jsp?id=TetGen
       versions:
-      - {description: Extra precise basic linear algebra subroutines., markedDefault: false,
-        versionName: 1.0.248}
+      - {description: 'TetGen provides various features to generate good quality and
+          adaptive tetrahedral meshes suitable for numerical methods, such as finite
+          element or finite volume methods.', markedDefault: false, versionName: 1.6.0}
+    - categories: math, optimization
+      defaultVersionName: 10.3.0
+      description: Artelys Knitro is an optimization solver for difficult large-scale
+        nonlinear problems.
+      package: knitro
+      url: https://www.artelys.com/en/optimization-tools/knitro
+      versions:
+      - {description: Artelys Knitro is an optimization solver for difficult large-scale
+          nonlinear problems., markedDefault: false, versionName: 12.4.0}
+      - {description: Artelys Knitro is an optimization solver for difficult large-scale
+          nonlinear problems., markedDefault: true, versionName: 10.3.0}
     - categories: math, numerical library
       defaultVersionName: 3.3.10
       description: The Fastest Fourier Transform in the West (FFTW) is a software
@@ -2558,17 +2603,19 @@ software_modules:
       - {description: 'Qhull computes the convex hull, Delaunay triangulation, Voronoi
           diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
           and furthest-site Voronoi diagram.', markedDefault: false, versionName: '2015.2'}
-    - categories: math, numerical library
-      defaultVersionName: 1.6.0
-      description: TetGen provides various features to generate good quality and adaptive
-        tetrahedral meshes suitable for numerical methods, such as finite element
-        or finite volume methods.
-      package: tetgen
-      url: http://wias-berlin.de/software/index.jsp?id=TetGen
+    - categories: math, deep learning
+      defaultVersionName: '20180202'
+      description: Torch is a scientific computing framework with wide support for
+        machine learning algorithms that puts GPUs first.
+      package: torch
+      url: http://torch.ch
       versions:
-      - {description: 'TetGen provides various features to generate good quality and
-          adaptive tetrahedral meshes suitable for numerical methods, such as finite
-          element or finite volume methods.', markedDefault: false, versionName: 1.6.0}
+      - description: Torch is a scientific computing framework with wide support for
+          machine learning algorithms that puts GPUs first.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: '20180202'
     - categories: math, numerical library
       defaultVersionName: '4.63'
       description: The GLPK (GNU Linear Programming Kit) package is intended for solving
@@ -2595,19 +2642,16 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.8.1
-    - categories: math, deep learning
-      defaultVersionName: '20180202'
-      description: Torch is a scientific computing framework with wide support for
-        machine learning algorithms that puts GPUs first.
-      package: torch
-      url: http://torch.ch
+    - categories: math, statistics
+      defaultVersionName: 2.9.2_py36
+      description: rpy2 is an interface to R running embedded in a Python process.
+      package: py-rpy2
+      url: https://rpy2.bitbucket.io
       versions:
-      - description: Torch is a scientific computing framework with wide support for
-          machine learning algorithms that puts GPUs first.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: '20180202'
+      - {description: rpy2 is an interface to R running embedded in a Python process.,
+        markedDefault: false, versionName: 2.8.6_py27}
+      - {description: rpy2 is an interface to R running embedded in a Python process.,
+        markedDefault: false, versionName: 2.9.2_py36}
     - categories: math, numerical library
       defaultVersionName: 3.1.0
       description: BLIS is a portable software framework for instantiating high-performance
@@ -2715,57 +2759,15 @@ software_modules:
         versionName: 1.0.1_py27}
       - {description: ONNX is a open format to represent deep learning models., markedDefault: false,
         versionName: 1.8.1_py36}
-    - categories: math, numerical analysis
-      defaultVersionName: R2020a
-      description: MATLAB is a multi-paradigm numerical computing environment and
-        proprietary programming language developed by MathWorks.
-      package: matlab
-      url: https://www.mathworks.com/products/matlab.html
+    - categories: math, computational geometry
+      defaultVersionName: 7.6.2
+      description: Open CASCADE Technology (OCCT) is an open-source full-scale 3D
+        geometry library
+      package: opencascade
+      url: https://dev.opencascade.org/
       versions:
-      - description: MATLAB is a multi-paradigm numerical computing environment and
-          proprietary programming language developed by MathWorks.
-        help: https://www.sherlock.stanford.edu/docs/software/using/matlab
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: R2017a
-      - description: MATLAB is a multi-paradigm numerical computing environment and
-          proprietary programming language developed by MathWorks.
-        help: https://www.sherlock.stanford.edu/docs/software/using/matlab
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: R2017b
-      - description: MATLAB is a multi-paradigm numerical computing environment and
-          proprietary programming language developed by MathWorks.
-        help: https://www.sherlock.stanford.edu/docs/software/using/matlab
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: R2018a
-      - description: MATLAB is a multi-paradigm numerical computing environment and
-          proprietary programming language developed by MathWorks.
-        help: https://www.sherlock.stanford.edu/docs/software/using/matlab
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: R2019a
-      - description: MATLAB is a multi-paradigm numerical computing environment and
-          proprietary programming language developed by MathWorks.
-        help: https://www.sherlock.stanford.edu/docs/software/using/matlab
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: R2020a
-    - categories: math, numerical analysis
-      defaultVersionName: 4.2.1
-      description: GNU Octave is a high-level language primarily intended for numerical
-        computations.
-      package: octave
-      url: https://www.gnu.org/software/octave/
-      versions:
-      - {description: GNU Octave is a high-level language primarily intended for numerical
-          computations., markedDefault: false, versionName: 4.2.1}
+      - {description: Open CASCADE Technology (OCCT) is an open-source full-scale
+          3D geometry library, markedDefault: false, versionName: 7.6.2}
     - categories: math, numerical library
       defaultVersionName: fsl6i26dcl
       description: The NAG Library for SMP & Multicore is based on, and includes,
@@ -2786,6 +2788,15 @@ software_modules:
       - {description: GNU MPC is a C library for the arithmetic of complex numbers
           with arbitrarily high precision and correct rounding of the result., markedDefault: false,
         versionName: 1.2.1}
+    - categories: math, numerical analysis
+      defaultVersionName: 4.2.1
+      description: GNU Octave is a high-level language primarily intended for numerical
+        computations.
+      package: octave
+      url: https://www.gnu.org/software/octave/
+      versions:
+      - {description: GNU Octave is a high-level language primarily intended for numerical
+          computations., markedDefault: false, versionName: 4.2.1}
     - categories: math, statistics
       defaultVersionName: 3.5.1
       description: R is a free software environment for statistical computing and
@@ -2828,13 +2839,6 @@ software_modules:
           arch: {gpu: 1}
         versionName: 10.2.0_py39
     - categories: math, numerical library
-      defaultVersionName: 5.1.2
-      description: A parallel sparse direct solver.
-      package: mumps
-      url: http://mumps.enseeiht.fr/
-      versions:
-      - {description: A parallel sparse direct solver., markedDefault: false, versionName: 5.1.2}
-    - categories: math, numerical library
       defaultVersionName: 4.0.3
       description: ParMETIS is an MPI-based parallel library that implements a variety
         of algorithms for partitioning unstructured graphs, meshes, and for computing
@@ -2849,37 +2853,13 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 4.0.3
-    - categories: math, scientific computing
-      defaultVersionName: 1.0_py27
-      description: 'The SciPy Stack is a collection of open source software for scientific
-        computing in Python. It provides the following packages: numpy, scipy, matplotlib,
-        ipython, jupyter, pandas, sympy and nose.'
-      package: py-scipystack
-      url: https://www.scipy.org
+    - categories: math, numerical library
+      defaultVersionName: 5.1.2
+      description: A parallel sparse direct solver.
+      package: mumps
+      url: http://mumps.enseeiht.fr/
       versions:
-      - {description: 'The SciPy Stack is a collection of open source software for
-          scientific computing in Python. It provides the following packages: numpy,
-          scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
-        markedDefault: false, versionName: 1.0_py36}
-      - {description: 'The SciPy Stack is a collection of open source software for
-          scientific computing in Python. It provides the following packages: numpy,
-          scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
-        markedDefault: true, versionName: 1.0_py27}
-    - categories: math, statistics
-      defaultVersionName: '9.4'
-      description: SAS is a software suite developed by SAS Institute for advanced
-        analytics, multivariate analyses, business intelligence, data management,
-        and predictive analytics.
-      package: sas
-      url: http://www.sas.com/
-      versions:
-      - description: SAS is a software suite developed by SAS Institute for advanced
-          analytics, multivariate analyses, business intelligence, data management,
-          and predictive analytics.
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: '9.4'
+      - {description: A parallel sparse direct solver., markedDefault: false, versionName: 5.1.2}
     - categories: math, numerical library
       defaultVersionName: 1.14.3_py27
       description: NumPy is the fundamental package for scientific computing with
@@ -2899,6 +2879,29 @@ software_modules:
           Python., markedDefault: false, versionName: 1.20.3_py39}
       - {description: NumPy is the fundamental package for scientific computing with
           Python., markedDefault: true, versionName: 1.14.3_py27}
+    - categories: math, statistics
+      defaultVersionName: '9.4'
+      description: SAS is a software suite developed by SAS Institute for advanced
+        analytics, multivariate analyses, business intelligence, data management,
+        and predictive analytics.
+      package: sas
+      url: http://www.sas.com/
+      versions:
+      - description: SAS is a software suite developed by SAS Institute for advanced
+          analytics, multivariate analyses, business intelligence, data management,
+          and predictive analytics.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: '9.4'
+    - categories: math, numerical library
+      defaultVersionName: 1.0.248
+      description: Extra precise basic linear algebra subroutines.
+      package: xblas
+      url: http://www.netlib.org/xblas
+      versions:
+      - {description: Extra precise basic linear algebra subroutines., markedDefault: false,
+        versionName: 1.0.248}
     - categories: math, numerical library
       defaultVersionName: '2019'
       description: Intel Math Kernel Library (Intel MKL) is a library of optimized
@@ -3066,15 +3069,21 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.3.0_py27
-    - categories: math, numerical library
-      defaultVersionName: dcl6i34ngl
-      description: (Adjoint) Algorithmic Differentiation software tool for computing
-        sensitivities of C++ codes.
-      package: nagdc
-      url: https://www.nag.com/content/algorithmic-differentiation-software
+    - categories: math, optimization
+      defaultVersionName: 9.0.3_py36
+      description: The Gurobi Optimizer is a commercial optimization solver for mathematical
+        programming.
+      package: gurobi
+      url: http://www.gurobi.com
       versions:
-      - {description: (Adjoint) Algorithmic Differentiation software tool for computing
-          sensitivities of C++ codes., markedDefault: false, versionName: dcl6i34ngl}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 7.5.1}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 8.0.1_py27}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 8.0.1_py36}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 9.0.3_py36}
   - name: physics
     packages:
     - categories: physics, micromagnetics
@@ -4785,6 +4794,9 @@ software_modules:
       - {description: 'The GNU Compiler Collection includes front ends for C, C++,
           Fortran, Java, and Go, as well as libraries for these languages (libstdc++,
           libgcj,...).', markedDefault: false, versionName: 10.3.0}
+      - {description: 'The GNU Compiler Collection includes front ends for C, C++,
+          Fortran, Java, and Go, as well as libraries for these languages (libstdc++,
+          libgcj,...).', markedDefault: false, versionName: 12.1.0}
       - {description: 'The GNU Compiler Collection includes front ends for C, C++,
           Fortran, Java, and Go, as well as libraries for these languages (libstdc++,
           libgcj,...).', markedDefault: true, versionName: 6.3.0}
