@@ -61,6 +61,53 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 
+### Python in batch jobs
+
+!!! info "Python output is buffered by default"
+
+    By default, Python buffers console output. It means that when running
+    Python in a batch job through Slurm, you may see output less often than you
+    would when running interactively.
+
+When output is being buffered, the `print` statements are aggregated until
+there is a enough data to print, and then the messages are all printed at once.
+And as a consequence, job output files (as specified with the `--output` and
+`--error` job submission options) will be refeshed less often and may give the
+impression that the job is not running.
+
+For debugging or checking that a Python script is producing the correct output,
+you may want to switch off buffering.
+
+#### Switching  off buffering
+
+For a single python script you can use the `-u` option, as in `python -u
+my_script.py`. The `-u` option stands for "unbuffered".
+
+For instance:
+
+```shell
+#!/bin/bash
+#SBATCH -n 1
+
+python -u my_script.py
+```
+
+!!! tip
+
+    You can also use the environment variable `PYTHONUNBUFFERED` to set
+    unbuffered I/O for your whole batch script.
+    ```shell
+    #!/bin/bash
+    #SBATCH -n 1
+
+    export PYTHONUNBUFFERED=True
+    python my_script.py
+    ```
+
+NB: There is some performance penalty for having unbuffered print statements, so
+you may want to reduce the number of print statements, or run buffered for
+production runs.
+
 ### Python packages
 
 The capabilities of Python can be extended with packages developed by third
@@ -300,6 +347,7 @@ that it doesn't take any `--user` option):
 $ pip uninstall <package_name>
 $ pip uninstall -r requirements.txt
 ```
+
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
