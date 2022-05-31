@@ -175,7 +175,7 @@ parpool('local', str2num(getenv('SLURM_CPUS_PER_TASK')))
 Here is an example of a `sbatch` submission script that requests 16 CPUs on a
 node, and runs a simple MATLAB script using `parfor`.
 
-Save the two scripts below as `parfor.sbatch` and `parfor.m`:
+Save the two scripts below as `parfor.sbatch` and `parfor_loop.m`:
 
 === "parfor.sbatch"
 
@@ -190,10 +190,10 @@ Save the two scripts below as `parfor.sbatch` and `parfor.m`:
     #SBATCH --mail-type=ALL
 
     module load matlab
-    matlab -nosplash -nodesktop -r parfor
+    matlab -batch parfor_loop
     ```
 
-=== "parfor.m"
+=== "parfor_loop.m"
 
     ``` matlab
     %============================================================================
