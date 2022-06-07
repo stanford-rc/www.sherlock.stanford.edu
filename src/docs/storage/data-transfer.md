@@ -19,7 +19,7 @@ performance for data transfers from and to campus.
     expected.
 
     For transferring large amounts of data, Sherlock features a specific [Data
-    Transfer Node](#dtn), with dedicated bandwidth, as well as a managed
+    Transfer Node](#data-transfer-nodes-dtns), with dedicated bandwidth, as well as a managed
     [Globus endpoint](#globus), that can be used for scheduled, unattended data
     transfers.
 
