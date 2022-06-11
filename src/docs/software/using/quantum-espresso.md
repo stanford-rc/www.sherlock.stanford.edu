@@ -141,7 +141,10 @@ container.
 The NVIDIA GPU Cloud ([NGC][url_ngc]) hosts a [Quantum Espresso
 container][url_ngc_qe] container that could be used on Sherlock.
 
-First pull the Quantum Espresso container with:
+##### With Singularity
+
+To use the container with Singularity, first pull the Quantum Espresso
+container with:
 
 ```shell
 $ cd $SCRATCH
@@ -156,6 +159,7 @@ Then create the following script:
     #SBATCH --partition=gpu          # partition to submit the job to
     #SBATCH --nodes=2                # number of nodes for the job
     #SBATCH --gpus-per-node=1        # number of GPUs per node
+    #SBATCH --mem=32GB               # memory per node
     #SBATCH --time=00:30:00          # total run time limit (HH:MM:SS)
     #SBATCH --mail-type=begin        # send email when job begins
     #SBATCH --mail-type=end          # send email when job ends
@@ -174,6 +178,38 @@ and submit it:
 ```bash
 $ sbatch qe-bench_gpu_singularity.sbatch
 ```
+
+##### With pyxis/enroot
+
+To use the container with pyxis/enroot, you can directly submit the following
+script:
+
+=== "qe-bench_gpu_enroot.sbatch"
+    ```
+    #!/bin/bash
+    #SBATCH --partition=gpu          # partition to submit the job to
+    #SBATCH --nodes=2                # number of nodes for the job
+    #SBATCH --gpus-per-node=1        # number of GPUs per node
+    #SBATCH --mem=32GB               # memory per node
+    #SBATCH --time=00:30:00          # total run time limit (HH:MM:SS)
+    #SBATCH --mail-type=begin        # send email when job begins
+    #SBATCH --mail-type=end          # send email when job ends
+
+    cd $SCRATCH/qe_benchmarks
+    cd AUSURF112
+
+    srun --container-image nvcr.io/hpc/quantum_espresso:qe-7.0 \
+         --container-workdir $PWD \
+         pw.x -input ausurf.in -npool 2
+    ```
+
+and submit it:
+
+```bash
+$ sbatch qe-bench_gpu_singularity.sbatch
+```
+
+
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
