@@ -4347,6 +4347,15 @@ software_modules:
         versionName: 2.0.3}
       - {description: Libint computes molecular integrals., markedDefault: false,
         versionName: 2.6.0}
+    - categories: chemistry, tools
+      defaultVersionName: 3.1.1
+      description: Open Babel is a chemical toolbox designed to speak the many languages
+        of chemical data.
+      package: openbabel
+      url: http://openbabel.org/
+      versions:
+      - {description: Open Babel is a chemical toolbox designed to speak the many
+          languages of chemical data., markedDefault: false, versionName: 3.1.1}
     - categories: chemistry, computational chemistry
       defaultVersionName: 2021-1
       description: Schrödinger Suites (Small-molecule Drug Discovery Suite, Material
@@ -4510,6 +4519,13 @@ software_modules:
       - {description: 'The Atomic Simulation Environment (ASE) is a set of tools and
           Python modules for setting up, manipulating, running, visualizing and analyzing
           atomistic simulations.', markedDefault: false, versionName: 3.22.1_py39}
+    - categories: chemistry, tools
+      defaultVersionName: 3.1.1.1_py39
+      description: Python bindings for Open Babel.
+      package: py-openbabel
+      url: http://openbabel.org/
+      versions:
+      - {description: Python bindings for Open Babel., markedDefault: false, versionName: 3.1.1.1_py39}
     - categories: chemistry, electrostatics
       defaultVersionName: '1.5'
       description: APBS solves the equations of continuum electrostatics for large
@@ -4657,16 +4673,27 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: '7.1'
-    - categories: chemistry, crystallography
-      defaultVersionName: 3.4.4
-      description: VESTA is a 3D visualization program for structural models, volumetric
-        data such as electron/nuclear densities, and crystal morphologies.
-      package: vesta
-      url: http://jp-minerals.org/vesta/en/
+    - categories: chemistry, computational chemistry
+      defaultVersionName: 7.0.2
+      description: NWChem is an ab initio computational chemistry software package
+        which also includes quantum chemical and molecular dynamics functionality.
+      package: nwchem
+      url: https://nwchemgit.github.io
       versions:
-      - {description: 'VESTA is a 3D visualization program for structural models,
-          volumetric data such as electron/nuclear densities, and crystal morphologies.',
-        markedDefault: false, versionName: 3.4.4}
+      - description: NWChem is an ab initio computational chemistry software package
+          which also includes quantum chemical and molecular dynamics functionality.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '6.8'
+      - description: NWChem is an ab initio computational chemistry software package
+          which also includes quantum chemical and molecular dynamics functionality.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 7.0.2
     - categories: chemistry, crystallography
       defaultVersionName: 2.1.20180802
       description: Crystallographic automation and complex data manipulation libraries.
@@ -4700,6 +4727,16 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 5.0.3
+    - categories: chemistry, crystallography
+      defaultVersionName: 3.4.4
+      description: VESTA is a 3D visualization program for structural models, volumetric
+        data such as electron/nuclear densities, and crystal morphologies.
+      package: vesta
+      url: http://jp-minerals.org/vesta/en/
+      versions:
+      - {description: 'VESTA is a 3D visualization program for structural models,
+          volumetric data such as electron/nuclear densities, and crystal morphologies.',
+        markedDefault: false, versionName: 3.4.4}
     - categories: chemistry, quantum chemistry
       defaultVersionName: '7.1'
       description: Quantum ESPRESSO is an integrated suite of Open-Source computer
@@ -4733,27 +4770,6 @@ software_modules:
           arch: {gpu: 1}
           parallel: {mpi: 1}
         versionName: '7.1'
-    - categories: chemistry, computational chemistry
-      defaultVersionName: 7.0.2
-      description: NWChem is an ab initio computational chemistry software package
-        which also includes quantum chemical and molecular dynamics functionality.
-      package: nwchem
-      url: https://nwchemgit.github.io
-      versions:
-      - description: NWChem is an ab initio computational chemistry software package
-          which also includes quantum chemical and molecular dynamics functionality.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '6.8'
-      - description: NWChem is an ab initio computational chemistry software package
-          which also includes quantum chemical and molecular dynamics functionality.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 7.0.2
     - categories: chemistry, molecular dynamics
       defaultVersionName: 1.65.0
       description: Qbox is a First-Principles Molecular Dynamics code.
