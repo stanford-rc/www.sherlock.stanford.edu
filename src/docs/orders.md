@@ -147,20 +147,6 @@ There are two components in the cost of a compute node purchase:
 
 ## Purchasing process
 
-Purchasing nodes on Sherlock is usually a 5-step process:
-
-  1. the PI use the [order form][url_order_form] to submit an order,
-  2. SRCC requests a formal vendor quote to finalize pricing and communicate it
-     back to the PI for approval,
-  3. SRCC submits a Stanford PO to the vendor,
-  4. SRCC takes delivery of the hardware and proceeds to its installation,
-  5. SRCC notifies the PI that their nodes are ready to be used.
-
-The typical delay between a PO submission to the vendor and the availability of
-the compute nodes to the PIs is usually between 4 and 8 weeks (global
-pandemic-related supply-chain disruptions notwithstanding).
-
-
 !!! warning "Minimum purchase"
 
     Please note that the minimum purchase is one physical server per PI group.
@@ -172,6 +158,24 @@ pandemic-related supply-chain disruptions notwithstanding).
     nodes (see the [Sherlock catalog][url_catalog] for details). So orders for
     quantities non-multiples of 4 need will to be grouped with other PI's
     orders, which may incur additional delays.
+
+Purchasing nodes on Sherlock is usually a 5-step process:
+
+  1. the PI use the [order form][url_order_form] to submit an order,
+  2. SRCC requests a formal vendor quote to finalize pricing and communicate it
+     back to the PI for approval,
+  3. SRCC submits a Stanford PO to the vendor,
+  4. SRCC takes delivery of the hardware and proceeds to its installation,
+  5. SRCC notifies the PI that their nodes are ready to be used.
+
+The typical delay between a PO submission to the vendor and the availability of
+the compute nodes to the PIs is usually between 4 and 8 weeks.
+
+!!! danger "Supply chain disruption and component shortages"
+
+    Global supply chain issues and component shortages have considerably
+    increased lead times, and compute node deliveries are currently
+    in the 6-month range.
 
 ### Required information
 
