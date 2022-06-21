@@ -263,6 +263,18 @@ Sherlock, you just need to search for them with `module spider` and load them.
 And in case you're stuck, you can of course always [send us an
 email][url_support] and we'll be happy to assist.
 
+#### Installing large packages
+
+Sometimes installation of large packages can be very time consuming.  To speed things up R
+can utilize multiple CPUs at once.  Add "Ncpus=n"  where n is the number of CPUs you
+can utilize.  You can use the `sdev` command to get a session with 4 CPUs:
+
+``` shell
+$ sdev -c 4
+$ ml R
+$ R
+>install.packages("dplyr", repos = "http://cran.us.r-project.org", Ncpus=4)
+```
 
 
 ##### Alternative installation path
