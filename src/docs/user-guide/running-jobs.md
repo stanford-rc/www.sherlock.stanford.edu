@@ -162,19 +162,19 @@ It's easy to schedule batch jobs on Sherlock. A job is simply an instance of you
 
 The length of time a job will pend is determined by several factors; how many other jobs are in the queue ahead or your job and how many resources your job is requesting are most the most important factors. One key principle when requesting resources is to always try to request as few resources as you need to get your job done. This will ensure your job pends in the queue for as little time as necessary. To get a rough idea of what resources are needed, you can profile your code/jobs in an [sdev session][url_sdev] in real-time with [`htop`][url_htop], [`nvtop`][url_nvtop], [`sacct`][url_sacct] etc. The basic concept is to tell the scheduler what resources your job needs and how long is should run. These resources are:
 
-**CPUs:** How many CPUs the program your are calling the in the sbatch script needs, unless it can utilize multiple CPUs at once you should request a single CPU. Check your code's documentation or try running in an interactive session with [`sdev`][url_sdev] and run htop if you are unsure.
+**CPUs:** How many CPUs the program you are calling the in the sbatch script needs, unless it can utilize multiple CPUs at once you should request a single CPU. Check your code's documentation or try running in an interactive session with [`sdev`][url_sdev] and run htop if you are unsure.
 
 **GPUs:** If your code is GPU enabled, how many GPUs does your code need? Use the diagnostic tool [`nvtop`][url_nvtop] to see if your code is capable of running on multiple GPUs and how much GPU memory it's using in real-time.
 
 **memory (RAM):** How much memory your job will consume. Some things to consider, will it load a large file or matrix into memory? Does it consume a lot of memory on your laptop? Often the default memory is sufficient for many jobs.
 
-**time:** How long will it take for you code to run to completion?
+**time:** How long will it take for your code to run to completion?
 
 **partition:** What set of compute nodes on Sherlock will you run on, normal, gpu, owners, bigmem? Use the [`sh_part`][url_sh_part] command to see what partitions you are allowed to run on. The default partition on Sherlock is the normal partition.
 
 Next, you tell the scheduler what your job should should do: load modules and run your code. Note that any logic you can code into a bash script with the [bash scripting language][url_bash] can also be coded into an sbatch script.
 
-This example job, will run the Python script mycode.py for 10 minutes on the normal partition using 1 CPU and 8 GB of memory. To aid in debugging we are naming this job "test_job" and appending the Job ID (%j) to the two output files that Slurm creates when a job is run. The output files are written to the directory in which you launched your job in, you can also specify a different path. One file will contain any errors and the other will contain non-error output.
+This example job, will run the Python script mycode.py for 10 minutes on the normal partition using 1 CPU and 8 GB of memory. To aid in debugging we are naming this job "test_job" and appending the Job ID (%j) to the two output files that Slurm creates when a job is run. The output files are written to the directory in which you launched your job in, you can also specify a different path. One file will contain any errors and the other will contain non-error output.  Look in these 2 files ending in .err and .out for useful debugging information and error output.
 
 Because it's a Python 3 script that uses some Numpy code, we need to load the python/3.6.1 and the py-numpy/1.19.2_py36 modules. The Python script is then called just as you would on the command line at the end of the sbatch script:
 
