@@ -196,11 +196,8 @@ instance, if you create a file on February 1st and don't ever modify it
 afterwards, it will be automatically become eligible for deletion on May
 1st, and can be deleted anytime after this date.
 
-Empty directories that would remain after all their files have been purged are
-are not automatically deleted, because user workflows may rely on and require
-specific directory trees to be present. And there's no good way to distinguish
-between a directory created empty intentionally, and a directory emptied by
-automatic purges.
+Empty directory trees that stay devoid of any file for more than 90 days will
+be automatically cleaned up as well.
 
 
 -----
