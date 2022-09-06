@@ -212,10 +212,9 @@ than welcome to join the following channels:
 * **[`#sherlock-announce`][url_sl_sha]**, for announcements related to
     Sherlock and its surrounding services,
 * **[`#sherlock-users`][url_sl_shu]**, as a place for Sherlock users to
-    connect directly with each other. If you have a general question about
-    software used on Sherlock, want to reach out to other Sherlock users to
-    share tips, good practices, tutorials or other info, please feel free to
-    do so there.
+    connect directly with each other. If you have general questions about
+    Sherlock, want to reach out to other Sherlock users to share tips, good
+    practices, tutorials or other info, please feel free to do so there.
 
 For more details about the SRCC Slack Workspace, and instructions on how to
 join this workspace and its channels, please see <https://srcc.stanford.edu/support>.
