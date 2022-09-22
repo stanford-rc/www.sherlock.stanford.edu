@@ -116,7 +116,7 @@ Here's an example Julia sbatch script that can be submitted via `sbatch`:
     ml julia
 
     # run the Julia application
-    srun julia helloworld.jl
+    julia helloworld.jl
     ```
 
 You can save this script as `julia_test.sbatch` and submit it to the scheduler
@@ -229,10 +229,11 @@ julia> Pkg.status()
 No packages installed.
 ```
 
-Working with packages in Julia is simple!
 
 
 ### Examples
+
+#### Parallel job
 
 Julia can natively spawn parallel workers across multiple compute nodes,
 without using MPI. There are two main modes of operation:
@@ -254,9 +255,12 @@ Sherlock.
 Given following Julia script (`julia_parallel_test.jl`) that will print a line
 with the process id and the node it's executing on, in parallel:
 
-``` shell
-@everywhere println("process: $(myid()) on host $(gethostname())")
-```
+=== "julia_parallel_test.jl"
+
+    ``` julia
+    using Distributed
+    @everywhere println("process: $(myid()) on host $(gethostname())")
+    ```
 
 You can submit the following job:
 
