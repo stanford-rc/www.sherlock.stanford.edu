@@ -140,7 +140,7 @@ Sherlock nodes, along with everyone else.
 
 {% set pflops = facts         | selectattr("name", "==", "computing")
                               | map(attribute="fields") | first
-                              | selectattr("name", "==", "PFLOPs")
+                              | selectattr("name", "==", "PFLOPs (FP64)")
                               | map(attribute="value") | first
                               | round(1, "floor") %}
 

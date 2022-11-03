@@ -27,7 +27,7 @@ tags:
 Sherlock features over **{{ get_value("computing", "compute nodes", rnd=-2)
 }}** compute nodes, **{{ get_value("computing", "CPU cores", rnd=-2) }}+** CPU
 cores and **{{ get_value("computing", "GPUs", rnd=-2) }}+** GPUs, for a total
-computing power of more than **{{ get_value("computing", "PFLOPs", rnd=1) }}**
+computing power of more than **{{ get_value("computing", "PFLOPs (FP64)", rnd=1) }}**
 Petaflops. That would rank it in the Top500 list of the most powerful
 supercomputers in the world.
 
