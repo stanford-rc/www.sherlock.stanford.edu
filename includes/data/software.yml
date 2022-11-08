@@ -2111,16 +2111,22 @@ software_modules:
         markedDefault: false, versionName: 1.1.1_py27}
       - {description: SymPy is a Python library for symbolic mathematics., family: sympy,
         markedDefault: false, versionName: 1.1.1_py36}
-    - categories: math, statistics
-      defaultVersionName: 2.9.2_py36
-      description: rpy2 is an interface to R running embedded in a Python process.
-      package: py-rpy2
-      url: https://rpy2.bitbucket.io
+    - categories: math, scientific computing
+      defaultVersionName: 1.0_py27
+      description: 'The SciPy Stack is a collection of open source software for scientific
+        computing in Python. It provides the following packages: numpy, scipy, matplotlib,
+        ipython, jupyter, pandas, sympy and nose.'
+      package: py-scipystack
+      url: https://www.scipy.org
       versions:
-      - {description: rpy2 is an interface to R running embedded in a Python process.,
-        markedDefault: false, versionName: 2.8.6_py27}
-      - {description: rpy2 is an interface to R running embedded in a Python process.,
-        markedDefault: false, versionName: 2.9.2_py36}
+      - {description: 'The SciPy Stack is a collection of open source software for
+          scientific computing in Python. It provides the following packages: numpy,
+          scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
+        markedDefault: false, versionName: 1.0_py36}
+      - {description: 'The SciPy Stack is a collection of open source software for
+          scientific computing in Python. It provides the following packages: numpy,
+          scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
+        markedDefault: true, versionName: 1.0_py27}
     - categories: math, statistics
       defaultVersionName: '15'
       description: Stata is a complete, integrated statistical software package that
@@ -2474,15 +2480,20 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.5.0.3
-    - categories: math, numerical library
-      defaultVersionName: 1.1.2
-      description: qrupdate is a Fortran library for fast updates of QR and Cholesky
-        decompositions.
-      package: qrupdate
-      url: https://sourceforge.net/projects/qrupdate/
+    - categories: math, deep learning
+      defaultVersionName: 1.0.1_py27
+      description: Theano is a Python library that allows you to define, optimize,
+        and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
+      package: py-theano
+      url: http://deeplearning.net/software/theano
       versions:
-      - {description: qrupdate is a Fortran library for fast updates of QR and Cholesky
-          decompositions., markedDefault: false, versionName: 1.1.2}
+      - description: Theano is a Python library that allows you to define, optimize,
+          and evaluate mathematical expressions involving multi-dimensional arrays
+          efficiently.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.0.1_py27
     - categories: math, numerical library
       defaultVersionName: 3.1.3
       description: FlexiBLAS is a BLAS and LAPACK wrapper library with runtime exchangeable
@@ -2609,6 +2620,17 @@ software_modules:
       versions:
       - {description: Extra precise basic linear algebra subroutines., markedDefault: false,
         versionName: 1.0.248}
+    - categories: math, numerical library
+      defaultVersionName: 1.6.0
+      description: TetGen provides various features to generate good quality and adaptive
+        tetrahedral meshes suitable for numerical methods, such as finite element
+        or finite volume methods.
+      package: tetgen
+      url: http://wias-berlin.de/software/index.jsp?id=TetGen
+      versions:
+      - {description: 'TetGen provides various features to generate good quality and
+          adaptive tetrahedral meshes suitable for numerical methods, such as finite
+          element or finite volume methods.', markedDefault: false, versionName: 1.6.0}
     - categories: math, statistics
       defaultVersionName: '9.4'
       description: SAS is a software suite developed by SAS Institute for advanced
@@ -2624,17 +2646,6 @@ software_modules:
         properties:
           license: {restricted: 1}
         versionName: '9.4'
-    - categories: math, numerical library
-      defaultVersionName: 1.6.0
-      description: TetGen provides various features to generate good quality and adaptive
-        tetrahedral meshes suitable for numerical methods, such as finite element
-        or finite volume methods.
-      package: tetgen
-      url: http://wias-berlin.de/software/index.jsp?id=TetGen
-      versions:
-      - {description: 'TetGen provides various features to generate good quality and
-          adaptive tetrahedral meshes suitable for numerical methods, such as finite
-          element or finite volume methods.', markedDefault: false, versionName: 1.6.0}
     - categories: math, optimization
       defaultVersionName: 9.0.3_py36
       description: The Gurobi Optimizer is a commercial optimization solver for mathematical
@@ -2650,6 +2661,18 @@ software_modules:
           mathematical programming., markedDefault: false, versionName: 8.0.1_py36}
       - {description: The Gurobi Optimizer is a commercial optimization solver for
           mathematical programming., markedDefault: false, versionName: 9.0.3_py36}
+    - categories: math, deep learning
+      defaultVersionName: 1.8_py27
+      description: TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet, NumPy...)
+      package: py-tensorboardx
+      url: https://tensorboardx.readthedocs.io
+      versions:
+      - description: TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet,
+          NumPy...)
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.8_py27
     - categories: math, optimization
       defaultVersionName: 10.3.0
       description: Artelys Knitro is an optimization solver for difficult large-scale
@@ -2728,27 +2751,6 @@ software_modules:
           solving large-scale linear programming (LP), mixed integer programming (MIP),
           and other related problems.', markedDefault: false, versionName: '4.63'}
     - categories: math, deep learning
-      defaultVersionName: 0.12.1_py27
-      description: Horovod is a distributed training framework for TensorFlow. The
-        goal of Horovod is to make distributed Deep Learning fast and easy to use.
-      package: py-horovod
-      url: https://github.com/uber/horovod
-      versions:
-      - description: Horovod is a distributed training framework for TensorFlow. The
-          goal of Horovod is to make distributed Deep Learning fast and easy to use.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 0.12.1_py36
-      - description: Horovod is a distributed training framework for TensorFlow. The
-          goal of Horovod is to make distributed Deep Learning fast and easy to use.
-        markedDefault: true
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 0.12.1_py27
-    - categories: math, deep learning
       defaultVersionName: '20180202'
       description: Torch is a scientific computing framework with wide support for
         machine learning algorithms that puts GPUs first.
@@ -2761,36 +2763,36 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: '20180202'
+    - categories: math, statistics
+      defaultVersionName: 2.9.2_py36
+      description: rpy2 is an interface to R running embedded in a Python process.
+      package: py-rpy2
+      url: https://rpy2.bitbucket.io
+      versions:
+      - {description: rpy2 is an interface to R running embedded in a Python process.,
+        markedDefault: false, versionName: 2.8.6_py27}
+      - {description: rpy2 is an interface to R running embedded in a Python process.,
+        markedDefault: false, versionName: 2.9.2_py36}
+    - categories: math, optimization
+      defaultVersionName: 6.4.1
+      description: SUNDIALS is a family of software packages providing robust and
+        efficient time integrators and nonlinear solvers that can easily be incorporated
+        into existing simulation codes.
+      package: sundials
+      url: https://github.com/LLNL/sundials
+      versions:
+      - {description: SUNDIALS is a family of software packages providing robust and
+          efficient time integrators and nonlinear solvers that can easily be incorporated
+          into existing simulation codes., markedDefault: false, versionName: 6.4.1}
     - categories: math, numerical library
-      defaultVersionName: 3.1.0
-      description: BLIS is a portable software framework for instantiating high-performance
-        BLAS-like dense linear algebra libraries.
-      package: blis
-      url: https://github.com/amd/blis
+      defaultVersionName: 1.1.2
+      description: qrupdate is a Fortran library for fast updates of QR and Cholesky
+        decompositions.
+      package: qrupdate
+      url: https://sourceforge.net/projects/qrupdate/
       versions:
-      - {description: BLIS is a portable software framework for instantiating high-performance
-          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
-        versionName: '2.1'}
-      - {description: BLIS is a portable software framework for instantiating high-performance
-          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
-        versionName: 2.2.4}
-      - {description: BLIS is a portable software framework for instantiating high-performance
-          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
-        versionName: 3.1.0}
-    - categories: math, deep learning
-      defaultVersionName: 1.0.1_py27
-      description: Theano is a Python library that allows you to define, optimize,
-        and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
-      package: py-theano
-      url: http://deeplearning.net/software/theano
-      versions:
-      - description: Theano is a Python library that allows you to define, optimize,
-          and evaluate mathematical expressions involving multi-dimensional arrays
-          efficiently.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 1.0.1_py27
+      - {description: qrupdate is a Fortran library for fast updates of QR and Cholesky
+          decompositions., markedDefault: false, versionName: 1.1.2}
     - categories: math, deep learning
       defaultVersionName: 8.3.3.40
       description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
@@ -2869,6 +2871,19 @@ software_modules:
       - {description: ONNX is a open format to represent deep learning models., markedDefault: false,
         versionName: 1.8.1_py36}
     - categories: math, numerical library
+      defaultVersionName: 6.2.1
+      description: GMP is a free library for arbitrary precision arithmetic, operating
+        on signed integers, rational numbers, and floating-point numbers.
+      package: gmp
+      url: https://gmplib.org
+      versions:
+      - {description: 'GMP is a free library for arbitrary precision arithmetic, operating
+          on signed integers, rational numbers, and floating-point numbers.', markedDefault: false,
+        versionName: 6.1.2}
+      - {description: 'GMP is a free library for arbitrary precision arithmetic, operating
+          on signed integers, rational numbers, and floating-point numbers.', markedDefault: false,
+        versionName: 6.2.1}
+    - categories: math, numerical library
       defaultVersionName: 6.0.4
       description: Software package and libraries for sequential and parallel graph
         partitioning, static mapping and clustering, sequential mesh and hypergraph
@@ -2884,18 +2899,20 @@ software_modules:
           parallel: {mpi: 1}
         versionName: 6.0.4
     - categories: math, numerical library
-      defaultVersionName: 6.2.1
-      description: GMP is a free library for arbitrary precision arithmetic, operating
-        on signed integers, rational numbers, and floating-point numbers.
-      package: gmp
-      url: https://gmplib.org
+      defaultVersionName: 4.0.3
+      description: ParMETIS is an MPI-based parallel library that implements a variety
+        of algorithms for partitioning unstructured graphs, meshes, and for computing
+        fill-reducing orderings of sparse matrices.
+      package: parmetis
+      url: http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview
       versions:
-      - {description: 'GMP is a free library for arbitrary precision arithmetic, operating
-          on signed integers, rational numbers, and floating-point numbers.', markedDefault: false,
-        versionName: 6.1.2}
-      - {description: 'GMP is a free library for arbitrary precision arithmetic, operating
-          on signed integers, rational numbers, and floating-point numbers.', markedDefault: false,
-        versionName: 6.2.1}
+      - description: ParMETIS is an MPI-based parallel library that implements a variety
+          of algorithms for partitioning unstructured graphs, meshes, and for computing
+          fill-reducing orderings of sparse matrices.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 4.0.3
     - categories: math, numerical analysis
       defaultVersionName: R2020a
       description: MATLAB is a multi-paradigm numerical computing environment and
@@ -2938,16 +2955,6 @@ software_modules:
         properties:
           license: {restricted: 1}
         versionName: R2020a
-    - categories: math, numerical library
-      defaultVersionName: 1.2.1
-      description: GNU MPC is a C library for the arithmetic of complex numbers with
-        arbitrarily high precision and correct rounding of the result.
-      package: mpc
-      url: http://www.multiprecision.org/mpc
-      versions:
-      - {description: GNU MPC is a C library for the arithmetic of complex numbers
-          with arbitrarily high precision and correct rounding of the result., markedDefault: false,
-        versionName: 1.2.1}
     - categories: math, statistics
       defaultVersionName: 3.5.1
       description: R is a free software environment for statistical computing and
@@ -3008,37 +3015,27 @@ software_modules:
       url: http://mumps.enseeiht.fr/
       versions:
       - {description: A parallel sparse direct solver., markedDefault: false, versionName: 5.1.2}
-    - categories: math, numerical library
-      defaultVersionName: 4.0.3
-      description: ParMETIS is an MPI-based parallel library that implements a variety
-        of algorithms for partitioning unstructured graphs, meshes, and for computing
-        fill-reducing orderings of sparse matrices.
-      package: parmetis
-      url: http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview
+    - categories: math, deep learning
+      defaultVersionName: 0.12.1_py27
+      description: Horovod is a distributed training framework for TensorFlow. The
+        goal of Horovod is to make distributed Deep Learning fast and easy to use.
+      package: py-horovod
+      url: https://github.com/uber/horovod
       versions:
-      - description: ParMETIS is an MPI-based parallel library that implements a variety
-          of algorithms for partitioning unstructured graphs, meshes, and for computing
-          fill-reducing orderings of sparse matrices.
+      - description: Horovod is a distributed training framework for TensorFlow. The
+          goal of Horovod is to make distributed Deep Learning fast and easy to use.
         markedDefault: false
         properties:
+          arch: {gpu: 1}
           parallel: {mpi: 1}
-        versionName: 4.0.3
-    - categories: math, scientific computing
-      defaultVersionName: 1.0_py27
-      description: 'The SciPy Stack is a collection of open source software for scientific
-        computing in Python. It provides the following packages: numpy, scipy, matplotlib,
-        ipython, jupyter, pandas, sympy and nose.'
-      package: py-scipystack
-      url: https://www.scipy.org
-      versions:
-      - {description: 'The SciPy Stack is a collection of open source software for
-          scientific computing in Python. It provides the following packages: numpy,
-          scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
-        markedDefault: false, versionName: 1.0_py36}
-      - {description: 'The SciPy Stack is a collection of open source software for
-          scientific computing in Python. It provides the following packages: numpy,
-          scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
-        markedDefault: true, versionName: 1.0_py27}
+        versionName: 0.12.1_py36
+      - description: Horovod is a distributed training framework for TensorFlow. The
+          goal of Horovod is to make distributed Deep Learning fast and easy to use.
+        markedDefault: true
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 0.12.1_py27
     - categories: math, statistics
       defaultVersionName: 2022.02.2-485
       description: RStudio is an integrated development environment (IDE) for R. It
@@ -3052,6 +3049,22 @@ software_modules:
           R. It includes a console, syntax-highlighting editor that supports direct
           code execution, as well as tools for plotting, history, debugging and workspace
           management. This is the X11/GUI version.', markedDefault: false, versionName: 2022.02.2-485}
+    - categories: math, numerical library
+      defaultVersionName: 3.1.0
+      description: BLIS is a portable software framework for instantiating high-performance
+        BLAS-like dense linear algebra libraries.
+      package: blis
+      url: https://github.com/amd/blis
+      versions:
+      - {description: BLIS is a portable software framework for instantiating high-performance
+          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
+        versionName: '2.1'}
+      - {description: BLIS is a portable software framework for instantiating high-performance
+          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
+        versionName: 2.2.4}
+      - {description: BLIS is a portable software framework for instantiating high-performance
+          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
+        versionName: 3.1.0}
     - categories: math, numerical library
       defaultVersionName: '2019'
       description: Intel Math Kernel Library (Intel MKL) is a library of optimized
@@ -3150,18 +3163,16 @@ software_modules:
       - {description: 'Armadillo is a high quality linear algebra library (matrix
           maths) for the C++ language, aiming towards a good balance between speed
           and ease of use.', markedDefault: false, versionName: 8.200.1}
-    - categories: math, deep learning
-      defaultVersionName: 1.8_py27
-      description: TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet, NumPy...)
-      package: py-tensorboardx
-      url: https://tensorboardx.readthedocs.io
+    - categories: math, numerical library
+      defaultVersionName: 1.2.1
+      description: GNU MPC is a C library for the arithmetic of complex numbers with
+        arbitrarily high precision and correct rounding of the result.
+      package: mpc
+      url: http://www.multiprecision.org/mpc
       versions:
-      - description: TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet,
-          NumPy...)
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 1.8_py27
+      - {description: GNU MPC is a C library for the arithmetic of complex numbers
+          with arbitrarily high precision and correct rounding of the result., markedDefault: false,
+        versionName: 1.2.1}
     - categories: math, deep learning
       defaultVersionName: 0.3.0_py27
       description: PyTorch is a deep learning framework that puts Python first.
