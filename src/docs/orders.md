@@ -217,14 +217,14 @@ To start ordering compute nodes for Sherlock:
 :octicons-lock-16:[^sunet] to review prices and select your configurations
 
 <!-- markdownlint-disable MD013 -->
-[Choose :fontawesome-solid-stream:][url_catalog]{: .md-button .md-button .md-button--primary }
+[Choose :fontawesome-solid-list:][url_catalog]{: .md-button .md-button .md-button--primary }
 </div>
 <div markdown="1" class="steps" style="float:right">
 :material-numeric-2-circle: **fill in the [order form][url_order_form]**
 :octicons-lock-16:[^sunet] to submit your request and provide the [required
 information](#required-information)
 
-[Order :fontawesome-solid-shopping-cart:][url_order_form]{: .md-button .md-button--primary }
+[Order :fontawesome-solid-cart-shopping:][url_order_form]{: .md-button .md-button--primary }
 </div>
 <div style="clear:both"></div>
 <!-- markdownlint-enable MD013 -->

@@ -311,11 +311,11 @@ The table below summarizes the advantages and inconvenients of each approach:
 
 |     | Cron tasks | Recurring jobs |
 | --- | :--------: | :------------: |
-| Authorized on Sherlock                | :fontawesome-solid-times:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
-| Dedicated resources for the task      | :fontawesome-solid-times:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
-| Persistent across node redeployments  | :fontawesome-solid-times:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
-| Unique, controlled execution          | :fontawesome-solid-times:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
-| Precise schedule                      | :fontawesome-solid-check:{: .chk_yes :}| :fontawesome-solid-times:{: .chk_no :}  |
+| Authorized on Sherlock                | :fontawesome-solid-xmark:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
+| Dedicated resources for the task      | :fontawesome-solid-xmark:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
+| Persistent across node redeployments  | :fontawesome-solid-xmark:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
+| Unique, controlled execution          | :fontawesome-solid-xmark:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
+| Precise schedule                      | :fontawesome-solid-check:{: .chk_yes :}| :fontawesome-solid-xmark:{: .chk_no :}  |
 
 ### Recurrent job example
 
