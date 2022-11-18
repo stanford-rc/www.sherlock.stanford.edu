@@ -3651,26 +3651,22 @@ software_modules:
   - name: biology
     packages:
     - categories: biology, genomics
-      defaultVersionName: 4.1.4.1
-      description: GATK (Genome Analysis Toolkit) offers a wide variety of tools with
-        a primary focus on variant discovery and genotyping.
-      package: gatk
-      url: https://software.broadinstitute.org/gatk/
+      defaultVersionName: 1.2.13_py27
+      description: OBITools is a set of programs designed for analyzing NGS data in
+        a DNA metabarcoding context.
+      package: py-obitools
+      url: https://pythonhosted.org/OBITools/index.html
       versions:
-      - {description: GATK (Genome Analysis Toolkit) offers a wide variety of tools
-          with a primary focus on variant discovery and genotyping., markedDefault: false,
-        versionName: 4.1.0.0}
-      - {description: GATK (Genome Analysis Toolkit) offers a wide variety of tools
-          with a primary focus on variant discovery and genotyping., markedDefault: false,
-        versionName: 4.1.4.1}
+      - {description: OBITools is a set of programs designed for analyzing NGS data
+          in a DNA metabarcoding context., markedDefault: false, versionName: 1.2.13_py27}
     - categories: biology, molecular biology
-      defaultVersionName: 0.9.6
-      description: unixODBC is an open-source project that implements the ODBC API.
-      package: coot
-      url: http://www.unixodbc.org/
+      defaultVersionName: 4.0.3
+      description: DSSP is an application to assign secondary structure to proteins.
+      package: dssp
+      url: https://github.com/PDB-REDO/dssp
       versions:
-      - {description: unixODBC is an open-source project that implements the ODBC
-          API., markedDefault: false, versionName: 0.9.6}
+      - {description: DSSP is an application to assign secondary structure to proteins.,
+        markedDefault: false, versionName: 4.0.3}
     - categories: biology, genomics
       defaultVersionName: 2.1.1
       description: TopHat is a fast splice junction mapper for RNA-Seq reads.
@@ -4130,6 +4126,15 @@ software_modules:
       - {description: 'NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic
           Local Alignment Search Tool), an algorithm for comparing primary biological
           sequence information.', markedDefault: false, versionName: 2.11.0}
+    - categories: biology, genomics
+      defaultVersionName: 0.0.14
+      description: The FASTX-Toolkit is a collection of command line tools for Short-Reads
+        FASTA/FASTQ files preprocessing.
+      package: fastx_toolkit
+      url: http://hannonlab.cshl.edu/fastx_toolkit/
+      versions:
+      - {description: The FASTX-Toolkit is a collection of command line tools for
+          Short-Reads FASTA/FASTQ files preprocessing., markedDefault: false, versionName: 0.0.14}
     - categories: biology, neurology
       defaultVersionName: 5.0.10
       description: FSL is a comprehensive library of analysis tools for FMRI, MRI
@@ -4152,17 +4157,28 @@ software_modules:
       versions:
       - {description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning
           sequencing reads to long reference sequences., markedDefault: false, versionName: 2.3.4.1}
-    - categories: biology, neurology
-      defaultVersionName: 0.7.00
-      description: BART is a toolbox for Computational Magnetic Resonance Imaging.
-      package: bart
-      url: https://mrirecon.github.io/bart/
+    - categories: biology, cryo-em
+      defaultVersionName: 4.11.5
+      description: IMOD is a set of image processing, modeling and display programs
+        used for tomographic reconstruction and for 3D reconstruction of EM serial
+        sections and optical sections.
+      package: imod
+      url: http://bio3d.colorado.edu/imod
       versions:
-      - description: BART is a toolbox for Computational Magnetic Resonance Imaging.
+      - description: IMOD is a set of image processing, modeling and display programs
+          used for tomographic reconstruction and for 3D reconstruction of EM serial
+          sections and optical sections.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-        versionName: 0.7.00
+        versionName: 4.9.12
+      - description: IMOD is a set of image processing, modeling and display programs
+          used for tomographic reconstruction and for 3D reconstruction of EM serial
+          sections and optical sections.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 4.11.5
     - categories: biology, genomics
       defaultVersionName: 1.2.2
       description: Bowtie is an ultrafast, memory-efficient short read aligner.
@@ -4228,28 +4244,16 @@ software_modules:
       versions:
       - {description: FreeBayes is a Bayesian genetic variant detector designed to
           find small polymorphisms., markedDefault: false, versionName: 1.2.0}
-    - categories: biology, cryo-em
-      defaultVersionName: 4.11.5
-      description: IMOD is a set of image processing, modeling and display programs
-        used for tomographic reconstruction and for 3D reconstruction of EM serial
-        sections and optical sections.
-      package: imod
-      url: http://bio3d.colorado.edu/imod
+    - categories: biology, genomics
+      defaultVersionName: 2.0.1_py39
+      description: HTSeq is a Python library to facilitate processing and analysis
+        of data from high-throughput sequencing (HTS) experiments.
+      package: py-htseq
+      url: http://htseq.readthedocs.io/
       versions:
-      - description: IMOD is a set of image processing, modeling and display programs
-          used for tomographic reconstruction and for 3D reconstruction of EM serial
-          sections and optical sections.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 4.9.12
-      - description: IMOD is a set of image processing, modeling and display programs
-          used for tomographic reconstruction and for 3D reconstruction of EM serial
-          sections and optical sections.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 4.11.5
+      - {description: HTSeq is a Python library to facilitate processing and analysis
+          of data from high-throughput sequencing (HTS) experiments., markedDefault: false,
+        versionName: 2.0.1_py39}
     - categories: biology, genomics
       defaultVersionName: 0.44.0
       description: kallisto is a program for quantifying abundances of transcripts
@@ -4263,16 +4267,17 @@ software_modules:
       - {description: kallisto is a program for quantifying abundances of transcripts
           from RNA-Seq data using high-throughput sequencing reads., markedDefault: true,
         versionName: 0.44.0}
-    - categories: biology, genomics
-      defaultVersionName: 2.0.1_py39
-      description: HTSeq is a Python library to facilitate processing and analysis
-        of data from high-throughput sequencing (HTS) experiments.
-      package: py-htseq
-      url: http://htseq.readthedocs.io/
+    - categories: biology, neurology
+      defaultVersionName: 0.7.00
+      description: BART is a toolbox for Computational Magnetic Resonance Imaging.
+      package: bart
+      url: https://mrirecon.github.io/bart/
       versions:
-      - {description: HTSeq is a Python library to facilitate processing and analysis
-          of data from high-throughput sequencing (HTS) experiments., markedDefault: false,
-        versionName: 2.0.1_py39}
+      - description: BART is a toolbox for Computational Magnetic Resonance Imaging.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.7.00
     - categories: biology, genomics
       defaultVersionName: '0.1'
       description: popscle is a suite of population scale analysis tools for single-cell
@@ -4283,15 +4288,6 @@ software_modules:
       - {description: popscle is a suite of population scale analysis tools for single-cell
           genomics data., markedDefault: false, versionName: '0.1'}
     - categories: biology, genomics
-      defaultVersionName: 0.0.14
-      description: The FASTX-Toolkit is a collection of command line tools for Short-Reads
-        FASTA/FASTQ files preprocessing.
-      package: fastx_toolkit
-      url: http://hannonlab.cshl.edu/fastx_toolkit/
-      versions:
-      - {description: The FASTX-Toolkit is a collection of command line tools for
-          Short-Reads FASTA/FASTQ files preprocessing., markedDefault: false, versionName: 0.0.14}
-    - categories: biology, genomics
       defaultVersionName: 2.5.4_py39
       description: OrthoFinder is a fast, accurate and comprehensive platform for
         comparative genomics.
@@ -4300,18 +4296,6 @@ software_modules:
       versions:
       - {description: 'OrthoFinder is a fast, accurate and comprehensive platform
           for comparative genomics.', markedDefault: false, versionName: 2.5.4_py39}
-    - categories: biology, genomics
-      defaultVersionName: 2.1.0
-      description: HISAT2 is a fast and sensitive alignment program for mapping next-generation
-        sequencing reads (both DNA and RNA) to a population of human genomes (as well
-        as to a single reference genome).
-      package: hisat2
-      url: http://ccb.jhu.edu/software/hisat2
-      versions:
-      - {description: HISAT2 is a fast and sensitive alignment program for mapping
-          next-generation sequencing reads (both DNA and RNA) to a population of human
-          genomes (as well as to a single reference genome)., markedDefault: false,
-        versionName: 2.1.0}
     - categories: biology, computational biology
       defaultVersionName: '3.8'
       description: Rosetta is the premier software suite for modeling macromolecular
@@ -4329,18 +4313,17 @@ software_modules:
           parallel: {mpi: 1}
         versionName: '3.8'
     - categories: biology, genomics
-      defaultVersionName: 0.9.0_py39
-      description: Pybedtools wraps and extends BEDTools and offers feature-level
-        manipulations from within Python.
-      package: py-pybedtools
-      url: https://github.com/daler/pybedtools
+      defaultVersionName: 2.1.0
+      description: HISAT2 is a fast and sensitive alignment program for mapping next-generation
+        sequencing reads (both DNA and RNA) to a population of human genomes (as well
+        as to a single reference genome).
+      package: hisat2
+      url: http://ccb.jhu.edu/software/hisat2
       versions:
-      - {description: Pybedtools wraps and extends BEDTools and offers feature-level
-          manipulations from within Python., markedDefault: false, versionName: 0.8.0_py27}
-      - {description: Pybedtools wraps and extends BEDTools and offers feature-level
-          manipulations from within Python., markedDefault: false, versionName: 0.8.2_py36}
-      - {description: Pybedtools wraps and extends BEDTools and offers feature-level
-          manipulations from within Python., markedDefault: false, versionName: 0.9.0_py39}
+      - {description: HISAT2 is a fast and sensitive alignment program for mapping
+          next-generation sequencing reads (both DNA and RNA) to a population of human
+          genomes (as well as to a single reference genome)., markedDefault: false,
+        versionName: 2.1.0}
     - categories: biology, cryo-em
       defaultVersionName: 0.2.4_py36
       description: A pipeline for particle detection in cryo-electron microscopy images
@@ -4355,6 +4338,19 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.2.4_py36
+    - categories: biology, genomics
+      defaultVersionName: 0.9.0_py39
+      description: Pybedtools wraps and extends BEDTools and offers feature-level
+        manipulations from within Python.
+      package: py-pybedtools
+      url: https://github.com/daler/pybedtools
+      versions:
+      - {description: Pybedtools wraps and extends BEDTools and offers feature-level
+          manipulations from within Python., markedDefault: false, versionName: 0.8.0_py27}
+      - {description: Pybedtools wraps and extends BEDTools and offers feature-level
+          manipulations from within Python., markedDefault: false, versionName: 0.8.2_py36}
+      - {description: Pybedtools wraps and extends BEDTools and offers feature-level
+          manipulations from within Python., markedDefault: false, versionName: 0.9.0_py39}
     - categories: biology, genomics
       defaultVersionName: '1.16'
       description: C library for high-throughput sequencing data formats.
@@ -4398,31 +4394,14 @@ software_modules:
           in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
         versionName: '1.16'}
     - categories: biology, genomics
-      defaultVersionName: 1.2.13_py27
-      description: OBITools is a set of programs designed for analyzing NGS data in
-        a DNA metabarcoding context.
-      package: py-obitools
-      url: https://pythonhosted.org/OBITools/index.html
+      defaultVersionName: 2.5.1
+      description: A C code library and several stand-alone programs for the prediction
+        and comparison of RNA secondary structures.
+      package: viennarna
+      url: https://github.com/ViennaRNA/ViennaRNA
       versions:
-      - {description: OBITools is a set of programs designed for analyzing NGS data
-          in a DNA metabarcoding context., markedDefault: false, versionName: 1.2.13_py27}
-    - categories: biology, molecular biology
-      defaultVersionName: 4.0.3
-      description: DSSP is an application to assign secondary structure to proteins.
-      package: dssp
-      url: https://github.com/PDB-REDO/dssp
-      versions:
-      - {description: DSSP is an application to assign secondary structure to proteins.,
-        markedDefault: false, versionName: 4.0.3}
-    - categories: biology, radiology
-      defaultVersionName: '4.2'
-      description: The NBIA Data Retriever is an application to download radiology
-        images from the TCIA Radiology Portal.
-      package: nbia-data-retriever
-      url: https://wiki.cancerimagingarchive.net/display/NBIA/NBIA+Data+Retriever+Help
-      versions:
-      - {description: The NBIA Data Retriever is an application to download radiology
-          images from the TCIA Radiology Portal., markedDefault: false, versionName: '4.2'}
+      - {description: A C code library and several stand-alone programs for the prediction
+          and comparison of RNA secondary structures., markedDefault: false, versionName: 2.5.1}
     - categories: biology, genomics
       defaultVersionName: 0.8.13_py39
       description: Tools for manipulating biological data, particularly multiple sequence
@@ -4434,6 +4413,36 @@ software_modules:
           sequence alignments.', markedDefault: false, versionName: 0.8.1_py27}
       - {description: 'Tools for manipulating biological data, particularly multiple
           sequence alignments.', markedDefault: false, versionName: 0.8.13_py39}
+    - categories: biology, genomics
+      defaultVersionName: 4.1.4.1
+      description: GATK (Genome Analysis Toolkit) offers a wide variety of tools with
+        a primary focus on variant discovery and genotyping.
+      package: gatk
+      url: https://software.broadinstitute.org/gatk/
+      versions:
+      - {description: GATK (Genome Analysis Toolkit) offers a wide variety of tools
+          with a primary focus on variant discovery and genotyping., markedDefault: false,
+        versionName: 4.1.0.0}
+      - {description: GATK (Genome Analysis Toolkit) offers a wide variety of tools
+          with a primary focus on variant discovery and genotyping., markedDefault: false,
+        versionName: 4.1.4.1}
+    - categories: biology, radiology
+      defaultVersionName: '4.2'
+      description: The NBIA Data Retriever is an application to download radiology
+        images from the TCIA Radiology Portal.
+      package: nbia-data-retriever
+      url: https://wiki.cancerimagingarchive.net/display/NBIA/NBIA+Data+Retriever+Help
+      versions:
+      - {description: The NBIA Data Retriever is an application to download radiology
+          images from the TCIA Radiology Portal., markedDefault: false, versionName: '4.2'}
+    - categories: biology, molecular biology
+      defaultVersionName: 0.9.6
+      description: unixODBC is an open-source project that implements the ODBC API.
+      package: coot
+      url: http://www.unixodbc.org/
+      versions:
+      - {description: unixODBC is an open-source project that implements the ODBC
+          API., markedDefault: false, versionName: 0.9.6}
     - categories: biology, genomics
       defaultVersionName: 0.5.0
       description: Trim Galore! is a wrapper script to automate quality and adapter
@@ -4508,6 +4517,16 @@ software_modules:
       - {description: Tools (written in C using htslib) for manipulating next-generation
           sequencing data., markedDefault: false, versionName: 1.16.1}
     - categories: biology, genomics
+      defaultVersionName: '2.20'
+      description: The bcl2fastq2 conversion software can be used to convert BCL files
+        from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.
+      package: bcl2fastq
+      url: https://support.illumina.com/downloads/bcl2fastq-conversion-software-v2-20.html
+      versions:
+      - {description: 'The bcl2fastq2 conversion software can be used to convert BCL
+          files from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.',
+        markedDefault: false, versionName: '2.20'}
+    - categories: biology, genomics
       defaultVersionName: 2.30.0
       description: The bedtools utilities are a swiss-army knife of tools for a wide-range
         of genomics analysis tasks.
@@ -4518,16 +4537,6 @@ software_modules:
           wide-range of genomics analysis tasks., markedDefault: false, versionName: 2.27.1}
       - {description: The bedtools utilities are a swiss-army knife of tools for a
           wide-range of genomics analysis tasks., markedDefault: false, versionName: 2.30.0}
-    - categories: biology, genomics
-      defaultVersionName: '2.20'
-      description: The bcl2fastq2 conversion software can be used to convert BCL files
-        from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.
-      package: bcl2fastq
-      url: https://support.illumina.com/downloads/bcl2fastq-conversion-software-v2-20.html
-      versions:
-      - {description: 'The bcl2fastq2 conversion software can be used to convert BCL
-          files from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.',
-        markedDefault: false, versionName: '2.20'}
     - categories: biology, neurology
       defaultVersionName: 1.3.1
       description: Connectome Workbench is an open source, freely available visualization
