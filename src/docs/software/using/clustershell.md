@@ -24,7 +24,7 @@ documentation][url_doc_clush_api] for reference.
 ClusterShell is available on Sherlock and the corresponding
 [module][url_modules] can be loaded with:
 
-```
+``` none
 $ ml system py-clustershell
 ```
 
@@ -33,7 +33,7 @@ $ ml system py-clustershell
 The [`cluset`][url_doc_cluset] command can be used to easily manipulate lists
 of node names, and to expand, fold, or count them:
 
-```
+``` none
 $ cluset --expand sh03-01n[01-06]
 sh03-01n01 sh03-01n02 sh03-01n03 sh03-01n04 sh03-01n05 sh03-01n06
 
@@ -56,7 +56,8 @@ connect to each of these nodes.
     consequence, `clush` will only work on those nodes.
 
 For instance, to check the load on multiple compute nodes at once:
-```
+
+``` none
 $ clush -w sh03-01n[01-03] cat /proc/loadavg
 sh03-01n01: 19.48 14.43 11.76 22/731 22897
 sh03-01n02: 13.20 13.29 13.64 14/831 1163
@@ -70,7 +71,8 @@ sh03-01n03: 11.60 11.48 11.82 18/893 23945
     presented separately.
 
     For instance, without `-b`:
-    ```
+
+    ``` none
     $ clush -w sh03-01n[01-03] echo ok
     sh03-01n02: ok
     sh03-01n03: ok
@@ -78,7 +80,8 @@ sh03-01n03: 11.60 11.48 11.82 18/893 23945
     ```
 
     With `-b`:
-    ```
+
+    ``` none
     $ clush -bw sh03-01n[01-03] echo ok
     ---------------
     sh03-01n[01-03] (3)
@@ -101,7 +104,8 @@ running on. You can use the following groups to get specific node lists:
 | `@partition:` | `@part:`,`@p:` | list nodes in given partition | `cluset -f @partition:gpu`  |
 
 For instance, to get the list of nodes where job `123456` is running:
-```
+
+``` none
 $ cluset -f @job:123456`
 ```
 
@@ -113,7 +117,7 @@ $ cluset -f @job:123456`
 For instance, if job 1988522 from user `kilian` is running on nodes
 `sh02-01n[59-60]`,  `squeue` would display this:
 
-```
+``` none
 $ squeue -u kilian
        JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
      1988522    normal interact   kilian  R       1:30      2 sh02-01n[59-60]
@@ -123,14 +127,16 @@ $ squeue -u kilian
 
 With ClusterShell, you could get:
 
-  * the list of node names where user `kilian` has jobs running:
-    ```
+* the list of node names where user `kilian` has jobs running:
+
+    ``` none
     $ cluset -f @user:kilian
     sh02-01n[59-62]
     ```
 
-  * the nodes where job 1988522 is running, in an expanded form:
-    ```
+* the nodes where job 1988522 is running, in an expanded form:
+
+    ``` none
     $ cluset -e @job:1988522
     sh02-01n59 sh02-01n60
     ```
@@ -142,7 +148,7 @@ a given partition. For instance, to list the nodes that are in "mixed" state in
 the `dev` partition, you can request the intersection between the
 `@state:mixed` and `@partition:dev` node lists:
 
-```
+``` none
 $ cluset -f @nodestate:mixed -i @partition:dev
 sh02-01n[57-58]
 ```
@@ -152,7 +158,7 @@ sh02-01n[57-58]
 To get a list of files in [`$L_SCRATCH`][url_lscratch] on all the nodes that
 are part of job `1988522`:
 
-```
+``` none
 $ $ clush -w@j:1988522 tree $L_SCRATCH
 sh02-01n59: /lscratch/kilian
 sh02-01n59: ├── 1988522
@@ -171,7 +177,7 @@ sh02-01n60: 1 directory, 0 files
 
 To display your process tree across all the nodes your jobs are running on:
 
-```
+``` none
 $ clush -w @u:$USER pstree -au $USER
 sh02-09n71: mpiBench
 sh02-09n71:   `-3*[{mpiBench}]
@@ -194,7 +200,8 @@ sh02-10n01:   `-3*[{mpiBench}]
 ### CPU usage
 
 To get the CPU and memory usage of your processes in job `2003264`:
-```
+
+``` none
 $ clush -w @j:2003264 ps -u$USER -o%cpu,rss,cmd
 sh03-07n12: %CPU   RSS CMD
 sh03-07n12:  0.0  4780 /home/users/kilian/benchs/MPI/mpiBench/mpiBench -i 1000000
@@ -222,7 +229,7 @@ sh03-06n11: 17.0 59580 /home/users/kilian/benchs/MPI/mpiBench/mpiBench -i 100000
 
 To show what's running on all the GPUs on the nodes associated with job `123456`:
 
-``` bash
+``` none
 $ clush -bw @job:123456 nvidia-smi --format=csv --query-compute-apps=process_name,utilization.memory
 sh03-12n01: /share/software/user/open/python/3.6.1/bin/python3.6, 15832 MiB
 sh02-12n04: /share/software/user/open/python/3.6.1/bin/python3.6, 15943 MiB
