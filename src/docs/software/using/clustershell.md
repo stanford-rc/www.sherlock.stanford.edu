@@ -113,7 +113,8 @@ For instance, if job 1988522 from user `kilian` is running on nodes
 ```
 $ squeue -u kilian
        JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-     1988522    normal interact   kilian  R       1:28      2 sh02-01n[59-60]
+     1988522    normal interact   kilian  R       1:30      2 sh02-01n[59-60]
+     1988523    normal interact   kilian  R       1:28      2 sh02-01n[61-62]
 
 ```
 
@@ -122,7 +123,7 @@ With ClusterShell, you could get:
   * the list of node names where user `kilian` has jobs running:
     ```
     $ cluset -f @user:kilian
-    sh02-01n[59-60]
+    sh02-01n[59-62]
     ```
 
   * the nodes where job 1988522 is running, in an expanded form:
