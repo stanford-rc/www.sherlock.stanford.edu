@@ -91,9 +91,7 @@ sh03-01n03: 11.60 11.48 11.82 18/893 23945
 
 On Sherlock, ClusterShell is also tightly integrated with the job scheduler,
 and can directly provide information about a user's jobs and the nodes they're
-running on.
-
-You can use the following groups:
+running on. You can use the following groups to get specific node lists:
 
 | group name | short name | action | example |
 | ----- | -------- | ----- | ------- |
@@ -102,10 +100,15 @@ You can use the following groups:
 | `@nodestate:` | `@node:`,`@n:` | list nodes in given state     | `cluset -f @nodestate:idle` |
 | `@partition:` | `@part:`,`@p:` | list nodes in given partition | `cluset -f @partition:gpu`  |
 
+For instance, to get the list of nodes where job `123456` is running:
+```
+$ cluset -f @job:123456`
+```
 
-### Examples
 
-#### Job information
+## Examples
+
+### Job information
 
 For instance, if job 1988522 from user `kilian` is running on nodes
 `sh02-01n[59-60]`,  `squeue` would display this:
@@ -132,7 +135,7 @@ With ClusterShell, you could get:
     sh02-01n59 sh02-01n60
     ```
 
-#### Node states
+### Node states
 
 You can also use those binding to get lists of nodes in a particular state, in
 a given partition. For instance, to list the nodes that are in "mixed" state in
@@ -144,10 +147,10 @@ $ cluset -f @nodestate:mixed -i @partition:dev
 sh02-01n[57-58]
 ```
 
+### Local storage
 
-#### Local storage
-
-To get a list of files in [`$L_SCRATCH`][url_lscratch] on all the nodes that are part of job `1988522`:
+To get a list of files in [`$L_SCRATCH`][url_lscratch] on all the nodes that
+are part of job `1988522`:
 
 ```
 $ $ clush -w@j:1988522 tree $L_SCRATCH
@@ -164,7 +167,7 @@ sh02-01n60:
 sh02-01n60: 1 directory, 0 files
 ```
 
-#### CPU usage
+### Process tree
 
 To display your process tree across all the nodes your jobs are running on:
 
@@ -187,6 +190,8 @@ sh02-10n01:   `-3*[{mpiBench}]
 sh02-10n01: mpiBench
 sh02-10n01:   `-3*[{mpiBench}]
 ```
+
+### CPU usage
 
 To get the CPU and memory usage of your processes in job `2003264`:
 ```
@@ -213,7 +218,7 @@ sh03-06n11: 17.0 59592 /home/users/kilian/benchs/MPI/mpiBench/mpiBench -i 100000
 sh03-06n11: 17.0 59580 /home/users/kilian/benchs/MPI/mpiBench/mpiBench -i 1000000
 ```
 
-#### GPU usage
+### GPU usage
 
 To show what's running on all the GPUs on the nodes associated with job `123456`:
 
@@ -239,8 +244,6 @@ sh02-12n04: /share/software/user/open/python/3.6.1/bin/python3.6, 15943 MiB
 [url_lscratch]:     /docs/storage/filesystems/#l_scratch
 
 [comment]: #  (footnotes -----------------------------------------------------)
-
-[^foot]: footnote
 
 
 --8<--- "includes/_acronyms.md"
