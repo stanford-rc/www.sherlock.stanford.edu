@@ -24,7 +24,7 @@ tags:
 
 ## In a nutshell
 
-Sherlock features over **{{ get_value("computing", "compute nodes", rnd=-2)
+Sherlock features over **{{ get_value("hardware", "compute nodes", rnd=-2)
 }}** compute nodes, **{{ get_value("computing", "CPU cores", rnd=-2) }}+** CPU
 cores and **{{ get_value("computing", "GPUs", rnd=-2) }}+** GPUs, for a total
 computing power of more than **{{ get_value("computing", "PFLOPs (FP64)", rnd=1) }}**
@@ -96,7 +96,7 @@ th:nth-child(2)  { min-width: 0 !important;
     {%- endif -%}
 </small> |
 {%- endfor %}
-| **Total** | | **{{ get_value("computing", "compute nodes") }} :octicons-server-24:** | **{{ get_value("computing", "CPU cores") }} :octicons-cpu-24:** | **{{ get_value("computing", "GPUs") }} :material-expansion-card:** |
+| **Total** | | **{{ get_value("hardware", "compute nodes") }} :octicons-server-24:** | **{{ get_value("computing", "CPU cores") }} :octicons-cpu-24:** | **{{ get_value("computing", "GPUs") }} :material-expansion-card:** |
 
 
 
