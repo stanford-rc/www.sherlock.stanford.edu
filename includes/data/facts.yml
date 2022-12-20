@@ -2,9 +2,9 @@ facts:
   - name: users
     fields:
       - name: user accounts
-        value: 6418
+        value: 6432
       - name: PI groups
-        value: 1022
+        value: 1025
         desc: "from all Stanford's seven Schools, SLAC, Stanford Institutes, _etc._"
       - name: owner groups
         value: 183
@@ -19,6 +19,7 @@ facts:
     icon: microchip
     fields:
       - name: PFLOPs (FP64)
+        fmt: "{:0.2f}"
         value: 4.00
         desc: 14.99 (FP32) PFLOPs
       - name: CPU cores
@@ -40,7 +41,7 @@ facts:
     icon: plug
     fields:
       - name: kW
-        value: 452.50
+        value: 473.70
         desc: total power usage
       - name: PDUs
         value: 49
@@ -60,8 +61,8 @@ facts:
         value: 96
         desc: across **2** Infiniband fabrics (EDR, HDR)
       - name: Infiniband cables
-        value: 5027
-        desc: spanning about **24.73 km**
+        value: 5026
+        desc: spanning about **24.72 km**
       - name: Ethernet switches
         value: 47
   - name: scheduler
@@ -70,8 +71,13 @@ facts:
       - name: Slurm partitions
         value: 162
       - name: CPU.hours/day
-        value: 39556
-        desc: delivered on average, every day. That's over **4 years** of computing in a day!
+        value: 37661
+        desc: over **4 years** of computing in a single day
+      - name: /day
+        fmt: "${:,.0f}"
+        value: 3494.9408
+        desc: to run the same workload on t2.large on-demand cloud instances
+
   - name: partitions
     fields:
       - name: normal

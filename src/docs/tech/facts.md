@@ -30,14 +30,14 @@ tags:
 ## :fontawesome-solid-{{ category.icon|default(category.name) }}: {{ category.name|capitalize }}
   {% for field in category.fields -%}
     {%- set fmt = field.fmt|default("{:,}") %}
-      {% if category.name == "storage" %}
+    {% if category.name == "storage" %}
    * **{{ field.value | round(-6) | filesizeformat }}**{: .number :} {{ field.name }}
-      {% else %}
+    {% else %}
    * **{{ fmt.format(field.value) }}**{: .number :} {{ field.name }}
-      {% endif %}
-     {% if field.desc %}
-     {{ field.desc }}
-     {: .number_desc :}{% endif %}
+    {% endif %}
+    {% if field.desc %}
+    {{ field.desc }}
+    {: .number_desc :}{% endif %}
   {% endfor %}
 </div>
 {{ loop.cycle('', '<div style="clear: both"></div>') }}
