@@ -287,10 +287,12 @@ To run RStudio via Sherlock OnDemand:
 
 ![ood_rstudio](images/ood_rstudio.png)
 
- !!! warning "Installing packages in RStudio"
- You may encounter errors while installing R packages within RStudio.  
- First try installing R packages in a shell session on the Sherlock command line. 
- See our [R packages][url_r_packages] documentation for more information.
+!!! warning "Installing packages in RStudio"
+
+    You may encounter errors while installing R packages within RStudio. First
+    try installing R packages in a shell session on the Sherlock command line.
+    See our [R packages][url_r_packages] documentation for more information.
+    
 
 ### Tensorboard
 
