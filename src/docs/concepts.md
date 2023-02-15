@@ -141,8 +141,8 @@ software they may need, purchasing compute nodes on Sherlock does not allow
 :fontawesome-solid-xmark:{ .chk_no } **running permanent services**: permanent
 processes such as web servers or databases can only run on owner nodes through
 the scheduler, using [recurring][url_recurring] or
-[persistent][url_persistent]. Purchasing compute nodes on Sherlock does not
-provide a way to run anything that couldn't run on publicly-available nodes.
+[persistent][url_persistent] jobs. Purchasing compute nodes on Sherlock does 
+not provide a way to run anything that couldn't run on freely-available nodes.
 
 :fontawesome-solid-xmark:{ .chk_no } **direct network connectivity**: owners'
 nodes are connected to the Sherlock's internal network and are not directly
