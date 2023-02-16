@@ -418,7 +418,7 @@ To remove a package from your local R library, you can use the
 R has a couple of powerful and easy to use tools for parallelizing your R jobs.
 [`doParallel`][url_doparallel] is one of them. If the `doParallel` package is
 not installed in your environment yet, you can [install it in a few easy
-step](#installing).
+steps](#installing).
 
 Here is a quick `doParallel` example that uses one node and 16 cores on
 Sherlock (more nodes or CPU cores can be requested, as needed).
