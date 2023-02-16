@@ -90,7 +90,7 @@ The resource scheduler configuration works like this:
   resources they purchased,
 * when those nodes are idle, other owners can use them,
 * when the purchasing owners want to use their resources, jobs from other
-  owners that may be running on them are preempted (_ie._ killed and
+  owners that may be running on them are preempted (*ie.* killed and
   re-queued).
 
 This provides a way to get more resources to run less important jobs in the
@@ -140,9 +140,9 @@ software they may need, purchasing compute nodes on Sherlock does not allow
 
 :fontawesome-solid-xmark:{ .chk_no } **running permanent services**: permanent
 processes such as web servers or databases can only run on owner nodes through
-the scheduler, using [recurring][url_recurring] or
-[persistent][url_persistent] jobs. Purchasing compute nodes on Sherlock does 
-not provide a way to run anything that couldn't run on freely-available nodes.
+the scheduler, using [recurring][url_recurring] or [persistent][url_persistent]
+jobs. Purchasing compute nodes on Sherlock does not provide a way to run
+anything that couldn't run on freely-available nodes.
 
 :fontawesome-solid-xmark:{ .chk_no } **direct network connectivity**: owners'
 nodes are connected to the Sherlock's internal network and are not directly
