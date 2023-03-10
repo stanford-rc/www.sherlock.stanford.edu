@@ -224,7 +224,7 @@ To allow `jack` to create files and subdirectories within `private/` with the
 permissions as granted above, inheritance rules need to be applied.
 
 ``` shell
-$ nfs4_setfacl -R -a A:fdi:jack@sherlock:RW private/
+$ nfs4_setfacl -R -a A:fd:jack@sherlock:RW private/
 ```
 
 By default, each permission is in the Deny state and an ACE is required to
