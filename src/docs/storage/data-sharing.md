@@ -210,11 +210,11 @@ editor.
 
 Access Control Entries allow more fine grained control over file and directory
 permissions than does the `chmod` command. For example, if user `joe` wants to
-give read and write permissions to `jack` for her directory `private`, she
-would issue:
+give read, write and traverse permissions to `jack` for her directory
+`private`, she would issue:
 
 ``` shell
-$ nfs4_setfacl -R -a A::jack@sherlock:RW private/
+$ nfs4_setfacl -R -a A::jack@sherlock:RWX private/
 ```
 
 The `-R` switch recursively applies the rule to the files and directories
@@ -224,7 +224,7 @@ To allow `jack` to create files and subdirectories within `private/` with the
 permissions as granted above, inheritance rules need to be applied.
 
 ``` shell
-$ nfs4_setfacl -R -a A:fd:jack@sherlock:RW private/
+$ nfs4_setfacl -R -a A:fdi:jack@sherlock:RWX private/
 ```
 
 By default, each permission is in the Deny state and an ACE is required to
