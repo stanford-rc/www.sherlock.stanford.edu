@@ -153,9 +153,14 @@ like web or application servers.
 on owners' nodes still need to be submitted to the scheduler.  Direct shell
 access to the nodes is not possible outside of scheduled interactive sessions.
 
-:fontawesome-solid-xmark:{ .chk_no } **hardware modifications**: the hardware
-components of purchased nodes cannot be changed, removed, swapped or upgraded
+:fontawesome-solid-xmark:{ .chk_no } **hardware changes**: the hardware
+components of purchased nodes cannot be modified, removed, swapped or upgraded
 during the nodes' service lifetime.
+
+:fontawesome-solid-xmark:{ .chk_no } **configuration**: the configuration of
+purchased nodes is tuned to provide optimal performance over a majority of use
+cases and applications, is identical on all nodes across the cluster, and
+cannot be changed, modified or altered in any way.
 
 :fontawesome-solid-xmark:{ .chk_no } **persistent local storage**: [local
 storage space][url_lscratch] provided on the compute nodes is only usable for
