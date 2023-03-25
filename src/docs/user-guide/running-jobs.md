@@ -239,7 +239,7 @@ to your job. It will determine the actual memory, execution time and cores that
 individual programs or MPI applications need to request in their job submission
 options.
 
-Ruse periodically samples the process and its subprocesses and keeps track of
+`ruse` periodically samples the process and its subprocesses and keeps track of
 the CPU, time and maximum memory use. It also optionally records the sampled
 values over time. The purpose or Ruse is not to profile processes in detail,
 but to follow jobs that run for many minutes, hours or days, with no
