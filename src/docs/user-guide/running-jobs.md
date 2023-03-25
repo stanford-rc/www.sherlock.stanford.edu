@@ -223,6 +223,116 @@ node and can run diagnostic tools such as [`htop`][url_htop] and [`nvtop`][url_n
 You can also manage this job based on the JobID assigned to it (44915854). For example the job can be cancelled with the [`scancel`][url_scancel] command.
 
 
+### Resource requests
+
+To get a better idea of the amount of resources your job will need, you can use
+the `ruse` command, available as a [module][url_modules]:
+
+```none
+$ module system ruse
+```
+
+[`ruse`][url_ruse] is a command line tool developed by Jan Moren to measure a
+process' resource usage. It periodically measures the resource use of a process
+and its subprocesses, and can help you find out how much resource to allocate
+to your job. It will determine the actual memory, execution time and cores that
+individual programs or MPI applications need to request in their job submission
+options.
+
+Ruse periodically samples the process and its subprocesses and keeps track of
+the CPU, time and maximum memory use. It also optionally records the sampled
+values over time. The purpose or Ruse is not to profile processes in detail,
+but to follow jobs that run for many minutes, hours or days, with no
+performance impact and without changing the measured application in any way.
+
+You'll find complete documentation and details about `ruse`'s usage on the
+[project webpage][url_ruse], but here are a few useful examples.
+
+##### Sizing a job
+
+In its simplest form, `ruse` can help discover how much resources a new script
+or application will need. For instance, you can start a sizing session on a
+compute node with an overestimated amount of resources, and start your
+application like this:
+
+```none
+$ ruse ./myapp
+
+```
+
+This will generate a `<myapp>-<pid>/ruse` output file in the current directory,
+looking like this:
+
+```none
+Time:           02:55:47
+Memory:         7.4 GB
+Cores:          4
+Total_procs:    3
+Active_procs:   2
+Proc(%): 99.9  99.9
+```
+
+It shows that `myapp`:
+
+  * ran for almost 3 hours
+  * used a little less than 8B of memory
+  * had 4 cores available,
+  * spawned 3 processes, among which at most 2 were active at the same time,
+  * that both active processes each used 99.9% of a CPU core
+
+This information could be useful in tailoring the job resource requirements to
+its exact needs, making sure that the job won't be killed for exceeding one of
+its resource limits, and that the job won't have to wait too long in queue for
+resources that it won't use. The corresponding job request could look like
+this:
+
+```none
+#SBATCH --time 3:00:00
+#SBATCH --mem 8GB
+#SBATCH --cpus-per-task 2
+```
+
+
+##### Verifying a job's usage
+
+It's also important to verify that applications, especially parallel ones, stay
+in the confines of the resources they've requested. For instance, a number of
+parallel computing libraries will make the assumption that they can use all the
+resources on the host, will automatically determine the number of physical CPU
+cores present on the compute node, and start as many processes. This could be a
+significant issue if the job requested less CPUs, as more processes will be
+constrained on less CPU cores, which will result in node overload and degraded
+performance for the application.
+
+To avoid this, you can start your application with `ruse` and report usage for
+each time step specified with `-t`. You can also request the reports to be
+displayed directly on `stdout` rather than stored in a file.
+
+For instance, this will report usage every 10 seconds:
+```none
+$ ruse -s -t10 --stdout ./myapp
+   time         mem   processes  process usage
+  (secs)        (MB)  tot  actv  (sorted, %CPU)
+     10        57.5    17    16   33  33  33  25  25  25  25  25  25  25  25  20  20  20  20  20
+     20        57.5    17    16   33  33  33  25  25  25  25  25  25  25  25  20  20  20  20  20
+     30        57.5    17    16   33  33  33  25  25  25  25  25  25  25  25  20  20  20  20  20
+
+Time:           00:00:30
+Memory:         57.5 MB
+Cores:          4
+Total_procs:   17
+Active_procs:  16
+Proc(%): 33.3  33.3  33.2  25.0  25.0  25.0  25.0  25.0  25.0  24.9  24.9  20.0  20.0  20.0  20.0  19.9
+```
+
+Here, we can see that despite having being allocated 4 CPUs, the application
+started 17 threads, 16 of which were active running intensive computations,
+with the unfortunate consequence that each process could only use a fraction of
+a CPU.
+
+In that case, to ensure optimal performance and system operation, it's
+important to modify the application parameters to make sure that it doesn't
+start more computing processes than the number of requested CPU cores.
 
 
 ## Available resources
@@ -549,6 +659,7 @@ restarts for 5 minutes, and so on, until it's properly `scancel`led.
 [url_signals]:  https://en.wikipedia.org/wiki/Signal_(IPC)
 [url_job_deps]: https://slurm.schedmd.com/sbatch.html#OPT_dependency
 
+[url_modules]:  /docs/software/modules
 [url_mariadb]:  /docs/software/using/mariadb
 [url_pgsql]:    /docs/software/using/postgresql
 [url_partition]:/docs/glossary/#partition
@@ -564,7 +675,7 @@ restarts for 5 minutes, and so on, until it's properly `scancel`led.
 [url_bash]: https://www.gnu.org/software/bash/manual/bash.html
 [url_scancel]: https://slurm.schedmd.com/scancel.html
 
-
+[url_ruse]:     https://github.com/JanneM/Ruse
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
