@@ -156,7 +156,7 @@ account.
 
 
 ## Batch jobs
-
+<!-- TODO needs review -->
 
 It's easy to schedule batch jobs on Sherlock. A job is simply an instance of your program, for example your R, Python or Matlab script that is submitted to and executed by the scheduler (Slurm). When you submit a job with the sbatch command it's called a batch job and it will either run immediately or will pend (wait) in the queue.
 
@@ -210,7 +210,7 @@ $squeue -u $USER
 
 Notice that the jobs state (ST) in pending (PD)
 
-Once the job starts to run that will chage to R:
+Once the job starts to run that will change to R:
 
 ```
 $squeue -u $USER
