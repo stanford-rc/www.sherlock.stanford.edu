@@ -229,7 +229,7 @@ To get a better idea of the amount of resources your job will need, you can use
 the `ruse` command, available as a [module][url_modules]:
 
 ```none
-$ module system ruse
+$ module load system ruse
 ```
 
 [`ruse`][url_ruse] is a command line tool developed by Jan Moren to measure a
@@ -675,7 +675,7 @@ restarts for 5 minutes, and so on, until it's properly `scancel`led.
 [url_bash]: https://www.gnu.org/software/bash/manual/bash.html
 [url_scancel]: https://slurm.schedmd.com/scancel.html
 
-[url_ruse]:     https://github.com/JanneM/Ruse
+[url_ruse]:     https://github.com/JanneM/
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
