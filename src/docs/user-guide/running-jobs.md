@@ -675,7 +675,7 @@ restarts for 5 minutes, and so on, until it's properly `scancel`led.
 [url_bash]: https://www.gnu.org/software/bash/manual/bash.html
 [url_scancel]: https://slurm.schedmd.com/scancel.html
 
-[url_ruse]:     https://github.com/JanneM/
+[url_ruse]:     https://github.com/JanneM/Ruse
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
