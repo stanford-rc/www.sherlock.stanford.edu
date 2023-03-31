@@ -229,7 +229,7 @@ To get a better idea of the amount of resources your job will need, you can use
 the `ruse` command, available as a [module][url_modules]:
 
 ```none
-$ module system ruse
+$ module load system ruse
 ```
 
 [`ruse`][url_ruse] is a command line tool developed by Jan Moren to measure a
