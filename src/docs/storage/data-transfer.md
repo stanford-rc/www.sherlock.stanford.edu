@@ -274,10 +274,40 @@ endpoint you have access to instead of your local machine.
 
 #### CLI and API
 
-Globus also provides a command-line interface (CLI) and application programming
-interface (API) as an alternative to its web
-interface. Please see the [Globus CLI documentation][url_globus_cli] and
+Globus also provides a command-line interface (CLI) and application
+programming interface (API) as alternatives to its web interface.
+
+For more information about the API, please see the
 [Globus API documentation][url_globus_api] for more details.
+
+For more information about the CLI, please see the
+[Globus CLI documentation][url_globus_cli] and
+[Globus CLI quickstart][url_globus_cli_quickstart]. Note that the Globus CLI
+is available through the module system on Sherlock:
+
+```shell
+$ module load system py-globus-cli
+$ globus login
+# follow instructions to get set up
+```
+
+Once you've authorized the application, you can use the `globus` CLI to copy
+files in between endpoints and collections that you have access to. Endpoints
+and collections are identified by their unique UUID4 identifiers, which are
+viewable through the [Globus webapp][url_globus_login]. The CLI will step you
+through any additional authorizations required for you to access the
+endpoints or collections.
+
+For example, to asynchronously copy files between Sherlock and Oak (if
+that you have already been allocated Oak storage):
+
+```shell
+$ GLOBUS_SHERLOCK_UUID="6881ae2e-db26-11e5-9772-22000b9da45e"
+$ GLOBUS_OAK_UUID="8b3a8b64-d4ab-4551-b37e-ca0092f769a7"
+$ globus transfer --recursive \
+    "$GLOBUS_SHERLOCK_UUID:$SCRATCH/my-interesting-project" \
+    "$GLOBUS_OAK_UUID:$OAK/my-interesting-project-copy"
+```
 
 
 ## Data Transfer Nodes (DTNs)
@@ -354,6 +384,9 @@ $ module load system rclone
 $ rclone --help
 ```
 
+The Globus CLI (see above) can also be used to copy files from Sherlock to
+Stanford's Google Drive.
+
 ### AWS
 
 You can also access AWS storage from the Sherlock command line with the [AWS Command Line Interface][url_aws-cli]:
@@ -399,7 +432,8 @@ documentation][url_rclone].
 [url_globus]:       //www.globus.org
 [url_globus_api]:   //docs.globus.org/api/transfer/
 [url_globus_doc]:   //www.globus.org/how-it-works
-[url_globus_cli]:   //docs.globus.org/faq/command-line-interface/
+[url_globus_cli]:   //docs.globus.org/cli/
+[url_globus_cli_quickstart]:   //docs.globus.org/cli/quickstart/
 [url_globus_login]: //app.globus.org/
 [url_globus_xfer_mgmt]:   //app.globus.org/endpoints
 [url_globus_xfer_start]:  //app.globus.org/file-manager
