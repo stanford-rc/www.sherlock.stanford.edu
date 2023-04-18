@@ -2,9 +2,8 @@
 
 [R][url_r] is a programming language and software environment for statistical
 computing and graphics.  It is similar to the [S][url_s] language and
-environment developed at Bell Laboratories (formerly AT&T, now Lucent
-Technologies). R provides a wide variety of statistical and graphical
-techniques and is highly extensible.
+environment developed at Bell Laboratories. R provides a wide variety of
+statistical and graphical techniques and is highly extensible.
 
 
 ### More documentation
@@ -19,7 +18,7 @@ documentation][url_r_docs].
 R is available on Sherlock and the corresponding [module][url_modules] can be
 loaded with:
 
-``` shell
+``` none
 $ ml R
 ```
 
@@ -32,7 +31,7 @@ prompt, or refer to the [Software list page][url_software_list].
 Once your environment is configured (_ie._ when the `R` module is loaded), R
 can be started by simply typing R at the shell prompt:
 
-``` shell
+``` none
 $ R
 
 R version 3.5.1 (2018-07-02) -- "Feather Spray"
@@ -48,7 +47,7 @@ Type 'q()' to quit R.
 
 For a listing of command line options:
 
-``` shell
+``` none
 $ R --help
 ```
 
@@ -68,16 +67,16 @@ have different ways of presenting the script's output:
 #### Submitting a R job
 
 Here's an example R batch script that can be submitted via `sbatch`. It runs a
-simple matrix multiplication example, and demonstrate how to feed R code as a
+simple matrix multiplication example, and demonstrates how to feed R code as a
 [HEREDOC][url_heredoc] to R directly, so no intermediate R script is necessary:
 
-=== "R-test.sbatch"
+=== "Rtest.sbatch"
 
     ``` bash
     #!/usr/bin/bash
     #SBATCH --time=00:10:00
     #SBATCH --mem=10G
-    #SBATCH --output=R-test.log
+    #SBATCH --output=Rtest.log
 
     # load the module
     ml R
@@ -92,16 +91,16 @@ simple matrix multiplication example, and demonstrate how to feed R code as a
     EOF
     ```
 
-You can save this script as `R-test.sbatch` and submit it to the scheduler with:
+You can save this script as `Rtest.sbatch` and submit it to the scheduler with:
 
-``` shell
-$ sbatch R-test.sbatch
+``` none
+$ sbatch Rtest.sbatch
 ```
 
-Once the job is done, you should get a `R-test.out` file in the current
+Once the job is done, you should get a `Rtest.out` file in the current
 directory, with the following contents:
 
-``` shell
+``` none
 R version 3.5.1 (2018-07-02) -- "Feather Spray"
 [...]
 > set.seed (1)
@@ -129,7 +128,7 @@ on the R version that is used.  For instance, if you have the `R/3.5.1` module
 loaded, the default R user library path will be
 `$HOME/R/x86_64-pc-linux-gnu-library/3.5`.
 
-This directory doesn't exist by default. The first time a user installs an R
+This directory doesn't exist by default. The first time a user installs a
 package, R will ask if she wants to use the default location and create the
 directory.
 
@@ -139,7 +138,7 @@ directory.
 To install a R package in your personal environment, the first thing to do is
 load the R module:
 
-``` shell
+``` none
 $ ml R
 ```
 
@@ -147,7 +146,7 @@ Then start a R session, and use the `install.packages()` function at the R
 prompt. For instance, the following example will install the `doParallel`
 package, using the US mirror of the [CRAN repository][url_cran]:
 
-``` shell
+``` none
 $ R
 
 R version 3.5.1 (2018-07-02) -- "Feather Spray"
@@ -158,7 +157,7 @@ R version 3.5.1 (2018-07-02) -- "Feather Spray"
 
 It should give the following warning:
 
-``` shell
+``` none
 Warning in install.packages("doParallel", repos = "http://cran.us.r-project.org") :
   'lib = "/share/software/user/open/R/3.5.1/lib64/R/library"' is not writable
 Would you like to use a personal library instead? (yes/No/cancel)
@@ -172,7 +171,7 @@ directory and instruct it to install future R packages there.
 
 The installation will then proceed:
 
-``` shell
+``` none
 trying URL 'http://cran.us.r-project.org/src/contrib/doParallel_1.0.14.tar.gz'
 Content type 'application/x-gzip' length 173607 bytes (169 KB)
 ==================================================
@@ -208,15 +207,18 @@ Loading required package: parallel
 
 ##### Installing large packages
 
-Sometimes installation of large packages can be very time consuming.  To speed things up R
-can utilize multiple CPUs at once.  Add "Ncpus=n"  where n is the number of CPUs you
-can utilize.  You can use the `sdev` command to get a session with 4 CPUs:
+Installing large R packages can sometimes be very time consuming. To speed
+things up, R can utilize multiple CPUs in parallel when the `Ncpus=n` option is
+added to the `install.packages()` command (where `n` is the number of CPUs
+you'd like to use).
 
-``` shell
+For instance, you can get an interactive session with 4 CPU cores with `sdev`:
+
+``` none
 $ sdev -c 4
 $ ml R
 $ R
->install.packages("dplyr", repos = "http://cran.us.r-project.org", Ncpus=4)
+> install.packages("dplyr", repos = "http://cran.us.r-project.org", Ncpus=4)
 ```
 
 ##### Alternative installation path
@@ -224,16 +226,14 @@ $ R
 To install R packages in a different location, you'll need to create that
 directory, and instruct R to install the packages there:
 
-``` shell
+``` none
 $ mkdir ~/R_libs/
 $ R
-[...]
 > install.packages('doParallel', repos='http://cran.us.r-project.org', lib="~/R_libs")
 ```
 
 The installation will proceed normally and the `doParallel` package will be
 installed in `$HOME/R_libs/`.
-
 
 Specifying the full destination path for each package installation could
 quickly become tiresome, so to avoid this, you can create a `.Renviron`
@@ -266,7 +266,8 @@ specify this installation path when using `install.packages()` anymore.
     have each user in the group use the instructions below to define it in
     their own environment.
 
-##### Setting the repository
+
+##### Setting the installation repository
 
 When installing a package, R needs to know from which repository the package
 should be downloaded. If it's not specified, it will prompt for it and display
@@ -294,7 +295,7 @@ local({
 Once this is set, you only need to specify the name of the package to install,
 and R will use the mirror you defined automatically:
 
-``` R
+``` none
 > install.packages("doParallel")
 [...]
 trying URL 'https://cloud.r-project.org/src/contrib/doParallel_1.0.14.tar.gz'
@@ -313,7 +314,7 @@ R packages can be directly installed from GitHub using the `devtools` package.
 ```
 
 And then, you can then install a R package directly from its GitHub repository.
-For instance, to install `dplyr` from [url_dplyr]:
+For instance, to install `dplyr` from <https://github.com/tidyverse/dplyr>:
 
 ``` R
 > library(devtools)
@@ -341,7 +342,7 @@ already available as modules on Sherlock.
 Whenever you see "not found" errors, you may want to try searching the modules
 inventory with `module spider`:
 
-``` shell
+``` none
 $ module spider udunits
 
 ----------------------------------------------------------------------------
@@ -361,18 +362,18 @@ $ module spider udunits
 So for `sf`, in order to load the dependencies, exit `R`, load the `udunits`
 and `gdal` modules, and try installing `sf` again:
 
-``` shell
+``` none
 $ ml load physics udunits gdal
 $ ml R
 $ R
 > install.packages("sf")
 ```
 
-Sometimes, getting dependencies right is a matter of trial and error.  You may
-have to load R, install packages, search modules, load modules, install
-packages again and so forth.  Fortunately, R packages only need to be installed
-once, and many R package dependencies are already available as modules on
-Sherlock, you just need to search for them with `module spider` and load them.
+Getting dependencies right could be a matter of trial and error.  You may have
+to load R, install packages, search modules, load modules, install packages
+again and so forth.  Fortunately, R packages only need to be installed once,
+and many R package dependencies are already available as modules on Sherlock,
+you just need to search for them with `module spider` and load them.
 
 And in case you're stuck, you can of course always [send us an
 email][url_support] and we'll be happy to assist.
@@ -687,7 +688,6 @@ which shows a decent speedup for running on a GPU for the largest matrix sizes.
 [url_heredoc]:          //en.wikipedia.org/wiki/Here_document
 [url_doparallel]:       //cran.r-project.org/web/packages/doParallel/index.html
 [url_cran]:             //cran.r-project.org/
-[url_dplyr]:            //github.com/tidyverse/dplyr
 [url_rmpi]:             //cran.r-project.org/web/packages/Rmpi
 [url_gpur]:             //cran.r-project.org/web/packages/gpuR
 [url_support]:          mailto:{{ support_email }}
