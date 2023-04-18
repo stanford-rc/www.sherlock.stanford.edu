@@ -206,6 +206,120 @@ Loading required package: parallel
 >
 ```
 
+##### Installing large packages
+
+Sometimes installation of large packages can be very time consuming.  To speed things up R
+can utilize multiple CPUs at once.  Add "Ncpus=n"  where n is the number of CPUs you
+can utilize.  You can use the `sdev` command to get a session with 4 CPUs:
+
+``` shell
+$ sdev -c 4
+$ ml R
+$ R
+>install.packages("dplyr", repos = "http://cran.us.r-project.org", Ncpus=4)
+```
+
+##### Alternative installation path
+
+To install R packages in a different location, you'll need to create that
+directory, and instruct R to install the packages there:
+
+``` shell
+$ mkdir ~/R_libs/
+$ R
+[...]
+> install.packages('doParallel', repos='http://cran.us.r-project.org', lib="~/R_libs")
+```
+
+The installation will proceed normally and the `doParallel` package will be
+installed in `$HOME/R_libs/`.
+
+
+Specifying the full destination path for each package installation could
+quickly become tiresome, so to avoid this, you can create a `.Renviron`
+file in your `$HOME` directory, and define your `R_libs` path there:
+
+``` shell
+$ cat << EOF > $HOME/.Renviron
+R_LIBS=~/R_libs
+EOF
+```
+
+With this, whenever R is started, the `$HOME/R_libs/` directory will be
+added to the list of places R will look for packages, and you won't need to
+specify this installation path when using `install.packages()` anymore.
+
+
+!!! info "Where does R look for packages?"
+
+    To see the directories where R searches for packages and libraries, you can
+    use the following command in R:
+
+    ``` R
+    > .libPaths()
+    ```
+
+!!! tip "Sharing R packages"
+
+    If you'd like to share R packages within your group, you can simply define
+    `$R_LIBS` to point to a shared directory, such as `$GROUP_HOME/R_libs` and
+    have each user in the group use the instructions below to define it in
+    their own environment.
+
+##### Setting the repository
+
+When installing a package, R needs to know from which repository the package
+should be downloaded. If it's not specified, it will prompt for it and display
+a list of available CRAN mirrors.
+
+To avoid setting the CRAN mirror each time you run install.packages you can
+permanently set the mirror by creating a `.Rprofile` file in your `$HOME`
+directory, which R will execute each time it starts.
+
+For instance, adding the following contents to your `~/.Rprofile` will make
+sure that every `install.packages()` invocation will use the closest CRAN
+mirror:
+
+``` R
+## local creates a new, empty environment
+## This avoids polluting the global environment with
+## the object r
+local({
+  r = getOption("repos")
+  r["CRAN"] = "https://cloud.r-project.org/"
+  options(repos = r)
+})
+```
+
+Once this is set, you only need to specify the name of the package to install,
+and R will use the mirror you defined automatically:
+
+``` R
+> install.packages("doParallel")
+[...]
+trying URL 'https://cloud.r-project.org/src/contrib/doParallel_1.0.14.tar.gz'
+Content type 'application/x-gzip' length 173607 bytes (169 KB)
+==================================================
+downloaded 169 KB
+```
+
+##### Installing packages from GitHub
+
+R packages can be directly installed from GitHub using the `devtools` package.
+`devtools` needs to be installed first, with:
+
+``` R
+> install.packages("devtools")
+```
+
+And then, you can then install a R package directly from its GitHub repository.
+For instance, to install `dplyr` from [url_dplyr]:
+
+``` R
+> library(devtools)
+> install_github("tidyverse/dplyr")
+```
+
 #### Package dependencies
 
 Sometimes when installing R packages, other software is needed for the
@@ -262,123 +376,6 @@ Sherlock, you just need to search for them with `module spider` and load them.
 
 And in case you're stuck, you can of course always [send us an
 email][url_support] and we'll be happy to assist.
-
-#### Installing large packages
-
-Sometimes installation of large packages can be very time consuming.  To speed things up R
-can utilize multiple CPUs at once.  Add "Ncpus=n"  where n is the number of CPUs you
-can utilize.  You can use the `sdev` command to get a session with 4 CPUs:
-
-``` shell
-$ sdev -c 4
-$ ml R
-$ R
->install.packages("dplyr", repos = "http://cran.us.r-project.org", Ncpus=4)
-```
-
-
-##### Alternative installation path
-
-To install R packages in a different location, you'll need to create that
-directory, and instruct R to install the packages there:
-
-``` shell
-$ mkdir ~/R_libs/
-$ R
-[...]
-> install.packages('doParallel', repos='http://cran.us.r-project.org', lib="~/R_libs")
-```
-
-The installation will proceed normally and the `doParallel` package will be
-installed in `$HOME/R_libs/`.
-
-
-Specifying the full destination path for each package installation could
-quickly become tiresome, so to avoid this, you can create a `.Renviron`
-file in your `$HOME` directory, and define your `R_libs` path there:
-
-``` shell
-$ cat << EOF > $HOME/.Renviron
-R_LIBS=~/R_libs
-EOF
-```
-
-With this, whenever R is started, the `$HOME/R_libs/` directory will be
-added to the list of places R will look for packages, and you won't need to
-specify this installation path when using `install.packages()` anymore.
-
-
-!!! info "Where does R look for packages?"
-
-    To see the directories where R searches for packages and libraries, you can
-    use the following command in R:
-
-    ``` R
-    > .libPaths()
-    ```
-
-!!! tip "Sharing R packages"
-
-    If you'd like to share R packages within your group, you can simply define
-    `$R_LIBS` to point to a shared directory, such as `$GROUP_HOME/R_libs` and
-    have each user in the group use the instructions below to define it in
-    their own environment.
-
-
-##### Setting the repository
-
-When installing a package, R needs to know from which repository the package
-should be downloaded. If it's not specified, it will prompt for it and display
-a list of available CRAN mirrors.
-
-To avoid setting the CRAN mirror each time you run install.packages you can
-permanently set the mirror by creating a `.Rprofile` file in your `$HOME`
-directory, which R will execute each time it starts.
-
-For instance, adding the following contents to your `~/.Rprofile` will make
-sure that every `install.packages()` invocation will use the closest CRAN
-mirror:
-
-``` R
-## local creates a new, empty environment
-## This avoids polluting the global environment with
-## the object r
-local({
-  r = getOption("repos")
-  r["CRAN"] = "https://cloud.r-project.org/"
-  options(repos = r)
-})
-```
-
-Once this is set, you only need to specify the name of the package to install,
-and R will use the mirror you defined automatically:
-
-``` R
-> install.packages("doParallel")
-[...]
-trying URL 'https://cloud.r-project.org/src/contrib/doParallel_1.0.14.tar.gz'
-Content type 'application/x-gzip' length 173607 bytes (169 KB)
-==================================================
-downloaded 169 KB
-```
-
-##### Installing packages from GitHub
-
-R packages can be directly installed from GitHub using the `devtools` package.
-`devtools` needs to be installed first, with:
-
-``` R
-> install.packages("devtools")
-```
-
-And then, you can then install a R package directly from its GitHub repository.
-For instance, to install `dplyr` from [url_dplyr]:
-
-``` R
-> library(devtools)
-> install_github("tidyverse/dplyr")
-```
-
 
 #### Updating Packages
 
