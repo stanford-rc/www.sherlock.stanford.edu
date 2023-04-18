@@ -206,7 +206,7 @@ Loading required package: parallel
 >
 ```
 
-##### Package dependencies
+#### Package dependencies
 
 Sometimes when installing R packages, other software is needed for the
 installation and/or compilation.  For instance, when trying to install the `sf`
