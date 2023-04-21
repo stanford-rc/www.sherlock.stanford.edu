@@ -2095,6 +2095,13 @@ software_modules:
       - {description: The Computational Geometry Algorithms Library (CGAL) is a C++
           library that aims to provide easy access to efficient and reliable algorithms
           in computational geometry., markedDefault: false, versionName: '4.10'}
+    - categories: math, numerical library
+      defaultVersionName: 0.4.7_py39
+      description: XLA library for Jax.
+      package: py-jaxlib
+      url: https://jax.readthedocs.io
+      versions:
+      - {description: XLA library for Jax., markedDefault: false, versionName: 0.4.7_py39}
     - categories: math, computational geometry
       defaultVersionName: 4.10.1
       description: Gmsh is an open source 3D finite element mesh generator with a
@@ -2228,6 +2235,9 @@ software_modules:
         family: scipy, markedDefault: false, versionName: 1.6.3_py39}
       - {description: The SciPy library provides many user-friendly and efficient
           numerical routines such as routines for numerical integration and optimization.,
+        family: scipy, markedDefault: false, versionName: 1.10.1_py39}
+      - {description: The SciPy library provides many user-friendly and efficient
+          numerical routines such as routines for numerical integration and optimization.,
         family: scipy, markedDefault: true, versionName: 1.1.0_py27}
     - categories: math, symbolic
       defaultVersionName: 1.1.1_py36
@@ -2239,22 +2249,16 @@ software_modules:
         markedDefault: false, versionName: 1.1.1_py27}
       - {description: SymPy is a Python library for symbolic mathematics., family: sympy,
         markedDefault: false, versionName: 1.1.1_py36}
-    - categories: math, scientific computing
-      defaultVersionName: 1.0_py27
-      description: 'The SciPy Stack is a collection of open source software for scientific
-        computing in Python. It provides the following packages: numpy, scipy, matplotlib,
-        ipython, jupyter, pandas, sympy and nose.'
-      package: py-scipystack
-      url: https://www.scipy.org
+    - categories: math, statistics
+      defaultVersionName: 2.9.2_py36
+      description: rpy2 is an interface to R running embedded in a Python process.
+      package: py-rpy2
+      url: https://rpy2.bitbucket.io
       versions:
-      - {description: 'The SciPy Stack is a collection of open source software for
-          scientific computing in Python. It provides the following packages: numpy,
-          scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
-        markedDefault: false, versionName: 1.0_py36}
-      - {description: 'The SciPy Stack is a collection of open source software for
-          scientific computing in Python. It provides the following packages: numpy,
-          scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
-        markedDefault: true, versionName: 1.0_py27}
+      - {description: rpy2 is an interface to R running embedded in a Python process.,
+        markedDefault: false, versionName: 2.8.6_py27}
+      - {description: rpy2 is an interface to R running embedded in a Python process.,
+        markedDefault: false, versionName: 2.9.2_py36}
     - categories: math, statistics
       defaultVersionName: 2022.02.2-485
       description: RStudio is an integrated development environment (IDE) for R. It
@@ -2268,6 +2272,15 @@ software_modules:
           R. It includes a console, syntax-highlighting editor that supports direct
           code execution, as well as tools for plotting, history, debugging and workspace
           management. This is the X11/GUI version.', markedDefault: false, versionName: 2022.02.2-485}
+    - categories: math, numerical library
+      defaultVersionName: 0.4.7_py39
+      description: JAX is Autograd and XLA, brought together for high-performance
+        numerical computing.
+      package: py-jax
+      url: https://jax.readthedocs.io
+      versions:
+      - {description: 'JAX is Autograd and XLA, brought together for high-performance
+          numerical computing.', markedDefault: false, versionName: 0.4.7_py39}
     - categories: math, computational geometry
       defaultVersionName: 9.4.1
       description: deal.II is a C++ program library targeted at the computational
@@ -2334,6 +2347,8 @@ software_modules:
           Python., markedDefault: false, versionName: 1.19.2_py36}
       - {description: NumPy is the fundamental package for scientific computing with
           Python., markedDefault: false, versionName: 1.20.3_py39}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.24.2_py39}
       - {description: NumPy is the fundamental package for scientific computing with
           Python., markedDefault: true, versionName: 1.14.3_py27}
     - categories: math, deep learning
@@ -2824,14 +2839,20 @@ software_modules:
           arch: {gpu: 1}
         versionName: '20180202'
     - categories: math, numerical library
-      defaultVersionName: 1.1.2
-      description: qrupdate is a Fortran library for fast updates of QR and Cholesky
-        decompositions.
-      package: qrupdate
-      url: https://sourceforge.net/projects/qrupdate/
+      defaultVersionName: 4.0.3
+      description: ParMETIS is an MPI-based parallel library that implements a variety
+        of algorithms for partitioning unstructured graphs, meshes, and for computing
+        fill-reducing orderings of sparse matrices.
+      package: parmetis
+      url: http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview
       versions:
-      - {description: qrupdate is a Fortran library for fast updates of QR and Cholesky
-          decompositions., markedDefault: false, versionName: 1.1.2}
+      - description: ParMETIS is an MPI-based parallel library that implements a variety
+          of algorithms for partitioning unstructured graphs, meshes, and for computing
+          fill-reducing orderings of sparse matrices.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 4.0.3
     - categories: math, numerical library
       defaultVersionName: 3.18.2_py39
       description: Python bindings for SLEPc.
@@ -2839,8 +2860,21 @@ software_modules:
       url: https://slepc.upv.es/
       versions:
       - {description: Python bindings for SLEPc., markedDefault: false, versionName: 3.18.2_py39}
+    - categories: math, numerical library
+      defaultVersionName: 6.2.1
+      description: GMP is a free library for arbitrary precision arithmetic, operating
+        on signed integers, rational numbers, and floating-point numbers.
+      package: gmp
+      url: https://gmplib.org
+      versions:
+      - {description: 'GMP is a free library for arbitrary precision arithmetic, operating
+          on signed integers, rational numbers, and floating-point numbers.', markedDefault: false,
+        versionName: 6.1.2}
+      - {description: 'GMP is a free library for arbitrary precision arithmetic, operating
+          on signed integers, rational numbers, and floating-point numbers.', markedDefault: false,
+        versionName: 6.2.1}
     - categories: math, deep learning
-      defaultVersionName: 8.6.0.163
+      defaultVersionName: 8.9.0.131
       description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
         neural networks.
       package: cudnn
@@ -2912,19 +2946,12 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 8.6.0.163
-    - categories: math, numerical library
-      defaultVersionName: 6.2.1
-      description: GMP is a free library for arbitrary precision arithmetic, operating
-        on signed integers, rational numbers, and floating-point numbers.
-      package: gmp
-      url: https://gmplib.org
-      versions:
-      - {description: 'GMP is a free library for arbitrary precision arithmetic, operating
-          on signed integers, rational numbers, and floating-point numbers.', markedDefault: false,
-        versionName: 6.1.2}
-      - {description: 'GMP is a free library for arbitrary precision arithmetic, operating
-          on signed integers, rational numbers, and floating-point numbers.', markedDefault: false,
-        versionName: 6.2.1}
+      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+          neural networks.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 8.9.0.131
     - categories: math, numerical library
       defaultVersionName: 3.18.2
       description: SLEPc is a Scalable Library for Eigenvalue Problem Computations.
@@ -3036,16 +3063,28 @@ software_modules:
       - {description: SUNDIALS is a family of software packages providing robust and
           efficient time integrators and nonlinear solvers that can easily be incorporated
           into existing simulation codes., markedDefault: false, versionName: 6.4.1}
-    - categories: math, statistics
-      defaultVersionName: 2.9.2_py36
-      description: rpy2 is an interface to R running embedded in a Python process.
-      package: py-rpy2
-      url: https://rpy2.bitbucket.io
+    - categories: math, numerical library
+      defaultVersionName: 3.18.5
+      description: PETSc, the Portable, Extensible Toolkit for Scientific Computation,
+        is a suite of data structures and routines for the scalable (parallel) solution
+        of scientific applications modeled by partial differential equations.
+      package: petsc
+      url: http://petsc.org
       versions:
-      - {description: rpy2 is an interface to R running embedded in a Python process.,
-        markedDefault: false, versionName: 2.8.6_py27}
-      - {description: rpy2 is an interface to R running embedded in a Python process.,
-        markedDefault: false, versionName: 2.9.2_py36}
+      - description: PETSc is a suite of data structures and routines for the scalable
+          (parallel) solution of scientific applications modeled by partial differential
+          equations.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 3.10.3
+      - description: PETSc, the Portable, Extensible Toolkit for Scientific Computation,
+          is a suite of data structures and routines for the scalable (parallel) solution
+          of scientific applications modeled by partial differential equations.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 3.18.5
     - categories: math, numerical library
       defaultVersionName: 1.2.1
       description: GNU MPC is a C library for the arithmetic of complex numbers with
@@ -3104,15 +3143,15 @@ software_modules:
           nonlinear problems., markedDefault: false, versionName: 12.4.0}
       - {description: Artelys Knitro is an optimization solver for difficult large-scale
           nonlinear problems., markedDefault: true, versionName: 10.3.0}
-    - categories: math, numerical analysis
-      defaultVersionName: 4.2.1
-      description: GNU Octave is a high-level language primarily intended for numerical
-        computations.
-      package: octave
-      url: https://www.gnu.org/software/octave/
+    - categories: math, numerical library
+      defaultVersionName: 1.1.2
+      description: qrupdate is a Fortran library for fast updates of QR and Cholesky
+        decompositions.
+      package: qrupdate
+      url: https://sourceforge.net/projects/qrupdate/
       versions:
-      - {description: GNU Octave is a high-level language primarily intended for numerical
-          computations., markedDefault: false, versionName: 4.2.1}
+      - {description: qrupdate is a Fortran library for fast updates of QR and Cholesky
+          decompositions., markedDefault: false, versionName: 1.1.2}
     - categories: math, statistics
       defaultVersionName: 3.5.1
       description: R is a free software environment for statistical computing and
@@ -3192,6 +3231,15 @@ software_modules:
         properties:
           license: {restricted: 1}
         versionName: '15'
+    - categories: math, numerical analysis
+      defaultVersionName: 4.2.1
+      description: GNU Octave is a high-level language primarily intended for numerical
+        computations.
+      package: octave
+      url: https://www.gnu.org/software/octave/
+      versions:
+      - {description: GNU Octave is a high-level language primarily intended for numerical
+          computations., markedDefault: false, versionName: 4.2.1}
     - categories: math, numerical library
       defaultVersionName: 5.1.2
       description: A parallel sparse direct solver.
@@ -3199,43 +3247,6 @@ software_modules:
       url: http://mumps.enseeiht.fr/
       versions:
       - {description: A parallel sparse direct solver., markedDefault: false, versionName: 5.1.2}
-    - categories: math, numerical library
-      defaultVersionName: 3.18.5
-      description: PETSc, the Portable, Extensible Toolkit for Scientific Computation,
-        is a suite of data structures and routines for the scalable (parallel) solution
-        of scientific applications modeled by partial differential equations.
-      package: petsc
-      url: http://petsc.org
-      versions:
-      - description: PETSc is a suite of data structures and routines for the scalable
-          (parallel) solution of scientific applications modeled by partial differential
-          equations.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 3.10.3
-      - description: PETSc, the Portable, Extensible Toolkit for Scientific Computation,
-          is a suite of data structures and routines for the scalable (parallel) solution
-          of scientific applications modeled by partial differential equations.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 3.18.5
-    - categories: math, numerical library
-      defaultVersionName: 4.0.3
-      description: ParMETIS is an MPI-based parallel library that implements a variety
-        of algorithms for partitioning unstructured graphs, meshes, and for computing
-        fill-reducing orderings of sparse matrices.
-      package: parmetis
-      url: http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview
-      versions:
-      - description: ParMETIS is an MPI-based parallel library that implements a variety
-          of algorithms for partitioning unstructured graphs, meshes, and for computing
-          fill-reducing orderings of sparse matrices.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 4.0.3
     - categories: math, machine learning
       defaultVersionName: 0.19.1_py27
       description: Scikit-learn is a free software machine learning library for the
@@ -3251,6 +3262,22 @@ software_modules:
           the Python programming language., markedDefault: false, versionName: 1.0.2_py39}
       - {description: Scikit-learn is a free software machine learning library for
           the Python programming language., markedDefault: true, versionName: 0.19.1_py27}
+    - categories: math, scientific computing
+      defaultVersionName: 1.0_py27
+      description: 'The SciPy Stack is a collection of open source software for scientific
+        computing in Python. It provides the following packages: numpy, scipy, matplotlib,
+        ipython, jupyter, pandas, sympy and nose.'
+      package: py-scipystack
+      url: https://www.scipy.org
+      versions:
+      - {description: 'The SciPy Stack is a collection of open source software for
+          scientific computing in Python. It provides the following packages: numpy,
+          scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
+        markedDefault: false, versionName: 1.0_py36}
+      - {description: 'The SciPy Stack is a collection of open source software for
+          scientific computing in Python. It provides the following packages: numpy,
+          scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
+        markedDefault: true, versionName: 1.0_py27}
     - categories: math, numerical library
       defaultVersionName: '2019'
       description: Intel Math Kernel Library (Intel MKL) is a library of optimized
@@ -5590,7 +5617,7 @@ software_modules:
       - {description: Node.js is a JavaScript runtime built on Chrome's V8 JavaScript
           engine. It provides the npm package manager., markedDefault: false, versionName: 18.15.0}
     - categories: devel, lib
-      defaultVersionName: 2.11.4
+      defaultVersionName: 2.17.1
       description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
         collective communication routines, such as all-gather, reduce, broadcast,
         etc., that have been optimized to achieve high bandwidth over PCIe.
@@ -5660,6 +5687,13 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 2.11.4
+      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
+          collective communication routines, such as all-gather, reduce, broadcast,
+          etc., that have been optimized to achieve high bandwidth over PCIe.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.17.1
     - categories: devel, language
       defaultVersionName: '21.3'
       description: Erlang is a programming language used to build massively scalable
@@ -6535,6 +6569,14 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 12.0.0
+      - description: CUDA is a parallel computing platform and application programming
+          interface (API) model created by Nvidia. It allows software developers and
+          software engineers to use a CUDA-enabled graphics processing unit (GPU)
+          for general purpose processing.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 12.1.1
       - description: CUDA is a parallel computing platform and application programming
           interface (API) model created by Nvidia. It allows software developers and
           software engineers to use a CUDA-enabled graphics processing unit (GPU)
