@@ -666,7 +666,7 @@ restarts for 5 minutes, and so on, until it's properly `scancel`led.
 
 [url_sh_part]:  //news.sherlock.stanford.edu/posts/a-better-view-at-sherlock-s-resources
 [url_sdev]: /docs/user-guide/running-jobs/?h=sdev
-[url_filemanager]: /docs/user-guide/ondemand/?h=file+m#managing-files
+[url_filemanager]: /docs/user-guide/ondemand/#managing-files
 [url_htop]: https://htop.dev/
 [url_nvtop]: /docs/user-guide/gpu/?query=nv_top#advanced-options
 [url_sacct]: https://slurm.schedmd.com/sacct.html
