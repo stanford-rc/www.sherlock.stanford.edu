@@ -84,7 +84,7 @@ $ srun -p gpu --pty bash
 srun: error: Unable to allocate resources: Job violates accounting/QOS policy (job submit limit, user's size and/or time limits)
 ```
 
-### Interactive session
+### Interactive sessions
 
 As for any other compute node, you can submit an interactive job and request a
 shell on a GPU node with the following command:
@@ -96,6 +96,38 @@ srun: job 38068928 has been allocated resources
 $ nvidia-smi --query-gpu=index,name --format=csv,noheader
 0, Tesla V100-SXM2-16GB
 ```
+
+#### Instant lightweight GPU instances
+
+Given that some tasks don't necessarily require a full-fledged, top-of-the-line
+GPU, lightweight GPU instances are provided to allow instant access to GPU
+resources for quick debugging, prototyping or testing jobs.
+
+!!! info "Lightweight GPU instances"
+
+    Lightweight GPU instances leverage NVIDIA’s Multi-Instance GPU
+    ([MIG][url_mig]) to provide multiple fully isolated GPU instances on the
+    same physical GPU, each with their own high-bandwidth memory, cache, and
+    compute cores.
+
+Those GPU instances are instantly available via the `dev` partition, and can be
+requested with the `sh_dev` command:
+
+``` none
+# sh_dev -g 1
+[...]
+[kilian@sh03-17n15 ~] (job 17628407) $ nvidia-smi -L
+GPU 0: NVIDIA A30 (UUID: GPU-ac772b5a-123a-dc76-9480-5998f435fe84)
+  MIG 1g.6gb      Device  0: (UUID: MIG-87e5d835-8046-594a-b237-ccc770b868ef)
+```
+
+For interactive apps in the [Sherlock OnDemand][url_ondemand] interface,
+requesting a GPU in the `dev` partition will initiate an interactive session
+with access to a lightweight GPU instance.
+
+![gpu_dev](images/gpu_dev.png){ width="400" }
+
+
 
 
 ### GPU types
@@ -305,9 +337,11 @@ user's GPU code is running.
 [url_gpu]:          //blogs.nvidia.com/blog/2009/12/16/whats-the-difference-between-a-cpu-and-a-gpu/
 [url_condo]:        /docs/concepts/#the-condominium-model
 [url_modules]:      /docs/software/modules
+[url_ondemand]:     /docs/user-guide/ondemand/
 [url_slurm_sbatch]: //slurm.schedmd.com/sbatch.html#OPT_constraint
 [url_slurm_srun]:   //slurm.schedmd.com/srun.html#OPT_gpus
 [url_gpu_cmodes]:   //docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-modes
+[url_mig]:          //www.nvidia.com/en-us/technologies/multi-instance-gpu/
 [url_nvtop]:        //github.com/Syllo/nvtop
 [url_htop]:         //hisham.hm/htop/
 
