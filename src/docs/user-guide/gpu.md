@@ -46,7 +46,7 @@ You can also directly run GPU processes on compute nodes with `srun`. For
 instance, the following command will display details about the GPUs allocated
 to your job:
 
-```
+``` none
 $ srun -p gpu --gpus 2 nvidia-smi
 Fri Jul 28 12:41:49 2017
 +-----------------------------------------------------------------------------+
@@ -79,7 +79,7 @@ Fri Jul 28 12:41:49 2017
 The `gpu` partition only accepts jobs explicitly requesting GPU resources. If
 they don't, they will be rejected with the following message:
 
-```
+``` none
 $ srun -p gpu --pty bash
 srun: error: Unable to allocate resources: Job violates accounting/QOS policy (job submit limit, user's size and/or time limits)
 ```
@@ -89,7 +89,7 @@ srun: error: Unable to allocate resources: Job violates accounting/QOS policy (j
 As for any other compute node, you can submit an interactive job and request a
 shell on a GPU node with the following command:
 
-```
+``` none
 $ srun -p gpu --gpus 1 --pty bash
 srun: job 38068928 queued and waiting for resources
 srun: job 38068928 has been allocated resources
@@ -145,7 +145,7 @@ be specified and combined with various operators (please refer to the official
 The list of available features on GPU nodes can be obtained with the
 `node_feat`[^node_feat] command:
 
-```
+``` none
 $ node_feat -p gpu | grep GPU_
 GPU_BRD:TESLA
 GPU_GEN:PSC
@@ -175,7 +175,7 @@ to be requested in your jobs.
 For instance, to request a Tesla GPU for you job, you can use the following
 submission options:
 
-```
+``` none
 $ srun -p owners -G 1 -C GPU_BRD:TESLA nvidia-smi -L
 GPU 0: Tesla P100-SXM2-16GB (UUID: GPU-4f91f58f-f3ea-d414-d4ce-faf587c5c4d4)
 ```
@@ -187,7 +187,7 @@ GPU 0: Tesla P100-SXM2-16GB (UUID: GPU-4f91f58f-f3ea-d414-d4ce-faf587c5c4d4)
     instance, requesting a GeForce GPU in the `gpu` partition, which only
     features Tesla GPUs, will result in an error:
 
-    ```
+    ``` none
     $ srun -p gpu -G 1 -C GPU_BRD:GEFORCE nvidia-smi -L
     srun: error: Unable to allocate resources: Requested node configuration is not available
     ```
@@ -217,7 +217,7 @@ Here's the list of the different compute modes supported on Sherlock's GPUs:
 By default, or if the `--gpu_cmode` option is not specified, GPUs will be set
 in the "Exclusive Process" mode, as demonstrated by this example command:
 
-```
+``` none
 $ srun -p gpu -G 1 nvidia-smi
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 387.26                 Driver Version: 387.26                    |
@@ -233,7 +233,7 @@ $ srun -p gpu -G 1 nvidia-smi
 With the `--gpu_cmode` option, the scheduler will set the GPU compute mode to
 the desired value before execution:
 
-```
+``` none
 $ srun -p gpu -G 1 --gpu_cmode=shared nvidia-smi
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 387.26                 Driver Version: 387.26                    |
@@ -266,7 +266,7 @@ number of requested GPUs:
 
     For instance, the following options will allocate 2 GPUs and 4 CPUs:
 
-    ``` shell
+    ``` none
     $ salloc -p gpu -G 2 --cpus-per-gpu=2
     ```
 
@@ -284,7 +284,7 @@ Other options can help set particular GPU properties (topology, frequency...):
 
 * `--gpu-freq`: specify GPU and memory frequency. For instance:
 
-    ``` shell
+    ``` none
     $ srun -p test -G 1 --gpu-freq=highm1,verbose /bin/true
     GpuFreq=memory_freq:2600,graphics_freq:758
     ```
@@ -299,7 +299,7 @@ documentation][url_slurm_srun].
     conflicting options.  In most cases the job will be rejected.
 
     For instance:
-    ```
+    ``` none
     $ sbatch --gpus-per-task=1 --cpus-per-gpu=2  --cpus-per-task=1 ...
     ```
     Here, the first two options implicitly set `cpu-per-task` to 2, while the
@@ -315,7 +315,7 @@ documentation][url_slurm_srun].
 GPU usage information can be shown with the [`nvtop`][url_nvtop] tool. `nvtop`
 is available as a [module][url_modules], which can be loaded like this:
 
-```
+``` none
 $ ml load system nvtop
 ```
 
