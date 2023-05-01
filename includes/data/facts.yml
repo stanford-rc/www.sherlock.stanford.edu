@@ -2,7 +2,7 @@ facts:
   - name: users
     fields:
       - name: user accounts
-        value: 6516
+        value: 6517
       - name: PI groups
         value: 1059
         desc: "from all Stanford's seven Schools, SLAC, Stanford Institutes, _etc._"
@@ -41,7 +41,7 @@ facts:
     icon: plug
     fields:
       - name: kW
-        value: 550.24
+        value: 564.33
         desc: total power usage
       - name: PDUs
         value: 55
@@ -61,7 +61,7 @@ facts:
         value: 103
         desc: across **2** Infiniband fabrics (EDR, HDR)
       - name: Infiniband cables
-        value: 5541
+        value: 5540
         desc: spanning about **29.32 km**
       - name: Ethernet switches
         value: 52
@@ -71,11 +71,11 @@ facts:
       - name: Slurm partitions
         value: 171
       - name: CPU.hours/day
-        value: 45926
+        value: 45402
         desc: over **5 years** of computing in a single day
       - name: /month
         fmt: "${:,.0f}"
-        value: 3068654.7200
+        value: 3033632.7424
         desc: to run the same workload on t2.large on-demand cloud instances
 
   - name: partitions
@@ -91,11 +91,12 @@ facts:
                 - 70 nodes w/ 32-core (AMD 7502), 256 GB RAM, HDR IB
         access: public
       - name: dev
-        nodes: 2
-        cores: 40
+        nodes: 4
+        cores: 104
         desc: development nodes
         details: |
                 - 2 nodes w/ 20-core (Intel E5-2640v4), 128 GB RAM, EDR IB
+                - 2 nodes w/ 32-core (AMD 7543P), 256 GB RAM, HDR IB, 32x Tesla A30_MIG-1g.6gb GPUs
         access: public
       - name: bigmem
         nodes: 5
