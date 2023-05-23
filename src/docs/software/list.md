@@ -78,11 +78,11 @@ count }} fields of science:_
 {% set h_vers = '<img style="float:left;min-width:90px;visibility:hidden"/>Version(s)' %}
 
 {% macro version_properties(v) -%}
-    {%- if v.markedDefault is true -%}^<b class="sw_def"></b>^{%- endif -%}
+    {%- if v.markedDefault is true -%}^<b class="sw_def"></b>^&nbsp;{%- endif -%}
     {%- if v.properties -%}
-        {%- if v.properties.arch     and v.properties.arch.gpu     -%}^<b class="sw_gpu"></b>^{%- endif -%}
-        {%- if v.properties.parallel and v.properties.parallel.mpi -%}^<b class="sw_mpi"></b>^{%- endif -%}
-        {%- if v.properties.license  and v.properties.license.restricted -%}^<b class="sw_lic"></b>^{%- endif -%}
+        {%- if v.properties.arch     and v.properties.arch.gpu     -%}^<b class="sw_gpu"></b>^&nbsp;{%- endif -%}
+        {%- if v.properties.parallel and v.properties.parallel.mpi -%}^<b class="sw_mpi"></b>^&nbsp;{%- endif -%}
+        {%- if v.properties.license  and v.properties.license.restricted -%}^<b class="sw_lic"></b>^&nbsp;</>{%- endif -%}
     {%- endif -%}
 {%- endmacro %}
 <!-- markdownlint-enable MD013 -->
