@@ -212,10 +212,10 @@ things up, R can utilize multiple CPUs in parallel when the `Ncpus=n` option is
 added to the `install.packages()` command (where `n` is the number of CPUs
 you'd like to use).
 
-For instance, you can get an interactive session with 4 CPU cores with `sdev`:
+For instance, you can get an interactive session with 4 CPU cores with `sh_dev`:
 
 ``` none
-$ sdev -c 4
+$ sh_dev -c 4
 $ ml R
 $ R
 > install.packages("dplyr", repos = "http://cran.us.r-project.org", Ncpus=4)

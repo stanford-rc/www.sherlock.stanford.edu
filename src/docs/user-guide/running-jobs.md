@@ -48,32 +48,32 @@ main Slurm commands to submit jobs are listed in the table below:
 Interactive jobs allow users to log in to a compute node to run commands
 interactively on the command line. They could be an integral
 part of an interactive programming and debugging workflow. The simplest way to
-establish an interactive session on Sherlock is to use the `sdev` command:
+establish an interactive session on Sherlock is to use the `sh_dev` command:
 
 ``` shell
-$ sdev
+$ sh_dev
 ```
 
 This will open a login shell using one core and 4 GB of memory on one node for
-one hour. The `sdev` sessions run on dedicated compute nodes. This ensures
+one hour. The `sh_dev` sessions run on dedicated compute nodes. This ensures
 minimal wait times when you need to access a node for testing script, debug
 code or any kind of interactive work.
 
-`sdev` also provides X11 forwarding via the submission host (typically the
+`sh_dev` also provides X11 forwarding via the submission host (typically the
 login node you're connected to) and can thus be used to run GUI applications.
 
 
 ### Compute nodes
 
-If you need more resources[^dev_limits], you can pass options to `sdev`, to
+If you need more resources[^dev_limits], you can pass options to `sh_dev`, to
 request more CPU cores, more nodes, or even run in a different partition.
-`sdev -h` will provide more information:
+`sh_dev -h` will provide more information:
 
 ``` shell
-$ sdev -h
-sdev: start an interactive shell on a compute node.
+$ sh_dev -h
+sh_dev: start an interactive shell on a compute node.
 
-Usage: sdev [OPTIONS]
+Usage: sh_dev [OPTIONS]
     Optional arguments:
         -c      number of CPU cores to request (OpenMP/pthreads, default: 1)
         -n      number of tasks to request (MPI ranks, default: 1)
@@ -82,7 +82,7 @@ Usage: sdev [OPTIONS]
         -p      partition to run the job in (default: dev)
         -t      time limit (default: 01:00:00)
         -r      allocate resources from the named reservation (default: none)
-        -J      job name (default: sdev)
+        -J      job name (default: sh_dev)
         -q      quality of service to request for the job (default: normal)
 
     Note: the default partition only allows for limited amount of resources.
@@ -100,7 +100,7 @@ $ srun --pty bash
 ```
 
 The main advantage of this approach is that it will allow you to specify the
-whole range of submission options that `sdev` may not support.
+whole range of submission options that `sh_dev` may not support.
 
 Finally, if you prefer to submit an existing job script or other executable as
 an interactive job, you can use the `salloc` command:
@@ -160,9 +160,9 @@ account.
 
 It's easy to schedule batch jobs on Sherlock. A job is simply an instance of your program, for example your R, Python or Matlab script that is submitted to and executed by the scheduler (Slurm). When you submit a job with the sbatch command it's called a batch job and it will either run immediately or will pend (wait) in the queue.
 
-The length of time a job will pend is determined by several factors; how many other jobs are in the queue ahead or your job and how many resources your job is requesting are most the most important factors. One key principle when requesting resources is to always try to request as few resources as you need to get your job done. This will ensure your job pends in the queue for as little time as necessary. To get a rough idea of what resources are needed, you can profile your code/jobs in an [sdev session][url_sdev] in real-time with [`htop`][url_htop], [`nvtop`][url_nvtop], [`sacct`][url_sacct] etc. The basic concept is to tell the scheduler what resources your job needs and how long is should run. These resources are:
+The length of time a job will pend is determined by several factors; how many other jobs are in the queue ahead or your job and how many resources your job is requesting are most the most important factors. One key principle when requesting resources is to always try to request as few resources as you need to get your job done. This will ensure your job pends in the queue for as little time as necessary. To get a rough idea of what resources are needed, you can profile your code/jobs in an [sh_dev session][url_sh_dev] in real-time with [`htop`][url_htop], [`nvtop`][url_nvtop], [`sacct`][url_sacct] etc. The basic concept is to tell the scheduler what resources your job needs and how long is should run. These resources are:
 
-**CPUs:** How many CPUs the program you are calling the in the sbatch script needs, unless it can utilize multiple CPUs at once you should request a single CPU. Check your code's documentation or try running in an interactive session with [`sdev`][url_sdev] and run htop if you are unsure.
+**CPUs:** How many CPUs the program you are calling the in the sbatch script needs, unless it can utilize multiple CPUs at once you should request a single CPU. Check your code's documentation or try running in an interactive session with [`sh_dev`][url_sh_dev] and run htop if you are unsure.
 
 **GPUs:** If your code is GPU enabled, how many GPUs does your code need? Use the diagnostic tool [`nvtop`][url_nvtop] to see if your code is capable of running on multiple GPUs and how much GPU memory it's using in real-time.
 
@@ -665,7 +665,7 @@ restarts for 5 minutes, and so on, until it's properly `scancel`led.
 [url_partition]:/docs/glossary/#partition
 
 [url_sh_part]:  //news.sherlock.stanford.edu/posts/a-better-view-at-sherlock-s-resources
-[url_sdev]: /docs/user-guide/running-jobs/?h=sdev
+[url_sh_dev]: /docs/user-guide/running-jobs/?h=sh_dev
 [url_filemanager]: /docs/user-guide/ondemand/#managing-files
 [url_htop]: https://htop.dev/
 [url_nvtop]: /docs/user-guide/gpu/?query=nv_top#advanced-options
@@ -679,7 +679,7 @@ restarts for 5 minutes, and so on, until it's properly `scancel`led.
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
-[^dev_limits]: The dedicated partition that `sdev` uses by default only allows
+[^dev_limits]: The dedicated partition that `sh_dev` uses by default only allows
   up to 2 cores and 8 GB or memory per user at any given time. So if you need
   more resources for your interactive session, you may have to specify a
   different partition. See the [Partitions](#partitions) section for more

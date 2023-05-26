@@ -35,7 +35,7 @@ $ srun --partition normal --time 1:00:00 --pty bash
 or ask for a development node for 1 hour:
 
 ``` shell
-$ sdev
+$ sh_dev
 ```
 
 ### Module

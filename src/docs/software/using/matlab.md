@@ -42,7 +42,7 @@ page][url_software_list].
     ```
     -----------------------------------------------------------------------
     WARNING: running MATLAB directly on login nodes is not supported.  Please
-    make sure you request an interactive session on a compute node with "sdev"
+    make sure you request an interactive session on a compute node with "sh_dev"
     for instance) before launching MATLAB interactively.
     -----------------------------------------------------------------------
     ```
@@ -55,7 +55,7 @@ the `matlab` module is loaded), MATLAB can be started by simply typing `matlab`
 at the shell prompt.
 
 ``` shell
-$ sdev
+$ sh_dev
 $ ml load matlab
 $ matlab
 MATLAB is selecting SOFTWARE OPENGL rendering.
@@ -104,7 +104,7 @@ $ ssh -X <YourSUNetID>@login.sherlock.stanford.edu
 And then, once on Sherlock:
 
 ``` shell
-$ sdev
+$ sh_dev
 $ ml load matlab
 $ matlab
 ```

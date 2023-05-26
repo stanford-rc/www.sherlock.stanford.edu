@@ -238,7 +238,7 @@ If you're in a rush[^account], here's a 3-step ultra-quick start:
 2. get an interactive session on a compute node
 
    ``` shell
-   [kilian@sh-ln01 login! ~]$ sdev
+   [kilian@sh-ln01 login! ~]$ sh_dev
    ```
 
 3. run a command
