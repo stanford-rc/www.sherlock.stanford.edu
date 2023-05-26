@@ -64,15 +64,15 @@ same PI group. User locations are only accessible by the user.
 |`$SCRATCH`      | directory  |       100 TB | 20 million  | [time limited][url_purge] |
 |`$GROUP_SCRATCH`| directory  |       100 TB | 20 million  | [time limited][url_purge] |
 |`$L_SCRATCH`    | n/a        |          n/a | n/a         | job lifetime  |
-|`$OAK`          | group      | amount purchased | function of the volume purchased | :octicons-infinity-16: |
+|`$OAK`          | directory  | amount purchased | function of the volume purchased | :octicons-infinity-16: |
 
 
 Quota types:
 
-
-
 * **directory**: based on files location and account for all the files
   that are in a given directory.
+* **user**: based on files ownership and account for all the files that
+  belong to a given user.
 * **group**: based on files ownership and account for all the files that
   belong to a given group.
 
