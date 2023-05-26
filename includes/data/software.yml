@@ -2609,7 +2609,7 @@ software_modules:
       - {description: OpenBLAS is an optimized BLAS library, family: blas, markedDefault: true,
         versionName: 0.3.10}
     - categories: math, optimization
-      defaultVersionName: 9.0.3_py36
+      defaultVersionName: 10.0.1_py39
       description: The Gurobi Optimizer is a commercial optimization solver for mathematical
         programming.
       package: gurobi
@@ -2623,6 +2623,8 @@ software_modules:
           mathematical programming., markedDefault: false, versionName: 8.0.1_py36}
       - {description: The Gurobi Optimizer is a commercial optimization solver for
           mathematical programming., markedDefault: false, versionName: 9.0.3_py36}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 10.0.1_py39}
     - categories: math, numerical library
       defaultVersionName: '2.7'
       description: The GNU Scientific Library (GSL) is a numerical library for C and
@@ -5107,6 +5109,15 @@ software_modules:
       - description: The Vienna Ab initio Simulation Package (VASP) is a computer
           program for atomic scale materials modelling, e.g. electronic structure
           calculations and quantum-mechanical molecular dynamics, from first principles.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          license: {restricted: 1}
+          parallel: {mpi: 1}
+        versionName: 6.4.1
+      - description: The Vienna Ab initio Simulation Package (VASP) is a computer
+          program for atomic scale materials modelling, e.g. electronic structure
+          calculations and quantum-mechanical molecular dynamics, from first principles.
         markedDefault: true
         properties:
           arch: {gpu: 1}
@@ -5223,7 +5234,7 @@ software_modules:
           arch: {gpu: 1}
         versionName: 7.1.1
     - categories: chemistry, molecular dynamics
-      defaultVersionName: '2021.3'
+      defaultVersionName: '2023.1'
       description: GROMACS is a versatile package to perform molecular dynamics, i.e.
         simulate the Newtonian equations of motion for systems with hundreds to millions
         of particles.
@@ -5254,6 +5265,14 @@ software_modules:
           arch: {gpu: 1}
           parallel: {mpi: 1}
         versionName: '2021.3'
+      - description: GROMACS is a versatile package to perform molecular dynamics,
+          i.e. simulate the Newtonian equations of motion for systems with hundreds
+          to millions of particles.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '2023.1'
     - categories: chemistry, quantum chemistry
       defaultVersionName: '4.1'
       description: CP2K is a quantum chemistry and solid state physics software package
@@ -5906,6 +5925,14 @@ software_modules:
           arch: {gpu: 1}
           parallel: {mpi: 1}
         versionName: '22.3'
+      - description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
+          Fortran compilers.
+        family: mpi
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '23.3'
       - {description: 'NVIDIA HPC Software Development Kit (SDK) including C, C++,
           and Fortran compilers.', family: compiler_f, markedDefault: true, versionName: '21.5'}
     - categories: devel, lib
