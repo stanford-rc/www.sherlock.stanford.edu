@@ -86,6 +86,20 @@ Retention types:
 * **job lifetime**: files are only kept for the duration of the job and are
   automatically purged when the job ends.
 
+!!! info "Global failsafe user and quota groups on `/scratch`"
+
+    To prevent potential issues which would result in the file sytem filling up
+    completely and making it unusable for everyone, additional user and
+    group-level quotas are in place on the `/scratch` file system:
+
+    * each user can use a maximum of 250 TB of space in total, in their own
+      `$SCRATCH` and all the `$GROUP_SCRATCH` directories they may have access
+      to.
+
+    * each group can use a maximum of 1 PB of space in total across all the
+      group members' `$SCRATCH` directories and the group's `$GROUP_SCRATCH`.
+
+
 
 #### Checking quotas
 
