@@ -52,7 +52,7 @@ same PI group. User locations are only accessible by the user.
 !!! info "Volume and inodes"
 
     Quotas are applied on both volume (the amount of data stored in bytes) and
-    inode: an inode (index node) is a data structure in a Unix-style file
+    inodes: an inode (index node) is a data structure in a Unix-style file
     system that describes a file-system object such as a file or a directory.
     In practice, each filesystem entry (file, directory, link) counts as an
     inode.
