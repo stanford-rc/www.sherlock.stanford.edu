@@ -90,14 +90,14 @@ Retention types:
 
     To prevent potential issues which would result in the file sytem filling up
     completely and making it unusable for everyone, additional user and
-    group-level quotas are in place on the `/scratch` file system:
+    group-level quotas are in place on the `/scratch` file system, as a
+    failsafe:
 
-    * each user can use a maximum of 250 TB of space in total, in their own
-      `$SCRATCH` and all the `$GROUP_SCRATCH` directories they may have access
-      to.
+    * a user will not be able to use more than 250 TB (50M inodes) in total, in
+      all the `/scratch` directories they have access to.
 
-    * each group can use a maximum of 1 PB of space in total across all the
-      group members' `$SCRATCH` directories and the group's `$GROUP_SCRATCH`.
+    * a group will not be able to use more than 1 PB (200M inodes) in total
+      across all the `/scratch` directories its group members have access to.
 
 
 
