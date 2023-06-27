@@ -66,9 +66,9 @@ EOF
 !!! warning "`.my.cnf` doesn't support environment variables"
 
     Please note that if you edit your `~/.my.cnf` file directly in a file
-    editor, without using the [HEREDOC][url_heredoc] syntax above,
-    environment variables such as `$DB_DIR`, `$HOME` or `$USER` won't work: you
-    will need to specify absolute paths explicitely, such as
+    editor, without using the [HEREDOC][url_heredoc] syntax above, environment
+    variables such as `$DB_DIR`, `$HOME` or `$USER` won't work: you will need
+    to specify absolute paths explicitly, such as
     `/scratch/users/kilian/db/mariadbd.log`.
 
     If you use the HEREDOC syntax, you can verify that the resulting `.my.cnf`

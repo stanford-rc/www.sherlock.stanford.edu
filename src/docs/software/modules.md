@@ -293,7 +293,7 @@ $ ml av
 [...]
 ```
 
-### Reseting the modules environment
+### Resetting the modules environment
 
 If you want to reset your modules environment as it was when you initially
 connected to Sherlock, you can use the `ml reset` command: it will remove all

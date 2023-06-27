@@ -350,7 +350,7 @@ $ module spider udunits
 ----------------------------------------------------------------------------
     Description:
       The UDUNITS package from Unidata is a C-based package for the
-      programatic handling of units of physical quantities.
+      programmatic handling of units of physical quantities.
 
 
     You will need to load all module(s) on any one of the lines below before
@@ -389,7 +389,7 @@ For instance, to update the `doParallel` package:
 > update.packages('doParallel')
 ```
 
-When the package name is omitted, `update.pacakges()` will try to update all
+When the package name is omitted, `update.packages()` will try to update all
 the packages that are installed. Which is the most efficient way to ensure that
 all the packages in your local R library are up to date.
 
@@ -566,7 +566,7 @@ Once the package is installed, the following scripts demonstrate a very basic
     #SBATCH --output=Rmpi-test.log
 
     ## load modules
-    # openmpi is not loaded by default with R, so it must be loaded explicitely
+    # openmpi is not loaded by default with R, so it must be loaded explicitly
     ml R openmpi
 
     ## run script
@@ -647,7 +647,7 @@ the [`gpuR`][url_gpuR] R package.
     #SBATCH --output=gpuR-test.log
 
     ## load modules
-    # cuda is not loaded by default with R, so it must be loaded explicitely
+    # cuda is not loaded by default with R, so it must be loaded explicitly
     ml R cuda
 
     Rscript gpuR-test.R

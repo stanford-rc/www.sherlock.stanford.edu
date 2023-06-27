@@ -169,7 +169,7 @@ Commonly used entries for these fields are:
   * `y` synchronize: allow clients to use synchronous I/O with the server.
   * `d` delete: delete the file/directory. Some servers will allow a delete
       to occur if either this permission is set in the file/directory or if the
-      delete-child permission is set in its parent direcory.
+      delete-child permission is set in its parent directory.
   * `D` delete-child: remove a file or subdirectory from within the given
       directory (directories only)
 
@@ -249,7 +249,7 @@ permissions yourself.
 ## Sharing data outside of Sherlock
 
 If you'd like to share data stored on Sherlock with external collaborators,
-there are two possiblities:
+there are two possibilities:
 
   1. [sponsor a SUNet ID][url_susponsorship][^sunet_level] for these
      collaborators, and [contact us][url_contact] us to create a account for
@@ -269,7 +269,7 @@ there are two possiblities:
         Globus Sharing is only available on [`$OAK`][url_oak], using the [Oak
         Globus Endpoint][url_oak_endpoint] :octicons-lock-16:[^sunet] (`srcc#oak`).
 
-     For complete details about sharing data wih Globus, please see the Globus
+     For complete details about sharing data with Globus, please see the Globus
      documentation at https://docs.globus.org/how-to/share-files/
 
 

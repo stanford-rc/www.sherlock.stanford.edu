@@ -88,7 +88,7 @@ Retention types:
 
 !!! info "Global failsafe user and quota groups on `/scratch`"
 
-    To prevent potential issues which would result in the file sytem filling up
+    To prevent potential issues which would result in the file system filling up
     completely and making it unusable for everyone, additional user and
     group-level quotas are in place on the `/scratch` file system, as a
     failsafe:

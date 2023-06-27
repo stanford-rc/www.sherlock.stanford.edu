@@ -43,7 +43,7 @@ $ ml python/3.6.1
     the default, older system-level Python installation, and may result in
     errors when trying to run Python3 code.
 
-    This is an upstream decision detailled in [PEP-394][url_pep394], not
+    This is an upstream decision detailed in [PEP-394][url_pep394], not
     something specific to Sherlock.
 
 
@@ -72,7 +72,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 When output is being buffered, the `print` statements are aggregated until
 there is a enough data to print, and then the messages are all printed at once.
 And as a consequence, job output files (as specified with the `--output` and
-`--error` job submission options) will be refeshed less often and may give the
+`--error` job submission options) will be refreshed less often and may give the
 impression that the job is not running.
 
 For debugging or checking that a Python script is producing the correct output,

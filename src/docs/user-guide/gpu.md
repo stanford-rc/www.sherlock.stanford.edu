@@ -72,7 +72,7 @@ Fri Jul 28 12:41:49 2017
 
 !!! warning "GPU resources MUST be requested explicitly"
 
-    Jobs will be rejected at submission time if they don't explictly request
+    Jobs will be rejected at submission time if they don't explicitly request
     GPU resources.
 
 

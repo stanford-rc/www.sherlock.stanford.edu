@@ -186,9 +186,9 @@ If you can't make any of the Office Hours sessions, you can also make an
 
 #### What to expect
 
-* We cannot accomodate walk-ins: we're unfortunately not staffed to accommodate
-  walk-ins, so please make sure that you're planning to stop by **during**
-  office hours. We will not be able to help you otherwise.
+* We cannot accommodate walk-ins: we're unfortunately not staffed to
+  accommodate walk-ins, so please make sure that you're planning to stop by
+  **during** office hours. We will not be able to help you otherwise.
 
 * We can rarely help with application-specific or algorithm problems.
 

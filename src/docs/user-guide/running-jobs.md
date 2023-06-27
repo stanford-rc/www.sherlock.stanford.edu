@@ -24,7 +24,7 @@ Acceptable use of login nodes include:
 
 !!! warning "Resource limits are enforced"
 
-    To minimize disruption and ensure a confortable working environment for
+    To minimize disruption and ensure a comfortable working environment for
     users, resource limits are enforced on login nodes, and processes started
     there will automatically be terminated if their resource usage (including
     CPU time, memory and run time) exceed those limits.
@@ -550,7 +550,7 @@ _resubmit() {
 }
 trap _resubmit SIGUSR1
 
-## Insert the command to run below. Here, we're just outputing the date every
+## Insert the command to run below. Here, we're just outputting the date every
 ## 10 seconds, forever
 
 echo "$(date): job $SLURM_JOBID starting on $SLURM_NODELIST"
@@ -620,7 +620,7 @@ _requeue() {
 }
 trap '_requeue' SIGUSR1
 
-## Insert the command to run below. Here, we're just outputing the date every
+## Insert the command to run below. Here, we're just outputting the date every
 ## 60 seconds, forever
 
 echo "$(date): job $SLURM_JOBID starting on $SLURM_NODELIST"

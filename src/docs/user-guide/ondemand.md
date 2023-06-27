@@ -103,14 +103,14 @@ There are two sets of buttons in the File Explorer.
     | **New Dir** | Create a new subdirectory |
     | **Upload** | Copy a file from your local machine to Sherlock |
     | **Show Dotfiles** | Toggle the display of dotfiles (files starting by a `.`, which are usually hidden) |
-    | **Show Owner/Mode** | Toggle the display of owner and permisson settings |
+    | **Show Owner/Mode** | Toggle the display of owner and permission settings |
 
 
 
 ## Creating and editing jobs
 
 You can create new job scripts, edit existing scripts, and submit them to the
-scheduler throught the Sherlock OnDemand interface.
+scheduler through the Sherlock OnDemand interface.
 
 From the top menus in the **Dashboard**, choose **Jobs > Job Composer**. A Job
 Composer window will open. There are two tabs at the top: **Jobs** and
@@ -189,7 +189,7 @@ eome details about individual jobs.
 
 ![ood_my_jobs](images/ood_my_jobs.png)
 
-At the bottom of the detailled view, you'll find two button that will bring you
+At the bottom of the detailed view, you'll find two button that will bring you
 to the directory where that job's files are located, either in the **File
 Manager** or in a **Shell** session.
 
@@ -292,7 +292,7 @@ To run RStudio via Sherlock OnDemand:
     You may encounter errors while installing R packages within RStudio. First
     try installing R packages in a shell session on the Sherlock command line.
     See our [R packages][url_r_packages] documentation for more information.
-    
+
 
 ### Tensorboard
 

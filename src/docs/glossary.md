@@ -105,7 +105,7 @@ effectively used in the past.  As a result, the more resources past jobs have
 used, the lower the priority of the next jobs will be.  Past usage is computed
 based on a sliding window and progressively forgotten over time.  This enables
 all users on a shared resource to get a fair portion of it for their own use,
-by giving higher priorty to users who have been underserved in the past.
+by giving higher priority to users who have been underserved in the past.
 
 #### FLOPS
 
