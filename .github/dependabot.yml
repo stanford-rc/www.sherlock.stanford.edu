@@ -1,7 +1,15 @@
 version: 2
+
 updates:
   - package-ecosystem: pip
     open-pull-requests-limit: 10
     directory: "/"
     schedule:
-      interval: weekly
+      interval: "weekly"
+
+  # Enable version updates for Actions
+  # https://docs.github.com/en/code-security/supply-chain-security/keeping-your-actions-up-to-date-with-dependabot
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"

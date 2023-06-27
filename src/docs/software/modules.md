@@ -55,7 +55,7 @@ $ module load chemistry gromacs
 The `math` and `devel` categories, which are loaded by default, provide direct
 access to compilers, languages, and MPI and numerical libraries.
 
-For a complete list of software odule categories, please refer to the [list of
+For a complete list of software module categories, please refer to the [list of
 available software][url_list]
 
 !!! tip "Searching for a module"
