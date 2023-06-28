@@ -39,8 +39,8 @@ jobs:
   yamllint: # ----------------------------------------------------------------
     runs-on: ubuntu-latest
     steps:
-      - ume: checkout repo
-        ses: actions/checkout@v3
+      - name: checkout repo
+        uses: actions/checkout@v3
       - name: list changed YAML files
         id: changedfiles
         uses: tj-actions/changed-files@v37
