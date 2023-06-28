@@ -58,7 +58,7 @@ jobs:
         run: |
           echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} \
                 | grep '.md' | xargs)"
-      - uses: nosborn/github-action-markdown-cli@v1.1.1
+      - uses: nosborn/github-action-markdown-cli@v3.3.0
         #if: ${{ steps.getfiles.outputs.files != '' }}
         with:
           files: ${{ steps.getfiles.outputs.files }}
