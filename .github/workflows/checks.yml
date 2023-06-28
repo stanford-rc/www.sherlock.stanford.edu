@@ -28,7 +28,7 @@ jobs:
       - run: |
           pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@${MKM_VER}
           pip install -r requirements.txt
-          mkdocs gh-deploy --force
+          mkdocs build --strict
 
 
   yamllint: # ----------------------------------------------------------------
@@ -65,9 +65,22 @@ jobs:
           config_file: .markdownlintrc
 
 
-  linkcheck: # -------------------------------------------------------------
-    runs-on: ubuntu-20.04
+  spellcheck: # ----------------------------------------------------------------
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
+      with:
+          fetch-depth: 0
+    - id: getfiles
+      run: |
+        echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} \
+              | grep '.yml' | xargs)"
+    - uses: rojopolis/spellcheck-github-actions@0.33.0
+      
+
+#  linkcheck: # -------------------------------------------------------------
+#    runs-on: ubuntu-20.04
+#    steps:
+#      - uses: actions/checkout@v3
 
 
