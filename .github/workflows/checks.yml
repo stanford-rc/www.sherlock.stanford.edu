@@ -39,14 +39,14 @@ jobs:
   yamllint: # ----------------------------------------------------------------
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - id: changedfiles
+      - ume: checkout repo
+        ses: actions/checkout@v3
+      - name: list changed YAML files
+        id: changedfiles
         uses: tj-actions/changed-files@v37
         with:
           files: '**.yml'
-      - id: yamllint
+      - name: lint YAML files
         uses: ibiqlik/action-yamllint@v3
         if: steps.changedfiles.outputs.any_changed == 'true'
         with:
