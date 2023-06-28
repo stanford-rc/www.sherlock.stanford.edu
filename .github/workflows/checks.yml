@@ -74,14 +74,12 @@ jobs:
   spellcheck: # ----------------------------------------------------------------
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-      with:
-          fetch-depth: 0
-    - id: getfiles
-      run: |
-        echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} \
-              | grep '.yml' | xargs)"
-    - uses: rojopolis/spellcheck-github-actions@0.33.0
+      - uses: actions/checkout@v3
+      - id: getfiles
+        run: |
+           echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} \
+                 | grep '.yml' | xargs)"
+      - uses: rojopolis/spellcheck-github-actions@0.33.0
 
 
 #  linkcheck: # -------------------------------------------------------------
