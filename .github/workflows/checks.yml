@@ -51,7 +51,7 @@ jobs:
         if: steps.changedfiles.outputs.any_changed == 'true'
         with:
           file_or_dir: ${{ steps.changedfiles.outputs.all_changed_files }}
-          config_file: .yamllint
+          config_file: .github/workflows/config/.yamllint
 
 
   mdlint: # ----------------------------------------------------------------
@@ -69,7 +69,7 @@ jobs:
         if: steps.changedfiles.outputs.any_changed == 'true'
         with:
           files: ${{ steps.changedfiles.outputs.all_changed_files }}
-          config_file: .markdownlintrc
+          config_file: .github/workflows/config/.markdownlintrc
 
 
   spellcheck: # ----------------------------------------------------------------
