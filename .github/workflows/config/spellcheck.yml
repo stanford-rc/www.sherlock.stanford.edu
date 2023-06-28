@@ -1,9 +1,12 @@
 matrix:
-- name: Markdown
+- name: markdown
   aspell:
     lang: en
     d: en_US
+  ignore-case: true
   dictionary:
+    wordlists:
+      - .github/workflows/config/spellcheck.wordlist.txt
     encoding: utf-8
   pipeline:
   - pyspelling.filters.markdown:
