@@ -41,17 +41,19 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v3
-      - name: list changed YAML files
+      - name: list changed yaml files
         id: changedfiles
         uses: tj-actions/changed-files@v37
         with:
-          files: '**.yml'
-      - name: lint YAML files
+          files: |
+            **.yml
+            **.yaml
+      - name: lint yaml files
         uses: ibiqlik/action-yamllint@v3
         if: steps.changedfiles.outputs.any_changed == 'true'
         with:
           file_or_dir: ${{ steps.changedfiles.outputs.all_changed_files }}
-          config_file: .github/workflows/config/.yamllint
+          config_file: .github/workflows/config/yamllint.yml
 
 
   mdlint: # ----------------------------------------------------------------
@@ -59,29 +61,32 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v3
-      - name: list changed Markdown files
+      - name: list changed markdown files
         id: changedfiles
         uses: tj-actions/changed-files@v37
         with:
           files: '**.md'
-      - name: lint Markdown files
+      - name: lint markdown files
         uses: nosborn/github-action-markdown-cli@v3.3.0
         if: steps.changedfiles.outputs.any_changed == 'true'
         with:
           files: ${{ steps.changedfiles.outputs.all_changed_files }}
-          config_file: .github/workflows/config/.markdownlintrc
+          config_file: .github/workflows/config/markdownlint.yml
 
 
   spellcheck: # ----------------------------------------------------------------
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - id: getfiles
-        run: |
-           echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} \
-                 | grep '.yml' | xargs)"
+      - name: checkout repo
+        uses: actions/checkout@v3
+      - name: list changed markdown files
+        id: changedfiles
+        uses: tj-actions/changed-files@v37
+        with:
+          files: '**.md'
       - uses: rojopolis/spellcheck-github-actions@0.33.0
-
+        with:
+          config_path: .github/workflows/config/spellcheck.yml
 
 #  linkcheck: # -------------------------------------------------------------
 #    runs-on: ubuntu-20.04
