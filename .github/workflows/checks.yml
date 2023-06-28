@@ -32,19 +32,20 @@ jobs:
 
 
   yamllint: # ----------------------------------------------------------------
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - id: getfiles
-        run: |
-          echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} \
-                | grep '.yml' | xargs)"
-      - uses: ibiqlik/action-yamllint@v3
-        #if: ${{ steps.getfiles.outputs.files != '' }}
+      - id: changedfiles
+        uses: tj-actions/changed-files@v37
         with:
-          file_or_dir: ${{ steps.getfiles.outputs.files }}
+          files: **.yml
+      - id: yamllint
+        uses: ibiqlik/action-yamllint@v3
+        if: steps.changedfiles.outputs.any_changed == 'true'
+        with:
+          file_or_dir: ${{ steps.changedfiles.outputs.all_changed_files }}
           config_file: .yamllint
 
 
@@ -76,7 +77,7 @@ jobs:
         echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} \
               | grep '.yml' | xargs)"
     - uses: rojopolis/spellcheck-github-actions@0.33.0
-      
+
 
 #  linkcheck: # -------------------------------------------------------------
 #    runs-on: ubuntu-20.04
