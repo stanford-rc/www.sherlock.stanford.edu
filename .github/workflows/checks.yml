@@ -19,20 +19,20 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-      - id: checkout repo
+      - name: checkout repo
         uses: actions/checkout@v3
-      - id: setup python
+      - name: setup python
         uses: actions/setup-python@v4
         with:
           python-version: 3.x
           cache: pip
-      - id: set Material for MkDocs version
+      - name: set Material for MkDocs version
         run: echo "MKM_VER=$(cat .mkdocs-material.version)" >> $GITHUB_ENV
-      - id: install Material for MkDocs and dependencies
+      - name: install Material for MkDocs and dependencies
         run: |
           pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@${MKM_VER}
           pip install -r requirements.txt
-      - id: build site
+      - name: build site
         run: mkdocs build --strict
 
 
