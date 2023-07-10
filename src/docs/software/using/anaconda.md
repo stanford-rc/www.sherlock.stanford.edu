@@ -98,7 +98,7 @@ container images, it could be useful to collect them all in a single location
 
 [url_modules]:        /docs/oftware/list
 [url_r]:              /docs/software/using/R
-[url_venv]:           /docs/software/using/Python#virtual-environments
+[url_venv]:           /docs/software/using/python#virtual-environments
 [url_container]:      /docs/software/containers
 
 [url_contact]:        mailto:{{ support_email }}
