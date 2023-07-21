@@ -3600,22 +3600,30 @@ software_modules:
           and analyse Climate and NWP model Data., markedDefault: false, versionName: 1.9.7.1}
       - {description: CDO is a collection of command line Operators to manipulate
           and analyse Climate and NWP model Data., markedDefault: false, versionName: 2.1.1}
-    - categories: physics, geoscience
-      defaultVersionName: 8.2.1
-      description: PROJ is a generic coordinate transformation software that transforms
-        geospatial coordinates from one coordinate reference system (CRS) to another.
-      package: proj
-      url: http://proj.org
+    - categories: physics, quantum mechanics
+      defaultVersionName: 0.3.5_py36
+      description: QuSpin is an open-source Python package for exact diagonalization
+        and quantum dynamics of arbitrary boson, fermion and spin many-body systems.
+      package: py-quspin
+      url: http://weinbe58.github.io/QuSpin/
       versions:
-      - {description: PROJ is a generic coordinate transformation software that transforms
-          geospatial coordinates from one coordinate reference system (CRS) to another.,
-        markedDefault: false, versionName: 4.9.3}
-      - {description: PROJ is a generic coordinate transformation software that transforms
-          geospatial coordinates from one coordinate reference system (CRS) to another.,
-        markedDefault: false, versionName: 9.1.0}
-      - {description: PROJ is a generic coordinate transformation software that transforms
-          geospatial coordinates from one coordinate reference system (CRS) to another.,
-        markedDefault: true, versionName: 8.2.1}
+      - {description: 'QuSpin is an open-source Python package for exact diagonalization
+          and quantum dynamics of arbitrary boson, fermion and spin many-body systems.',
+        markedDefault: false, versionName: 0.3.5_py36}
+    - categories: physics, geoscience
+      defaultVersionName: 0.2.0-20220523
+      description: GEOSX is a simulation framework for modeling coupled flow, transport,
+        and geomechanics in the subsurface.
+      package: geosx
+      url: https://github.com/GEOSX/GEOSX
+      versions:
+      - description: GEOSX is a simulation framework for modeling coupled flow, transport,
+          and geomechanics in the subsurface.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 0.2.0-20220523
     - categories: physics, astronomy
       defaultVersionName: 4.0.0
       description: FITSIO is a library of C and Fortran subroutines for reading and
@@ -3663,16 +3671,6 @@ software_modules:
           tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks
           for X-ray astronomical spectral, timing, and imaging data analysis) software
           packages.', markedDefault: false, versionName: 6.26.1}
-    - categories: physics, quantum mechanics
-      defaultVersionName: 0.3.5_py36
-      description: QuSpin is an open-source Python package for exact diagonalization
-        and quantum dynamics of arbitrary boson, fermion and spin many-body systems.
-      package: py-quspin
-      url: http://weinbe58.github.io/QuSpin/
-      versions:
-      - {description: 'QuSpin is an open-source Python package for exact diagonalization
-          and quantum dynamics of arbitrary boson, fermion and spin many-body systems.',
-        markedDefault: false, versionName: 0.3.5_py36}
     - categories: physics, astronomy
       defaultVersionName: 4.0.1_py36
       description: The Astropy Project is a community effort to develop a common core
@@ -3684,6 +3682,18 @@ software_modules:
       - {description: The Astropy Project is a community effort to develop a common
           core package for Astronomy in Python and foster an ecosystem of interoperable
           astronomy packages., markedDefault: false, versionName: 4.0.1_py36}
+    - categories: physics, geoscience
+      defaultVersionName: 1.9.5.1_py27
+      description: Python interface to PROJ4 library for cartographic transformations.
+      package: py-pyproj
+      url: https://github.com/jswhit/pyproj
+      versions:
+      - {description: Python interface to PROJ4 library for cartographic transformations.,
+        markedDefault: false, versionName: 1.9.5.1_py36}
+      - {description: Python interface to PROJ4 library for cartographic transformations.,
+        markedDefault: false, versionName: 3.4.0_py39}
+      - {description: Python interface to PROJ4 library for cartographic transformations.,
+        markedDefault: true, versionName: 1.9.5.1_py27}
     - categories: physics, photonics
       defaultVersionName: 1.24.0
       description: Meep is a free finite-difference time-domain (FDTD) simulation
@@ -3709,49 +3719,35 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 1.24.0
-    - categories: physics, photonics
-      defaultVersionName: 1.11.1
-      description: MPB is a free software package for computing the band structures,
-        or dispersion relations, and electromagnetic modes of periodic dielectric
-        structures, on both serial and parallel computers.
-      package: mpb
-      url: https://github.com/stevengj/mpb
+    - categories: physics, cliemate modeling
+      defaultVersionName: '2022.01'
+      description: FRE-NCtools is a collection of tools to help with the creation
+        and manipulation of netCDF files used for climate modeling.
+      package: fre-nctools
+      url: https://github.com/NOAA-GFDL/FRE-NCtools
       versions:
-      - description: MPB is a free software package for computing the band structures,
-          or dispersion relations, and electromagnetic modes of periodic dielectric
-          structures, on both serial and parallel computers.
+      - description: FRE-NCtools is a collection of tools to help with the creation
+          and manipulation of netCDF files used for climate modeling.
         markedDefault: false
         properties:
           parallel: {mpi: 1}
-        versionName: '1.5'
-      - description: MPB is a free software package for computing the band structures,
-          or dispersion relations, and electromagnetic modes of periodic dielectric
-          structures, on both serial and parallel computers.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 1.6.2
-      - description: MPB is a free software package for computing the band structures,
-          or dispersion relations, and electromagnetic modes of periodic dielectric
-          structures, on both serial and parallel computers.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 1.11.1
+        versionName: '2022.01'
     - categories: physics, geoscience
-      defaultVersionName: 0.2.0-20220523
-      description: GEOSX is a simulation framework for modeling coupled flow, transport,
-        and geomechanics in the subsurface.
-      package: geosx
-      url: https://github.com/GEOSX/GEOSX
+      defaultVersionName: 8.2.1
+      description: PROJ is a generic coordinate transformation software that transforms
+        geospatial coordinates from one coordinate reference system (CRS) to another.
+      package: proj
+      url: http://proj.org
       versions:
-      - description: GEOSX is a simulation framework for modeling coupled flow, transport,
-          and geomechanics in the subsurface.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 0.2.0-20220523
+      - {description: PROJ is a generic coordinate transformation software that transforms
+          geospatial coordinates from one coordinate reference system (CRS) to another.,
+        markedDefault: false, versionName: 4.9.3}
+      - {description: PROJ is a generic coordinate transformation software that transforms
+          geospatial coordinates from one coordinate reference system (CRS) to another.,
+        markedDefault: false, versionName: 9.1.0}
+      - {description: PROJ is a generic coordinate transformation software that transforms
+          geospatial coordinates from one coordinate reference system (CRS) to another.,
+        markedDefault: true, versionName: 8.2.1}
     - categories: physics, particle
       defaultVersionName: 0.10.0
       description: OpenMC is a Monte Carlo particle transport simulation code focused
@@ -3761,18 +3757,15 @@ software_modules:
       versions:
       - {description: OpenMC is a Monte Carlo particle transport simulation code focused
           on neutron criticality calculations., markedDefault: false, versionName: 0.10.0}
-    - categories: physics, geoscience
-      defaultVersionName: 1.9.5.1_py27
-      description: Python interface to PROJ4 library for cartographic transformations.
-      package: py-pyproj
-      url: https://github.com/jswhit/pyproj
+    - categories: physics, quantum mechanics
+      defaultVersionName: 4.5.2_py36
+      description: QuTiP is open-source software for simulating the dynamics of closed
+        and open quantum systems.
+      package: py-qutip
+      url: http://qutip.org/
       versions:
-      - {description: Python interface to PROJ4 library for cartographic transformations.,
-        markedDefault: false, versionName: 1.9.5.1_py36}
-      - {description: Python interface to PROJ4 library for cartographic transformations.,
-        markedDefault: false, versionName: 3.4.0_py39}
-      - {description: Python interface to PROJ4 library for cartographic transformations.,
-        markedDefault: true, versionName: 1.9.5.1_py27}
+      - {description: QuTiP is open-source software for simulating the dynamics of
+          closed and open quantum systems., markedDefault: false, versionName: 4.5.2_py36}
     - categories: physics, geoscience
       defaultVersionName: 2.2.26
       description: The UDUNITS package from Unidata is a C-based package for the programatic
@@ -3817,15 +3810,14 @@ software_modules:
       - {description: An InSAR processing system based on GMT (Generic Mapping Tools).,
         markedDefault: false, versionName: 6.2.2}
     - categories: physics, materials science
-      defaultVersionName: '3.36'
-      description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
-        coupled configurational and vibrational disorder in alloy systems.'
-      package: atat
-      url: https://www.brown.edu/Departments/Engineering/Labs/avdw/atat/
+      defaultVersionName: 2022.5.26_py39
+      description: Pymatgen (Python Materials Genomics) is a robust, open-source Python
+        library for materials analysis.
+      package: py-pymatgen
+      url: https://pymatgen.org/
       versions:
-      - {description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
-          coupled configurational and vibrational disorder in alloy systems.', markedDefault: false,
-        versionName: '3.36'}
+      - {description: 'Pymatgen (Python Materials Genomics) is a robust, open-source
+          Python library for materials analysis.', markedDefault: false, versionName: 2022.5.26_py39}
     - categories: physics, CFD
       defaultVersionName: 7.0.3
       description: 'SU2: An Open-Source Suite for Multiphysics Simulation and Design'
@@ -3859,23 +3851,28 @@ software_modules:
           object-oriented models for accessing the full functionalities of NVIDIA
           cuQuantum SDK from Python., markedDefault: false, versionName: 22.3.0_py39}
     - categories: physics, materials science
-      defaultVersionName: 2022.5.26_py39
-      description: Pymatgen (Python Materials Genomics) is a robust, open-source Python
-        library for materials analysis.
-      package: py-pymatgen
-      url: https://pymatgen.org/
+      defaultVersionName: '3.36'
+      description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
+        coupled configurational and vibrational disorder in alloy systems.'
+      package: atat
+      url: https://www.brown.edu/Departments/Engineering/Labs/avdw/atat/
       versions:
-      - {description: 'Pymatgen (Python Materials Genomics) is a robust, open-source
-          Python library for materials analysis.', markedDefault: false, versionName: 2022.5.26_py39}
-    - categories: physics, quantum mechanics
-      defaultVersionName: 4.5.2_py36
-      description: QuTiP is open-source software for simulating the dynamics of closed
-        and open quantum systems.
-      package: py-qutip
-      url: http://qutip.org/
+      - {description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
+          coupled configurational and vibrational disorder in alloy systems.', markedDefault: false,
+        versionName: '3.36'}
+    - categories: physics, geoscience
+      defaultVersionName: 9.01a
+      description: SWASH (an acronym of Simulating WAves till SHore) is a non-hydrostatic
+        wave-flow model.
+      package: swash
+      url: https://swash.sourceforge.io/
       versions:
-      - {description: QuTiP is open-source software for simulating the dynamics of
-          closed and open quantum systems., markedDefault: false, versionName: 4.5.2_py36}
+      - description: SWASH (an acronym of Simulating WAves till SHore) is a non-hydrostatic
+          wave-flow model.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 9.01a
     - categories: physics, astronomy
       defaultVersionName: 1.2.2_py36
       description: NaMaster is a C library, Python module and standalone program to
@@ -3936,19 +3933,35 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.3.0_py39
-    - categories: physics, cliemate modeling
-      defaultVersionName: '2022.01'
-      description: FRE-NCtools is a collection of tools to help with the creation
-        and manipulation of netCDF files used for climate modeling.
-      package: fre-nctools
-      url: https://github.com/NOAA-GFDL/FRE-NCtools
+    - categories: physics, photonics
+      defaultVersionName: 1.11.1
+      description: MPB is a free software package for computing the band structures,
+        or dispersion relations, and electromagnetic modes of periodic dielectric
+        structures, on both serial and parallel computers.
+      package: mpb
+      url: https://github.com/stevengj/mpb
       versions:
-      - description: FRE-NCtools is a collection of tools to help with the creation
-          and manipulation of netCDF files used for climate modeling.
+      - description: MPB is a free software package for computing the band structures,
+          or dispersion relations, and electromagnetic modes of periodic dielectric
+          structures, on both serial and parallel computers.
         markedDefault: false
         properties:
           parallel: {mpi: 1}
-        versionName: '2022.01'
+        versionName: '1.5'
+      - description: MPB is a free software package for computing the band structures,
+          or dispersion relations, and electromagnetic modes of periodic dielectric
+          structures, on both serial and parallel computers.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.6.2
+      - description: MPB is a free software package for computing the band structures,
+          or dispersion relations, and electromagnetic modes of periodic dielectric
+          structures, on both serial and parallel computers.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.11.1
   - name: biology
     packages:
     - categories: biology, genomics
