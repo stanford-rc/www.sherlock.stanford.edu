@@ -411,6 +411,37 @@ To remove a package from your local R library, you can use the
 
 ### Examples
 
+#### Installing devtools
+
+[`devtools`][url_devtools] is a package that provides R functions that simplify 
+many common tasks. While its core functionality revolves around package 
+development, `devtools` can also be used to install packages, particularly those 
+on GitHub.
+
+Installing `devtools` is somewhat memory-intensive and has several dependencies.
+The following example shows how to run an interactive dev session with 4 CPUs, 
+load the modules for the necessary dependencies, and install `devtools` for 
+R version 4.2.0.
+
+```none
+# Launch interactive dev session with 4 CPUs
+
+$ sh_dev -c 4
+
+# Load the required modules
+
+$ ml purge
+$ ml R/4.2.0
+$ ml system harfbuzz fribidi
+$ ml cmake libgit2
+$ ml openssl
+
+# Launch R and install devtools
+
+$ R
+> install.packages("devtools", repos = "http://cran.us.r-project.org", Ncpus=4)
+```
+
 #### Single node
 
 R has a couple of powerful and easy to use tools for parallelizing your R jobs.
@@ -686,6 +717,7 @@ which shows a decent speedup for running on a GPU for the largest matrix sizes.
 [url_r_docs]:           //stat.ethz.ch/R-manual/
 [url_s]:                /ect.bell-labs.com/sl/S/
 [url_heredoc]:          //en.wikipedia.org/wiki/Here_document
+[url_devtools]:         //cran.r-project.org/web/packages/devtools/index.html
 [url_doparallel]:       //cran.r-project.org/web/packages/doParallel/index.html
 [url_cran]:             //cran.r-project.org/
 [url_rmpi]:             //cran.r-project.org/web/packages/Rmpi
