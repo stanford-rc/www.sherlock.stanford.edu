@@ -665,7 +665,7 @@ restarts for 5 minutes, and so on, until it's properly `scancel`led.
 [url_partition]:/docs/glossary/#partition
 
 [url_sh_part]:  //news.sherlock.stanford.edu/posts/a-better-view-at-sherlock-s-resources
-[url_sh_dev]: /docs/user-guide/running-jobs/?h=sh_dev
+[url_sh_dev]: /docs/user-guide/running-jobs/#interactive-jobs
 [url_filemanager]: /docs/user-guide/ondemand/#managing-files
 [url_htop]: https://htop.dev/
 [url_nvtop]: /docs/user-guide/gpu/?query=nv_top#advanced-options
