@@ -15,7 +15,7 @@ the [Python documentation][url_python_docs].
 
 ## Python on Sherlock
 
-Sherlock features multiple versions of Python (currently `2.7` and `3.6`).
+Sherlock features [multiple versions][url_module_python] of Python.
 
 Some applications only work with legacy features of version 2.x, while more
 recent code will require specific version 3.x features.  [Modules on
@@ -121,7 +121,6 @@ provided on Sherlock:
 
 * [NumPy][url_numpy]
 * [SciPy][url_scipy]
-* [TensorFlow][url_tensorflow]
 
 Python modules on Sherlock generally follow the naming scheme below:
 
@@ -361,10 +360,10 @@ $ pip uninstall -r requirements.txt
 
 [url_numpy]:          /www.numpy.org/
 [url_scipy]:          //www.scipy.org/
-[url_tensorflow]:     //www.tensorflow.org
 [url_httpie]:         //httpie.org/
 
 [url_modules]:        /docs/software/list
+[url_module_python]:  /docs/software/list/#python
 [url_module_numpy]:   /docs/software/list/#py-numpy
 [url_module_scipy]:   /docs/software/list/#py-scipy
 [url_module_tensorflow]:  /docs/software/list/#py-tensorflow
