@@ -20,7 +20,7 @@ jobs:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - name: checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: setup python
         uses: actions/setup-python@v4
         with:
@@ -40,10 +40,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: list changed yaml files
         id: changedfiles
-        uses: tj-actions/changed-files@v37
+        uses: tj-actions/changed-files@v38
         with:
           files: |
             **.yml
@@ -60,10 +60,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: list changed markdown files
         id: changedfiles
-        uses: tj-actions/changed-files@v37
+        uses: tj-actions/changed-files@v38
         with:
           files: '**.md'
       - name: lint markdown files
@@ -78,24 +78,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: list changed markdown files
         id: changedfiles
-        uses: tj-actions/changed-files@v37
+        uses: tj-actions/changed-files@v38
         with:
           files: '**.md'
       - uses: rojopolis/spellcheck-github-actions@0.33.1
-        #if: steps.changedfiles.outputs.any_changed == 'true'
+        if: steps.changedfiles.outputs.any_changed == 'true'
         with:
           source_files: ${{ steps.changedfiles.outputs.all_changed_files }}
           config_path: .github/workflows/config/spellcheck.yml
           task_name: markdown
-          output_file: spellcheck-output.txt
 
 
 #  linkcheck: # -------------------------------------------------------------
 #    runs-on: ubuntu-20.04
 #    steps:
-#      - uses: actions/checkout@v3
+#      - uses: actions/checkout@v4
 
 

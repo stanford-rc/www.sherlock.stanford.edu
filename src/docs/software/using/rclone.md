@@ -3,7 +3,7 @@
 If you need to sync files between cloud storage to Sherlock,
 [rclone][url_rclone] is a command line program that can help. You can easily
 use it to transfer files from a cloud storage provider to Sherlock, or vice
-versa.  The following tutorial is provided by a member of the Stanford
+versa. The following tutorial is provided by a member of the Stanford
 community, and walks through transferring files from Box to Sherlock on a Mac.
 
 ## Setup
@@ -220,7 +220,7 @@ Paste the following into your remote machine --->
 (---End paste
 ```
 
-You need to copy *the entire thing* between the two brackets "{}" back into the first
+You need to copy _the entire thing_ between the two brackets "{}" back into the first
 terminal running on Sherlock, which will be showing this:
 
 ``` shell

@@ -37,8 +37,8 @@ environments, and even less on HPC clusters. Specifically:
 * Docker uses cgroups to isolate containers, as does the Slurm scheduler, which
   uses cgroups to allocate resources to jobs and enforce limits. Those uses are
   unfortunately conflicting.
-* but most importantly, *allowing users to run Docker containers will give
-  them* `root` *privileges* inside that container, which will in turn let them
+* but most importantly, _allowing users to run Docker containers will give
+  them_ `root` _privileges_ inside that container, which will in turn let them
   access any of the clusters' filesystems as `root`. This opens the door to
   user impersonation, inappropriate file tampering or stealing, and is
   obviously not something that can be allowed on a shared resource.

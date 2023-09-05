@@ -48,14 +48,14 @@ different scientific communities, we will consider install it globally as
 resources permit[^install_req].
 
 
-## Lab-provided software
+## Contributed software
 
-PI groups and Labs can share their software installations and modules with the
-whole Sherlock community of users, and let everyone benefit from their tuning
+PI groups and labs can share their software installations and modules with the
+whole Sherlock user community, and let everyone benefit from their tuning
 efforts and software developments.
 
-Lab-provided software is supported and maintained by each lab, and contact
-information is usually provided in the [lab category module][url_modules_lab].
+Contributed software is supported and maintained by each lab, and contact
+information is usually provided in the [`contribs` module][url_modules_contrib].
 See the [Modules][url_modules] page for more information about using software
 modules on Sherlock.
 
@@ -72,7 +72,7 @@ group on Sherlock, please [let us know][url_contact], and we'll get in touch.
 [url_list]:           /docs/software/list
 [url_modules]:        /docs/software/modules
 [url_modules_custom]: /docs/software/modules#custom-modules
-[url_modules_lab]:    /docs/software/modules#lab-provided-software
+[url_modules_contrib]: /docs/software/modules#contributed-software
 
 
 [comment]: #  (footnotes -----------------------------------------------------)

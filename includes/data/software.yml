@@ -325,15 +325,16 @@ software_modules:
       versions:
       - {description: GNU Midnight Commander is a visual file manager., markedDefault: false,
         versionName: 4.8.29}
-    - categories: system, libs
-      defaultVersionName: 1.8.2
-      description: Libgcrypt is a general purpose cryptographic library originally
-        based on code from GnuPG.
-      package: libgcrypt
-      url: https://www.gnupg.org/software/libgcrypt
+    - categories: system, compression
+      defaultVersionName: 1.5.2
+      description: Zstandard, or zstd, is a fast lossless compression algorithm, targeting
+        real-time compression scenarios at zlib-level and better compression ratios.
+      package: zstd
+      url: https://github.com/facebook/zstd
       versions:
-      - {description: Libgcrypt is a general purpose cryptographic library originally
-          based on code from GnuPG., markedDefault: false, versionName: 1.8.2}
+      - {description: 'Zstandard, or zstd, is a fast lossless compression algorithm,
+          targeting real-time compression scenarios at zlib-level and better compression
+          ratios.', markedDefault: false, versionName: 1.5.2}
     - categories: system, tools
       defaultVersionName: 2.2.3
       description: Expat is a stream-oriented XML parser library written in C.
@@ -342,16 +343,16 @@ software_modules:
       versions:
       - {description: Expat is a stream-oriented XML parser library written in C.,
         markedDefault: false, versionName: 2.2.3}
-    - categories: system, scm
-      defaultVersionName: 1.12.2
-      description: Subversion is an open source version control system.
-      package: subversion
-      url: https://subversion.apache.org/
+    - categories: system, libs
+      defaultVersionName: 2.3.3
+      description: The libseccomp library provides an easy to use, platform independent,
+        interface to the Linux Kernel's syscall filtering mechanism..
+      package: libseccomp
+      url: https://github.com/seccomp/libseccomp
       versions:
-      - {description: Subversion is an open source version control system., markedDefault: false,
-        versionName: 1.9.7}
-      - {description: Subversion is an open source version control system., markedDefault: false,
-        versionName: 1.12.2}
+      - {description: 'The libseccomp library provides an easy to use, platform independent,
+          interface to the Linux Kernel''s syscall filtering mechanism..', markedDefault: false,
+        versionName: 2.3.3}
     - categories: system, document management
       defaultVersionName: 2.7.3
       description: Pandoc is a universal document converter.
@@ -492,22 +493,25 @@ software_modules:
       - {description: OpenJPEG is an open-source JPEG 2000 codec written in C language.,
         markedDefault: false, versionName: 2.3.1}
     - categories: system, libs
-      defaultVersionName: 2.61.2
-      description: libsoup is an HTTP client/server library for GNOME.
-      package: libsoup
-      url: https://wiki.gnome.org/LibSoup
+      defaultVersionName: 5.1.4
+      description: GIFLIB is a package of portable tools and library routines for
+        working with GIF images.
+      package: giflib
+      url: http://giflib.sourceforge.net/
       versions:
-      - {description: libsoup is an HTTP client/server library for GNOME., markedDefault: false,
-        versionName: 2.61.2}
-    - categories: system, libs
-      defaultVersionName: 1.38.1
-      description: libuv is a multi-platform support library with a focus on asynchronous
-        I/O.
-      package: libuv
-      url: https://github.com/libuv/libuv
+      - {description: GIFLIB is a package of portable tools and library routines for
+          working with GIF images., markedDefault: false, versionName: 5.1.4}
+    - categories: system, tools
+      defaultVersionName: 1.9.0_py39
+      description: ClusterShell is an event-driven open source Python library, designed
+        to run local or distant commands in parallel on server farms or on large Linux
+        clusters.
+      package: py-clustershell
+      url: https://cea-hpc.github.io/clustershell
       versions:
-      - {description: libuv is a multi-platform support library with a focus on asynchronous
-          I/O., markedDefault: false, versionName: 1.38.1}
+      - {description: 'ClusterShell is an event-driven open source Python library,
+          designed to run local or distant commands in parallel on server farms or
+          on large Linux clusters.', markedDefault: false, versionName: 1.9.0_py39}
     - categories: system, libs
       defaultVersionName: 1.14.10
       description: Cairo is a 2D graphics library with support for multiple output
@@ -605,14 +609,14 @@ software_modules:
       versions:
       - {description: GD is an open source code library for the dynamic creation of
           images by programmers., markedDefault: false, versionName: 2.2.5}
-    - categories: system, tools
-      defaultVersionName: '1.6'
-      description: jq is a lightweight and flexible command-line JSON processor.
-      package: jq
-      url: https://stedolan.github.io/jq/
+    - categories: system, libs
+      defaultVersionName: 2.13.1
+      description: C library for encoding, decoding and manipulating JSON data.
+      package: jansson
+      url: https://github.com/akheron/jansson
       versions:
-      - {description: jq is a lightweight and flexible command-line JSON processor.,
-        markedDefault: false, versionName: '1.6'}
+      - {description: 'C library for encoding, decoding and manipulating JSON data.',
+        markedDefault: false, versionName: 2.13.1}
     - categories: system, libs
       defaultVersionName: '8.40'
       description: The PCRE library is a set of functions that implement regular expression
@@ -667,14 +671,14 @@ software_modules:
       - {description: 'FFmpeg is the leading multimedia framework, able to decode,
           encode, transcode, mux, demux, stream, filter and play pretty much anything
           that humans and machines have created.', markedDefault: false, versionName: '5.0'}
-    - categories: system, libs
-      defaultVersionName: 0.3.5
-      description: C++ implementation of the Google logging module.
-      package: glog
-      url: https://github.com/google/glog
+    - categories: system, tools
+      defaultVersionName: 1.7.4
+      description: Simple password manager using gpg and ordinary unix directories.
+      package: password-store
+      url: https://www.passwordstore.org/
       versions:
-      - {description: C++ implementation of the Google logging module., markedDefault: false,
-        versionName: 0.3.5}
+      - {description: Simple password manager using gpg and ordinary unix directories.,
+        markedDefault: false, versionName: 1.7.4}
     - categories: system, tools
       defaultVersionName: 7.81.0
       description: curl is an open source command line tool and library for transferring
@@ -1021,6 +1025,25 @@ software_modules:
       versions:
       - {description: LZ4 is lossless compression algorithm., markedDefault: false,
         versionName: 1.8.0}
+    - categories: system, compression
+      defaultVersionName: '16.02'
+      description: p7zip is a Linux port of 7zip, a file archiver with high compression
+        ratio.
+      package: p7zip
+      url: https://sourceforge.net/projects/p7zip/
+      versions:
+      - {description: 'p7zip is a Linux port of 7zip, a file archiver with high compression
+          ratio.', markedDefault: false, versionName: '16.02'}
+    - categories: system, scm
+      defaultVersionName: 1.12.2
+      description: Subversion is an open source version control system.
+      package: subversion
+      url: https://subversion.apache.org/
+      versions:
+      - {description: Subversion is an open source version control system., markedDefault: false,
+        versionName: 1.9.7}
+      - {description: Subversion is an open source version control system., markedDefault: false,
+        versionName: 1.12.2}
     - categories: system, lib
       defaultVersionName: 1.7.7
       description: Scalable I/O library for parallel access to task-local files.
@@ -1032,21 +1055,14 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 1.7.7
-    - categories: system, tools
-      defaultVersionName: 2.2.18.04.06
-      description: clinfo is a simple command-line application that enumerates all
-        possible (known) properties of the OpenCL platform and devices available on
-        the system.
-      package: clinfo
-      url: https://github.com/Oblomov/clinfo
+    - categories: system, libs
+      defaultVersionName: 0.3.5
+      description: C++ implementation of the Google logging module.
+      package: glog
+      url: https://github.com/google/glog
       versions:
-      - description: clinfo is a simple command-line application that enumerates all
-          possible (known) properties of the OpenCL platform and devices available
-          on the system.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.2.18.04.06
+      - {description: C++ implementation of the Google logging module., markedDefault: false,
+        versionName: 0.3.5}
     - categories: system, libs
       defaultVersionName: 1.6.3
       description: The Apache Portable Runtime is a supporting library for the Apache
@@ -1074,14 +1090,6 @@ software_modules:
       versions:
       - {description: Remora is a tool to monitor runtime resource utilization., markedDefault: false,
         versionName: 1.8.5}
-    - categories: system, tools
-      defaultVersionName: 1.7.4
-      description: Simple password manager using gpg and ordinary unix directories.
-      package: password-store
-      url: https://www.passwordstore.org/
-      versions:
-      - {description: Simple password manager using gpg and ordinary unix directories.,
-        markedDefault: false, versionName: 1.7.4}
     - categories: system, libs
       defaultVersionName: 1.4.4
       description: JSON-GLib is a library providing serialization and deserialization
@@ -1093,25 +1101,6 @@ software_modules:
       - {description: JSON-GLib is a library providing serialization and deserialization
           support for the JavaScript Object Notation (JSON) format described by RFC
           4627., markedDefault: false, versionName: 1.4.4}
-    - categories: system, file transfer
-      defaultVersionName: 3.2.1_py39
-      description: HTTPie is a command-line HTTP client designed for testing, debugging,
-        and generally interacting with APIs and HTTP servers.
-      package: py-httpie
-      url: https://httpie.io/
-      versions:
-      - {description: 'HTTPie is a command-line HTTP client designed for testing,
-          debugging, and generally interacting with APIs and HTTP servers.', markedDefault: false,
-        versionName: 3.2.1_py39}
-    - categories: system, libs
-      defaultVersionName: 2.36.8
-      description: The GdkPixbuf library provides facilities for loading images in
-        a variety of file formats.
-      package: gdk-pixbuf
-      url: https://git.gnome.org/browse/gdk-pixbuf
-      versions:
-      - {description: The GdkPixbuf library provides facilities for loading images
-          in a variety of file formats., markedDefault: false, versionName: 2.36.8}
     - categories: system, language
       defaultVersionName: 8.6.6
       description: Tcl (Tool Command Language) is a dynamic programming language,
@@ -1123,21 +1112,16 @@ software_modules:
       - {description: 'Tcl (Tool Command Language) is a dynamic programming language,
           suitable for web and desktop applications, networking, administration, testing.
           Tk is a graphical user interface toolkit.', markedDefault: false, versionName: 8.6.6}
-    - categories: system, libs
-      defaultVersionName: '1.16'
-      description: Library for parsing command line options.
-      package: popt
-      url: http://rpm5.org/files/popt
+    - categories: system, file transfer
+      defaultVersionName: 3.2.1_py39
+      description: HTTPie is a command-line HTTP client designed for testing, debugging,
+        and generally interacting with APIs and HTTP servers.
+      package: py-httpie
+      url: https://httpie.io/
       versions:
-      - {description: Library for parsing command line options., markedDefault: false,
-        versionName: '1.16'}
-    - categories: system, hardware
-      defaultVersionName: '0.16'
-      description: Generic PCI access library.
-      package: libpciaccess
-      url: https://gitlab.freedesktop.org/xorg/lib/libpciaccess
-      versions:
-      - {description: Generic PCI access library., markedDefault: false, versionName: '0.16'}
+      - {description: 'HTTPie is a command-line HTTP client designed for testing,
+          debugging, and generally interacting with APIs and HTTP servers.', markedDefault: false,
+        versionName: 3.2.1_py39}
     - categories: system, libs
       defaultVersionName: 0.6.21
       description: A library for parsing, editing, and saving EXIF data.
@@ -1156,6 +1140,21 @@ software_modules:
       - {description: WebP is a modern image format that provides superior lossless
           and lossy compression for images on the web., markedDefault: false, versionName: 0.6.1}
     - categories: system, libs
+      defaultVersionName: '1.16'
+      description: Library for parsing command line options.
+      package: popt
+      url: http://rpm5.org/files/popt
+      versions:
+      - {description: Library for parsing command line options., markedDefault: false,
+        versionName: '1.16'}
+    - categories: system, hardware
+      defaultVersionName: '0.16'
+      description: Generic PCI access library.
+      package: libpciaccess
+      url: https://gitlab.freedesktop.org/xorg/lib/libpciaccess
+      versions:
+      - {description: Generic PCI access library., markedDefault: false, versionName: '0.16'}
+    - categories: system, libs
       defaultVersionName: 1.52.1
       description: GObject introspection is a middleware layer between C libraries
         (using GObject) and language bindings.
@@ -1164,6 +1163,14 @@ software_modules:
       versions:
       - {description: GObject introspection is a middleware layer between C libraries
           (using GObject) and language bindings., markedDefault: false, versionName: 1.52.1}
+    - categories: system, libs
+      defaultVersionName: 2.9.91
+      description: GConf is a system for storing application preferences.
+      package: gconf
+      url: https://projects.gnome.org/gconf
+      versions:
+      - {description: GConf is a system for storing application preferences., markedDefault: false,
+        versionName: 2.9.91}
     - categories: system, compression
       defaultVersionName: 1.1.12
       description: PBZIP2 is a parallel implementation of the bzip2 block-sorting
@@ -1176,6 +1183,14 @@ software_modules:
           file compressor that uses pthreads and achieves near-linear speedup on SMP
           machines., markedDefault: false, versionName: 1.1.12}
     - categories: system, tools
+      defaultVersionName: '1.6'
+      description: jq is a lightweight and flexible command-line JSON processor.
+      package: jq
+      url: https://stedolan.github.io/jq/
+      versions:
+      - {description: jq is a lightweight and flexible command-line JSON processor.,
+        markedDefault: false, versionName: '1.6'}
+    - categories: system, tools
       defaultVersionName: 7.0.7-2
       description: ImageMagick is a free and open-source software suite for displaying,
         converting, and editing raster image and vector image files.
@@ -1186,21 +1201,23 @@ software_modules:
           converting, and editing raster image and vector image files.', markedDefault: false,
         versionName: 7.0.7-2}
     - categories: system, file management
-      defaultVersionName: 0.9.3
-      description: fpart sorts files and packs them into partitions.
-      package: fpart
-      url: https://github.com/martymac/fpart
+      defaultVersionName: 2.8.0
+      description: rmlint finds space waste and other broken things on your filesystem
+        and offers to remove it.
+      package: rmlint
+      url: https://rmlint.readthedocs.io/
       versions:
-      - {description: fpart sorts files and packs them into partitions., markedDefault: false,
-        versionName: 0.9.3}
+      - {description: rmlint finds space waste and other broken things on your filesystem
+          and offers to remove it., markedDefault: false, versionName: 2.8.0}
     - categories: system, libs
-      defaultVersionName: 2.9.91
-      description: GConf is a system for storing application preferences.
-      package: gconf
-      url: https://projects.gnome.org/gconf
+      defaultVersionName: 1.38.1
+      description: libuv is a multi-platform support library with a focus on asynchronous
+        I/O.
+      package: libuv
+      url: https://github.com/libuv/libuv
       versions:
-      - {description: GConf is a system for storing application preferences., markedDefault: false,
-        versionName: 2.9.91}
+      - {description: libuv is a multi-platform support library with a focus on asynchronous
+          I/O., markedDefault: false, versionName: 1.38.1}
     - categories: system, scm
       defaultVersionName: 1.1.0
       description: libgit2 is a portable, pure C implementation of the Git core methods
@@ -1211,37 +1228,23 @@ software_modules:
       - {description: 'libgit2 is a portable, pure C implementation of the Git core
           methods provided as a re-entrant linkable library with a solid API', markedDefault: false,
         versionName: 1.1.0}
-    - categories: system, libs
-      defaultVersionName: 2.9.4
-      description: Libxml2 is a XML C parser and toolkit.
-      package: libxml2
-      url: http://xmlsoft.org/
-      versions:
-      - {description: Libxml2 is a XML C parser and toolkit., markedDefault: false,
-        versionName: 2.9.4}
-    - categories: system, libs
-      defaultVersionName: 1.6.29
-      description: libpng is the official PNG reference library. It supports almost
-        all PNG features, is extensible, and has been extensively tested for over
-        20 years.
-      package: libpng
-      url: http://libpng.sourceforge.net
-      versions:
-      - {description: 'libpng is the official PNG reference library. It supports almost
-          all PNG features, is extensible, and has been extensively tested for over
-          20 years.', markedDefault: false, versionName: 1.2.57}
-      - {description: 'libpng is the official PNG reference library. It supports almost
-          all PNG features, is extensible, and has been extensively tested for over
-          20 years.', markedDefault: false, versionName: 1.6.29}
     - categories: system, compression
-      defaultVersionName: 1.5.1
-      description: libzip is a C library for reading, creating, and modifying zip
-        archives.
-      package: libzip
-      url: http://libzip.org
+      defaultVersionName: '2.10'
+      description: LZO is a portable lossless data compression library written in
+        ANSI C.
+      package: lzo
+      url: http://www.oberhumer.com/opensource/lzo
       versions:
-      - {description: 'libzip is a C library for reading, creating, and modifying
-          zip archives.', markedDefault: false, versionName: 1.5.1}
+      - {description: LZO is a portable lossless data compression library written
+          in ANSI C., markedDefault: false, versionName: '2.10'}
+    - categories: system, file management
+      defaultVersionName: 0.9.3
+      description: fpart sorts files and packs them into partitions.
+      package: fpart
+      url: https://github.com/martymac/fpart
+      versions:
+      - {description: fpart sorts files and packs them into partitions., markedDefault: false,
+        versionName: 0.9.3}
     - categories: system, libs
       defaultVersionName: 2.52.3
       description: The GLib library provides core non-graphical functionality such
@@ -1254,21 +1257,49 @@ software_modules:
           such as high level data types, Unicode manipulation, and an object and type
           system to C programs.', markedDefault: false, versionName: 2.52.3}
     - categories: system, libs
+      defaultVersionName: 1.2.0
+      description: A microbenchmark support library
+      package: benchmark
+      url: https://github.com/google/benchmark
+      versions:
+      - {description: A microbenchmark support library, markedDefault: false, versionName: 1.2.0}
+    - categories: system, libs
       defaultVersionName: 1.0.3
       description: Portable uuid C library.
       package: libuuid
       url: https://sourceforge.net/projects/libuuid
       versions:
       - {description: Portable uuid C library., markedDefault: false, versionName: 1.0.3}
-    - categories: system, tools
-      defaultVersionName: 0.9.21
-      description: Symas LMDB is an extraordinarily fast, memory-efficient database
-        we developed for the Symas OpenLDAP Project.
-      package: lmdb
-      url: https://symas.com/lightning-memory-mapped-database/
+    - categories: system, cloud interface
+      defaultVersionName: 400.0.0
+      description: Command-line interface for Google Cloud Platform products and services.
+      package: google-cloud-sdk
+      url: https://cloud.google.com/sdk
       versions:
-      - {description: 'Symas LMDB is an extraordinarily fast, memory-efficient database
-          we developed for the Symas OpenLDAP Project.', markedDefault: false, versionName: 0.9.21}
+      - {description: Command-line interface for Google Cloud Platform products and
+          services., markedDefault: false, versionName: 338.0.0}
+      - {description: Command-line interface for Google Cloud Platform products and
+          services., markedDefault: false, versionName: 400.0.0}
+    - categories: system, libs
+      defaultVersionName: 0.8.14
+      description: The libIDL package contains libraries for Interface Definition
+        Language files. This is a specification for defining portable interfaces.
+      package: libidl
+      url: https://github.com/GNOME/libIDL
+      versions:
+      - {description: The libIDL package contains libraries for Interface Definition
+          Language files. This is a specification for defining portable interfaces.,
+        markedDefault: false, versionName: 0.8.14}
+    - categories: system, compiler
+      defaultVersionName: 1.3.3
+      description: MRC is a resource compiler that can create self-contained applications,
+        by including all the required data inside executable files.
+      package: mrc
+      url: https://github.com/mhekkel/mrc
+      versions:
+      - {description: 'MRC is a resource compiler that can create self-contained applications,
+          by including all the required data inside executable files.', markedDefault: false,
+        versionName: 1.3.3}
     - categories: system, libs
       defaultVersionName: 2.1.14
       description: talloc is a hierarchical, reference counted memory pool system
@@ -1278,24 +1309,6 @@ software_modules:
       versions:
       - {description: 'talloc is a hierarchical, reference counted memory pool system
           with destructors.', markedDefault: false, versionName: 2.1.14}
-    - categories: system, libs
-      defaultVersionName: 1.2.0
-      description: A microbenchmark support library
-      package: benchmark
-      url: https://github.com/google/benchmark
-      versions:
-      - {description: A microbenchmark support library, markedDefault: false, versionName: 1.2.0}
-    - categories: system, libs
-      defaultVersionName: 0.9.1
-      description: libxkbcommon is a keyboard keymap compiler and support library
-        which processes a reduced subset of keymaps as defined by the XKB (X Keyboard
-        Extension) specification.
-      package: libxkbcommon
-      url: https://github.com/xkbcommon/libxkbcommon
-      versions:
-      - {description: libxkbcommon is a keyboard keymap compiler and support library
-          which processes a reduced subset of keymaps as defined by the XKB (X Keyboard
-          Extension) specification., markedDefault: false, versionName: 0.9.1}
     - categories: system, compression
       defaultVersionName: '0.6'
       description: MPIBZIP2 is a parallel implementation of the bzip2 block-sorting
@@ -1330,17 +1343,16 @@ software_modules:
       versions:
       - {description: Data Version Control or DVC is an open-source tool for data
           science and machine learning projects., markedDefault: false, versionName: 0.91.1_py36}
-    - categories: system, benchmark
-      defaultVersionName: '3.2'
-      description: 'Heavy Peer To Peer: a MPI based benchmark for network diagnostic.'
-      package: hp2p
-      url: https://github.com/cea-hpc/hp2p
+    - categories: system, scm
+      defaultVersionName: 2.0.696
+      description: Secure, cross-platform Git credential storage with authentication
+        to GitHub, Azure Repos, and other popular Git hosting services.
+      package: git-credential-manager
+      url: https://github.com/GitCredentialManager/git-credential-manager
       versions:
-      - description: 'Heavy Peer To Peer: a MPI based benchmark for network diagnostic.'
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: '3.2'
+      - {description: 'Secure, cross-platform Git credential storage with authentication
+          to GitHub, Azure Repos, and other popular Git hosting services.', markedDefault: false,
+        versionName: 2.0.696}
     - categories: system, job management
       defaultVersionName: 1.1.2
       description: DRMAA for Slurm Workload Manager (Slurm) is an implementation of
@@ -1353,26 +1365,6 @@ software_modules:
           of Open Grid Forum Distributed Resource Management Application API (DRMAA)
           version 1 for submission and control of jobs to Slurm., markedDefault: false,
         versionName: 1.1.2}
-    - categories: system, compiler
-      defaultVersionName: 1.3.3
-      description: MRC is a resource compiler that can create self-contained applications,
-        by including all the required data inside executable files.
-      package: mrc
-      url: https://github.com/mhekkel/mrc
-      versions:
-      - {description: 'MRC is a resource compiler that can create self-contained applications,
-          by including all the required data inside executable files.', markedDefault: false,
-        versionName: 1.3.3}
-    - categories: system, compression
-      defaultVersionName: 1.5.2
-      description: Zstandard, or zstd, is a fast lossless compression algorithm, targeting
-        real-time compression scenarios at zlib-level and better compression ratios.
-      package: zstd
-      url: https://github.com/facebook/zstd
-      versions:
-      - {description: 'Zstandard, or zstd, is a fast lossless compression algorithm,
-          targeting real-time compression scenarios at zlib-level and better compression
-          ratios.', markedDefault: false, versionName: 1.5.2}
     - categories: system, libs
       defaultVersionName: 1.12.0
       description: GStreamer is a library for constructing graphs of media-handling
@@ -1383,15 +1375,29 @@ software_modules:
       - {description: GStreamer is a library for constructing graphs of media-handling
           components., markedDefault: false, versionName: 1.12.0}
     - categories: system, libs
-      defaultVersionName: 2.3.3
-      description: The libseccomp library provides an easy to use, platform independent,
-        interface to the Linux Kernel's syscall filtering mechanism..
-      package: libseccomp
-      url: https://github.com/seccomp/libseccomp
+      defaultVersionName: 0.3.111
+      description: libaio provides the Linux-native API for async I/O.
+      package: libaio
+      url: https://pagure.io/libaio
       versions:
-      - {description: 'The libseccomp library provides an easy to use, platform independent,
-          interface to the Linux Kernel''s syscall filtering mechanism..', markedDefault: false,
-        versionName: 2.3.3}
+      - {description: libaio provides the Linux-native API for async I/O., markedDefault: false,
+        versionName: 0.3.111}
+    - categories: system, libs
+      defaultVersionName: 2.9.4
+      description: Libxml2 is a XML C parser and toolkit.
+      package: libxml2
+      url: http://xmlsoft.org/
+      versions:
+      - {description: Libxml2 is a XML C parser and toolkit., markedDefault: false,
+        versionName: 2.9.4}
+    - categories: system, libs
+      defaultVersionName: 2.61.2
+      description: libsoup is an HTTP client/server library for GNOME.
+      package: libsoup
+      url: https://wiki.gnome.org/LibSoup
+      versions:
+      - {description: libsoup is an HTTP client/server library for GNOME., markedDefault: false,
+        versionName: 2.61.2}
     - categories: system, libs
       defaultVersionName: 2.0.3
       description: THE reference library for reading, displaying, writing and examining
@@ -1412,13 +1418,16 @@ software_modules:
       - {description: tdu estimates the disk space occupied by all files in a given
           path., markedDefault: false, versionName: '1.36'}
     - categories: system, libs
-      defaultVersionName: 0.3.111
-      description: libaio provides the Linux-native API for async I/O.
-      package: libaio
-      url: https://pagure.io/libaio
+      defaultVersionName: 2.24.0
+      description: ATK is the Accessibility Toolkit. It provides a set of generic
+        interfaces allowing accessibility technologies such as screen readers to interact
+        with a graphical user interface.
+      package: atk
+      url: https://developer.gnome.org/atk
       versions:
-      - {description: libaio provides the Linux-native API for async I/O., markedDefault: false,
-        versionName: 0.3.111}
+      - {description: ATK is the Accessibility Toolkit. It provides a set of generic
+          interfaces allowing accessibility technologies such as screen readers to
+          interact with a graphical user interface., markedDefault: false, versionName: 2.24.0}
     - categories: system, compression
       defaultVersionName: 1.2.11
       description: zlib is designed to be a free, general-purpose, legally unencumbered
@@ -1464,14 +1473,6 @@ software_modules:
       - {description: C-based implementation of the GDI+ API, markedDefault: false,
         versionName: '5.6'}
     - categories: system, tools
-      defaultVersionName: 1.3.26
-      description: GraphicsMagick is the swiss army knife of image processing.
-      package: graphicsmagick
-      url: http://www.graphicsmagick.org/
-      versions:
-      - {description: GraphicsMagick is the swiss army knife of image processing.,
-        markedDefault: false, versionName: 1.3.26}
-    - categories: system, tools
       defaultVersionName: 11.0.1
       description: ripgrep recursively searches directories for a regex pattern.
       package: ripgrep
@@ -1479,6 +1480,15 @@ software_modules:
       versions:
       - {description: ripgrep recursively searches directories for a regex pattern.,
         markedDefault: false, versionName: 11.0.1}
+    - categories: system, libs
+      defaultVersionName: 1.2.0
+      description: libglvnd is a vendor-neutral dispatch layer for arbitrating OpenGL
+        API calls between multiple vendors.
+      package: libglvnd
+      url: https://github.com/NVIDIA/libglvnd
+      versions:
+      - {description: libglvnd is a vendor-neutral dispatch layer for arbitrating
+          OpenGL API calls between multiple vendors., markedDefault: false, versionName: 1.2.0}
     - categories: system, libs
       defaultVersionName: 0.6.13
       description: Libcroco is a standalone css2 parsing and manipulation library.
@@ -1498,14 +1508,14 @@ software_modules:
           SSL, TLS and DTLS protocols and technologies around them.', markedDefault: false,
         versionName: 3.5.9}
     - categories: system, libs
-      defaultVersionName: 1.2.0
-      description: libglvnd is a vendor-neutral dispatch layer for arbitrating OpenGL
-        API calls between multiple vendors.
-      package: libglvnd
-      url: https://github.com/NVIDIA/libglvnd
+      defaultVersionName: 2.36.8
+      description: The GdkPixbuf library provides facilities for loading images in
+        a variety of file formats.
+      package: gdk-pixbuf
+      url: https://git.gnome.org/browse/gdk-pixbuf
       versions:
-      - {description: libglvnd is a vendor-neutral dispatch layer for arbitrating
-          OpenGL API calls between multiple vendors., markedDefault: false, versionName: 1.2.0}
+      - {description: The GdkPixbuf library provides facilities for loading images
+          in a variety of file formats., markedDefault: false, versionName: 2.36.8}
     - categories: system, file management
       defaultVersionName: 2.2.1
       description: FDUPES is a program for identifying or deleting duplicate files
@@ -1546,6 +1556,22 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: '2.0'
+    - categories: system, libs
+      defaultVersionName: 1.6.2
+      description: Hunspell is a spell checker.
+      package: hunspell
+      url: https://hunspell.github.io/
+      versions:
+      - {description: Hunspell is a spell checker., markedDefault: false, versionName: 1.6.2}
+    - categories: system, tools
+      defaultVersionName: '7.7'
+      description: The X.Org project provides an open source implementation of the
+        X Window System.
+      package: x11
+      url: https://www.x.org
+      versions:
+      - {description: The X.Org project provides an open source implementation of
+          the X Window System., markedDefault: false, versionName: '7.7'}
     - categories: system, benchmark
       defaultVersionName: '29.4'
       description: mprime is used by GIMPS, a distributed computing project dedicated
@@ -1568,22 +1594,6 @@ software_modules:
       - {description: DMTCP (Distributed MultiThreaded Checkpointing) transparently
           checkpoints a single-host or distributed computation in user-space -- with
           no modifications to user code or to the O/S., markedDefault: false, versionName: 2.6.0}
-    - categories: system, libs
-      defaultVersionName: 1.6.2
-      description: Hunspell is a spell checker.
-      package: hunspell
-      url: https://hunspell.github.io/
-      versions:
-      - {description: Hunspell is a spell checker., markedDefault: false, versionName: 1.6.2}
-    - categories: system, tools
-      defaultVersionName: '7.7'
-      description: The X.Org project provides an open source implementation of the
-        X Window System.
-      package: x11
-      url: https://www.x.org
-      versions:
-      - {description: The X.Org project provides an open source implementation of
-          the X Window System., markedDefault: false, versionName: '7.7'}
     - categories: system, libs
       defaultVersionName: 4.0.8
       description: libtiff provides support for the Tag Image File Format (TIFF),
@@ -1608,14 +1618,6 @@ software_modules:
           number of network protocols (ftp, http, sftp, fish, torrent).', markedDefault: false,
         versionName: 4.8.1}
     - categories: system, libs
-      defaultVersionName: 2.3.21
-      description: Libart is a library for high-performance 2D graphics.
-      package: libart_lgpl
-      url: https://gitlab.gnome.org/Archive/libart_lgpl
-      versions:
-      - {description: Libart is a library for high-performance 2D graphics., markedDefault: false,
-        versionName: 2.3.21}
-    - categories: system, libs
       defaultVersionName: 1.82.0
       description: Leptonica is an open source library containing software that is
         broadly useful for image processing and image analysis applications.
@@ -1625,6 +1627,14 @@ software_modules:
       - {description: Leptonica is an open source library containing software that
           is broadly useful for image processing and image analysis applications.,
         markedDefault: false, versionName: 1.82.0}
+    - categories: system, libs
+      defaultVersionName: 2.3.21
+      description: Libart is a library for high-performance 2D graphics.
+      package: libart_lgpl
+      url: https://gitlab.gnome.org/Archive/libart_lgpl
+      versions:
+      - {description: Libart is a library for high-performance 2D graphics., markedDefault: false,
+        versionName: 2.3.21}
     - categories: system, media
       defaultVersionName: 1.0.28
       description: Libsndfile is a C library for reading and writing files containing
@@ -1858,16 +1868,14 @@ software_modules:
           to and from: Google Drive, Amazon S3, Dropbox, Google Cloud Storage, Amazon
           Drive, Microsoft One Drive, Hubic, Backblaze B2, Yandex Disk, or the local
           filesystem.', markedDefault: false, versionName: 1.59.1}
-    - categories: system, libs
-      defaultVersionName: 0.8.14
-      description: The libIDL package contains libraries for Interface Definition
-        Language files. This is a specification for defining portable interfaces.
-      package: libidl
-      url: https://github.com/GNOME/libIDL
+    - categories: system, tools
+      defaultVersionName: 1.3.26
+      description: GraphicsMagick is the swiss army knife of image processing.
+      package: graphicsmagick
+      url: http://www.graphicsmagick.org/
       versions:
-      - {description: The libIDL package contains libraries for Interface Definition
-          Language files. This is a specification for defining portable interfaces.,
-        markedDefault: false, versionName: 0.8.14}
+      - {description: GraphicsMagick is the swiss army knife of image processing.,
+        markedDefault: false, versionName: 1.3.26}
     - categories: system, libs
       defaultVersionName: 3.0.7
       description: OpenSSL is a full-featured toolkit for general-purpose cryptography
@@ -1878,16 +1886,14 @@ software_modules:
       - {description: OpenSSL is a full-featured toolkit for general-purpose cryptography
           and secure communication., markedDefault: false, versionName: 3.0.7}
     - categories: system, libs
-      defaultVersionName: 2.24.0
-      description: ATK is the Accessibility Toolkit. It provides a set of generic
-        interfaces allowing accessibility technologies such as screen readers to interact
-        with a graphical user interface.
-      package: atk
-      url: https://developer.gnome.org/atk
+      defaultVersionName: 1.8.2
+      description: Libgcrypt is a general purpose cryptographic library originally
+        based on code from GnuPG.
+      package: libgcrypt
+      url: https://www.gnupg.org/software/libgcrypt
       versions:
-      - {description: ATK is the Accessibility Toolkit. It provides a set of generic
-          interfaces allowing accessibility technologies such as screen readers to
-          interact with a graphical user interface., markedDefault: false, versionName: 2.24.0}
+      - {description: Libgcrypt is a general purpose cryptographic library originally
+          based on code from GnuPG., markedDefault: false, versionName: 1.8.2}
     - categories: system, tools
       defaultVersionName: 5.9.1
       description: QT is a cross-platform application framework that is used for developing
@@ -1924,14 +1930,14 @@ software_modules:
           based on the ECMA standards for C# and the Common Language Runtime., markedDefault: false,
         versionName: 5.20.1.19}
     - categories: system, compression
-      defaultVersionName: '2.10'
-      description: LZO is a portable lossless data compression library written in
-        ANSI C.
-      package: lzo
-      url: http://www.oberhumer.com/opensource/lzo
+      defaultVersionName: 1.5.1
+      description: libzip is a C library for reading, creating, and modifying zip
+        archives.
+      package: libzip
+      url: http://libzip.org
       versions:
-      - {description: LZO is a portable lossless data compression library written
-          in ANSI C., markedDefault: false, versionName: '2.10'}
+      - {description: 'libzip is a C library for reading, creating, and modifying
+          zip archives.', markedDefault: false, versionName: 1.5.1}
     - categories: system, containers
       defaultVersionName: 1.0.0rc2
       description: libnvidia-container is a library and a simple CLI utility to automatically
@@ -1945,16 +1951,17 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.0.0rc2
-    - categories: system, cloud interface
-      defaultVersionName: 400.0.0
-      description: Command-line interface for Google Cloud Platform products and services.
-      package: google-cloud-sdk
-      url: https://cloud.google.com/sdk
+    - categories: system, benchmark
+      defaultVersionName: '3.2'
+      description: 'Heavy Peer To Peer: a MPI based benchmark for network diagnostic.'
+      package: hp2p
+      url: https://github.com/cea-hpc/hp2p
       versions:
-      - {description: Command-line interface for Google Cloud Platform products and
-          services., markedDefault: false, versionName: 338.0.0}
-      - {description: Command-line interface for Google Cloud Platform products and
-          services., markedDefault: false, versionName: 400.0.0}
+      - description: 'Heavy Peer To Peer: a MPI based benchmark for network diagnostic.'
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '3.2'
     - categories: system, database
       defaultVersionName: '0.9998'
       description: ODBC driver for SQLite
@@ -1962,15 +1969,17 @@ software_modules:
       url: http://www.sqliteodbc.org/
       versions:
       - {description: ODBC driver for SQLite, markedDefault: false, versionName: '0.9998'}
-    - categories: system, cloud interface
-      defaultVersionName: 2.0.50
-      description: This package provides a unified command line interface to Amazon
-        Web Services.
-      package: aws-cli
-      url: https://github.com/aws/aws-cli
+    - categories: system, libs
+      defaultVersionName: 0.9.1
+      description: libxkbcommon is a keyboard keymap compiler and support library
+        which processes a reduced subset of keymaps as defined by the XKB (X Keyboard
+        Extension) specification.
+      package: libxkbcommon
+      url: https://github.com/xkbcommon/libxkbcommon
       versions:
-      - {description: This package provides a unified command line interface to Amazon
-          Web Services., markedDefault: false, versionName: 2.0.50}
+      - {description: libxkbcommon is a keyboard keymap compiler and support library
+          which processes a reduced subset of keymaps as defined by the XKB (X Keyboard
+          Extension) specification., markedDefault: false, versionName: 0.9.1}
     - categories: system, libs
       defaultVersionName: 0.9.7
       description: Libunistring provides functions for manipulating Unicode strings
@@ -1991,34 +2000,40 @@ software_modules:
       - {description: Ghostscript is an interpreter for the PostScript language and
           PDF files., markedDefault: false, versionName: 9.53.2}
     - categories: system, libs
-      defaultVersionName: 5.1.4
-      description: GIFLIB is a package of portable tools and library routines for
-        working with GIF images.
-      package: giflib
-      url: http://giflib.sourceforge.net/
+      defaultVersionName: 1.6.29
+      description: libpng is the official PNG reference library. It supports almost
+        all PNG features, is extensible, and has been extensively tested for over
+        20 years.
+      package: libpng
+      url: http://libpng.sourceforge.net
       versions:
-      - {description: GIFLIB is a package of portable tools and library routines for
-          working with GIF images., markedDefault: false, versionName: 5.1.4}
-    - categories: system, tools
-      defaultVersionName: 1.9.0_py39
-      description: ClusterShell is an event-driven open source Python library, designed
-        to run local or distant commands in parallel on server farms or on large Linux
-        clusters.
-      package: py-clustershell
-      url: https://cea-hpc.github.io/clustershell
+      - {description: 'libpng is the official PNG reference library. It supports almost
+          all PNG features, is extensible, and has been extensively tested for over
+          20 years.', markedDefault: false, versionName: 1.2.57}
+      - {description: 'libpng is the official PNG reference library. It supports almost
+          all PNG features, is extensible, and has been extensively tested for over
+          20 years.', markedDefault: false, versionName: 1.6.29}
+    - categories: system, cloud interface
+      defaultVersionName: 2.0.50
+      description: This package provides a unified command line interface to Amazon
+        Web Services.
+      package: aws-cli
+      url: https://github.com/aws/aws-cli
       versions:
-      - {description: 'ClusterShell is an event-driven open source Python library,
-          designed to run local or distant commands in parallel on server farms or
-          on large Linux clusters.', markedDefault: false, versionName: 1.9.0_py39}
-    - categories: system, file management
-      defaultVersionName: 2.8.0
-      description: rmlint finds space waste and other broken things on your filesystem
-        and offers to remove it.
-      package: rmlint
-      url: https://rmlint.readthedocs.io/
+      - {description: This package provides a unified command line interface to Amazon
+          Web Services., markedDefault: false, versionName: 2.0.50}
+    - categories: system, document processing
+      defaultVersionName: 1.23.0
+      description: groff (GNU roff) is a typesetting system that reads plain text
+        input files that include formatting commands to produce output in PostScript,
+        PDF, HTML, or DVI formats or for display to a terminal.
+      package: groff
+      url: https://www.gnu.org/software/groff
       versions:
-      - {description: rmlint finds space waste and other broken things on your filesystem
-          and offers to remove it., markedDefault: false, versionName: 2.8.0}
+      - {description: 'groff (GNU roff) is a typesetting system that reads plain text
+          input files that include formatting commands to produce output in PostScript,
+          PDF, HTML, or DVI formats or for display to a terminal.', markedDefault: false,
+        versionName: 1.23.0}
     - categories: system, document processing
       defaultVersionName: 2.3.2
       description: LyX is a document processor.
@@ -2037,16 +2052,15 @@ software_modules:
       - {description: The Apache Portable Runtime is a supporting library for the
           Apache web server. It provides a set of APIs that map to the underlying
           operating system., markedDefault: false, versionName: 1.6.1}
-    - categories: system, scm
-      defaultVersionName: 2.0.696
-      description: Secure, cross-platform Git credential storage with authentication
-        to GitHub, Azure Repos, and other popular Git hosting services.
-      package: git-credential-manager
-      url: https://github.com/GitCredentialManager/git-credential-manager
+    - categories: system, tools
+      defaultVersionName: 0.9.21
+      description: Symas LMDB is an extraordinarily fast, memory-efficient database
+        we developed for the Symas OpenLDAP Project.
+      package: lmdb
+      url: https://symas.com/lightning-memory-mapped-database/
       versions:
-      - {description: 'Secure, cross-platform Git credential storage with authentication
-          to GitHub, Azure Repos, and other popular Git hosting services.', markedDefault: false,
-        versionName: 2.0.696}
+      - {description: 'Symas LMDB is an extraordinarily fast, memory-efficient database
+          we developed for the Symas OpenLDAP Project.', markedDefault: false, versionName: 0.9.21}
     - categories: system, libs
       defaultVersionName: 3.32.2_py36
       description: PyGObject is a Python package which provides bindings for GObject
@@ -2067,14 +2081,13 @@ software_modules:
       - {description: 'git-annex allows managing files with git, without checking
           the file contents into git.', markedDefault: false, versionName: '8.20210622'}
     - categories: system, libs
-      defaultVersionName: 2.14.19
-      description: ORBit2 is a CORBA 2.4-compliant Object Request Broker (ORB) featuring
-        mature C, C++ and Python bindings.
-      package: orbit
-      url: https://projects.gnome.org/ORBit2
+      defaultVersionName: '1.0'
+      description: Implementation of a minimal subset of the PMI1 and PMI2 specifications.
+      package: minipmi
+      url: https://github.com/kraused/minipmi
       versions:
-      - {description: 'ORBit2 is a CORBA 2.4-compliant Object Request Broker (ORB)
-          featuring mature C, C++ and Python bindings.', markedDefault: false, versionName: 2.14.19}
+      - {description: Implementation of a minimal subset of the PMI1 and PMI2 specifications.,
+        markedDefault: false, versionName: '1.0'}
     - categories: system, tools
       defaultVersionName: '20200731'
       description: Tools for working with Chromium development.
@@ -2084,13 +2097,14 @@ software_modules:
       - {description: Tools for working with Chromium development., markedDefault: false,
         versionName: '20200731'}
     - categories: system, libs
-      defaultVersionName: '1.0'
-      description: Implementation of a minimal subset of the PMI1 and PMI2 specifications.
-      package: minipmi
-      url: https://github.com/kraused/minipmi
+      defaultVersionName: 2.14.19
+      description: ORBit2 is a CORBA 2.4-compliant Object Request Broker (ORB) featuring
+        mature C, C++ and Python bindings.
+      package: orbit
+      url: https://projects.gnome.org/ORBit2
       versions:
-      - {description: Implementation of a minimal subset of the PMI1 and PMI2 specifications.,
-        markedDefault: false, versionName: '1.0'}
+      - {description: 'ORBit2 is a CORBA 2.4-compliant Object Request Broker (ORB)
+          featuring mature C, C++ and Python bindings.', markedDefault: false, versionName: 2.14.19}
     - categories: system, testing
       defaultVersionName: 7.1.3_py39
       description: 'pytest is a full-featured Python testing framework '
@@ -2099,15 +2113,21 @@ software_modules:
       versions:
       - {description: 'pytest is a full-featured Python testing framework ', markedDefault: false,
         versionName: 7.1.3_py39}
-    - categories: system, compression
-      defaultVersionName: '16.02'
-      description: p7zip is a Linux port of 7zip, a file archiver with high compression
-        ratio.
-      package: p7zip
-      url: https://sourceforge.net/projects/p7zip/
+    - categories: system, tools
+      defaultVersionName: 2.2.18.04.06
+      description: clinfo is a simple command-line application that enumerates all
+        possible (known) properties of the OpenCL platform and devices available on
+        the system.
+      package: clinfo
+      url: https://github.com/Oblomov/clinfo
       versions:
-      - {description: 'p7zip is a Linux port of 7zip, a file archiver with high compression
-          ratio.', markedDefault: false, versionName: '16.02'}
+      - description: clinfo is a simple command-line application that enumerates all
+          possible (known) properties of the OpenCL platform and devices available
+          on the system.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.2.18.04.06
     - categories: system, libs
       defaultVersionName: 3.2.1
       description: libffi is a portable Foreign Function Interface library.
@@ -2145,15 +2165,15 @@ software_modules:
       versions:
       - {description: Gmsh is an open source 3D finite element mesh generator with
           a built-in CAD engine and post-processor., markedDefault: false, versionName: 4.10.1}
-    - categories: math, numerical library
-      defaultVersionName: 2.0.8_py36
-      description: gmpy2 is a C-coded Python extension module that supports multiple-precision
-        arithmetic.
-      package: py-gmpy2
-      url: https://gmpy2.readthedocs.io/
+    - categories: math, deep learning
+      defaultVersionName: 0.15.1_py39
+      description: Datasets, model architectures, and common image transformations
+        for computer vision for PyTorch.
+      package: py-torchvision
+      url: http://pytorch.org/vision
       versions:
-      - {description: gmpy2 is a C-coded Python extension module that supports multiple-precision
-          arithmetic., markedDefault: false, versionName: 2.0.8_py36}
+      - {description: 'Datasets, model architectures, and common image transformations
+          for computer vision for PyTorch.', markedDefault: false, versionName: 0.15.1_py39}
     - categories: math, statistics
       defaultVersionName: 1.3.1093
       description: RStudio is an integrated development environment (IDE) for R. It
@@ -2245,16 +2265,22 @@ software_modules:
         markedDefault: false, versionName: 1.1.1_py36}
       - {description: SymPy is a Python library for symbolic mathematics., family: sympy,
         markedDefault: false, versionName: 1.11.1_py39}
-    - categories: math, statistics
-      defaultVersionName: 2.9.2_py36
-      description: rpy2 is an interface to R running embedded in a Python process.
-      package: py-rpy2
-      url: https://rpy2.bitbucket.io
+    - categories: math, scientific computing
+      defaultVersionName: 1.0_py27
+      description: 'The SciPy Stack is a collection of open source software for scientific
+        computing in Python. It provides the following packages: numpy, scipy, matplotlib,
+        ipython, jupyter, pandas, sympy and nose.'
+      package: py-scipystack
+      url: https://www.scipy.org
       versions:
-      - {description: rpy2 is an interface to R running embedded in a Python process.,
-        markedDefault: false, versionName: 2.8.6_py27}
-      - {description: rpy2 is an interface to R running embedded in a Python process.,
-        markedDefault: false, versionName: 2.9.2_py36}
+      - {description: 'The SciPy Stack is a collection of open source software for
+          scientific computing in Python. It provides the following packages: numpy,
+          scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
+        markedDefault: false, versionName: 1.0_py36}
+      - {description: 'The SciPy Stack is a collection of open source software for
+          scientific computing in Python. It provides the following packages: numpy,
+          scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
+        markedDefault: true, versionName: 1.0_py27}
     - categories: math, statistics
       defaultVersionName: '15'
       description: Stata is a complete, integrated statistical software package that
@@ -2538,6 +2564,15 @@ software_modules:
       versions:
       - {description: NLopt is a free/open-source library for nonlinear optimization.,
         markedDefault: false, versionName: 2.6.2}
+    - categories: math, numerical library
+      defaultVersionName: 3.18.5_py39
+      description: Python bindings for PETSc, the Portable, Extensible Toolkit for
+        Scientific Computation.
+      package: py-petsc4py
+      url: http://petsc.org
+      versions:
+      - {description: 'Python bindings for PETSc, the Portable, Extensible Toolkit
+          for Scientific Computation.', markedDefault: false, versionName: 3.18.5_py39}
     - categories: math, statistics
       defaultVersionName: '1.3'
       description: GNU datamash is a command-line program which performs basic numeric,
@@ -2584,15 +2619,17 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.6.3_py27
-    - categories: math, numerical library
-      defaultVersionName: 3.18.5_py39
-      description: Python bindings for PETSc, the Portable, Extensible Toolkit for
-        Scientific Computation.
-      package: py-petsc4py
-      url: http://petsc.org
+    - categories: math, technical computing
+      defaultVersionName: 13.1.0
+      description: A symbolic language and platform for modern technical computing.
+      package: mathematica
+      url: http://www.wolfram.com/mathematica
       versions:
-      - {description: 'Python bindings for PETSc, the Portable, Extensible Toolkit
-          for Scientific Computation.', markedDefault: false, versionName: 3.18.5_py39}
+      - description: A symbolic language and platform for modern technical computing.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: 13.1.0
     - categories: math, numerical library
       defaultVersionName: 2017.1_py27
       description: PyUblas provides a seamless glue layer between Numpy and Boost.Ublas
@@ -2619,16 +2656,26 @@ software_modules:
       - {description: OpenBLAS is an optimized BLAS library, family: blas, markedDefault: true,
         versionName: 0.3.10}
     - categories: math, deep learning
-      defaultVersionName: 8.5.1.7_py39
-      description: Python bindings for the TensorRT library.
-      package: py-tensorrt
-      url: https://developer.nvidia.com/tensorrt
+      defaultVersionName: 0.12.1_py27
+      description: Horovod is a distributed training framework for TensorFlow. The
+        goal of Horovod is to make distributed Deep Learning fast and easy to use.
+      package: py-horovod
+      url: https://github.com/uber/horovod
       versions:
-      - description: Python bindings for the TensorRT library.
+      - description: Horovod is a distributed training framework for TensorFlow. The
+          goal of Horovod is to make distributed Deep Learning fast and easy to use.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-        versionName: 8.5.1.7_py39
+          parallel: {mpi: 1}
+        versionName: 0.12.1_py36
+      - description: Horovod is a distributed training framework for TensorFlow. The
+          goal of Horovod is to make distributed Deep Learning fast and easy to use.
+        markedDefault: true
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 0.12.1_py27
     - categories: math, numerical library
       defaultVersionName: '2.7'
       description: The GNU Scientific Library (GSL) is a numerical library for C and
@@ -2649,36 +2696,27 @@ software_modules:
           C and C++ programmers. The library provides a wide range of mathematical
           routines such as random number generators, special functions and least-squares
           fitting.', markedDefault: false, versionName: '2.7'}
-    - categories: math, machine learning
-      defaultVersionName: 0.19.1_py27
-      description: Scikit-learn is a free software machine learning library for the
-        Python programming language.
-      package: py-scikit-learn
-      url: http://scikit-learn.org
+    - categories: math, numerical library
+      defaultVersionName: 1.14.3_py27
+      description: NumPy is the fundamental package for scientific computing with
+        Python.
+      package: py-numpy
+      url: http://www.numpy.org
       versions:
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 0.19.1_py36}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 0.24.2_py36}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 1.0.2_py39}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: true, versionName: 0.19.1_py27}
-    - categories: math, statistics
-      defaultVersionName: '9.4'
-      description: SAS is a software suite developed by SAS Institute for advanced
-        analytics, multivariate analyses, business intelligence, data management,
-        and predictive analytics.
-      package: sas
-      url: http://www.sas.com/
-      versions:
-      - description: SAS is a software suite developed by SAS Institute for advanced
-          analytics, multivariate analyses, business intelligence, data management,
-          and predictive analytics.
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: '9.4'
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.14.3_py36}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.17.2_py36}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.18.1_py36}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.19.2_py36}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.20.3_py39}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.24.2_py39}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: true, versionName: 1.14.3_py27}
     - categories: math, deep learning
       defaultVersionName: '20180202'
       description: Torch is a scientific computing framework with wide support for
@@ -2692,6 +2730,15 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: '20180202'
+    - categories: math, numerical library
+      defaultVersionName: 1.1.2
+      description: qrupdate is a Fortran library for fast updates of QR and Cholesky
+        decompositions.
+      package: qrupdate
+      url: https://sourceforge.net/projects/qrupdate/
+      versions:
+      - {description: qrupdate is a Fortran library for fast updates of QR and Cholesky
+          decompositions., markedDefault: false, versionName: 1.1.2}
     - categories: math, deep learning
       defaultVersionName: 1.5.0.3
       description: GPU-accelerated tensor linear algebra library.
@@ -2913,6 +2960,15 @@ software_modules:
       - {description: The Gurobi Optimizer is a commercial optimization solver for
           mathematical programming., markedDefault: false, versionName: 10.0.1_py39}
     - categories: math, numerical library
+      defaultVersionName: 2.0.8_py36
+      description: gmpy2 is a C-coded Python extension module that supports multiple-precision
+        arithmetic.
+      package: py-gmpy2
+      url: https://gmpy2.readthedocs.io/
+      versions:
+      - {description: gmpy2 is a C-coded Python extension module that supports multiple-precision
+          arithmetic., markedDefault: false, versionName: 2.0.8_py36}
+    - categories: math, numerical library
       defaultVersionName: 6.2.1
       description: GMP is a free library for arbitrary precision arithmetic, operating
         on signed integers, rational numbers, and floating-point numbers.
@@ -2925,53 +2981,31 @@ software_modules:
       - {description: 'GMP is a free library for arbitrary precision arithmetic, operating
           on signed integers, rational numbers, and floating-point numbers.', markedDefault: false,
         versionName: 6.2.1}
+    - categories: math, statistics
+      defaultVersionName: '9.4'
+      description: SAS is a software suite developed by SAS Institute for advanced
+        analytics, multivariate analyses, business intelligence, data management,
+        and predictive analytics.
+      package: sas
+      url: http://www.sas.com/
+      versions:
+      - description: SAS is a software suite developed by SAS Institute for advanced
+          analytics, multivariate analyses, business intelligence, data management,
+          and predictive analytics.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: '9.4'
     - categories: math, numerical library
-      defaultVersionName: 3.3.10
-      description: The Fastest Fourier Transform in the West (FFTW) is a software
-        library for computing discrete Fourier transforms (DFTs).
-      package: fftw
-      url: http://www.fftw.org/
+      defaultVersionName: 1.2.1
+      description: GNU MPC is a C library for the arithmetic of complex numbers with
+        arbitrarily high precision and correct rounding of the result.
+      package: mpc
+      url: http://www.multiprecision.org/mpc
       versions:
-      - {description: The Fastest Fourier Transform in the West (FFTW) is a software
-          library for computing discrete Fourier transforms (DFTs)., markedDefault: false,
-        versionName: 2.1.5}
-      - description: The Fastest Fourier Transform in the West (FFTW) is a software
-          library for computing discrete Fourier transforms (DFTs).
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 3.3.6
-      - description: The Fastest Fourier Transform in the West (FFTW) is a software
-          library for computing discrete Fourier transforms (DFTs).
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 3.3.8
-      - {description: The Fastest Fourier Transform in the West (FFTW) is a software
-          library for computing discrete Fourier transforms (DFTs)., markedDefault: false,
-        versionName: 3.3.9}
-      - description: The Fastest Fourier Transform in the West (FFTW) is a software
-          library for computing discrete Fourier transforms (DFTs).
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 3.3.10
-    - categories: math, numerical library
-      defaultVersionName: 3.18.2_py39
-      description: Python bindings for SLEPc.
-      package: py-slepc4py
-      url: https://slepc.upv.es/
-      versions:
-      - {description: Python bindings for SLEPc., markedDefault: false, versionName: 3.18.2_py39}
-    - categories: math, deep learning
-      defaultVersionName: 0.15.1_py39
-      description: Datasets, model architectures, and common image transformations
-        for computer vision for PyTorch.
-      package: py-torchvision
-      url: http://pytorch.org/vision
-      versions:
-      - {description: 'Datasets, model architectures, and common image transformations
-          for computer vision for PyTorch.', markedDefault: false, versionName: 0.15.1_py39}
+      - {description: GNU MPC is a C library for the arithmetic of complex numbers
+          with arbitrarily high precision and correct rounding of the result., markedDefault: false,
+        versionName: 1.2.1}
     - categories: math, deep learning
       defaultVersionName: 8.9.0.131
       description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
@@ -3063,15 +3097,36 @@ software_modules:
           parallel: {mpi: 1}
         versionName: 3.18.2
     - categories: math, numerical library
-      defaultVersionName: 1.2.1
-      description: GNU MPC is a C library for the arithmetic of complex numbers with
-        arbitrarily high precision and correct rounding of the result.
-      package: mpc
-      url: http://www.multiprecision.org/mpc
+      defaultVersionName: 3.3.10
+      description: The Fastest Fourier Transform in the West (FFTW) is a software
+        library for computing discrete Fourier transforms (DFTs).
+      package: fftw
+      url: http://www.fftw.org/
       versions:
-      - {description: GNU MPC is a C library for the arithmetic of complex numbers
-          with arbitrarily high precision and correct rounding of the result., markedDefault: false,
-        versionName: 1.2.1}
+      - {description: The Fastest Fourier Transform in the West (FFTW) is a software
+          library for computing discrete Fourier transforms (DFTs)., markedDefault: false,
+        versionName: 2.1.5}
+      - description: The Fastest Fourier Transform in the West (FFTW) is a software
+          library for computing discrete Fourier transforms (DFTs).
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 3.3.6
+      - description: The Fastest Fourier Transform in the West (FFTW) is a software
+          library for computing discrete Fourier transforms (DFTs).
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 3.3.8
+      - {description: The Fastest Fourier Transform in the West (FFTW) is a software
+          library for computing discrete Fourier transforms (DFTs)., markedDefault: false,
+        versionName: 3.3.9}
+      - description: The Fastest Fourier Transform in the West (FFTW) is a software
+          library for computing discrete Fourier transforms (DFTs).
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 3.3.10
     - categories: math, computational geometry
       defaultVersionName: '2015.2'
       description: Qhull computes the convex hull, Delaunay triangulation, Voronoi
@@ -3160,15 +3215,16 @@ software_modules:
           nonlinear problems., markedDefault: false, versionName: 12.4.0}
       - {description: Artelys Knitro is an optimization solver for difficult large-scale
           nonlinear problems., markedDefault: true, versionName: 10.3.0}
-    - categories: math, numerical library
-      defaultVersionName: 1.1.2
-      description: qrupdate is a Fortran library for fast updates of QR and Cholesky
-        decompositions.
-      package: qrupdate
-      url: https://sourceforge.net/projects/qrupdate/
+    - categories: math, statistics
+      defaultVersionName: 2.9.2_py36
+      description: rpy2 is an interface to R running embedded in a Python process.
+      package: py-rpy2
+      url: https://rpy2.bitbucket.io
       versions:
-      - {description: qrupdate is a Fortran library for fast updates of QR and Cholesky
-          decompositions., markedDefault: false, versionName: 1.1.2}
+      - {description: rpy2 is an interface to R running embedded in a Python process.,
+        markedDefault: false, versionName: 2.8.6_py27}
+      - {description: rpy2 is an interface to R running embedded in a Python process.,
+        markedDefault: false, versionName: 2.9.2_py36}
     - categories: math, deep learning
       defaultVersionName: 1.12.0_py39
       description: ONNX is a open format to represent deep learning models.
@@ -3287,27 +3343,6 @@ software_modules:
           arch: {gpu: 1}
         versionName: 12.1.0_py39
     - categories: math, numerical library
-      defaultVersionName: 1.14.3_py27
-      description: NumPy is the fundamental package for scientific computing with
-        Python.
-      package: py-numpy
-      url: http://www.numpy.org
-      versions:
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.14.3_py36}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.17.2_py36}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.18.1_py36}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.19.2_py36}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.20.3_py39}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.24.2_py39}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: true, versionName: 1.14.3_py27}
-    - categories: math, numerical library
       defaultVersionName: 6.0.4
       description: Software package and libraries for sequential and parallel graph
         partitioning, static mapping and clustering, sequential mesh and hypergraph
@@ -3322,22 +3357,6 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 6.0.4
-    - categories: math, scientific computing
-      defaultVersionName: 1.0_py27
-      description: 'The SciPy Stack is a collection of open source software for scientific
-        computing in Python. It provides the following packages: numpy, scipy, matplotlib,
-        ipython, jupyter, pandas, sympy and nose.'
-      package: py-scipystack
-      url: https://www.scipy.org
-      versions:
-      - {description: 'The SciPy Stack is a collection of open source software for
-          scientific computing in Python. It provides the following packages: numpy,
-          scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
-        markedDefault: false, versionName: 1.0_py36}
-      - {description: 'The SciPy Stack is a collection of open source software for
-          scientific computing in Python. It provides the following packages: numpy,
-          scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
-        markedDefault: true, versionName: 1.0_py27}
     - categories: math, numerical library
       defaultVersionName: 5.1.2
       description: A parallel sparse direct solver.
@@ -3358,6 +3377,28 @@ software_modules:
           R. It includes a console, syntax-highlighting editor that supports direct
           code execution, as well as tools for plotting, history, debugging and workspace
           management. This is the X11/GUI version.', markedDefault: false, versionName: 2022.02.2-485}
+    - categories: math, numerical library
+      defaultVersionName: 3.18.2_py39
+      description: Python bindings for SLEPc.
+      package: py-slepc4py
+      url: https://slepc.upv.es/
+      versions:
+      - {description: Python bindings for SLEPc., markedDefault: false, versionName: 3.18.2_py39}
+    - categories: math, machine learning
+      defaultVersionName: 0.19.1_py27
+      description: Scikit-learn is a free software machine learning library for the
+        Python programming language.
+      package: py-scikit-learn
+      url: http://scikit-learn.org
+      versions:
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 0.19.1_py36}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 0.24.2_py36}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 1.0.2_py39}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: true, versionName: 0.19.1_py27}
     - categories: math, numerical library
       defaultVersionName: '2019'
       description: Intel Math Kernel Library (Intel MKL) is a library of optimized
@@ -3464,26 +3505,16 @@ software_modules:
           maths) for the C++ language, aiming towards a good balance between speed
           and ease of use.', markedDefault: false, versionName: 8.200.1}
     - categories: math, deep learning
-      defaultVersionName: 0.12.1_py27
-      description: Horovod is a distributed training framework for TensorFlow. The
-        goal of Horovod is to make distributed Deep Learning fast and easy to use.
-      package: py-horovod
-      url: https://github.com/uber/horovod
+      defaultVersionName: 8.5.1.7_py39
+      description: Python bindings for the TensorRT library.
+      package: py-tensorrt
+      url: https://developer.nvidia.com/tensorrt
       versions:
-      - description: Horovod is a distributed training framework for TensorFlow. The
-          goal of Horovod is to make distributed Deep Learning fast and easy to use.
+      - description: Python bindings for the TensorRT library.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 0.12.1_py36
-      - description: Horovod is a distributed training framework for TensorFlow. The
-          goal of Horovod is to make distributed Deep Learning fast and easy to use.
-        markedDefault: true
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 0.12.1_py27
+        versionName: 8.5.1.7_py39
     - categories: math, deep learning
       defaultVersionName: 0.3.0_py27
       description: PyTorch is a deep learning framework that puts Python first.
@@ -3600,22 +3631,30 @@ software_modules:
           and analyse Climate and NWP model Data., markedDefault: false, versionName: 1.9.7.1}
       - {description: CDO is a collection of command line Operators to manipulate
           and analyse Climate and NWP model Data., markedDefault: false, versionName: 2.1.1}
-    - categories: physics, geoscience
-      defaultVersionName: 8.2.1
-      description: PROJ is a generic coordinate transformation software that transforms
-        geospatial coordinates from one coordinate reference system (CRS) to another.
-      package: proj
-      url: http://proj.org
+    - categories: physics, quantum mechanics
+      defaultVersionName: 0.3.5_py36
+      description: QuSpin is an open-source Python package for exact diagonalization
+        and quantum dynamics of arbitrary boson, fermion and spin many-body systems.
+      package: py-quspin
+      url: http://weinbe58.github.io/QuSpin/
       versions:
-      - {description: PROJ is a generic coordinate transformation software that transforms
-          geospatial coordinates from one coordinate reference system (CRS) to another.,
-        markedDefault: false, versionName: 4.9.3}
-      - {description: PROJ is a generic coordinate transformation software that transforms
-          geospatial coordinates from one coordinate reference system (CRS) to another.,
-        markedDefault: false, versionName: 9.1.0}
-      - {description: PROJ is a generic coordinate transformation software that transforms
-          geospatial coordinates from one coordinate reference system (CRS) to another.,
-        markedDefault: true, versionName: 8.2.1}
+      - {description: 'QuSpin is an open-source Python package for exact diagonalization
+          and quantum dynamics of arbitrary boson, fermion and spin many-body systems.',
+        markedDefault: false, versionName: 0.3.5_py36}
+    - categories: physics, geoscience
+      defaultVersionName: 0.2.0-20220523
+      description: GEOSX is a simulation framework for modeling coupled flow, transport,
+        and geomechanics in the subsurface.
+      package: geosx
+      url: https://github.com/GEOSX/GEOSX
+      versions:
+      - description: GEOSX is a simulation framework for modeling coupled flow, transport,
+          and geomechanics in the subsurface.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 0.2.0-20220523
     - categories: physics, astronomy
       defaultVersionName: 4.0.0
       description: FITSIO is a library of C and Fortran subroutines for reading and
@@ -3663,16 +3702,6 @@ software_modules:
           tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks
           for X-ray astronomical spectral, timing, and imaging data analysis) software
           packages.', markedDefault: false, versionName: 6.26.1}
-    - categories: physics, quantum mechanics
-      defaultVersionName: 0.3.5_py36
-      description: QuSpin is an open-source Python package for exact diagonalization
-        and quantum dynamics of arbitrary boson, fermion and spin many-body systems.
-      package: py-quspin
-      url: http://weinbe58.github.io/QuSpin/
-      versions:
-      - {description: 'QuSpin is an open-source Python package for exact diagonalization
-          and quantum dynamics of arbitrary boson, fermion and spin many-body systems.',
-        markedDefault: false, versionName: 0.3.5_py36}
     - categories: physics, astronomy
       defaultVersionName: 4.0.1_py36
       description: The Astropy Project is a community effort to develop a common core
@@ -3684,6 +3713,18 @@ software_modules:
       - {description: The Astropy Project is a community effort to develop a common
           core package for Astronomy in Python and foster an ecosystem of interoperable
           astronomy packages., markedDefault: false, versionName: 4.0.1_py36}
+    - categories: physics, geoscience
+      defaultVersionName: 1.9.5.1_py27
+      description: Python interface to PROJ4 library for cartographic transformations.
+      package: py-pyproj
+      url: https://github.com/jswhit/pyproj
+      versions:
+      - {description: Python interface to PROJ4 library for cartographic transformations.,
+        markedDefault: false, versionName: 1.9.5.1_py36}
+      - {description: Python interface to PROJ4 library for cartographic transformations.,
+        markedDefault: false, versionName: 3.4.0_py39}
+      - {description: Python interface to PROJ4 library for cartographic transformations.,
+        markedDefault: true, versionName: 1.9.5.1_py27}
     - categories: physics, photonics
       defaultVersionName: 1.24.0
       description: Meep is a free finite-difference time-domain (FDTD) simulation
@@ -3709,49 +3750,35 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 1.24.0
-    - categories: physics, photonics
-      defaultVersionName: 1.11.1
-      description: MPB is a free software package for computing the band structures,
-        or dispersion relations, and electromagnetic modes of periodic dielectric
-        structures, on both serial and parallel computers.
-      package: mpb
-      url: https://github.com/stevengj/mpb
+    - categories: physics, cliemate modeling
+      defaultVersionName: '2022.01'
+      description: FRE-NCtools is a collection of tools to help with the creation
+        and manipulation of netCDF files used for climate modeling.
+      package: fre-nctools
+      url: https://github.com/NOAA-GFDL/FRE-NCtools
       versions:
-      - description: MPB is a free software package for computing the band structures,
-          or dispersion relations, and electromagnetic modes of periodic dielectric
-          structures, on both serial and parallel computers.
+      - description: FRE-NCtools is a collection of tools to help with the creation
+          and manipulation of netCDF files used for climate modeling.
         markedDefault: false
         properties:
           parallel: {mpi: 1}
-        versionName: '1.5'
-      - description: MPB is a free software package for computing the band structures,
-          or dispersion relations, and electromagnetic modes of periodic dielectric
-          structures, on both serial and parallel computers.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 1.6.2
-      - description: MPB is a free software package for computing the band structures,
-          or dispersion relations, and electromagnetic modes of periodic dielectric
-          structures, on both serial and parallel computers.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 1.11.1
+        versionName: '2022.01'
     - categories: physics, geoscience
-      defaultVersionName: 0.2.0-20220523
-      description: GEOSX is a simulation framework for modeling coupled flow, transport,
-        and geomechanics in the subsurface.
-      package: geosx
-      url: https://github.com/GEOSX/GEOSX
+      defaultVersionName: 8.2.1
+      description: PROJ is a generic coordinate transformation software that transforms
+        geospatial coordinates from one coordinate reference system (CRS) to another.
+      package: proj
+      url: http://proj.org
       versions:
-      - description: GEOSX is a simulation framework for modeling coupled flow, transport,
-          and geomechanics in the subsurface.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 0.2.0-20220523
+      - {description: PROJ is a generic coordinate transformation software that transforms
+          geospatial coordinates from one coordinate reference system (CRS) to another.,
+        markedDefault: false, versionName: 4.9.3}
+      - {description: PROJ is a generic coordinate transformation software that transforms
+          geospatial coordinates from one coordinate reference system (CRS) to another.,
+        markedDefault: false, versionName: 9.1.0}
+      - {description: PROJ is a generic coordinate transformation software that transforms
+          geospatial coordinates from one coordinate reference system (CRS) to another.,
+        markedDefault: true, versionName: 8.2.1}
     - categories: physics, particle
       defaultVersionName: 0.10.0
       description: OpenMC is a Monte Carlo particle transport simulation code focused
@@ -3761,18 +3788,15 @@ software_modules:
       versions:
       - {description: OpenMC is a Monte Carlo particle transport simulation code focused
           on neutron criticality calculations., markedDefault: false, versionName: 0.10.0}
-    - categories: physics, geoscience
-      defaultVersionName: 1.9.5.1_py27
-      description: Python interface to PROJ4 library for cartographic transformations.
-      package: py-pyproj
-      url: https://github.com/jswhit/pyproj
+    - categories: physics, quantum mechanics
+      defaultVersionName: 4.5.2_py36
+      description: QuTiP is open-source software for simulating the dynamics of closed
+        and open quantum systems.
+      package: py-qutip
+      url: http://qutip.org/
       versions:
-      - {description: Python interface to PROJ4 library for cartographic transformations.,
-        markedDefault: false, versionName: 1.9.5.1_py36}
-      - {description: Python interface to PROJ4 library for cartographic transformations.,
-        markedDefault: false, versionName: 3.4.0_py39}
-      - {description: Python interface to PROJ4 library for cartographic transformations.,
-        markedDefault: true, versionName: 1.9.5.1_py27}
+      - {description: QuTiP is open-source software for simulating the dynamics of
+          closed and open quantum systems., markedDefault: false, versionName: 4.5.2_py36}
     - categories: physics, geoscience
       defaultVersionName: 2.2.26
       description: The UDUNITS package from Unidata is a C-based package for the programatic
@@ -3817,15 +3841,14 @@ software_modules:
       - {description: An InSAR processing system based on GMT (Generic Mapping Tools).,
         markedDefault: false, versionName: 6.2.2}
     - categories: physics, materials science
-      defaultVersionName: '3.36'
-      description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
-        coupled configurational and vibrational disorder in alloy systems.'
-      package: atat
-      url: https://www.brown.edu/Departments/Engineering/Labs/avdw/atat/
+      defaultVersionName: 2022.5.26_py39
+      description: Pymatgen (Python Materials Genomics) is a robust, open-source Python
+        library for materials analysis.
+      package: py-pymatgen
+      url: https://pymatgen.org/
       versions:
-      - {description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
-          coupled configurational and vibrational disorder in alloy systems.', markedDefault: false,
-        versionName: '3.36'}
+      - {description: 'Pymatgen (Python Materials Genomics) is a robust, open-source
+          Python library for materials analysis.', markedDefault: false, versionName: 2022.5.26_py39}
     - categories: physics, CFD
       defaultVersionName: 7.0.3
       description: 'SU2: An Open-Source Suite for Multiphysics Simulation and Design'
@@ -3859,23 +3882,28 @@ software_modules:
           object-oriented models for accessing the full functionalities of NVIDIA
           cuQuantum SDK from Python., markedDefault: false, versionName: 22.3.0_py39}
     - categories: physics, materials science
-      defaultVersionName: 2022.5.26_py39
-      description: Pymatgen (Python Materials Genomics) is a robust, open-source Python
-        library for materials analysis.
-      package: py-pymatgen
-      url: https://pymatgen.org/
+      defaultVersionName: '3.36'
+      description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
+        coupled configurational and vibrational disorder in alloy systems.'
+      package: atat
+      url: https://www.brown.edu/Departments/Engineering/Labs/avdw/atat/
       versions:
-      - {description: 'Pymatgen (Python Materials Genomics) is a robust, open-source
-          Python library for materials analysis.', markedDefault: false, versionName: 2022.5.26_py39}
-    - categories: physics, quantum mechanics
-      defaultVersionName: 4.5.2_py36
-      description: QuTiP is open-source software for simulating the dynamics of closed
-        and open quantum systems.
-      package: py-qutip
-      url: http://qutip.org/
+      - {description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
+          coupled configurational and vibrational disorder in alloy systems.', markedDefault: false,
+        versionName: '3.36'}
+    - categories: physics, geoscience
+      defaultVersionName: 9.01a
+      description: SWASH (an acronym of Simulating WAves till SHore) is a non-hydrostatic
+        wave-flow model.
+      package: swash
+      url: https://swash.sourceforge.io/
       versions:
-      - {description: QuTiP is open-source software for simulating the dynamics of
-          closed and open quantum systems., markedDefault: false, versionName: 4.5.2_py36}
+      - description: SWASH (an acronym of Simulating WAves till SHore) is a non-hydrostatic
+          wave-flow model.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 9.01a
     - categories: physics, astronomy
       defaultVersionName: 1.2.2_py36
       description: NaMaster is a C library, Python module and standalone program to
@@ -3936,19 +3964,35 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.3.0_py39
-    - categories: physics, cliemate modeling
-      defaultVersionName: '2022.01'
-      description: FRE-NCtools is a collection of tools to help with the creation
-        and manipulation of netCDF files used for climate modeling.
-      package: fre-nctools
-      url: https://github.com/NOAA-GFDL/FRE-NCtools
+    - categories: physics, photonics
+      defaultVersionName: 1.11.1
+      description: MPB is a free software package for computing the band structures,
+        or dispersion relations, and electromagnetic modes of periodic dielectric
+        structures, on both serial and parallel computers.
+      package: mpb
+      url: https://github.com/stevengj/mpb
       versions:
-      - description: FRE-NCtools is a collection of tools to help with the creation
-          and manipulation of netCDF files used for climate modeling.
+      - description: MPB is a free software package for computing the band structures,
+          or dispersion relations, and electromagnetic modes of periodic dielectric
+          structures, on both serial and parallel computers.
         markedDefault: false
         properties:
           parallel: {mpi: 1}
-        versionName: '2022.01'
+        versionName: '1.5'
+      - description: MPB is a free software package for computing the band structures,
+          or dispersion relations, and electromagnetic modes of periodic dielectric
+          structures, on both serial and parallel computers.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.6.2
+      - description: MPB is a free software package for computing the band structures,
+          or dispersion relations, and electromagnetic modes of periodic dielectric
+          structures, on both serial and parallel computers.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.11.1
   - name: biology
     packages:
     - categories: biology, genomics
@@ -3986,31 +4030,33 @@ software_modules:
       - {description: 'bgen is the reference implementation of the BGEN format, a
           binary file format for imputed genotype and haplotype data.', markedDefault: false,
         versionName: 1.1.4}
-    - categories: biology, cryo-em
-      defaultVersionName: '2.2'
-      description: EMAN2 is a broadly based greyscale scientific image processing
-        suite with a primary focus on processing data from transmission electron microscopes.
-      package: eman2
-      url: http://blake.bcm.edu/emanwiki/EMAN2
+    - categories: biology, computational biology
+      defaultVersionName: '3.8'
+      description: Rosetta is the premier software suite for modeling macromolecular
+        structures. As a flexible, multi-purpose application, it includes tools for
+        structure prediction, design, and remodeling of proteins and nucleic acids.
+      package: rosetta
+      url: https://www.rosettacommons.org
       versions:
-      - description: EMAN2 is a broadly based greyscale scientific image processing
-          suite with a primary focus on processing data from transmission electron
-          microscopes.
+      - description: Rosetta is the premier software suite for modeling macromolecular
+          structures. As a flexible, multi-purpose application, it includes tools
+          for structure prediction, design, and remodeling of proteins and nucleic
+          acids.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '3.8'
+    - categories: biology, genomics
+      defaultVersionName: 2.2.3_py39
+      description: A software package for animal pose estimation.
+      package: py-deeplabcut
+      url: http://deeplabcut.org
+      versions:
+      - description: A software package for animal pose estimation.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '2.2'
-    - categories: biology, genomics
-      defaultVersionName: 2.11.0
-      description: The SRA Toolkit and SDK from NCBI is a collection of tools and
-        libraries for using data in the INSDC Sequence Read Archives.
-      package: sra-tools
-      url: https://github.com/ncbi/sra-tools
-      versions:
-      - {description: The SRA Toolkit and SDK from NCBI is a collection of tools and
-          libraries for using data in the INSDC Sequence Read Archives., markedDefault: false,
-        versionName: 2.11.0}
+        versionName: 2.2.3_py39
     - categories: biology, genomics
       defaultVersionName: '202112.01'
       description: Sentieon Genomics software is a set of software tools that perform
@@ -4099,16 +4145,21 @@ software_modules:
       - {description: OpenSlide is a C library that provides a simple interface to
           read whole-slide images (also known as virtual slides)., markedDefault: false,
         versionName: 3.4.1}
-    - categories: biology, genomics
-      defaultVersionName: 0.38.1
-      description: breseq is a computational pipeline for finding mutations relative
-        to a reference sequence in short-read DNA resequencing data.
-      package: breseq
-      url: http://barricklab.org/breseq
+    - categories: biology, neurology
+      defaultVersionName: 0.10.9_py36
+      description: The Maastricht Diffusion Toolbox, MDT, is a framework and library
+        for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging
+        (MRI) modeling.
+      package: py-mdt
+      url: https://github.com/cbclab/MDT
       versions:
-      - {description: breseq is a computational pipeline for finding mutations relative
-          to a reference sequence in short-read DNA resequencing data., markedDefault: false,
-        versionName: 0.38.1}
+      - description: The Maastricht Diffusion Toolbox, MDT, is a framework and library
+          for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging
+          (MRI) modeling.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.10.9_py36
     - categories: biology, genomics
       defaultVersionName: '20110325'
       description: The METAL software is designed to facilitate meta-analysis of large
@@ -4258,22 +4309,14 @@ software_modules:
           (aka phasing) for SNP array and high coverage sequencing data., markedDefault: true,
         versionName: 4.0.0}
     - categories: biology, genomics
-      defaultVersionName: 2.11.0
-      description: NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic
-        Local Alignment Search Tool), an algorithm for comparing primary biological
-        sequence information.
-      package: ncbi-blast+
-      url: https://blast.ncbi.nlm.nih.gov/Blast.cgi
+      defaultVersionName: 2.1.1_py27
+      description: MACS (Model-based Analysis of ChIP-Seq) implements a novel ChIP-Seq
+        analysis method.
+      package: py-macs2
+      url: https://github.com/taoliu/MACS
       versions:
-      - {description: 'NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic
-          Local Alignment Search Tool), an algorithm for comparing primary biological
-          sequence information.', markedDefault: false, versionName: 2.6.0}
-      - {description: 'NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic
-          Local Alignment Search Tool), an algorithm for comparing primary biological
-          sequence information.', markedDefault: false, versionName: 2.7.1}
-      - {description: 'NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic
-          Local Alignment Search Tool), an algorithm for comparing primary biological
-          sequence information.', markedDefault: false, versionName: 2.11.0}
+      - {description: MACS (Model-based Analysis of ChIP-Seq) implements a novel ChIP-Seq
+          analysis method., markedDefault: false, versionName: 2.1.1_py27}
     - categories: biology, genomics
       defaultVersionName: 2.2.1
       description: Cufflinks assembles transcripts, estimates their abundances, and
@@ -4293,14 +4336,13 @@ software_modules:
       - {description: ctffind is a program for finding CTFs of electron micrographs.,
         markedDefault: false, versionName: 4.1.13}
     - categories: biology, genomics
-      defaultVersionName: 0.4.17_py36
-      description: A visualization framework for CRISPR/Cas9 knockout screens, analyzed
-        with MAGeCK.
-      package: py-vispr
-      url: https://bitbucket.org/liulab/vispr
+      defaultVersionName: 0.8.9_py39
+      description: Python API for comprehensive GWAS analysis using GEMMA.
+      package: py-vcf2gwas
+      url: https://github.com/frankvogt/vcf2gwas
       versions:
-      - {description: 'A visualization framework for CRISPR/Cas9 knockout screens,
-          analyzed with MAGeCK.', markedDefault: false, versionName: 0.4.17_py36}
+      - {description: Python API for comprehensive GWAS analysis using GEMMA., markedDefault: false,
+        versionName: 0.8.9_py39}
     - categories: biology, cryo-em
       defaultVersionName: '2.1'
       description: RELION (for REgularised LIkelihood OptimisatioN, pronounce rely-on)
@@ -4329,13 +4371,21 @@ software_modules:
           parallel: {mpi: 1}
         versionName: '2.1'
     - categories: biology, genomics
-      defaultVersionName: 3.3.1_py36
-      description: Tools to process and analyze deep sequencing data.
-      package: py-deeptools
-      url: https://github.com/deeptools/deepTools/
+      defaultVersionName: '1.16'
+      description: BCFtools is a program for variant calling and manipulating files
+        in the Variant Call Format (VCF) and its binary counterpart BCF.
+      package: bcftools
+      url: https://github.com/samtools/bcftools
       versions:
-      - {description: Tools to process and analyze deep sequencing data., markedDefault: false,
-        versionName: 3.3.1_py36}
+      - {description: BCFtools is a program for variant calling and manipulating files
+          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
+        versionName: '1.6'}
+      - {description: BCFtools is a program for variant calling and manipulating files
+          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
+        versionName: '1.8'}
+      - {description: BCFtools is a program for variant calling and manipulating files
+          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
+        versionName: '1.16'}
     - categories: biology, genomics
       defaultVersionName: 0.11.8
       description: FastQC aims to provide a simple way to do some quality control
@@ -4346,6 +4396,36 @@ software_modules:
       - {description: FastQC aims to provide a simple way to do some quality control
           checks on raw sequence data coming from high throughput sequencing pipelines.,
         markedDefault: false, versionName: 0.11.8}
+    - categories: biology, genomics
+      defaultVersionName: 2.11.0
+      description: NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic
+        Local Alignment Search Tool), an algorithm for comparing primary biological
+        sequence information.
+      package: ncbi-blast+
+      url: https://blast.ncbi.nlm.nih.gov/Blast.cgi
+      versions:
+      - {description: 'NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic
+          Local Alignment Search Tool), an algorithm for comparing primary biological
+          sequence information.', markedDefault: false, versionName: 2.6.0}
+      - {description: 'NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic
+          Local Alignment Search Tool), an algorithm for comparing primary biological
+          sequence information.', markedDefault: false, versionName: 2.7.1}
+      - {description: 'NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic
+          Local Alignment Search Tool), an algorithm for comparing primary biological
+          sequence information.', markedDefault: false, versionName: 2.11.0}
+    - categories: biology, genomics
+      defaultVersionName: 0.44.0
+      description: kallisto is a program for quantifying abundances of transcripts
+        from RNA-Seq data using high-throughput sequencing reads.
+      package: kallisto
+      url: https://pachterlab.github.io/kallisto/
+      versions:
+      - {description: kallisto is a program for quantifying abundances of transcripts
+          from RNA-Seq data using high-throughput sequencing reads., markedDefault: false,
+        versionName: 0.46.1}
+      - {description: kallisto is a program for quantifying abundances of transcripts
+          from RNA-Seq data using high-throughput sequencing reads., markedDefault: true,
+        versionName: 0.44.0}
     - categories: biology, genomics
       defaultVersionName: 2.4.40
       description: BEDOPS is an open-source command-line toolkit that performs highly
@@ -4411,60 +4491,6 @@ software_modules:
       - {description: 'MRtrix3 provides a set of tools to perform various types of
           diffusion MRI analyses, from various forms of tractography through to next-generation
           group-level analyses.', markedDefault: false, versionName: 3.0.3}
-    - categories: biology, neurology
-      defaultVersionName: 7.3.2
-      description: An open source software suite for processing and analyzing (human)
-        brain MRI images.
-      package: freesurfer
-      url: https://surfer.nmr.mgh.harvard.edu/
-      versions:
-      - {description: An open source software suite for processing and analyzing (human)
-          brain MRI images., markedDefault: false, versionName: 6.0.1}
-      - {description: An open source software suite for processing and analyzing (human)
-          brain MRI images., markedDefault: false, versionName: 7.1.1}
-      - {description: An open source software suite for processing and analyzing (human)
-          brain MRI images., markedDefault: false, versionName: 7.2.0}
-      - {description: An open source software suite for processing and analyzing (human)
-          brain MRI images., markedDefault: false, versionName: 7.3.2}
-    - categories: biology, genomics
-      defaultVersionName: 2.10.0
-      description: 'HiC-Pro: An optimized and flexible pipeline for Hi-C data processing.'
-      package: hic-pro
-      url: https://github.com/nservant/HiC-Pro
-      versions:
-      - {description: 'HiC-Pro: An optimized and flexible pipeline for Hi-C data processing.',
-        markedDefault: false, versionName: 2.10.0}
-    - categories: biology, genomics
-      defaultVersionName: 2.1.1_py27
-      description: MACS (Model-based Analysis of ChIP-Seq) implements a novel ChIP-Seq
-        analysis method.
-      package: py-macs2
-      url: https://github.com/taoliu/MACS
-      versions:
-      - {description: MACS (Model-based Analysis of ChIP-Seq) implements a novel ChIP-Seq
-          analysis method., markedDefault: false, versionName: 2.1.1_py27}
-    - categories: biology, neurology
-      defaultVersionName: 5.0.10
-      description: FSL is a comprehensive library of analysis tools for FMRI, MRI
-        and DTI brain imaging data.
-      package: fsl
-      url: https://fsl.fmrib.ox.ac.uk/fsl
-      versions:
-      - description: FSL is a comprehensive library of analysis tools for FMRI, MRI
-          and DTI brain imaging data.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 5.0.10
-    - categories: biology, genomics
-      defaultVersionName: 2.3.4.1
-      description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning
-        sequencing reads to long reference sequences.
-      package: bowtie2
-      url: http://bowtie-bio.sourceforge.net/bowtie2
-      versions:
-      - {description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning
-          sequencing reads to long reference sequences., markedDefault: false, versionName: 2.3.4.1}
     - categories: biology, cryo-em
       defaultVersionName: 4.11.5
       description: IMOD is a set of image processing, modeling and display programs
@@ -4487,6 +4513,79 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 4.11.5
+    - categories: biology, neurology
+      defaultVersionName: 7.4.1
+      description: An open source software suite for processing and analyzing (human)
+        brain MRI images.
+      package: freesurfer
+      url: https://surfer.nmr.mgh.harvard.edu/
+      versions:
+      - {description: An open source software suite for processing and analyzing (human)
+          brain MRI images., markedDefault: false, versionName: 6.0.1}
+      - {description: An open source software suite for processing and analyzing (human)
+          brain MRI images., markedDefault: false, versionName: 7.1.1}
+      - {description: An open source software suite for processing and analyzing (human)
+          brain MRI images., markedDefault: false, versionName: 7.2.0}
+      - {description: An open source software suite for processing and analyzing (human)
+          brain MRI images., markedDefault: false, versionName: 7.3.2}
+      - {description: An open source software suite for processing and analyzing (human)
+          brain MRI images., markedDefault: false, versionName: 7.4.1}
+    - categories: biology, genomics
+      defaultVersionName: 0.98.5
+      description: GEMMA is a software toolkit for fast application of linear mixed
+        models (LMMs) and related models to genome-wide association studies (GWAS)
+        and other large-scale data sets.
+      package: gemma
+      url: https://github.com/genetics-statistics/GEMMA
+      versions:
+      - {description: GEMMA is a software toolkit for fast application of linear mixed
+          models (LMMs) and related models to genome-wide association studies (GWAS)
+          and other large-scale data sets., markedDefault: false, versionName: 0.98.5}
+    - categories: biology, genomics
+      defaultVersionName: 3.0.7
+      description: The SRA Toolkit and SDK from NCBI is a collection of tools and
+        libraries for using data in the INSDC Sequence Read Archives.
+      package: sra-tools
+      url: https://github.com/ncbi/sra-tools
+      versions:
+      - {description: The SRA Toolkit and SDK from NCBI is a collection of tools and
+          libraries for using data in the INSDC Sequence Read Archives., markedDefault: false,
+        versionName: 2.11.0}
+      - {description: The SRA Toolkit and SDK from NCBI is a collection of tools and
+          libraries for using data in the INSDC Sequence Read Archives., markedDefault: false,
+        versionName: 3.0.7}
+    - categories: biology, neurology
+      defaultVersionName: 5.0.10
+      description: FSL is a comprehensive library of analysis tools for FMRI, MRI
+        and DTI brain imaging data.
+      package: fsl
+      url: https://fsl.fmrib.ox.ac.uk/fsl
+      versions:
+      - description: FSL is a comprehensive library of analysis tools for FMRI, MRI
+          and DTI brain imaging data.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 5.0.10
+    - categories: biology, genomics
+      defaultVersionName: 2.3.4.1
+      description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning
+        sequencing reads to long reference sequences.
+      package: bowtie2
+      url: http://bowtie-bio.sourceforge.net/bowtie2
+      versions:
+      - {description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning
+          sequencing reads to long reference sequences., markedDefault: false, versionName: 2.3.4.1}
+    - categories: biology, genomics
+      defaultVersionName: 0.38.1
+      description: breseq is a computational pipeline for finding mutations relative
+        to a reference sequence in short-read DNA resequencing data.
+      package: breseq
+      url: http://barricklab.org/breseq
+      versions:
+      - {description: breseq is a computational pipeline for finding mutations relative
+          to a reference sequence in short-read DNA resequencing data., markedDefault: false,
+        versionName: 0.38.1}
     - categories: biology, genomics
       defaultVersionName: 1.2.2
       description: Bowtie is an ultrafast, memory-efficient short read aligner.
@@ -4553,39 +4652,37 @@ software_modules:
       - {description: FreeBayes is a Bayesian genetic variant detector designed to
           find small polymorphisms., markedDefault: false, versionName: 1.2.0}
     - categories: biology, neurology
-      defaultVersionName: 0.7.00
-      description: BART is a toolbox for Computational Magnetic Resonance Imaging.
-      package: bart
-      url: https://mrirecon.github.io/bart/
+      defaultVersionName: '20160502'
+      description: MRIcron is a cross-platform NIfTI format image viewer.
+      package: mricron
+      url: https://www.nitrc.org/projects/mricron
       versions:
-      - description: BART is a toolbox for Computational Magnetic Resonance Imaging.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.7.00
+      - {description: MRIcron is a cross-platform NIfTI format image viewer., markedDefault: false,
+        versionName: '20160502'}
     - categories: biology, genomics
-      defaultVersionName: 0.44.0
-      description: kallisto is a program for quantifying abundances of transcripts
-        from RNA-Seq data using high-throughput sequencing reads.
-      package: kallisto
-      url: https://pachterlab.github.io/kallisto/
+      defaultVersionName: 3.0.7
+      description: NCBI VDB is the database engine used by NCBI SRA tools.
+      package: ncbi-vdb
+      url: https://github.com/ncbi/ncbi-vdb
       versions:
-      - {description: kallisto is a program for quantifying abundances of transcripts
-          from RNA-Seq data using high-throughput sequencing reads., markedDefault: false,
-        versionName: 0.46.1}
-      - {description: kallisto is a program for quantifying abundances of transcripts
-          from RNA-Seq data using high-throughput sequencing reads., markedDefault: true,
-        versionName: 0.44.0}
+      - {description: NCBI VDB is the database engine used by NCBI SRA tools., markedDefault: false,
+        versionName: 3.0.7}
     - categories: biology, genomics
-      defaultVersionName: 2.0.1_py39
-      description: HTSeq is a Python library to facilitate processing and analysis
-        of data from high-throughput sequencing (HTS) experiments.
-      package: py-htseq
-      url: http://htseq.readthedocs.io/
+      defaultVersionName: '1.16'
+      description: C library for high-throughput sequencing data formats.
+      package: htslib
+      url: https://github.com/samtools/htslib
       versions:
-      - {description: HTSeq is a Python library to facilitate processing and analysis
-          of data from high-throughput sequencing (HTS) experiments., markedDefault: false,
-        versionName: 2.0.1_py39}
+      - {description: C library for high-throughput sequencing data formats., markedDefault: false,
+        versionName: '1.6'}
+      - {description: C library for high-throughput sequencing data formats., markedDefault: false,
+        versionName: '1.8'}
+      - {description: C library for high-throughput sequencing data formats., markedDefault: false,
+        versionName: 1.10.2}
+      - {description: C library for high-throughput sequencing data formats., markedDefault: false,
+        versionName: '1.14'}
+      - {description: C library for high-throughput sequencing data formats., markedDefault: false,
+        versionName: '1.16'}
     - categories: biology, genomics
       defaultVersionName: '0.1'
       description: popscle is a suite of population scale analysis tools for single-cell
@@ -4604,14 +4701,15 @@ software_modules:
       versions:
       - {description: The FASTX-Toolkit is a collection of command line tools for
           Short-Reads FASTA/FASTQ files preprocessing., markedDefault: false, versionName: 0.0.14}
-    - categories: biology, neurology
-      defaultVersionName: '20160502'
-      description: MRIcron is a cross-platform NIfTI format image viewer.
-      package: mricron
-      url: https://www.nitrc.org/projects/mricron
+    - categories: biology, genomics
+      defaultVersionName: 2.5.4_py39
+      description: OrthoFinder is a fast, accurate and comprehensive platform for
+        comparative genomics.
+      package: py-orthofinder
+      url: https://github.com/davidemms/OrthoFinder
       versions:
-      - {description: MRIcron is a cross-platform NIfTI format image viewer., markedDefault: false,
-        versionName: '20160502'}
+      - {description: 'OrthoFinder is a fast, accurate and comprehensive platform
+          for comparative genomics.', markedDefault: false, versionName: 2.5.4_py39}
     - categories: biology, genomics
       defaultVersionName: 2.1.0
       description: HISAT2 is a fast and sensitive alignment program for mapping next-generation
@@ -4624,20 +4722,17 @@ software_modules:
           next-generation sequencing reads (both DNA and RNA) to a population of human
           genomes (as well as to a single reference genome)., markedDefault: false,
         versionName: 2.1.0}
-    - categories: biology, cryo-em
-      defaultVersionName: 0.2.4_py36
-      description: A pipeline for particle detection in cryo-electron microscopy images
-        using convolutional neural networks trained from positive and unlabeled examples.
-      package: py-topaz
-      url: https://github.com/tbepler/topaz
+    - categories: biology, neurology
+      defaultVersionName: 0.7.00
+      description: BART is a toolbox for Computational Magnetic Resonance Imaging.
+      package: bart
+      url: https://mrirecon.github.io/bart/
       versions:
-      - description: A pipeline for particle detection in cryo-electron microscopy
-          images using convolutional neural networks trained from positive and unlabeled
-          examples.
+      - description: BART is a toolbox for Computational Magnetic Resonance Imaging.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-        versionName: 0.2.4_py36
+        versionName: 0.7.00
     - categories: biology, genomics
       defaultVersionName: 0.9.0_py39
       description: Pybedtools wraps and extends BEDTools and offers feature-level
@@ -4652,38 +4747,6 @@ software_modules:
       - {description: Pybedtools wraps and extends BEDTools and offers feature-level
           manipulations from within Python., markedDefault: false, versionName: 0.9.0_py39}
     - categories: biology, genomics
-      defaultVersionName: '1.16'
-      description: C library for high-throughput sequencing data formats.
-      package: htslib
-      url: https://github.com/samtools/htslib
-      versions:
-      - {description: C library for high-throughput sequencing data formats., markedDefault: false,
-        versionName: '1.6'}
-      - {description: C library for high-throughput sequencing data formats., markedDefault: false,
-        versionName: '1.8'}
-      - {description: C library for high-throughput sequencing data formats., markedDefault: false,
-        versionName: 1.10.2}
-      - {description: C library for high-throughput sequencing data formats., markedDefault: false,
-        versionName: '1.14'}
-      - {description: C library for high-throughput sequencing data formats., markedDefault: false,
-        versionName: '1.16'}
-    - categories: biology, computational biology
-      defaultVersionName: '3.8'
-      description: Rosetta is the premier software suite for modeling macromolecular
-        structures. As a flexible, multi-purpose application, it includes tools for
-        structure prediction, design, and remodeling of proteins and nucleic acids.
-      package: rosetta
-      url: https://www.rosettacommons.org
-      versions:
-      - description: Rosetta is the premier software suite for modeling macromolecular
-          structures. As a flexible, multi-purpose application, it includes tools
-          for structure prediction, design, and remodeling of proteins and nucleic
-          acids.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: '3.8'
-    - categories: biology, genomics
       defaultVersionName: 2.5.1
       description: BamTools is a project that provides both a C++ API and a command-line
         toolkit for reading, writing, and manipulating BAM (genome alignment) files.
@@ -4693,6 +4756,26 @@ software_modules:
       - {description: 'BamTools is a project that provides both a C++ API and a command-line
           toolkit for reading, writing, and manipulating BAM (genome alignment) files.',
         markedDefault: false, versionName: 2.5.1}
+    - categories: biology, neurology
+      defaultVersionName: 1.3.1
+      description: Connectome Workbench is an open source, freely available visualization
+        and discovery tool used to map neuroimaging data, especially data generated
+        by the Human Connectome Project.
+      package: workbench
+      url: https://www.humanconnectome.org/software/connectome-workbench
+      versions:
+      - {description: 'Connectome Workbench is an open source, freely available visualization
+          and discovery tool used to map neuroimaging data, especially data generated
+          by the Human Connectome Project.', markedDefault: false, versionName: 1.3.1}
+    - categories: biology, genomics
+      defaultVersionName: 0.4.17_py36
+      description: A visualization framework for CRISPR/Cas9 knockout screens, analyzed
+        with MAGeCK.
+      package: py-vispr
+      url: https://bitbucket.org/liulab/vispr
+      versions:
+      - {description: 'A visualization framework for CRISPR/Cas9 knockout screens,
+          analyzed with MAGeCK.', markedDefault: false, versionName: 0.4.17_py36}
     - categories: biology, genomics
       defaultVersionName: 2.5.1
       description: A C code library and several stand-alone programs for the prediction
@@ -4702,22 +4785,6 @@ software_modules:
       versions:
       - {description: A C code library and several stand-alone programs for the prediction
           and comparison of RNA secondary structures., markedDefault: false, versionName: 2.5.1}
-    - categories: biology, genomics
-      defaultVersionName: '1.16'
-      description: BCFtools is a program for variant calling and manipulating files
-        in the Variant Call Format (VCF) and its binary counterpart BCF.
-      package: bcftools
-      url: https://github.com/samtools/bcftools
-      versions:
-      - {description: BCFtools is a program for variant calling and manipulating files
-          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
-        versionName: '1.6'}
-      - {description: BCFtools is a program for variant calling and manipulating files
-          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
-        versionName: '1.8'}
-      - {description: BCFtools is a program for variant calling and manipulating files
-          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
-        versionName: '1.16'}
     - categories: biology, genomics
       defaultVersionName: 4.1.4.1
       description: GATK (Genome Analysis Toolkit) offers a wide variety of tools with
@@ -4731,15 +4798,6 @@ software_modules:
       - {description: GATK (Genome Analysis Toolkit) offers a wide variety of tools
           with a primary focus on variant discovery and genotyping., markedDefault: false,
         versionName: 4.1.4.1}
-    - categories: biology, radiology
-      defaultVersionName: '4.2'
-      description: The NBIA Data Retriever is an application to download radiology
-        images from the TCIA Radiology Portal.
-      package: nbia-data-retriever
-      url: https://wiki.cancerimagingarchive.net/display/NBIA/NBIA+Data+Retriever+Help
-      versions:
-      - {description: The NBIA Data Retriever is an application to download radiology
-          images from the TCIA Radiology Portal., markedDefault: false, versionName: '4.2'}
     - categories: biology, genomics
       defaultVersionName: 0.8.13_py39
       description: Tools for manipulating biological data, particularly multiple sequence
@@ -4751,18 +4809,33 @@ software_modules:
           sequence alignments.', markedDefault: false, versionName: 0.8.1_py27}
       - {description: 'Tools for manipulating biological data, particularly multiple
           sequence alignments.', markedDefault: false, versionName: 0.8.13_py39}
-    - categories: biology, genomics
-      defaultVersionName: 0.5.0
-      description: Trim Galore! is a wrapper script to automate quality and adapter
-        trimming as well as quality control, with some added functionality to remove
-        biased methylation positions for RRBS sequence files.
-      package: trim_galore
-      url: https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
+    - categories: biology, radiology
+      defaultVersionName: '4.2'
+      description: The NBIA Data Retriever is an application to download radiology
+        images from the TCIA Radiology Portal.
+      package: nbia-data-retriever
+      url: https://wiki.cancerimagingarchive.net/display/NBIA/NBIA+Data+Retriever+Help
       versions:
-      - {description: 'Trim Galore! is a wrapper script to automate quality and adapter
-          trimming as well as quality control, with some added functionality to remove
-          biased methylation positions for RRBS sequence files.', markedDefault: false,
-        versionName: 0.5.0}
+      - {description: The NBIA Data Retriever is an application to download radiology
+          images from the TCIA Radiology Portal., markedDefault: false, versionName: '4.2'}
+    - categories: biology, molecular biology
+      defaultVersionName: 3.0.0
+      description: Library to work with mmCIF and PDB files.
+      package: libcifpp
+      url: https://github.com/PDB-REDO/libcifpp
+      versions:
+      - {description: Library to work with mmCIF and PDB files., markedDefault: false,
+        versionName: 3.0.0}
+    - categories: biology, genomics
+      defaultVersionName: 2.0.1_py39
+      description: HTSeq is a Python library to facilitate processing and analysis
+        of data from high-throughput sequencing (HTS) experiments.
+      package: py-htseq
+      url: http://htseq.readthedocs.io/
+      versions:
+      - {description: HTSeq is a Python library to facilitate processing and analysis
+          of data from high-throughput sequencing (HTS) experiments., markedDefault: false,
+        versionName: 2.0.1_py39}
     - categories: biology, genomics
       defaultVersionName: 2.7.10b
       description: 'STAR: ultrafast universal RNA-seq aligner.'
@@ -4792,14 +4865,18 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.3.1
-    - categories: biology, molecular biology
-      defaultVersionName: 3.0.0
-      description: Library to work with mmCIF and PDB files.
-      package: libcifpp
-      url: https://github.com/PDB-REDO/libcifpp
+    - categories: biology, genomics
+      defaultVersionName: 0.5.0
+      description: Trim Galore! is a wrapper script to automate quality and adapter
+        trimming as well as quality control, with some added functionality to remove
+        biased methylation positions for RRBS sequence files.
+      package: trim_galore
+      url: https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
       versions:
-      - {description: Library to work with mmCIF and PDB files., markedDefault: false,
-        versionName: 3.0.0}
+      - {description: 'Trim Galore! is a wrapper script to automate quality and adapter
+          trimming as well as quality control, with some added functionality to remove
+          biased methylation positions for RRBS sequence files.', markedDefault: false,
+        versionName: 0.5.0}
     - categories: biology, genomics
       defaultVersionName: 3.0.2_py27
       description: Assessing genome assembly and annotation completeness with Benchmarking
@@ -4809,6 +4886,20 @@ software_modules:
       versions:
       - {description: Assessing genome assembly and annotation completeness with Benchmarking
           Universal Single-Copy Orthologs (BUSCO)., markedDefault: false, versionName: 3.0.2_py27}
+    - categories: biology, cryo-em
+      defaultVersionName: 0.2.4_py36
+      description: A pipeline for particle detection in cryo-electron microscopy images
+        using convolutional neural networks trained from positive and unlabeled examples.
+      package: py-topaz
+      url: https://github.com/tbepler/topaz
+      versions:
+      - description: A pipeline for particle detection in cryo-electron microscopy
+          images using convolutional neural networks trained from positive and unlabeled
+          examples.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.2.4_py36
     - categories: biology, genomics
       defaultVersionName: 1.16.1
       description: Tools (written in C using htslib) for manipulating next-generation
@@ -4823,15 +4914,6 @@ software_modules:
       - {description: Tools (written in C using htslib) for manipulating next-generation
           sequencing data., markedDefault: false, versionName: 1.16.1}
     - categories: biology, genomics
-      defaultVersionName: 2.5.4_py39
-      description: OrthoFinder is a fast, accurate and comprehensive platform for
-        comparative genomics.
-      package: py-orthofinder
-      url: https://github.com/davidemms/OrthoFinder
-      versions:
-      - {description: 'OrthoFinder is a fast, accurate and comprehensive platform
-          for comparative genomics.', markedDefault: false, versionName: 2.5.4_py39}
-    - categories: biology, genomics
       defaultVersionName: '2.20'
       description: The bcl2fastq2 conversion software can be used to convert BCL files
         from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.
@@ -4841,6 +4923,21 @@ software_modules:
       - {description: 'The bcl2fastq2 conversion software can be used to convert BCL
           files from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.',
         markedDefault: false, versionName: '2.20'}
+    - categories: biology, cryo-em
+      defaultVersionName: '2.2'
+      description: EMAN2 is a broadly based greyscale scientific image processing
+        suite with a primary focus on processing data from transmission electron microscopes.
+      package: eman2
+      url: http://blake.bcm.edu/emanwiki/EMAN2
+      versions:
+      - description: EMAN2 is a broadly based greyscale scientific image processing
+          suite with a primary focus on processing data from transmission electron
+          microscopes.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '2.2'
     - categories: biology, genomics
       defaultVersionName: 2.30.0
       description: The bedtools utilities are a swiss-army knife of tools for a wide-range
@@ -4852,30 +4949,14 @@ software_modules:
           wide-range of genomics analysis tasks., markedDefault: false, versionName: 2.27.1}
       - {description: The bedtools utilities are a swiss-army knife of tools for a
           wide-range of genomics analysis tasks., markedDefault: false, versionName: 2.30.0}
-    - categories: biology, neurology
-      defaultVersionName: 1.3.1
-      description: Connectome Workbench is an open source, freely available visualization
-        and discovery tool used to map neuroimaging data, especially data generated
-        by the Human Connectome Project.
-      package: workbench
-      url: https://www.humanconnectome.org/software/connectome-workbench
+    - categories: biology, genomics
+      defaultVersionName: 3.3.1_py36
+      description: Tools to process and analyze deep sequencing data.
+      package: py-deeptools
+      url: https://github.com/deeptools/deepTools/
       versions:
-      - {description: 'Connectome Workbench is an open source, freely available visualization
-          and discovery tool used to map neuroimaging data, especially data generated
-          by the Human Connectome Project.', markedDefault: false, versionName: 1.3.1}
-    - categories: biology, neurology
-      defaultVersionName: 2.4.0
-      description: ANTs computes high-dimensional mappings to capture the statistics
-        of brain structure and function.
-      package: ants
-      url: https://stnava.github.io/ANTs
-      versions:
-      - {description: ANTs computes high-dimensional mappings to capture the statistics
-          of brain structure and function., markedDefault: false, versionName: 2.1.0}
-      - {description: ANTs computes high-dimensional mappings to capture the statistics
-          of brain structure and function., markedDefault: false, versionName: 2.3.1}
-      - {description: ANTs computes high-dimensional mappings to capture the statistics
-          of brain structure and function., markedDefault: false, versionName: 2.4.0}
+      - {description: Tools to process and analyze deep sequencing data., markedDefault: false,
+        versionName: 3.3.1_py36}
     - categories: biology, clinical science
       defaultVersionName: '20180704'
       description: Simvascular is a blood flow simulation and analysis toolkit. This
@@ -4914,32 +4995,27 @@ software_modules:
         versionName: 2.8.4}
       - {description: Trinity RNA-Seq de novo transcriptome assembly., markedDefault: false,
         versionName: 2.13.1}
-    - categories: biology, genomics
-      defaultVersionName: 2.2.3_py39
-      description: A software package for animal pose estimation.
-      package: py-deeplabcut
-      url: http://deeplabcut.org
-      versions:
-      - description: A software package for animal pose estimation.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.2.3_py39
     - categories: biology, neurology
-      defaultVersionName: 0.10.9_py36
-      description: The Maastricht Diffusion Toolbox, MDT, is a framework and library
-        for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging
-        (MRI) modeling.
-      package: py-mdt
-      url: https://github.com/cbclab/MDT
+      defaultVersionName: 2.4.0
+      description: ANTs computes high-dimensional mappings to capture the statistics
+        of brain structure and function.
+      package: ants
+      url: https://stnava.github.io/ANTs
       versions:
-      - description: The Maastricht Diffusion Toolbox, MDT, is a framework and library
-          for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging
-          (MRI) modeling.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.10.9_py36
+      - {description: ANTs computes high-dimensional mappings to capture the statistics
+          of brain structure and function., markedDefault: false, versionName: 2.1.0}
+      - {description: ANTs computes high-dimensional mappings to capture the statistics
+          of brain structure and function., markedDefault: false, versionName: 2.3.1}
+      - {description: ANTs computes high-dimensional mappings to capture the statistics
+          of brain structure and function., markedDefault: false, versionName: 2.4.0}
+    - categories: biology, genomics
+      defaultVersionName: 2.10.0
+      description: 'HiC-Pro: An optimized and flexible pipeline for Hi-C data processing.'
+      package: hic-pro
+      url: https://github.com/nservant/HiC-Pro
+      versions:
+      - {description: 'HiC-Pro: An optimized and flexible pipeline for Hi-C data processing.',
+        markedDefault: false, versionName: 2.10.0}
     - categories: biology, genomics
       defaultVersionName: '1.8'
       description: A single molecule sequence assembler for genomes large and small.

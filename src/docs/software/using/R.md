@@ -1,7 +1,7 @@
 ## Introduction
 
 [R][url_r] is a programming language and software environment for statistical
-computing and graphics.  It is similar to the [S][url_s] language and
+computing and graphics. It is similar to the [S][url_s] language and
 environment developed at Bell Laboratories. R provides a wide variety of
 statistical and graphical techniques and is highly extensible.
 
@@ -124,7 +124,7 @@ To accommodate individual user's requirements, R provides a way for each user
 to install packages in the location of their choice. The default value for a
 directory where users can install their own R packages is
 `$HOME/R/x86_64-pc-linux-gnu-library/<R_version>` where `<R_version>` depends
-on the R version that is used.  For instance, if you have the `R/3.5.1` module
+on the R version that is used. For instance, if you have the `R/3.5.1` module
 loaded, the default R user library path will be
 `$HOME/R/x86_64-pc-linux-gnu-library/3.5`.
 
@@ -324,7 +324,7 @@ For instance, to install `dplyr` from <https://github.com/tidyverse/dplyr>:
 #### Package dependencies
 
 Sometimes when installing R packages, other software is needed for the
-installation and/or compilation.  For instance, when trying to install the `sf`
+installation and/or compilation. For instance, when trying to install the `sf`
 package, you may encounter the following error messages:
 
 ``` R
@@ -336,7 +336,7 @@ configure: error: gdal-config not found or not executable.
 ```
 
 This is because `sf` needs a few dependencies, like `udunits` and `gdal` in
-order to compile and install successfully.  Fortunately those dependencies are
+order to compile and install successfully. Fortunately those dependencies are
 already available as modules on Sherlock.
 
 Whenever you see "not found" errors, you may want to try searching the modules
@@ -369,9 +369,9 @@ $ R
 > install.packages("sf")
 ```
 
-Getting dependencies right could be a matter of trial and error.  You may have
+Getting dependencies right could be a matter of trial and error. You may have
 to load R, install packages, search modules, load modules, install packages
-again and so forth.  Fortunately, R packages only need to be installed once,
+again and so forth. Fortunately, R packages only need to be installed once,
 and many R package dependencies are already available as modules on Sherlock,
 you just need to search for them with `module spider` and load them.
 
@@ -410,6 +410,37 @@ To remove a package from your local R library, you can use the
 ```
 
 ### Examples
+
+#### Installing devtools
+
+[`devtools`][url_devtools] is a package that provides R functions that simplify
+many common tasks. While its core functionality revolves around package
+development, `devtools` can also be used to install packages, particularly
+those on GitHub.
+
+Installing `devtools` is somewhat memory-intensive and has several
+dependencies. The following example shows how to run an interactive dev
+session with 4 CPUs, load the modules for the necessary dependencies, and
+install `devtools` for R version 4.2.0.
+
+```none
+# Launch interactive dev session with 4 CPUs
+
+$ sh_dev -c 4
+
+# Load the required modules
+
+$ ml purge
+$ ml R/4.2.0
+$ ml system harfbuzz fribidi
+$ ml cmake libgit2
+$ ml openssl
+
+# Launch R and install devtools
+
+$ R
+> install.packages("devtools", repos = "http://cran.us.r-project.org", Ncpus=4)
+```
 
 #### Single node
 
@@ -686,6 +717,7 @@ which shows a decent speedup for running on a GPU for the largest matrix sizes.
 [url_r_docs]:           //stat.ethz.ch/R-manual/
 [url_s]:                /ect.bell-labs.com/sl/S/
 [url_heredoc]:          //en.wikipedia.org/wiki/Here_document
+[url_devtools]:         //cran.r-project.org/web/packages/devtools/index.html
 [url_doparallel]:       //cran.r-project.org/web/packages/doParallel/index.html
 [url_cran]:             //cran.r-project.org/
 [url_rmpi]:             //cran.r-project.org/web/packages/Rmpi
