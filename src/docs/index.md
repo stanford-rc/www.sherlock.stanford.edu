@@ -264,6 +264,7 @@ Here's what it looks like in motion:
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
+
 [url_srcc]:         //srcc.stanford.edu
 [url_docs]:         //www.sherlock.stanford.edu/docs
 [url_news]:         //news.sherlock.stanford.edu
