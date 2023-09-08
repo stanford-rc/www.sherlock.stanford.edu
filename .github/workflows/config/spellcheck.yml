@@ -3,7 +3,7 @@ matrix:
   aspell:
     lang: en
     d: en_US
-  ignore-case: true
+    ignore-case: true
   dictionary:
     wordlists:
       - .github/workflows/config/spellcheck.wordlist.txt
@@ -14,7 +14,11 @@ matrix:
       - pymdownx.superfences
   - pyspelling.filters.html:
       comments: false
+      attributes:
+      - title
+      - alt
       ignores:
+      - ':matches(code, pre)'
       - code
       - pre
   sources:
