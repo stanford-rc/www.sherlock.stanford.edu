@@ -217,7 +217,8 @@ than welcome to join the following channels:
     practices, tutorials or other info, please feel free to do so there.
 
 For more details about the SRCC Slack Workspace, and instructions on how to
-join this workspace and its channels, please see <https://srcc.stanford.edu/support>.
+join this workspace and its channels, please see the SRCC [support
+page][url_srcc_support].
 
 !!! warning "Slack is not an official support channel"
 
@@ -267,6 +268,7 @@ Here's what it looks like in motion:
 [url_docs]:         //www.sherlock.stanford.edu/docs
 [url_news]:         //news.sherlock.stanford.edu
 [url_status]:       //status.sherlock.stanford.edu
+[url_srcc_support]: //srcc/stanford.edu/support
 
 [url_invest]:       /docs/concepts#investing-in-sherlock
 [url_concepts]:     /docs/concepts
