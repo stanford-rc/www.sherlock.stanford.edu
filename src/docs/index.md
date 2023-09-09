@@ -87,7 +87,7 @@ information through various channels:
 | ------- | --- | ------- |
 | **Documentation** <br/><small>You are here</small>| [www.sherlock.stanford.edu/docs][url_docs] | information to help new users start on Sherlock, and more in-depth documentation for users already familiar with the environment. |
 | **Changelog** | [news.sherlock.stanford.edu][url_news] | announces, news and updates about Sherlock. |
-| **Dashboard** | [status.sherlock.stanford.edu][url_status] | status of Sherlock's main components and services, outages, maintenances. |
+| **Dashboard** | [status.sherlock.stanford.edu][url_status] | status of Sherlock's main components and services, outages, planned maintenance. |
 
 To get started, you can take a look at the [concepts][url_concepts] and
 [glossary][url_glossary] pages to get familiar with the terminology used
