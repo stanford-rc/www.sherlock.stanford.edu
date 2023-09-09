@@ -12,6 +12,10 @@ matrix:
   - pyspelling.filters.markdown:
       markdown_extensions:
       - pymdownx.superfences
+      - attr_list
+      - pymdownx.emoji:
+          emoji_index: !!python/name:materialx.emoji.twemoji
+          emoji_generator: !!python/name:materialx.emoji.to_svg
   - pyspelling.filters.html:
       comments: false
       attributes:
@@ -21,6 +25,7 @@ matrix:
       - ':matches(code, pre)'
       - code
       - pre
+  - pyspelling.filters.url:
   sources:
   - '**/*.md'
   default_encoding: utf-8
