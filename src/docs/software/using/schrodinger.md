@@ -2,7 +2,7 @@
 
 The [Schrödinger][url_schrodinger] suite is a commercial and licensed software
 used to simulate and model molecular behavior at the atomic level.
-Schrödinger's software tools include molecular dynamics simulations, quantum
+The Schrödinger software tools include molecular dynamics simulations, quantum
 mechanics calculations, virtual screening and visualization tools.
 
 ### More documentation
@@ -19,11 +19,11 @@ contact [Schrödinger support][url_schrodinger_support].
 [Stanford Libraries][url_sul] have purchased a site license for the Schrödinger
 suite.  Please contact Stanford Libraries at sciencelibrary@stanford.edu and CC
 {{ support_email }} if you would like to access Schrödinger on Sherlock: after
-we receive confirmation, your PI group will be granted access.  on Sherlock.
+we receive confirmation, your PI group will be granted access on Sherlock.
 
 ### Using Schrödinger
 
-You can use Schrödinger software fater having loaded the corresponding
+You can use Schrödinger software after having loaded the corresponding
 [software module][url_modules] with the `module` command. To load the current
 default version:
 
@@ -77,7 +77,7 @@ $ maestro
 ```
 
 You'll need to enable X11 forwarding in your initial connection to Sherlock,
-and request it as well for your job allocationi.
+and request it as well for your job allocation.
 
 Here are some example commands you can run:
 
@@ -104,15 +104,15 @@ interface on your local machine's display.
     scheduled computations are carried over on the cluster.
 
 
-For more information about X11 forwarding, you can refer to this [UIT
-page][url_x11].
+For more information about X11 forwarding, you can refer to this
+[page][url_x11].
 
 
 ## Examples
 
 ### batch job submission
 
-Here's an example [sbatch][url_sbatch] script, requesting 1 CPU, for 10 minutes
+Here's an example [batch][url_sbatch] script, requesting 1 CPU, for 10 minutes
 on the `normal` partition, that can be saved as `water.sbatch`:
 
 ```bash
