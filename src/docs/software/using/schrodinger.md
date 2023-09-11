@@ -2,7 +2,7 @@
 
 The [Schrödinger][url_schrodinger] suite is a commercial and licensed software
 used to simulate and model molecular behavior at the atomic level.
-Schrödinger's software tools include molecular dynamics simulations, quantum
+The Schrödinger software tools include molecular dynamics simulations, quantum
 mechanics calculations, virtual screening and visualization tools.
 
 ### More documentation
@@ -104,15 +104,15 @@ interface on your local machine's display.
     scheduled computations are carried over on the cluster.
 
 
-For more information about X11 forwarding, you can refer to this [UIT
-page][url_x11].
+For more information about X11 forwarding, you can refer to this
+[page][url_x11].
 
 
 ## Examples
 
 ### batch job submission
 
-Here's an example [sbatch][url_sbatch] script, requesting 1 CPU, for 10 minutes
+Here's an example [batch][url_sbatch] script, requesting 1 CPU, for 10 minutes
 on the `normal` partition, that can be saved as `water.sbatch`:
 
 ```bash
