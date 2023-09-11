@@ -1,26 +1,27 @@
 ## Introduction
 
 If you need to sync files between cloud storage to Sherlock,
-[rclone][url_rclone] is a command line program that can help. You can easily
-use it to transfer files from a cloud storage provider to Sherlock or Oak, or vice
-versa. The following tutorial walks through transferring files between Google Drive and 
-Oak storage.
+[`rclone`][url_rclone] is a command line program that can help. You can easily
+use it to transfer files from a cloud storage provider to Sherlock or Oak, or
+vice versa. The following tutorial walks through transferring files between
+Google Drive and Oak storage.
 
 ### More documentation
 
-For more information on running rclone, please see the 
+For more information on running `rclone`, please see the
 [official documentation][url_rclone].
 
 ## Setup
 
-### rclone config
+### `rclone config`
 
-Before transferring data for the first time, you will need to configure rclone so
-that it can access your Google Drive. This will require use of your browser, so you
-will need to connect to Sherlock with **local port forwarding** (`ssh -L`). You
-only need to do this when you are configuring rclone for the first time.
+Before transferring data for the first time, you will need to configure
+`rclone` so that it can access your Google Drive. This will require use of your
+browser, so you will need to connect to Sherlock with **local port forwarding**
+(`ssh -L`). You only need to do this when you are configuring `rclone` for the
+first time.
 
-When running the rclone config you will be prompted to enter names and values,
+When running `rclone config` you will be prompted to enter names and values,
 indicated by the `>` symbol. To leave it empty, press Enter.
 
 ```shell
@@ -65,13 +66,13 @@ Option client_id.
 Google Application Client Id
 ...
 Enter a value. Press Enter to leave empty.
-client_id> 
+client_id>
 
 Option client_secret.
 OAuth Client Secret.
 Leave blank normally.
 Enter a value. Press Enter to leave empty.
-client_secret> 
+client_secret>
 
 Option scope.
 Scope that rclone should use when requesting access from drive.
@@ -87,7 +88,7 @@ Service Account Credentials JSON file path.
 Leave blank normally.
 ...
 Enter a value. Press Enter to leave empty.
-service_account_file> 
+service_account_file>
 
 Edit advanced config?
 y) Yes
@@ -102,19 +103,17 @@ y) Yes (default)
 n) No
 y/n> y
 
-2023/09/12 10:51:55 NOTICE: If your browser doesn't open automatically go to the 
+2023/09/12 10:51:55 NOTICE: If your browser doesn't open automatically go to the
 following link: http://127.0.0.1:53682/auth?state=#################
 2023/09/12 10:51:55 NOTICE: Log in and authorize rclone for access
 2023/09/12 10:51:55 NOTICE: Waiting for code...
 
 ```
-<br>
 
-At this point, you can copy and paste the provided link into your browser. You will
-be asked to confirm that you want to allow rclone to access your files. Once you 
-have successfully done so, you can complete the configuration in the terminal.
-
-<br>
+At this point, you can copy and paste the provided link into your browser. You
+will be asked to confirm that you want to allow `rclone` to access your files.
+Once you have successfully done so, you can complete the configuration in the
+terminal.
 
 ```shell
 Configure this as a Shared Drive (Team Drive)?
@@ -152,14 +151,14 @@ e/n/d/r/c/s/q> q
 
 ## Examples
 
-### rclone copy
+### `rclone copy`
 
-To transfer data between cloud storage and Sherlock or Oak, you can use the `rclone 
-copy` command.
+To transfer data between cloud storage and Sherlock or Oak, you can use the
+`rclone copy` command.
 
 ``` shell
 # Start an interactive dev session
-$ sh_dev 
+$ sh_dev
 
 # Load the rclone module
 $ ml system rclone
@@ -171,10 +170,10 @@ $ Copy a single file from Oak to Google Drive
 $ rclone copy /oak/stanford/groups/<group name>/<file name> gdrive:
 ```
 
-### rclone ls/lsd
+### `rclone ls`/`lsd`
 
-To view the files and folders in your cloud storage, you can use the `rclone ls` and 
-`rclone lsd` commands, respectively.
+To view the files and folders in your cloud storage, you can use the `rclone
+ls` and `rclone lsd` commands, respectively.
 
 ```shell
 # Load the rclone module
