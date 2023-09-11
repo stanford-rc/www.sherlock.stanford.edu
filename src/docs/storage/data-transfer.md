@@ -384,6 +384,9 @@ $ module load system rclone
 $ rclone --help
 ```
 
+This [tutorial][url_rclone_tutorial] provides an example of tranferring files between
+Google Drive and Oak storage.
+
 The Globus CLI (see above) can also be used to copy files from Sherlock to
 Stanford's Google Drive.
 
@@ -441,6 +444,7 @@ documentation][url_rclone].
 [url_globus_oak]:         //app.globus.org/file-manager?origin_id=8b3a8b64-d4ab-4551-b37e-ca0092f769a7
 [url_bbcp]:         //www.slac.stanford.edu/~abh/bbcp
 [url_rclone]:       //rclone.org/
+[url_rclone_tutorial]:    //docs/software/using/rclone
 [url_aws-cli]:      //aws.amazon.com/cli/
 [url_uit_gdrive]:   //uit.stanford.edu/service/googleapps/drive
 [url_oak]:          //uit.stanford.edu/service/oak-storage
