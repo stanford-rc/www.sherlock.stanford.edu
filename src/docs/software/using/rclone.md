@@ -6,7 +6,14 @@ use it to transfer files from a cloud storage provider to Sherlock or Oak, or vi
 versa. The following tutorial walks through transferring files between Google Drive and 
 Oak storage.
 
+### More documentation
+
+For more information on running rclone, please see the 
+[official documentation][url_rclone].
+
 ## Setup
+
+### rclone config
 
 Before transferring data for the first time, you will need to configure rclone so
 that it can access your Google Drive. This will require use of your browser, so you
@@ -143,7 +150,9 @@ e/n/d/r/c/s/q> q
 ```
 
 
-## Data Transfer
+## Examples
+
+### rclone copy
 
 To transfer data between cloud storage and Sherlock or Oak, you can use the `rclone 
 copy` command.
@@ -155,6 +164,22 @@ $ sh_dev
 # Load the rclone module
 $ ml system rclone
 
+# Copy a folder from Google Drive to Oak
+$ rclone copy gdrive:<folder name> /oak/stanford/groups/<group_name>/<folder name>
+
+$ Copy a single file from Oak to Google Drive
+$ rclone copy /oak/stanford/groups/<group name>/<file name> gdrive:
+```
+
+### rclone ls/lsd
+
+To view the files and folders in your cloud storage, you can use the `rclone ls` and 
+`rclone lsd` commands, respectively.
+
+```shell
+# Load the rclone module
+$ ml system rclone
+
 # List all top-level directories in Google Drive
 $ rclone lsd gdrive: --max-depth 1
 
@@ -163,15 +188,7 @@ $ rclone ls gdrive:<folder name>
 
 # List all files on Google Drive (including those in folders)
 $ rclone ls gdrive:
-
-# Copy a folder from Google Drive to Oak
-$ rclone copy gdrive:<folder name> /oak/stanford/groups/<group_name>/<folder name>
-
-$ Copy a single file from Oak to Google Drive
-$ rclone copy /oak/stanford/groups/<group name>/<file name> gdrive:
 ```
-
-
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
