@@ -3,20 +3,33 @@ matrix:
   aspell:
     lang: en
     d: en_US
-  ignore-case: true
+    ignore-case: true
   dictionary:
     wordlists:
       - .github/workflows/config/spellcheck.wordlist.txt
     encoding: utf-8
   pipeline:
+  - pyspelling.filters.context:
+      context_visible_first: true
+      delimiters:
+      - open: ':'
+        content: '[\w-]+'
+        close: ':'
   - pyspelling.filters.markdown:
       markdown_extensions:
       - pymdownx.superfences
+      - pymdownx.snippets
+      - attr_list
   - pyspelling.filters.html:
       comments: false
+      attributes:
+      - title
+      - alt
       ignores:
+      - ':matches(code, pre)'
       - code
       - pre
+  - pyspelling.filters.url:
   sources:
   - '**/*.md'
   default_encoding: utf-8

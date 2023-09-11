@@ -19,11 +19,11 @@ contact [Schrödinger support][url_schrodinger_support].
 [Stanford Libraries][url_sul] have purchased a site license for the Schrödinger
 suite.  Please contact Stanford Libraries at sciencelibrary@stanford.edu and CC
 {{ support_email }} if you would like to access Schrödinger on Sherlock: after
-we receive confirmation, your PI group will be granted access.  on Sherlock.
+we receive confirmation, your PI group will be granted access on Sherlock.
 
 ### Using Schrödinger
 
-You can use Schrödinger software fater having loaded the corresponding
+You can use Schrödinger software after having loaded the corresponding
 [software module][url_modules] with the `module` command. To load the current
 default version:
 
@@ -77,7 +77,7 @@ $ maestro
 ```
 
 You'll need to enable X11 forwarding in your initial connection to Sherlock,
-and request it as well for your job allocationi.
+and request it as well for your job allocation.
 
 Here are some example commands you can run:
 

@@ -87,7 +87,7 @@ information through various channels:
 | ------- | --- | ------- |
 | **Documentation** <br/><small>You are here</small>| [www.sherlock.stanford.edu/docs][url_docs] | information to help new users start on Sherlock, and more in-depth documentation for users already familiar with the environment. |
 | **Changelog** | [news.sherlock.stanford.edu][url_news] | announces, news and updates about Sherlock. |
-| **Dashboard** | [status.sherlock.stanford.edu][url_status] | status of Sherlock's main components and services, outages, maintenances. |
+| **Dashboard** | [status.sherlock.stanford.edu][url_status] | status of Sherlock's main components and services, outages, planned maintenance. |
 
 To get started, you can take a look at the [concepts][url_concepts] and
 [glossary][url_glossary] pages to get familiar with the terminology used
@@ -217,7 +217,8 @@ than welcome to join the following channels:
     practices, tutorials or other info, please feel free to do so there.
 
 For more details about the SRCC Slack Workspace, and instructions on how to
-join this workspace and its channels, please see <https://srcc.stanford.edu/support>.
+join this workspace and its channels, please see the SRCC [support
+page][url_srcc_support].
 
 !!! warning "Slack is not an official support channel"
 
@@ -263,10 +264,12 @@ Here's what it looks like in motion:
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
+
 [url_srcc]:         //srcc.stanford.edu
 [url_docs]:         //www.sherlock.stanford.edu/docs
 [url_news]:         //news.sherlock.stanford.edu
 [url_status]:       //status.sherlock.stanford.edu
+[url_srcc_support]: //srcc/stanford.edu/support
 
 [url_invest]:       /docs/concepts#investing-in-sherlock
 [url_concepts]:     /docs/concepts
