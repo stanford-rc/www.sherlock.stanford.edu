@@ -19,9 +19,9 @@ performance for data transfers from and to campus.
     expected.
 
     For transferring large amounts of data, Sherlock features a specific [Data
-    Transfer Node](#data-transfer-nodes-dtns), with dedicated bandwidth, as well as a managed
-    [Globus endpoint](#globus), that can be used for scheduled, unattended data
-    transfers.
+    Transfer Node](#data-transfer-nodes-dtns), with dedicated bandwidth, as
+    well as a managed [Globus endpoint](#globus), that can be used for
+    scheduled, unattended data transfers.
 
 We also provide tools on Sherlock to transfer data to various [Cloud
 providers](#cloud-storage), such as AWS, Google Drive, Dropbox, Box, etc.
@@ -99,7 +99,7 @@ and then should not be typed in).
 
     * [WinSCP][url_winscp] :fontawesome-brands-windows:
     * [SecureFX][url_securefx] :fontawesome-brands-windows:,
-    * [Fetch][url_fetch][^fetch_su] :fontawesome-brands-apple:
+    * [Fetch][url_fetch][^fetch] :fontawesome-brands-apple:
     * [CyberDuck][url_cyberduck] :fontawesome-brands-apple:
 
     When setting up your connection to Sherlock in the above programs, use the
@@ -122,7 +122,7 @@ and then should not be typed in).
     For more information about using the command-line SFTP client, you can
     refer to this [tutorial][url_sftp_tuto] for more details and examples.
 
-#### rsync
+#### `rsync`
 
 : If you have complex hierarchies of files to transfer, or if you need to
     synchronize a set of files and directories between your local machine and
@@ -179,8 +179,8 @@ and then should not be typed in).
     connection.
 
     SSHFS is available for [Linux][url_sshfs_linux] :fontawesome-brands-linux:,
-    [MacOS][url_sshfs_macos] :fontawesome-brands-apple:, and [Windows][url_sshfs_windows]
-    :fontawesome-brands-windows:.
+    [MacOS][url_sshfs_macos] :fontawesome-brands-apple:, and
+    [Windows][url_sshfs_windows] :fontawesome-brands-windows:.
 
     !!! warning "SSHFS on macOS"
 
@@ -282,7 +282,7 @@ For more information about the API, please see the
 
 For more information about the CLI, please see the
 [Globus CLI documentation][url_globus_cli] and
-[Globus CLI quickstart][url_globus_cli_quickstart]. Note that the Globus CLI
+[Globus CLI quick start][url_globus_cli_quickstart]. Note that the Globus CLI
 is available through the module system on Sherlock:
 
 ```shell
@@ -294,7 +294,7 @@ $ globus login
 Once you've authorized the application, you can use the `globus` CLI to copy
 files in between endpoints and collections that you have access to. Endpoints
 and collections are identified by their unique UUID4 identifiers, which are
-viewable through the [Globus webapp][url_globus_login]. The CLI will step you
+viewable through the [Globus web app][url_globus_login]. The CLI will step you
 through any additional authorizations required for you to access the
 endpoints or collections.
 
@@ -332,12 +332,12 @@ It supports:
 
 * SSH-based protocols (such as the ones [described
   above](#ssh-based-protocols))
-* [BBCP][url_bbcp]
+* [`bbcp`][url_bbcp]
 * [Globus](#globus)
 
 
 To transfer files via the DTNs, simply use `dtn.sherlock.stanford.edu` as a
-remote server hostname. For instance:
+remote server host name. For instance:
 
 ``` shell
 $ scp foo <sunetid>@dtn.sherlock.stanford.edu:~/foo
@@ -345,9 +345,9 @@ $ scp foo <sunetid>@dtn.sherlock.stanford.edu:~/foo
 
 !!! Important "$HOME on DTNs"
 
-    One important difference to keep in mind when transferring files through the
-    Sherlock DTNs is that the default destination path for files, unless specified,
-    is the user `$SCRATCH` directory, not `$HOME`.
+    One important difference to keep in mind when transferring files through
+    the Sherlock DTNs is that the default destination path for files, unless
+    specified, is the user `$SCRATCH` directory, not `$HOME`.
 
     That means that the following command:
     ```
@@ -355,11 +355,9 @@ $ scp foo <sunetid>@dtn.sherlock.stanford.edu:~/foo
     ```
     will create the `foo` file in  `$SCRATCH/foo`, and not in `$HOME/foo`.
 
-    You can transfer file to your `$HOME` directory via the DTNs by specifying the
-    full path as the destination:
-    ```
-    $ scp foo <sunetid>@dtn.sherlock.stanford.edu:$HOME/foo
-    ```
+    You can transfer file to your `$HOME` directory via the DTNs by specifying
+    the full path as the destination: ``` $ scp foo
+    <sunetid>@dtn.sherlock.stanford.edu:$HOME/foo ```
 
 ## Cloud storage
 
@@ -384,12 +382,16 @@ $ module load system rclone
 $ rclone --help
 ```
 
+This [tutorial][url_rclone_tutorial] provides an example of tranferring files between
+Google Drive and Oak storage.
+
 The Globus CLI (see above) can also be used to copy files from Sherlock to
 Stanford's Google Drive.
 
 ### AWS
 
-You can also access AWS storage from the Sherlock command line with the [AWS Command Line Interface][url_aws-cli]:
+You can also access AWS storage from the Sherlock command line with the [AWS
+Command Line Interface][url_aws-cli]:
 
 ```shell
 $ module load system aws-cli
@@ -399,7 +401,7 @@ $ aws help
 ### Other services
 
 If you need to access other cloud storage services, you can use
-[rclone][url_rclone]: it can be used to sync files and directories to and from
+[`rclone`][url_rclone]: it can be used to sync files and directories to and from
 Google Drive, Amazon S3, Box, Dropbox, Google Cloud Storage, Amazon Drive,
 Microsoft OneDrive and many more.
 
@@ -441,6 +443,7 @@ documentation][url_rclone].
 [url_globus_oak]:         //app.globus.org/file-manager?origin_id=8b3a8b64-d4ab-4551-b37e-ca0092f769a7
 [url_bbcp]:         //www.slac.stanford.edu/~abh/bbcp
 [url_rclone]:       //rclone.org/
+[url_rclone_tutorial]:    /docs/software/using/rclone
 [url_aws-cli]:      //aws.amazon.com/cli/
 [url_uit_gdrive]:   //uit.stanford.edu/service/googleapps/drive
 [url_oak]:          //uit.stanford.edu/service/oak-storage
@@ -448,7 +451,7 @@ documentation][url_rclone].
 [comment]: #  (footnotes -----------------------------------------------------)
 
 [^ssh]: For more details, see the [SSH clients page][url_ssh_clients].
-[^fetch_su]: Fetch is a commercial program, and is available as part of
+[^fetch]: Fetch is a commercial program, and is available as part of
   the [Essential Stanford Software][url_fetch_su] bundle.
 
 
