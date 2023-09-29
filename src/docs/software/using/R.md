@@ -135,6 +135,14 @@ directory.
 
 #### Installing packages
 
+!!! Warning "Install R packages in a standard shell session"
+
+   Make sure to install your packages in a standard Sherlock shell session and not in an RStudio session.
+
+
+
+   
+
 To install a R package in your personal environment, the first thing to do is
 load the R module:
 
