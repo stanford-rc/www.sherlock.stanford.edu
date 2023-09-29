@@ -68,9 +68,10 @@ have different ways of presenting the script's output:
 
 Here's an example R batch script that can be submitted via `sbatch`. It runs a
 simple matrix multiplication example, and demonstrates how to feed R code as a
-[HEREDOC][url_heredoc] to R directly, so no intermediate R script is necessary:
+[`HEREDOC`][url_heredoc] to R directly, so no intermediate R script is
+necessary:
 
-=== "Rtest.sbatch"
+=== "`Rtest.sbatch`"
 
     ``` bash
     #!/usr/bin/bash
@@ -137,11 +138,9 @@ directory.
 
 !!! Warning "Install R packages in a standard shell session"
 
-   Make sure to install your packages in a standard Sherlock shell session and not in an RStudio session.
+    Make sure to install your packages in a standard Sherlock shell session,
+    not in an RStudio session.
 
-
-
-   
 
 To install a R package in your personal environment, the first thing to do is
 load the R module:
@@ -419,7 +418,7 @@ To remove a package from your local R library, you can use the
 
 ### Examples
 
-#### Installing devtools
+#### Installing `devtools`
 
 [`devtools`][url_devtools] is a package that provides R functions that simplify
 many common tasks. While its core functionality revolves around package
@@ -427,9 +426,9 @@ development, `devtools` can also be used to install packages, particularly
 those on GitHub.
 
 Installing `devtools` is somewhat memory-intensive and has several
-dependencies. The following example shows how to run an interactive dev
-session with 4 CPUs, load the modules for the necessary dependencies, and
-install `devtools` for R version 4.2.0.
+dependencies. The following example shows how to run an interactive session
+with 4 CPUs, load the modules for the necessary dependencies, and install
+`devtools` for R version 4.2.0.
 
 ```none
 # Launch interactive dev session with 4 CPUs
@@ -452,10 +451,10 @@ $ R
 
 #### Single node
 
-R has a couple of powerful and easy to use tools for parallelizing your R jobs.
+R has a couple of powerful and easy-to-use tools to parallelize your R jobs.
 [`doParallel`][url_doparallel] is one of them. If the `doParallel` package is
 not installed in your environment yet, you can [install it in a few easy
-steps](#installing).
+steps](#installing-packages).
 
 Here is a quick `doParallel` example that uses one node and 16 cores on
 Sherlock (more nodes or CPU cores can be requested, as needed).
@@ -463,7 +462,7 @@ Sherlock (more nodes or CPU cores can be requested, as needed).
 
 Save the two scripts below in a directory on Sherlock:
 
-=== "doParallel_test.R"
+=== "`doParallel_test.R`"
 
     ``` R
     # Example doParallel script
@@ -496,7 +495,7 @@ Save the two scripts below in a directory on Sherlock:
     parallel_time
     ```
 
-=== "doParallel_test.sbatch"
+=== "`doParallel_test.sbatch`"
 
     ``` shell
     #!/bin/bash
@@ -570,7 +569,7 @@ Once the package is installed, the following scripts demonstrate a very basic
 `Rmpi` example.
 
 
-=== "Rmpi-test.R"
+=== "`Rmpi-test.R`"
 
     ``` R
     # Example Rmpi script
@@ -595,7 +594,7 @@ Once the package is installed, the following scripts demonstrate a very basic
     mpi.exit()
     ```
 
-=== "Rmpi-test.sbatch"
+=== "`Rmpi-test.sbatch`"
 
     ``` shell
     #!/bin/bash
@@ -648,7 +647,7 @@ Here's a quick example that compares running a matrix multiplication on a CPU
 and on a GPU using R. It requires [submitting a job to a GPU node][url_gpu] and
 the [`gpuR`][url_gpuR] R package.
 
-=== "gpuR-test.R"
+=== "`gpuR-test.R`"
 
     ``` R
     # Example gpuR script
@@ -675,7 +674,7 @@ the [`gpuR`][url_gpuR] R package.
     }
     ```
 
-=== "gpuR-test.sbatch"
+=== "`gpuR-test.sbatch`"
 
     ``` shell
     #!/bin/bash
