@@ -14,7 +14,7 @@ Sherlock.
 ## Why Anaconda should be avoided on Sherlock
 
 Anaconda is widely used in several scientific domain like data science, AI/ML,
-bioinformatics, and is often listed in some software documentation as the
+bio-informatics, and is often listed in some software documentation as the
 recommended (if not only) way to install it
 
 It is a useful solution for simplifying the management of Python and scientific
@@ -39,11 +39,18 @@ For instance:
 * Anaconda modifies your `$HOME/.bashrc` file, which can easily cause conflicts
   and slow things down when you log in.
 
-Worse, a conda recipe can force the installation of `R` (even though it's
+Worse, a `Conda` recipe can force the installation of `R` (even though it's
 already [available][url_r] on Sherlock). This installation won't perform
 nearly as well as the version we provide as a module (which uses optimized
 libraries), or not at all, the jobs launched with it may crash and end up
 wasting both computing resources and your time.
+
+!!! warning "Installation issues"
+
+    If you absolutely need to install `anaconda`/`miniconda`, please note that
+    because of the large number of files that the installer will try to open,
+    this will likely fail on a login node. So make sure to run the installation
+    on a compute node, for instance using the [`sh_dev`][url_sh_dev] command.
 
 
 ## What to do instead
@@ -75,6 +82,7 @@ modules on Sherlock,
 And that's it: your software should run, without Anaconda. If you have any
 issues, please don't hesitate to [contact us][url_contact].
 
+
 ### Use a container
 
 In some situations, the complexity of a program's dependencies requires
@@ -100,6 +108,7 @@ container images, it could be useful to collect them all in a single location
 [url_r]:              /docs/software/using/R
 [url_venv]:           /docs/software/using/python#virtual-environments
 [url_container]:      /docs/software/containers
+[url_sh_dev]:         /docs/user-guide/running-jobs/#interactive-jobs
 
 [url_contact]:        mailto:{{ support_email }}
 
