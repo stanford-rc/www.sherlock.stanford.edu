@@ -75,6 +75,11 @@ modules on Sherlock,
 And that's it: your software should run, without Anaconda. If you have any
 issues, please don't hesitate to [contact us][url_contact].
 
+!!! Warning "Install anaconda/miniconda in an sh_dev session"
+
+    Because of the large number of open files created during installation
+    make sure to run the installation on a dev or compute node using the [sh_dev][url_sh_dev] command
+
 ### Use a container
 
 In some situations, the complexity of a program's dependencies requires
@@ -100,6 +105,7 @@ container images, it could be useful to collect them all in a single location
 [url_r]:              /docs/software/using/R
 [url_venv]:           /docs/software/using/python#virtual-environments
 [url_container]:      /docs/software/containers
+[url_sh_dev]:         /docs/user-guide/running-jobs/#interactive-jobs
 
 [url_contact]:        mailto:{{ support_email }}
 
