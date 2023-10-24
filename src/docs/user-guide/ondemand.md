@@ -37,7 +37,7 @@ including many video tutorials.
 !!! Note "Connection information"
 
     To connect to Sherlock OnDemand, simply point your browser to
-    **https://login.sherlock.stanford.edu**
+    **https://ondemand.sherlock.stanford.edu**
 
 Sherlock OnDemand requires the same level of authentication than connecting to
 Sherlock over SSH. You will be prompted for your SUNet ID and password, and
@@ -225,11 +225,11 @@ Sherlock OnDemand.
 To start a Jupyter session from Sherlock OnDemand:
 
 1. Select **Interactive Apps > Jupyter Notebook** from the top menu in the
-   **Dashboard** page,
+   **Dashboard** page.
 
 2. In the screen that opens, specify the different parameters for your job
    (time limit, number of nodes, CPUs, partition to use, etc.). You can also
-   choose to be notified by email when your notebook start.
+   choose to be notified by email when your notebook starts.
 
    ![ood_jup](images/ood_jup.png)
 
@@ -273,11 +273,11 @@ you'd like to terminate and click on the red **Delete** button.
 To run RStudio via Sherlock OnDemand:
 
 1. Select **Interactive Apps > RStudio Server** from the top menu in the
-   Dashboard page,
+   Dashboard page.
 
 2. In the screen that opens, specify the different parameters for your job
    (time limit, number of nodes, CPUs, partition to use, etc.). You can also
-   choose to be notified by email when your notebook start.
+   choose to be notified by email when your session starts.
 
 3. Click the blue **Launch** button to start your RStudio session. You may have
    to wait in the queue for resources to become available.
@@ -299,11 +299,11 @@ To run RStudio via Sherlock OnDemand:
 To run Tensorboard via Sherlock OnDemand:
 
 1. Select **Interactive Apps > Tensorboard** from the top menu in the
-   Dashboard page,
+   Dashboard page.
 
 2. In the screen that opens, specify the different parameters for your job
    (time limit, number of nodes, CPUs, partition to use, etc.). You can also
-   choose to be notified by email when your notebook start.
+   choose to be notified by email when your session starts.
 
 3. Click the blue **Launch** button to start your Tensorboard session. You may have
    to wait in the queue for resources to become available.
@@ -313,9 +313,63 @@ To run Tensorboard via Sherlock OnDemand:
 
 ![ood_tb](images/ood_tb.png)
 
+### VS Code
+
+You can use VS Code on Sherlock through the code-server interactive app.
+
+!!! warning "Using your local VS Code with remote SSH"
+
+    Connecting to Sherlock from VS Code on your local machine is not supported
+    at this time due to a known issue with the closed-source "Remote SSH" extension.
+
+
+To start a VS Code session via Sherlock OnDemand:
+
+1. Select **Interactive Apps > Code-server** from the top menu in the 
+   Dashboard page.
+
+2. In the screen that opens, specify the different parameters for your job
+   (time limit, number of nodes, CPUs, partition to use, etc.). You can also
+   choose to be notified by email when your session starts.
+   
+3. Click the blue **Launch** button to start your VS Code session. You may have
+   to wait in the queue for resources to become available.
+   
+4. When your session starts, click the blue **Connect to VS Code**
+   button. A new window opens with the VS Code interface.
+   
+![ood_vscode](images/ood_vscode.png)
+
+!!! warning "Installing VS Code extensions"
+
+    As a security precaution, we do not allow users to install VS Code extensions
+    themselves. If you are interested in using an extension that is not yet 
+    installed on Sherlock, please [contact us][url_contact].
+    
+#### Configuring custom settings
+
+You can configure VS Code with custom settings for the editor and user interface.
+
+To modify your settings with the VS Code Settings editor:
+
+1. Click the gear icon at the bottom of the left-side menu and select **Settings**.
+   This opens a new tab with the Settings editor.
+
+2. Select **Remote [ondemand.sherlock.stanford.edu]** from the tabs at the top of
+   the Settings editor.
+   
+3. Modify the settings to your liking.
+
+!!! Note "User vs Remote settings"
+
+    Changes made within the **User** tab of the Settings editor will not carry 
+    over to future sessions. Make sure to select **Remote** before configuring 
+    your settings.
+
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
+[url_contact]:      mailto:{{ support_email }}
 [url_oak]:          //uit.stanford.edu/service/oak-storage
 [url_osc]:          //www.osc.edu
 [url_ood]:          //openondemand.org
