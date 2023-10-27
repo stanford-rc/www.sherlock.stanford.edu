@@ -73,38 +73,40 @@ prompts][url_avoid_duo]. How cool is that?
 To create, edit or move files, click on the **Files** menu from the
 **Dashboard** page. A dropdown menu will appear, listing your most common
 [storage locations][url_storage] on Sherlock: `$HOME`, `$GROUP_HOME`,
-`$SCRATCH`. `$GROUP_SCRATCH` and `$OAK`[^oak_access].
+`$SCRATCH`. `$GROUP_SCRATCH` and `$OAK`[^oak_access]. Any [`rclone` remotes]
+[url_rclone] you create on Sherlock to connect to cloud storage will appear here 
+as well.
 
 Choosing one of the file spaces opens the **File Explorer** in a new browser
 tab. The files in the selected directory are listed.
 
-!!! note "Left panel will always display `$HOME`"
-
-    No matter which directory you are in, your home directory is displayed in a
-    panel on the left.
-
 There are two sets of buttons in the File Explorer.
 
-* On the top left, just below the name of the current directory:
+* Under the three vertical dots menu next to each filename:
   ![fs_btn1](images/file_explorer_btn1.png)
-  Those buttons allow you to
-  **View**, **Edit**, **Rename**, **Download**, **Copy**, **Paste** (after you
-  have moved to a different directory) or **Delete** a file, or you can toggle
-  the file selection with **(Un)Select All**.
+  Those buttons allow you to 
+  **View**, **Edit**, **Rename**, **Download**, or **Delete** a file.
 
 * At the top of the window, on the right side:
   ![fs_btn2](images/file_explorer_btn2.png)
 
     | Button | Function |
     | ------ | -------- |
-    | **Go To** | Navigate to another directory or file system |
     | **Open in Terminal** | Open a terminal window on Sherlock in a new browser tab |
+    | **Refresh** | Refresh the list of directory contents |
     | **New File** | Create a new, empty file |
-    | **New Dir** | Create a new subdirectory |
+    | **New Directory** | Create a new subdirectory |
     | **Upload** | Copy a file from your local machine to Sherlock |
-    | **Show Dotfiles** | Toggle the display of dotfiles (files starting by a `.`, which are usually hidden) |
+    | **Download** | Download selected files to your local machine |
+    | **Copy/Move** | Copy or move selected files (after moving to a different directory) |
+    | **Delete** | Delete selected files |
+    | **Change directory** | Change your current working directory |
+    | **Copy path** | Copy the current working directory path to your clipboard |
+    | **Show Dotfiles** | Toggle the display of dotfiles (files starting with a `.`, which are usually hidden) |
     | **Show Owner/Mode** | Toggle the display of owner and permission settings |
 
+
+    
 
 
 ## Creating and editing jobs
@@ -317,7 +319,7 @@ To run Tensorboard via Sherlock OnDemand:
 
 You can use VS Code on Sherlock through the code-server interactive app.
 
-!!! warning "Using your local VS Code with remote SSH"
+!!! Note "Using your local VS Code with remote SSH"
 
     Connecting to Sherlock from VS Code on your local machine is not supported
     at this time due to a known issue with the closed-source "Remote SSH" extension.
@@ -378,6 +380,7 @@ To modify your settings with the VS Code Settings editor:
 [url_ood_logout]:   //login.sherlock.stanford.edu/logout
 
 [url_storage]:      /docs/storage
+[url_rclone]:       /docs/software/using/rclone
 [url_gssapi]:       /docs/advanced-topics/connection/#gssapi
 [url_avoid_duo]:    /docs/advanced-topics/connection/#avoiding-multiple-duo-prompts
 [url_running_jobs]: /docs/user-guide/running-jobs/
