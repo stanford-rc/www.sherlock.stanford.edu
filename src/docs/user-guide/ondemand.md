@@ -342,33 +342,6 @@ To start a VS Code session via Sherlock OnDemand:
    
 ![ood_vscode](images/ood_vscode.png)
 
-!!! warning "Installing VS Code extensions"
-
-    As a security precaution, we do not allow users to install VS Code extensions
-    themselves. If you are interested in using an extension that is not yet 
-    installed on Sherlock, please [contact us][url_contact].
-    
-#### Configuring custom settings
-
-You can configure VS Code with custom settings for the editor and user interface.
-
-To modify your settings with the VS Code Settings editor:
-
-1. Click the gear icon at the bottom of the left-side menu and select **Settings**.
-   This opens a new tab with the Settings editor.
-
-2. Select **Remote [ondemand.sherlock.stanford.edu]** from the tabs at the top of
-   the Settings editor.
-   
-3. Modify the settings to your liking.
-
-!!! Note "User vs Remote settings"
-
-    Changes made within the **User** tab of the Settings editor will not carry 
-    over to future sessions. Make sure to select **Remote** before configuring 
-    your settings.
-
-
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_contact]:      mailto:{{ support_email }}
