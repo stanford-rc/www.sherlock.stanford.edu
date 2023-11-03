@@ -354,7 +354,7 @@ $ scp foo <sunetid>@dtn.sherlock.stanford.edu:~/foo
 
 !!! Important "$HOME on DTNs"
 
-    One important difference to keep in mind when transferring files through
+    One important difference to keep in mind when transfering files through
     the Sherlock DTNs is that the default destination path for files, unless
     specified, is the user `$SCRATCH` directory, not `$HOME`.
 
