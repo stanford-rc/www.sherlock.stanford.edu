@@ -195,12 +195,21 @@ and then should not be typed in).
 
 
     For instance, on a Linux machine with SSHFS installed, you could mount your
-    Sherlock home directory with the following commands:
+    Sherlock home directory via a Sherlock [DTN](#data-transfer-nodes-dtns)
+    with the following commands:
 
     ```
     $ mkdir ~/sherlock_home
-    $ sshfs <sunetid>@login.sherlock.stanford.edu:./ ~/sherlock_home
+    $ sshfs <sunetid>@dtn.sherlock.stanford.edu:./ ~/sherlock_home
     ```
+
+    !!! tip "Using DTNs for data transfer"
+
+        Using the Sherlock [DTNs](#data-transfer-nodes-dtns) instead of login
+        nodes will ensure optimal performance for data transfers. Login nodes
+        only have limited resources, that could limit data transfer rates or
+        disconnect during long data transfers.
+
 
     And to unmount it:
     ```
