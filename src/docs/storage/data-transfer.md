@@ -174,12 +174,12 @@ and then should not be typed in).
     application that is not available on Sherlock, but that you already use or
     can install on your local machine. Like a data processing program that you
     have licensed for your own computer but can't use on Sherlock, a specific
-    text editor that only runs on MacOS, or any data-intensive 3D rendering
+    text editor that only runs on macOS, or any data-intensive 3D rendering
     software that wouldn't work comfortably enough over a forwarded X11
     connection.
 
     SSHFS is available for [Linux][url_sshfs_linux] :fontawesome-brands-linux:,
-    [MacOS][url_sshfs_macos] :fontawesome-brands-apple:, and
+    [macOS][url_sshfs_macos] :fontawesome-brands-apple:, and
     [Windows][url_sshfs_windows] :fontawesome-brands-windows:.
 
     !!! warning "SSHFS on macOS"
