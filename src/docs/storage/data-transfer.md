@@ -193,6 +193,9 @@ and then should not be typed in).
         Make sure to unmount your SSHFS drives before putting your macOS system
         to sleep to avoid this situation.
 
+        The following option could also be useful to avoid some permission
+        issues: `-o defer_permissions`
+
 
     For instance, on a Linux machine with SSHFS installed, you could mount your
     Sherlock home directory via a Sherlock [DTN](#data-transfer-nodes-dtns)
