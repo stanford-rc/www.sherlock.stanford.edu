@@ -327,20 +327,20 @@ You can use VS Code on Sherlock through the code-server interactive app.
 
 To start a VS Code session via Sherlock OnDemand:
 
-1. Select **Interactive Apps > Code-server** from the top menu in the 
+1. Select **Interactive Apps > code-server** from the top menu in the 
    Dashboard page.
 
 2. In the screen that opens, specify the different parameters for your job
    (time limit, number of nodes, CPUs, partition to use, etc.). You can also
    choose to be notified by email when your session starts.
    
-3. Click the blue **Launch** button to start your VS Code session. You may have
+3. Click the blue **Launch** button to start your code-server session. You may have
    to wait in the queue for resources to become available.
    
-4. When your session starts, click the blue **Connect to VS Code**
-   button. A new window opens with the VS Code interface.
+4. When your session starts, click the blue **Connect to code-server**
+   button. A new window opens with the code-server interface.
    
-![ood_vscode](images/ood_vscode.png)
+![ood_code-server](images/ood_code-server.png)
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
