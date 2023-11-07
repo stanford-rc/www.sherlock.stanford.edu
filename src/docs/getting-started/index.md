@@ -67,35 +67,27 @@ Linux distributions usually come with a version of the [OpenSSH][url_openssh]
 client already installed. So no additional software installation is required.
 If not, please refer to your distribution's documentation to install it.
 
-### MacOS :fontawesome-brands-apple:
+### macOS :fontawesome-brands-apple:
 
-MacOS systems usually come with a version of the [OpenSSH][url_openssh] client
+macOS systems usually come with a version of the [OpenSSH][url_openssh] client
 already installed. So no additional software installation is required
 
 
 ### Windows :fontawesome-brands-windows:
 
-Microsoft Windows doesn't provide any SSH client by default. To install one,
-you have several options, depending on the version of Windows.
+Microsoft Windows includes a [SSH client][url_ssh_windows] by default, that can
+be used to connect to Sherlock from a Windows terminal.
 
-* **WSL <small>recommended</small>**
-
-    Windows 10 provides a feature called the ["Windows
-    Subsystem for Linux"][url_wsl] (WSL). Please refer to the [official
-    documentation][url_wsl_doc] or [this howto][url_wsl_howto] for installation
-    instructions. Once installed, you'll be able to use the `ssh` command from a
-    Windows terminal to connect to Sherlock.
-
-* Cygwin
-
-    The [Cygwin project][url_cygwin] predates WSL and provides similar features,
-    which among other things, allow users to install a command-line SSH client on
-    their Windows machines.
+Windows also has a feature called the ["Windows Subsystem for
+Linux"][url_wsl] (WSL), which provides a Linux-like experience and make
+switching across systems more seamless. Please refer to the [official
+documentation][url_wsl_doc] or [this HOWTO][url_wsl_howto] for installation
+instructions.
 
 The two options above will ensure the best compatibility with the Sherlock
 environment. If you'd like to explore other avenues, many [other SSH client
-implementations][url_ssh_clients] are available, but have not necessarily been tested
-with Sherlock, so your mileage may vary.
+implementations][url_ssh_clients] are available, but have not necessarily been
+tested with Sherlock, so your mileage may vary.
 
 
 ## Unix/Linux resources
@@ -121,8 +113,8 @@ Multiple text editors are available on Sherlock. For beginners, we recommend
 the use of `nano`. And for more advanced uses, you'll also find below some
 resources about using `vim`
 
-* [Nano guide][url_nano] (Gentoo wiki)
-* [Vim guide][url_vim] (Gentoo wiki)
+* [`nano` guide][url_nano] (Gentoo wiki)
+* [`vim` guide][url_vim] (Gentoo wiki)
 
 Note: you can also create/edit files with the [Sherlock OnDemand File
 editor][url_ood_files]
@@ -146,6 +138,7 @@ For an introduction to shell scripting, you can refer to:
 [url_sponsor]:      https://uit.stanford.edu/service/sponsorship/
 
 [url_openssh]:      https://www.openssh.com/
+[url_ssh_windows]:  https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh
 [url_wsl]:          https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
 [url_wsl_doc]:      https://msdn.microsoft.com/commandline/wsl
 [url_wsl_howto]:    https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/
