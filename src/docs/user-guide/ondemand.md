@@ -73,9 +73,9 @@ prompts][url_avoid_duo]. How cool is that?
 To create, edit or move files, click on the **Files** menu from the
 **Dashboard** page. A dropdown menu will appear, listing your most common
 [storage locations][url_storage] on Sherlock: `$HOME`, `$GROUP_HOME`,
-`$SCRATCH`. `$GROUP_SCRATCH` and `$OAK`[^oak_access]. Any [`rclone` remotes]
-[url_rclone] you create on Sherlock to connect to cloud storage will appear here 
-as well.
+`$SCRATCH`, `$GROUP_SCRATCH`, and all Oak storage you have access to, including 
+your main `$OAK`[^oak_access]. Any [`rclone` remotes][url_rclone] you create on 
+Sherlock to connect to cloud storage will appear here as well.
 
 Choosing one of the file spaces opens the **File Explorer** in a new browser
 tab. The files in the selected directory are listed.
@@ -321,8 +321,9 @@ You can use VS Code on Sherlock through the code-server interactive app.
 
 !!! Note "Using your local VS Code with remote SSH"
 
-    Connecting to Sherlock from VS Code on your local machine is not supported
-    at this time due to a known issue with the closed-source "Remote SSH" extension.
+    Connecting to Sherlock from VS Code on your local machine is not 
+    supported at this time due to a known issue with the closed-source "Remote 
+    SSH" extension.
 
 
 To start a VS Code session via Sherlock OnDemand:
@@ -341,6 +342,51 @@ To start a VS Code session via Sherlock OnDemand:
    button. A new window opens with the code-server interface.
    
 ![ood_code-server](images/ood_code-server.png)
+
+## Support
+
+If you are experiencing issues with Sherlock or your interactive session, you can
+contact us directly from Sherlock OnDemand.
+
+To submit a ticket about Sherlock or Sherlock OnDemand in general:
+
+1. Select **Help -> Submit Support Ticket** from the top menu in the
+   Dashboard page.
+   
+2. In the screen that opens, complete the Support Ticket form. When applicable,
+   please provide:
+   
+       - the full path to any files involved in your question or problem, 
+       
+       - the command(s) you ran, and/or the job submission script(s) you used, 
+       
+       - the **exact, entire** error message (or trace) you received.
+
+3. Click the blue **Submit support ticket** form. Research Computing support will
+   respond to you as soon as we are able.
+
+To submit a ticket about your current or recent interactive session:
+
+1. Select **My Interactive Sessions** from the top menu in the Dashboard page.
+
+2. In the screen that opens, find the card for the session you need help with. 
+   Active sessions will have a green header, and past sessions will have a gray
+   header. Click that card's **Submit support ticket** link to open the Support
+   Ticket form.
+   
+3. Complete the Support Ticket form. When applicable, please provide:
+
+       - the full path to any files involved in your question or problem, 
+       
+       - the command(s) you ran, and/or the job submission script(s) you used, 
+       
+       - the **exact, entire** error message (or trace) you received.
+
+4. Click the blue **Submit support ticket** form. Research Computing support will 
+   respond to you as soon as we are able.
+   
+![ood_support](images/ood_support.png)
+
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
