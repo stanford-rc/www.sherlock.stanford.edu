@@ -212,7 +212,7 @@ Sherlock OnDemand.
 !!! warning "Some preliminary setup may be required"
 
     Before running your first Jupyter Notebook with `IJulia`, you'll need to
-    run the following steps (this only need to be done once):
+    run the following steps (this only needs to be done once):
 
     ```
     $ ml julia
@@ -248,7 +248,7 @@ To start a Jupyter session from Sherlock OnDemand:
    Clusters.
    ![ood_jup_notebook](images/ood_jup_notebook.png)
 
-   By default, you are in the **Files** tab, that displays the contents of your
+   By default, you are in the **Files** tab; that displays the contents of your
    `$HOME` directory on Sherlock. You can navigate through your files there.
 
    Under the **Running** tab, you will see the list of all the notebooks or
@@ -256,7 +256,7 @@ To start a Jupyter session from Sherlock OnDemand:
 
 6. You can now start a Jupyter Notebook:
 
-    1. To open an exiting Jupyter Notebook, which is already stored on
+    1. To open an existing Jupyter Notebook, which is already stored on
        Sherlock, navigate to its location in the **Files** tab and click on its
        name. A new window running the notebook will open.
     2. To create a new Jupyter Notebook, click on the **New** button at the top
@@ -266,9 +266,54 @@ To start a Jupyter session from Sherlock OnDemand:
 To terminate your Jupyter Notebook session, go back to the Dashboard, and click
 on the **My Interactive Sessions** in the top menu. This will bring you to a
 page listing all your currently active interactive session. Identify the one
-you'd like to terminate and click on the red **Delete** button.
+you'd like to terminate and click on the red *Cancel** button.
 
+### JupyterLab
 
+To run JupyterLab via Sherlock OnDemand:
+
+1. Select **Interactive Apps > JupyterLab** from the top menu in the
+   Dashboard page.
+   
+2. In the screen that opens, specify the different parameters for your job
+   (time limit, number of nodes, CPUs, partition to use, etc.). You can also
+   choose to be notified by email when your session starts.
+   
+3. Click the blue **Launch** button to start your JupyterLab session. You may 
+   have to wait in the queue for resources to become available.
+   
+4. When your session starts, click the blue **Connect to JupyterLab**
+   button. A new window opens with the JupyterLab interface.
+   
+5. The first time you connect to JupyterLab via Sherlock OnDemand, you'll see 
+   2 tabs: Files and Launcher. 
+   
+   ![ood_juplab](images/ood_juplab.png)
+   
+   The **Files** tab displays the contents of your `$HOME` directory on Sherlock.
+   You can navigate through your files there.
+   
+   In the Launcher tab, you will have the option to create a new Jupyter Notebook
+   by clicking the tile showing the kernel of your choice under **Notebook**. or start a new Console session by clicking the tile showing the kernel of your
+   choice. You can also open the Terminal or a text editor for a variety of file
+   types by clicking the corresponding tile
+
+### MATLAB
+
+To run MATLAB via Sherlock OnDemand:
+
+1. Select **Interactive Apps > MATLAB** from the top menu in the
+   Dashboard page.
+   
+2. In the screen that opens, specify the different parameters for your job
+   (time limit, number of nodes, CPUs, partition to use, etc.). You can also
+   choose to be notified by email when your session starts.
+   
+3. Click the blue **Launch** button to start your MATLAB session. You may 
+   have to wait in the queue for resources to become available.
+   
+4. When your session starts, click the blue **Connect to MATLAB**
+   button. A new window opens with the JupyterLab interface.
 
 ### RStudio
 
@@ -374,6 +419,8 @@ To submit a ticket about your current or recent interactive session:
    header. Click that card's **Submit support ticket** link to open the Support
    Ticket form.
    
+![ood_sess_support](images/ood_sess_support.png)
+   
 3. Complete the Support Ticket form. When applicable, please provide:
 
        - the full path to any files involved in your question or problem, 
@@ -385,7 +432,7 @@ To submit a ticket about your current or recent interactive session:
 4. Click the blue **Submit support ticket** form. Research Computing support will 
    respond to you as soon as we are able.
    
-![ood_support](images/ood_support.png)
+
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
