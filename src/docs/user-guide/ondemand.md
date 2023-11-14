@@ -266,7 +266,7 @@ To start a Jupyter session from Sherlock OnDemand:
 To terminate your Jupyter Notebook session, go back to the Dashboard, and click
 on the **My Interactive Sessions** in the top menu. This will bring you to a
 page listing all your currently active interactive session. Identify the one
-you'd like to terminate and click on the red *Cancel** button.
+you'd like to terminate and click on the red **Cancel** button.
 
 ### JupyterLab
 
@@ -294,9 +294,28 @@ To run JupyterLab via Sherlock OnDemand:
    You can navigate through your files there.
    
    In the Launcher tab, you will have the option to create a new Jupyter Notebook
-   by clicking the tile showing the kernel of your choice under **Notebook**. or start a new Console session by clicking the tile showing the kernel of your
-   choice. You can also open the Terminal or a text editor for a variety of file
-   types by clicking the corresponding tile
+   new Console session by clicking the tile showing the kernel of your choice. 
+   You can also open the Terminal or a text editor for a variety of file
+   types by clicking the corresponding tile.
+   
+To create a new kernel for IJulia:
+
+1. In the **Launcher**, click the **Terminal** tile in the "Other" section.
+
+2. In the Terminal, run the following commands:
+
+    ```
+    $ ml julia
+    $ julia
+    julia> using Pkg;
+    julia> Pkg.add("IJulia")
+    ```
+    
+3. Open a new **Launcher** tab by clicking the **+** sign next to your open Terminal
+   tab. Julia will now be listed in the "Notebook" and "Console" sections as an
+   available kernel.
+
+
 
 ### MATLAB
 
@@ -313,7 +332,9 @@ To run MATLAB via Sherlock OnDemand:
    have to wait in the queue for resources to become available.
    
 4. When your session starts, click the blue **Connect to MATLAB**
-   button. A new window opens with the JupyterLab interface.
+   button. A new window opens with the MATLAB interface.
+   
+   ![ood_matlab](images/ood_matlab.png)
 
 ### RStudio
 
