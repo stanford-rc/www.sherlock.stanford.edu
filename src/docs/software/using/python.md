@@ -358,7 +358,7 @@ $ pip uninstall -r requirements.txt
 [url_pypi]:           //pypi.python.org/pypi
 [url_pep394]:         //www.python.org/dev/peps/pep-0394
 
-[url_numpy]:          /www.numpy.org/
+[url_numpy]:          //www.numpy.org/
 [url_scipy]:          //www.scipy.org/
 [url_httpie]:         //httpie.org/
 
