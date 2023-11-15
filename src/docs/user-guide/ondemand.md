@@ -71,10 +71,10 @@ prompts][url_avoid_duo]. How cool is that?
 ## Managing files
 
 To create, edit or move files, click on the **Files** menu from the
-**Dashboard** page. A dropdown menu will appear, listing your most common
+**Dashboard** page. A drop-down menu will appear, listing your most common
 [storage locations][url_storage] on Sherlock: `$HOME`, `$GROUP_HOME`,
-`$SCRATCH`, `$GROUP_SCRATCH`, and all Oak storage you have access to, including 
-your main `$OAK`[^oak_access]. Any [`rclone` remotes][url_rclone] you create on 
+`$SCRATCH`, `$GROUP_SCRATCH`, and all Oak storage you have access to, including
+your main `$OAK`[^oak_access]. Any [`rclone` remotes][url_rclone] you create on
 Sherlock to connect to cloud storage will appear here as well.
 
 Choosing one of the file spaces opens the **File Explorer** in a new browser
@@ -83,8 +83,7 @@ tab. The files in the selected directory are listed.
 There are two sets of buttons in the File Explorer.
 
 * Under the three vertical dots menu next to each filename:
-  ![fs_btn1](images/file_explorer_btn1.png)
-  Those buttons allow you to 
+  ![fs_btn1](images/file_explorer_btn1.png) Those buttons allow you to
   **View**, **Edit**, **Rename**, **Download**, or **Delete** a file.
 
 * At the top of the window, on the right side:
@@ -95,7 +94,7 @@ There are two sets of buttons in the File Explorer.
     | **Open in Terminal** | Open a terminal window on Sherlock in a new browser tab |
     | **Refresh** | Refresh the list of directory contents |
     | **New File** | Create a new, empty file |
-    | **New Directory** | Create a new subdirectory |
+    | **New Directory** | Create a new sub-directory |
     | **Upload** | Copy a file from your local machine to Sherlock |
     | **Download** | Download selected files to your local machine |
     | **Copy/Move** | Copy or move selected files (after moving to a different directory) |
@@ -106,7 +105,7 @@ There are two sets of buttons in the File Explorer.
     | **Show Owner/Mode** | Toggle the display of owner and permission settings |
 
 
-    
+
 
 
 ## Creating and editing jobs
@@ -187,7 +186,7 @@ change to _Completed_.
 From the **Dashboard** page, The **Jobs > Active Jobs** top-level menu will
 bring you to a live view of Sherlock's scheduler queue. You'll be able to see
 all the jobs currently in queue, including running and pending jobs, as well as
-eome details about individual jobs.
+some details about individual jobs.
 
 ![ood_my_jobs](images/ood_my_jobs.png)
 
@@ -200,7 +199,7 @@ Manager** or in a **Shell** session.
 ## Interactive applications
 
 One of the main features of Sherlock OnDemand is the ability to run
-interactive applications difrectly from the web interface, without leaving your
+interactive applications directly from the web interface, without leaving your
 web browser.
 
 
@@ -274,43 +273,43 @@ To run JupyterLab via Sherlock OnDemand:
 
 1. Select **Interactive Apps > JupyterLab** from the top menu in the
    Dashboard page.
-   
+
 2. In the screen that opens, specify the different parameters for your job
    (time limit, number of nodes, CPUs, partition to use, etc.). You can also
    choose to be notified by email when your session starts.
-   
-3. Click the blue **Launch** button to start your JupyterLab session. You may 
+
+3. Click the blue **Launch** button to start your JupyterLab session. You may
    have to wait in the queue for resources to become available.
-   
+
 4. When your session starts, click the blue **Connect to JupyterLab**
    button. A new window opens with the JupyterLab interface.
-   
-5. The first time you connect to JupyterLab via Sherlock OnDemand, you'll see 
-   2 tabs: Files and Launcher. 
-   
+
+5. The first time you connect to JupyterLab via Sherlock OnDemand, you'll see
+   2 tabs: Files and Launcher.
+
    ![ood_juplab](images/ood_juplab.png)
-   
+
    The **Files** tab displays the contents of your `$HOME` directory on Sherlock.
    You can navigate through your files there.
-   
+
    In the Launcher tab, you will have the option to create a new Jupyter Notebook
-   new Console session by clicking the tile showing the kernel of your choice. 
+   new Console session by clicking the tile showing the kernel of your choice.
    You can also open the Terminal or a text editor for a variety of file
    types by clicking the corresponding tile.
-   
+
 To create a new kernel for IJulia:
 
 1. In the **Launcher**, click the **Terminal** tile in the "Other" section.
 
 2. In the Terminal, run the following commands:
 
-    ```
+    ```none
     $ ml julia
     $ julia
     julia> using Pkg;
     julia> Pkg.add("IJulia")
     ```
-    
+
 3. Open a new **Launcher** tab by clicking the **+** sign next to your open Terminal
    tab. Julia will now be listed in the "Notebook" and "Console" sections as an
    available kernel.
@@ -323,17 +322,17 @@ To run MATLAB via Sherlock OnDemand:
 
 1. Select **Interactive Apps > MATLAB** from the top menu in the
    Dashboard page.
-   
+
 2. In the screen that opens, specify the different parameters for your job
    (time limit, number of nodes, CPUs, partition to use, etc.). You can also
    choose to be notified by email when your session starts.
-   
-3. Click the blue **Launch** button to start your MATLAB session. You may 
+
+3. Click the blue **Launch** button to start your MATLAB session. You may
    have to wait in the queue for resources to become available.
-   
+
 4. When your session starts, click the blue **Connect to MATLAB**
    button. A new window opens with the MATLAB interface.
-   
+
    ![ood_matlab](images/ood_matlab.png)
 
 ### RStudio
@@ -362,22 +361,22 @@ To run RStudio via Sherlock OnDemand:
     See our [R packages][url_r_packages] documentation for more information.
 
 
-### Tensorboard
+### TensorBoard
 
-To run Tensorboard via Sherlock OnDemand:
+To run TensorBoard via Sherlock OnDemand:
 
-1. Select **Interactive Apps > Tensorboard** from the top menu in the
+1. Select **Interactive Apps > TensorBoard** from the top menu in the
    Dashboard page.
 
 2. In the screen that opens, specify the different parameters for your job
    (time limit, number of nodes, CPUs, partition to use, etc.). You can also
    choose to be notified by email when your session starts.
 
-3. Click the blue **Launch** button to start your Tensorboard session. You may have
+3. Click the blue **Launch** button to start your TensorBoard session. You may have
    to wait in the queue for resources to become available.
 
-4. When your session starts, click the blue **Connect to Tensorboard**
-   button. A new window opens with the Tensorboard interface.
+4. When your session starts, click the blue **Connect to TensorBoard**
+   button. A new window opens with the TensorBoard interface.
 
 ![ood_tb](images/ood_tb.png)
 
@@ -387,26 +386,26 @@ You can use VS Code on Sherlock through the code-server interactive app.
 
 !!! Note "Using your local VS Code with remote SSH"
 
-    Connecting to Sherlock from VS Code on your local machine is not 
-    supported at this time due to a known issue with the closed-source "Remote 
+    Connecting to Sherlock from VS Code on your local machine is not
+    supported at this time due to a known issue with the closed-source "Remote
     SSH" extension.
 
 
 To start a VS Code session via Sherlock OnDemand:
 
-1. Select **Interactive Apps > code-server** from the top menu in the 
+1. Select **Interactive Apps > code-server** from the top menu in the
    Dashboard page.
 
 2. In the screen that opens, specify the different parameters for your job
    (time limit, number of nodes, CPUs, partition to use, etc.). You can also
    choose to be notified by email when your session starts.
-   
+
 3. Click the blue **Launch** button to start your code-server session. You may have
    to wait in the queue for resources to become available.
-   
+
 4. When your session starts, click the blue **Connect to code-server**
    button. A new window opens with the code-server interface.
-   
+
 ![ood_code-server](images/ood_code-server.png)
 
 ## Support
@@ -418,14 +417,14 @@ To submit a ticket about Sherlock or Sherlock OnDemand in general:
 
 1. Select **Help -> Submit Support Ticket** from the top menu in the
    Dashboard page.
-   
+
 2. In the screen that opens, complete the Support Ticket form. When applicable,
    please provide:
-   
-       - the full path to any files involved in your question or problem, 
-       
-       - the command(s) you ran, and/or the job submission script(s) you used, 
-       
+
+       - the full path to any files involved in your question or problem,
+
+       - the command(s) you ran, and/or the job submission script(s) you used,
+
        - the **exact, entire** error message (or trace) you received.
 
 3. Click the blue **Submit support ticket** form. Research Computing support will
@@ -435,24 +434,23 @@ To submit a ticket about your current or recent interactive session:
 
 1. Select **My Interactive Sessions** from the top menu in the Dashboard page.
 
-2. In the screen that opens, find the card for the session you need help with. 
+2. In the screen that opens, find the card for the session you need help with.
    Active sessions will have a green header, and past sessions will have a gray
    header. Click that card's **Submit support ticket** link to open the Support
    Ticket form.
-   
-![ood_sess_support](images/ood_sess_support.png)
-   
+   ![ood_sess_support](images/ood_sess_support.png)
+
 3. Complete the Support Ticket form. When applicable, please provide:
 
-       - the full path to any files involved in your question or problem, 
-       
-       - the command(s) you ran, and/or the job submission script(s) you used, 
-       
+       - the full path to any files involved in your question or problem,
+
+       - the command(s) you ran, and/or the job submission script(s) you used,
+
        - the **exact, entire** error message (or trace) you received.
 
-4. Click the blue **Submit support ticket** form. Research Computing support will 
+4. Click the blue **Submit support ticket** form. Research Computing support will
    respond to you as soon as we are able.
-   
+
 
 
 
