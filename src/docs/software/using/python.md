@@ -1,10 +1,10 @@
 ## Introduction
 
 [Python][url_python] is an interpreted high-level programming language for
-general-purpose programming. Its design philosophy emphasizes code readability,
-notably using significant whitespace. It provides constructs that enable clear
-programming on both small and large scales, which makes it both easy to learn
-and very well-suited for rapid prototyping.
+general-purpose programming. Its design philosophy emphasizes code readability.
+It provides constructs that enable clear programming on both small and large
+scales, which makes it both easy to learn and very well-suited for rapid
+prototyping.
 
 ### More documentation
 
@@ -250,7 +250,7 @@ different directory, `pip` will install packages there.
 Now, to be able to use that Python module, since it's not been installed in a
 default directory, you (and all the members of the group who will want to use
 that module) need to set their `PYTHONPATH` to include our new shared
-directory[^pythonpath]:
+directory[^profile]:
 
 ``` shell
 $ export PYTHONPATH=$GROUP_HOME/python/lib/python2.7/site-packages:$PYTHONPATH
@@ -306,7 +306,7 @@ pretty convenient to install several dependencies at once.
 In order to do this, create a text file called `requirements.txt` and place
 each package you would like to install on its own line:
 
-=== "requirements.txt"
+=== "`requirements.txt`"
 
     ``` shell
     numpy
@@ -370,7 +370,7 @@ $ pip uninstall -r requirements.txt
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
-[^pythonpath]: This line can also be added to a user's `~/.profile` file, for a
+[^profile]: This line can also be added to a user's `~/.profile` file, for a
   more permanent setting.
 
 
