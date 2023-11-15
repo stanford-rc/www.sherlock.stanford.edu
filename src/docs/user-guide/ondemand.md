@@ -314,6 +314,34 @@ To create a new kernel for IJulia:
    tab. Julia will now be listed in the "Notebook" and "Console" sections as an
    available kernel.
 
+To create a custom kernel for a virtual environment using Python 3.x:
+
+1. In a shell session, activate your environment and run the following:
+
+    ```none
+    $ pip3 install ipykernel
+    $ python3 -m install --user --name env --display-name "My Env"
+    ```
+    
+    This will create a kernel for the environment `env`. It will appear as "My Env"
+    in the JupyterLab Launcher.
+    
+!!! Note "Creating a custom kernel for a Python 2.x environment"
+    
+    When working with a Python 2.x environment, use the `python`/`pip`
+    commands instead.
+
+2. The custom kernel will now be listed as option in the "Notebook" and "Console"
+   sections in the JupyterLab Launcher. To start a Jupyter Notebook using your
+   virtual environment, click on the tile for that kernel.
+
+!!! warning "Creating a custom kernel for a conda environment"
+
+    In order to use a kernel created from a conda environment, you must unload the
+    `python` and `py-jupyterlab` modules from your JupyterLab session. This can
+    be done using the JupyterLab Lmod extension. To use the Lmod extension, select
+    the bottom tab in the left side menu of your JupyterLab window. You may also
+    need to restart the kernel for your notebook or console.
 
 
 ### MATLAB
