@@ -370,7 +370,7 @@ So for `sf`, in order to load the dependencies, exit `R`, load the `udunits`
 and `gdal` modules, and try installing `sf` again:
 
 ``` none
-$ ml load physics udunits gdal
+$ ml load physics udunits gdal geos
 $ ml R
 $ R
 > install.packages("sf")
