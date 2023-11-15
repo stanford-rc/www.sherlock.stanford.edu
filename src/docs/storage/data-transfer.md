@@ -174,12 +174,12 @@ and then should not be typed in).
     application that is not available on Sherlock, but that you already use or
     can install on your local machine. Like a data processing program that you
     have licensed for your own computer but can't use on Sherlock, a specific
-    text editor that only runs on MacOS, or any data-intensive 3D rendering
+    text editor that only runs on macOS, or any data-intensive 3D rendering
     software that wouldn't work comfortably enough over a forwarded X11
     connection.
 
     SSHFS is available for [Linux][url_sshfs_linux] :fontawesome-brands-linux:,
-    [MacOS][url_sshfs_macos] :fontawesome-brands-apple:, and
+    [macOS][url_sshfs_macos] :fontawesome-brands-apple:, and
     [Windows][url_sshfs_windows] :fontawesome-brands-windows:.
 
     !!! warning "SSHFS on macOS"
@@ -193,14 +193,26 @@ and then should not be typed in).
         Make sure to unmount your SSHFS drives before putting your macOS system
         to sleep to avoid this situation.
 
+        The following option could also be useful to avoid some permission
+        issues: `-o defer_permissions`
+
 
     For instance, on a Linux machine with SSHFS installed, you could mount your
-    Sherlock home directory with the following commands:
+    Sherlock home directory via a Sherlock [DTN](#data-transfer-nodes-dtns)
+    with the following commands:
 
     ```
     $ mkdir ~/sherlock_home
-    $ sshfs <sunetid>@login.sherlock.stanford.edu:./ ~/sherlock_home
+    $ sshfs <sunetid>@dtn.sherlock.stanford.edu:./ ~/sherlock_home
     ```
+
+    !!! tip "Using DTNs for data transfer"
+
+        Using the Sherlock [DTNs](#data-transfer-nodes-dtns) instead of login
+        nodes will ensure optimal performance for data transfers. Login nodes
+        only have limited resources, that could limit data transfer rates or
+        disconnect during long data transfers.
+
 
     And to unmount it:
     ```
@@ -382,8 +394,8 @@ $ module load system rclone
 $ rclone --help
 ```
 
-This [tutorial][url_rclone_tutorial] provides an example of tranferring files between
-Google Drive and Oak storage.
+This [tutorial][url_rclone_tutorial] provides an example of transferring files
+between Google Drive and Oak storage.
 
 The Globus CLI (see above) can also be used to copy files from Sherlock to
 Stanford's Google Drive.
