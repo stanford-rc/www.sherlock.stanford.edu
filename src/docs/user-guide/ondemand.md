@@ -37,7 +37,7 @@ including many video tutorials.
 !!! Note "Connection information"
 
     To connect to Sherlock OnDemand, simply point your browser to
-    **https://login.sherlock.stanford.edu**
+    **https://ondemand.sherlock.stanford.edu**
 
 Sherlock OnDemand requires the same level of authentication than connecting to
 Sherlock over SSH. You will be prompted for your SUNet ID and password, and
@@ -71,39 +71,40 @@ prompts][url_avoid_duo]. How cool is that?
 ## Managing files
 
 To create, edit or move files, click on the **Files** menu from the
-**Dashboard** page. A dropdown menu will appear, listing your most common
+**Dashboard** page. A drop-down menu will appear, listing your most common
 [storage locations][url_storage] on Sherlock: `$HOME`, `$GROUP_HOME`,
-`$SCRATCH`. `$GROUP_SCRATCH` and `$OAK`[^oak_access].
+`$SCRATCH`, `$GROUP_SCRATCH`, and all Oak storage you have access to, including
+your main `$OAK`[^oak_access]. Any [`rclone` remotes][url_rclone] you create on
+Sherlock to connect to cloud storage will appear here as well.
 
 Choosing one of the file spaces opens the **File Explorer** in a new browser
 tab. The files in the selected directory are listed.
 
-!!! note "Left panel will always display `$HOME`"
-
-    No matter which directory you are in, your home directory is displayed in a
-    panel on the left.
-
 There are two sets of buttons in the File Explorer.
 
-* On the top left, just below the name of the current directory:
-  ![fs_btn1](images/file_explorer_btn1.png)
-  Those buttons allow you to
-  **View**, **Edit**, **Rename**, **Download**, **Copy**, **Paste** (after you
-  have moved to a different directory) or **Delete** a file, or you can toggle
-  the file selection with **(Un)Select All**.
+* Under the three vertical dots menu next to each filename:
+  ![fs_btn1](images/file_explorer_btn1.png) Those buttons allow you to
+  **View**, **Edit**, **Rename**, **Download**, or **Delete** a file.
 
 * At the top of the window, on the right side:
   ![fs_btn2](images/file_explorer_btn2.png)
 
     | Button | Function |
     | ------ | -------- |
-    | **Go To** | Navigate to another directory or file system |
     | **Open in Terminal** | Open a terminal window on Sherlock in a new browser tab |
+    | **Refresh** | Refresh the list of directory contents |
     | **New File** | Create a new, empty file |
-    | **New Dir** | Create a new subdirectory |
+    | **New Directory** | Create a new sub-directory |
     | **Upload** | Copy a file from your local machine to Sherlock |
-    | **Show Dotfiles** | Toggle the display of dotfiles (files starting by a `.`, which are usually hidden) |
+    | **Download** | Download selected files to your local machine |
+    | **Copy/Move** | Copy or move selected files (after moving to a different directory) |
+    | **Delete** | Delete selected files |
+    | **Change directory** | Change your current working directory |
+    | **Copy path** | Copy the current working directory path to your clipboard |
+    | **Show Dotfiles** | Toggle the display of dotfiles (files starting with a `.`, which are usually hidden) |
     | **Show Owner/Mode** | Toggle the display of owner and permission settings |
+
+
 
 
 
@@ -185,7 +186,7 @@ change to _Completed_.
 From the **Dashboard** page, The **Jobs > Active Jobs** top-level menu will
 bring you to a live view of Sherlock's scheduler queue. You'll be able to see
 all the jobs currently in queue, including running and pending jobs, as well as
-eome details about individual jobs.
+some details about individual jobs.
 
 ![ood_my_jobs](images/ood_my_jobs.png)
 
@@ -198,7 +199,7 @@ Manager** or in a **Shell** session.
 ## Interactive applications
 
 One of the main features of Sherlock OnDemand is the ability to run
-interactive applications difrectly from the web interface, without leaving your
+interactive applications directly from the web interface, without leaving your
 web browser.
 
 
@@ -210,7 +211,7 @@ Sherlock OnDemand.
 !!! warning "Some preliminary setup may be required"
 
     Before running your first Jupyter Notebook with `IJulia`, you'll need to
-    run the following steps (this only need to be done once):
+    run the following steps (this only needs to be done once):
 
     ```
     $ ml julia
@@ -225,11 +226,11 @@ Sherlock OnDemand.
 To start a Jupyter session from Sherlock OnDemand:
 
 1. Select **Interactive Apps > Jupyter Notebook** from the top menu in the
-   **Dashboard** page,
+   **Dashboard** page.
 
 2. In the screen that opens, specify the different parameters for your job
    (time limit, number of nodes, CPUs, partition to use, etc.). You can also
-   choose to be notified by email when your notebook start.
+   choose to be notified by email when your notebook starts.
 
    ![ood_jup](images/ood_jup.png)
 
@@ -246,7 +247,7 @@ To start a Jupyter session from Sherlock OnDemand:
    Clusters.
    ![ood_jup_notebook](images/ood_jup_notebook.png)
 
-   By default, you are in the **Files** tab, that displays the contents of your
+   By default, you are in the **Files** tab; that displays the contents of your
    `$HOME` directory on Sherlock. You can navigate through your files there.
 
    Under the **Running** tab, you will see the list of all the notebooks or
@@ -254,7 +255,7 @@ To start a Jupyter session from Sherlock OnDemand:
 
 6. You can now start a Jupyter Notebook:
 
-    1. To open an exiting Jupyter Notebook, which is already stored on
+    1. To open an existing Jupyter Notebook, which is already stored on
        Sherlock, navigate to its location in the **Files** tab and click on its
        name. A new window running the notebook will open.
     2. To create a new Jupyter Notebook, click on the **New** button at the top
@@ -264,20 +265,115 @@ To start a Jupyter session from Sherlock OnDemand:
 To terminate your Jupyter Notebook session, go back to the Dashboard, and click
 on the **My Interactive Sessions** in the top menu. This will bring you to a
 page listing all your currently active interactive session. Identify the one
-you'd like to terminate and click on the red **Delete** button.
+you'd like to terminate and click on the red **Cancel** button.
+
+### JupyterLab
+
+To run JupyterLab via Sherlock OnDemand:
+
+1. Select **Interactive Apps > JupyterLab** from the top menu in the
+   Dashboard page.
+
+2. In the screen that opens, specify the different parameters for your job
+   (time limit, number of nodes, CPUs, partition to use, etc.). You can also
+   choose to be notified by email when your session starts.
+
+3. Click the blue **Launch** button to start your JupyterLab session. You may
+   have to wait in the queue for resources to become available.
+
+4. When your session starts, click the blue **Connect to JupyterLab**
+   button. A new window opens with the JupyterLab interface.
+
+5. The first time you connect to JupyterLab via Sherlock OnDemand, you'll see
+   2 tabs: Files and Launcher.
+
+   ![ood_juplab](images/ood_juplab.png)
+
+   The **Files** tab displays the contents of your `$HOME` directory on Sherlock.
+   You can navigate through your files there.
+
+   In the Launcher tab, you will have the option to create a new Jupyter Notebook
+   new Console session by clicking the tile showing the kernel of your choice.
+   You can also open the Terminal or a text editor for a variety of file
+   types by clicking the corresponding tile.
+
+To create a new kernel for IJulia:
+
+1. In the **Launcher**, click the **Terminal** tile in the "Other" section.
+
+2. In the Terminal, run the following commands:
+
+    ```none
+    $ ml julia
+    $ julia
+    julia> using Pkg;
+    julia> Pkg.add("IJulia")
+    ```
+
+3. Open a new **Launcher** tab by clicking the **+** sign next to your open Terminal
+   tab. Julia will now be listed in the "Notebook" and "Console" sections as an
+   available kernel.
+
+To create a custom kernel for a virtual environment using Python 3.x:
+
+1. In a shell session, activate your environment and run the following:
+
+    ```none
+    $ pip3 install ipykernel
+    $ python3 -m install --user --name env --display-name "My Env"
+    ```
+
+    This will create a kernel for the environment `env`. It will appear as `My
+    Env` in the JupyterLab Launcher.
+
+    !!! Note "Creating a custom kernel for a Python 2.x environment"
+
+        When working with a Python 2.x environment, use the `python`/`pip`
+        commands instead.
+
+2. The custom kernel will now be listed as option in the "Notebook" and
+   "Console" sections in the JupyterLab Launcher. To start a Jupyter Notebook
+   using your virtual environment, click on the tile for that kernel.
+
+    !!! warning "Creating a custom kernel for a conda environment"
+
+        In order to use a kernel created from a conda environment, you must
+        unload the `python` and `py-jupyterlab` modules from your JupyterLab
+        session. This can be done using the JupyterLab Lmod extension. To use
+        the Lmod extension, select the bottom tab in the left side menu of your
+        JupyterLab window. You may also need to restart the kernel for your
+        notebook or console.
 
 
+### MATLAB
+
+To run MATLAB via Sherlock OnDemand:
+
+1. Select **Interactive Apps > MATLAB** from the top menu in the
+   Dashboard page.
+
+2. In the screen that opens, specify the different parameters for your job
+   (time limit, number of nodes, CPUs, partition to use, etc.). You can also
+   choose to be notified by email when your session starts.
+
+3. Click the blue **Launch** button to start your MATLAB session. You may
+   have to wait in the queue for resources to become available.
+
+4. When your session starts, click the blue **Connect to MATLAB**
+   button. A new window opens with the MATLAB interface.
+
+   ![ood_matlab](images/ood_matlab.png)
 
 ### RStudio
 
 To run RStudio via Sherlock OnDemand:
 
 1. Select **Interactive Apps > RStudio Server** from the top menu in the
-   Dashboard page,
+   Dashboard page.
 
 2. In the screen that opens, specify the different parameters for your job
    (time limit, number of nodes, CPUs, partition to use, etc.). You can also
-   choose to be notified by email when your notebook start.
+   choose to be notified by email when your session starts.
 
 3. Click the blue **Launch** button to start your RStudio session. You may have
    to wait in the queue for resources to become available.
@@ -294,28 +390,102 @@ To run RStudio via Sherlock OnDemand:
     See our [R packages][url_r_packages] documentation for more information.
 
 
-### Tensorboard
+### TensorBoard
 
-To run Tensorboard via Sherlock OnDemand:
+To run TensorBoard via Sherlock OnDemand:
 
-1. Select **Interactive Apps > Tensorboard** from the top menu in the
-   Dashboard page,
+1. Select **Interactive Apps > TensorBoard** from the top menu in the
+   Dashboard page.
 
 2. In the screen that opens, specify the different parameters for your job
    (time limit, number of nodes, CPUs, partition to use, etc.). You can also
-   choose to be notified by email when your notebook start.
+   choose to be notified by email when your session starts.
 
-3. Click the blue **Launch** button to start your Tensorboard session. You may have
+3. Click the blue **Launch** button to start your TensorBoard session. You may have
    to wait in the queue for resources to become available.
 
-4. When your session starts, click the blue **Connect to Tensorboard**
-   button. A new window opens with the Tensorboard interface.
+4. When your session starts, click the blue **Connect to TensorBoard**
+   button. A new window opens with the TensorBoard interface.
 
 ![ood_tb](images/ood_tb.png)
+
+### VS Code
+
+You can use VS Code on Sherlock through the code-server interactive app.
+
+!!! Note "Using your local VS Code with remote SSH"
+
+    Connecting to Sherlock from VS Code on your local machine is not
+    supported at this time due to a known issue with the closed-source "Remote
+    SSH" extension.
+
+
+To start a VS Code session via Sherlock OnDemand:
+
+1. Select **Interactive Apps > code-server** from the top menu in the
+   Dashboard page.
+
+2. In the screen that opens, specify the different parameters for your job
+   (time limit, number of nodes, CPUs, partition to use, etc.). You can also
+   choose to be notified by email when your session starts.
+
+3. Click the blue **Launch** button to start your code-server session. You may have
+   to wait in the queue for resources to become available.
+
+4. When your session starts, click the blue **Connect to code-server**
+   button. A new window opens with the code-server interface.
+
+![ood_code-server](images/ood_code-server.png)
+
+## Support
+
+If you are experiencing issues with Sherlock or your interactive session, you can
+contact us directly from Sherlock OnDemand.
+
+To submit a ticket about Sherlock or Sherlock OnDemand in general:
+
+1. Select **Help -> Submit Support Ticket** from the top menu in the
+   Dashboard page.
+
+2. In the screen that opens, complete the Support Ticket form. When applicable,
+   please provide:
+
+       - the full path to any files involved in your question or problem,
+
+       - the command(s) you ran, and/or the job submission script(s) you used,
+
+       - the **exact, entire** error message (or trace) you received.
+
+3. Click the blue **Submit support ticket** form. Research Computing support will
+   respond to you as soon as we are able.
+
+To submit a ticket about your current or recent interactive session:
+
+1. Select **My Interactive Sessions** from the top menu in the Dashboard page.
+
+2. In the screen that opens, find the card for the session you need help with.
+   Active sessions will have a green header, and past sessions will have a gray
+   header. Click that card's **Submit support ticket** link to open the Support
+   Ticket form.
+   ![ood_sess_support](images/ood_sess_support.png)
+
+3. Complete the Support Ticket form. When applicable, please provide:
+
+       - the full path to any files involved in your question or problem,
+
+       - the command(s) you ran, and/or the job submission script(s) you used,
+
+       - the **exact, entire** error message (or trace) you received.
+
+4. Click the blue **Submit support ticket** form. Research Computing support will
+   respond to you as soon as we are able.
+
+
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
+[url_contact]:      mailto:{{ support_email }}
 [url_oak]:          //uit.stanford.edu/service/oak-storage
 [url_osc]:          //www.osc.edu
 [url_ood]:          //openondemand.org
@@ -324,6 +494,7 @@ To run Tensorboard via Sherlock OnDemand:
 [url_ood_logout]:   //login.sherlock.stanford.edu/logout
 
 [url_storage]:      /docs/storage
+[url_rclone]:       /docs/software/using/rclone
 [url_gssapi]:       /docs/advanced-topics/connection/#gssapi
 [url_avoid_duo]:    /docs/advanced-topics/connection/#avoiding-multiple-duo-prompts
 [url_running_jobs]: /docs/user-guide/running-jobs/
