@@ -1,8 +1,8 @@
-To support the latest computing evolutions in many fields of science, Sherlock
-features a number of compute nodes with [GPUs][url_gpus] that can be used to
-run a variety of GPU-accelerated applications. Those nodes are available to
-everyone, but are a scarce, highly-demanded resource, so getting access to them
-may require some wait time in queue.
+To support the latest computing advancements in many fields of science,
+Sherlock features a number of compute nodes with [GPUs][url_gpu] that can be
+used to run a variety of GPU-accelerated applications. Those nodes are
+available to everyone, but are a scarce, highly-demanded resource, so getting
+access to them may require some wait time in queue.
 
 !!! info "Getting your own GPU nodes"
 
@@ -80,7 +80,7 @@ The `gpu` partition only accepts jobs explicitly requesting GPU resources. If
 they don't, they will be rejected with the following message:
 
 ``` none
-$ srun -p gpu --pty bash
+$ salloc -p gpu
 srun: error: Unable to allocate resources: Job violates accounting/QOS policy (job submit limit, user's size and/or time limits)
 ```
 
@@ -90,9 +90,9 @@ As for any other compute node, you can submit an interactive job and request a
 shell on a GPU node with the following command:
 
 ``` none
-$ srun -p gpu --gpus 1 --pty bash
-srun: job 38068928 queued and waiting for resources
-srun: job 38068928 has been allocated resources
+$ salloc -p gpu --gpus 1
+salloc: job 38068928 queued and waiting for resources
+salloc: job 38068928 has been allocated resources
 $ nvidia-smi --query-gpu=index,name --format=csv,noheader
 0, Tesla V100-SXM2-16GB
 ```
@@ -142,8 +142,9 @@ job constraints could be used to satisfy the request. Multiple constraints may
 be specified and combined with various operators (please refer to the official
 [Slurm documentation][url_slurm_sbatch] for details).
 
-The list of available features on GPU nodes can be obtained with the
-`node_feat`[^node_feat] command:
+The list of available features on compute nodes can be obtained with the
+`node_feat`[^node_feat] command. And more specifically, to list the GPU-related
+features of nodes in the `gpu` partition::
 
 ``` none
 $ node_feat -p gpu | grep GPU_
@@ -155,11 +156,13 @@ GPU_SKU:TESLA_P100_PCIE
 GPU_SKU:TESLA_P40
 ```
 
-`node_feat` will only list the features of nodes from partitions you have
-access to, so output may vary depending on your group membership.
+You can use `node_feat` without any option to list all the features of all the
+nodes in all the partitions. But please note that `node_feat` will only list
+the features of nodes from partitions you have access to, so output may vary
+depending on your group membership.
 
-The different characteristics[^values] of various GPU types are listed in the following
-table
+The different characteristics[^values] of various GPU types are listed in the
+following table
 
 | Slurm\ feature | Description | Possible values | Example job constraint |
 | -------------- | ----------- | --------------- | ---------------------- |
@@ -196,8 +199,8 @@ GPU 0: Tesla P100-SXM2-16GB (UUID: GPU-4f91f58f-f3ea-d414-d4ce-faf587c5c4d4)
 ### GPU compute modes
 
 By default, GPUs on Sherlock are set in the **Exclusive Process** compute
-mode[^gpu_cmodes], to provide the best performance and an isolated environment
-for jobs, out of the box.
+mode[^gpu_compute_modes], to provide the best performance and an isolated
+environment for jobs, out of the box.
 
 Some software may require GPUs to be set to a different compute mode, for
 instance to share a GPU across different processes within the same application.
@@ -350,8 +353,8 @@ user's GPU code is running.
 
 [^node_feat]: See `node_feat -h` for more details.
 [^values]: The lists of values provided in the table are non exhaustive.
-[^gpu_cmodes]: The list of available GPU compute modes and relevant details are
-  available in the [CUDA Toolkit Documentation][url_gpu_cmodes]
+[^gpu_compute_modes]: The list of available GPU compute modes and relevant
+    details are available in the [CUDA Toolkit Documentation][url_gpu_cmodes]
 
 
 --8<--- "includes/_acronyms.md"
