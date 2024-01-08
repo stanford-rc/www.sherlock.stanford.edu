@@ -5803,6 +5803,14 @@ software_modules:
       - {description: '.NET is a free, cross-platform, open source developer platform
           for building many different types of applications.', markedDefault: false,
         versionName: 6.0.413}
+    - categories: devel, language
+      defaultVersionName: 2.6.14
+      description: GCL is the official Common Lisp for the GNU project.
+      package: gcl
+      url: https://www.gnu.org/software/gcl/
+      versions:
+      - {description: GCL is the official Common Lisp for the GNU project., markedDefault: false,
+        versionName: 2.6.14}
     - categories: devel, data
       defaultVersionName: 1.0.0
       description: zfp is an open-source library for compressed floating-point and
@@ -5871,22 +5879,19 @@ software_modules:
       - {description: The libevent API provides a mechanism to execute a callback
           function when a specific event occurs on a file descriptor or after a timeout
           has been reached., markedDefault: false, versionName: 2.1.12}
-    - categories: devel, language
-      defaultVersionName: 2.7.13
-      description: Python is an interpreted, interactive, object-oriented programming
-        language.
-      package: python
-      url: https://www.python.org
+    - categories: devel, lib
+      defaultVersionName: 1.0.0
+      description: CNMeM is a simple library to help the Deep Learning frameworks
+        manage CUDA memory.
+      package: cnmem
+      url: https://github.com/NVIDIA/ncmem
       versions:
-      - {description: 'Python is an interpreted, interactive, object-oriented programming
-          language.', family: python, help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
-        markedDefault: false, versionName: 3.6.1}
-      - {description: 'Python is an interpreted, interactive, object-oriented programming
-          language.', family: python, help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
-        markedDefault: false, versionName: 3.9.0}
-      - {description: 'Python is an interpreted, interactive, object-oriented programming
-          language.', family: python, help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
-        markedDefault: true, versionName: 2.7.13}
+      - description: CNMeM is a simple library to help the Deep Learning frameworks
+          manage CUDA memory.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.0.0
     - categories: devel, data
       defaultVersionName: 4.3.1
       description: NetCDF is a set of software libraries and self-describing, machine-independent
@@ -6109,39 +6114,21 @@ software_modules:
           arch: {gpu: 1}
           parallel: {mpi: 1}
         versionName: 0.12.1
-    - categories: devel, compiler
-      defaultVersionName: '21.5'
-      description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
-        Fortran compilers.
-      package: nvhpc
-      url: https://developer.nvidia.com/hpc-sdk
+    - categories: devel, data
+      defaultVersionName: 4.5.4
+      description: NetCDF is a set of software libraries and self-describing, machine-independent
+        data formats that support the creation, access, and sharing of array-oriented
+        scientific data. This module provides Fortran libraries.
+      package: netcdf-fortran
+      url: https://www.unidata.ucar.edu/software/netcdf
       versions:
-      - description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
-          Fortran compilers.
-        family: mpi
+      - description: NetCDF is a set of software libraries and self-describing, machine-independent
+          data formats that support the creation, access, and sharing of array-oriented
+          scientific data. This module provides Fortran libraries.
         markedDefault: false
         properties:
-          arch: {gpu: 1}
           parallel: {mpi: 1}
-        versionName: '21.7'
-      - description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
-          Fortran compilers.
-        family: mpi
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '22.3'
-      - description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
-          Fortran compilers.
-        family: mpi
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '23.3'
-      - {description: 'NVIDIA HPC Software Development Kit (SDK) including C, C++,
-          and Fortran compilers.', family: compiler_f, markedDefault: true, versionName: '21.5'}
+        versionName: 4.5.4
     - categories: devel, engine
       defaultVersionName: 8.4.371.22
       description: V8 is Google’s open source high-performance JavaScript and WebAssembly
@@ -6346,19 +6333,22 @@ software_modules:
       - {description: Cython is an optimising static compiler for both the Python
           programming language and the extended Cython programming language (based
           on Pyrex)., markedDefault: false, versionName: 0.29.28_py39}
-    - categories: devel, lib
-      defaultVersionName: 1.0.0
-      description: CNMeM is a simple library to help the Deep Learning frameworks
-        manage CUDA memory.
-      package: cnmem
-      url: https://github.com/NVIDIA/ncmem
+    - categories: devel, language
+      defaultVersionName: 2.7.13
+      description: Python is an interpreted, interactive, object-oriented programming
+        language.
+      package: python
+      url: https://www.python.org
       versions:
-      - description: CNMeM is a simple library to help the Deep Learning frameworks
-          manage CUDA memory.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 1.0.0
+      - {description: 'Python is an interpreted, interactive, object-oriented programming
+          language.', family: python, help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
+        markedDefault: false, versionName: 3.6.1}
+      - {description: 'Python is an interpreted, interactive, object-oriented programming
+          language.', family: python, help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
+        markedDefault: false, versionName: 3.9.0}
+      - {description: 'Python is an interpreted, interactive, object-oriented programming
+          language.', family: python, help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
+        markedDefault: true, versionName: 2.7.13}
     - categories: devel, language
       defaultVersionName: '20180301'
       description: Manticore is a high-level parallel programming language aimed at
@@ -6782,24 +6772,19 @@ software_modules:
       - {description: 'Haskell is a statically typed, purely functional programming
           language with type inference and lazy evaluation.', markedDefault: false,
         versionName: 8.6.5}
-    - categories: devel, lib
-      defaultVersionName: 3.1.0
-      description: CUTLASS is a collection of CUDA C++ template abstractions for implementing
-        high-performance matrix-multiplication (GEMM) at all levels and scales within
-        CUDA.
-      package: cutlass
-      url: https://github.com/NVIDIA/cutlass
+    - categories: devel, language
+      defaultVersionName: 2.2.2
+      description: GNU Guile is the preferred extension system for the GNU Project,
+        which features an implementation of the Scheme programming language.
+      package: guile
+      url: https://www.gnu.org/software/guile/
       versions:
-      - {description: CUTLASS is a collection of CUDA C++ template abstractions for
-          implementing high-performance matrix-multiplication (GEMM) at all levels
-          and scales within CUDA., markedDefault: false, versionName: 0.1.0}
-      - description: CUTLASS is a collection of CUDA C++ template abstractions for
-          implementing high-performance matrix-multiplication (GEMM) at all levels
-          and scales within CUDA.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 3.1.0
+      - {description: 'GNU Guile is the preferred extension system for the GNU Project,
+          which features an implementation of the Scheme programming language.', markedDefault: false,
+        versionName: 2.0.11}
+      - {description: 'GNU Guile is the preferred extension system for the GNU Project,
+          which features an implementation of the Scheme programming language.', markedDefault: false,
+        versionName: 2.2.2}
     - categories: devel, data analytics
       defaultVersionName: 3.1.0
       description: The Apache Hadoop software library is a framework that allows for
@@ -7128,19 +7113,24 @@ software_modules:
       versions:
       - {description: 'PGI compilers and tools, including Open MPI (Community Edition).',
         family: mpi, markedDefault: false, versionName: '19.10'}
-    - categories: devel, language
-      defaultVersionName: 2.2.2
-      description: GNU Guile is the preferred extension system for the GNU Project,
-        which features an implementation of the Scheme programming language.
-      package: guile
-      url: https://www.gnu.org/software/guile/
+    - categories: devel, lib
+      defaultVersionName: 3.1.0
+      description: CUTLASS is a collection of CUDA C++ template abstractions for implementing
+        high-performance matrix-multiplication (GEMM) at all levels and scales within
+        CUDA.
+      package: cutlass
+      url: https://github.com/NVIDIA/cutlass
       versions:
-      - {description: 'GNU Guile is the preferred extension system for the GNU Project,
-          which features an implementation of the Scheme programming language.', markedDefault: false,
-        versionName: 2.0.11}
-      - {description: 'GNU Guile is the preferred extension system for the GNU Project,
-          which features an implementation of the Scheme programming language.', markedDefault: false,
-        versionName: 2.2.2}
+      - {description: CUTLASS is a collection of CUDA C++ template abstractions for
+          implementing high-performance matrix-multiplication (GEMM) at all levels
+          and scales within CUDA., markedDefault: false, versionName: 0.1.0}
+      - description: CUTLASS is a collection of CUDA C++ template abstractions for
+          implementing high-performance matrix-multiplication (GEMM) at all levels
+          and scales within CUDA.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 3.1.0
     - categories: devel, lib
       defaultVersionName: 1.0.4
       description: The Light-weight Group Library provides methods for MPI codes to
@@ -7552,21 +7542,39 @@ software_modules:
       versions:
       - {description: 'Light-weight, simple and fast XML parser for C++ with XPath
           support.', markedDefault: false, versionName: 1.12.1}
-    - categories: devel, data
-      defaultVersionName: 4.5.4
-      description: NetCDF is a set of software libraries and self-describing, machine-independent
-        data formats that support the creation, access, and sharing of array-oriented
-        scientific data. This module provides Fortran libraries.
-      package: netcdf-fortran
-      url: https://www.unidata.ucar.edu/software/netcdf
+    - categories: devel, compiler
+      defaultVersionName: '21.5'
+      description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
+        Fortran compilers.
+      package: nvhpc
+      url: https://developer.nvidia.com/hpc-sdk
       versions:
-      - description: NetCDF is a set of software libraries and self-describing, machine-independent
-          data formats that support the creation, access, and sharing of array-oriented
-          scientific data. This module provides Fortran libraries.
+      - description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
+          Fortran compilers.
+        family: mpi
         markedDefault: false
         properties:
+          arch: {gpu: 1}
           parallel: {mpi: 1}
-        versionName: 4.5.4
+        versionName: '21.7'
+      - description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
+          Fortran compilers.
+        family: mpi
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '22.3'
+      - description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
+          Fortran compilers.
+        family: mpi
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '23.3'
+      - {description: 'NVIDIA HPC Software Development Kit (SDK) including C, C++,
+          and Fortran compilers.', family: compiler_f, markedDefault: true, versionName: '21.5'}
     - categories: devel, compiler
       defaultVersionName: '110.81'
       description: Standard ML of New Jersey (abbreviated SML/NJ) is a compiler for
