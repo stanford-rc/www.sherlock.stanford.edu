@@ -320,7 +320,7 @@ To create a custom kernel for a virtual environment using Python 3.x:
 
     ```none
     $ pip3 install ipykernel
-    $ python3 -m install --user --name env --display-name "My Env"
+    $ python3 -m ipykernel install --user --name env --display-name "My Env"
     ```
 
     This will create a kernel for the environment `env`. It will appear as `My
