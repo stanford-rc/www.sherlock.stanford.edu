@@ -2,9 +2,9 @@ facts:
   - name: users
     fields:
       - name: user accounts
-        value: 7061
+        value: 7047
       - name: PI groups
-        value: 1113
+        value: 1111
         desc: "from all Stanford's seven Schools, SLAC, Stanford Institutes, _etc._"
       - name: owner groups
         value: 201
@@ -20,28 +20,28 @@ facts:
     fields:
       - name: PFLOPs (FP64)
         fmt: "{:0.2f}"
-        value: 5.00
-        desc: 18.73 (FP32) PFLOPs
+        value: 5.44
+        desc: 19.61 (FP32) PFLOPs
       - name: CPU cores
-        value: 53488
+        value: 55600
         desc: "**4** CPU generations (**13** CPU models)"
       - name: GPUs
-        value: 756
+        value: 792
         desc: "**4** GPU generations (**12** GPU models)"
   - name: hardware
     icon: server
     fields:
       - name: compute nodes
-        value: 1722
+        value: 1731
         desc: "**19** server models (from **3** different manufacturers)"
       - name: racks
         value: 37
-        desc: "**1,147** rack units"
+        desc: "**1,186** rack units"
   - name: energy
     icon: plug
     fields:
       - name: kW
-        value: 566.53
+        value: 531.16
         desc: total power usage
       - name: PDUs
         value: 57
@@ -50,7 +50,7 @@ facts:
     fields:
       - name: "`$SCRATCH`"
         desc: parallel, distributed filesystem, delivering over **200 GB/s** of I/O bandwidth
-        value: 6397678151041024
+        value: 7311427777265664
       - name: "`$OAK`"
         desc: long term research data storage
         value: 51280561781604352
@@ -61,21 +61,21 @@ facts:
         value: 104
         desc: across **2** Infiniband fabrics (EDR, HDR)
       - name: Infiniband cables
-        value: 5718
-        desc: spanning about **30.19 km**
+        value: 5738
+        desc: spanning about **30.23 km**
       - name: Ethernet switches
         value: 53
   - name: scheduler
     icon: chart-bar
     fields:
       - name: Slurm partitions
-        value: 178
+        value: 179
       - name: CPU.hours/day
-        value: 45824
+        value: 51059
         desc: over **5 years** of computing in a single day
       - name: /month
         fmt: "${:,.0f}"
-        value: 3061841.9008
+        value: 3411563.4336
         desc: to run the same workload on t2.large on-demand cloud instances
 
   - name: partitions
@@ -123,8 +123,8 @@ facts:
                 - 2 nodes w/ 32-core (AMD 7502P), 256 GB RAM, HDR IB, 4x Tesla V100S PCIe GPUs
         access: public
       - name: owners
-        nodes: 1492
-        cores: 48488
+        nodes: 1501
+        cores: 48872
         desc: privately-owned nodes
         details: |
                 - 146 nodes w/ 20-core (Intel E5-2640v4), 128 GB RAM, EDR IB
@@ -147,7 +147,7 @@ facts:
                 - 75 nodes w/ 24-core (Intel 5118), 384 GB RAM, EDR IB
                 - 1 nodes w/ 24-core (Intel 5118), 512 GB RAM, EDR IB
                 - 1 nodes w/ 24-core (Intel 5118), 768 GB RAM, EDR IB, 8x Tesla V100_SXM2 GPUs
-                - 256 nodes w/ 32-core (AMD 7543), 256 GB RAM, HDR IB
+                - 264 nodes w/ 32-core (AMD 7543), 256 GB RAM, HDR IB
                 - 360 nodes w/ 32-core (AMD 7502), 256 GB RAM, HDR IB
                 - 13 nodes w/ 32-core (AMD 7502P), 256 GB RAM, HDR IB, 4x Geforce RTX_2080Ti GPUs
                 - 15 nodes w/ 32-core (AMD 7502P), 256 GB RAM, HDR IB, 4x Geforce RTX_3090 GPUs
@@ -164,6 +164,6 @@ facts:
                 - 4 nodes w/ 64-core (AMD 7543), 4096 GB RAM, HDR IB
                 - 20 nodes w/ 128-core (AMD 7763), 1024 GB RAM, HDR IB
                 - 36 nodes w/ 128-core (AMD 7742), 1024 GB RAM, HDR IB
+                - 10 nodes w/ 128-core (AMD 7763), 1024 GB RAM, HDR IB, 8x Tesla A100_SXM4 GPUs
                 - 7 nodes w/ 128-core (AMD 7662), 1024 GB RAM, HDR IB, 8x Tesla A100_SXM4 GPUs
-                - 9 nodes w/ 128-core (AMD 7763), 1024 GB RAM, HDR IB, 8x Tesla A100_SXM4 GPUs
         access: private
