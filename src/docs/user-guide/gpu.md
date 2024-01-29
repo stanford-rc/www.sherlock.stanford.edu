@@ -179,7 +179,7 @@ For instance, to request a Tesla GPU for you job, you can use the following
 submission options:
 
 ``` none
-$ srun -p owners -G 1 -C GPU_BRD:TESLA nvidia-smi -L
+$ srun -p gpu -G 1 -C GPU_BRD:TESLA nvidia-smi -L
 GPU 0: Tesla P100-SXM2-16GB (UUID: GPU-4f91f58f-f3ea-d414-d4ce-faf587c5c4d4)
 ```
 
