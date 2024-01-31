@@ -187,14 +187,18 @@ GPU 0: Tesla P100-SXM2-16GB (UUID: GPU-4f91f58f-f3ea-d414-d4ce-faf587c5c4d4)
 
     If you specify a constraint that can't be satisfied in the partition you're
     submitting your job to, the job will be rejected by the scheduler.     For
-    instance, requesting a GeForce GPU in the `gpu` partition, which only
-    features Tesla GPUs, will result in an error:
+    instance, requesting a RTX3090 GPU in the `gpu` partition, which doesn't
+    feature any, will result in an error:
 
     ``` none
-    $ srun -p gpu -G 1 -C GPU_BRD:GEFORCE nvidia-smi -L
+    $ srun -p gpu -G 1 -C GPU_SKU:RTX_3090 nvidia-smi -L
     srun: error: Unable to allocate resources: Requested node configuration is not available
     ```
 
+
+For more information about requesting specific node features and adding job
+constraints, you can also refer to the ["Node features"][url_node_features]
+page.
 
 ### GPU compute modes
 
@@ -341,6 +345,7 @@ user's GPU code is running.
 [url_condo]:        /docs/concepts/#the-condominium-model
 [url_modules]:      /docs/software/modules
 [url_ondemand]:     /docs/user-guide/ondemand/
+[url_node_features]:/docs/advanced-topics/node-features/
 [url_slurm_sbatch]: //slurm.schedmd.com/sbatch.html#OPT_constraint
 [url_slurm_srun]:   //slurm.schedmd.com/srun.html#OPT_gpus
 [url_gpu_cmodes]:   //docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-modes
