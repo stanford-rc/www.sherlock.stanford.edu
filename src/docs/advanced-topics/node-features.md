@@ -176,7 +176,7 @@ matching `OR` condition can be defined by enclosing the options within square
 brackets (`[`,`]`).
 
 For instance, the following options may be used to request a job to run on
-nodes with the same frequency, either 2.5 GHz or 2/75GHz:
+nodes with the same frequency, either 2.5 GHz or 2.75GHz:
 
 ``` none
 #SBATCH -C "[CPU_FRQ:2.50GHz|CPU_FRQ:2.75GHz]"
