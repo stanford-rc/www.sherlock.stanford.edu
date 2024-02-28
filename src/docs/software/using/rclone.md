@@ -21,6 +21,13 @@ browser, so you will need to connect to Sherlock with **local port forwarding**
 (`ssh -L`). You only need to do this when you are configuring `rclone` for the
 first time.
 
+!!! Note "Use local terminal for `rclone config`"
+
+    **This method will not work in the Sherlock OnDemand shell.** You will need
+    to use your local machine's terminal to enable local port forwarding and to
+    allow `rclone` to communicate with your browser. On Linux and macOS, you
+    can use the Terminal app; on Windows, you can use the PowerShell app.
+
 When running `rclone config` you will be prompted to enter names and values,
 indicated by the `>` symbol. To leave it empty, press Enter.
 
