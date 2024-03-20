@@ -371,7 +371,7 @@ and `gdal` modules, and try installing `sf` again:
 
 ``` none
 $ ml load physics udunits gdal geos
-$ ml R
+$ ml R/4.3.2
 $ R
 > install.packages("sf")
 ```
