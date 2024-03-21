@@ -219,6 +219,18 @@ and then should not be typed in).
     $ umount ~/sherlock_home
     ```
 
+    On Windows, once SSHFS is installed, you can mount the `$SCRATCH`
+    filesystem as a network drive through the windows file explorer.  To do
+    this, go to "This PC", right-click in the "Network Locations" section of
+    the window and select "Add a Network Drive".  Then, in the "Add Network
+    Location Wizard", you would use the following network address:
+
+    ```
+    \\sshfs\<sunetid>@dtn.sherlock.stanford.edu
+    ```
+
+    This will mount the `$SCRATCH` partition as a network drive on your PC.
+
     For more information about using SSHFS on your local machine, you can
     refer to this [tutorial][url_sshfs_tuto] for more details and examples.
 
