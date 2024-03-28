@@ -1,0 +1,456 @@
+:root {
+    --color-accent:     #8C1515;
+    --color-background: #FFFFFF;
+    --color-muted:      #777777;
+
+    --font-head:        "Bangers", "Helvetica Neue",Helvetica,Arial,cursive;
+    --font-sans:        "Roboto", -apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+    --font-serif:       "Droid Serif", "Helvetica Neue",Helvetica,Arial,serif;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#news-widget {
+    margin-left: -15px;
+    margin-bottom: 2px;
+}
+
+#status-widget {
+    margin-top:     auto;
+    margin-bottom:  auto;
+    margin-left:    -2px;
+    padding-bottom:  3px;
+}
+#status-widget .status-widget__led {
+    z-index: 50;
+    position: relative;
+    right:  1rem;
+    height: 1rem;
+    width:  1rem;
+    border-radius: 50%
+}
+#status-widget .status-widget__pane {
+    left: 0px;
+    top: 24px;
+    z-index: 50;
+    padding: 5px;
+    border-radius: 4px
+}
+#status-widget .status-widget__pane:before {
+    display:none;
+}
+#status-widget .status-widget__pane__footer {
+    color: var(--color-accent);
+    background-color: var(--color-background);
+    letter-spacing: 0;
+    font-weight: 800;
+    text-transform: none;
+    position: relative
+}
+#status-widget .status-widget__pane__container {
+    margin: 0
+}
+#status-widget .status-widget__pane__heading,
+#status-widget .status-widget__pane__footer {
+    line-height: 40px;
+}
+#status-widget .status-widget__pane__text {
+    background-color: var(--color-background);
+    line-height: normal;
+    font-size: small
+}
+#status-widget .status-widget__issue * {
+    line-height: normal;
+    letter-spacing: normal;
+    padding: 5px 0
+}
+#status-widget .status-widget__issue__title {
+    color: var(--color-accent);
+    float: none
+}
+#status-widget .status-widget__issue__body>p {
+    font-size: 13px
+}
+#status-widget .status-widget__issue__body li {
+    display: list-item;
+    margin: 0 15px
+}
+
+body {
+    overflow-x: hidden;
+    font-family: var(--font-sans);
+    webkit-tap-highlight-color: var(--color-accent);
+}
+
+.text-muted {
+    color: var(--color-muted);
+}
+
+.text-primary,a {
+    color: var(--color-accent);
+}
+
+p,p.large {
+    font-size: 16px
+}
+
+a.active,a:active,a:focus,a:hover {
+    color: #600e0e
+}
+
+a.account {
+    cursor: pointer
+}
+
+.img-centered {
+    margin: 0 auto
+}
+
+.bg {
+    background-color: #f2f1eb
+}
+
+.bg-light-gray {
+    background-color: #ddd
+}
+
+.bg-darkest-gray {
+    background-color: #222
+}
+
+.btn-primary {
+    color: var(--color-background);
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.btn-primary.active,.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.open .dropdown-toggle.btn-primary {
+    color: var(--color-background);
+    background-color: #600e0e;
+    border-color: #570d0d
+}
+
+.btn-primary.disabled,.btn-primary.disabled.active,.btn-primary.disabled:active,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary[disabled],.btn-primary[disabled].active,.btn-primary[disabled]:active,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary,fieldset[disabled] .btn-primary.active,fieldset[disabled] .btn-primary:active,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.btn-primary .badge {
+    color: var(--color-accent);
+    background-color: var(--color-background);
+}
+
+.btn-xl {
+    color: var(--color-background);
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    border-radius: 3px;
+    font-size: 18px;
+    margin: 20px 40px;
+    padding: 20px 40px
+}
+
+.btn-xl.active,.btn-xl:active,.btn-xl:focus,.btn-xl:hover,.open .dropdown-toggle.btn-xl {
+    color: var(--color-background);
+    background-color: #600e0e;
+    border-color: #570d0d
+}
+
+.btn-xl.disabled,.btn-xl.disabled.active,.btn-xl.disabled:active,.btn-xl.disabled:focus,.btn-xl.disabled:hover,.btn-xl[disabled],.btn-xl[disabled].active,.btn-xl[disabled]:active,.btn-xl[disabled]:focus,.btn-xl[disabled]:hover,fieldset[disabled] .btn-xl,fieldset[disabled] .btn-xl.active,fieldset[disabled] .btn-xl:active,fieldset[disabled] .btn-xl:focus,fieldset[disabled] .btn-xl:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.btn-xl .badge {
+    color: var(--color-accent);
+    background-color: var(--color-background);
+}
+
+.btn-primary,.btn-xl,h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+#mainNav.affix {
+    background-color: #8C1515EE;
+    box-shadow:
+      0 0   4px rgba(0, 0, 0, 0.1),
+      0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-custom,.navbar-custom .navbar-toggle:focus,.navbar-custom .navbar-toggle:hover {
+    background-color: var(--color-accent);
+}
+
+.navbar-custom {
+    border-color: transparent
+}
+
+.navbar-custom .navbar-brand {
+    position: absolute;
+    left: 10px;
+    margin-top: -4px;
+    color: var(--color-background);
+    font-family: var(--font-head);
+}
+
+.navbar-custom .nav li a,.navbar-custom .navbar-toggle {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    color: var(--color-background);
+}
+
+.navbar-custom .navbar-brand.active,.navbar-custom .navbar-brand:active,.navbar-custom .navbar-brand:focus,.navbar-custom .navbar-brand:hover {
+    color: var(--color-background);
+}
+
+.navbar-custom .navbar-brand img {
+    display: inline;
+    margin: 0 5px 0 -2px
+}
+
+.navbar-custom .navbar-collapse {
+    border-color: rgba(255,255,255,.02);
+}
+
+.navbar-custom .navbar-toggle {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    font-size: 14px
+}
+
+.navbar-custom .nav li {
+    display: flex
+}
+
+.navbar-custom .nav li a {
+    font-weight: 400;
+    letter-spacing: 1px
+}
+
+.navbar-custom .nav li a:focus,.navbar-custom .nav li a:hover {
+    color: var(--color-background);
+    background-color: #761212;
+    border-radius: 4px;
+    outline: 0
+}
+
+.navbar-custom .navbar-nav>.active>a {
+    color: var(--color-background);
+    border-radius: 4px;
+    background-color: #761212
+}
+
+.navbar-custom .navbar-nav>.active>a:focus,.navbar-custom .navbar-nav>.active>a:hover {
+    color: var(--color-background);
+    border-radius: 4px;
+    background-color: #600e0e
+}
+
+@media (min-width: 1024px) {
+    .navbar-custom {
+        background-color:transparent;
+        padding: 20px 0;
+        -webkit-transition: padding .5s, background-color .2s;
+        -moz-transition: padding .5s, background-color .2s;
+        transition: padding .5s, background-color .2s;
+        border: none;
+    }
+
+    .navbar-custom .navbar-brand {
+        position: relative;
+        font-size: 2em;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+        margin-left: -15px
+    }
+
+    .navbar-custom .navbar-nav>.active>a {
+        border-radius: 3px
+    }
+
+    .navbar-separator {
+        display: block;
+        position: relative;
+        top: 15px;
+        padding: 10px 0;
+        margin: 0 10px;
+        border-right: 1px solid #d3d3d3
+    }
+
+    .navbar-custom.affix {
+        background-color: var(--color-accent);
+        padding: 10px 0
+    }
+
+    .navbar-custom.affix .navbar-brand {
+        font-size: 1.5em
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .navbar-separator, .navbar-icon {
+        display:none
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-custom .navbar-brand {
+        margin-top:0
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar-custom {
+        margin-top:0
+    }
+}
+
+header {
+    background: linear-gradient(rgba(32, 32, 32, 0.90),
+                                rgba(64, 64, 64, 0.70)),
+                url('/assets/images/bg_hero.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    color: var(--color-background);
+}
+
+header .intro-text {
+    padding-top: 100px;
+    padding-bottom: 50px
+}
+
+header .intro-text .intro-heading {
+    font-family: var(--font-head);
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 25px
+}
+
+header .intro-text .intro-subtitle {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 26px;
+    margin-bottom: 20px
+}
+
+header .intro-text .intro-content {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 10px 20px 40px
+}
+
+header .intro-text img {
+    margin: 50px 50px 15px
+}
+
+@media (min-width: 768px) {
+    header .intro-text {
+        padding-top:150px;
+        padding-bottom: 100px
+    }
+
+    header .intro-text .intro-heading {
+        font-family: var(--font-head);
+        font-size: 75px;
+        line-height: 75px;
+        margin-bottom: 50px
+    }
+
+    header .intro-text .intro-subtitle {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 20px
+    }
+
+    header .intro-text .intro-content {
+        font-family: var(--font-serif);
+        font-style: italic;
+        font-size: 22px;
+        line-height: 30px;
+        padding: 10px 80px 40px
+    }
+
+    header .intro-text img {
+        margin: 50px 50px 15px
+    }
+
+    section {
+        padding: 50px 0
+    }
+}
+
+section {
+    padding: 50px 0
+}
+
+section h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px
+}
+
+section h3.section-subheading {
+    font-size: 16px;
+    font-family: var(--font-serif);
+    text-transform: none;
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 25px
+}
+
+.service-heading {
+    padding: 10px 5px;
+}
+
+.details-text {
+    line-height: 1em
+}
+
+section#services {
+    background: linear-gradient(to bottom,
+                    rgba(256, 256, 256, 1.00) 50px,
+                    rgba(192, 192, 192, 0.90)),
+                    url('/assets/images/bg_svc.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+section#info {
+    background-color: var(--color-background);
+    background: linear-gradient(to bottom,
+                    rgba(256, 256, 256, 1.00),
+                    rgba(232, 232, 232, 1.00));
+}
+
+section#info .headerlink {
+    display: none;
+}
+
+section#info p {
+    color: var(--color-muted)
+}
+
+img::selection {
+    background: 0 0
+}
+
+img::-moz-selection {
+    background: 0 0
+}
+
+#global-footer {
+    margin-top: 0 !important;
+}
+

@@ -1,0 +1,109 @@
+/* get header font */
+@import url("//fonts.googleapis.com/css?family=Bangers&display=fallback");
+
+/* theme color schemes */
+:root {
+  --md-primary-fg-color:               #8c1515;
+  --md-primary-fg-color--light:        #b1040e;
+  --md-primary-fg-color--dark:         #820000;
+  --md-accent-fg-color:                #b1040e;
+  --md-accent-fg-color--transparent:   #b1040e0a;
+}
+
+/* announce bar */
+.md-banner a,
+.md-banner a:focus,
+.md-banner a:hover { color: currentColor; }
+.md-banner .icon   {
+    margin-left:  0.2em;
+    color:        #b1040e;
+}
+
+/* title style */
+.md-header__title {
+  font-family: "Bangers", Roboto, Helvetica, Arial, sans-serif;
+  font-size:   1.2rem;
+}
+.md-header__title .md-ellipsis:after {
+    /* prevent text clipping */
+    content: '';
+    padding: 1px;
+}
+
+/* cookie consent link */
+.md-footer-meta.md-typeset .consent {
+    color: var(--md-footer-fg-color--lighter);
+}
+
+/* don't cut words in code */
+.md-typeset code { word-break: keep-all; }
+
+/* Sherlock admonition */
+.md-typeset .admonition.sherlock,
+.md-typeset details.sherlock {
+  border-color: #8c1515;
+}
+.md-typeset .sherlock > .admonition-title,
+.md-typeset .sherlock > summary {
+  background-color: #82000010;
+  border-color: #8c1515;
+}
+.md-typeset .sherlock > .admonition-title::before,
+.md-typeset .sherlock > summary::before {
+  background-color: #8c1515;
+  -webkit-mask-image: var(--md-admonition-icon--sherlock);
+          mask-image: var(--md-admonition-icon--sherlock);
+}
+
+/* additional styles */
+.chk_yes  { color: darkgreen; }
+.chk_no   { color: darkred;   }
+.fl_left  { float: left;      }
+.fl_right { float: right;     }
+
+.sw_mpi       { color: darkblue;  font-weight: bold; }
+.sw_mpi:after { content: "mpi" }
+.sw_gpu       { color: darkgreen; font-weight: bold; }
+.sw_gpu:after { content: "gpu" }
+.sw_lic       { color: darkred;   font-weight: bold; }
+.sw_lic:after { content: "lic" }
+.sw_def       { color: gray;      font-weight: bold; }
+.sw_def:after { content: "def" }
+
+.number {
+    font-size: 1.2rem;
+    color: var(--md-primary-fg-color);
+}
+.number_desc {
+    font-size: 0.8em;
+    margin-top: -1em !important;
+    color: var(--md-default-fg-color--light);
+}
+
+
+/* pulsate */
+@keyframes pulsate {
+  0%, 40%, 80%, 100% {
+    transform: scale(1);
+  }
+  20%, 60% {
+    transform: scale(1.15);
+  }
+}
+.pulsate {
+  color: #dd2e44;
+  animation: pulsate 1000ms infinite;
+}
+
+/* rotate */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.rotate {
+  animation: rotation 2s infinite linear;
+}
