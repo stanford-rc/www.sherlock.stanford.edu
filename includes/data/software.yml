@@ -5998,24 +5998,30 @@ software_modules:
           and integer arrays that support high throughput read and write random access.,
         markedDefault: false, versionName: 1.0.0}
     - categories: devel, compiler
-      defaultVersionName: '2019'
-      description: Intel C++ Compiler, also known as icc or icl, is a group of C and
-        C++ compilers from Intel
-      package: icc
-      url: https://software.intel.com/en-us/c-compilers
+      defaultVersionName: 7.0.0
+      description: The LLVM Project is a collection of modular and reusable compiler
+        and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,
+      package: llvm
+      url: http://llvm.org
       versions:
-      - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
-          C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
-        versionName: 2017.u2}
-      - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
-          C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
-        versionName: 2018.u1}
-      - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
-          C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
-        versionName: '2018'}
-      - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
-          C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
-        versionName: '2019'}
+      - {description: 'The LLVM Project is a collection of modular and reusable compiler
+          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
+        markedDefault: false, versionName: 3.8.1}
+      - {description: 'The LLVM Project is a collection of modular and reusable compiler
+          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
+        markedDefault: false, versionName: 4.0.0}
+      - {description: 'The LLVM Project is a collection of modular and reusable compiler
+          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
+        markedDefault: false, versionName: 5.0.0}
+      - {description: 'The LLVM Project is a collection of modular and reusable compiler
+          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
+        markedDefault: false, versionName: 9.0.1}
+      - {description: 'The LLVM Project is a collection of modular and reusable compiler
+          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
+        markedDefault: false, versionName: 15.0.3}
+      - {description: 'The LLVM Project is a collection of modular and reusable compiler
+          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
+        markedDefault: true, versionName: 7.0.0}
     - categories: devel, data
       defaultVersionName: 1.12.3
       description: Parallel netCDF (PnetCDF) is a parallel I/O library for accessing
@@ -6131,6 +6137,14 @@ software_modules:
       versions:
       - {description: Parsl is a flexible and scalable parallel programming library
           for Python., markedDefault: false, versionName: 1.2.0_py39}
+    - categories: devel, lib
+      defaultVersionName: 2.0.0
+      description: libtree prints shared object dependencies as a tree.
+      package: libtree
+      url: https://github.com/haampie/libtree
+      versions:
+      - {description: libtree prints shared object dependencies as a tree., markedDefault: false,
+        versionName: 2.0.0}
     - categories: devel, language
       defaultVersionName: 18.15.0
       description: Node.js is a JavaScript runtime built on Chrome's V8 JavaScript
@@ -6242,34 +6256,35 @@ software_modules:
           soft real-time systems with requirements on high availability., markedDefault: false,
         versionName: '21.3'}
     - categories: devel, lib
-      defaultVersionName: 2.0.0
-      description: libtree prints shared object dependencies as a tree.
-      package: libtree
-      url: https://github.com/haampie/libtree
+      defaultVersionName: 2021.1_py36
+      description: PyCUDA lets you access Nvidia‘s CUDA parallel computation API from
+        Python.
+      package: py-pycuda
+      url: https://mathema.tician.de/software/pycuda/
       versions:
-      - {description: libtree prints shared object dependencies as a tree., markedDefault: false,
-        versionName: 2.0.0}
-    - categories: devel, data
-      defaultVersionName: 3.4.0_py27
-      description: Python bindings for Google's Protocol Buffers data interchange
-        format.
-      package: py-protobuf
-      url: https://developers.google.com/protocol-buffers
+      - description: PyCUDA lets you access Nvidia‘s CUDA parallel computation API
+          from Python.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2017.1.1_py27
+      - description: PyCUDA lets you access Nvidia‘s CUDA parallel computation API
+          from Python.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2021.1_py36
+    - categories: devel, lib
+      defaultVersionName: 0.7.5
+      description: Library to manipulate tensors on the GPU.
+      package: libgpuarray
+      url: http://deeplearning.net/software/libgpuarray
       versions:
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: false, versionName: 3.4.0_py36}
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: false, versionName: 3.6.1_py27}
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: false, versionName: 3.6.1_py36}
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: false, versionName: 3.15.8_py36}
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: false, versionName: 3.20.1_py39}
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: false, versionName: 4.21.9_py39}
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: true, versionName: 3.4.0_py27}
+      - description: Library to manipulate tensors on the GPU.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.7.5
     - categories: devel, lib
       defaultVersionName: 4.5.0
       description: libctl is a library for supporting flexible control files in scientific
@@ -6293,17 +6308,19 @@ software_modules:
         markedDefault: false, versionName: 1.3.1_py36}
       - {description: netcdf4-python is a Python interface to the netCDF C library.,
         markedDefault: true, versionName: 1.3.1_py27}
-    - categories: devel, lib
-      defaultVersionName: 0.7.5
-      description: Library to manipulate tensors on the GPU.
-      package: libgpuarray
-      url: http://deeplearning.net/software/libgpuarray
+    - categories: devel, language
+      defaultVersionName: 5.36.1
+      description: Perl 5 is a highly capable, feature-rich programming language with
+        over 29 years of development.
+      package: perl
+      url: https://www.perl.org
       versions:
-      - description: Library to manipulate tensors on the GPU.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.7.5
+      - {description: 'Perl 5 is a highly capable, feature-rich programming language
+          with over 29 years of development.', help: 'https://www.sherlock.stanford.edu/docs/software/using/perl',
+        markedDefault: false, versionName: 5.26.0}
+      - {description: 'Perl 5 is a highly capable, feature-rich programming language
+          with over 29 years of development.', help: 'https://www.sherlock.stanford.edu/docs/software/using/perl',
+        markedDefault: false, versionName: 5.36.1}
     - categories: devel, lib
       defaultVersionName: 0.12.1
       description: Collection of C++ software abstractions that enable architecture
@@ -6368,18 +6385,24 @@ software_modules:
       versions:
       - {description: Python bindinbgs for UCX., markedDefault: false, versionName: 0.24.0_py39}
     - categories: devel, language
-      defaultVersionName: 5.36.1
-      description: Perl 5 is a highly capable, feature-rich programming language with
-        over 29 years of development.
-      package: perl
-      url: https://www.perl.org
+      defaultVersionName: 2.7.13
+      description: Python is an interpreted, interactive, object-oriented programming
+        language.
+      package: python
+      url: https://www.python.org
       versions:
-      - {description: 'Perl 5 is a highly capable, feature-rich programming language
-          with over 29 years of development.', help: 'https://www.sherlock.stanford.edu/docs/software/using/perl',
-        markedDefault: false, versionName: 5.26.0}
-      - {description: 'Perl 5 is a highly capable, feature-rich programming language
-          with over 29 years of development.', help: 'https://www.sherlock.stanford.edu/docs/software/using/perl',
-        markedDefault: false, versionName: 5.36.1}
+      - {description: 'Python is an interpreted, interactive, object-oriented programming
+          language.', family: python, help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
+        markedDefault: false, versionName: 3.6.1}
+      - {description: 'Python is an interpreted, interactive, object-oriented programming
+          language.', family: python, help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
+        markedDefault: false, versionName: 3.9.0}
+      - {description: 'Python is an interpreted, interactive, object-oriented programming
+          language.', family: python, help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
+        markedDefault: false, versionName: 3.12.1}
+      - {description: 'Python is an interpreted, interactive, object-oriented programming
+          language.', family: python, help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
+        markedDefault: true, versionName: 2.7.13}
     - categories: devel, language
       defaultVersionName: 5.4.1_py27
       description: IPython is a command shell for interactive computing in multiple
@@ -6456,25 +6479,28 @@ software_modules:
       versions:
       - {description: Ninja is a small build system with a focus on speed., markedDefault: false,
         versionName: 1.9.0}
-    - categories: devel, language
-      defaultVersionName: 2.7.13
-      description: Python is an interpreted, interactive, object-oriented programming
-        language.
-      package: python
-      url: https://www.python.org
+    - categories: devel, build
+      defaultVersionName: 3.24.2
+      description: CMake is an extensible, open-source system that manages the build
+        process in an operating system and in a compiler-independent manner.
+      package: cmake
+      url: https://www.cmake.org
       versions:
-      - {description: 'Python is an interpreted, interactive, object-oriented programming
-          language.', family: python, help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
-        markedDefault: false, versionName: 3.6.1}
-      - {description: 'Python is an interpreted, interactive, object-oriented programming
-          language.', family: python, help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
-        markedDefault: false, versionName: 3.9.0}
-      - {description: 'Python is an interpreted, interactive, object-oriented programming
-          language.', family: python, help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
-        markedDefault: false, versionName: 3.12.1}
-      - {description: 'Python is an interpreted, interactive, object-oriented programming
-          language.', family: python, help: 'https://www.sherlock.stanford.edu/docs/software/using/python',
-        markedDefault: true, versionName: 2.7.13}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.8.1}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.11.1}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.13.1}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.20.3}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.24.2}
     - categories: devel, language
       defaultVersionName: 1.10.0
       description: Julia is a high-level, high-performance dynamic programming language
@@ -6520,28 +6546,6 @@ software_modules:
       - {description: 'NetCDF is a set of software libraries and self-describing,
           machine-independent data formats that support the creation, access, and
           sharing of array-oriented scientific data.', markedDefault: false, versionName: 4.8.1}
-    - categories: devel, build
-      defaultVersionName: 3.24.2
-      description: CMake is an extensible, open-source system that manages the build
-        process in an operating system and in a compiler-independent manner.
-      package: cmake
-      url: https://www.cmake.org
-      versions:
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.8.1}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.11.1}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.13.1}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.20.3}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.24.2}
     - categories: devel, lib
       defaultVersionName: 3.7.13
       description: RabbitMQ is an open-source message broker.
@@ -6550,25 +6554,6 @@ software_modules:
       versions:
       - {description: RabbitMQ is an open-source message broker., markedDefault: false,
         versionName: 3.7.13}
-    - categories: devel, language
-      defaultVersionName: 0.29.28_py39
-      description: Cython is an optimising static compiler for both the Python programming
-        language and the extended Cython programming language (based on Pyrex).
-      package: py-cython
-      url: http://cython.org/
-      versions:
-      - {description: Cython is an optimising static compiler for both the Python
-          programming language and the extended Cython programming language (based
-          on Pyrex)., markedDefault: false, versionName: 0.27.3_py27}
-      - {description: Cython is an optimising static compiler for both the Python
-          programming language and the extended Cython programming language (based
-          on Pyrex)., markedDefault: false, versionName: 0.27.3_py36}
-      - {description: Cython is an optimising static compiler for both the Python
-          programming language and the extended Cython programming language (based
-          on Pyrex)., markedDefault: false, versionName: 0.29.21_py36}
-      - {description: Cython is an optimising static compiler for both the Python
-          programming language and the extended Cython programming language (based
-          on Pyrex)., markedDefault: false, versionName: 0.29.28_py39}
     - categories: devel, mpi
       defaultVersionName: '2019'
       description: Intel® MPI Library is a multi-fabric message passing library that
@@ -6604,6 +6589,35 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: '2019'
+    - categories: devel, language
+      defaultVersionName: 0.29.28_py39
+      description: Cython is an optimising static compiler for both the Python programming
+        language and the extended Cython programming language (based on Pyrex).
+      package: py-cython
+      url: http://cython.org/
+      versions:
+      - {description: Cython is an optimising static compiler for both the Python
+          programming language and the extended Cython programming language (based
+          on Pyrex)., markedDefault: false, versionName: 0.27.3_py27}
+      - {description: Cython is an optimising static compiler for both the Python
+          programming language and the extended Cython programming language (based
+          on Pyrex)., markedDefault: false, versionName: 0.27.3_py36}
+      - {description: Cython is an optimising static compiler for both the Python
+          programming language and the extended Cython programming language (based
+          on Pyrex)., markedDefault: false, versionName: 0.29.21_py36}
+      - {description: Cython is an optimising static compiler for both the Python
+          programming language and the extended Cython programming language (based
+          on Pyrex)., markedDefault: false, versionName: 0.29.28_py39}
+    - categories: devel, lib
+      defaultVersionName: 4.2.2
+      description: ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous
+        messaging library, aimed at use in distributed or concurrent applications.
+      package: zeromq
+      url: http://zeromq.org
+      versions:
+      - {description: 'ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance
+          asynchronous messaging library, aimed at use in distributed or concurrent
+          applications.', markedDefault: false, versionName: 4.2.2}
     - categories: devel, language
       defaultVersionName: '20180301'
       description: Manticore is a high-level parallel programming language aimed at
@@ -6715,61 +6729,21 @@ software_modules:
           system.', family: bazel, markedDefault: false, versionName: 0.26.1}
       - {description: 'Bazel is a fast, scalable, multi-language and extensible build
           system.', family: bazel, markedDefault: false, versionName: 0.29.1}
-    - categories: devel, lib
-      defaultVersionName: 4.2.2
-      description: ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous
-        messaging library, aimed at use in distributed or concurrent applications.
-      package: zeromq
-      url: http://zeromq.org
+    - categories: devel, data
+      defaultVersionName: 4.9.0
+      description: NetCDF is a set of software libraries and self-describing, machine-independent
+        data formats that support the creation, access, and sharing of array-oriented
+        scientific data. This module provides C libraries.
+      package: netcdf-c
+      url: https://www.unidata.ucar.edu/software/netcdf
       versions:
-      - {description: 'ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance
-          asynchronous messaging library, aimed at use in distributed or concurrent
-          applications.', markedDefault: false, versionName: 4.2.2}
-    - categories: devel, lib
-      defaultVersionName: 1.79.0
-      description: Boost is a set of libraries for the C++ programming language that
-        provide support for tasks and structures such as linear algebra, pseudorandom
-        number generation, multithreading, image processing, regular expressions,
-        and unit testing.
-      package: boost
-      url: http://www.boost.org
-      versions:
-      - {description: 'Boost is a set of libraries for the C++ programming language
-          that provide support for tasks and structures such as linear algebra, pseudorandom
-          number generation, multithreading, image processing, regular expressions,
-          and unit testing.', markedDefault: false, versionName: 1.64.0}
-      - description: Boost is a set of libraries for the C++ programming language
-          that provide support for tasks and structures such as linear algebra, pseudorandom
-          number generation, multithreading, image processing, regular expressions,
-          and unit testing.
+      - description: NetCDF is a set of software libraries and self-describing, machine-independent
+          data formats that support the creation, access, and sharing of array-oriented
+          scientific data. This module provides C libraries.
         markedDefault: false
         properties:
           parallel: {mpi: 1}
-        versionName: 1.69.0
-      - description: Boost is a set of libraries for the C++ programming language
-          that provide support for tasks and structures such as linear algebra, pseudorandom
-          number generation, multithreading, image processing, regular expressions,
-          and unit testing.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 1.75.0
-      - description: Boost is a set of libraries for the C++ programming language
-          that provide support for tasks and structures such as linear algebra, pseudorandom
-          number generation, multithreading, image processing, regular expressions,
-          and unit testing.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 1.76.0
-      - description: Boost is a set of libraries for the C++ programming language
-          that provide support for tasks and structures such as linear algebra, pseudorandom
-          number generation, multithreading, image processing, regular expressions,
-          and unit testing.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 1.79.0
+        versionName: 4.9.0
     - categories: devel, lib
       defaultVersionName: 2.2.2
       description: Copy-hiding array abstraction to automatically migrate data between
@@ -6807,41 +6781,6 @@ software_modules:
           parallel: {mpi: 1}
         versionName: 0.5.1
     - categories: devel, lib
-      defaultVersionName: 0.35.0_py27
-      description: Numba is a compiler for Python array and numerical functions that
-        gives you the power to speed up your applications with high performance functions
-        written directly in Python..
-      package: py-numba
-      url: http://numba.pydata.org
-      versions:
-      - {description: Numba is a compiler for Python array and numerical functions
-          that gives you the power to speed up your applications with high performance
-          functions written directly in Python.., markedDefault: false, versionName: 0.35.0_py36}
-      - {description: Numba is a compiler for Python array and numerical functions
-          that gives you the power to speed up your applications with high performance
-          functions written directly in Python.., markedDefault: false, versionName: 0.53.1_py36}
-      - {description: Numba is a compiler for Python array and numerical functions
-          that gives you the power to speed up your applications with high performance
-          functions written directly in Python.., markedDefault: false, versionName: 0.54.1_py39}
-      - {description: Numba is a compiler for Python array and numerical functions
-          that gives you the power to speed up your applications with high performance
-          functions written directly in Python.., markedDefault: true, versionName: 0.35.0_py27}
-    - categories: devel, data
-      defaultVersionName: 4.9.0
-      description: NetCDF is a set of software libraries and self-describing, machine-independent
-        data formats that support the creation, access, and sharing of array-oriented
-        scientific data. This module provides C libraries.
-      package: netcdf-c
-      url: https://www.unidata.ucar.edu/software/netcdf
-      versions:
-      - description: NetCDF is a set of software libraries and self-describing, machine-independent
-          data formats that support the creation, access, and sharing of array-oriented
-          scientific data. This module provides C libraries.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 4.9.0
-    - categories: devel, lib
       defaultVersionName: 0.20.0_py39
       description: scikit-image is a collection of algorithms for image processing.
       package: py-scikit-image
@@ -6861,6 +6800,58 @@ software_modules:
         markedDefault: false, versionName: 0.19.3_py39}
       - {description: scikit-image is a collection of algorithms for image processing.,
         markedDefault: false, versionName: 0.20.0_py39}
+    - categories: devel, lib
+      defaultVersionName: 0.35.0_py27
+      description: Numba is a compiler for Python array and numerical functions that
+        gives you the power to speed up your applications with high performance functions
+        written directly in Python..
+      package: py-numba
+      url: http://numba.pydata.org
+      versions:
+      - {description: Numba is a compiler for Python array and numerical functions
+          that gives you the power to speed up your applications with high performance
+          functions written directly in Python.., markedDefault: false, versionName: 0.35.0_py36}
+      - {description: Numba is a compiler for Python array and numerical functions
+          that gives you the power to speed up your applications with high performance
+          functions written directly in Python.., markedDefault: false, versionName: 0.53.1_py36}
+      - {description: Numba is a compiler for Python array and numerical functions
+          that gives you the power to speed up your applications with high performance
+          functions written directly in Python.., markedDefault: false, versionName: 0.54.1_py39}
+      - {description: Numba is a compiler for Python array and numerical functions
+          that gives you the power to speed up your applications with high performance
+          functions written directly in Python.., markedDefault: true, versionName: 0.35.0_py27}
+    - categories: devel, language
+      defaultVersionName: 1.72.0
+      description: A language empowering everyone to build reliable and efficient
+        software.
+      package: rust
+      url: https://www.rust-lang.org/
+      versions:
+      - {description: A language empowering everyone to build reliable and efficient
+          software., markedDefault: false, versionName: 1.35.0}
+      - {description: A language empowering everyone to build reliable and efficient
+          software., markedDefault: false, versionName: 1.56.1}
+      - {description: A language empowering everyone to build reliable and efficient
+          software., markedDefault: false, versionName: 1.63.0}
+      - {description: A language empowering everyone to build reliable and efficient
+          software., markedDefault: false, versionName: 1.72.0}
+    - categories: devel, language
+      defaultVersionName: 3.1.2
+      description: A dynamic, open source programming language with a focus on simplicity
+        and productivity. It has an elegant syntax that is natural to read and easy
+        to write.
+      package: ruby
+      url: https://www.ruby-lang.org
+      versions:
+      - {description: 'A dynamic, open source programming language with a focus on
+          simplicity and productivity. It has an elegant syntax that is natural to
+          read and easy to write.', markedDefault: false, versionName: 2.4.1}
+      - {description: 'A dynamic, open source programming language with a focus on
+          simplicity and productivity. It has an elegant syntax that is natural to
+          read and easy to write.', markedDefault: false, versionName: 2.7.1}
+      - {description: 'A dynamic, open source programming language with a focus on
+          simplicity and productivity. It has an elegant syntax that is natural to
+          read and easy to write.', markedDefault: false, versionName: 3.1.2}
     - categories: devel, framework
       defaultVersionName: 5.8.2
       description: Global Arrays (GA) is a Partitioned Global Address Space (PGAS)
@@ -6888,23 +6879,22 @@ software_modules:
       versions:
       - {description: Kerl is a tool to easily build and install Erlang/OTP instances.,
         markedDefault: false, versionName: 1.8.5}
-    - categories: devel, language
-      defaultVersionName: 3.1.2
-      description: A dynamic, open source programming language with a focus on simplicity
-        and productivity. It has an elegant syntax that is natural to read and easy
-        to write.
-      package: ruby
-      url: https://www.ruby-lang.org
+    - categories: devel, data
+      defaultVersionName: 3.4.0
+      description: Protocol Buffers (a.k.a., protobuf) are Google's language-neutral,
+        platform-neutral, extensible mechanism for serializing structured data.
+      package: protobuf
+      url: https://developers.google.com/protocol-buffers/
       versions:
-      - {description: 'A dynamic, open source programming language with a focus on
-          simplicity and productivity. It has an elegant syntax that is natural to
-          read and easy to write.', markedDefault: false, versionName: 2.4.1}
-      - {description: 'A dynamic, open source programming language with a focus on
-          simplicity and productivity. It has an elegant syntax that is natural to
-          read and easy to write.', markedDefault: false, versionName: 2.7.1}
-      - {description: 'A dynamic, open source programming language with a focus on
-          simplicity and productivity. It has an elegant syntax that is natural to
-          read and easy to write.', markedDefault: false, versionName: 3.1.2}
+      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
+          platform-neutral, extensible mechanism for serializing structured data.',
+        markedDefault: false, versionName: 3.20.0}
+      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
+          platform-neutral, extensible mechanism for serializing structured data.',
+        markedDefault: false, versionName: '21.9'}
+      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
+          platform-neutral, extensible mechanism for serializing structured data.',
+        markedDefault: true, versionName: 3.4.0}
     - categories: devel, compiler
       defaultVersionName: 2.2.0
       description: AMD Optimizing C/C++ Compiler - AOCC is a highly optimized C, C++
@@ -6925,21 +6915,14 @@ software_modules:
       url: https://www.gnu.org/software/gdb/
       versions:
       - {description: GDB is the GNU Project debugger., markedDefault: false, versionName: 8.2.1}
-    - categories: devel, language
-      defaultVersionName: 1.72.0
-      description: A language empowering everyone to build reliable and efficient
-        software.
-      package: rust
-      url: https://www.rust-lang.org/
+    - categories: devel, IDE
+      defaultVersionName: 1.16.1_py39
+      description: Jupyter Notebooks as Markdown Documents, Julia, Python or R scripts.
+      package: py-jupytext
+      url: https://github.com/mwouts/jupytext
       versions:
-      - {description: A language empowering everyone to build reliable and efficient
-          software., markedDefault: false, versionName: 1.35.0}
-      - {description: A language empowering everyone to build reliable and efficient
-          software., markedDefault: false, versionName: 1.56.1}
-      - {description: A language empowering everyone to build reliable and efficient
-          software., markedDefault: false, versionName: 1.63.0}
-      - {description: A language empowering everyone to build reliable and efficient
-          software., markedDefault: false, versionName: 1.72.0}
+      - {description: 'Jupyter Notebooks as Markdown Documents, Julia, Python or R
+          scripts.', markedDefault: false, versionName: 1.16.1_py39}
     - categories: devel, data
       defaultVersionName: 1.10.6
       description: HDF5 is a data model, library, and file format for storing and
@@ -7645,31 +7628,15 @@ software_modules:
       - {description: 'Jupyter is a browser-based interactive notebook for programming,
           mathematics, and data science. It supports a number of languages via plugins.',
         markedDefault: true, versionName: 1.0.0_py27}
-    - categories: devel, compiler
-      defaultVersionName: 7.0.0
-      description: The LLVM Project is a collection of modular and reusable compiler
-        and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,
-      package: llvm
-      url: http://llvm.org
+    - categories: devel, debug
+      defaultVersionName: 3.14.0
+      description: Valgrind is an instrumentation framework for building dynamic analysis
+        tools.
+      package: valgrind
+      url: http://valgrind.org/
       versions:
-      - {description: 'The LLVM Project is a collection of modular and reusable compiler
-          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
-        markedDefault: false, versionName: 3.8.1}
-      - {description: 'The LLVM Project is a collection of modular and reusable compiler
-          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
-        markedDefault: false, versionName: 4.0.0}
-      - {description: 'The LLVM Project is a collection of modular and reusable compiler
-          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
-        markedDefault: false, versionName: 5.0.0}
-      - {description: 'The LLVM Project is a collection of modular and reusable compiler
-          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
-        markedDefault: false, versionName: 9.0.1}
-      - {description: 'The LLVM Project is a collection of modular and reusable compiler
-          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
-        markedDefault: false, versionName: 15.0.3}
-      - {description: 'The LLVM Project is a collection of modular and reusable compiler
-          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
-        markedDefault: true, versionName: 7.0.0}
+      - {description: Valgrind is an instrumentation framework for building dynamic
+          analysis tools., markedDefault: false, versionName: 3.14.0}
     - categories: devel, language
       defaultVersionName: 5.3.4
       description: Lua is a powerful, efficient, lightweight, embeddable scripting
@@ -7704,15 +7671,25 @@ software_modules:
       - {description: 'PHP (recursive acronym for PHP: Hypertext Preprocessor) is
           an open source general-purpose scripting language that is especially suited
           for web development.', markedDefault: false, versionName: 7.3.0}
-    - categories: devel, debug
-      defaultVersionName: 3.14.0
-      description: Valgrind is an instrumentation framework for building dynamic analysis
-        tools.
-      package: valgrind
-      url: http://valgrind.org/
+    - categories: devel, compiler
+      defaultVersionName: '2019'
+      description: Intel C++ Compiler, also known as icc or icl, is a group of C and
+        C++ compilers from Intel
+      package: icc
+      url: https://software.intel.com/en-us/c-compilers
       versions:
-      - {description: Valgrind is an instrumentation framework for building dynamic
-          analysis tools., markedDefault: false, versionName: 3.14.0}
+      - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
+          C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
+        versionName: 2017.u2}
+      - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
+          C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
+        versionName: 2018.u1}
+      - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
+          C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
+        versionName: '2018'}
+      - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
+          C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
+        versionName: '2019'}
     - categories: devel, data analytics
       defaultVersionName: 0.3_py27
       description: 'Launching and controlling spark on HPC clusters '
@@ -7749,6 +7726,59 @@ software_modules:
       - {description: 'Intel Fortran Compiler, also known as ifort, is a group of
           Fortran compilers from Intel', family: compiler_f, markedDefault: false,
         versionName: '2019'}
+    - categories: devel, lib
+      defaultVersionName: 1.79.0
+      description: Boost is a set of libraries for the C++ programming language that
+        provide support for tasks and structures such as linear algebra, pseudorandom
+        number generation, multithreading, image processing, regular expressions,
+        and unit testing.
+      package: boost
+      url: http://www.boost.org
+      versions:
+      - {description: 'Boost is a set of libraries for the C++ programming language
+          that provide support for tasks and structures such as linear algebra, pseudorandom
+          number generation, multithreading, image processing, regular expressions,
+          and unit testing.', markedDefault: false, versionName: 1.64.0}
+      - description: Boost is a set of libraries for the C++ programming language
+          that provide support for tasks and structures such as linear algebra, pseudorandom
+          number generation, multithreading, image processing, regular expressions,
+          and unit testing.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.69.0
+      - description: Boost is a set of libraries for the C++ programming language
+          that provide support for tasks and structures such as linear algebra, pseudorandom
+          number generation, multithreading, image processing, regular expressions,
+          and unit testing.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.75.0
+      - description: Boost is a set of libraries for the C++ programming language
+          that provide support for tasks and structures such as linear algebra, pseudorandom
+          number generation, multithreading, image processing, regular expressions,
+          and unit testing.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.76.0
+      - description: Boost is a set of libraries for the C++ programming language
+          that provide support for tasks and structures such as linear algebra, pseudorandom
+          number generation, multithreading, image processing, regular expressions,
+          and unit testing.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.79.0
+    - categories: devel, IDE
+      defaultVersionName: 4.16.1
+      description: Run VS Code on any machine anywhere and access it in the browser.
+      package: code-server
+      url: https://github.com/coder/code-server
+      versions:
+      - {description: Run VS Code on any machine anywhere and access it in the browser.,
+        markedDefault: false, versionName: 4.16.1}
     - categories: devel, runtime
       defaultVersionName: 1.3.2
       description: StarPU is a unified runtime system that offers support for heterogeneous
@@ -7762,30 +7792,6 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 1.3.2
-    - categories: devel, IDE
-      defaultVersionName: 4.16.1
-      description: Run VS Code on any machine anywhere and access it in the browser.
-      package: code-server
-      url: https://github.com/coder/code-server
-      versions:
-      - {description: Run VS Code on any machine anywhere and access it in the browser.,
-        markedDefault: false, versionName: 4.16.1}
-    - categories: devel, data
-      defaultVersionName: 3.4.0
-      description: Protocol Buffers (a.k.a., protobuf) are Google's language-neutral,
-        platform-neutral, extensible mechanism for serializing structured data.
-      package: protobuf
-      url: https://developers.google.com/protocol-buffers/
-      versions:
-      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
-          platform-neutral, extensible mechanism for serializing structured data.',
-        markedDefault: false, versionName: 3.20.0}
-      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
-          platform-neutral, extensible mechanism for serializing structured data.',
-        markedDefault: false, versionName: '21.9'}
-      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
-          platform-neutral, extensible mechanism for serializing structured data.',
-        markedDefault: true, versionName: 3.4.0}
     - categories: devel, lib
       defaultVersionName: 1.12.1
       description: Light-weight, simple and fast XML parser for C++ with XPath support.
@@ -7818,23 +7824,25 @@ software_modules:
       versions:
       - {description: Standard ML of New Jersey (abbreviated SML/NJ) is a compiler
           for the Standard ML '97 programming language., markedDefault: false, versionName: '110.81'}
-    - categories: devel, lib
-      defaultVersionName: 2021.1_py36
-      description: PyCUDA lets you access Nvidia‘s CUDA parallel computation API from
-        Python.
-      package: py-pycuda
-      url: https://mathema.tician.de/software/pycuda/
+    - categories: devel, data
+      defaultVersionName: 3.4.0_py27
+      description: Python bindings for Google's Protocol Buffers data interchange
+        format.
+      package: py-protobuf
+      url: https://developers.google.com/protocol-buffers
       versions:
-      - description: PyCUDA lets you access Nvidia‘s CUDA parallel computation API
-          from Python.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2017.1.1_py27
-      - description: PyCUDA lets you access Nvidia‘s CUDA parallel computation API
-          from Python.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2021.1_py36
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: false, versionName: 3.4.0_py36}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: false, versionName: 3.6.1_py27}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: false, versionName: 3.6.1_py36}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: false, versionName: 3.15.8_py36}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: false, versionName: 3.20.1_py39}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: false, versionName: 4.21.9_py39}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: true, versionName: 3.4.0_py27}
 
