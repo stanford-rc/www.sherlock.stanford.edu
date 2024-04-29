@@ -392,10 +392,8 @@ services, we also provide a set of utilities that can help.
 
 !!! tip "Google Drive storage for Stanford users"
 
-    Google Drive is free for educational institutions. Meaning you can get
-    **free** and **unlimited** storage on Google Drive using your @stanford.edu
-    account. See the [University IT Google Drive page][url_uit_gdrive] for more
-    details.
+    For more information about using Google Drive at Stanford, please see the
+    [University IT Google Drive page][url_uit_gdrive].
 
 We provide the `rclone` tool on Sherlock to interact with Google Drive. You'll
 just need to load the `rclone` module to be able to use it to move your
