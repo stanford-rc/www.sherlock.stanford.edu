@@ -204,13 +204,13 @@ notifications are not available.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_screen]:       https://www.gnu.org/software/screen
-[url_tmux]:         https://github.com/tmux/tmux/wiki
-[url_connecting]:   /docs/getting-started/connecting/#authentication
-[url_kerberos]:     https://uit.stanford.edu/service/kerberos
-[url_prereq]:       /docs/getting-started/#windows
-[url_vpn]:          https://uit.stanford.edu/service/vpn
-[url_alt2fa]:       https://uit.stanford.edu/service/webauth/twostep
+[url_prereq]:       ../getting-started/index.md#windows
+[url_connecting]:   ../getting-started/connecting.md#authentication
+[url_screen]:       //www.gnu.org/software/screen
+[url_tmux]:         //github.com/tmux/tmux/wiki
+[url_kerberos]:     //uit.stanford.edu/service/kerberos
+[url_vpn]:          //uit.stanford.edu/service/vpn
+[url_alt2fa]:       //uit.stanford.edu/service/webauth/twostep
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

@@ -104,11 +104,11 @@ container images, it could be useful to collect them all in a single location
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_modules]:        /docs/oftware/list
-[url_r]:              /docs/software/using/R
-[url_venv]:           /docs/software/using/python#virtual-environments
-[url_container]:      /docs/software/containers
-[url_sh_dev]:         /docs/user-guide/running-jobs/#interactive-jobs
+[url_modules]:        ../list.md
+[url_r]:              R.md
+[url_venv]:           python.md#virtual-environments
+[url_container]:      ../../containers
+[url_sh_dev]:         ../..//user-guide/running-jobs.md#interactive-jobs
 
 [url_contact]:        mailto:{{ support_email }}
 

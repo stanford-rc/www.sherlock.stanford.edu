@@ -207,7 +207,7 @@ documentation][url_constraints_doc].
 
 --8<--- "includes/_acronyms.md"
 
-[url_node-class]:       /docs/orders/#configurations
+[url_node-class]:       ../orders.md#configurations
 [url_catalog]:          //www.sherlock.stanford.edu/catalog
 [url_gpu_cc]:           //developer.nvidia.com/cuda-gpus
 [url_constraints_doc]:  //slurm.schedmd.com/sbatch.html#OPT_constraint

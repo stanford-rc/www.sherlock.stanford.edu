@@ -114,9 +114,9 @@ Field | {{ h_name }} | {{ h_vers }} | URL | Description
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_modules]:          /docs/software/modules/
-[url_installations]:    /docs/software#installation-requests
-[url_updates]:          /docs/software/updates.xml
+[url_modules]:          modules.md
+[url_installations]:    index.md#installation-requests
+[url_updates]:          updates.xml
 
 
 --8<--- "includes/_acronyms.md"

@@ -165,7 +165,7 @@ numbers and figures, see the [Sherlock facts][url_facts] page.
 ### OK, I'm sold, how do I start?
 
 You can request an account right now, take a look at the
-[documentation](/docs), and drop us an [email](mailto:{{ support_email }}) if
+[documentation][url_docs], and drop us an [email](mailto:{{ support_email }}) if
 you have any questions.
 
 
@@ -180,8 +180,9 @@ your request, and we'll get back to you.
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_srcc]:     //srcc.stanford.edu
-[url_purchase]: /docs/orders/
 [url_catalog]:  /catalog
 [url_order]:    /order
-[url_specs]:    /docs/tech/
-[url_facts]:    /docs/tech/facts
+[url_docs]:     docs/index.md
+[url_purchase]: docs/orders.md
+[url_specs]:    docs/tech/index.md
+[url_facts]:    docs/tech/facts.md

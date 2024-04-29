@@ -388,8 +388,8 @@ $ ml av
 
 [url_lmod]:         //lmod.readthedocs.io
 [url_lmod_user]:    //lmod.readthedocs.io/en/latest/010_user.html
-[url_list]:         /docs/software/list/
-[url_install]:      /docs/software/install
+[url_list]:         list.md
+[url_install]:      install.md
 [url_contact]:      mailto:{{ support_email }}
 
 

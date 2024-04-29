@@ -266,18 +266,18 @@ Here's what it looks like in motion:
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_srcc]:         //srcc.stanford.edu
-[url_docs]:         //www.sherlock.stanford.edu/docs
 [url_news]:         //news.sherlock.stanford.edu
 [url_status]:       //status.sherlock.stanford.edu
 [url_srcc_support]: //srcc/stanford.edu/support
 
-[url_invest]:       /docs/concepts#investing-in-sherlock
-[url_concepts]:     /docs/concepts
-[url_glossary]:     /docs/glossary
-[url_prereq]:       /docs/getting-started/
-[url_connect]:      /docs/getting-started/connecting
-[url_submit]:       /docs/getting-started/submitting
-[url_troubleshoot]: /docs/user-guide/troubleshoot/#how-to-submit-a-successful-support-request
+[url_docs]:         index.md
+[url_invest]:       concepts.md#investing-in-sherlock
+[url_concepts]:     concepts.md
+[url_glossary]:     glossary.md
+[url_prereq]:       getting-started/index.md
+[url_connect]:      getting-started/connecting.md
+[url_submit]:       getting-started/submitting.md
+[url_troubleshoot]: user-guide/troubleshoot.md#how-to-submit-a-successful-support-request
 
 [url_shu_ml]:       //mailman.stanford.edu/mailman/listinfo/sherlock-users
 [url_sha_ml]:       //mailman.stanford.edu/mailman/listinfo/sherlock-announce

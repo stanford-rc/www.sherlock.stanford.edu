@@ -327,15 +327,14 @@ jobs][url_recurring_jobs] and submit long-running database instances.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_mysql]:        //www.mysql.com/
-[url_mariadb]:      //www.mariadb.com/
-[url_mariadb_docs]: //mariadb.com/kb/en/library/documentation/
-[url_heredoc]:      //en.wikipedia.org/wiki/Here_document
+[url_mysql]:            //www.mysql.com/
+[url_mariadb]:          //www.mariadb.com/
+[url_mariadb_docs]:     //mariadb.com/kb/en/library/documentation/
+[url_heredoc]:          //en.wikipedia.org/wiki/Here_document
 
-[url_compute_node]: /docs/glossary/#node
-
-[url_storage]:      /docs/storage
-[url_recurring_jobs]:   /docs/user-guide/running-jobs/#recurring-jobs
+[url_compute_node]:     ../../glossary.md#node
+[url_storage]:          ../../storage/index.md
+[url_recurring_jobs]:   ../..//user-guide/running-jobs.md#recurring-jobs
 
 
 --8<--- "includes/_acronyms.md"

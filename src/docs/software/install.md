@@ -16,9 +16,9 @@ replicated off-site, and can easily be shared with members of a research group.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_sw_overview]:  /docs/software/
-[url_sw_list]:      /docs/software/list
-[url_grp_home]:     /docs/storage/filesystems/#group_home
+[url_sw_overview]:  index.md
+[url_sw_list]:      list.md
+[url_grp_home]:     ../storage/filesystems.md#group_home
 
 
 --8<--- "includes/_acronyms.md"

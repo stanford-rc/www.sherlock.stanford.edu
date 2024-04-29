@@ -22,13 +22,13 @@ defined tasks on the selected resources, and generate output files in one of
 the different [storage locations][url_storage] available on the cluster, for
 the user to review and analyze.
 
-[g_cpu]:        /docs/glossary#cpu
-[g_gpu]:        /docs/glossary#gpu
-[g_login]:      /docs/glossary#login-nodes
-[g_ssh]:        /docs/glossary#ssh
-[g_jobs]:       /docs/glossary#job
-[g_scheduler]:  /docs/glossary#scheduler
-[url_storage]:  /docs/storage/
+[g_cpu]:        #cpu
+[g_gpu]:        #gpu
+[g_login]:      #login-nodes
+[g_ssh]:        #ssh
+[g_jobs]:       #job
+[g_scheduler]:  #scheduler
+[url_storage]:  storage/index.md
 
 ## Cluster components
 
@@ -255,7 +255,7 @@ multi-threaded program is composed of only one task, which uses several CPUs.
 [url_ib]:       //www.infinibandta.org/about-infiniband/
 [url_ip]:       //tools.ietf.org/html/rfc791
 [url_mpi]:      //www.mpi-forum.org
-[url_sh_part]:  /docs/user-guide/running-jobs/#available-resources
+[url_sh_part]:  user-guide/running-jobs.md#available-resources
 
 
 --8<--- "includes/_acronyms.md"

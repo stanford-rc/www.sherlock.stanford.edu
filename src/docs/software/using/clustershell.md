@@ -247,8 +247,8 @@ sh02-12n04: /share/software/user/open/python/3.6.1/bin/python3.6, 15943 MiB
 [url_doc_clush_api]://clustershell.readthedocs.io/en/latest/api/NodeSet.html#usage-example
 
 
-[url_modules]:      /docs/software/modules
-[url_lscratch]:     /docs/storage/filesystems/#l_scratch
+[url_modules]:      ../modules.md
+[url_lscratch]:     ../../storage/filesystems.md#l_scratch
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

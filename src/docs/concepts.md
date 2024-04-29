@@ -288,19 +288,19 @@ lost when the maintenance starts.
 [email]:          mailto:{{ support_email }}
 [url_provost]:    //provost.stanford.edu/
 [url_dor]:        //doresearch.stanford.edu/research-offices/dor-office-vice-provost-and-dean-research
-[url_uit]:        //uit.stanford.edu
 [url_srcc]:       //srcc.stanford.edu/
+[url_uit]:        //uit.stanford.edu
 [url_risk]:       //uit.stanford.edu/guide/riskclassifications
 [url_datarisk]:   //uit.stanford.edu/guide/riskclassifications#data-classification-examples
 [url_minsec]:     //uit.stanford.edu/guide/securitystandards
-[url_admin]:      //adminguide.stanford.edu
-[url_farmshare]:  //uit.stanford.edu/service/sharedcomputing
-[url_fairshare]:  //slurm.schedmd.com/fair_tree.html
-[url_orders]:     /docs/orders
-[url_recurring]:  /docs/user-guide/running-jobs/#recurring-jobs
-[url_persistent]: /docs/user-guide/running-jobs/#persistent-jobs
-[url_lscratch]:   /docs/storage/filesystems/#l_scratch
 [url_oak]:        //uit.stanford.edu/service/oak-storage
+[url_farmshare]:  //uit.stanford.edu/service/sharedcomputing
+[url_admin]:      //adminguide.stanford.edu
+[url_fairshare]:  //slurm.schedmd.com/fair_tree.html
+[url_orders]:     orders.md
+[url_recurring]:  user-guide/running-jobs.md#recurring-jobs
+[url_persistent]: user-guide/running-jobs.md#persistent-jobs
+[url_lscratch]:   storage/filesystems.md#l_scratch
 
 [url_HIPAA]: //en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act
 [url_PHI]:   //en.wikipedia.org/wiki/Protected_health_information
