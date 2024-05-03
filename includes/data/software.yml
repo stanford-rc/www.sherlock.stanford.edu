@@ -2331,6 +2331,14 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.0.0_py39
+    - categories: math, machine learning
+      defaultVersionName: 0.15.0_py39
+      description: A PyTorch Library for Accelerating 3D Deep Learning Research.
+      package: py-kaolin
+      url: https://github.com/NVIDIAGameWorks/kaolin
+      versions:
+      - {description: A PyTorch Library for Accelerating 3D Deep Learning Research.,
+        markedDefault: false, versionName: 0.15.0_py39}
     - categories: math, numerical library
       defaultVersionName: 7.4.0
       description: SuiteSparse is a suite of sparse matrix algorithms.
@@ -2371,47 +2379,18 @@ software_modules:
           scipy, matplotlib, ipython, jupyter, pandas, sympy and nose.', family: sympy,
         markedDefault: true, versionName: 1.0_py27}
     - categories: math, statistics
-      defaultVersionName: '15'
-      description: Stata is a complete, integrated statistical software package that
-        provides everything you need for data analysis, data management, and graphics.
-      package: stata
-      url: https://www.stata.com
+      defaultVersionName: 2022.02.2-485
+      description: RStudio is an integrated development environment (IDE) for R. It
+        includes a console, syntax-highlighting editor that supports direct code execution,
+        as well as tools for plotting, history, debugging and workspace management.
+        This is the X11/GUI version.
+      package: rstudio-desktop
+      url: http://www.rstudio.com
       versions:
-      - description: Stata is a complete, integrated statistical software package
-          that provides everything you need for data analysis, data management, and
-          graphics.
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: '14'
-      - description: Stata is a complete, integrated statistical software package
-          that provides everything you need for data analysis, data management, and
-          graphics.
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: '16'
-      - description: Stata is a complete, integrated statistical software package
-          that provides everything you need for data analysis, data management, and
-          graphics.
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: '17'
-      - description: Stata is a complete, integrated statistical software package
-          that provides everything you need for data analysis, data management, and
-          graphics.
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: '18'
-      - description: Stata is a complete, integrated statistical software package
-          that provides everything you need for data analysis, data management, and
-          graphics.
-        markedDefault: true
-        properties:
-          license: {restricted: 1}
-        versionName: '15'
+      - {description: 'RStudio is an integrated development environment (IDE) for
+          R. It includes a console, syntax-highlighting editor that supports direct
+          code execution, as well as tools for plotting, history, debugging and workspace
+          management. This is the X11/GUI version.', markedDefault: false, versionName: 2022.02.2-485}
     - categories: math, numerical library
       defaultVersionName: 0.4.7_py39
       description: JAX is Autograd and XLA, brought together for high-performance
@@ -2505,29 +2484,18 @@ software_modules:
       versions:
       - {description: Extra precise basic linear algebra subroutines., markedDefault: false,
         versionName: 1.0.248}
-    - categories: math, numerical library
-      defaultVersionName: 1.14.3_py27
-      description: NumPy is the fundamental package for scientific computing with
-        Python.
-      package: py-numpy
-      url: http://www.numpy.org
+    - categories: math, deep learning
+      defaultVersionName: 1.8_py27
+      description: TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet, NumPy...)
+      package: py-tensorboardx
+      url: https://tensorboardx.readthedocs.io
       versions:
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.14.3_py36}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.17.2_py36}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.18.1_py36}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.19.2_py36}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.20.3_py39}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.24.2_py39}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.26.3_py312}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: true, versionName: 1.14.3_py27}
+      - description: TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet,
+          NumPy...)
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.8_py27
     - categories: math, deep learning
       defaultVersionName: 0.12.1_py27
       description: Horovod is a distributed training framework for TensorFlow. The
@@ -2561,16 +2529,14 @@ software_modules:
           inversion: given a time series consisting of a sum of sinusoids (modes),
           extract their frequencies and amplitudes.', markedDefault: false, versionName: 1.4.1}
     - categories: math, deep learning
-      defaultVersionName: 8.5.1.7_py39
-      description: Python bindings for the TensorRT library.
-      package: py-tensorrt
-      url: https://developer.nvidia.com/tensorrt
+      defaultVersionName: 0.21.0_py39
+      description: Gym is a toolkit for developing and comparing reinforcement learning
+        algorithms.
+      package: py-gym
+      url: https://gym.openai.com/
       versions:
-      - description: Python bindings for the TensorRT library.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 8.5.1.7_py39
+      - {description: Gym is a toolkit for developing and comparing reinforcement
+          learning algorithms., markedDefault: false, versionName: 0.21.0_py39}
     - categories: math, numerical library
       defaultVersionName: 5.1.0
       description: METIS is a set of serial programs for partitioning graphs, partitioning
@@ -2649,17 +2615,16 @@ software_modules:
           arch: {gpu: 1}
         versionName: 2.1.0_py36
     - categories: math, deep learning
-      defaultVersionName: 1.8_py27
-      description: TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet, NumPy...)
-      package: py-tensorboardx
-      url: https://tensorboardx.readthedocs.io
+      defaultVersionName: 8.5.1.7_py39
+      description: Python bindings for the TensorRT library.
+      package: py-tensorrt
+      url: https://developer.nvidia.com/tensorrt
       versions:
-      - description: TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet,
-          NumPy...)
+      - description: Python bindings for the TensorRT library.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-        versionName: 1.8_py27
+        versionName: 8.5.1.7_py39
     - categories: math, machine learning
       defaultVersionName: 0.29.3_py312
       description: Huggingface Accelerate is a library that enables the same PyTorch
@@ -2694,21 +2659,13 @@ software_modules:
       - {description: 'Armadillo is a high quality linear algebra library (matrix
           maths) for the C++ language, aiming towards a good balance between speed
           and ease of use.', markedDefault: false, versionName: 8.200.1}
-    - categories: math, statistics
-      defaultVersionName: '9.4'
-      description: SAS is a software suite developed by SAS Institute for advanced
-        analytics, multivariate analyses, business intelligence, data management,
-        and predictive analytics.
-      package: sas
-      url: http://www.sas.com/
+    - categories: math, numerical library
+      defaultVersionName: 3.18.2_py39
+      description: Python bindings for SLEPc.
+      package: py-slepc4py
+      url: https://slepc.upv.es/
       versions:
-      - description: SAS is a software suite developed by SAS Institute for advanced
-          analytics, multivariate analyses, business intelligence, data management,
-          and predictive analytics.
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: '9.4'
+      - {description: Python bindings for SLEPc., markedDefault: false, versionName: 3.18.2_py39}
     - categories: math, numerical library
       defaultVersionName: 3.1.2_py39
       description: Efficient matrix representations for working with tabular data.
@@ -2738,15 +2695,15 @@ software_modules:
       versions:
       - {description: NLopt is a free/open-source library for nonlinear optimization.,
         markedDefault: false, versionName: 2.6.2}
-    - categories: math, deep learning
-      defaultVersionName: 0.21.0_py39
-      description: Gym is a toolkit for developing and comparing reinforcement learning
-        algorithms.
-      package: py-gym
-      url: https://gym.openai.com/
+    - categories: math, numerical library
+      defaultVersionName: 3.18.5_py39
+      description: Python bindings for PETSc, the Portable, Extensible Toolkit for
+        Scientific Computation.
+      package: py-petsc4py
+      url: http://petsc.org
       versions:
-      - {description: Gym is a toolkit for developing and comparing reinforcement
-          learning algorithms., markedDefault: false, versionName: 0.21.0_py39}
+      - {description: 'Python bindings for PETSc, the Portable, Extensible Toolkit
+          for Scientific Computation.', markedDefault: false, versionName: 3.18.5_py39}
     - categories: math, computational geometry
       defaultVersionName: '4.10'
       description: polymake is open source software for research in polyhedral geometry.
@@ -2755,16 +2712,15 @@ software_modules:
       versions:
       - {description: polymake is open source software for research in polyhedral
           geometry., markedDefault: false, versionName: '4.10'}
-    - categories: math, statistics
-      defaultVersionName: 2.9.2_py36
-      description: rpy2 is an interface to R running embedded in a Python process.
-      package: py-rpy2
-      url: https://rpy2.bitbucket.io
+    - categories: math, numerical library
+      defaultVersionName: 2017.1_py27
+      description: PyUblas provides a seamless glue layer between Numpy and Boost.Ublas
+        for use with Boost.Python.
+      package: py-pyublas
+      url: https://mathema.tician.de/software/pyublas/
       versions:
-      - {description: rpy2 is an interface to R running embedded in a Python process.,
-        markedDefault: false, versionName: 2.8.6_py27}
-      - {description: rpy2 is an interface to R running embedded in a Python process.,
-        markedDefault: false, versionName: 2.9.2_py36}
+      - {description: PyUblas provides a seamless glue layer between Numpy and Boost.Ublas
+          for use with Boost.Python., markedDefault: false, versionName: 2017.1_py27}
     - categories: math, symbolic
       defaultVersionName: 5.47.0
       description: Maxima is a system for the manipulation of symbolic and numerical
@@ -2775,13 +2731,14 @@ software_modules:
       - {description: Maxima is a system for the manipulation of symbolic and numerical
           expressions., markedDefault: false, versionName: 5.47.0}
     - categories: math, numerical library
-      defaultVersionName: 2.9.0
-      description: FLINT is a C library for doing number theory.
-      package: flint
-      url: https://flintlib.org/
+      defaultVersionName: 2.0.8_py36
+      description: gmpy2 is a C-coded Python extension module that supports multiple-precision
+        arithmetic.
+      package: py-gmpy2
+      url: https://gmpy2.readthedocs.io/
       versions:
-      - {description: FLINT is a C library for doing number theory., markedDefault: false,
-        versionName: 2.9.0}
+      - {description: gmpy2 is a C-coded Python extension module that supports multiple-precision
+          arithmetic., markedDefault: false, versionName: 2.0.8_py36}
     - categories: math, numerical library
       defaultVersionName: 4.1.0
       description: The MPFR library is a C library for multiple-precision floating-point
@@ -2823,26 +2780,31 @@ software_modules:
       versions:
       - {description: A tool for computing automorphism groups and canonical forms
           of graphs., markedDefault: false, versionName: '0.73'}
-    - categories: math, optimization
-      defaultVersionName: 10.3.0
-      description: Artelys Knitro is an optimization solver for difficult large-scale
-        nonlinear problems.
-      package: knitro
-      url: https://www.artelys.com/en/optimization-tools/knitro
-      versions:
-      - {description: Artelys Knitro is an optimization solver for difficult large-scale
-          nonlinear problems., markedDefault: false, versionName: 12.4.0}
-      - {description: Artelys Knitro is an optimization solver for difficult large-scale
-          nonlinear problems., markedDefault: true, versionName: 10.3.0}
     - categories: math, numerical library
-      defaultVersionName: 1.1.2
-      description: qrupdate is a Fortran library for fast updates of QR and Cholesky
-        decompositions.
-      package: qrupdate
-      url: https://sourceforge.net/projects/qrupdate/
+      defaultVersionName: 3.1.0
+      description: libflame is a portable library for dense matrix computations, providing
+        much of the functionality present in LAPACK
+      package: libflame
+      url: https://github.com/amd/libflame
       versions:
-      - {description: qrupdate is a Fortran library for fast updates of QR and Cholesky
-          decompositions., markedDefault: false, versionName: 1.1.2}
+      - {description: 'libflame is a portable library for dense matrix computations,
+          providing much of the functionality present in LAPACK', markedDefault: false,
+        versionName: '2.1'}
+      - {description: 'libflame is a portable library for dense matrix computations,
+          providing much of the functionality present in LAPACK', markedDefault: false,
+        versionName: 2.2.4}
+      - {description: 'libflame is a portable library for dense matrix computations,
+          providing much of the functionality present in LAPACK', markedDefault: false,
+        versionName: 3.1.0}
+    - categories: math, computational geometry
+      defaultVersionName: 7.6.2
+      description: Open CASCADE Technology (OCCT) is an open-source full-scale 3D
+        geometry library
+      package: opencascade
+      url: https://dev.opencascade.org/
+      versions:
+      - {description: Open CASCADE Technology (OCCT) is an open-source full-scale
+          3D geometry library, markedDefault: false, versionName: 7.6.2}
     - categories: math, statistics
       defaultVersionName: '1.3'
       description: GNU datamash is a command-line program which performs basic numeric,
@@ -2914,15 +2876,17 @@ software_modules:
       - {description: The SciPy library provides many user-friendly and efficient
           numerical routines such as routines for numerical integration and optimization.,
         family: scipy, markedDefault: true, versionName: 1.1.0_py27}
-    - categories: math, numerical library
-      defaultVersionName: 2017.1_py27
-      description: PyUblas provides a seamless glue layer between Numpy and Boost.Ublas
-        for use with Boost.Python.
-      package: py-pyublas
-      url: https://mathema.tician.de/software/pyublas/
+    - categories: math, technical computing
+      defaultVersionName: 13.1.0
+      description: A symbolic language and platform for modern technical computing.
+      package: mathematica
+      url: http://www.wolfram.com/mathematica
       versions:
-      - {description: PyUblas provides a seamless glue layer between Numpy and Boost.Ublas
-          for use with Boost.Python., markedDefault: false, versionName: 2017.1_py27}
+      - description: A symbolic language and platform for modern technical computing.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: 13.1.0
     - categories: math, numerical library
       defaultVersionName: 0.3.10
       description: OpenBLAS is an optimized BLAS library
@@ -3023,18 +2987,15 @@ software_modules:
           arch: {gpu: 1}
         versionName: 2.1.5_py27
     - categories: math, statistics
-      defaultVersionName: 2022.02.2-485
-      description: RStudio is an integrated development environment (IDE) for R. It
-        includes a console, syntax-highlighting editor that supports direct code execution,
-        as well as tools for plotting, history, debugging and workspace management.
-        This is the X11/GUI version.
-      package: rstudio-desktop
-      url: http://www.rstudio.com
+      defaultVersionName: 2.9.2_py36
+      description: rpy2 is an interface to R running embedded in a Python process.
+      package: py-rpy2
+      url: https://rpy2.bitbucket.io
       versions:
-      - {description: 'RStudio is an integrated development environment (IDE) for
-          R. It includes a console, syntax-highlighting editor that supports direct
-          code execution, as well as tools for plotting, history, debugging and workspace
-          management. This is the X11/GUI version.', markedDefault: false, versionName: 2022.02.2-485}
+      - {description: rpy2 is an interface to R running embedded in a Python process.,
+        markedDefault: false, versionName: 2.8.6_py27}
+      - {description: rpy2 is an interface to R running embedded in a Python process.,
+        markedDefault: false, versionName: 2.9.2_py36}
     - categories: math, deep learning
       defaultVersionName: 1.5.0.3
       description: GPU-accelerated tensor linear algebra library.
@@ -3065,15 +3026,15 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.0.1_py27
-    - categories: math, numerical library
-      defaultVersionName: 3.1.3
-      description: FlexiBLAS is a BLAS and LAPACK wrapper library with runtime exchangeable
-        backends.
-      package: flexiblas
-      url: https://github.com/mpimd-csc/flexiblas
+    - categories: math, numerical analysis
+      defaultVersionName: 4.2.1
+      description: GNU Octave is a high-level language primarily intended for numerical
+        computations.
+      package: octave
+      url: https://www.gnu.org/software/octave/
       versions:
-      - {description: FlexiBLAS is a BLAS and LAPACK wrapper library with runtime
-          exchangeable backends., family: blas, markedDefault: false, versionName: 3.1.3}
+      - {description: GNU Octave is a high-level language primarily intended for numerical
+          computations., markedDefault: false, versionName: 4.2.1}
     - categories: math, computational geometry
       defaultVersionName: '4.11'
       description: A mesh and field I/O library and scientific database.
@@ -3207,23 +3168,15 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 3.18.5
-    - categories: math, machine learning
-      defaultVersionName: 0.19.1_py27
-      description: Scikit-learn is a free software machine learning library for the
-        Python programming language.
-      package: py-scikit-learn
-      url: http://scikit-learn.org
+    - categories: math, numerical library
+      defaultVersionName: 3.1.3
+      description: FlexiBLAS is a BLAS and LAPACK wrapper library with runtime exchangeable
+        backends.
+      package: flexiblas
+      url: https://github.com/mpimd-csc/flexiblas
       versions:
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 0.19.1_py36}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 0.24.2_py36}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 1.0.2_py39}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 1.3.2_py39}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: true, versionName: 0.19.1_py27}
+      - {description: FlexiBLAS is a BLAS and LAPACK wrapper library with runtime
+          exchangeable backends., family: blas, markedDefault: false, versionName: 3.1.3}
     - categories: math, numerical library
       defaultVersionName: 6.0.4
       description: Software package and libraries for sequential and parallel graph
@@ -3421,13 +3374,21 @@ software_modules:
       - {description: GNU MPC is a C library for the arithmetic of complex numbers
           with arbitrarily high precision and correct rounding of the result., markedDefault: false,
         versionName: 1.2.1}
-    - categories: math, numerical library
-      defaultVersionName: 3.18.2_py39
-      description: Python bindings for SLEPc.
-      package: py-slepc4py
-      url: https://slepc.upv.es/
+    - categories: math, statistics
+      defaultVersionName: '9.4'
+      description: SAS is a software suite developed by SAS Institute for advanced
+        analytics, multivariate analyses, business intelligence, data management,
+        and predictive analytics.
+      package: sas
+      url: http://www.sas.com/
       versions:
-      - {description: Python bindings for SLEPc., markedDefault: false, versionName: 3.18.2_py39}
+      - description: SAS is a software suite developed by SAS Institute for advanced
+          analytics, multivariate analyses, business intelligence, data management,
+          and predictive analytics.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: '9.4'
     - categories: math, optimization
       defaultVersionName: 6.4.1
       description: SUNDIALS is a family of software packages providing robust and
@@ -3450,15 +3411,14 @@ software_modules:
           in Python., markedDefault: false, versionName: 1.6.0_py39}
       - {description: PyWavelets is a free Open Source library for wavelet transforms
           in Python., markedDefault: false, versionName: 1.6.0_py312}
-    - categories: math, computational geometry
-      defaultVersionName: 7.6.2
-      description: Open CASCADE Technology (OCCT) is an open-source full-scale 3D
-        geometry library
-      package: opencascade
-      url: https://dev.opencascade.org/
+    - categories: math, numerical library
+      defaultVersionName: 2.9.0
+      description: FLINT is a C library for doing number theory.
+      package: flint
+      url: https://flintlib.org/
       versions:
-      - {description: Open CASCADE Technology (OCCT) is an open-source full-scale
-          3D geometry library, markedDefault: false, versionName: 7.6.2}
+      - {description: FLINT is a C library for doing number theory., markedDefault: false,
+        versionName: 2.9.0}
     - categories: math, deep learning
       defaultVersionName: 1.12.0_py39
       description: ONNX is a open format to represent deep learning models.
@@ -3471,25 +3431,29 @@ software_modules:
         versionName: 1.8.1_py36}
       - {description: ONNX is a open format to represent deep learning models., markedDefault: false,
         versionName: 1.12.0_py39}
-    - categories: math, optimization
-      defaultVersionName: 2.10.0_py39
-      description: Optuna is an automatic hyperparameter optimization software framework,
-        particularly designed for machine learning.
-      package: py-optuna
-      url: https://optuna.readthedocs.io/
-      versions:
-      - {description: 'Optuna is an automatic hyperparameter optimization software
-          framework, particularly designed for machine learning.', markedDefault: false,
-        versionName: 2.10.0_py39}
     - categories: math, numerical library
-      defaultVersionName: 2.0.8_py36
-      description: gmpy2 is a C-coded Python extension module that supports multiple-precision
-        arithmetic.
-      package: py-gmpy2
-      url: https://gmpy2.readthedocs.io/
+      defaultVersionName: 1.14.3_py27
+      description: NumPy is the fundamental package for scientific computing with
+        Python.
+      package: py-numpy
+      url: http://www.numpy.org
       versions:
-      - {description: gmpy2 is a C-coded Python extension module that supports multiple-precision
-          arithmetic., markedDefault: false, versionName: 2.0.8_py36}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.14.3_py36}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.17.2_py36}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.18.1_py36}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.19.2_py36}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.20.3_py39}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.24.2_py39}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.26.3_py312}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: true, versionName: 1.14.3_py27}
     - categories: math, optimization
       defaultVersionName: 10.0.1_py39
       description: The Gurobi Optimizer is a commercial optimization solver for mathematical
@@ -3507,6 +3471,15 @@ software_modules:
           mathematical programming., markedDefault: false, versionName: 9.0.3_py36}
       - {description: The Gurobi Optimizer is a commercial optimization solver for
           mathematical programming., markedDefault: false, versionName: 10.0.1_py39}
+    - categories: math, numerical library
+      defaultVersionName: 1.1.2
+      description: qrupdate is a Fortran library for fast updates of QR and Cholesky
+        decompositions.
+      package: qrupdate
+      url: https://sourceforge.net/projects/qrupdate/
+      versions:
+      - {description: qrupdate is a Fortran library for fast updates of QR and Cholesky
+          decompositions., markedDefault: false, versionName: 1.1.2}
     - categories: math, machine learning
       defaultVersionName: 0.15.2_py312
       description: Hugging Face Tokenizers provides an implementation of today’s most
@@ -3570,31 +3543,34 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 12.1.0_py39
-    - categories: math, numerical library
-      defaultVersionName: 3.1.0
-      description: libflame is a portable library for dense matrix computations, providing
-        much of the functionality present in LAPACK
-      package: libflame
-      url: https://github.com/amd/libflame
+    - categories: math, optimization
+      defaultVersionName: 10.3.0
+      description: Artelys Knitro is an optimization solver for difficult large-scale
+        nonlinear problems.
+      package: knitro
+      url: https://www.artelys.com/en/optimization-tools/knitro
       versions:
-      - {description: 'libflame is a portable library for dense matrix computations,
-          providing much of the functionality present in LAPACK', markedDefault: false,
-        versionName: '2.1'}
-      - {description: 'libflame is a portable library for dense matrix computations,
-          providing much of the functionality present in LAPACK', markedDefault: false,
-        versionName: 2.2.4}
-      - {description: 'libflame is a portable library for dense matrix computations,
-          providing much of the functionality present in LAPACK', markedDefault: false,
-        versionName: 3.1.0}
-    - categories: math, numerical library
-      defaultVersionName: 3.18.5_py39
-      description: Python bindings for PETSc, the Portable, Extensible Toolkit for
-        Scientific Computation.
-      package: py-petsc4py
-      url: http://petsc.org
+      - {description: Artelys Knitro is an optimization solver for difficult large-scale
+          nonlinear problems., markedDefault: false, versionName: 12.4.0}
+      - {description: Artelys Knitro is an optimization solver for difficult large-scale
+          nonlinear problems., markedDefault: true, versionName: 10.3.0}
+    - categories: math, machine learning
+      defaultVersionName: 0.19.1_py27
+      description: Scikit-learn is a free software machine learning library for the
+        Python programming language.
+      package: py-scikit-learn
+      url: http://scikit-learn.org
       versions:
-      - {description: 'Python bindings for PETSc, the Portable, Extensible Toolkit
-          for Scientific Computation.', markedDefault: false, versionName: 3.18.5_py39}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 0.19.1_py36}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 0.24.2_py36}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 1.0.2_py39}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 1.3.2_py39}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: true, versionName: 0.19.1_py27}
     - categories: math, symbolic
       defaultVersionName: 0.12.3_py39
       description: High-Performance Symbolic Regression in Python and Julia.
@@ -3603,26 +3579,58 @@ software_modules:
       versions:
       - {description: High-Performance Symbolic Regression in Python and Julia., markedDefault: false,
         versionName: 0.12.3_py39}
-    - categories: math, technical computing
-      defaultVersionName: 13.1.0
-      description: A symbolic language and platform for modern technical computing.
-      package: mathematica
-      url: http://www.wolfram.com/mathematica
+    - categories: math, statistics
+      defaultVersionName: '15'
+      description: Stata is a complete, integrated statistical software package that
+        provides everything you need for data analysis, data management, and graphics.
+      package: stata
+      url: https://www.stata.com
       versions:
-      - description: A symbolic language and platform for modern technical computing.
+      - description: Stata is a complete, integrated statistical software package
+          that provides everything you need for data analysis, data management, and
+          graphics.
         markedDefault: false
         properties:
           license: {restricted: 1}
-        versionName: 13.1.0
-    - categories: math, numerical analysis
-      defaultVersionName: 4.2.1
-      description: GNU Octave is a high-level language primarily intended for numerical
-        computations.
-      package: octave
-      url: https://www.gnu.org/software/octave/
+        versionName: '14'
+      - description: Stata is a complete, integrated statistical software package
+          that provides everything you need for data analysis, data management, and
+          graphics.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: '16'
+      - description: Stata is a complete, integrated statistical software package
+          that provides everything you need for data analysis, data management, and
+          graphics.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: '17'
+      - description: Stata is a complete, integrated statistical software package
+          that provides everything you need for data analysis, data management, and
+          graphics.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: '18'
+      - description: Stata is a complete, integrated statistical software package
+          that provides everything you need for data analysis, data management, and
+          graphics.
+        markedDefault: true
+        properties:
+          license: {restricted: 1}
+        versionName: '15'
+    - categories: math, optimization
+      defaultVersionName: 2.10.0_py39
+      description: Optuna is an automatic hyperparameter optimization software framework,
+        particularly designed for machine learning.
+      package: py-optuna
+      url: https://optuna.readthedocs.io/
       versions:
-      - {description: GNU Octave is a high-level language primarily intended for numerical
-          computations., markedDefault: false, versionName: 4.2.1}
+      - {description: 'Optuna is an automatic hyperparameter optimization software
+          framework, particularly designed for machine learning.', markedDefault: false,
+        versionName: 2.10.0_py39}
     - categories: math, numerical library
       defaultVersionName: '2019'
       description: Intel Math Kernel Library (Intel MKL) is a library of optimized
