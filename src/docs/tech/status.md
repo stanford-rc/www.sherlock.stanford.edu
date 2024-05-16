@@ -44,11 +44,11 @@ dashboard][url_status].
 
 ## Current usage
 
-<iframe style="float:left;"
+<iframe title="CPUs in use" style="float:left;"
   src="https://srcc-lookout.stanford.edu/public/d-solo/000000006/sherlock-public-graphs?orgId=1&refresh=5m&theme=light&panelId=3"
   width="28%" height="200px" frameborder="0">
 </iframe>
-<iframe style="float:right;"
+<iframe title="CPU usage" style="float:right;"
   src="https://srcc-lookout.stanford.edu/public/d-solo/000000006/sherlock-public-graphs?orgId=1&refresh=5m&theme=light&panelId=11"
   width="68%" height="200px" frameborder="0">
 </iframe>
