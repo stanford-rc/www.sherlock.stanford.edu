@@ -25,7 +25,7 @@ specifically.
 
     ---
 
-    [Apptainer][url_apptainer_up] (formerly Singularity) is an open source
+    [Apptainer][url_apptainer_web] (formerly Singularity) is an open source
     container platform designed to run complex applications on high-performance
     computing (HPC) clusters in a simple, portable, and reproducible way.
 
@@ -39,10 +39,10 @@ specifically.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
+[url_apptainer_web]://apptainer.org/
+
 <!-- TODO -->
 [url_apptainer]:    singularity.md
-
-[url_apptainer_up]: //apptainer.org/
 
 
 [comment]: #  (footnotes -----------------------------------------------------)

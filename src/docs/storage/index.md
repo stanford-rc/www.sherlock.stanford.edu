@@ -295,11 +295,12 @@ Transfer][url_data_sshfs] page.
 [url_NFS]:              //en.wikipedia.org/wiki/Network_File_System
 [url_lustre]:           //en.wikipedia.org/wiki/Lustre_(file_system)
 [url_oak]:              //uit.stanford.edu/service/oak-storage
-[url_data_sshfs]:       /docs/storage/data-transfer#sshfs
-[url_purge]:            /docs/storage/filesystems/#expiration-policy
-[url_du]:               //www.gnu.org/software/coreutils/manual/html_node/du-invocation.html#du-invocation
 [url_ncdu]:             //dev.yorhel.nl/ncdu
-[url_sh_dev]:           /docs/user-guide/running-jobs/#interactive-jobs
+[url_du]:               //www.gnu.org/software/coreutils/manual/html_node/du-invocation.html#du-invocation
+
+[url_data_sshfs]:       /docs/storage/data-transfer.md#sshfs
+[url_purge]:            /docs/storage/filesystems.md#expiration-policy
+[url_sh_dev]:           /docs/user-guide/running-jobs.md#interactive-jobs
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

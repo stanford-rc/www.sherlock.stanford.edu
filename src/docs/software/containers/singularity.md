@@ -77,7 +77,7 @@ documentation][url_singularity_docs].
 As [announced][url_containernative] during the [SC'18 Supercomputing
 Conference][url_sc18], Singularity is an integral part of the Sherlock cluster,
 and Singularity commands can be executed natively on any login or compute node,
-without the need to load any additional module.
+without the need to load any additional module[^modules].
 
 ### Importing containers
 
@@ -107,10 +107,10 @@ Singularity makes it very easy.
     This example shows how to use Singularity interactively, but Singularity
     containers can be run in batch jobs as well.
 
-The first step is to request an interactive shell, and to load the singularity
-module. Singularity images can be pulled directly from the compute nodes, and
-Singularity uses multiple CPU cores when assembling the image, so requesting
-multiple cores in your job can make the pull operation faster:
+The first step is to request an interactive shell. Singularity images can be
+pulled directly on compute nodes, and Singularity uses multiple CPU cores
+when assembling the image, so requesting multiple cores in your job can make
+the pull operation faster:
 
 ``` shell
 $ srun -c 4 --pty bash
@@ -419,7 +419,7 @@ the [Singularity documentation][url_singularity_build].
 [url_singularity_docker]: //www.sylabs.io/guides/latest/user-guide/singularity_and_docker.html
 [url_singularity_build]:  //www.sylabs.io/guides/2.6/user-guide/build_a_container.html
 [url_containers]:         //en.wikipedia.org/wiki/Linux_containers
-[url_docker]:     //www.docker.com
+[url_docker]:             //www.docker.com
 [url_docker_hub]:         //hub.docker.com
 [url_singularity_hub]:    //singularity-hub.org
 [url_ngc]:                //ngc.nvidia.com
@@ -430,10 +430,9 @@ the [Singularity documentation][url_singularity_build].
 [url_sc18]:               //sc18.supercomputing.org/
 [url_containernative]:    //news.sherlock.stanford.edu/posts/sherlock-goes-container-native
 
-
-[url_modules]:     /docs/software/modules
-[url_gpu_job]:     /docs/user-guide/gpu#submitting-a-gpu-job
-[url_gpu_types]:         /docs/user-guide/gpu/#gpu-types
+[url_modules]:            /docs/software/modules.md
+[url_gpu_job]:            /docs/user-guide/gpu.md#submitting-a-gpu-job
+[url_gpu_types]:          /docs/user-guide/gpu.md#gpu-types
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

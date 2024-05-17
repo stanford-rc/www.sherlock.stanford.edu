@@ -180,8 +180,8 @@ your request, and we'll get back to you.
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_srcc]:     //srcc.stanford.edu
-[url_catalog]:  /catalog
-[url_order]:    /order
+[url_catalog]:  //www.sherlock.stanford.edu/catalog
+[url_order]:    //www.sherlock.stanford.edu/order
 [url_docs]:     docs/index.md
 [url_purchase]: docs/orders.md
 [url_specs]:    docs/tech/index.md

@@ -278,13 +278,15 @@ there are two possibilities:
 
 [url_rhel_posix_acl]:   //access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-access_control_lists#acls-setting
 [url_unix_perms]:       //en.wikipedia.org/wiki/File_system_permissions
-[url_contact]:          mailto:{{ support_email }}
 [url_nfs4_acl_man]:     //linux.die.net/man/5/nfs4_acl
 [url_susponsorship]:    //uit.stanford.edu/service/sponsorship
 [url_sunetids]:         //uit.stanford.edu/service/accounts/sunetids#services
 [url_globus_sharing]:   //www.globus.org/data-sharing
-[url_oak]:              /docs/storage/filesystems/#oak
 [url_oak_endpoint]:     //srcc.stanford.edu/private/oak-gateways
+
+[url_contact]:          mailto:{{ support_email }}
+
+[url_oak]:              /docs/storage/filesystems.md#oak
 
 
 [comment]: #  (footnotes -----------------------------------------------------)

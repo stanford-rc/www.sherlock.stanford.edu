@@ -604,7 +604,8 @@ specific `$JOBID`, without having to worry about it changing. And there will be
 only one `$JOBID` to track for that database server job.
 
 
-The previous [example](#example_1) can then be modified as follows:
+The previous [example](#persistent-job-example) can then be modified as
+follows:
 
 ``` shell title="persistent.sbatch" hl_lines="10"
 #!/bin/bash
@@ -654,36 +655,33 @@ restarts for 5 minutes, and so on, until it's properly `scancel`led.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_sbatch]:   https://slurm.schedmd.com/sbatch.html
-[url_trap]:     http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_12_02.html
-[url_signals]:  https://en.wikipedia.org/wiki/Signal_(IPC)
-[url_job_deps]: https://slurm.schedmd.com/sbatch.html#OPT_dependency
+[url_sbatch]:       //slurm.schedmd.com/sbatch.html
+[url_trap]:         //tldp.org/LDP/Bash-Beginners-Guide/html/sect_12_02.html
+[url_signals]:      //en.wikipedia.org/wiki/Signal_(IPC)
+[url_job_deps]:     //slurm.schedmd.com/sbatch.html#OPT_dependency
+[url_sh_part]:      //news.sherlock.stanford.edu/posts/a-better-view-at-sherlock-s-resources
+[url_htop]:         //htop.dev/
+[url_sacct]:        //slurm.schedmd.com/sacct.html
+[url_squeue]:       //slurm.schedmd.com/squeue.html
+[url_bash]:         //www.gnu.org/software/bash/manual/bash.html
+[url_scancel]:      //slurm.schedmd.com/scancel.html
+[url_ruse]:         //github.com/JanneM/Ruse
 
-[url_modules]:  /docs/software/modules
-[url_mariadb]:  /docs/software/using/mariadb
-[url_pgsql]:    /docs/software/using/postgresql
-[url_partition]:/docs/glossary/#partition
-
-[url_sh_part]:  //news.sherlock.stanford.edu/posts/a-better-view-at-sherlock-s-resources
-[url_sh_dev]: /docs/user-guide/running-jobs/#interactive-jobs
-[url_filemanager]: /docs/user-guide/ondemand/#managing-files
-[url_htop]: https://htop.dev/
-[url_nvtop]: /docs/user-guide/gpu/?query=nv_top#advanced-options
-[url_sacct]: https://slurm.schedmd.com/sacct.html
-[url_texteditors]: /docs/getting-started/#text-editors
-[url_squeue]: https://slurm.schedmd.com/squeue.html
-[url_bash]: https://www.gnu.org/software/bash/manual/bash.html
-[url_scancel]: https://slurm.schedmd.com/scancel.html
-
-[url_ruse]:     https://github.com/JanneM/Ruse
+[url_modules]:      /docs/software/modules.md
+[url_mariadb]:      /docs/software/using/mariadb.md
+[url_pgsql]:        /docs/software/using/postgresql.md
+[url_partition]:    /docs/glossary.md#partition
+[url_nvtop]:        /docs/user-guide/gpu.md#advanced-options
+[url_sh_dev]:       /docs/user-guide/running-jobs.md#interactive-jobs
+[url_filemanager]:  /docs/user-guide/ondemand.md#managing-files
+[url_texteditors]:  /docs/getting-started/index.md#text-editors
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
 [^dev_limits]: The dedicated partition that `sh_dev` uses by default only allows
   up to 2 cores and 8 GB or memory per user at any given time. So if you need
   more resources for your interactive session, you may have to specify a
-  different partition. See the [Partitions](#partitions) section for more
-  details.
+  different partition.
 
 [^ssh_job_limits]: Please note that your SSH session will be attached to your
   running job, and that resources used by that interactive shell will count

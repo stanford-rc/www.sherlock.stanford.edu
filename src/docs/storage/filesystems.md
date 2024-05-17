@@ -394,11 +394,13 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_contact]:          mailto:{{ support_email }}
 [url_oak]:              //uit.stanford.edu/service/oak-storage
-[url_check_quotas]:     /docs/storage/#checking-quotas
-[url_snapshots]:        /docs/storage/data-protection/#snapshots
-[url_gdrive]:           /docs/storage/data-transfer/#google-drive
+
+[url_contact]:          mailto:{{ support_email }}
+
+[url_check_quotas]:     /docs/storage/index.md#checking-quotas
+[url_snapshots]:        /docs/storage/data-protection.md#snapshots
+[url_gdrive]:           /docs/storage/data-transfer.md#google-drive
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

@@ -236,8 +236,8 @@ And we'll be in touch shortly!
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_order_form]:   /order
-[url_catalog]:      /catalog
+[url_catalog]:      //www.sherlock.stanford.edu/catalog
+[url_order_form]:   //www.sherlock.stanford.edu/order
 [url_pta]:          //web.stanford.edu/group/fms/fingate/staff/acctstructure/PTA_req_process.html
 [email]:            mailto:{{ support_email }}
 

@@ -490,15 +490,14 @@ To submit a ticket about your current or recent interactive session:
 [url_osc]:          //www.osc.edu
 [url_ood]:          //openondemand.org
 [url_ood_docs]:     //www.osc.edu/resources/online_portals/ondemand
-
 [url_ood_logout]:   //login.sherlock.stanford.edu/logout
 
-[url_storage]:      /docs/storage
-[url_rclone]:       /docs/software/using/rclone
-[url_gssapi]:       /docs/advanced-topics/connection/#gssapi
-[url_avoid_duo]:    /docs/advanced-topics/connection/#avoiding-multiple-duo-prompts
-[url_running_jobs]: /docs/user-guide/running-jobs/
-[url_r_packages]:   /docs/software/using/R/#r-packages
+[url_storage]:      /docs/storage/index.md
+[url_rclone]:       /docs/software/using/rclone.md
+[url_gssapi]:       /docs/advanced-topics/connection.md#gssapi
+[url_avoid_duo]:    /docs/advanced-topics/connection.md#avoiding-multiple-duo-prompts
+[url_running_jobs]: /docs/user-guide/running-jobs.md
+[url_r_packages]:   /docs/software/using/R.md#r-packages
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

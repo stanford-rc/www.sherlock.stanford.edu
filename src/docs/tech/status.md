@@ -56,8 +56,9 @@ dashboard][url_status].
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_minsec]:  https://uit.stanford.edu/guide/securitystandards
-[url_status]:  https://status.sherlock.stanford.edu
-[url_maintenances-and-upgrades]: /docs/concepts/#maintenances-and-upgrades
+[url_minsec]:                   //uit.stanford.edu/guide/securitystandards
+[url_status]:                   //status.sherlock.stanford.edu
+
+[url_maintenances-and-upgrades]:/docs/concepts.md#maintenances-and-upgrades
 
 --8<--- "includes/_acronyms.md"

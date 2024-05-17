@@ -269,6 +269,19 @@ Here's what it looks like in motion:
 [url_news]:         //news.sherlock.stanford.edu
 [url_status]:       //status.sherlock.stanford.edu
 [url_srcc_support]: //srcc.stanford.edu/support
+[url_shu_ml]:       //mailman.stanford.edu/mailman/listinfo/sherlock-users
+[url_sha_ml]:       //mailman.stanford.edu/mailman/listinfo/sherlock-announce
+[url_polya]:        //campus-map.stanford.edu/?id=14-160&lat=37.42898333&lng=-122.17752929&zoom=17&srch=polya%20hall
+[url_zoom]:         //stanford.zoom.us
+[url_oh_zoom]:      //stanford.zoom.us/j/95962823750?pwd=cFM2U2ZRQ243Zkx0Ry83akdtWU9zUT09
+[url_ob_zoom]:      //stanford.zoom.us/j/97524291024?pwd=Q0g3b2wvSHhPaTdtOElGRVZFOCtqdz09
+[url_ob_slides]:    //srcc.stanford.edu/workshops/sherlock-boarding-session
+[url_ob_record]:    //youtu.be/iqq7GGqMRg8
+[url_calendar]:     //calendly.com/srcc-officehours/sherlock
+[url_sunet]:        //uit.stanford.edu/service/accounts/sunetids#services
+[url_su_slack]:     //uit.stanford.edu/service/slack
+[url_sl_sha]:       //srcc.slack.com/archives/C01862L37CN
+[url_sl_shu]:       //srcc.slack.com/archives/C0192KNKYSU
 
 [url_docs]:         index.md
 [url_invest]:       concepts.md#investing-in-sherlock
@@ -277,24 +290,7 @@ Here's what it looks like in motion:
 [url_prereq]:       getting-started/index.md
 [url_connect]:      getting-started/connecting.md
 [url_submit]:       getting-started/submitting.md
-[url_troubleshoot]: user-guide/troubleshoot.md#how-to-submit-a-successful-support-request
-
-[url_shu_ml]:       //mailman.stanford.edu/mailman/listinfo/sherlock-users
-[url_sha_ml]:       //mailman.stanford.edu/mailman/listinfo/sherlock-announce
-[url_polya]:        //campus-map.stanford.edu/?id=14-160&lat=37.42898333&lng=-122.17752929&zoom=17&srch=polya%20hall
-
-[url_zoom]:         //stanford.zoom.us
-[url_oh_zoom]:      //stanford.zoom.us/j/95962823750?pwd=cFM2U2ZRQ243Zkx0Ry83akdtWU9zUT09
-[url_ob_zoom]:      //stanford.zoom.us/j/97524291024?pwd=Q0g3b2wvSHhPaTdtOElGRVZFOCtqdz09
-[url_ob_slides]:    //srcc.stanford.edu/workshops/sherlock-boarding-session
-[url_ob_record]:    //youtu.be/iqq7GGqMRg8
-
-[url_calendar]:     //calendly.com/srcc-officehours/sherlock
-
-[url_sunet]:        //uit.stanford.edu/service/accounts/sunetids#services
-[url_su_slack]:     //uit.stanford.edu/service/slack
-[url_sl_sha]:       //srcc.slack.com/archives/C01862L37CN
-[url_sl_shu]:       //srcc.slack.com/archives/C0192KNKYSU
+[url_troubleshoot]: user-guide/troubleshoot.md#how-to-submit-a-support-request
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
