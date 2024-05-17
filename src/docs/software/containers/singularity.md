@@ -1,24 +1,9 @@
 # Singularity
 
-[Singularity][url_singularity] is a tool for running
-[containers][url_containers] on HPC systems, similar to [Docker][url_docker].
-
-## Introduction
-
-Containers are a solution to the problem of how to get software to run reliably
-when moved from one computing environment to another. They also resolve
-installation problems by packaging all the dependencies of an application
-within a self-sustainable image, _a.k.a_ a container.
-
-!!! info "What's a container?"
-
-    Put simply, a container consists of an entire runtime environment: an
-    application, plus all its dependencies, libraries and other binaries, and
-    configuration files needed to run it, bundled into one package. By
-    containerizing the application platform and its dependencies, differences
-    in OS distributions and underlying infrastructure are abstracted away.
-
-
+[Singularity][url_singularity] is an open source [container][url_containers]
+platform designed to run complex applications on high-performance computing
+(HPC) clusters in a simple, portable, and reproducible way. It's like
+[Docker][url_docker], but for HPC systems.
 
 ### Why not Docker?
 
