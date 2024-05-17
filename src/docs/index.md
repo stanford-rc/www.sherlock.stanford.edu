@@ -268,7 +268,7 @@ Here's what it looks like in motion:
 [url_srcc]:         //srcc.stanford.edu
 [url_news]:         //news.sherlock.stanford.edu
 [url_status]:       //status.sherlock.stanford.edu
-[url_srcc_support]: //srcc/stanford.edu/support
+[url_srcc_support]: //srcc.stanford.edu/support
 
 [url_docs]:         index.md
 [url_invest]:       concepts.md#investing-in-sherlock
