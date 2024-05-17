@@ -21,6 +21,27 @@ copyright: >-
 docs_dir: src
 site_dir: site
 
+# Validation
+validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: warn
+  links:
+    not_found: warn
+    anchors: warn
+    absolute_links: warn
+    unrecognized_links: warn
+
+validation:
+  nav:
+    omitted_files: info
+  omitted_files: warn
+  absolute_links: relative_to_docs
+  unrecognized_links: warn
+  anchors: warn  # New in MkDocs 1.6
+
+
 theme:
 
   name: material
