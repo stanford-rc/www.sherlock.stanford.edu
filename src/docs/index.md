@@ -34,7 +34,7 @@ On Sherlock, simulations and workloads benefit from performance levels that
 only large scale HPC systems can offer: high-performance I/O infrastructure,
 petabytes of storage, large variety of hardware configurations, GPU
 accelerators, centralized system administration and management provided by the
-[Stanford Research Computing Center][url_srcc] (SRCC).
+[Stanford Research Computing][url_srcc].
 
 Such features are not easily accessible at the departmental level, and often
 require both significant initial investments and recurring costs. Joining
@@ -128,7 +128,8 @@ Research Computing support can be reached by sending an email to
 
 As a member of the Sherlock community, you're also automatically subscribed to
 the [sherlock-announce][url_sha_ml] mailing-list, which is only used by the
-SRCC team to send important announcements about Sherlock,
+Stanford Research Computing team to send important announcements about
+Sherlock.
 
 ### Onboarding sessions
 
@@ -217,13 +218,14 @@ than welcome to join the following channels:
     practices, tutorials or other info, please feel free to do so there.
 
 For more details about the SRCC Slack Workspace, and instructions on how to
-join this workspace and its channels, please see the SRCC [support
-page][url_srcc_support].
+join this workspace and its channels, please see the Stanford Research
+Computing [support page][url_srcc_support].
 
 !!! warning "Slack is not an official support channel"
 
-    Please note that while SRCC staff will monitor these channels, the official
-    way to get support is still to email us at {{ support_email }}.
+    Please note that while Stanford Research Computing staff will monitor these
+    channels, the official way to get support is still to email us at {{
+    support_email }}.
 
 
 ## Quick Start

@@ -93,8 +93,8 @@ installations that are optimized for scientific computing.
 On Sherlock, simulations and workloads benefit from performance levels that
 only large scale HPC systems can offer: high-performance I/O infrastructure,
 petabytes of storage, large variety of hardware configurations, GPU
-accelerators, centralized system administration and management provided by the
-[Stanford Research Computing Center][url_srcc] (SRCC).
+accelerators, centralized system administration and management provided by
+[Stanford Research Computing][url_srcc].
 
 Such features are not easily accessible at the departmental level, and often
 require both significant initial investments and recurring costs. Joining

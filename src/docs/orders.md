@@ -53,8 +53,9 @@ purchasing PI group.
 
 ## Compute nodes catalog
 
-SRCC offers a select number of compute node configurations that have been
-tested and validated on Sherlock and that aim to cover most computing needs.
+Stanford Research Computing offers a select number of compute node
+configurations that have been tested and validated on Sherlock and that aim to
+cover most computing needs.
 
 !!! info "Sherlock catalog"
 
@@ -162,11 +163,13 @@ There are two components in the cost of a compute node purchase:
 Purchasing nodes on Sherlock is usually a 5-step process:
 
   1. the PI use the [order form][url_order_form] to submit an order,
-  2. SRCC requests a formal vendor quote to finalize pricing and communicate it
-     back to the PI for approval,
-  3. SRCC submits a Stanford PO to the vendor,
-  4. SRCC takes delivery of the hardware and proceeds to its installation,
-  5. SRCC notifies the PI that their nodes are ready to be used.
+  2. Stanford Research Computing requests a formal vendor quote to finalize
+     pricing and communicate it back to the PI for approval,
+  3. Stanford Research Computing submits a Stanford PO to the vendor,
+  4. Stanford Research Computing takes delivery of the hardware and proceeds to
+     its installation,
+  5. Stanford Research Computing notifies the PI that their nodes are ready to
+     be used.
 
 The typical delay between a PO submission to the vendor and the availability of
 the compute nodes to the PIs is usually between 4 and 8 weeks.

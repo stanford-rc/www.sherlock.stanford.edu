@@ -20,8 +20,8 @@ recommended (if not only) way to install it
 It is a useful solution for simplifying the management of Python and scientific
 libraries on a personal computer. However, on highly-specialized HPC systems
 like Sherlock, management of these libraries and dependencies should be done by
-SRCC staff, to ensure compatibility and optimal performance on the cluster
-hardware.
+Stanford Research Computing staff, to ensure compatibility and optimal
+performance on the cluster hardware.
 
 For instance:
 

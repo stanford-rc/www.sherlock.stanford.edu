@@ -54,10 +54,10 @@ count }} fields of science:_
     Access to software modules marked with ^<b class="sw_lic"></b>^ in the tables
     below is restricted to properly licensed user groups.
 
-    SRCC is not funded to provide commercial software on Sherlock and
-    researchers are responsible for the costs of purchasing and renewing
-    commercial software licenses. For more information, please feel free to
-    [contact us](mailto:{{ support_email }}) and see the [Stanford
+    Stanford Research Computing is not funded to provide commercial software on
+    Sherlock and researchers are responsible for the costs of purchasing and
+    renewing commercial software licenses. For more information, please feel
+    free to [contact us](mailto:{{ support_email }}) and see the [Stanford
     Software Licensing page](https://uit.stanford.edu/service/softwarelic) for
     purchasing information.
 

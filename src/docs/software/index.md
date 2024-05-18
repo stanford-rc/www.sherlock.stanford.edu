@@ -17,11 +17,11 @@ Software Licensing office][url_software_lic].
 
 !!! warning "Installation requests"
 
-    The SRCC team installs, for general use, a set of libraries, tools and
-    software applications that are commonly used across many research groups.
-    However, our staff resources are quite limited and don't allow us to build
-    nor maintain custom software applications that may be requested by or be of
-    use to a small number of users.
+    The Stanford Research Computing team installs, for general use, a set of
+    libraries, tools and software applications that are commonly used across
+    many research groups.  However, our staff resources are quite limited and
+    don't allow us to build nor maintain custom software applications that may
+    be requested by or be of use to a small number of users.
 
 We strongly encourage users to build custom and field- or domain-specific
 software themselves, and install it in their own [personal or group shared

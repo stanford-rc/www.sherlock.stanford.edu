@@ -114,8 +114,9 @@ can find the same files and directories from all of the Sherlock nodes.
 * High-performance Lustre scratch filesystem ({{ get_value("storage",
   "`$SCRATCH`", fmt="{}") | filesizeformat }} {{ get_value("storage",
   "`$SCRATCH`", "desc", fmt="{}") | replace("**","") }})
-* Direct access to SRCC's [Oak][url_oak] long-term research data storage system
-  ({{ get_value("storage", "`$OAK`", fmt="{}") | filesizeformat }})
+* Direct access to Stanford Research Computing's [Oak][url_oak] long-term
+  research data storage system ({{ get_value("storage", "`$OAK`", fmt="{}") |
+  filesizeformat }})
 
 
 
