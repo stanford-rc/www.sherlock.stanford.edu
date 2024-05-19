@@ -100,9 +100,9 @@ pride and amazement for the whole SRCC team! :heart:{ .pulsate }
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_ep38]:     //www.hbo.com/silicon-valley/episodes/4/38-server-error
+[url_ep38]:     //www.hbo.com/silicon-valley/season-4/10-server-error
 [url_sv]:       //www.hbo.com/silicon-valley
-[url_richard]:  //www.hbo.com/silicon-valley/cast-and-crew/thomas-middleditch
+[url_richard]:  //www.hbo.com/silicon-valley/cast-and-crew/richard-hendricks
 [url_quote]:    //www.theguardian.com/tv-and-radio/2010/jul/17/benedict-cumberbatch-sherlock-holmes
 [url_tsachy]:   //web.stanford.edu/~tsachy/
 [url_ieee]:     //ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8449030
