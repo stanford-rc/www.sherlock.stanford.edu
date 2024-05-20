@@ -14,9 +14,9 @@ The Stanford Research Computing team also helps researchers transition their
 analyses and models from the desktop to more capable and plentiful resources,
 providing the opportunity to explore their data and answer research questions
 at a scale typically not possible on desktops or departmental servers.
-Partnering with national initiatives like NSF [XSEDE][url_xsede] program as
-well as vendors, the SRCC offers training and learning opportunities around HPC
-tools and technologies.
+Partnering with national initiatives and program as well as vendors, Stanford
+Research Computing offers training and learning opportunities around HPC tools
+and technologies.
 
 For more information, please see the [Stanford Research Computing
 website][url_srcc]
@@ -25,7 +25,6 @@ website][url_srcc]
 [url_dor]:        //doresearch.stanford.edu/research-offices/dor-office-vice-provost-and-dean-research
 [url_uit]:        //uit.stanford.edu
 [url_srcc]:       //srcc.stanford.edu
-[url_xsede]:      //xsede.org
 
 
 ## Credits
@@ -54,7 +53,8 @@ img[alt="screencap"] {
 The Sherlock website and documentation also rely on the following projects:
 
 * ![favicon](//www.mkdocs.org/img/favicon.ico) [MkDocs](//mkdocs.org/)
-* ![favicon](//squidfunk.github.io/mkdocs-material/assets/favicon.png) [Material for MkDocs](//squidfunk.github.io/mkdocs-material/)
+* ![favicon](//squidfunk.github.io/mkdocs-material/assets/favicon.png)
+  [Material for MkDocs](//squidfunk.github.io/mkdocs-material/)
 
 
 ## Why the Sherlock name?
@@ -91,11 +91,12 @@ Valley][url_sv] [Season 4 finale][url_ep38]!
 Yep, you got that right, [Richard Hendricks][url_richard] wanted to use our
 very own Sherlock!
 
-![compression_stars](images/compression_stars.png){ align=left style="height:100px; margin-top:0" }
-Kudos to the show's crew and a big thank you to [HBO Data compression
-stars][url_ieee], Professor [Tsachy Weissman][url_tsachy] and Dmitri Pavlichin,
-for this incredible Sherlock shout-out. This has been an everlasting source of
-pride and amazement for the whole SRCC team! :heart:{ .pulsate }
+![compression_stars](images/compression_stars.png){ align=left
+style="height:100px; margin-top:0" } Kudos to the show's crew and a big thank
+you to [HBO Data compression stars][url_ieee], Professor [Tsachy
+Weissman][url_tsachy] and Dmitri Pavlichin, for this incredible Sherlock
+shout-out. This has been an everlasting source of pride and amazement for the
+whole SRCC team! :heart:{ .pulsate }
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
