@@ -5486,19 +5486,39 @@ software_modules:
           Sequencing platforms., markedDefault: false, versionName: 2.2.1_py36}
   - name: chemistry
     packages:
-    - categories: chemistry, cheminformatics
-      defaultVersionName: 2018.09.1_py27
-      description: RDKit is a collection of cheminformatics and machine-learning software
-        written in C++ and Python.
-      package: py-rdkit
-      url: http://www.rdkit.org
+    - categories: chemistry, quantum chemistry
+      defaultVersionName: '7.1'
+      description: Quantum ESPRESSO is an integrated suite of Open-Source computer
+        codes for electronic-structure calculations and materials modeling at the
+        nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
+      package: quantum-espresso_gpu
+      url: https://www.quantum-espresso.org
       versions:
-      - {description: RDKit is a collection of cheminformatics and machine-learning
-          software written in C++ and Python., markedDefault: false, versionName: 2018.09.1_py36}
-      - {description: RDKit is a collection of cheminformatics and machine-learning
-          software written in C++ and Python., markedDefault: false, versionName: 2022.09.1_py39}
-      - {description: RDKit is a collection of cheminformatics and machine-learning
-          software written in C++ and Python., markedDefault: true, versionName: 2018.09.1_py27}
+      - description: GPU-accelerated Quantum ESPRESSO using CUDA FORTRAN
+        family: qe
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '1.1'
+      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
+          codes for electronic-structure calculations and materials modeling at the
+          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
+        family: qe
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '7.0'
+      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
+          codes for electronic-structure calculations and materials modeling at the
+          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
+        family: qe
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '7.1'
     - categories: chemistry, computational chemistry
       defaultVersionName: 2.6.0
       description: Libint computes molecular integrals.
@@ -5612,50 +5632,19 @@ software_modules:
           arch: {gpu: 1}
           license: {restricted: 1}
         versionName: 1.95A
-    - categories: chemistry, computational chemistry
-      defaultVersionName: 5.4.1
-      description: The Vienna Ab initio Simulation Package (VASP) is a computer program
-        for atomic scale materials modelling, e.g. electronic structure calculations
-        and quantum-mechanical molecular dynamics, from first principles.
-      package: vasp
-      url: https://www.vasp.at
+    - categories: chemistry, molecular dynamics
+      defaultVersionName: 1.0.0
+      description: A collection of tools for characterizing membrane structure and
+        dynamics within simulated trajectories of molecular systems.
+      package: mosaics
+      url: https://github.com/MOSAICS-NIH/MOSAICS
       versions:
-      - description: The Vienna Ab initio Simulation Package (VASP) is a computer
-          program for atomic scale materials modelling, e.g. electronic structure
-          calculations and quantum-mechanical molecular dynamics, from first principles.
+      - description: A collection of tools for characterizing membrane structure and
+          dynamics within simulated trajectories of molecular systems.
         markedDefault: false
         properties:
-          arch: {gpu: 1}
-          license: {restricted: 1}
           parallel: {mpi: 1}
-        versionName: 6.1.1
-      - description: The Vienna Ab initio Simulation Package (VASP) is a computer
-          program for atomic scale materials modelling, e.g. electronic structure
-          calculations and quantum-mechanical molecular dynamics, from first principles.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          license: {restricted: 1}
-          parallel: {mpi: 1}
-        versionName: 6.3.2
-      - description: The Vienna Ab initio Simulation Package (VASP) is a computer
-          program for atomic scale materials modelling, e.g. electronic structure
-          calculations and quantum-mechanical molecular dynamics, from first principles.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          license: {restricted: 1}
-          parallel: {mpi: 1}
-        versionName: 6.4.1
-      - description: The Vienna Ab initio Simulation Package (VASP) is a computer
-          program for atomic scale materials modelling, e.g. electronic structure
-          calculations and quantum-mechanical molecular dynamics, from first principles.
-        markedDefault: true
-        properties:
-          arch: {gpu: 1}
-          license: {restricted: 1}
-          parallel: {mpi: 1}
-        versionName: 5.4.1
+        versionName: 1.0.0
     - categories: chemistry, docking
       defaultVersionName: 1.0.2
       description: A deep learning framework for molecular docking
@@ -5724,6 +5713,18 @@ software_modules:
           arch: {gpu: 1}
           license: {restricted: 1}
         versionName: g16.B01
+    - categories: chemistry, x-ray spectroscopy
+      defaultVersionName: 0.9.80_py312
+      description: Larch is a open-source library and set of applications for processing
+        and analyzing X-ray absorption and fluorescence spectroscopy data and X-ray
+        fluorescence and diffraction image data from synchrotron beamlines.
+      package: py-xraylarch
+      url: https://xraypy.github.io/xraylarch/
+      versions:
+      - {description: Larch is a open-source library and set of applications for processing
+          and analyzing X-ray absorption and fluorescence spectroscopy data and X-ray
+          fluorescence and diffraction image data from synchrotron beamlines., markedDefault: false,
+        versionName: 0.9.80_py312}
     - categories: chemistry, computational chemistry
       defaultVersionName: 3.22.1_py39
       description: The Atomic Simulation Environment (ASE) is a set of tools and Python
@@ -5754,18 +5755,6 @@ software_modules:
       versions:
       - {description: APBS solves the equations of continuum electrostatics for large
           biomolecular assemblages., markedDefault: false, versionName: '1.5'}
-    - categories: chemistry, x-ray spectroscopy
-      defaultVersionName: 0.9.80_py312
-      description: Larch is a open-source library and set of applications for processing
-        and analyzing X-ray absorption and fluorescence spectroscopy data and X-ray
-        fluorescence and diffraction image data from synchrotron beamlines.
-      package: py-xraylarch
-      url: https://xraypy.github.io/xraylarch/
-      versions:
-      - {description: Larch is a open-source library and set of applications for processing
-          and analyzing X-ray absorption and fluorescence spectroscopy data and X-ray
-          fluorescence and diffraction image data from synchrotron beamlines., markedDefault: false,
-        versionName: 0.9.80_py312}
     - categories: chemistry, quantum chemistry
       defaultVersionName: '4.1'
       description: CP2K is a quantum chemistry and solid state physics software package
@@ -5790,6 +5779,31 @@ software_modules:
           arch: {gpu: 1}
           parallel: {mpi: 1}
         versionName: '4.1'
+    - categories: chemistry, quantum chemistry
+      defaultVersionName: 5.0.3
+      description: ORCA is a flexible, efficient and easy-to-use general purpose tool
+        for quantum chemistry.
+      package: orca
+      url: https://orcaforum.kofo.mpg.de/
+      versions:
+      - description: ORCA is a flexible, efficient and easy-to-use general purpose
+          tool for quantum chemistry.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 4.2.1
+      - description: ORCA is a flexible, efficient and easy-to-use general purpose
+          tool for quantum chemistry.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 5.0.0
+      - description: ORCA is a flexible, efficient and easy-to-use general purpose
+          tool for quantum chemistry.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 5.0.3
     - categories: chemistry, molecular dynamics
       defaultVersionName: '2023.1'
       description: GROMACS is a versatile package to perform molecular dynamics, i.e.
@@ -5873,31 +5887,50 @@ software_modules:
       versions:
       - {description: A C++ toolkit for working with macromolecular coordinate files.,
         markedDefault: false, versionName: 2.0.20}
-    - categories: chemistry, quantum chemistry
-      defaultVersionName: 5.0.3
-      description: ORCA is a flexible, efficient and easy-to-use general purpose tool
-        for quantum chemistry.
-      package: orca
-      url: https://orcaforum.kofo.mpg.de/
+    - categories: chemistry, computational chemistry
+      defaultVersionName: 5.4.1
+      description: The Vienna Ab initio Simulation Package (VASP) is a computer program
+        for atomic scale materials modelling, e.g. electronic structure calculations
+        and quantum-mechanical molecular dynamics, from first principles.
+      package: vasp
+      url: https://www.vasp.at
       versions:
-      - description: ORCA is a flexible, efficient and easy-to-use general purpose
-          tool for quantum chemistry.
+      - description: The Vienna Ab initio Simulation Package (VASP) is a computer
+          program for atomic scale materials modelling, e.g. electronic structure
+          calculations and quantum-mechanical molecular dynamics, from first principles.
         markedDefault: false
         properties:
+          arch: {gpu: 1}
+          license: {restricted: 1}
           parallel: {mpi: 1}
-        versionName: 4.2.1
-      - description: ORCA is a flexible, efficient and easy-to-use general purpose
-          tool for quantum chemistry.
+        versionName: 6.1.1
+      - description: The Vienna Ab initio Simulation Package (VASP) is a computer
+          program for atomic scale materials modelling, e.g. electronic structure
+          calculations and quantum-mechanical molecular dynamics, from first principles.
         markedDefault: false
         properties:
+          arch: {gpu: 1}
+          license: {restricted: 1}
           parallel: {mpi: 1}
-        versionName: 5.0.0
-      - description: ORCA is a flexible, efficient and easy-to-use general purpose
-          tool for quantum chemistry.
+        versionName: 6.3.2
+      - description: The Vienna Ab initio Simulation Package (VASP) is a computer
+          program for atomic scale materials modelling, e.g. electronic structure
+          calculations and quantum-mechanical molecular dynamics, from first principles.
         markedDefault: false
         properties:
+          arch: {gpu: 1}
+          license: {restricted: 1}
           parallel: {mpi: 1}
-        versionName: 5.0.3
+        versionName: 6.4.1
+      - description: The Vienna Ab initio Simulation Package (VASP) is a computer
+          program for atomic scale materials modelling, e.g. electronic structure
+          calculations and quantum-mechanical molecular dynamics, from first principles.
+        markedDefault: true
+        properties:
+          arch: {gpu: 1}
+          license: {restricted: 1}
+          parallel: {mpi: 1}
+        versionName: 5.4.1
     - categories: chemistry, quantum chemistry
       defaultVersionName: '7.1'
       description: Quantum ESPRESSO is an integrated suite of Open-Source computer
@@ -5997,6 +6030,14 @@ software_modules:
           parallel: {mpi: 1}
         versionName: '20230802'
     - categories: chemistry, crystallography
+      defaultVersionName: '1.4'
+      description: A macromolecular superposition library.
+      package: ssm
+      url: https://www.ccp4.ac.uk/
+      versions:
+      - {description: A macromolecular superposition library., markedDefault: false,
+        versionName: '1.4'}
+    - categories: chemistry, crystallography
       defaultVersionName: 3.4.4
       description: VESTA is a 3D visualization program for structural models, volumetric
         data such as electron/nuclear densities, and crystal morphologies.
@@ -6006,47 +6047,19 @@ software_modules:
       - {description: 'VESTA is a 3D visualization program for structural models,
           volumetric data such as electron/nuclear densities, and crystal morphologies.',
         markedDefault: false, versionName: 3.4.4}
-    - categories: chemistry, crystallography
-      defaultVersionName: '1.4'
-      description: A macromolecular superposition library.
-      package: ssm
-      url: https://www.ccp4.ac.uk/
+    - categories: chemistry, cheminformatics
+      defaultVersionName: 2018.09.1_py27
+      description: RDKit is a collection of cheminformatics and machine-learning software
+        written in C++ and Python.
+      package: py-rdkit
+      url: http://www.rdkit.org
       versions:
-      - {description: A macromolecular superposition library., markedDefault: false,
-        versionName: '1.4'}
-    - categories: chemistry, quantum chemistry
-      defaultVersionName: '7.1'
-      description: Quantum ESPRESSO is an integrated suite of Open-Source computer
-        codes for electronic-structure calculations and materials modeling at the
-        nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
-      package: quantum-espresso_gpu
-      url: https://www.quantum-espresso.org
-      versions:
-      - description: GPU-accelerated Quantum ESPRESSO using CUDA FORTRAN
-        family: qe
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '1.1'
-      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
-          codes for electronic-structure calculations and materials modeling at the
-          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
-        family: qe
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '7.0'
-      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
-          codes for electronic-structure calculations and materials modeling at the
-          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
-        family: qe
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '7.1'
+      - {description: RDKit is a collection of cheminformatics and machine-learning
+          software written in C++ and Python., markedDefault: false, versionName: 2018.09.1_py36}
+      - {description: RDKit is a collection of cheminformatics and machine-learning
+          software written in C++ and Python., markedDefault: false, versionName: 2022.09.1_py39}
+      - {description: RDKit is a collection of cheminformatics and machine-learning
+          software written in C++ and Python., markedDefault: true, versionName: 2018.09.1_py27}
     - categories: chemistry, molecular dynamics
       defaultVersionName: '20220426'
       description: The QUIP package is a collection of software tools to carry out
