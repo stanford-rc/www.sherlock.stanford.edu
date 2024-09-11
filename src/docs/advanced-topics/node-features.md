@@ -43,7 +43,7 @@ The table below lists the possible features defined for each node.
 | `GPU_GEN:xxx` | GPU generation | `GPU_GEN:VLT` for Volta<br/>`GPU_GEN:AMP` for Ampere |
 | `GPU_SKU:xxx` | GPU name | `GPU_SKU:A100_SXM4`, `GPU_SKU:RTX_3090` |
 | `GPU_MEM:xxx` | GPU memory | `GPU_MEM:32GB`, `GPU_MEM:80GB` |
-| `GPU_CC:xxx`  | GPU [Compute Capabilities][url_gpu_cc] | `GPU_CC:6.1`, `GPU_CC:8.0` |
+| `GPU_CC:xxx`  | GPU [Compute Capability][url_gpu_cc] | `GPU_CC:6.1`, `GPU_CC:8.0` |
 | `IB:xxx`      | Infiniband generation/speed | `IB:EDR`, `IB:HDR` |
 | `NO_GPU`      | special tag set on CPU-only nodes |
 
@@ -188,7 +188,7 @@ nodes with the same frequency, either 2.5 GHz or 2.75GHz:
     meaning that they can't be compared.
 
     For instance, it's possible to add a constraint for GPU Compute
-    Capabilities greater than 8.0. The workaround is to add a job constraint
+    Capability greater than 8.0. The workaround is to add a job constraint
     that satisfies all the possible values of that tag, like:
 
     ``` none
