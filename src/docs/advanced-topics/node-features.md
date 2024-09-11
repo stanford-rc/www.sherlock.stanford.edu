@@ -169,7 +169,7 @@ may result in a two-node job where one node as an AMD Rome CPU, and the other
 node has a AMD Milan CPU.
 
 
-#### Matching `OR`:
+#### Matching `OR`
 
 When you need all nodes in a multi-node job to have the same set of features, a
 matching `OR` condition can be defined by enclosing the options within square
