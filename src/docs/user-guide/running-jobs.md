@@ -220,7 +220,7 @@ $squeue -u $USER
 
 Here you can see it has been running (R) on the compute node sh02-01n49 for 10 seconds.  While your job is running you have ssh access to that
 node and can run diagnostic tools such as [`htop`][url_htop] and [`nvtop`][url_nvtop] in order to monitor your job's memory and CPU/GPU utilization in real-time.
-You can also manage this job based on the JobID assigned to it (44915854). For example the job can be cancelled with the [`scancel`][url_scancel] command.
+You can also manage this job based on the JobID assigned to it (44915854).  For example the job can be cancelled with the [`scancel`][url_scancel] command.  After your job completes you can asses and fine-tune your resource requests (time, CPU/GPU, memory) with the [`sacct`][url_sacct] or seff commands.
 
 
 ### Resource requests
