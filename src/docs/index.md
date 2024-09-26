@@ -167,8 +167,8 @@ so that you can then work self-sufficiently towards a solution on your own.
 
 !!! important "Office hours are online"
 
-    **Office hours are helpd virtually, online via [Zoom][url_zoom]**
-    
+    **Office hours are held virtually, online via [Zoom][url_zoom]**
+
 !!! info "Office hours times"
 
     Click here to join the **[Sherlock Office Hours Zoom][url_oh_zoom]**
