@@ -204,6 +204,28 @@ software_modules:
         versionName: 9.2.0_py39}
       - {description: Pillow-SIMD is an optimized version of Pillow, markedDefault: false,
         versionName: 10.2.0_py312}
+    - categories: viz, plotting
+      defaultVersionName: 5.1.25
+      description: Grace is a WYSIWYG tool to make two-dimensional plots of numerical
+        data.
+      package: grace
+      url: http://plasma-gate.weizmann.ac.il/Grace
+      versions:
+      - {description: Grace is a WYSIWYG tool to make two-dimensional plots of numerical
+          data., markedDefault: false, versionName: 5.1.25}
+    - categories: viz, data
+      defaultVersionName: 5.8.1
+      description: ParaView is an open-source, multi-platform data analysis and visualization
+        application based on Visualization Toolkit (VTK).
+      package: paraview
+      url: https://www.paraview.org/
+      versions:
+      - description: ParaView is an open-source, multi-platform data analysis and
+          visualization application based on Visualization Toolkit (VTK).
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 5.8.1
     - categories: viz, gis
       defaultVersionName: 6.4.0
       description: GMT (The Generic Mapping Tools) is an open source collection of
@@ -214,15 +236,6 @@ software_modules:
       - {description: GMT (The Generic Mapping Tools) is an open source collection
           of command-line tools for manipulating geographic and Cartesian data sets.,
         markedDefault: false, versionName: 6.4.0}
-    - categories: viz, plotting
-      defaultVersionName: 5.1.25
-      description: Grace is a WYSIWYG tool to make two-dimensional plots of numerical
-        data.
-      package: grace
-      url: http://plasma-gate.weizmann.ac.il/Grace
-      versions:
-      - {description: Grace is a WYSIWYG tool to make two-dimensional plots of numerical
-          data., markedDefault: false, versionName: 5.1.25}
   - name: system
     packages:
     - categories: system, libs
@@ -2497,7 +2510,7 @@ software_modules:
       - {description: The Python ensemble sampling toolkit for affine-invariant MCMC,
         markedDefault: false, versionName: 3.1.4_py39}
     - categories: math, numerical library
-      defaultVersionName: 2.20.0
+      defaultVersionName: 2.32.0
       description: HYPRE is a library of high performance preconditioners and solvers
         featuring multigrid methods for the solution of large, sparse linear systems
         of equations on massively parallel computers.
@@ -2511,6 +2524,13 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 2.20.0
+      - description: HYPRE is a library of high performance preconditioners and solvers
+          featuring multigrid methods for the solution of large, sparse linear systems
+          of equations on massively parallel computers.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 2.32.0
     - categories: math, machine learning
       defaultVersionName: 4.39.1_py312
       description: Hugging Face Transformers provides APIs and tools to easily download
