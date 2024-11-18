@@ -259,7 +259,7 @@ cores, loading the Singularity module and moving the directory where we'll save
 those images:
 
 ``` shell
-$ srun -c 4 --pty bash
+$ sh_dev -c 4
 $ cd $GROUP_HOME/simg
 ```
 
