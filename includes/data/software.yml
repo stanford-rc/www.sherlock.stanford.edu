@@ -253,7 +253,7 @@ software_modules:
       versions:
       - {description: HarfBuzz is an OpenType text shaping engine., markedDefault: false,
         versionName: 1.4.8}
-    - categories: system, tool
+    - categories: system, tools
       defaultVersionName: '2.12'
       description: 'The unifdef utility selectively processes conditional C preprocessor
         #if and #ifdef directives.'
@@ -2343,19 +2343,14 @@ software_modules:
       versions:
       - {description: Gmsh is an open source 3D finite element mesh generator with
           a built-in CAD engine and post-processor., markedDefault: false, versionName: 4.10.1}
-    - categories: math, deep learning
-      defaultVersionName: 0.19.1_py312
-      description: Datasets, model architectures, and common image transformations
-        for computer vision for PyTorch.
-      package: py-torchvision
-      url: http://pytorch.org/vision
+    - categories: math, numerical library
+      defaultVersionName: 2.9.0
+      description: FLINT is a C library for doing number theory.
+      package: flint
+      url: https://flintlib.org/
       versions:
-      - {description: 'Datasets, model architectures, and common image transformations
-          for computer vision for PyTorch.', markedDefault: false, versionName: 0.15.1_py39}
-      - {description: 'Datasets, model architectures, and common image transformations
-          for computer vision for PyTorch.', markedDefault: false, versionName: 0.17.1_py312}
-      - {description: 'Datasets, model architectures, and common image transformations
-          for computer vision for PyTorch.', markedDefault: false, versionName: 0.19.1_py312}
+      - {description: FLINT is a C library for doing number theory., markedDefault: false,
+        versionName: 2.9.0}
     - categories: math, statistics
       defaultVersionName: 1.3.1093
       description: RStudio is an integrated development environment (IDE) for R. It
@@ -2372,15 +2367,15 @@ software_modules:
           R. It includes a console, syntax-highlighting editor that supports direct
           code execution, as well as tools for plotting, history, debugging and workspace
           management.', markedDefault: true, versionName: 1.3.1093}
-    - categories: math, graph computing
-      defaultVersionName: '0.73'
-      description: A tool for computing automorphism groups and canonical forms of
-        graphs.
-      package: bliss
-      url: http://www.tcs.hut.fi/Software/bliss/
+    - categories: math, computational geometry
+      defaultVersionName: 7.6.2
+      description: Open CASCADE Technology (OCCT) is an open-source full-scale 3D
+        geometry library
+      package: opencascade
+      url: https://dev.opencascade.org/
       versions:
-      - {description: A tool for computing automorphism groups and canonical forms
-          of graphs., markedDefault: false, versionName: '0.73'}
+      - {description: Open CASCADE Technology (OCCT) is an open-source full-scale
+          3D geometry library, markedDefault: false, versionName: 7.6.2}
     - categories: math, optimization
       defaultVersionName: 3.3.0
       description: Octeract Engine is a proprietary massively parallel deterministic
@@ -2502,6 +2497,14 @@ software_modules:
         properties:
           license: {restricted: 1}
         versionName: '15'
+    - categories: math, machine learning
+      defaultVersionName: 0.4.2_py312
+      description: Simple, safe way to store and distribute tensors.
+      package: py-safetensors
+      url: https://huggingface.co/docs/safetensors
+      versions:
+      - {description: 'Simple, safe way to store and distribute tensors.', markedDefault: false,
+        versionName: 0.4.2_py312}
     - categories: math, numerical library
       defaultVersionName: 0.4.7_py39
       description: JAX is Autograd and XLA, brought together for high-performance
@@ -2521,30 +2524,6 @@ software_modules:
       - {description: deal.II is a C++ program library targeted at the computational
           solution of partial differential equations using adaptive finite elements.,
         markedDefault: false, versionName: 9.4.1}
-    - categories: math, numerical library
-      defaultVersionName: 6.0.4
-      description: Software package and libraries for sequential and parallel graph
-        partitioning, static mapping and clustering, sequential mesh and hypergraph
-        partitioning, and sequential and parallel sparse matrix block ordering.
-      package: scotch
-      url: http://www.labri.fr/perso/pelegrin/scotch
-      versions:
-      - description: Software package and libraries for sequential and parallel graph
-          partitioning, static mapping and clustering, sequential mesh and hypergraph
-          partitioning, and sequential and parallel sparse matrix block ordering.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 6.0.4
-    - categories: math, machine learning
-      defaultVersionName: 0.8.0_py312
-      description: tinygrad is a deep learning framework that aims to provide a balance
-        between simplicity and functionality.
-      package: py-tinygrad
-      url: https://github.com/tinygrad/tinygrad
-      versions:
-      - {description: tinygrad is a deep learning framework that aims to provide a
-          balance between simplicity and functionality., markedDefault: false, versionName: 0.8.0_py312}
     - categories: math, deep learning
       defaultVersionName: 0.12.1_py27
       description: Horovod is a distributed training framework for TensorFlow. The
@@ -2567,32 +2546,37 @@ software_modules:
           parallel: {mpi: 1}
         versionName: 0.12.1_py27
     - categories: math, machine learning
-      defaultVersionName: 0.19.1_py27
-      description: Scikit-learn is a free software machine learning library for the
-        Python programming language.
-      package: py-scikit-learn
-      url: http://scikit-learn.org
+      defaultVersionName: 0.8.0_py312
+      description: tinygrad is a deep learning framework that aims to provide a balance
+        between simplicity and functionality.
+      package: py-tinygrad
+      url: https://github.com/tinygrad/tinygrad
       versions:
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 0.19.1_py36}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 0.24.2_py36}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 1.0.2_py39}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 1.3.2_py39}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 1.5.1_py312}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: true, versionName: 0.19.1_py27}
-    - categories: math, statistics
-      defaultVersionName: 3.1.4_py39
-      description: The Python ensemble sampling toolkit for affine-invariant MCMC
-      package: py-emcee
-      url: https://github.com/dfm/emcee
+      - {description: tinygrad is a deep learning framework that aims to provide a
+          balance between simplicity and functionality., markedDefault: false, versionName: 0.8.0_py312}
+    - categories: math, numerical library
+      defaultVersionName: 1.14.3_py27
+      description: NumPy is the fundamental package for scientific computing with
+        Python.
+      package: py-numpy
+      url: http://www.numpy.org
       versions:
-      - {description: The Python ensemble sampling toolkit for affine-invariant MCMC,
-        markedDefault: false, versionName: 3.1.4_py39}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.14.3_py36}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.17.2_py36}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.18.1_py36}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.19.2_py36}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.20.3_py39}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.24.2_py39}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: false, versionName: 1.26.3_py312}
+      - {description: NumPy is the fundamental package for scientific computing with
+          Python., markedDefault: true, versionName: 1.14.3_py27}
     - categories: math, linear algebra
       defaultVersionName: 8.200.1
       description: Armadillo is a high quality linear algebra library (matrix maths)
@@ -2604,6 +2588,23 @@ software_modules:
       - {description: 'Armadillo is a high quality linear algebra library (matrix
           maths) for the C++ language, aiming towards a good balance between speed
           and ease of use.', markedDefault: false, versionName: 8.200.1}
+    - categories: math, statistics
+      defaultVersionName: 3.1.4_py39
+      description: The Python ensemble sampling toolkit for affine-invariant MCMC
+      package: py-emcee
+      url: https://github.com/dfm/emcee
+      versions:
+      - {description: The Python ensemble sampling toolkit for affine-invariant MCMC,
+        markedDefault: false, versionName: 3.1.4_py39}
+    - categories: math, numerical library
+      defaultVersionName: 3.18.5_py39
+      description: Python bindings for PETSc, the Portable, Extensible Toolkit for
+        Scientific Computation.
+      package: py-petsc4py
+      url: http://petsc.org
+      versions:
+      - {description: 'Python bindings for PETSc, the Portable, Extensible Toolkit
+          for Scientific Computation.', markedDefault: false, versionName: 3.18.5_py39}
     - categories: math, numerical library
       defaultVersionName: 2.32.0
       description: HYPRE is a library of high performance preconditioners and solvers
@@ -2636,14 +2637,6 @@ software_modules:
       - {description: Hugging Face Transformers provides APIs and tools to easily
           download and train state-of-the-art pretrained models., markedDefault: false,
         versionName: 4.39.1_py312}
-    - categories: math, numerical library
-      defaultVersionName: 1.0.248
-      description: Extra precise basic linear algebra subroutines.
-      package: xblas
-      url: http://www.netlib.org/xblas
-      versions:
-      - {description: Extra precise basic linear algebra subroutines., markedDefault: false,
-        versionName: 1.0.248}
     - categories: math, deep learning
       defaultVersionName: '20180202'
       description: Torch is a scientific computing framework with wide support for
@@ -2657,6 +2650,14 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: '20180202'
+    - categories: math, optimization
+      defaultVersionName: 2.6.2
+      description: NLopt is a free/open-source library for nonlinear optimization.
+      package: nlopt
+      url: https://nlopt.readthedocs.io/
+      versions:
+      - {description: NLopt is a free/open-source library for nonlinear optimization.,
+        markedDefault: false, versionName: 2.6.2}
     - categories: math, numerical library
       defaultVersionName: 1.6.0
       description: TetGen provides various features to generate good quality and adaptive
@@ -2731,29 +2732,19 @@ software_modules:
       - {description: 'harminv is a program designed to solve the problem of harmonic
           inversion: given a time series consisting of a sum of sinusoids (modes),
           extract their frequencies and amplitudes.', markedDefault: false, versionName: 1.4.1}
-    - categories: math, numerical library
-      defaultVersionName: 1.14.3_py27
-      description: NumPy is the fundamental package for scientific computing with
-        Python.
-      package: py-numpy
-      url: http://www.numpy.org
+    - categories: math, statistics
+      defaultVersionName: 2022.02.2-485
+      description: RStudio is an integrated development environment (IDE) for R. It
+        includes a console, syntax-highlighting editor that supports direct code execution,
+        as well as tools for plotting, history, debugging and workspace management.
+        This is the X11/GUI version.
+      package: rstudio-desktop
+      url: http://www.rstudio.com
       versions:
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.14.3_py36}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.17.2_py36}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.18.1_py36}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.19.2_py36}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.20.3_py39}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.24.2_py39}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: false, versionName: 1.26.3_py312}
-      - {description: NumPy is the fundamental package for scientific computing with
-          Python., markedDefault: true, versionName: 1.14.3_py27}
+      - {description: 'RStudio is an integrated development environment (IDE) for
+          R. It includes a console, syntax-highlighting editor that supports direct
+          code execution, as well as tools for plotting, history, debugging and workspace
+          management. This is the X11/GUI version.', markedDefault: false, versionName: 2022.02.2-485}
     - categories: math, numerical library
       defaultVersionName: 5.1.0
       description: METIS is a set of serial programs for partitioning graphs, partitioning
@@ -2831,19 +2822,14 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 2.1.0_py36
-    - categories: math, statistics
-      defaultVersionName: 2022.02.2-485
-      description: RStudio is an integrated development environment (IDE) for R. It
-        includes a console, syntax-highlighting editor that supports direct code execution,
-        as well as tools for plotting, history, debugging and workspace management.
-        This is the X11/GUI version.
-      package: rstudio-desktop
-      url: http://www.rstudio.com
+    - categories: math, computational geometry
+      defaultVersionName: '4.10'
+      description: polymake is open source software for research in polyhedral geometry.
+      package: polymake
+      url: https://polymake.org
       versions:
-      - {description: 'RStudio is an integrated development environment (IDE) for
-          R. It includes a console, syntax-highlighting editor that supports direct
-          code execution, as well as tools for plotting, history, debugging and workspace
-          management. This is the X11/GUI version.', markedDefault: false, versionName: 2022.02.2-485}
+      - {description: polymake is open source software for research in polyhedral
+          geometry., markedDefault: false, versionName: '4.10'}
     - categories: math, machine learning
       defaultVersionName: 0.29.3_py312
       description: Huggingface Accelerate is a library that enables the same PyTorch
@@ -2867,14 +2853,6 @@ software_modules:
       - {description: LIBXSMM is a library for small dense and small sparse matrix-matrix
           multiplications as well as for deep learning primitives such as small convolutions,
         markedDefault: false, versionName: '1.17'}
-    - categories: math, computational geometry
-      defaultVersionName: '4.10'
-      description: polymake is open source software for research in polyhedral geometry.
-      package: polymake
-      url: https://polymake.org
-      versions:
-      - {description: polymake is open source software for research in polyhedral
-          geometry., markedDefault: false, versionName: '4.10'}
     - categories: math, statistics
       defaultVersionName: 2.9.2_py36
       description: rpy2 is an interface to R running embedded in a Python process.
@@ -2885,14 +2863,6 @@ software_modules:
         markedDefault: false, versionName: 2.8.6_py27}
       - {description: rpy2 is an interface to R running embedded in a Python process.,
         markedDefault: false, versionName: 2.9.2_py36}
-    - categories: math, numerical library
-      defaultVersionName: 3.1.2_py39
-      description: Efficient matrix representations for working with tabular data.
-      package: py-tabmat
-      url: https://github.com/Quantco/tabmat
-      versions:
-      - {description: Efficient matrix representations for working with tabular data.,
-        markedDefault: false, versionName: 3.1.2_py39}
     - categories: math, optimization
       defaultVersionName: 10.3.0
       description: Artelys Knitro is an optimization solver for difficult large-scale
@@ -2904,14 +2874,31 @@ software_modules:
           nonlinear problems., markedDefault: false, versionName: 12.4.0}
       - {description: Artelys Knitro is an optimization solver for difficult large-scale
           nonlinear problems., markedDefault: true, versionName: 10.3.0}
-    - categories: math, optimization
-      defaultVersionName: 2.6.2
-      description: NLopt is a free/open-source library for nonlinear optimization.
-      package: nlopt
-      url: https://nlopt.readthedocs.io/
+    - categories: math, numerical library
+      defaultVersionName: 3.1.2_py39
+      description: Efficient matrix representations for working with tabular data.
+      package: py-tabmat
+      url: https://github.com/Quantco/tabmat
       versions:
-      - {description: NLopt is a free/open-source library for nonlinear optimization.,
-        markedDefault: false, versionName: 2.6.2}
+      - {description: Efficient matrix representations for working with tabular data.,
+        markedDefault: false, versionName: 3.1.2_py39}
+    - categories: math, graph computing
+      defaultVersionName: '0.73'
+      description: A tool for computing automorphism groups and canonical forms of
+        graphs.
+      package: bliss
+      url: http://www.tcs.hut.fi/Software/bliss/
+      versions:
+      - {description: A tool for computing automorphism groups and canonical forms
+          of graphs., markedDefault: false, versionName: '0.73'}
+    - categories: math, numerical library
+      defaultVersionName: 1.0.248
+      description: Extra precise basic linear algebra subroutines.
+      package: xblas
+      url: http://www.netlib.org/xblas
+      versions:
+      - {description: Extra precise basic linear algebra subroutines., markedDefault: false,
+        versionName: 1.0.248}
     - categories: math, deep learning
       defaultVersionName: 0.21.0_py39
       description: Gym is a toolkit for developing and comparing reinforcement learning
@@ -2921,6 +2908,19 @@ software_modules:
       versions:
       - {description: Gym is a toolkit for developing and comparing reinforcement
           learning algorithms., markedDefault: false, versionName: 0.21.0_py39}
+    - categories: math, deep learning
+      defaultVersionName: 0.19.1_py312
+      description: Datasets, model architectures, and common image transformations
+        for computer vision for PyTorch.
+      package: py-torchvision
+      url: http://pytorch.org/vision
+      versions:
+      - {description: 'Datasets, model architectures, and common image transformations
+          for computer vision for PyTorch.', markedDefault: false, versionName: 0.15.1_py39}
+      - {description: 'Datasets, model architectures, and common image transformations
+          for computer vision for PyTorch.', markedDefault: false, versionName: 0.17.1_py312}
+      - {description: 'Datasets, model architectures, and common image transformations
+          for computer vision for PyTorch.', markedDefault: false, versionName: 0.19.1_py312}
     - categories: math, linear algebra
       defaultVersionName: 0.6.3.2
       description: NVIDIA cuSPARSELt is a high-performance CUDA library for sparse
@@ -2940,43 +2940,26 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.6.3.2
-    - categories: math, numerical library
-      defaultVersionName: 0.3.10
-      description: OpenBLAS is an optimized BLAS library
-      package: openblas
-      url: http://www.openblas.net/
+    - categories: math, technical computing
+      defaultVersionName: 13.1.0
+      description: A symbolic language and platform for modern technical computing.
+      package: mathematica
+      url: http://www.wolfram.com/mathematica
       versions:
-      - {description: OpenBLAS is an optimized BLAS library, family: blas, markedDefault: false,
-        versionName: 0.2.19}
-      - {description: OpenBLAS is an optimized BLAS library, family: blas, markedDefault: false,
-        versionName: 0.3.4}
-      - {description: OpenBLAS is an optimized BLAS library, family: blas, markedDefault: false,
-        versionName: 0.3.9}
-      - {description: OpenBLAS is an optimized BLAS library, family: blas, markedDefault: false,
-        versionName: 0.3.20}
-      - {description: OpenBLAS is an optimized BLAS library, family: blas, markedDefault: false,
-        versionName: 0.3.26}
-      - {description: OpenBLAS is an optimized BLAS library, family: blas, markedDefault: false,
-        versionName: 0.3.28}
-      - {description: OpenBLAS is an optimized BLAS library, family: blas, markedDefault: true,
-        versionName: 0.3.10}
-    - categories: math, deep learning
-      defaultVersionName: 2.1.2_py312
-      description: PyTorch Extension Library of Optimized Scatter Operations.
-      package: py-torch-scatter
-      url: https://github.com/rusty1s/pytorch_scatter
+      - description: A symbolic language and platform for modern technical computing.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: 13.1.0
+    - categories: math, machine learning
+      defaultVersionName: 0.4.3_py312
+      description: Hugging Face Evaluate is a library for easily evaluating machine
+        learning models and datasets.
+      package: py-evaluate
+      url: https://huggingface.co/docs/evaluate
       versions:
-      - {description: PyTorch Extension Library of Optimized Scatter Operations.,
-        markedDefault: false, versionName: 2.1.2_py312}
-    - categories: math, computational geometry
-      defaultVersionName: 7.6.2
-      description: Open CASCADE Technology (OCCT) is an open-source full-scale 3D
-        geometry library
-      package: opencascade
-      url: https://dev.opencascade.org/
-      versions:
-      - {description: Open CASCADE Technology (OCCT) is an open-source full-scale
-          3D geometry library, markedDefault: false, versionName: 7.6.2}
+      - {description: Hugging Face Evaluate is a library for easily evaluating machine
+          learning models and datasets., markedDefault: false, versionName: 0.4.3_py312}
     - categories: math, numerical library
       defaultVersionName: 4.1.0
       description: The MPFR library is a C library for multiple-precision floating-point
@@ -2996,15 +2979,6 @@ software_modules:
       versions:
       - {description: 'glum is a fast, modern, Python-first GLM estimation library.',
         markedDefault: false, versionName: 2.1.2_py39}
-    - categories: math, numerical library
-      defaultVersionName: 2017.1_py27
-      description: PyUblas provides a seamless glue layer between Numpy and Boost.Ublas
-        for use with Boost.Python.
-      package: py-pyublas
-      url: https://mathema.tician.de/software/pyublas/
-      versions:
-      - {description: PyUblas provides a seamless glue layer between Numpy and Boost.Ublas
-          for use with Boost.Python., markedDefault: false, versionName: 2017.1_py27}
     - categories: math, numerical library
       defaultVersionName: 1.1.0_py27
       description: The SciPy library provides many user-friendly and efficient numerical
@@ -3048,6 +3022,21 @@ software_modules:
       versions:
       - {description: GNU Octave is a high-level language primarily intended for numerical
           computations., markedDefault: false, versionName: 4.2.1}
+    - categories: math, deep learning
+      defaultVersionName: 0.18.7_py312
+      description: WandB (Weights & Biases) is a machine learning development platform
+        that enables data scientists and machine learning engineers to track, visualize,
+        and reproduce their experiments in real-time.
+      package: py-wandb
+      url: https://wandb.ai
+      versions:
+      - description: WandB (Weights & Biases) is a machine learning development platform
+          that enables data scientists and machine learning engineers to track, visualize,
+          and reproduce their experiments in real-time.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.18.7_py312
     - categories: math, statistics
       defaultVersionName: '1.3'
       description: GNU datamash is a command-line program which performs basic numeric,
@@ -3107,41 +3096,51 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.15.4_py312
-    - categories: math, technical computing
-      defaultVersionName: 13.1.0
-      description: A symbolic language and platform for modern technical computing.
-      package: mathematica
-      url: http://www.wolfram.com/mathematica
+    - categories: math, numerical library
+      defaultVersionName: 2017.1_py27
+      description: PyUblas provides a seamless glue layer between Numpy and Boost.Ublas
+        for use with Boost.Python.
+      package: py-pyublas
+      url: https://mathema.tician.de/software/pyublas/
       versions:
-      - description: A symbolic language and platform for modern technical computing.
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: 13.1.0
-    - categories: math, machine learning
-      defaultVersionName: 0.4.3_py312
-      description: Hugging Face Evaluate is a library for easily evaluating machine
-        learning models and datasets.
-      package: py-evaluate
-      url: https://huggingface.co/docs/evaluate
+      - {description: PyUblas provides a seamless glue layer between Numpy and Boost.Ublas
+          for use with Boost.Python., markedDefault: false, versionName: 2017.1_py27}
+    - categories: math, numerical library
+      defaultVersionName: 0.3.10
+      description: OpenBLAS is an optimized BLAS library
+      package: openblas
+      url: http://www.openblas.net/
       versions:
-      - {description: Hugging Face Evaluate is a library for easily evaluating machine
-          learning models and datasets., markedDefault: false, versionName: 0.4.3_py312}
-    - categories: math, deep learning
-      defaultVersionName: 0.18.7_py312
-      description: WandB (Weights & Biases) is a machine learning development platform
-        that enables data scientists and machine learning engineers to track, visualize,
-        and reproduce their experiments in real-time.
-      package: py-wandb
-      url: https://wandb.ai
+      - {description: OpenBLAS is an optimized BLAS library, family: blas, markedDefault: false,
+        versionName: 0.2.19}
+      - {description: OpenBLAS is an optimized BLAS library, family: blas, markedDefault: false,
+        versionName: 0.3.4}
+      - {description: OpenBLAS is an optimized BLAS library, family: blas, markedDefault: false,
+        versionName: 0.3.9}
+      - {description: OpenBLAS is an optimized BLAS library, family: blas, markedDefault: false,
+        versionName: 0.3.20}
+      - {description: OpenBLAS is an optimized BLAS library, family: blas, markedDefault: false,
+        versionName: 0.3.26}
+      - {description: OpenBLAS is an optimized BLAS library, family: blas, markedDefault: false,
+        versionName: 0.3.28}
+      - {description: OpenBLAS is an optimized BLAS library, family: blas, markedDefault: true,
+        versionName: 0.3.10}
+    - categories: math, numerical library
+      defaultVersionName: 3.1.0
+      description: BLIS is a portable software framework for instantiating high-performance
+        BLAS-like dense linear algebra libraries.
+      package: blis
+      url: https://github.com/amd/blis
       versions:
-      - description: WandB (Weights & Biases) is a machine learning development platform
-          that enables data scientists and machine learning engineers to track, visualize,
-          and reproduce their experiments in real-time.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.18.7_py312
+      - {description: BLIS is a portable software framework for instantiating high-performance
+          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
+        versionName: '2.1'}
+      - {description: BLIS is a portable software framework for instantiating high-performance
+          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
+        versionName: 2.2.4}
+      - {description: BLIS is a portable software framework for instantiating high-performance
+          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
+        versionName: 3.1.0}
     - categories: math, numerical library
       defaultVersionName: '2.7'
       description: The GNU Scientific Library (GSL) is a numerical library for C and
@@ -3163,22 +3162,6 @@ software_modules:
           routines such as random number generators, special functions and least-squares
           fitting.', markedDefault: false, versionName: '2.7'}
     - categories: math, numerical library
-      defaultVersionName: 3.1.0
-      description: BLIS is a portable software framework for instantiating high-performance
-        BLAS-like dense linear algebra libraries.
-      package: blis
-      url: https://github.com/amd/blis
-      versions:
-      - {description: BLIS is a portable software framework for instantiating high-performance
-          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
-        versionName: '2.1'}
-      - {description: BLIS is a portable software framework for instantiating high-performance
-          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
-        versionName: 2.2.4}
-      - {description: BLIS is a portable software framework for instantiating high-performance
-          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
-        versionName: 3.1.0}
-    - categories: math, numerical library
       defaultVersionName: 5.1.2
       description: A parallel sparse direct solver.
       package: mumps
@@ -3195,6 +3178,20 @@ software_modules:
       - {description: 'Optuna is an automatic hyperparameter optimization software
           framework, particularly designed for machine learning.', markedDefault: false,
         versionName: 2.10.0_py39}
+    - categories: math, linear algebra
+      defaultVersionName: 0.3.0.9
+      description: NVIDIA cuDSS is an optimized, first-generation GPU-accelerated
+        Direct Sparse Solver library for solving linear systems with very sparse matrices.
+      package: cudss
+      url: https://developer.nvidia.com/cudss
+      versions:
+      - description: NVIDIA cuDSS is an optimized, first-generation GPU-accelerated
+          Direct Sparse Solver library for solving linear systems with very sparse
+          matrices.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.3.0.9
     - categories: math, deep learning
       defaultVersionName: 2.0.2.5
       description: GPU-accelerated tensor linear algebra library.
@@ -3437,12 +3434,20 @@ software_modules:
           with arbitrarily high precision and correct rounding of the result., markedDefault: false,
         versionName: 1.2.1}
     - categories: math, numerical library
-      defaultVersionName: 3.18.2_py39
-      description: Python bindings for SLEPc.
-      package: py-slepc4py
-      url: https://slepc.upv.es/
+      defaultVersionName: 6.0.4
+      description: Software package and libraries for sequential and parallel graph
+        partitioning, static mapping and clustering, sequential mesh and hypergraph
+        partitioning, and sequential and parallel sparse matrix block ordering.
+      package: scotch
+      url: http://www.labri.fr/perso/pelegrin/scotch
       versions:
-      - {description: Python bindings for SLEPc., markedDefault: false, versionName: 3.18.2_py39}
+      - description: Software package and libraries for sequential and parallel graph
+          partitioning, static mapping and clustering, sequential mesh and hypergraph
+          partitioning, and sequential and parallel sparse matrix block ordering.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 6.0.4
     - categories: math, numerical library
       defaultVersionName: 3.9.0
       description: Collection of Fortran77 subroutines designed to solve large scale
@@ -3687,6 +3692,15 @@ software_modules:
       - {description: ONNX is a open format to represent deep learning models., markedDefault: false,
         versionName: 1.12.0_py39}
     - categories: math, numerical library
+      defaultVersionName: 2.0.8_py36
+      description: gmpy2 is a C-coded Python extension module that supports multiple-precision
+        arithmetic.
+      package: py-gmpy2
+      url: https://gmpy2.readthedocs.io/
+      versions:
+      - {description: gmpy2 is a C-coded Python extension module that supports multiple-precision
+          arithmetic., markedDefault: false, versionName: 2.0.8_py36}
+    - categories: math, numerical library
       defaultVersionName: 3.1.0
       description: libflame is a portable library for dense matrix computations, providing
         much of the functionality present in LAPACK
@@ -3702,49 +3716,6 @@ software_modules:
       - {description: 'libflame is a portable library for dense matrix computations,
           providing much of the functionality present in LAPACK', markedDefault: false,
         versionName: 3.1.0}
-    - categories: math, deep learning
-      defaultVersionName: 2.1.5_py27
-      description: Keras is a high-level neural networks API, written in Python and
-        capable of running on top of TensorFlow, CNTK, or Theano.
-      package: py-keras
-      url: http://keras.io
-      versions:
-      - description: Keras is a high-level neural networks API, written in Python
-          and capable of running on top of TensorFlow, CNTK, or Theano.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.0.8_py27
-      - description: Keras is a high-level neural networks API, written in Python
-          and capable of running on top of TensorFlow, CNTK, or Theano.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.1.5_py36
-      - description: Keras is a high-level neural networks API, written in Python
-          and capable of running on top of TensorFlow, CNTK, or Theano.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.2.4_py27
-      - description: Keras is a high-level neural networks API, written in Python
-          and capable of running on top of TensorFlow, CNTK, or Theano.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.2.4_py36
-      - description: Keras is a high-level neural networks API, written in Python
-          and capable of running on top of TensorFlow, CNTK, or Theano.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.3.1_py36
-      - description: Keras is a high-level neural networks API, written in Python
-          and capable of running on top of TensorFlow, CNTK, or Theano.
-        markedDefault: true
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.1.5_py27
     - categories: math, deep learning
       defaultVersionName: 8.3.14_py312
       description: Ultra YOLO11 is a cutting-edge, state-of-the-art (SOTA) model that
@@ -3830,14 +3801,6 @@ software_modules:
           arch: {gpu: 1}
         versionName: 13.3.0_py312
     - categories: math, numerical library
-      defaultVersionName: 2.9.0
-      description: FLINT is a C library for doing number theory.
-      package: flint
-      url: https://flintlib.org/
-      versions:
-      - {description: FLINT is a C library for doing number theory., markedDefault: false,
-        versionName: 2.9.0}
-    - categories: math, numerical library
       defaultVersionName: 5.2.1
       description: SuperLU is a general purpose library for the direct solution of
         large, sparse, nonsymmetric systems of linear equations.
@@ -3850,32 +3813,83 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 5.2.1
-    - categories: math, numerical library
-      defaultVersionName: 3.18.5_py39
-      description: Python bindings for PETSc, the Portable, Extensible Toolkit for
-        Scientific Computation.
-      package: py-petsc4py
-      url: http://petsc.org
+    - categories: math, deep learning
+      defaultVersionName: 2.1.2_py312
+      description: PyTorch Extension Library of Optimized Scatter Operations.
+      package: py-torch-scatter
+      url: https://github.com/rusty1s/pytorch_scatter
       versions:
-      - {description: 'Python bindings for PETSc, the Portable, Extensible Toolkit
-          for Scientific Computation.', markedDefault: false, versionName: 3.18.5_py39}
-    - categories: math, numerical library
-      defaultVersionName: 2.0.8_py36
-      description: gmpy2 is a C-coded Python extension module that supports multiple-precision
-        arithmetic.
-      package: py-gmpy2
-      url: https://gmpy2.readthedocs.io/
+      - {description: PyTorch Extension Library of Optimized Scatter Operations.,
+        markedDefault: false, versionName: 2.1.2_py312}
+    - categories: math, deep learning
+      defaultVersionName: 2.1.5_py27
+      description: Keras is a high-level neural networks API, written in Python and
+        capable of running on top of TensorFlow, CNTK, or Theano.
+      package: py-keras
+      url: http://keras.io
       versions:
-      - {description: gmpy2 is a C-coded Python extension module that supports multiple-precision
-          arithmetic., markedDefault: false, versionName: 2.0.8_py36}
+      - description: Keras is a high-level neural networks API, written in Python
+          and capable of running on top of TensorFlow, CNTK, or Theano.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.0.8_py27
+      - description: Keras is a high-level neural networks API, written in Python
+          and capable of running on top of TensorFlow, CNTK, or Theano.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.1.5_py36
+      - description: Keras is a high-level neural networks API, written in Python
+          and capable of running on top of TensorFlow, CNTK, or Theano.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.2.4_py27
+      - description: Keras is a high-level neural networks API, written in Python
+          and capable of running on top of TensorFlow, CNTK, or Theano.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.2.4_py36
+      - description: Keras is a high-level neural networks API, written in Python
+          and capable of running on top of TensorFlow, CNTK, or Theano.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.3.1_py36
+      - description: Keras is a high-level neural networks API, written in Python
+          and capable of running on top of TensorFlow, CNTK, or Theano.
+        markedDefault: true
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.1.5_py27
     - categories: math, machine learning
-      defaultVersionName: 0.4.2_py312
-      description: Simple, safe way to store and distribute tensors.
-      package: py-safetensors
-      url: https://huggingface.co/docs/safetensors
+      defaultVersionName: 0.19.1_py27
+      description: Scikit-learn is a free software machine learning library for the
+        Python programming language.
+      package: py-scikit-learn
+      url: http://scikit-learn.org
       versions:
-      - {description: 'Simple, safe way to store and distribute tensors.', markedDefault: false,
-        versionName: 0.4.2_py312}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 0.19.1_py36}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 0.24.2_py36}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 1.0.2_py39}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 1.3.2_py39}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 1.5.1_py312}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: true, versionName: 0.19.1_py27}
+    - categories: math, numerical library
+      defaultVersionName: 3.18.2_py39
+      description: Python bindings for SLEPc.
+      package: py-slepc4py
+      url: https://slepc.upv.es/
+      versions:
+      - {description: Python bindings for SLEPc., markedDefault: false, versionName: 3.18.2_py39}
     - categories: math, numerical library
       defaultVersionName: '2019'
       description: Intel Math Kernel Library (Intel MKL) is a library of optimized
@@ -4859,7 +4873,7 @@ software_modules:
           (aka phasing) for SNP array and high coverage sequencing data., markedDefault: true,
         versionName: 4.0.0}
     - categories: biology, genomics
-      defaultVersionName: 2.11.0
+      defaultVersionName: 2.16.0
       description: NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic
         Local Alignment Search Tool), an algorithm for comparing primary biological
         sequence information.
@@ -4875,6 +4889,9 @@ software_modules:
       - {description: 'NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic
           Local Alignment Search Tool), an algorithm for comparing primary biological
           sequence information.', markedDefault: false, versionName: 2.11.0}
+      - {description: 'NCBI BLAST+ is a suite of command-line tools to run BLAST (Basic
+          Local Alignment Search Tool), an algorithm for comparing primary biological
+          sequence information.', markedDefault: false, versionName: 2.16.0}
     - categories: biology, genomics
       defaultVersionName: 2.2.1
       description: Cufflinks assembles transcripts, estimates their abundances, and
@@ -6347,24 +6364,17 @@ software_modules:
       - {description: SCons is an Open Source software construction tool., markedDefault: false,
         versionName: 4.7.0_py312}
     - categories: devel, lib
-      defaultVersionName: 2.7.1_py27
-      description: The h5py package is a Pythonic interface to the HDF5 binary data
-        format.
-      package: py-h5py
-      url: http://www.h5py.org
+      defaultVersionName: 0.5.1
+      description: Simplified Data Exchange for HPC Simulations.
+      package: conduit
+      url: https://software.llnl.gov/conduit/
       versions:
-      - {description: The h5py package is a Pythonic interface to the HDF5 binary
-          data format., markedDefault: false, versionName: 2.8.0_py36}
-      - {description: The h5py package is a Pythonic interface to the HDF5 binary
-          data format., markedDefault: false, versionName: 2.10.0_py36}
-      - {description: The h5py package is a Pythonic interface to the HDF5 binary
-          data format., markedDefault: false, versionName: 3.1.0_py36}
-      - {description: The h5py package is a Pythonic interface to the HDF5 binary
-          data format., markedDefault: false, versionName: 3.7.0_py39}
-      - {description: The h5py package is a Pythonic interface to the HDF5 binary
-          data format., markedDefault: false, versionName: 3.10.0_py312}
-      - {description: The h5py package is a Pythonic interface to the HDF5 binary
-          data format., markedDefault: true, versionName: 2.7.1_py27}
+      - description: Simplified Data Exchange for HPC Simulations.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 0.5.1
     - categories: devel, parser
       defaultVersionName: 3.2.1
       description: Xerces-C++ is a validating XML parser written in a portable subset
@@ -6515,14 +6525,68 @@ software_modules:
       - {description: 'ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance
           asynchronous messaging library, aimed at use in distributed or concurrent
           applications.', markedDefault: false, versionName: 4.2.2}
-    - categories: devel, lib
-      defaultVersionName: 3.7.13
-      description: RabbitMQ is an open-source message broker.
-      package: rabbitmq
-      url: http://rabbitmq.com
+    - categories: devel, compiler
+      defaultVersionName: '21.5'
+      description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
+        Fortran compilers.
+      package: nvhpc
+      url: https://developer.nvidia.com/hpc-sdk
       versions:
-      - {description: RabbitMQ is an open-source message broker., markedDefault: false,
-        versionName: 3.7.13}
+      - description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
+          Fortran compilers.
+        family: mpi
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '21.7'
+      - description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
+          Fortran compilers.
+        family: mpi
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '22.3'
+      - description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
+          Fortran compilers.
+        family: mpi
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '23.3'
+      - description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
+          Fortran compilers.
+        family: mpi
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '24.7'
+      - {description: 'NVIDIA HPC Software Development Kit (SDK) including C, C++,
+          and Fortran compilers.', family: compiler_f, markedDefault: true, versionName: '21.5'}
+    - categories: devel, data
+      defaultVersionName: 3.4.0_py27
+      description: Python bindings for Google's Protocol Buffers data interchange
+        format.
+      package: py-protobuf
+      url: https://developers.google.com/protocol-buffers
+      versions:
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: false, versionName: 3.4.0_py36}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: false, versionName: 3.6.1_py27}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: false, versionName: 3.6.1_py36}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: false, versionName: 3.15.8_py36}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: false, versionName: 3.20.1_py39}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: false, versionName: 4.21.9_py39}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: true, versionName: 3.4.0_py27}
     - categories: devel, package management
       defaultVersionName: 0.3.5
       description: An extremely fast Python package and project manager, written in
@@ -6544,17 +6608,6 @@ software_modules:
           function when a specific event occurs on a file descriptor or after a timeout
           has been reached., markedDefault: false, versionName: 2.1.12}
     - categories: devel, language
-      defaultVersionName: 7.3.0
-      description: 'PHP (recursive acronym for PHP: Hypertext Preprocessor) is an
-        open source general-purpose scripting language that is especially suited for
-        web development.'
-      package: php
-      url: http://www.php.net
-      versions:
-      - {description: 'PHP (recursive acronym for PHP: Hypertext Preprocessor) is
-          an open source general-purpose scripting language that is especially suited
-          for web development.', markedDefault: false, versionName: 7.3.0}
-    - categories: devel, language
       defaultVersionName: 0.29.28_py39
       description: Cython is an optimising static compiler for both the Python programming
         language and the extended Cython programming language (based on Pyrex).
@@ -6573,6 +6626,28 @@ software_modules:
       - {description: Cython is an optimising static compiler for both the Python
           programming language and the extended Cython programming language (based
           on Pyrex)., markedDefault: false, versionName: 0.29.28_py39}
+    - categories: devel, build
+      defaultVersionName: 3.24.2
+      description: CMake is an extensible, open-source system that manages the build
+        process in an operating system and in a compiler-independent manner.
+      package: cmake
+      url: https://www.cmake.org
+      versions:
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.8.1}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.11.1}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.13.1}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.20.3}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.24.2}
     - categories: devel, language
       defaultVersionName: 2.7.13
       description: Python is an interpreted, interactive, object-oriented programming
@@ -6603,17 +6678,15 @@ software_modules:
       - {description: 'ANTLR (ANother Tool for Language Recognition) is a powerful
           parser generator for reading, processing, executing, or translating structured
           text or binary files.', markedDefault: false, versionName: 2.7.7}
-    - categories: devel, lib
-      defaultVersionName: 0.7.5
-      description: Library to manipulate tensors on the GPU.
-      package: libgpuarray
-      url: http://deeplearning.net/software/libgpuarray
+    - categories: devel, framework
+      defaultVersionName: 0.18.0_py39
+      description: Kedro is an open-source Python framework for creating reproducible,
+        maintainable and modular data science code.
+      package: py-kedro
+      url: https://kedro.readthedocs.io/
       versions:
-      - description: Library to manipulate tensors on the GPU.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.7.5
+      - {description: 'Kedro is an open-source Python framework for creating reproducible,
+          maintainable and modular data science code.', markedDefault: false, versionName: 0.18.0_py39}
     - categories: devel, data
       defaultVersionName: 4.3.1
       description: NetCDF is a set of software libraries and self-describing, machine-independent
@@ -6670,15 +6743,17 @@ software_modules:
       versions:
       - {description: Parsl is a flexible and scalable parallel programming library
           for Python., markedDefault: false, versionName: 1.2.0_py39}
-    - categories: devel, framework
-      defaultVersionName: 0.18.0_py39
-      description: Kedro is an open-source Python framework for creating reproducible,
-        maintainable and modular data science code.
-      package: py-kedro
-      url: https://kedro.readthedocs.io/
+    - categories: devel, lib
+      defaultVersionName: 0.7.5
+      description: Library to manipulate tensors on the GPU.
+      package: libgpuarray
+      url: http://deeplearning.net/software/libgpuarray
       versions:
-      - {description: 'Kedro is an open-source Python framework for creating reproducible,
-          maintainable and modular data science code.', markedDefault: false, versionName: 0.18.0_py39}
+      - description: Library to manipulate tensors on the GPU.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.7.5
     - categories: devel, profiling
       defaultVersionName: '2024.4'
       description: NVIDIA Nsight™ Systems is a system-wide performance analysis tool
@@ -6711,97 +6786,50 @@ software_modules:
       - {description: Node.js is a JavaScript runtime built on Chrome's V8 JavaScript
           engine. It provides the npm package manager., markedDefault: false, versionName: 20.18.0}
     - categories: devel, lib
-      defaultVersionName: 2.23.4
-      description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
-        collective communication routines, such as all-gather, reduce, broadcast,
-        etc., that have been optimized to achieve high bandwidth over PCIe.
-      package: nccl
-      url: https://github.com/NVIDIA/nccl
+      defaultVersionName: 1.79.0
+      description: Boost is a set of libraries for the C++ programming language that
+        provide support for tasks and structures such as linear algebra, pseudorandom
+        number generation, multithreading, image processing, regular expressions,
+        and unit testing.
+      package: boost
+      url: http://www.boost.org
       versions:
-      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
-          collective communication routines, such as all-gather, reduce, broadcast,
-          etc., that have been optimized to achieve high bandwidth over PCIe.
+      - {description: 'Boost is a set of libraries for the C++ programming language
+          that provide support for tasks and structures such as linear algebra, pseudorandom
+          number generation, multithreading, image processing, regular expressions,
+          and unit testing.', markedDefault: false, versionName: 1.64.0}
+      - description: Boost is a set of libraries for the C++ programming language
+          that provide support for tasks and structures such as linear algebra, pseudorandom
+          number generation, multithreading, image processing, regular expressions,
+          and unit testing.
         markedDefault: false
         properties:
-          arch: {gpu: 1}
-        versionName: 1.3.4
-      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
-          collective communication routines, such as all-gather, reduce, broadcast,
-          etc., that have been optimized to achieve high bandwidth over PCIe.
+          parallel: {mpi: 1}
+        versionName: 1.69.0
+      - description: Boost is a set of libraries for the C++ programming language
+          that provide support for tasks and structures such as linear algebra, pseudorandom
+          number generation, multithreading, image processing, regular expressions,
+          and unit testing.
         markedDefault: false
         properties:
-          arch: {gpu: 1}
-        versionName: 2.0.4
-      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
-          collective communication routines, such as all-gather, reduce, broadcast,
-          etc., that have been optimized to achieve high bandwidth over PCIe.
+          parallel: {mpi: 1}
+        versionName: 1.75.0
+      - description: Boost is a set of libraries for the C++ programming language
+          that provide support for tasks and structures such as linear algebra, pseudorandom
+          number generation, multithreading, image processing, regular expressions,
+          and unit testing.
         markedDefault: false
         properties:
-          arch: {gpu: 1}
-        versionName: 2.1.15
-      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
-          collective communication routines, such as all-gather, reduce, broadcast,
-          etc., that have been optimized to achieve high bandwidth over PCIe.
+          parallel: {mpi: 1}
+        versionName: 1.76.0
+      - description: Boost is a set of libraries for the C++ programming language
+          that provide support for tasks and structures such as linear algebra, pseudorandom
+          number generation, multithreading, image processing, regular expressions,
+          and unit testing.
         markedDefault: false
         properties:
-          arch: {gpu: 1}
-        versionName: 2.2.13
-      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
-          collective communication routines, such as all-gather, reduce, broadcast,
-          etc., that have been optimized to achieve high bandwidth over PCIe.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.3.7
-      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
-          collective communication routines, such as all-gather, reduce, broadcast,
-          etc., that have been optimized to achieve high bandwidth over PCIe.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.4.8
-      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
-          collective communication routines, such as all-gather, reduce, broadcast,
-          etc., that have been optimized to achieve high bandwidth over PCIe.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.5.6
-      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
-          collective communication routines, such as all-gather, reduce, broadcast,
-          etc., that have been optimized to achieve high bandwidth over PCIe.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.8.4
-      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
-          collective communication routines, such as all-gather, reduce, broadcast,
-          etc., that have been optimized to achieve high bandwidth over PCIe.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.11.4
-      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
-          collective communication routines, such as all-gather, reduce, broadcast,
-          etc., that have been optimized to achieve high bandwidth over PCIe.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.17.1
-      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
-          collective communication routines, such as all-gather, reduce, broadcast,
-          etc., that have been optimized to achieve high bandwidth over PCIe.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.20.5
-      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
-          collective communication routines, such as all-gather, reduce, broadcast,
-          etc., that have been optimized to achieve high bandwidth over PCIe.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.23.4
+          parallel: {mpi: 1}
+        versionName: 1.79.0
     - categories: devel, language
       defaultVersionName: '21.3'
       description: Erlang is a programming language used to build massively scalable
@@ -6812,15 +6840,6 @@ software_modules:
       - {description: Erlang is a programming language used to build massively scalable
           soft real-time systems with requirements on high availability., markedDefault: false,
         versionName: '21.3'}
-    - categories: devel, data
-      defaultVersionName: 4.0.1
-      description: Redis is an open source, in-memory data structure store, used as
-        a database, cache and message broker.
-      package: redis
-      url: https://redis.io
-      versions:
-      - {description: 'Redis is an open source, in-memory data structure store, used
-          as a database, cache and message broker.', markedDefault: false, versionName: 4.0.1}
     - categories: devel, mpi
       defaultVersionName: '2019'
       description: Intel® MPI Library is a multi-fabric message passing library that
@@ -6857,6 +6876,21 @@ software_modules:
           parallel: {mpi: 1}
         versionName: '2019'
     - categories: devel, lib
+      defaultVersionName: 12.12.1
+      description: Trilinos is a collection of open-source software libraries, called
+        packages, intended to be used as building blocks for the development of scientific
+        applications.
+      package: trilinos
+      url: https://trilinos.org/
+      versions:
+      - description: Trilinos is a collection of open-source software libraries, called
+          packages, intended to be used as building blocks for the development of
+          scientific applications.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 12.12.1
+    - categories: devel, lib
       defaultVersionName: 4.5.0
       description: libctl is a library for supporting flexible control files in scientific
         simulations.
@@ -6879,21 +6913,14 @@ software_modules:
         markedDefault: false, versionName: 1.3.1_py36}
       - {description: netcdf4-python is a Python interface to the netCDF C library.,
         markedDefault: true, versionName: 1.3.1_py27}
-    - categories: devel, lib
-      defaultVersionName: 12.12.1
-      description: Trilinos is a collection of open-source software libraries, called
-        packages, intended to be used as building blocks for the development of scientific
-        applications.
-      package: trilinos
-      url: https://trilinos.org/
+    - categories: devel, data analytics
+      defaultVersionName: 0.3_py27
+      description: 'Launching and controlling spark on HPC clusters '
+      package: py-sparkhpc
+      url: https://sparkhpc.readthedocs.io
       versions:
-      - description: Trilinos is a collection of open-source software libraries, called
-          packages, intended to be used as building blocks for the development of
-          scientific applications.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 12.12.1
+      - {description: 'Launching and controlling spark on HPC clusters ', markedDefault: false,
+        versionName: 0.3_py27}
     - categories: devel, lib
       defaultVersionName: 0.12.1
       description: Collection of C++ software abstractions that enable architecture
@@ -6938,14 +6965,20 @@ software_modules:
       url: https://github.com/rapidsai/ucx-py
       versions:
       - {description: Python bindinbgs for UCX., markedDefault: false, versionName: 0.24.0_py39}
-    - categories: devel, data analytics
-      defaultVersionName: 0.3_py27
-      description: 'Launching and controlling spark on HPC clusters '
-      package: py-sparkhpc
-      url: https://sparkhpc.readthedocs.io
+    - categories: devel, lib
+      defaultVersionName: 2.2.2
+      description: Copy-hiding array abstraction to automatically migrate data between
+        memory spaces.
+      package: chai
+      url: https://github.com/LLNL/CHAI
       versions:
-      - {description: 'Launching and controlling spark on HPC clusters ', markedDefault: false,
-        versionName: 0.3_py27}
+      - description: Copy-hiding array abstraction to automatically migrate data between
+          memory spaces.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 2.2.2
     - categories: devel, language
       defaultVersionName: 5.4.1_py27
       description: IPython is a command shell for interactive computing in multiple
@@ -7022,20 +7055,16 @@ software_modules:
       versions:
       - {description: Ninja is a small build system with a focus on speed., markedDefault: false,
         versionName: 1.9.0}
-    - categories: devel, lib
-      defaultVersionName: 2.2.2
-      description: Copy-hiding array abstraction to automatically migrate data between
-        memory spaces.
-      package: chai
-      url: https://github.com/LLNL/CHAI
+    - categories: devel, build
+      defaultVersionName: 1.8.0
+      description: Bazelisk is a wrapper for Bazel written in Go.
+      package: bazelisk
+      url: https://github.com/bazelbuild/bazelisk
       versions:
-      - description: Copy-hiding array abstraction to automatically migrate data between
-          memory spaces.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 2.2.2
+      - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
+        markedDefault: false, versionName: 1.3.0}
+      - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
+        markedDefault: false, versionName: 1.8.0}
     - categories: devel, language
       defaultVersionName: 1.10.5
       description: Julia is a high-level, high-performance dynamic programming language
@@ -7072,16 +7101,6 @@ software_modules:
       - {description: 'NetCDF is a set of software libraries and self-describing,
           machine-independent data formats that support the creation, access, and
           sharing of array-oriented scientific data.', markedDefault: false, versionName: 4.8.1}
-    - categories: devel, build
-      defaultVersionName: 1.8.0
-      description: Bazelisk is a wrapper for Bazel written in Go.
-      package: bazelisk
-      url: https://github.com/bazelbuild/bazelisk
-      versions:
-      - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
-        markedDefault: false, versionName: 1.3.0}
-      - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
-        markedDefault: false, versionName: 1.8.0}
     - categories: devel, compiler
       defaultVersionName: 7.0.0
       description: The LLVM Project is a collection of modular and reusable compiler
@@ -7107,6 +7126,18 @@ software_modules:
       - {description: 'The LLVM Project is a collection of modular and reusable compiler
           and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
         markedDefault: true, versionName: 7.0.0}
+    - categories: devel, language
+      defaultVersionName: 5.3.4
+      description: Lua is a powerful, efficient, lightweight, embeddable scripting
+        language. It supports procedural programming, object-oriented programming,
+        functional programming, data-driven programming, and data description.
+      package: lua
+      url: https://www.lua.org
+      versions:
+      - {description: 'Lua is a powerful, efficient, lightweight, embeddable scripting
+          language. It supports procedural programming, object-oriented programming,
+          functional programming, data-driven programming, and data description.',
+        markedDefault: false, versionName: 5.3.4}
     - categories: devel, networking
       defaultVersionName: 1.3.0
       description: UCC is a collective communication operations API and library that
@@ -7123,17 +7154,22 @@ software_modules:
           arch: {gpu: 1}
         versionName: 1.3.0
     - categories: devel, language
-      defaultVersionName: 5.3.4
-      description: Lua is a powerful, efficient, lightweight, embeddable scripting
-        language. It supports procedural programming, object-oriented programming,
-        functional programming, data-driven programming, and data description.
-      package: lua
-      url: https://www.lua.org
+      defaultVersionName: 3.1.2
+      description: A dynamic, open source programming language with a focus on simplicity
+        and productivity. It has an elegant syntax that is natural to read and easy
+        to write.
+      package: ruby
+      url: https://www.ruby-lang.org
       versions:
-      - {description: 'Lua is a powerful, efficient, lightweight, embeddable scripting
-          language. It supports procedural programming, object-oriented programming,
-          functional programming, data-driven programming, and data description.',
-        markedDefault: false, versionName: 5.3.4}
+      - {description: 'A dynamic, open source programming language with a focus on
+          simplicity and productivity. It has an elegant syntax that is natural to
+          read and easy to write.', markedDefault: false, versionName: 2.4.1}
+      - {description: 'A dynamic, open source programming language with a focus on
+          simplicity and productivity. It has an elegant syntax that is natural to
+          read and easy to write.', markedDefault: false, versionName: 2.7.1}
+      - {description: 'A dynamic, open source programming language with a focus on
+          simplicity and productivity. It has an elegant syntax that is natural to
+          read and easy to write.', markedDefault: false, versionName: 3.1.2}
     - categories: devel, language
       defaultVersionName: '20180301'
       description: Manticore is a high-level parallel programming language aimed at
@@ -7194,16 +7230,19 @@ software_modules:
       - {description: 'Eigen is a C++ template library for linear algebra: matrices,
           vectors, numerical solvers, and related algorithms.', markedDefault: false,
         versionName: 3.4.0}
-    - categories: devel, data
-      defaultVersionName: 1.12.1
-      description: h5utils is a set of utilities for visualization and conversion
-        of scientific data in the free, portable HDF5 format.
-      package: h5utils
-      url: http://ab-initio.mit.edu/wiki/index.php/H5utils
+    - categories: devel, language
+      defaultVersionName: 5.36.1
+      description: Perl 5 is a highly capable, feature-rich programming language with
+        over 29 years of development.
+      package: perl
+      url: https://www.perl.org
       versions:
-      - {description: 'h5utils is a set of utilities for visualization and conversion
-          of scientific data in the free, portable HDF5 format.', markedDefault: false,
-        versionName: 1.12.1}
+      - {description: 'Perl 5 is a highly capable, feature-rich programming language
+          with over 29 years of development.', help: 'https://www.sherlock.stanford.edu/docs/software/using/perl',
+        markedDefault: false, versionName: 5.26.0}
+      - {description: 'Perl 5 is a highly capable, feature-rich programming language
+          with over 29 years of development.', help: 'https://www.sherlock.stanford.edu/docs/software/using/perl',
+        markedDefault: false, versionName: 5.36.1}
     - categories: devel, mpi
       defaultVersionName: 3.1.5_py312
       description: MPI for Python provides Python bindings for the Message Passing
@@ -7287,23 +7326,6 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 4.9.0
-    - categories: devel, language
-      defaultVersionName: 3.1.2
-      description: A dynamic, open source programming language with a focus on simplicity
-        and productivity. It has an elegant syntax that is natural to read and easy
-        to write.
-      package: ruby
-      url: https://www.ruby-lang.org
-      versions:
-      - {description: 'A dynamic, open source programming language with a focus on
-          simplicity and productivity. It has an elegant syntax that is natural to
-          read and easy to write.', markedDefault: false, versionName: 2.4.1}
-      - {description: 'A dynamic, open source programming language with a focus on
-          simplicity and productivity. It has an elegant syntax that is natural to
-          read and easy to write.', markedDefault: false, versionName: 2.7.1}
-      - {description: 'A dynamic, open source programming language with a focus on
-          simplicity and productivity. It has an elegant syntax that is natural to
-          read and easy to write.', markedDefault: false, versionName: 3.1.2}
     - categories: devel, lib
       defaultVersionName: 23.04.00_py39
       description: Python interface for RMM
@@ -7315,39 +7337,6 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 23.04.00_py39
-    - categories: devel, data analytics
-      defaultVersionName: 3.2.1_py312
-      description: 'Launching and controlling spark on HPC clusters '
-      package: py-pyspark
-      url: https://sparkhpc.readthedocs.io
-      versions:
-      - {description: 'Launching and controlling spark on HPC clusters ', markedDefault: false,
-        versionName: 3.2.1_py39}
-      - {description: 'Launching and controlling spark on HPC clusters ', markedDefault: false,
-        versionName: 3.2.1_py312}
-    - categories: devel, lib
-      defaultVersionName: 0.35.0_py27
-      description: Numba is a compiler for Python array and numerical functions that
-        gives you the power to speed up your applications with high performance functions
-        written directly in Python..
-      package: py-numba
-      url: http://numba.pydata.org
-      versions:
-      - {description: Numba is a compiler for Python array and numerical functions
-          that gives you the power to speed up your applications with high performance
-          functions written directly in Python.., markedDefault: false, versionName: 0.35.0_py36}
-      - {description: Numba is a compiler for Python array and numerical functions
-          that gives you the power to speed up your applications with high performance
-          functions written directly in Python.., markedDefault: false, versionName: 0.53.1_py36}
-      - {description: Numba is a compiler for Python array and numerical functions
-          that gives you the power to speed up your applications with high performance
-          functions written directly in Python.., markedDefault: false, versionName: 0.54.1_py39}
-      - {description: Numba is a compiler for Python array and numerical functions
-          that gives you the power to speed up your applications with high performance
-          functions written directly in Python.., markedDefault: false, versionName: 0.60.0_py312}
-      - {description: Numba is a compiler for Python array and numerical functions
-          that gives you the power to speed up your applications with high performance
-          functions written directly in Python.., markedDefault: true, versionName: 0.35.0_py27}
     - categories: devel, language
       defaultVersionName: 1.81.0
       description: A language empowering everyone to build reliable and efficient
@@ -7373,6 +7362,48 @@ software_modules:
       versions:
       - {description: Hiredis is a minimalistic C client library for the Redis database.,
         markedDefault: false, versionName: 0.13.3}
+    - categories: devel, lib
+      defaultVersionName: 0.35.0_py27
+      description: Numba is a compiler for Python array and numerical functions that
+        gives you the power to speed up your applications with high performance functions
+        written directly in Python..
+      package: py-numba
+      url: http://numba.pydata.org
+      versions:
+      - {description: Numba is a compiler for Python array and numerical functions
+          that gives you the power to speed up your applications with high performance
+          functions written directly in Python.., markedDefault: false, versionName: 0.35.0_py36}
+      - {description: Numba is a compiler for Python array and numerical functions
+          that gives you the power to speed up your applications with high performance
+          functions written directly in Python.., markedDefault: false, versionName: 0.53.1_py36}
+      - {description: Numba is a compiler for Python array and numerical functions
+          that gives you the power to speed up your applications with high performance
+          functions written directly in Python.., markedDefault: false, versionName: 0.54.1_py39}
+      - {description: Numba is a compiler for Python array and numerical functions
+          that gives you the power to speed up your applications with high performance
+          functions written directly in Python.., markedDefault: false, versionName: 0.60.0_py312}
+      - {description: Numba is a compiler for Python array and numerical functions
+          that gives you the power to speed up your applications with high performance
+          functions written directly in Python.., markedDefault: true, versionName: 0.35.0_py27}
+    - categories: devel, data analytics
+      defaultVersionName: 3.2.1_py312
+      description: 'Launching and controlling spark on HPC clusters '
+      package: py-pyspark
+      url: https://sparkhpc.readthedocs.io
+      versions:
+      - {description: 'Launching and controlling spark on HPC clusters ', markedDefault: false,
+        versionName: 3.2.1_py39}
+      - {description: 'Launching and controlling spark on HPC clusters ', markedDefault: false,
+        versionName: 3.2.1_py312}
+    - categories: devel, data
+      defaultVersionName: 1.6.3_py312
+      description: Official API for https://www.kaggle.com, accessible using a command
+        line tool implemented in Python 3.
+      package: py-kaggle
+      url: https://github.com/Kaggle/kaggle-api
+      versions:
+      - {description: 'Official API for https://www.kaggle.com, accessible using a
+          command line tool implemented in Python 3.', markedDefault: false, versionName: 1.6.3_py312}
     - categories: devel, framework
       defaultVersionName: 5.8.2
       description: Global Arrays (GA) is a Partitioned Global Address Space (PGAS)
@@ -8035,19 +8066,15 @@ software_modules:
       - {description: 'Jupyter is a browser-based interactive notebook for programming,
           mathematics, and data science. It supports a number of languages via plugins.',
         markedDefault: true, versionName: 1.0.0_py27}
-    - categories: devel, language
-      defaultVersionName: 5.36.1
-      description: Perl 5 is a highly capable, feature-rich programming language with
-        over 29 years of development.
-      package: perl
-      url: https://www.perl.org
+    - categories: devel, data
+      defaultVersionName: 4.0.1
+      description: Redis is an open source, in-memory data structure store, used as
+        a database, cache and message broker.
+      package: redis
+      url: https://redis.io
       versions:
-      - {description: 'Perl 5 is a highly capable, feature-rich programming language
-          with over 29 years of development.', help: 'https://www.sherlock.stanford.edu/docs/software/using/perl',
-        markedDefault: false, versionName: 5.26.0}
-      - {description: 'Perl 5 is a highly capable, feature-rich programming language
-          with over 29 years of development.', help: 'https://www.sherlock.stanford.edu/docs/software/using/perl',
-        markedDefault: false, versionName: 5.36.1}
+      - {description: 'Redis is an open source, in-memory data structure store, used
+          as a database, cache and message broker.', markedDefault: false, versionName: 4.0.1}
     - categories: devel, debug
       defaultVersionName: 3.14.0
       description: Valgrind is an instrumentation framework for building dynamic analysis
@@ -8178,17 +8205,24 @@ software_modules:
           language with type inference and lazy evaluation.', markedDefault: false,
         versionName: 8.6.5}
     - categories: devel, lib
-      defaultVersionName: 0.5.1
-      description: Simplified Data Exchange for HPC Simulations.
-      package: conduit
-      url: https://software.llnl.gov/conduit/
+      defaultVersionName: 2.7.1_py27
+      description: The h5py package is a Pythonic interface to the HDF5 binary data
+        format.
+      package: py-h5py
+      url: http://www.h5py.org
       versions:
-      - description: Simplified Data Exchange for HPC Simulations.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 0.5.1
+      - {description: The h5py package is a Pythonic interface to the HDF5 binary
+          data format., markedDefault: false, versionName: 2.8.0_py36}
+      - {description: The h5py package is a Pythonic interface to the HDF5 binary
+          data format., markedDefault: false, versionName: 2.10.0_py36}
+      - {description: The h5py package is a Pythonic interface to the HDF5 binary
+          data format., markedDefault: false, versionName: 3.1.0_py36}
+      - {description: The h5py package is a Pythonic interface to the HDF5 binary
+          data format., markedDefault: false, versionName: 3.7.0_py39}
+      - {description: The h5py package is a Pythonic interface to the HDF5 binary
+          data format., markedDefault: false, versionName: 3.10.0_py312}
+      - {description: The h5py package is a Pythonic interface to the HDF5 binary
+          data format., markedDefault: true, versionName: 2.7.1_py27}
     - categories: devel, lib
       defaultVersionName: 0.24.0_py312
       description: scikit-image is a collection of algorithms for image processing.
@@ -8222,35 +8256,27 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 23.04.00
-    - categories: devel, runtime
-      defaultVersionName: 1.3.2
-      description: StarPU is a unified runtime system that offers support for heterogeneous
-        multicore architectures
-      package: starpu
-      url: https://starpu.gitlabpages.inria.fr/
+    - categories: devel, language
+      defaultVersionName: 7.3.0
+      description: 'PHP (recursive acronym for PHP: Hypertext Preprocessor) is an
+        open source general-purpose scripting language that is especially suited for
+        web development.'
+      package: php
+      url: http://www.php.net
       versions:
-      - description: StarPU is a unified runtime system that offers support for heterogeneous
-          multicore architectures
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 1.3.2
+      - {description: 'PHP (recursive acronym for PHP: Hypertext Preprocessor) is
+          an open source general-purpose scripting language that is especially suited
+          for web development.', markedDefault: false, versionName: 7.3.0}
     - categories: devel, data
-      defaultVersionName: 3.4.0
-      description: Protocol Buffers (a.k.a., protobuf) are Google's language-neutral,
-        platform-neutral, extensible mechanism for serializing structured data.
-      package: protobuf
-      url: https://developers.google.com/protocol-buffers/
+      defaultVersionName: 1.12.1
+      description: h5utils is a set of utilities for visualization and conversion
+        of scientific data in the free, portable HDF5 format.
+      package: h5utils
+      url: http://ab-initio.mit.edu/wiki/index.php/H5utils
       versions:
-      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
-          platform-neutral, extensible mechanism for serializing structured data.',
-        markedDefault: false, versionName: 3.20.0}
-      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
-          platform-neutral, extensible mechanism for serializing structured data.',
-        markedDefault: false, versionName: '21.9'}
-      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
-          platform-neutral, extensible mechanism for serializing structured data.',
-        markedDefault: true, versionName: 3.4.0}
+      - {description: 'h5utils is a set of utilities for visualization and conversion
+          of scientific data in the free, portable HDF5 format.', markedDefault: false,
+        versionName: 1.12.1}
     - categories: devel, package management
       defaultVersionName: 0.28.1
       description: Pixi is a package management tool for developers. It allows the
@@ -8289,28 +8315,14 @@ software_modules:
       - {description: 'Intel Fortran Compiler, also known as ifort, is a group of
           Fortran compilers from Intel', family: compiler_f, markedDefault: false,
         versionName: '2019'}
-    - categories: devel, build
-      defaultVersionName: 3.24.2
-      description: CMake is an extensible, open-source system that manages the build
-        process in an operating system and in a compiler-independent manner.
-      package: cmake
-      url: https://www.cmake.org
+    - categories: devel, lib
+      defaultVersionName: 3.7.13
+      description: RabbitMQ is an open-source message broker.
+      package: rabbitmq
+      url: http://rabbitmq.com
       versions:
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.8.1}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.11.1}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.13.1}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.20.3}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.24.2}
+      - {description: RabbitMQ is an open-source message broker., markedDefault: false,
+        versionName: 3.7.13}
     - categories: devel, IDE
       defaultVersionName: 4.93.1
       description: Run VS Code on any machine anywhere and access it in the browser.
@@ -8321,47 +8333,6 @@ software_modules:
         markedDefault: false, versionName: 4.16.1}
       - {description: Run VS Code on any machine anywhere and access it in the browser.,
         markedDefault: false, versionName: 4.93.1}
-    - categories: devel, compiler
-      defaultVersionName: '21.5'
-      description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
-        Fortran compilers.
-      package: nvhpc
-      url: https://developer.nvidia.com/hpc-sdk
-      versions:
-      - description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
-          Fortran compilers.
-        family: mpi
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '21.7'
-      - description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
-          Fortran compilers.
-        family: mpi
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '22.3'
-      - description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
-          Fortran compilers.
-        family: mpi
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '23.3'
-      - description: NVIDIA HPC Software Development Kit (SDK) including C, C++, and
-          Fortran compilers.
-        family: mpi
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '24.7'
-      - {description: 'NVIDIA HPC Software Development Kit (SDK) including C, C++,
-          and Fortran compilers.', family: compiler_f, markedDefault: true, versionName: '21.5'}
     - categories: devel, engine
       defaultVersionName: 8.4.371.22
       description: V8 is Google’s open source high-performance JavaScript and WebAssembly
@@ -8371,51 +8342,114 @@ software_modules:
       versions:
       - {description: 'V8 is Google’s open source high-performance JavaScript and
           WebAssembly engine, written in C++.', markedDefault: false, versionName: 8.4.371.22}
-    - categories: devel, lib
-      defaultVersionName: 1.79.0
-      description: Boost is a set of libraries for the C++ programming language that
-        provide support for tasks and structures such as linear algebra, pseudorandom
-        number generation, multithreading, image processing, regular expressions,
-        and unit testing.
-      package: boost
-      url: http://www.boost.org
+    - categories: devel, data
+      defaultVersionName: 3.4.0
+      description: Protocol Buffers (a.k.a., protobuf) are Google's language-neutral,
+        platform-neutral, extensible mechanism for serializing structured data.
+      package: protobuf
+      url: https://developers.google.com/protocol-buffers/
       versions:
-      - {description: 'Boost is a set of libraries for the C++ programming language
-          that provide support for tasks and structures such as linear algebra, pseudorandom
-          number generation, multithreading, image processing, regular expressions,
-          and unit testing.', markedDefault: false, versionName: 1.64.0}
-      - description: Boost is a set of libraries for the C++ programming language
-          that provide support for tasks and structures such as linear algebra, pseudorandom
-          number generation, multithreading, image processing, regular expressions,
-          and unit testing.
+      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
+          platform-neutral, extensible mechanism for serializing structured data.',
+        markedDefault: false, versionName: 3.20.0}
+      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
+          platform-neutral, extensible mechanism for serializing structured data.',
+        markedDefault: false, versionName: '21.9'}
+      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
+          platform-neutral, extensible mechanism for serializing structured data.',
+        markedDefault: true, versionName: 3.4.0}
+    - categories: devel, lib
+      defaultVersionName: 2.23.4
+      description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
+        collective communication routines, such as all-gather, reduce, broadcast,
+        etc., that have been optimized to achieve high bandwidth over PCIe.
+      package: nccl
+      url: https://github.com/NVIDIA/nccl
+      versions:
+      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
+          collective communication routines, such as all-gather, reduce, broadcast,
+          etc., that have been optimized to achieve high bandwidth over PCIe.
         markedDefault: false
         properties:
-          parallel: {mpi: 1}
-        versionName: 1.69.0
-      - description: Boost is a set of libraries for the C++ programming language
-          that provide support for tasks and structures such as linear algebra, pseudorandom
-          number generation, multithreading, image processing, regular expressions,
-          and unit testing.
+          arch: {gpu: 1}
+        versionName: 1.3.4
+      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
+          collective communication routines, such as all-gather, reduce, broadcast,
+          etc., that have been optimized to achieve high bandwidth over PCIe.
         markedDefault: false
         properties:
-          parallel: {mpi: 1}
-        versionName: 1.75.0
-      - description: Boost is a set of libraries for the C++ programming language
-          that provide support for tasks and structures such as linear algebra, pseudorandom
-          number generation, multithreading, image processing, regular expressions,
-          and unit testing.
+          arch: {gpu: 1}
+        versionName: 2.0.4
+      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
+          collective communication routines, such as all-gather, reduce, broadcast,
+          etc., that have been optimized to achieve high bandwidth over PCIe.
         markedDefault: false
         properties:
-          parallel: {mpi: 1}
-        versionName: 1.76.0
-      - description: Boost is a set of libraries for the C++ programming language
-          that provide support for tasks and structures such as linear algebra, pseudorandom
-          number generation, multithreading, image processing, regular expressions,
-          and unit testing.
+          arch: {gpu: 1}
+        versionName: 2.1.15
+      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
+          collective communication routines, such as all-gather, reduce, broadcast,
+          etc., that have been optimized to achieve high bandwidth over PCIe.
         markedDefault: false
         properties:
-          parallel: {mpi: 1}
-        versionName: 1.79.0
+          arch: {gpu: 1}
+        versionName: 2.2.13
+      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
+          collective communication routines, such as all-gather, reduce, broadcast,
+          etc., that have been optimized to achieve high bandwidth over PCIe.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.3.7
+      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
+          collective communication routines, such as all-gather, reduce, broadcast,
+          etc., that have been optimized to achieve high bandwidth over PCIe.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.4.8
+      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
+          collective communication routines, such as all-gather, reduce, broadcast,
+          etc., that have been optimized to achieve high bandwidth over PCIe.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.5.6
+      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
+          collective communication routines, such as all-gather, reduce, broadcast,
+          etc., that have been optimized to achieve high bandwidth over PCIe.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.8.4
+      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
+          collective communication routines, such as all-gather, reduce, broadcast,
+          etc., that have been optimized to achieve high bandwidth over PCIe.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.11.4
+      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
+          collective communication routines, such as all-gather, reduce, broadcast,
+          etc., that have been optimized to achieve high bandwidth over PCIe.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.17.1
+      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
+          collective communication routines, such as all-gather, reduce, broadcast,
+          etc., that have been optimized to achieve high bandwidth over PCIe.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.20.5
+      - description: NCCL (pronounced 'Nickel') is a stand-alone library of standard
+          collective communication routines, such as all-gather, reduce, broadcast,
+          etc., that have been optimized to achieve high bandwidth over PCIe.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.23.4
     - categories: devel, compiler
       defaultVersionName: '110.81'
       description: Standard ML of New Jersey (abbreviated SML/NJ) is a compiler for
@@ -8425,25 +8459,17 @@ software_modules:
       versions:
       - {description: Standard ML of New Jersey (abbreviated SML/NJ) is a compiler
           for the Standard ML '97 programming language., markedDefault: false, versionName: '110.81'}
-    - categories: devel, data
-      defaultVersionName: 3.4.0_py27
-      description: Python bindings for Google's Protocol Buffers data interchange
-        format.
-      package: py-protobuf
-      url: https://developers.google.com/protocol-buffers
+    - categories: devel, runtime
+      defaultVersionName: 1.3.2
+      description: StarPU is a unified runtime system that offers support for heterogeneous
+        multicore architectures
+      package: starpu
+      url: https://starpu.gitlabpages.inria.fr/
       versions:
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: false, versionName: 3.4.0_py36}
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: false, versionName: 3.6.1_py27}
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: false, versionName: 3.6.1_py36}
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: false, versionName: 3.15.8_py36}
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: false, versionName: 3.20.1_py39}
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: false, versionName: 4.21.9_py39}
-      - {description: Python bindings for Google's Protocol Buffers data interchange
-          format., markedDefault: true, versionName: 3.4.0_py27}
+      - description: StarPU is a unified runtime system that offers support for heterogeneous
+          multicore architectures
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.3.2
 
