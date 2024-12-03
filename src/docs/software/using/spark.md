@@ -138,7 +138,7 @@ stop-master.sh
 
 [url_spark]:        //spark.apache.org/
 
-[url_compute_node]: /docs/glossary/#node
+[url_compute_node]: /docs/glossary.md#node
 
 
 --8<--- "includes/_acronyms.md"

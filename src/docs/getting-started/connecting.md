@@ -246,19 +246,21 @@ section][url_submit].
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_prereq]:       /docs/getting-started/#prerequisites
-[url_account]:      /docs/getting-started/#how-to-request-an-account
-[url_avoid_duo]:    /docs/advanced-topics/connection#avoiding-multiple-duo-prompts
-[url_other_auth]:   /docs/advanced-topics/connection#authentication-methods
 [url_suaccounts]:   //accounts.stanford.edu/
 [url_sunet]:        //uit.stanford.edu/service/accounts/sunetids
 [url_minsec]:       //uit.stanford.edu/guide/securitystandards
 [url_twostep]:      //uit.stanford.edu/service/webauth/twostep
-[url_login]:        /docs/glossary/#login-nodes
-[url_submit]:       /docs/getting-started/submitting
-[url_contact]:      mailto:{{ support_email }}
-[url_sshfs]:        /docs/storage/data-transfer#sshfs
 [url_vpn]:          //uit.stanford.edu/service/vpn
+
+[url_contact]:      mailto:{{ support_email }}
+
+[url_prereq]:       index.md#prerequisites
+[url_account]:      index.md#how-to-request-an-account
+[url_submit]:       submitting.md
+[url_avoid_duo]:    /docs/advanced-topics/connection.md#avoiding-multiple-duo-prompts
+[url_other_auth]:   /docs/advanced-topics/connection.md#authentication-methods
+[url_sshfs]:        /docs/storage/data-transfer.md#sshfs
+[url_login]:        /docs/glossary.md#login-nodes
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

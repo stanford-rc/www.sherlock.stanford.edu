@@ -347,26 +347,29 @@ $ pip uninstall <package_name>
 $ pip uninstall -r requirements.txt
 ```
 
+### Virtual environments
+
+--8<--- "includes/_wip.md"
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_python]:         //www.python.org/
-[url_python_docs]:    //www.python.org/doc
-[url_pip]:            //pip.pypa.io/en/stable/
-[url_pip_docs]:       //pip.pypa.io/en/stable/user_guide/
-[url_pypi]:           //pypi.python.org/pypi
-[url_pep394]:         //www.python.org/dev/peps/pep-0394
+[url_python]:           //www.python.org/
+[url_python_docs]:      //www.python.org/doc
+[url_pip]:              //pip.pypa.io/en/stable/
+[url_pip_docs]:         //pip.pypa.io/en/stable/user_guide/
+[url_pypi]:             //pypi.python.org/pypi
+[url_pep394]:           //www.python.org/dev/peps/pep-0394
 
-[url_numpy]:          //www.numpy.org/
-[url_scipy]:          //www.scipy.org/
-[url_httpie]:         //httpie.org/
+[url_numpy]:            //www.numpy.org/
+[url_scipy]:            //www.scipy.org/
+[url_httpie]:           //httpie.org/
 
-[url_modules]:        /docs/software/list
-[url_module_python]:  /docs/software/list/#python
-[url_module_numpy]:   /docs/software/list/#py-numpy
-[url_module_scipy]:   /docs/software/list/#py-scipy
-[url_module_tensorflow]:  /docs/software/list/#py-tensorflow
+[url_modules]:          /docs/software/list.md
+[url_module_python]:    /docs/software/list.md#python
+[url_module_numpy]:     /docs/software/list.md#py-numpy
+[url_module_scipy]:     /docs/software/list.md#py-scipy
+[url_module_tensorflow]:/docs/software/list.md#py-tensorflow
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

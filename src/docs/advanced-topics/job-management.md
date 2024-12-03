@@ -20,10 +20,10 @@ jobs a single user (and a single group) can have in queue at any given time.
 This helps ensuring that the scheduler is able to continue operating in an
 optimal fashion, without being overloaded by a single user or group.
 
-To see the job submission limits on Sherlock run the `sh_part` command.  
+To see the job submission limits on Sherlock run the `sh_part` command.
 
 To run longer than 2 days on the normal partition you will need to add the "long" QOS to your submission scripts.
-For example to run for exactly 3 days add the following two lines to your sbatch script:   
+For example to run for exactly 3 days add the following two lines to your sbatch script:
 
 ``` shell
 #SBATCH --time=3-00:00:00
@@ -85,5 +85,4 @@ amount of work to the scheduler, while staying under the submission limits.
 
 --8<--- "includes/_acronyms.md"
 
-[url_owners]:  /docs/concepts/#investing-in-sherlock
-
+[url_owners]:  ../concepts.md#investing-in-sherlock

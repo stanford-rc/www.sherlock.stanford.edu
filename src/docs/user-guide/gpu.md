@@ -7,7 +7,7 @@ access to them may require some wait time in queue.
 !!! info "Getting your own GPU nodes"
 
     If you need frequent access to GPU nodes, we recommend considering
-    [becoming an owner on Sherlock][url_condo], so you can have immediate
+    [becoming an owner on Sherlock][url_investing], so you can have immediate
     access to your GPU nodes when you need them.
 
 
@@ -342,10 +342,6 @@ user's GPU code is running.
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_gpu]:          //blogs.nvidia.com/blog/2009/12/16/whats-the-difference-between-a-cpu-and-a-gpu/
-[url_condo]:        /docs/concepts/#the-condominium-model
-[url_modules]:      /docs/software/modules
-[url_ondemand]:     /docs/user-guide/ondemand/
-[url_node_features]:/docs/advanced-topics/node-features/
 [url_slurm_sbatch]: //slurm.schedmd.com/sbatch.html#OPT_constraint
 [url_slurm_srun]:   //slurm.schedmd.com/srun.html#OPT_gpus
 [url_gpu_cmodes]:   //docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-modes
@@ -353,6 +349,10 @@ user's GPU code is running.
 [url_nvtop]:        //github.com/Syllo/nvtop
 [url_htop]:         //hisham.hm/htop/
 
+[url_investing]:    /docs/concepts.md#investing-in-sherlock
+[url_modules]:      /docs/software/modules.md
+[url_ondemand]:     /docs/user-guide/ondemand.md
+[url_node_features]:/docs/advanced-topics/node-features.md
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

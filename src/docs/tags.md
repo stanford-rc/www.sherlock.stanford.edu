@@ -2,4 +2,4 @@
 
 Here is a list of documentation tags:
 
-[TAGS]
+<!-- material/tags -->

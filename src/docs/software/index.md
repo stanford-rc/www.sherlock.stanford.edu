@@ -17,11 +17,11 @@ Software Licensing office][url_software_lic].
 
 !!! warning "Installation requests"
 
-    The SRCC team installs, for general use, a set of libraries, tools and
-    software applications that are commonly used across many research groups.
-    However, our staff resources are quite limited and don't allow us to build
-    nor maintain custom software applications that may be requested by or be of
-    use to a small number of users.
+    The Stanford Research Computing team installs, for general use, a set of
+    libraries, tools and software applications that are commonly used across
+    many research groups.  However, our staff resources are quite limited and
+    don't allow us to build nor maintain custom software applications that may
+    be requested by or be of use to a small number of users.
 
 We strongly encourage users to build custom and field- or domain-specific
 software themselves, and install it in their own [personal or group shared
@@ -36,7 +36,7 @@ the use of their own custom software installations.
 !!! tip "Installing your own software"
 
     For more information about building your own software on Sherlock, please
-    see the [Software Installation page](/docs/software/install).
+    see the [Software Installation page][url_install]
 
 If the software you need is not in the [list of available software][url_list],
 and you have trouble installing it on your own, please [contact
@@ -66,13 +66,14 @@ group on Sherlock, please [let us know][url_contact], and we'll get in touch.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_contact]:        mailto:{{ support_email }}
-[url_software_lic]:   //uit.stanford.edu/service/softwarelic
-[url_storage]:        /docs/storage
-[url_list]:           /docs/software/list
-[url_modules]:        /docs/software/modules
-[url_modules_custom]: /docs/software/modules#custom-modules
-[url_modules_contrib]: /docs/software/modules#contributed-software
+[url_contact]:         mailto:{{ support_email }}
+[url_software_lic]:    //uit.stanford.edu/service/softwarelic
+[url_storage]:         ../storage/index.md
+[url_list]:            list.md
+[url_install]:         install.md
+[url_modules]:         modules.md
+[url_modules_custom]:  modules.md#custom-modules
+[url_modules_contrib]: modules.md#contributed-software
 
 
 [comment]: #  (footnotes -----------------------------------------------------)

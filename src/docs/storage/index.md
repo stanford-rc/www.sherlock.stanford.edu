@@ -1,7 +1,7 @@
 # Storage <small>on Sherlock</small>
 
 Sherlock provides access to several file systems, each with distinct storage
-characteristics. Each user and PI group get access to a set of pre-defined
+characteristics. Each user and PI group get access to a set of predefined
 directories in these file systems to store their data.
 
 !!! danger "Sherlock is a compute cluster, not a storage system"
@@ -12,9 +12,9 @@ directories in these file systems to store their data.
     actively being computed on with Sherlock, and should not be used as a
     target for backups from other systems.
 
-    If you're looking for a long-term storage solution for research data, SRCC
-    offers the [Oak storage system][url_oak], which is specifically intended
-    for this usage.
+    If you're looking for a long-term storage solution for research data,
+    Stanford Research Computing offers the [Oak storage system][url_oak], which
+    is specifically intended for this usage.
 
 Those file systems are shared with other users, and are subject to quota limits
 and for some of them, purge policies (time-residency limits).
@@ -26,7 +26,7 @@ and for some of them, purge policies (time-residency limits).
 
 | Name                     | Type                 | Backups / Snapshots | Performance | Purpose | Cost |
 | ------------------------ |--------------------- |------------------ | ----------- | ------- | ---- |
-|`$HOME`, `$GROUP_HOME`    | [NFS][url_NFS]       | :fontawesome-solid-check:{: .chk_yes :} / :fontawesome-solid-check:{: .chk_yes :} | low | small, important files (source code, executables, configuration files...) | free |
+|`$HOME`, `$GROUP_HOME`    | [NFS][url_NFS]       | :fontawesome-solid-check:{: .chk_yes :} / :fontawesome-solid-check:{: .chk_yes :} | low | small, important files (source code, executable files, configuration files...) | free |
 |`$SCRATCH`, `$GROUP_SCRATCH` | [Lustre][url_lustre] | :fontawesome-solid-xmark:{: .chk_no :} / :fontawesome-solid-xmark:{: .chk_no :} | high bandwidth | large, temporary files (checkpoints, raw application output...) | free |
 |`$L_SCRATCH`              | local SSD    | :fontawesome-solid-xmark:{: .chk_no :} / :fontawesome-solid-xmark:{: .chk_no :} | low latency, high IOPS | job specific output requiring high IOPS | free |
 |`$OAK`                    | [Lustre][url_lustre] | option / :fontawesome-solid-xmark:{: .chk_no :} | moderate | long term storage of research data | volume-based[^oak_sd] |
@@ -86,12 +86,12 @@ Retention types:
 * **job lifetime**: files are only kept for the duration of the job and are
   automatically purged when the job ends.
 
-!!! info "Global failsafe user and quota groups on `/scratch`"
+!!! info "Global fail-safe user and quota groups on `/scratch`"
 
     To prevent potential issues which would result in the file system filling up
     completely and making it unusable for everyone, additional user and
     group-level quotas are in place on the `/scratch` file system, as a
-    failsafe:
+    fail-safe:
 
     * a user will not be able to use more than 250 TB (50M inodes) in total, in
       all the `/scratch` directories they have access to.
@@ -176,9 +176,59 @@ $ sh_quota -f SCRATCH -j
 }
 ```
 
+
+#### Locating large directories
+
+It's not always easy to identify files and directories that take the most space
+when getting close to the quota limits. Some tools can help with that.
+
+* [`du`][url_du] can be used to display the volume used by files and
+  directories, in a given folder:
+
+    ``` none
+    $ cd mydir/
+    $ du --human-readable --summarize  *
+    101M    dir
+    2.0M    file
+    ```
+
+    !!! note
+
+        `du` will ignore hidden entries (everything that starts with a dot (`.`)).
+        So when using it in your `$HOME` directory, it will skip things like
+        `.cache` or `.conda`, which can contain significant volumes.
+
+
+* [`ncdu`][url_ncdu] is an interactive disk usage analyzer, that generates
+  visual representation of the volume (and inode count) for directories. To run
+  it, you need to load the `ncdu` module, and then run it on your directory of
+  choice:
+
+    ``` none
+    $ ml system ncdu
+    $ ncdu $HOME
+    ```
+
+    For very large directories, running `ncdu` in an interactive shell on a
+    compute node is recommended, via [`sh_dev`][url_sh_dev].
+
+    You'll been there presented with an interactive file browser, showing
+    information about the volume used by your directories, which should make easy
+    to pinpoint where most space is used.
+
+!!! info
+
+    Note that any tool you use to view directory contents will only be able to
+    show files that your user account has read access to. So on group-shared
+    spaces, if you see a major difference between the totals from a tool like
+    `ncdu` and the information reported by `sh_quota`, that can be an indicator
+    that one of your group members has restricted permissions on a large number
+    of items in your space.
+
+
 ## Where should I store my files?
 
-!!! important "Not all filesystems are equivalent"
+!!! warning "Not all filesystems are equivalent"
 
     Choosing the appropriate storage location for your files is an essential
     step towards making your utilization of the cluster the most efficient
@@ -245,8 +295,12 @@ Transfer][url_data_sshfs] page.
 [url_NFS]:              //en.wikipedia.org/wiki/Network_File_System
 [url_lustre]:           //en.wikipedia.org/wiki/Lustre_(file_system)
 [url_oak]:              //uit.stanford.edu/service/oak-storage
-[url_data_sshfs]:       /docs/storage/data-transfer#sshfs
-[url_purge]:            /docs/storage/filesystems/#expiration-policy
+[url_ncdu]:             //dev.yorhel.nl/ncdu
+[url_du]:               //www.gnu.org/software/coreutils/manual/html_node/du-invocation.html#du-invocation
+
+[url_data_sshfs]:       /docs/storage/data-transfer.md#sshfs
+[url_purge]:            /docs/storage/filesystems.md#expiration-policy
+[url_sh_dev]:           /docs/user-guide/running-jobs.md#interactive-jobs
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
