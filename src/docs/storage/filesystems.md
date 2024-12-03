@@ -322,10 +322,11 @@ node until the last job from the user terminates.
 
 !!! summary
 
-    `$OAK` is SRCC's research data storage offering. It provides an affordable,
-    longer-term storage option for labs and researchers, and is ideally suited
-    to host large datasets, or curated, post-processed results from job
-    campaigns, as well as final results used for publication.
+    `$OAK` is Stanford Research Computing's research data storage offering. It
+    provides an affordable, longer-term storage option for labs and
+    researchers, and is ideally suited to host large datasets, or curated,
+    post-processed results from job campaigns, as well as final results used
+    for publication.
 
 !!! important "Order `$OAK`"
 
@@ -373,11 +374,11 @@ scripts, rather than its explicit path.
 
 !!! tip "Cloud backup option"
 
-    For additional data security, SRCC now offers "cloud backup" of Oak data as
-    a managed service option. For an additional monthly fee, data on Oak can be
-    backed up to the cloud (researchers are responsible for cloud storage
-    costs). Please [contact us][url_contact] if you'd like additional
-    information.
+    For additional data security, Stanford Research Computing now offers "cloud
+    backup" of Oak data as a managed service option. For an additional monthly
+    fee, data on Oak can be backed up to the cloud (researchers are responsible
+    for cloud storage costs). Please [contact us][url_contact] if you'd like
+    additional information.
 
 
 ### Checking quota usage
@@ -394,11 +395,13 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_contact]:          mailto:{{ support_email }}
 [url_oak]:              //uit.stanford.edu/service/oak-storage
-[url_check_quotas]:     /docs/storage/#checking-quotas
-[url_snapshots]:        /docs/storage/data-protection/#snapshots
-[url_gdrive]:           /docs/storage/data-transfer/#google-drive
+
+[url_contact]:          mailto:{{ support_email }}
+
+[url_check_quotas]:     /docs/storage/index.md#checking-quotas
+[url_snapshots]:        /docs/storage/data-protection.md#snapshots
+[url_gdrive]:           /docs/storage/data-transfer.md#google-drive
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

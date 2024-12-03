@@ -1,6 +1,5 @@
 ---
-tags:
-    - tech
+tags: [tech]
 ---
 
 # Technical specifications
@@ -115,20 +114,23 @@ can find the same files and directories from all of the Sherlock nodes.
 * High-performance Lustre scratch filesystem ({{ get_value("storage",
   "`$SCRATCH`", fmt="{}") | filesizeformat }} {{ get_value("storage",
   "`$SCRATCH`", "desc", fmt="{}") | replace("**","") }})
-* Direct access to SRCC's [Oak][url_oak] long-term research data storage system
-  ({{ get_value("storage", "`$OAK`", fmt="{}") | filesizeformat }})
+* Direct access to Stanford Research Computing's [Oak][url_oak] long-term
+  research data storage system ({{ get_value("storage", "`$OAK`", fmt="{}") |
+  filesizeformat }})
 
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
-[url_status]:  https://status.sherlock.stanford.edu
-[url_gpus]:    /docs/user-guide/gpu
-[url_storage]: /docs/storage
-[url_login]:   /docs/user-guide/running-jobs/#login-nodes
-[url_dtn]:     /docs/storage/data-transfer#data-transfer-node-dtn
-[url_oak]:     //uit.stanford.edu/service/oak-storage
-[url_clugens]: /docs/concepts/#cluster-generations
-[url_owners]:  /docs/concepts/#investing-in-sherlock
+
+[url_status]:   //status.sherlock.stanford.edu
+[url_oak]:      //uit.stanford.edu/service/oak-storage
+
+[url_gpus]:     /docs/user-guide/gpu.md
+[url_storage]:  /docs/storage/index.md
+[url_login]:    /docs/user-guide/running-jobs.md#login-nodes
+[url_dtn]:      /docs/storage/data-transfer.md#data-transfer-nodes-dtns
+[url_clugens]:  /docs/concepts.md#cluster-generations
+[url_owners]:   /docs/concepts.md#investing-in-sherlock
 
 
 

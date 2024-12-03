@@ -165,7 +165,7 @@ You can run your MATLAB code across multiple CPUs on Sherlock using
 [`parfor`][url_parfor] loops, to take advantage of the multiple CPU cores that
 each node features. You can submit a job requesting as many CPUs as there are
 on a node in a single job.  The key is to grab the [SLURM environment
-variable][url_SLURM_ENV] `$SLURM_CPUS_PER_TASK` and create the worker pool in
+variable][url_slurm_env] `$SLURM_CPUS_PER_TASK` and create the worker pool in
 your MATLAB code with:
 
 ``` matlab
@@ -248,24 +248,24 @@ it scales.
 [url_matlab_nocost]:    //uit.stanford.edu/news/get-matlab-and-simulink-no-charge
 [url_X11_UIT]:          //uit.stanford.edu/service/sharedcomputing/moreX
 [url_octave]:           //www.gnu.org/software/octave/
+[url_parfor]:           //www.mathworks.com/help/parallel-computing/parfor.html
+[url_slurm_env]:        //slurm.schedmd.com/sbatch.html#SECTION_INPUT-ENVIRONMENT-VARIABLES
 
 [url_contact]:          mailto:{{ support_email }}
 
-[url_R]:                /docs/software/using/R
-[url_julia]:            /docs/software/using/julia
-[url_python]:           /docs/software/using/python
-[url_submit]:           /docs/getting-started/submitting/#batch-scripts
-[url_node]:             /docs/user-guide/running-jobs/#compute-nodes
-[url_interactive]:      /docs/user-guide/running-jobs/#interactive-jobs
-[url_ssh_client]:       /docs/getting-started/#ssh-clients
-[url_modules]:          /docs/software/modules
-[url_software_list]:    /docs/software/list
-[url_text_editor]:      /docs/getting-started/#text-editors
-[url_partition]:        /docs/glossary/#partition
-[url_cpu]:              /docs/glossary/#cpu
-[url_squeue]:           /docs/getting-started/submitting/#check-the-job
-[url_parfor]:           https://www.mathworks.com/help/parallel-computing/parfor.html
-[url_SLURM_ENV]:        https://slurm.schedmd.com/sbatch.html#lbAJ
+[url_R]:                /docs/software/using/R.md
+[url_julia]:            /docs/software/using/julia.md
+[url_python]:           /docs/software/using/python.md
+[url_submit]:           /docs/getting-started/submitting.md#batch-scripts
+[url_node]:             /docs/user-guide/running-jobs.md#compute-nodes
+[url_interactive]:      /docs/user-guide/running-jobs.md#interactive-jobs
+[url_ssh_client]:       /docs/getting-started/index.md#ssh-clients
+[url_modules]:          /docs/software/modules.md
+[url_software_list]:    /docs/software/list.md
+[url_text_editor]:      /docs/getting-started/index.md#text-editors
+[url_partition]:        /docs/glossary.md#partition
+[url_cpu]:              /docs/glossary.md#cpu
+[url_squeue]:           /docs/getting-started/submitting.md#check-the-job
 
 
 

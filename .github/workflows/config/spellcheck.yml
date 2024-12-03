@@ -3,6 +3,7 @@ matrix:
   aspell:
     lang: en
     d: en_US
+    mode: markdown
     ignore-case: true
   dictionary:
     wordlists:
@@ -15,6 +16,9 @@ matrix:
       - open: ':'
         content: '[\w-]+'
         close: ':'
+      # ignore attr_list {: .* :}
+      - open: '{:'
+        close: ':}'
   - pyspelling.filters.markdown:
       markdown_extensions:
       - pymdownx.superfences
@@ -26,10 +30,7 @@ matrix:
       - title
       - alt
       ignores:
-      - ':matches(code, pre)'
-      - code
-      - pre
-      - img
+      - 'code, pre, img'
   - pyspelling.filters.url:
   sources:
   - '**/*.md'

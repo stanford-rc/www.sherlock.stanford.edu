@@ -97,15 +97,14 @@ However, there are many tutorials for beginning to use Unix/Linux on the web.
 
 A few tutorials we recommend are:
 
-* [Unix Tutorial for Beginners][url_tuto_1] (University of Surrey, UK)
-* [Introduction to Unix][url_tuto_2] (Imperial College, London)
-* [The Unix Shell][url_tuto_3] (Software Carpentry)
+* [Introduction to Unix][url_tuto_1] (Imperial College, London)
+* [The Unix Shell][url_tuto_2] (Software Carpentry)
 
 More specifically about HPC and Research Computing:
 
-* [Intro to HPC][url_tuto_5] (HPC Carpentry)
-* [HPC in a day][url_tuto_4] (Software Carpentry}
-* [Research Computing Q&A][url_tuto_6] (Ask.Cyberinfrastructure)
+* [HPC in a day][url_tuto_3] (Software Carpentry}
+* [Intro to HPC][url_tuto_4] (HPC Carpentry)
+* [Research Computing Q&A][url_tuto_5] (Ask.Cyberinfrastructure)
 
 ### Text editors
 
@@ -133,37 +132,36 @@ For an introduction to shell scripting, you can refer to:
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_sunet]:        https://uit.stanford.edu/service/accounts/sunetids
-[url_level]:        https://uit.stanford.edu/service/accounts/sunetids#services
-[url_sponsor]:      https://uit.stanford.edu/service/sponsorship/
+[url_sunet]:        //uit.stanford.edu/service/accounts/sunetids
+[url_level]:        //uit.stanford.edu/service/accounts/sunetids#services
+[url_sponsor]:      //uit.stanford.edu/service/sponsorship/
 
-[url_openssh]:      https://www.openssh.com/
-[url_ssh_windows]:  https://learn.microsoft.com/en-us/windows/terminal/tutorials/ssh
-[url_wsl]:          https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
-[url_wsl_doc]:      https://msdn.microsoft.com/commandline/wsl
-[url_wsl_howto]:    https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/
-[url_cygwin]:       https://cygwin.com
-[url_ssh_clients]:  https://en.wikipedia.org/wiki/Comparison_of_SSH_clients#Platform
+[url_openssh]:      //www.openssh.com/
+[url_ssh_windows]:  //learn.microsoft.com/en-us/windows/terminal/tutorials/ssh
+[url_wsl]:          //en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
+[url_wsl_doc]:      //msdn.microsoft.com/commandline/wsl
+[url_wsl_howto]:    //www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/
+[url_cygwin]:       //cygwin.com
+[url_ssh_clients]:  //en.wikipedia.org/wiki/Comparison_of_SSH_clients#Platform
 
 [url_request]:      #how-to-request-an-account
 [url_ssh]:          #ssh-clients
 [url_unix]:         #unixlinux-resources
 [url_bash]:         #shell-scripting
-[url_concepts]:     /docs/concepts
-[url_glossary]:     /docs/glossary
+[url_concepts]:     ../concepts.md
+[url_glossary]:     ../glossary.md
 
-[url_scripting]:    http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
-[url_tuto_1]:       http://www.ee.surrey.ac.uk/Teaching/Unix/
-[url_tuto_2]:       http://www.doc.ic.ac.uk/~wjk/UnixIntro/
-[url_tuto_3]:       https://swcarpentry.github.io/shell-novice/
-[url_tuto_4]:       https://psteinb.github.io/hpc-in-a-day/
-[url_tuto_5]:       https://hpc-carpentry.github.io/hpc-intro/
-[url_tuto_6]:       https://ask.cyberinfrastructure.org/latest
+[url_scripting]:    //tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
+[url_tuto_1]:       //www.doc.ic.ac.uk/~wjk/UnixIntro/
+[url_tuto_2]:       //swcarpentry.github.io/shell-novice/
+[url_tuto_3]:       //psteinb.github.io/hpc-in-a-day/
+[url_tuto_4]:       //hpc-carpentry.github.io/hpc-intro/
+[url_tuto_5]:       //ask.cyberinfrastructure.org/latest
 
 
-[url_nano]:         https://wiki.gentoo.org/wiki/Nano
-[url_vim]:          https://wiki.gentoo.org/wiki/Vim/Guide
-[url_ood_files]:    https://www.sherlock.stanford.edu/docs/user-guide/ondemand/#managing-files
+[url_nano]:         //wiki.gentoo.org/wiki/Nano
+[url_vim]:          //wiki.gentoo.org/wiki/Vim/Guide
+[url_ood_files]:    //www.sherlock.stanford.edu/docs/user-guide/ondemand/#managing-files
 
 
 --8<--- "includes/_acronyms.md"

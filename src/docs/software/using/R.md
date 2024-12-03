@@ -722,7 +722,7 @@ which shows a decent speedup for running on a GPU for the largest matrix sizes.
 
 [url_r]:                //www.r-project.org/
 [url_r_docs]:           //stat.ethz.ch/R-manual/
-[url_s]:                /ect.bell-labs.com/sl/S/
+[url_s]:                //ect.bell-labs.com/sl/S/
 [url_heredoc]:          //en.wikipedia.org/wiki/Here_document
 [url_devtools]:         //cran.r-project.org/web/packages/devtools/index.html
 [url_doparallel]:       //cran.r-project.org/web/packages/doParallel/index.html
@@ -731,10 +731,10 @@ which shows a decent speedup for running on a GPU for the largest matrix sizes.
 [url_gpur]:             //cran.r-project.org/web/packages/gpuR
 [url_support]:          mailto:{{ support_email }}
 
-[url_modules]:          /docs/software/modules
-[url_software_list]:    /docs/software/list
-[url_storage]:          /docs/storage
-[url_gpu]:              /docs/user-guide/gpu
+[url_modules]:          ../modules.md
+[url_software_list]:    ../list.md
+[url_storage]:          ../../storage/index.md
+[url_gpu]:              ../../user-guide/gpu.md
 
 
 --8<--- "includes/_acronyms.md"

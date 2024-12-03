@@ -126,7 +126,7 @@ accessed over the network rather than through a local socket.
     When running an networked instance of PostgreSQL, please keep in mind that
     any user on Sherlock could potentially be able to connect to the TCP ports
     that `postgres` runs on, and that proper configuration must be done to
-    prevent unauthrozied access.
+    prevent unauthorized access.
 
 Like in the single-node case, you need to start the `postgres` server process,
 but with the `-i` option to enable network connections, and define user access
@@ -242,7 +242,7 @@ and then, point your PostgreSQL client to that node:
 
 ``` shell
 $ ml system postgresql
-$ mpsql -h sh-06-34  test_db
+$ psql -h sh-06-34  test_db
 Password:
 psql (10.5)
 Type "help" for help.
@@ -278,9 +278,9 @@ jobs][url_recurring_jobs] and submit long-running database instances.
 [url_postgresql_docs]:  //postgresql.com/docs/
 [url_heredoc]:          //en.wikipedia.org/wiki/Here_document
 
-[url_compute_node]:     /docs/glossary/#node
-[url_storage]:          /docs/storage
-[url_recurring_jobs]:   /docs/user-guide/running-jobs/#recurring-jobs
+[url_compute_node]:     /docs/glossary.md#node
+[url_storage]:          /docs/storage/index.md
+[url_recurring_jobs]:   /docs/user-guide/running-jobs.md#recurring-jobs
 
 
 --8<--- "includes/_acronyms.md"
