@@ -4156,7 +4156,7 @@ software_modules:
       - {description: This python package collects together a suite of widely used
           analysis tools in Weak Gravitational Lensing., markedDefault: false, versionName: 1.0_py36}
     - categories: physics, CFD
-      defaultVersionName: 3.1.5
+      defaultVersionName: 3.2.0
       description: AMR-Wind is a massively parallel, block-structured adaptive-mesh,
         incompressible flow solver for wind turbine and wind farm simulations.
       package: amr-wind
@@ -4166,9 +4166,14 @@ software_modules:
           incompressible flow solver for wind turbine and wind farm simulations.
         markedDefault: false
         properties:
-          arch: {gpu: 1}
           parallel: {mpi: 1}
         versionName: 3.1.5
+      - description: AMR-Wind is a massively parallel, block-structured adaptive-mesh,
+          incompressible flow solver for wind turbine and wind farm simulations.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 3.2.0
     - categories: physics, cliemate modeling
       defaultVersionName: '2022.01'
       description: FRE-NCtools is a collection of tools to help with the creation
@@ -4182,15 +4187,16 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: '2022.01'
-    - categories: physics, quantum mechanics
-      defaultVersionName: 4.5.2_py36
-      description: QuTiP is open-source software for simulating the dynamics of closed
-        and open quantum systems.
-      package: py-qutip
-      url: http://qutip.org/
+    - categories: physics, geoscience
+      defaultVersionName: 2.2.26
+      description: The UDUNITS package from Unidata is a C-based package for the programatic
+        handling of units of physical quantities.
+      package: udunits
+      url: https://www.unidata.ucar.edu/software/udunits/
       versions:
-      - {description: QuTiP is open-source software for simulating the dynamics of
-          closed and open quantum systems., markedDefault: false, versionName: 4.5.2_py36}
+      - {description: The UDUNITS package from Unidata is a C-based package for the
+          programatic handling of units of physical quantities., markedDefault: false,
+        versionName: 2.2.26}
     - categories: physics, geoscience
       defaultVersionName: 1.0.3_py27
       description: OpenDrift is a software for modeling the trajectories and fate
@@ -4283,22 +4289,29 @@ software_modules:
       - {description: GEOS (Geometry Engine - Open Source) is a C++ port of Java Topology
           Suite (JTS)., markedDefault: true, versionName: 3.6.2}
     - categories: physics, astronomy
-      defaultVersionName: 6.26.1
-      description: HEAsoft is a Unified Release of the FTOOLS (General and mission-specific
-        tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks
-        for X-ray astronomical spectral, timing, and imaging data analysis) software
+      defaultVersionName: 4.0.1_py36
+      description: The Astropy Project is a community effort to develop a common core
+        package for Astronomy in Python and foster an ecosystem of interoperable astronomy
         packages.
-      package: heasoft
-      url: https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/
+      package: py-astropy
+      url: https://www.astropy.org/
       versions:
-      - {description: 'HEAsoft is a Unified Release of the FTOOLS (General and mission-specific
-          tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks
-          for X-ray astronomical spectral, timing, and imaging data analysis) software
-          packages.', markedDefault: false, versionName: 6.22.1}
-      - {description: 'HEAsoft is a Unified Release of the FTOOLS (General and mission-specific
-          tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks
-          for X-ray astronomical spectral, timing, and imaging data analysis) software
-          packages.', markedDefault: false, versionName: 6.26.1}
+      - {description: The Astropy Project is a community effort to develop a common
+          core package for Astronomy in Python and foster an ecosystem of interoperable
+          astronomy packages., markedDefault: false, versionName: 4.0.1_py36}
+    - categories: physics, CFD
+      defaultVersionName: 3.5.4
+      description: OpenFAST is a multi-physics, multi-fidelity tool for simulating
+        the coupled dynamic response of wind turbines.
+      package: openfast
+      url: https://github.com/OpenFAST/openfast
+      versions:
+      - description: OpenFAST is a multi-physics, multi-fidelity tool for simulating
+          the coupled dynamic response of wind turbines.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 3.5.4
     - categories: physics, photonics
       defaultVersionName: 1.24.0
       description: Meep is a free finite-difference time-domain (FDTD) simulation
@@ -4380,6 +4393,15 @@ software_modules:
         markedDefault: false, versionName: 3.4.0_py39}
       - {description: Python interface to PROJ4 library for cartographic transformations.,
         markedDefault: true, versionName: 1.9.5.1_py27}
+    - categories: physics, quantum mechanics
+      defaultVersionName: 4.5.2_py36
+      description: QuTiP is open-source software for simulating the dynamics of closed
+        and open quantum systems.
+      package: py-qutip
+      url: http://qutip.org/
+      versions:
+      - {description: QuTiP is open-source software for simulating the dynamics of
+          closed and open quantum systems., markedDefault: false, versionName: 4.5.2_py36}
     - categories: physics, photonics
       defaultVersionName: 1.11.1
       description: MPB is a free software package for computing the band structures,
@@ -4409,27 +4431,22 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 1.11.1
-    - categories: physics, materials science
-      defaultVersionName: '3.36'
-      description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
-        coupled configurational and vibrational disorder in alloy systems.'
-      package: atat
-      url: https://www.brown.edu/Departments/Engineering/Labs/avdw/atat/
+    - categories: physics, geoscience
+      defaultVersionName: 8.2.1
+      description: PROJ is a generic coordinate transformation software that transforms
+        geospatial coordinates from one coordinate reference system (CRS) to another.
+      package: proj
+      url: http://proj.org
       versions:
-      - {description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
-          coupled configurational and vibrational disorder in alloy systems.', markedDefault: false,
-        versionName: '3.36'}
-    - categories: physics, astronomy
-      defaultVersionName: 4.0.1_py36
-      description: The Astropy Project is a community effort to develop a common core
-        package for Astronomy in Python and foster an ecosystem of interoperable astronomy
-        packages.
-      package: py-astropy
-      url: https://www.astropy.org/
-      versions:
-      - {description: The Astropy Project is a community effort to develop a common
-          core package for Astronomy in Python and foster an ecosystem of interoperable
-          astronomy packages., markedDefault: false, versionName: 4.0.1_py36}
+      - {description: PROJ is a generic coordinate transformation software that transforms
+          geospatial coordinates from one coordinate reference system (CRS) to another.,
+        markedDefault: false, versionName: 4.9.3}
+      - {description: PROJ is a generic coordinate transformation software that transforms
+          geospatial coordinates from one coordinate reference system (CRS) to another.,
+        markedDefault: false, versionName: 9.1.0}
+      - {description: PROJ is a generic coordinate transformation software that transforms
+          geospatial coordinates from one coordinate reference system (CRS) to another.,
+        markedDefault: true, versionName: 8.2.1}
     - categories: physics, quantum information science
       defaultVersionName: 22.03.0.40
       description: NVIDIA cuQuantum is an SDK of optimized libraries and tools for
@@ -4467,32 +4484,33 @@ software_modules:
       versions:
       - {description: 'Pymatgen (Python Materials Genomics) is a robust, open-source
           Python library for materials analysis.', markedDefault: false, versionName: 2022.5.26_py39}
-    - categories: physics, geoscience
-      defaultVersionName: 2.2.26
-      description: The UDUNITS package from Unidata is a C-based package for the programatic
-        handling of units of physical quantities.
-      package: udunits
-      url: https://www.unidata.ucar.edu/software/udunits/
+    - categories: physics, astronomy
+      defaultVersionName: 6.26.1
+      description: HEAsoft is a Unified Release of the FTOOLS (General and mission-specific
+        tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks
+        for X-ray astronomical spectral, timing, and imaging data analysis) software
+        packages.
+      package: heasoft
+      url: https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/
       versions:
-      - {description: The UDUNITS package from Unidata is a C-based package for the
-          programatic handling of units of physical quantities., markedDefault: false,
-        versionName: 2.2.26}
-    - categories: physics, geoscience
-      defaultVersionName: 8.2.1
-      description: PROJ is a generic coordinate transformation software that transforms
-        geospatial coordinates from one coordinate reference system (CRS) to another.
-      package: proj
-      url: http://proj.org
+      - {description: 'HEAsoft is a Unified Release of the FTOOLS (General and mission-specific
+          tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks
+          for X-ray astronomical spectral, timing, and imaging data analysis) software
+          packages.', markedDefault: false, versionName: 6.22.1}
+      - {description: 'HEAsoft is a Unified Release of the FTOOLS (General and mission-specific
+          tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks
+          for X-ray astronomical spectral, timing, and imaging data analysis) software
+          packages.', markedDefault: false, versionName: 6.26.1}
+    - categories: physics, materials science
+      defaultVersionName: '3.36'
+      description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
+        coupled configurational and vibrational disorder in alloy systems.'
+      package: atat
+      url: https://www.brown.edu/Departments/Engineering/Labs/avdw/atat/
       versions:
-      - {description: PROJ is a generic coordinate transformation software that transforms
-          geospatial coordinates from one coordinate reference system (CRS) to another.,
-        markedDefault: false, versionName: 4.9.3}
-      - {description: PROJ is a generic coordinate transformation software that transforms
-          geospatial coordinates from one coordinate reference system (CRS) to another.,
-        markedDefault: false, versionName: 9.1.0}
-      - {description: PROJ is a generic coordinate transformation software that transforms
-          geospatial coordinates from one coordinate reference system (CRS) to another.,
-        markedDefault: true, versionName: 8.2.1}
+      - {description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
+          coupled configurational and vibrational disorder in alloy systems.', markedDefault: false,
+        versionName: '3.36'}
     - categories: physics, geoscience
       defaultVersionName: 3.4.1
       description: GDAL is a translator library for raster and vector geospatial data
