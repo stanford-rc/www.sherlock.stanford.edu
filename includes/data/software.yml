@@ -2385,14 +2385,19 @@ software_modules:
       versions:
       - {description: Gmsh is an open source 3D finite element mesh generator with
           a built-in CAD engine and post-processor., markedDefault: false, versionName: 4.10.1}
-    - categories: math, numerical library
-      defaultVersionName: 2.9.0
-      description: FLINT is a C library for doing number theory.
-      package: flint
-      url: https://flintlib.org/
+    - categories: math, deep learning
+      defaultVersionName: 0.19.1_py312
+      description: Datasets, model architectures, and common image transformations
+        for computer vision for PyTorch.
+      package: py-torchvision
+      url: http://pytorch.org/vision
       versions:
-      - {description: FLINT is a C library for doing number theory., markedDefault: false,
-        versionName: 2.9.0}
+      - {description: 'Datasets, model architectures, and common image transformations
+          for computer vision for PyTorch.', markedDefault: false, versionName: 0.15.1_py39}
+      - {description: 'Datasets, model architectures, and common image transformations
+          for computer vision for PyTorch.', markedDefault: false, versionName: 0.17.1_py312}
+      - {description: 'Datasets, model architectures, and common image transformations
+          for computer vision for PyTorch.', markedDefault: false, versionName: 0.19.1_py312}
     - categories: math, statistics
       defaultVersionName: 1.3.1093
       description: RStudio is an integrated development environment (IDE) for R. It
@@ -2459,16 +2464,30 @@ software_modules:
       - {description: A PyTorch Library for Accelerating 3D Deep Learning Research.,
         markedDefault: false, versionName: 0.15.0_py39}
     - categories: math, numerical library
-      defaultVersionName: 7.4.0
-      description: SuiteSparse is a suite of sparse matrix algorithms.
-      package: suitesparse
-      url: https://people.engr.tamu.edu/davis/suitesparse.html
+      defaultVersionName: 1.1.0_py27
+      description: The SciPy library provides many user-friendly and efficient numerical
+        routines such as routines for numerical integration and optimization.
+      package: py-scipy
+      url: https://www.scipy.org/scipylib
       versions:
-      - description: SuiteSparse is a suite of sparse matrix algorithms.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 7.4.0
+      - {description: The SciPy library provides many user-friendly and efficient
+          numerical routines such as routines for numerical integration and optimization.,
+        family: scipy, markedDefault: false, versionName: 1.1.0_py36}
+      - {description: The SciPy library provides many user-friendly and efficient
+          numerical routines such as routines for numerical integration and optimization.,
+        family: scipy, markedDefault: false, versionName: 1.4.1_py36}
+      - {description: The SciPy library provides many user-friendly and efficient
+          numerical routines such as routines for numerical integration and optimization.,
+        family: scipy, markedDefault: false, versionName: 1.6.3_py39}
+      - {description: The SciPy library provides many user-friendly and efficient
+          numerical routines such as routines for numerical integration and optimization.,
+        family: scipy, markedDefault: false, versionName: 1.10.1_py39}
+      - {description: The SciPy library provides many user-friendly and efficient
+          numerical routines such as routines for numerical integration and optimization.,
+        family: scipy, markedDefault: false, versionName: 1.12.0_py312}
+      - {description: The SciPy library provides many user-friendly and efficient
+          numerical routines such as routines for numerical integration and optimization.,
+        family: scipy, markedDefault: true, versionName: 1.1.0_py27}
     - categories: math, symbolic
       defaultVersionName: 1.11.1_py39
       description: SymPy is a Python library for symbolic mathematics.
@@ -2547,27 +2566,6 @@ software_modules:
       versions:
       - {description: 'Simple, safe way to store and distribute tensors.', markedDefault: false,
         versionName: 0.4.2_py312}
-    - categories: math, numerical library
-      defaultVersionName: 0.4.36_py312
-      description: JAX is Autograd and XLA, brought together for high-performance
-        numerical computing.
-      package: py-jax
-      url: https://jax.readthedocs.io
-      versions:
-      - {description: 'JAX is Autograd and XLA, brought together for high-performance
-          numerical computing.', markedDefault: false, versionName: 0.4.7_py39}
-      - {description: 'JAX is Autograd and XLA, brought together for high-performance
-          numerical computing.', markedDefault: false, versionName: 0.4.36_py312}
-    - categories: math, computational geometry
-      defaultVersionName: 9.4.1
-      description: deal.II is a C++ program library targeted at the computational
-        solution of partial differential equations using adaptive finite elements.
-      package: dealii
-      url: https://www.dealii.org/
-      versions:
-      - {description: deal.II is a C++ program library targeted at the computational
-          solution of partial differential equations using adaptive finite elements.,
-        markedDefault: false, versionName: 9.4.1}
     - categories: math, deep learning
       defaultVersionName: 0.12.1_py27
       description: Horovod is a distributed training framework for TensorFlow. The
@@ -2589,15 +2587,27 @@ software_modules:
           arch: {gpu: 1}
           parallel: {mpi: 1}
         versionName: 0.12.1_py27
-    - categories: math, machine learning
-      defaultVersionName: 0.8.0_py312
-      description: tinygrad is a deep learning framework that aims to provide a balance
-        between simplicity and functionality.
-      package: py-tinygrad
-      url: https://github.com/tinygrad/tinygrad
+    - categories: math, numerical library
+      defaultVersionName: 0.4.36_py312
+      description: JAX is Autograd and XLA, brought together for high-performance
+        numerical computing.
+      package: py-jax
+      url: https://jax.readthedocs.io
       versions:
-      - {description: tinygrad is a deep learning framework that aims to provide a
-          balance between simplicity and functionality., markedDefault: false, versionName: 0.8.0_py312}
+      - {description: 'JAX is Autograd and XLA, brought together for high-performance
+          numerical computing.', markedDefault: false, versionName: 0.4.7_py39}
+      - {description: 'JAX is Autograd and XLA, brought together for high-performance
+          numerical computing.', markedDefault: false, versionName: 0.4.36_py312}
+    - categories: math, computational geometry
+      defaultVersionName: 9.4.1
+      description: deal.II is a C++ program library targeted at the computational
+        solution of partial differential equations using adaptive finite elements.
+      package: dealii
+      url: https://www.dealii.org/
+      versions:
+      - {description: deal.II is a C++ program library targeted at the computational
+          solution of partial differential equations using adaptive finite elements.,
+        markedDefault: false, versionName: 9.4.1}
     - categories: math, numerical library
       defaultVersionName: 1.14.3_py27
       description: NumPy is the fundamental package for scientific computing with
@@ -2621,6 +2631,15 @@ software_modules:
           Python., markedDefault: false, versionName: 1.26.3_py312}
       - {description: NumPy is the fundamental package for scientific computing with
           Python., markedDefault: true, versionName: 1.14.3_py27}
+    - categories: math, machine learning
+      defaultVersionName: 0.8.0_py312
+      description: tinygrad is a deep learning framework that aims to provide a balance
+        between simplicity and functionality.
+      package: py-tinygrad
+      url: https://github.com/tinygrad/tinygrad
+      versions:
+      - {description: tinygrad is a deep learning framework that aims to provide a
+          balance between simplicity and functionality., markedDefault: false, versionName: 0.8.0_py312}
     - categories: math, linear algebra
       defaultVersionName: 8.200.1
       description: Armadillo is a high quality linear algebra library (matrix maths)
@@ -2632,14 +2651,6 @@ software_modules:
       - {description: 'Armadillo is a high quality linear algebra library (matrix
           maths) for the C++ language, aiming towards a good balance between speed
           and ease of use.', markedDefault: false, versionName: 8.200.1}
-    - categories: math, statistics
-      defaultVersionName: 3.1.4_py39
-      description: The Python ensemble sampling toolkit for affine-invariant MCMC
-      package: py-emcee
-      url: https://github.com/dfm/emcee
-      versions:
-      - {description: The Python ensemble sampling toolkit for affine-invariant MCMC,
-        markedDefault: false, versionName: 3.1.4_py39}
     - categories: math, numerical library
       defaultVersionName: 3.18.5_py39
       description: Python bindings for PETSc, the Portable, Extensible Toolkit for
@@ -2649,6 +2660,27 @@ software_modules:
       versions:
       - {description: 'Python bindings for PETSc, the Portable, Extensible Toolkit
           for Scientific Computation.', markedDefault: false, versionName: 3.18.5_py39}
+    - categories: math, statistics
+      defaultVersionName: 3.1.4_py39
+      description: The Python ensemble sampling toolkit for affine-invariant MCMC
+      package: py-emcee
+      url: https://github.com/dfm/emcee
+      versions:
+      - {description: The Python ensemble sampling toolkit for affine-invariant MCMC,
+        markedDefault: false, versionName: 3.1.4_py39}
+    - categories: math, deep learning
+      defaultVersionName: '20180202'
+      description: Torch is a scientific computing framework with wide support for
+        machine learning algorithms that puts GPUs first.
+      package: torch
+      url: http://torch.ch
+      versions:
+      - description: Torch is a scientific computing framework with wide support for
+          machine learning algorithms that puts GPUs first.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: '20180202'
     - categories: math, numerical library
       defaultVersionName: 2.32.0
       description: HYPRE is a library of high performance preconditioners and solvers
@@ -2681,27 +2713,27 @@ software_modules:
       - {description: Hugging Face Transformers provides APIs and tools to easily
           download and train state-of-the-art pretrained models., markedDefault: false,
         versionName: 4.39.1_py312}
-    - categories: math, deep learning
-      defaultVersionName: '20180202'
-      description: Torch is a scientific computing framework with wide support for
-        machine learning algorithms that puts GPUs first.
-      package: torch
-      url: http://torch.ch
+    - categories: math, statistics
+      defaultVersionName: 2022.02.2-485
+      description: RStudio is an integrated development environment (IDE) for R. It
+        includes a console, syntax-highlighting editor that supports direct code execution,
+        as well as tools for plotting, history, debugging and workspace management.
+        This is the X11/GUI version.
+      package: rstudio-desktop
+      url: http://www.rstudio.com
       versions:
-      - description: Torch is a scientific computing framework with wide support for
-          machine learning algorithms that puts GPUs first.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: '20180202'
-    - categories: math, optimization
-      defaultVersionName: 2.6.2
-      description: NLopt is a free/open-source library for nonlinear optimization.
-      package: nlopt
-      url: https://nlopt.readthedocs.io/
+      - {description: 'RStudio is an integrated development environment (IDE) for
+          R. It includes a console, syntax-highlighting editor that supports direct
+          code execution, as well as tools for plotting, history, debugging and workspace
+          management. This is the X11/GUI version.', markedDefault: false, versionName: 2022.02.2-485}
+    - categories: math, computational geometry
+      defaultVersionName: '4.10'
+      description: polymake is open source software for research in polyhedral geometry.
+      package: polymake
+      url: https://polymake.org
       versions:
-      - {description: NLopt is a free/open-source library for nonlinear optimization.,
-        markedDefault: false, versionName: 2.6.2}
+      - {description: polymake is open source software for research in polyhedral
+          geometry., markedDefault: false, versionName: '4.10'}
     - categories: math, numerical library
       defaultVersionName: 1.6.0
       description: TetGen provides various features to generate good quality and adaptive
@@ -2777,18 +2809,15 @@ software_modules:
           inversion: given a time series consisting of a sum of sinusoids (modes),
           extract their frequencies and amplitudes.', markedDefault: false, versionName: 1.4.1}
     - categories: math, statistics
-      defaultVersionName: 2022.02.2-485
-      description: RStudio is an integrated development environment (IDE) for R. It
-        includes a console, syntax-highlighting editor that supports direct code execution,
-        as well as tools for plotting, history, debugging and workspace management.
-        This is the X11/GUI version.
-      package: rstudio-desktop
-      url: http://www.rstudio.com
+      defaultVersionName: 2.9.2_py36
+      description: rpy2 is an interface to R running embedded in a Python process.
+      package: py-rpy2
+      url: https://rpy2.github.io
       versions:
-      - {description: 'RStudio is an integrated development environment (IDE) for
-          R. It includes a console, syntax-highlighting editor that supports direct
-          code execution, as well as tools for plotting, history, debugging and workspace
-          management. This is the X11/GUI version.', markedDefault: false, versionName: 2022.02.2-485}
+      - {description: rpy2 is an interface to R running embedded in a Python process.,
+        markedDefault: false, versionName: 2.8.6_py27}
+      - {description: rpy2 is an interface to R running embedded in a Python process.,
+        markedDefault: false, versionName: 2.9.2_py36}
     - categories: math, numerical library
       defaultVersionName: 5.1.0
       description: METIS is a set of serial programs for partitioning graphs, partitioning
@@ -2866,14 +2895,17 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 2.1.0_py36
-    - categories: math, computational geometry
-      defaultVersionName: '4.10'
-      description: polymake is open source software for research in polyhedral geometry.
-      package: polymake
-      url: https://polymake.org
+    - categories: math, optimization
+      defaultVersionName: 10.3.0
+      description: Artelys Knitro is an optimization solver for difficult large-scale
+        nonlinear problems.
+      package: knitro
+      url: https://www.artelys.com/en/optimization-tools/knitro
       versions:
-      - {description: polymake is open source software for research in polyhedral
-          geometry., markedDefault: false, versionName: '4.10'}
+      - {description: Artelys Knitro is an optimization solver for difficult large-scale
+          nonlinear problems., markedDefault: false, versionName: 12.4.0}
+      - {description: Artelys Knitro is an optimization solver for difficult large-scale
+          nonlinear problems., markedDefault: true, versionName: 10.3.0}
     - categories: math, machine learning
       defaultVersionName: 0.29.3_py312
       description: Huggingface Accelerate is a library that enables the same PyTorch
@@ -2897,27 +2929,27 @@ software_modules:
       - {description: LIBXSMM is a library for small dense and small sparse matrix-matrix
           multiplications as well as for deep learning primitives such as small convolutions,
         markedDefault: false, versionName: '1.17'}
-    - categories: math, statistics
-      defaultVersionName: 2.9.2_py36
-      description: rpy2 is an interface to R running embedded in a Python process.
-      package: py-rpy2
-      url: https://rpy2.github.io
-      versions:
-      - {description: rpy2 is an interface to R running embedded in a Python process.,
-        markedDefault: false, versionName: 2.8.6_py27}
-      - {description: rpy2 is an interface to R running embedded in a Python process.,
-        markedDefault: false, versionName: 2.9.2_py36}
     - categories: math, optimization
-      defaultVersionName: 10.3.0
-      description: Artelys Knitro is an optimization solver for difficult large-scale
-        nonlinear problems.
-      package: knitro
-      url: https://www.artelys.com/en/optimization-tools/knitro
+      defaultVersionName: 2.6.2
+      description: NLopt is a free/open-source library for nonlinear optimization.
+      package: nlopt
+      url: https://nlopt.readthedocs.io/
       versions:
-      - {description: Artelys Knitro is an optimization solver for difficult large-scale
-          nonlinear problems., markedDefault: false, versionName: 12.4.0}
-      - {description: Artelys Knitro is an optimization solver for difficult large-scale
-          nonlinear problems., markedDefault: true, versionName: 10.3.0}
+      - {description: NLopt is a free/open-source library for nonlinear optimization.,
+        markedDefault: false, versionName: 2.6.2}
+    - categories: math, numerical library
+      defaultVersionName: 5.2.1
+      description: SuperLU is a general purpose library for the direct solution of
+        large, sparse, nonsymmetric systems of linear equations.
+      package: superlu
+      url: https://github.com/xiaoyeli/superlu
+      versions:
+      - description: SuperLU is a general purpose library for the direct solution
+          of large, sparse, nonsymmetric systems of linear equations.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 5.2.1
     - categories: math, numerical library
       defaultVersionName: 3.1.2_py39
       description: Efficient matrix representations for working with tabular data.
@@ -2952,19 +2984,14 @@ software_modules:
       versions:
       - {description: Gym is a toolkit for developing and comparing reinforcement
           learning algorithms., markedDefault: false, versionName: 0.21.0_py39}
-    - categories: math, deep learning
-      defaultVersionName: 0.19.1_py312
-      description: Datasets, model architectures, and common image transformations
-        for computer vision for PyTorch.
-      package: py-torchvision
-      url: http://pytorch.org/vision
+    - categories: math, numerical library
+      defaultVersionName: 2.9.0
+      description: FLINT is a C library for doing number theory.
+      package: flint
+      url: https://flintlib.org/
       versions:
-      - {description: 'Datasets, model architectures, and common image transformations
-          for computer vision for PyTorch.', markedDefault: false, versionName: 0.15.1_py39}
-      - {description: 'Datasets, model architectures, and common image transformations
-          for computer vision for PyTorch.', markedDefault: false, versionName: 0.17.1_py312}
-      - {description: 'Datasets, model architectures, and common image transformations
-          for computer vision for PyTorch.', markedDefault: false, versionName: 0.19.1_py312}
+      - {description: FLINT is a C library for doing number theory., markedDefault: false,
+        versionName: 2.9.0}
     - categories: math, linear algebra
       defaultVersionName: 0.6.3.2
       description: NVIDIA cuSPARSELt is a high-performance CUDA library for sparse
@@ -2984,17 +3011,6 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.6.3.2
-    - categories: math, technical computing
-      defaultVersionName: 13.1.0
-      description: A symbolic language and platform for modern technical computing.
-      package: mathematica
-      url: http://www.wolfram.com/mathematica
-      versions:
-      - description: A symbolic language and platform for modern technical computing.
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: 13.1.0
     - categories: math, machine learning
       defaultVersionName: 0.4.3_py312
       description: Hugging Face Evaluate is a library for easily evaluating machine
@@ -3004,6 +3020,17 @@ software_modules:
       versions:
       - {description: Hugging Face Evaluate is a library for easily evaluating machine
           learning models and datasets., markedDefault: false, versionName: 0.4.3_py312}
+    - categories: math, machine learning
+      defaultVersionName: 1.0.12_py312
+      description: timm is a library containing SOTA computer vision models, layers,
+        utilities, optimizers, schedulers, data-loaders, augmentations, and training/evaluation
+        scripts.
+      package: py-timm
+      url: https://huggingface.co/docs/timm
+      versions:
+      - {description: 'timm is a library containing SOTA computer vision models, layers,
+          utilities, optimizers, schedulers, data-loaders, augmentations, and training/evaluation
+          scripts.', markedDefault: false, versionName: 1.0.12_py312}
     - categories: math, numerical library
       defaultVersionName: 4.1.0
       description: The MPFR library is a C library for multiple-precision floating-point
@@ -3024,63 +3051,63 @@ software_modules:
       - {description: 'glum is a fast, modern, Python-first GLM estimation library.',
         markedDefault: false, versionName: 2.1.2_py39}
     - categories: math, numerical library
-      defaultVersionName: 1.1.0_py27
-      description: The SciPy library provides many user-friendly and efficient numerical
-        routines such as routines for numerical integration and optimization.
-      package: py-scipy
-      url: https://www.scipy.org/scipylib
+      defaultVersionName: 2.0.8_py36
+      description: gmpy2 is a C-coded Python extension module that supports multiple-precision
+        arithmetic.
+      package: py-gmpy2
+      url: https://gmpy2.readthedocs.io/
       versions:
-      - {description: The SciPy library provides many user-friendly and efficient
-          numerical routines such as routines for numerical integration and optimization.,
-        family: scipy, markedDefault: false, versionName: 1.1.0_py36}
-      - {description: The SciPy library provides many user-friendly and efficient
-          numerical routines such as routines for numerical integration and optimization.,
-        family: scipy, markedDefault: false, versionName: 1.4.1_py36}
-      - {description: The SciPy library provides many user-friendly and efficient
-          numerical routines such as routines for numerical integration and optimization.,
-        family: scipy, markedDefault: false, versionName: 1.6.3_py39}
-      - {description: The SciPy library provides many user-friendly and efficient
-          numerical routines such as routines for numerical integration and optimization.,
-        family: scipy, markedDefault: false, versionName: 1.10.1_py39}
-      - {description: The SciPy library provides many user-friendly and efficient
-          numerical routines such as routines for numerical integration and optimization.,
-        family: scipy, markedDefault: false, versionName: 1.12.0_py312}
-      - {description: The SciPy library provides many user-friendly and efficient
-          numerical routines such as routines for numerical integration and optimization.,
-        family: scipy, markedDefault: true, versionName: 1.1.0_py27}
-    - categories: math, numerical library
-      defaultVersionName: 1.1.2
-      description: qrupdate is a Fortran library for fast updates of QR and Cholesky
-        decompositions.
-      package: qrupdate
-      url: https://sourceforge.net/projects/qrupdate/
-      versions:
-      - {description: qrupdate is a Fortran library for fast updates of QR and Cholesky
-          decompositions., markedDefault: false, versionName: 1.1.2}
-    - categories: math, numerical analysis
-      defaultVersionName: 4.2.1
-      description: GNU Octave is a high-level language primarily intended for numerical
-        computations.
-      package: octave
-      url: https://www.gnu.org/software/octave/
-      versions:
-      - {description: GNU Octave is a high-level language primarily intended for numerical
-          computations., markedDefault: false, versionName: 4.2.1}
+      - {description: gmpy2 is a C-coded Python extension module that supports multiple-precision
+          arithmetic., markedDefault: false, versionName: 2.0.8_py36}
     - categories: math, deep learning
-      defaultVersionName: 0.18.7_py312
-      description: WandB (Weights and Biases) is a machine learning development platform
-        that enables data scientists and machine learning engineers to track, visualize,
-        and reproduce their experiments in real-time.
-      package: py-wandb
-      url: https://wandb.ai
+      defaultVersionName: 1.0.1_py27
+      description: Theano is a Python library that allows you to define, optimize,
+        and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
+      package: py-theano
+      url: http://deeplearning.net/software/theano
       versions:
-      - description: WandB (Weights and Biases) is a machine learning development
-          platform that enables data scientists and machine learning engineers to
-          track, visualize, and reproduce their experiments in real-time.
+      - description: Theano is a Python library that allows you to define, optimize,
+          and evaluate mathematical expressions involving multi-dimensional arrays
+          efficiently.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-        versionName: 0.18.7_py312
+        versionName: 1.0.1_py27
+    - categories: math, optimization
+      defaultVersionName: 11.0.2
+      description: The Gurobi Optimizer is a commercial optimization solver for mathematical
+        programming.
+      package: gurobi
+      url: http://www.gurobi.com
+      versions:
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 7.5.1}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 8.0.1_py27}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 8.0.1_py36}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 9.0.3_py36}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 10.0.1_py39}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 11.0.2}
+    - categories: math, numerical library
+      defaultVersionName: 3.1.0
+      description: BLIS is a portable software framework for instantiating high-performance
+        BLAS-like dense linear algebra libraries.
+      package: blis
+      url: https://github.com/amd/blis
+      versions:
+      - {description: BLIS is a portable software framework for instantiating high-performance
+          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
+        versionName: '2.1'}
+      - {description: BLIS is a portable software framework for instantiating high-performance
+          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
+        versionName: 2.2.4}
+      - {description: BLIS is a portable software framework for instantiating high-performance
+          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
+        versionName: 3.1.0}
     - categories: math, statistics
       defaultVersionName: '1.3'
       description: GNU datamash is a command-line program which performs basic numeric,
@@ -3169,22 +3196,14 @@ software_modules:
         versionName: 0.3.28}
       - {description: OpenBLAS is an optimized BLAS library, family: blas, markedDefault: true,
         versionName: 0.3.10}
-    - categories: math, numerical library
-      defaultVersionName: 3.1.0
-      description: BLIS is a portable software framework for instantiating high-performance
-        BLAS-like dense linear algebra libraries.
-      package: blis
-      url: https://github.com/amd/blis
+    - categories: math, deep learning
+      defaultVersionName: 2.1.2_py312
+      description: PyTorch Extension Library of Optimized Scatter Operations.
+      package: py-torch-scatter
+      url: https://github.com/rusty1s/pytorch_scatter
       versions:
-      - {description: BLIS is a portable software framework for instantiating high-performance
-          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
-        versionName: '2.1'}
-      - {description: BLIS is a portable software framework for instantiating high-performance
-          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
-        versionName: 2.2.4}
-      - {description: BLIS is a portable software framework for instantiating high-performance
-          BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
-        versionName: 3.1.0}
+      - {description: PyTorch Extension Library of Optimized Scatter Operations.,
+        markedDefault: false, versionName: 2.1.2_py312}
     - categories: math, numerical library
       defaultVersionName: '2.7'
       description: The GNU Scientific Library (GSL) is a numerical library for C and
@@ -3212,91 +3231,6 @@ software_modules:
       url: https://mumps-solver.org/
       versions:
       - {description: A parallel sparse direct solver., markedDefault: false, versionName: 5.1.2}
-    - categories: math, optimization
-      defaultVersionName: 2.10.0_py39
-      description: Optuna is an automatic hyperparameter optimization software framework,
-        particularly designed for machine learning.
-      package: py-optuna
-      url: https://optuna.readthedocs.io/
-      versions:
-      - {description: 'Optuna is an automatic hyperparameter optimization software
-          framework, particularly designed for machine learning.', markedDefault: false,
-        versionName: 2.10.0_py39}
-    - categories: math, linear algebra
-      defaultVersionName: 0.3.0.9
-      description: NVIDIA cuDSS is an optimized, first-generation GPU-accelerated
-        Direct Sparse Solver library for solving linear systems with very sparse matrices.
-      package: cudss
-      url: https://developer.nvidia.com/cudss
-      versions:
-      - description: NVIDIA cuDSS is an optimized, first-generation GPU-accelerated
-          Direct Sparse Solver library for solving linear systems with very sparse
-          matrices.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.3.0.9
-    - categories: math, deep learning
-      defaultVersionName: 2.0.2.5
-      description: GPU-accelerated tensor linear algebra library.
-      package: cutensor
-      url: https://developer.nvidia.com/cutensor
-      versions:
-      - description: GPU-accelerated tensor linear algebra library.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 1.2.0
-      - description: GPU-accelerated tensor linear algebra library.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 1.5.0.3
-      - description: GPU-accelerated tensor linear algebra library.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.0.2.5
-    - categories: math, deep learning
-      defaultVersionName: 1.0.1_py27
-      description: Theano is a Python library that allows you to define, optimize,
-        and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
-      package: py-theano
-      url: http://deeplearning.net/software/theano
-      versions:
-      - description: Theano is a Python library that allows you to define, optimize,
-          and evaluate mathematical expressions involving multi-dimensional arrays
-          efficiently.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 1.0.1_py27
-    - categories: math, numerical library
-      defaultVersionName: 3.1.3
-      description: FlexiBLAS is a BLAS and LAPACK wrapper library with runtime exchangeable
-        backends.
-      package: flexiblas
-      url: https://github.com/mpimd-csc/flexiblas
-      versions:
-      - {description: FlexiBLAS is a BLAS and LAPACK wrapper library with runtime
-          exchangeable backends., family: blas, markedDefault: false, versionName: 3.1.3}
-    - categories: math, computational geometry
-      defaultVersionName: '4.11'
-      description: A mesh and field I/O library and scientific database.
-      package: silo
-      url: https://wci.llnl.gov/simulation/computer-codes/silo
-      versions:
-      - {description: A mesh and field I/O library and scientific database., markedDefault: false,
-        versionName: '4.11'}
-    - categories: math, numerical library
-      defaultVersionName: 0.4_py39
-      description: The MPI-IS Mesh Processing Library contains core functions for
-        manipulating meshes and visualizing them.
-      package: py-psbody-mesh
-      url: https://github.com/MPI-IS/mesh
-      versions:
-      - {description: The MPI-IS Mesh Processing Library contains core functions for
-          manipulating meshes and visualizing them., markedDefault: false, versionName: 0.4_py39}
     - categories: math, deep learning
       defaultVersionName: 9.4.0
       description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
@@ -3388,131 +3322,76 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 9.4.0
-    - categories: math, topic modelling
-      defaultVersionName: 4.2.0_py39
-      description: Gensim is a Python library for topic modelling, document indexing
-        and similarity retrieval with large corpora.
-      package: py-gensim
-      url: https://radimrehurek.com/gensim/
+    - categories: math, linear algebra
+      defaultVersionName: 0.3.0.9
+      description: NVIDIA cuDSS is an optimized, first-generation GPU-accelerated
+        Direct Sparse Solver library for solving linear systems with very sparse matrices.
+      package: cudss
+      url: https://developer.nvidia.com/cudss
       versions:
-      - {description: 'Gensim is a Python library for topic modelling, document indexing
-          and similarity retrieval with large corpora.', markedDefault: false, versionName: 4.2.0_py39}
-    - categories: math, symbolic
-      defaultVersionName: 0.12.3_py39
-      description: High-Performance Symbolic Regression in Python and Julia.
-      package: py-pysr
-      url: https://github.com/MilesCranmer/PySR
+      - description: NVIDIA cuDSS is an optimized, first-generation GPU-accelerated
+          Direct Sparse Solver library for solving linear systems with very sparse
+          matrices.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.3.0.9
+    - categories: math, deep learning
+      defaultVersionName: 2.0.2.5
+      description: GPU-accelerated tensor linear algebra library.
+      package: cutensor
+      url: https://developer.nvidia.com/cutensor
       versions:
-      - {description: High-Performance Symbolic Regression in Python and Julia., markedDefault: false,
-        versionName: 0.12.3_py39}
-    - categories: math, machine learning
-      defaultVersionName: 2.18.0_py312
-      description: Hugging Face Datasets is a library for easily accessing and sharing
-        datasets for Audio, Computer Vision, and Natural Language Processing (NLP)
-        tasks.
-      package: py-datasets
-      url: https://huggingface.co/docs/datasets
-      versions:
-      - {description: 'Hugging Face Datasets is a library for easily accessing and
-          sharing datasets for Audio, Computer Vision, and Natural Language Processing
-          (NLP) tasks.', markedDefault: false, versionName: 2.18.0_py312}
+      - description: GPU-accelerated tensor linear algebra library.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.2.0
+      - description: GPU-accelerated tensor linear algebra library.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.5.0.3
+      - description: GPU-accelerated tensor linear algebra library.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.0.2.5
     - categories: math, numerical library
-      defaultVersionName: 2.2.0
-      description: ScaLAPACK is a library of high-performance linear algebra routines
-        for parallel distributed memory machines.
-      package: scalapack
-      url: http://www.netlib.org/scalapack/
+      defaultVersionName: 1.1.2
+      description: qrupdate is a Fortran library for fast updates of QR and Cholesky
+        decompositions.
+      package: qrupdate
+      url: https://sourceforge.net/projects/qrupdate/
       versions:
-      - description: ScaLAPACK is a library of high-performance linear algebra routines
-          for parallel distributed memory machines.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 2.0.2
-      - description: ScaLAPACK is a library of high-performance linear algebra routines
-          for parallel distributed memory machines.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: '2.1'
-      - description: ScaLAPACK is a library of high-performance linear algebra routines
-          for parallel distributed memory machines.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 2.2.0
-    - categories: math, statistics
-      defaultVersionName: '9.4'
-      description: SAS is a software suite developed by SAS Institute for advanced
-        analytics, multivariate analyses, business intelligence, data management,
-        and predictive analytics.
-      package: sas
-      url: http://www.sas.com/
+      - {description: qrupdate is a Fortran library for fast updates of QR and Cholesky
+          decompositions., markedDefault: false, versionName: 1.1.2}
+    - categories: math, numerical library
+      defaultVersionName: 3.1.3
+      description: FlexiBLAS is a BLAS and LAPACK wrapper library with runtime exchangeable
+        backends.
+      package: flexiblas
+      url: https://github.com/mpimd-csc/flexiblas
       versions:
-      - description: SAS is a software suite developed by SAS Institute for advanced
-          analytics, multivariate analyses, business intelligence, data management,
-          and predictive analytics.
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: '9.4'
+      - {description: FlexiBLAS is a BLAS and LAPACK wrapper library with runtime
+          exchangeable backends., family: blas, markedDefault: false, versionName: 3.1.3}
     - categories: math, computational geometry
-      defaultVersionName: '2015.2'
-      description: Qhull computes the convex hull, Delaunay triangulation, Voronoi
-        diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
-        and furthest-site Voronoi diagram.
-      package: qhull
-      url: http://www.qhull.org/
+      defaultVersionName: '4.11'
+      description: A mesh and field I/O library and scientific database.
+      package: silo
+      url: https://wci.llnl.gov/simulation/computer-codes/silo
       versions:
-      - {description: 'Qhull computes the convex hull, Delaunay triangulation, Voronoi
-          diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
-          and furthest-site Voronoi diagram.', markedDefault: false, versionName: '2015.2'}
+      - {description: A mesh and field I/O library and scientific database., markedDefault: false,
+        versionName: '4.11'}
     - categories: math, numerical library
-      defaultVersionName: 1.2.1
-      description: GNU MPC is a C library for the arithmetic of complex numbers with
-        arbitrarily high precision and correct rounding of the result.
-      package: mpc
-      url: http://www.multiprecision.org/mpc
+      defaultVersionName: 0.4_py39
+      description: The MPI-IS Mesh Processing Library contains core functions for
+        manipulating meshes and visualizing them.
+      package: py-psbody-mesh
+      url: https://github.com/MPI-IS/mesh
       versions:
-      - {description: GNU MPC is a C library for the arithmetic of complex numbers
-          with arbitrarily high precision and correct rounding of the result., markedDefault: false,
-        versionName: 1.2.1}
-    - categories: math, numerical library
-      defaultVersionName: 6.0.4
-      description: Software package and libraries for sequential and parallel graph
-        partitioning, static mapping and clustering, sequential mesh and hypergraph
-        partitioning, and sequential and parallel sparse matrix block ordering.
-      package: scotch
-      url: http://www.labri.fr/perso/pelegrin/scotch
-      versions:
-      - description: Software package and libraries for sequential and parallel graph
-          partitioning, static mapping and clustering, sequential mesh and hypergraph
-          partitioning, and sequential and parallel sparse matrix block ordering.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 6.0.4
-    - categories: math, numerical library
-      defaultVersionName: 3.9.0
-      description: Collection of Fortran77 subroutines designed to solve large scale
-        eigenvalue problems.
-      package: arpack
-      url: https://github.com/opencollab/arpack-ng
-      versions:
-      - {description: Collection of Fortran77 subroutines designed to solve large
-          scale eigenvalue problems., markedDefault: false, versionName: 3.5.0}
-      - description: Collection of Fortran77 subroutines designed to solve large scale
-          eigenvalue problems.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 3.7.0
-      - description: Collection of Fortran77 subroutines designed to solve large scale
-          eigenvalue problems.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 3.9.0
+      - {description: The MPI-IS Mesh Processing Library contains core functions for
+          manipulating meshes and visualizing them., markedDefault: false, versionName: 0.4_py39}
     - categories: math, numerical analysis
       defaultVersionName: R2022b
       description: MATLAB is a multi-paradigm numerical computing environment and
@@ -3569,6 +3448,153 @@ software_modules:
         properties:
           license: {restricted: 1}
         versionName: R2022b
+    - categories: math, topic modelling
+      defaultVersionName: 4.2.0_py39
+      description: Gensim is a Python library for topic modelling, document indexing
+        and similarity retrieval with large corpora.
+      package: py-gensim
+      url: https://radimrehurek.com/gensim/
+      versions:
+      - {description: 'Gensim is a Python library for topic modelling, document indexing
+          and similarity retrieval with large corpora.', markedDefault: false, versionName: 4.2.0_py39}
+    - categories: math, symbolic
+      defaultVersionName: 0.12.3_py39
+      description: High-Performance Symbolic Regression in Python and Julia.
+      package: py-pysr
+      url: https://github.com/MilesCranmer/PySR
+      versions:
+      - {description: High-Performance Symbolic Regression in Python and Julia., markedDefault: false,
+        versionName: 0.12.3_py39}
+    - categories: math, machine learning
+      defaultVersionName: 2.18.0_py312
+      description: Hugging Face Datasets is a library for easily accessing and sharing
+        datasets for Audio, Computer Vision, and Natural Language Processing (NLP)
+        tasks.
+      package: py-datasets
+      url: https://huggingface.co/docs/datasets
+      versions:
+      - {description: 'Hugging Face Datasets is a library for easily accessing and
+          sharing datasets for Audio, Computer Vision, and Natural Language Processing
+          (NLP) tasks.', markedDefault: false, versionName: 2.18.0_py312}
+    - categories: math, numerical library
+      defaultVersionName: 2.2.0
+      description: ScaLAPACK is a library of high-performance linear algebra routines
+        for parallel distributed memory machines.
+      package: scalapack
+      url: http://www.netlib.org/scalapack/
+      versions:
+      - description: ScaLAPACK is a library of high-performance linear algebra routines
+          for parallel distributed memory machines.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 2.0.2
+      - description: ScaLAPACK is a library of high-performance linear algebra routines
+          for parallel distributed memory machines.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '2.1'
+      - description: ScaLAPACK is a library of high-performance linear algebra routines
+          for parallel distributed memory machines.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 2.2.0
+    - categories: math, computational geometry
+      defaultVersionName: '2015.2'
+      description: Qhull computes the convex hull, Delaunay triangulation, Voronoi
+        diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
+        and furthest-site Voronoi diagram.
+      package: qhull
+      url: http://www.qhull.org/
+      versions:
+      - {description: 'Qhull computes the convex hull, Delaunay triangulation, Voronoi
+          diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
+          and furthest-site Voronoi diagram.', markedDefault: false, versionName: '2015.2'}
+    - categories: math, numerical library
+      defaultVersionName: 1.2.1
+      description: GNU MPC is a C library for the arithmetic of complex numbers with
+        arbitrarily high precision and correct rounding of the result.
+      package: mpc
+      url: http://www.multiprecision.org/mpc
+      versions:
+      - {description: GNU MPC is a C library for the arithmetic of complex numbers
+          with arbitrarily high precision and correct rounding of the result., markedDefault: false,
+        versionName: 1.2.1}
+    - categories: math, statistics
+      defaultVersionName: '9.4'
+      description: SAS is a software suite developed by SAS Institute for advanced
+        analytics, multivariate analyses, business intelligence, data management,
+        and predictive analytics.
+      package: sas
+      url: http://www.sas.com/
+      versions:
+      - description: SAS is a software suite developed by SAS Institute for advanced
+          analytics, multivariate analyses, business intelligence, data management,
+          and predictive analytics.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: '9.4'
+    - categories: math, numerical library
+      defaultVersionName: 6.0.4
+      description: Software package and libraries for sequential and parallel graph
+        partitioning, static mapping and clustering, sequential mesh and hypergraph
+        partitioning, and sequential and parallel sparse matrix block ordering.
+      package: scotch
+      url: http://www.labri.fr/perso/pelegrin/scotch
+      versions:
+      - description: Software package and libraries for sequential and parallel graph
+          partitioning, static mapping and clustering, sequential mesh and hypergraph
+          partitioning, and sequential and parallel sparse matrix block ordering.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 6.0.4
+    - categories: math, numerical library
+      defaultVersionName: 3.9.0
+      description: Collection of Fortran77 subroutines designed to solve large scale
+        eigenvalue problems.
+      package: arpack
+      url: https://github.com/opencollab/arpack-ng
+      versions:
+      - {description: Collection of Fortran77 subroutines designed to solve large
+          scale eigenvalue problems., markedDefault: false, versionName: 3.5.0}
+      - description: Collection of Fortran77 subroutines designed to solve large scale
+          eigenvalue problems.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 3.7.0
+      - description: Collection of Fortran77 subroutines designed to solve large scale
+          eigenvalue problems.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 3.9.0
+    - categories: math, numerical library
+      defaultVersionName: 3.18.5
+      description: PETSc, the Portable, Extensible Toolkit for Scientific Computation,
+        is a suite of data structures and routines for the scalable (parallel) solution
+        of scientific applications modeled by partial differential equations.
+      package: petsc
+      url: http://petsc.org
+      versions:
+      - description: PETSc is a suite of data structures and routines for the scalable
+          (parallel) solution of scientific applications modeled by partial differential
+          equations.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 3.10.3
+      - description: PETSc, the Portable, Extensible Toolkit for Scientific Computation,
+          is a suite of data structures and routines for the scalable (parallel) solution
+          of scientific applications modeled by partial differential equations.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 3.18.5
     - categories: math, numerical library
       defaultVersionName: 3.18.2
       description: SLEPc is a Scalable Library for Eigenvalue Problem Computations.
@@ -3646,28 +3672,6 @@ software_modules:
           solving large-scale linear programming (LP), mixed integer programming (MIP),
           and other related problems.', markedDefault: false, versionName: '4.63'}
     - categories: math, numerical library
-      defaultVersionName: 3.18.5
-      description: PETSc, the Portable, Extensible Toolkit for Scientific Computation,
-        is a suite of data structures and routines for the scalable (parallel) solution
-        of scientific applications modeled by partial differential equations.
-      package: petsc
-      url: http://petsc.org
-      versions:
-      - description: PETSc is a suite of data structures and routines for the scalable
-          (parallel) solution of scientific applications modeled by partial differential
-          equations.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 3.10.3
-      - description: PETSc, the Portable, Extensible Toolkit for Scientific Computation,
-          is a suite of data structures and routines for the scalable (parallel) solution
-          of scientific applications modeled by partial differential equations.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 3.18.5
-    - categories: math, numerical library
       defaultVersionName: 4.0.3
       description: ParMETIS is an MPI-based parallel library that implements a variety
         of algorithms for partitioning unstructured graphs, meshes, and for computing
@@ -3682,6 +3686,16 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 4.0.3
+    - categories: math, optimization
+      defaultVersionName: 2.10.0_py39
+      description: Optuna is an automatic hyperparameter optimization software framework,
+        particularly designed for machine learning.
+      package: py-optuna
+      url: https://optuna.readthedocs.io/
+      versions:
+      - {description: 'Optuna is an automatic hyperparameter optimization software
+          framework, particularly designed for machine learning.', markedDefault: false,
+        versionName: 2.10.0_py39}
     - categories: math, optimization
       defaultVersionName: 6.4.1
       description: SUNDIALS is a family of software packages providing robust and
@@ -3704,27 +3718,23 @@ software_modules:
           in Python., markedDefault: false, versionName: 1.6.0_py39}
       - {description: PyWavelets is a free Open Source library for wavelet transforms
           in Python., markedDefault: false, versionName: 1.6.0_py312}
-    - categories: math, optimization
-      defaultVersionName: 11.0.2
-      description: The Gurobi Optimizer is a commercial optimization solver for mathematical
-        programming.
-      package: gurobi
-      url: http://www.gurobi.com
-      versions:
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 7.5.1}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 8.0.1_py27}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 8.0.1_py36}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 9.0.3_py36}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 10.0.1_py39}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 11.0.2}
     - categories: math, deep learning
-      defaultVersionName: 1.12.0_py39
+      defaultVersionName: 0.18.7_py312
+      description: WandB (Weights and Biases) is a machine learning development platform
+        that enables data scientists and machine learning engineers to track, visualize,
+        and reproduce their experiments in real-time.
+      package: py-wandb
+      url: https://wandb.ai
+      versions:
+      - description: WandB (Weights and Biases) is a machine learning development
+          platform that enables data scientists and machine learning engineers to
+          track, visualize, and reproduce their experiments in real-time.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.18.7_py312
+    - categories: math, deep learning
+      defaultVersionName: 1.17.0_py312
       description: ONNX is a open format to represent deep learning models.
       package: py-onnx
       url: https://onnx.ai
@@ -3735,15 +3745,8 @@ software_modules:
         versionName: 1.8.1_py36}
       - {description: ONNX is a open format to represent deep learning models., markedDefault: false,
         versionName: 1.12.0_py39}
-    - categories: math, numerical library
-      defaultVersionName: 2.0.8_py36
-      description: gmpy2 is a C-coded Python extension module that supports multiple-precision
-        arithmetic.
-      package: py-gmpy2
-      url: https://gmpy2.readthedocs.io/
-      versions:
-      - {description: gmpy2 is a C-coded Python extension module that supports multiple-precision
-          arithmetic., markedDefault: false, versionName: 2.0.8_py36}
+      - {description: ONNX is a open format to represent deep learning models., markedDefault: false,
+        versionName: 1.17.0_py312}
     - categories: math, numerical library
       defaultVersionName: 3.1.0
       description: libflame is a portable library for dense matrix computations, providing
@@ -3760,6 +3763,17 @@ software_modules:
       - {description: 'libflame is a portable library for dense matrix computations,
           providing much of the functionality present in LAPACK', markedDefault: false,
         versionName: 3.1.0}
+    - categories: math, technical computing
+      defaultVersionName: 13.1.0
+      description: A symbolic language and platform for modern technical computing.
+      package: mathematica
+      url: http://www.wolfram.com/mathematica
+      versions:
+      - description: A symbolic language and platform for modern technical computing.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: 13.1.0
     - categories: math, deep learning
       defaultVersionName: 8.3.14_py312
       description: Ultra YOLO11 is a cutting-edge, state-of-the-art (SOTA) model that
@@ -3845,26 +3859,25 @@ software_modules:
           arch: {gpu: 1}
         versionName: 13.3.0_py312
     - categories: math, numerical library
-      defaultVersionName: 5.2.1
-      description: SuperLU is a general purpose library for the direct solution of
-        large, sparse, nonsymmetric systems of linear equations.
-      package: superlu
-      url: https://github.com/xiaoyeli/superlu
+      defaultVersionName: 7.4.0
+      description: SuiteSparse is a suite of sparse matrix algorithms.
+      package: suitesparse
+      url: https://people.engr.tamu.edu/davis/suitesparse.html
       versions:
-      - description: SuperLU is a general purpose library for the direct solution
-          of large, sparse, nonsymmetric systems of linear equations.
+      - description: SuiteSparse is a suite of sparse matrix algorithms.
         markedDefault: false
         properties:
-          parallel: {mpi: 1}
-        versionName: 5.2.1
-    - categories: math, deep learning
-      defaultVersionName: 2.1.2_py312
-      description: PyTorch Extension Library of Optimized Scatter Operations.
-      package: py-torch-scatter
-      url: https://github.com/rusty1s/pytorch_scatter
+          arch: {gpu: 1}
+        versionName: 7.4.0
+    - categories: math, numerical analysis
+      defaultVersionName: 4.2.1
+      description: GNU Octave is a high-level language primarily intended for numerical
+        computations.
+      package: octave
+      url: https://www.gnu.org/software/octave/
       versions:
-      - {description: PyTorch Extension Library of Optimized Scatter Operations.,
-        markedDefault: false, versionName: 2.1.2_py312}
+      - {description: GNU Octave is a high-level language primarily intended for numerical
+          computations., markedDefault: false, versionName: 4.2.1}
     - categories: math, deep learning
       defaultVersionName: 2.1.5_py27
       description: Keras is a high-level neural networks API, written in Python and
@@ -4207,19 +4220,35 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 3.2.0
-    - categories: physics, cliemate modeling
-      defaultVersionName: '2022.01'
-      description: FRE-NCtools is a collection of tools to help with the creation
-        and manipulation of netCDF files used for climate modeling.
-      package: fre-nctools
-      url: https://github.com/NOAA-GFDL/FRE-NCtools
+    - categories: physics, photonics
+      defaultVersionName: 1.11.1
+      description: MPB is a free software package for computing the band structures,
+        or dispersion relations, and electromagnetic modes of periodic dielectric
+        structures, on both serial and parallel computers.
+      package: mpb
+      url: https://github.com/stevengj/mpb
       versions:
-      - description: FRE-NCtools is a collection of tools to help with the creation
-          and manipulation of netCDF files used for climate modeling.
+      - description: MPB is a free software package for computing the band structures,
+          or dispersion relations, and electromagnetic modes of periodic dielectric
+          structures, on both serial and parallel computers.
         markedDefault: false
         properties:
           parallel: {mpi: 1}
-        versionName: '2022.01'
+        versionName: '1.5'
+      - description: MPB is a free software package for computing the band structures,
+          or dispersion relations, and electromagnetic modes of periodic dielectric
+          structures, on both serial and parallel computers.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.6.2
+      - description: MPB is a free software package for computing the band structures,
+          or dispersion relations, and electromagnetic modes of periodic dielectric
+          structures, on both serial and parallel computers.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.11.1
     - categories: physics, geoscience
       defaultVersionName: 2.2.26
       description: The UDUNITS package from Unidata is a C-based package for the programatic
@@ -4248,14 +4277,19 @@ software_modules:
       versions:
       - {description: An InSAR processing system based on GMT (Generic Mapping Tools).,
         markedDefault: false, versionName: 6.2.2}
-    - categories: physics, CFD
-      defaultVersionName: 7.0.3
-      description: 'SU2: An Open-Source Suite for Multiphysics Simulation and Design'
-      package: su2
-      url: https://su2code.github.io/
+    - categories: physics, physics-ml
+      defaultVersionName: 0.9.0_py312
+      description: NVIDIA Modulus is an open-source framework for building, training,
+        and fine-tuning Physics-ML models with a simple Python interface.
+      package: py-nvidia-modulus
+      url: https://developer.nvidia.com/modulus
       versions:
-      - {description: 'SU2: An Open-Source Suite for Multiphysics Simulation and Design',
-        markedDefault: false, versionName: 7.0.3}
+      - description: NVIDIA Modulus is an open-source framework for building, training,
+          and fine-tuning Physics-ML models with a simple Python interface.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.9.0_py312
     - categories: physics, astronomy
       defaultVersionName: 1.2.2_py36
       description: NaMaster is a C library, Python module and standalone program to
@@ -4381,90 +4415,6 @@ software_modules:
           and quantum dynamics of arbitrary boson, fermion and spin many-body systems.',
         markedDefault: false, versionName: 0.3.5_py36}
     - categories: physics, geoscience
-      defaultVersionName: 0.2.0-20220523
-      description: GEOSX is a simulation framework for modeling coupled flow, transport,
-        and geomechanics in the subsurface.
-      package: geosx
-      url: https://github.com/GEOSX/GEOSX
-      versions:
-      - description: GEOSX is a simulation framework for modeling coupled flow, transport,
-          and geomechanics in the subsurface.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 0.2.0-20220523
-    - categories: physics, particle
-      defaultVersionName: 0.10.0
-      description: OpenMC is a Monte Carlo particle transport simulation code focused
-        on neutron criticality calculations.
-      package: openmc
-      url: https://github.com/openmc-dev/openmc
-      versions:
-      - {description: OpenMC is a Monte Carlo particle transport simulation code focused
-          on neutron criticality calculations., markedDefault: false, versionName: 0.10.0}
-    - categories: physics, quantum information science
-      defaultVersionName: 22.3.0_py39
-      description: NVIDIA cuQuantum Python provides Python bindings and high-level
-        object-oriented models for accessing the full functionalities of NVIDIA cuQuantum
-        SDK from Python.
-      package: py-cuquantum-python
-      url: https://github.com/NVIDIA/cuQuantum
-      versions:
-      - {description: NVIDIA cuQuantum Python provides Python bindings and high-level
-          object-oriented models for accessing the full functionalities of NVIDIA
-          cuQuantum SDK from Python., markedDefault: false, versionName: 22.3.0_py39}
-    - categories: physics, geoscience
-      defaultVersionName: 1.9.5.1_py27
-      description: Python interface to PROJ4 library for cartographic transformations.
-      package: py-pyproj
-      url: https://github.com/jswhit/pyproj
-      versions:
-      - {description: Python interface to PROJ4 library for cartographic transformations.,
-        markedDefault: false, versionName: 1.9.5.1_py36}
-      - {description: Python interface to PROJ4 library for cartographic transformations.,
-        markedDefault: false, versionName: 3.4.0_py39}
-      - {description: Python interface to PROJ4 library for cartographic transformations.,
-        markedDefault: true, versionName: 1.9.5.1_py27}
-    - categories: physics, quantum mechanics
-      defaultVersionName: 4.5.2_py36
-      description: QuTiP is open-source software for simulating the dynamics of closed
-        and open quantum systems.
-      package: py-qutip
-      url: http://qutip.org/
-      versions:
-      - {description: QuTiP is open-source software for simulating the dynamics of
-          closed and open quantum systems., markedDefault: false, versionName: 4.5.2_py36}
-    - categories: physics, photonics
-      defaultVersionName: 1.11.1
-      description: MPB is a free software package for computing the band structures,
-        or dispersion relations, and electromagnetic modes of periodic dielectric
-        structures, on both serial and parallel computers.
-      package: mpb
-      url: https://github.com/stevengj/mpb
-      versions:
-      - description: MPB is a free software package for computing the band structures,
-          or dispersion relations, and electromagnetic modes of periodic dielectric
-          structures, on both serial and parallel computers.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: '1.5'
-      - description: MPB is a free software package for computing the band structures,
-          or dispersion relations, and electromagnetic modes of periodic dielectric
-          structures, on both serial and parallel computers.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 1.6.2
-      - description: MPB is a free software package for computing the band structures,
-          or dispersion relations, and electromagnetic modes of periodic dielectric
-          structures, on both serial and parallel computers.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 1.11.1
-    - categories: physics, geoscience
       defaultVersionName: 8.2.1
       description: PROJ is a generic coordinate transformation software that transforms
         geospatial coordinates from one coordinate reference system (CRS) to another.
@@ -4480,19 +4430,23 @@ software_modules:
       - {description: PROJ is a generic coordinate transformation software that transforms
           geospatial coordinates from one coordinate reference system (CRS) to another.,
         markedDefault: true, versionName: 8.2.1}
-    - categories: physics, quantum information science
-      defaultVersionName: 22.03.0.40
-      description: NVIDIA cuQuantum is an SDK of optimized libraries and tools for
-        accelerating quantum computing workflows.
-      package: cuquantum
-      url: https://developer.nvidia.com/cuquantum-sdk
+    - categories: physics, particle
+      defaultVersionName: 0.10.0
+      description: OpenMC is a Monte Carlo particle transport simulation code focused
+        on neutron criticality calculations.
+      package: openmc
+      url: https://github.com/openmc-dev/openmc
       versions:
-      - description: NVIDIA cuQuantum is an SDK of optimized libraries and tools for
-          accelerating quantum computing workflows.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 22.03.0.40
+      - {description: OpenMC is a Monte Carlo particle transport simulation code focused
+          on neutron criticality calculations., markedDefault: false, versionName: 0.10.0}
+    - categories: physics, CFD
+      defaultVersionName: 7.0.3
+      description: 'SU2: An Open-Source Suite for Multiphysics Simulation and Design'
+      package: su2
+      url: https://su2code.github.io/
+      versions:
+      - {description: 'SU2: An Open-Source Suite for Multiphysics Simulation and Design',
+        markedDefault: false, versionName: 7.0.3}
     - categories: physics, geophysics
       defaultVersionName: 2.5.0
       description: OpenSees is a software framework for developing applications to
@@ -4508,6 +4462,78 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 2.5.0
+    - categories: physics, geoscience
+      defaultVersionName: 1.9.5.1_py27
+      description: Python interface to PROJ4 library for cartographic transformations.
+      package: py-pyproj
+      url: https://github.com/jswhit/pyproj
+      versions:
+      - {description: Python interface to PROJ4 library for cartographic transformations.,
+        markedDefault: false, versionName: 1.9.5.1_py36}
+      - {description: Python interface to PROJ4 library for cartographic transformations.,
+        markedDefault: false, versionName: 3.4.0_py39}
+      - {description: Python interface to PROJ4 library for cartographic transformations.,
+        markedDefault: true, versionName: 1.9.5.1_py27}
+    - categories: physics, geoscience
+      defaultVersionName: 9.01a
+      description: SWASH (an acronym of Simulating WAves till SHore) is a non-hydrostatic
+        wave-flow model.
+      package: swash
+      url: https://swash.sourceforge.io/
+      versions:
+      - description: SWASH (an acronym of Simulating WAves till SHore) is a non-hydrostatic
+          wave-flow model.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 9.01a
+    - categories: physics, geoscience
+      defaultVersionName: 0.2.0-20220523
+      description: GEOSX is a simulation framework for modeling coupled flow, transport,
+        and geomechanics in the subsurface.
+      package: geosx
+      url: https://github.com/GEOSX/GEOSX
+      versions:
+      - description: GEOSX is a simulation framework for modeling coupled flow, transport,
+          and geomechanics in the subsurface.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 0.2.0-20220523
+    - categories: physics, quantum mechanics
+      defaultVersionName: 4.5.2_py36
+      description: QuTiP is open-source software for simulating the dynamics of closed
+        and open quantum systems.
+      package: py-qutip
+      url: http://qutip.org/
+      versions:
+      - {description: QuTiP is open-source software for simulating the dynamics of
+          closed and open quantum systems., markedDefault: false, versionName: 4.5.2_py36}
+    - categories: physics, quantum information science
+      defaultVersionName: 22.03.0.40
+      description: NVIDIA cuQuantum is an SDK of optimized libraries and tools for
+        accelerating quantum computing workflows.
+      package: cuquantum
+      url: https://developer.nvidia.com/cuquantum-sdk
+      versions:
+      - description: NVIDIA cuQuantum is an SDK of optimized libraries and tools for
+          accelerating quantum computing workflows.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 22.03.0.40
+    - categories: physics, quantum information science
+      defaultVersionName: 22.3.0_py39
+      description: NVIDIA cuQuantum Python provides Python bindings and high-level
+        object-oriented models for accessing the full functionalities of NVIDIA cuQuantum
+        SDK from Python.
+      package: py-cuquantum-python
+      url: https://github.com/NVIDIA/cuQuantum
+      versions:
+      - {description: NVIDIA cuQuantum Python provides Python bindings and high-level
+          object-oriented models for accessing the full functionalities of NVIDIA
+          cuQuantum SDK from Python., markedDefault: false, versionName: 22.3.0_py39}
     - categories: physics, materials science
       defaultVersionName: 2022.5.26_py39
       description: Pymatgen (Python Materials Genomics) is a robust, open-source Python
@@ -4534,16 +4560,19 @@ software_modules:
           tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks
           for X-ray astronomical spectral, timing, and imaging data analysis) software
           packages.', markedDefault: false, versionName: 6.26.1}
-    - categories: physics, materials science
-      defaultVersionName: '3.36'
-      description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
-        coupled configurational and vibrational disorder in alloy systems.'
-      package: atat
-      url: https://www.brown.edu/Departments/Engineering/Labs/avdw/atat/
+    - categories: physics, climate modeling
+      defaultVersionName: '2022.01'
+      description: FRE-NCtools is a collection of tools to help with the creation
+        and manipulation of netCDF files used for climate modeling.
+      package: fre-nctools
+      url: https://github.com/NOAA-GFDL/FRE-NCtools
       versions:
-      - {description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
-          coupled configurational and vibrational disorder in alloy systems.', markedDefault: false,
-        versionName: '3.36'}
+      - description: FRE-NCtools is a collection of tools to help with the creation
+          and manipulation of netCDF files used for climate modeling.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '2022.01'
     - categories: physics, geoscience
       defaultVersionName: 3.4.1
       description: GDAL is a translator library for raster and vector geospatial data
@@ -4591,19 +4620,16 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.3.0_py39
-    - categories: physics, geoscience
-      defaultVersionName: 9.01a
-      description: SWASH (an acronym of Simulating WAves till SHore) is a non-hydrostatic
-        wave-flow model.
-      package: swash
-      url: https://swash.sourceforge.io/
+    - categories: physics, materials science
+      defaultVersionName: '3.36'
+      description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
+        coupled configurational and vibrational disorder in alloy systems.'
+      package: atat
+      url: https://www.brown.edu/Departments/Engineering/Labs/avdw/atat/
       versions:
-      - description: SWASH (an acronym of Simulating WAves till SHore) is a non-hydrostatic
-          wave-flow model.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 9.01a
+      - {description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
+          coupled configurational and vibrational disorder in alloy systems.', markedDefault: false,
+        versionName: '3.36'}
   - name: biology
     packages:
     - categories: biology, genomics
@@ -7243,6 +7269,8 @@ software_modules:
       - {description: Python bindings for Google's Protocol Buffers data interchange
           format., markedDefault: false, versionName: 4.21.9_py39}
       - {description: Python bindings for Google's Protocol Buffers data interchange
+          format., markedDefault: false, versionName: 5.29.1_py312}
+      - {description: Python bindings for Google's Protocol Buffers data interchange
           format., markedDefault: true, versionName: 3.4.0_py27}
     - categories: devel, data analytics
       defaultVersionName: 2.3.0
@@ -7548,7 +7576,11 @@ software_modules:
       package: py-cvcuda
       url: https://github.com/CVCUDA/CV-CUDA
       versions:
-      - {description: Python bindings for CV_CUDA., markedDefault: false, versionName: 0.13.0_py312}
+      - description: Python bindings for CV_CUDA.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.13.0_py312
     - categories: devel, lib
       defaultVersionName: 0.3.2_py39
       description: schwimmbad provides a uniform interface to parallel processing
@@ -8439,9 +8471,12 @@ software_modules:
       package: py-dali
       url: https://github.com/NVIDIA/DALI
       versions:
-      - {description: The NVIDIA Data Loading Library (DALI) is a GPU-accelerated
-          library for data loading and pre-processing to accelerate deep learning
-          applications., markedDefault: false, versionName: 1.44.0_py312}
+      - description: The NVIDIA Data Loading Library (DALI) is a GPU-accelerated library
+          for data loading and pre-processing to accelerate deep learning applications.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.44.0_py312
     - categories: devel, lib
       defaultVersionName: 0.24.0_py312
       description: scikit-image is a collection of algorithms for image processing.
