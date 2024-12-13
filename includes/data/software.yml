@@ -5873,39 +5873,19 @@ software_modules:
           Sequencing platforms., markedDefault: false, versionName: 2.2.1_py36}
   - name: chemistry
     packages:
-    - categories: chemistry, quantum chemistry
-      defaultVersionName: '7.1'
-      description: Quantum ESPRESSO is an integrated suite of Open-Source computer
-        codes for electronic-structure calculations and materials modeling at the
-        nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
-      package: quantum-espresso_gpu
-      url: https://www.quantum-espresso.org
+    - categories: chemistry, cheminformatics
+      defaultVersionName: 2018.09.1_py27
+      description: RDKit is a collection of cheminformatics and machine-learning software
+        written in C++ and Python.
+      package: py-rdkit
+      url: http://www.rdkit.org
       versions:
-      - description: GPU-accelerated Quantum ESPRESSO using CUDA FORTRAN
-        family: qe
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '1.1'
-      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
-          codes for electronic-structure calculations and materials modeling at the
-          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
-        family: qe
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '7.0'
-      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
-          codes for electronic-structure calculations and materials modeling at the
-          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
-        family: qe
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '7.1'
+      - {description: RDKit is a collection of cheminformatics and machine-learning
+          software written in C++ and Python., markedDefault: false, versionName: 2018.09.1_py36}
+      - {description: RDKit is a collection of cheminformatics and machine-learning
+          software written in C++ and Python., markedDefault: false, versionName: 2022.09.1_py39}
+      - {description: RDKit is a collection of cheminformatics and machine-learning
+          software written in C++ and Python., markedDefault: true, versionName: 2018.09.1_py27}
     - categories: chemistry, computational chemistry
       defaultVersionName: 2.6.0
       description: Libint computes molecular integrals.
@@ -5918,27 +5898,25 @@ software_modules:
         versionName: 2.0.3}
       - {description: Libint computes molecular integrals., markedDefault: false,
         versionName: 2.6.0}
-    - categories: chemistry, computational chemistry
-      defaultVersionName: g16.B01
-      description: Gaussian is a general purpose computational chemistry software
-        package.
-      package: gaussian
-      url: https://www.gaussian.com
+    - categories: chemistry, molecular dynamics
+      defaultVersionName: '20220426'
+      description: The QUIP package is a collection of software tools to carry out
+        molecular dynamics simulations.
+      package: quip
+      url: https://github.com/libAtoms/QUIP
       versions:
-      - description: Gaussian is a general purpose computational chemistry software
-          package.
+      - description: The QUIP package is a collection of software tools to carry out
+          molecular dynamics simulations.
         markedDefault: false
         properties:
-          arch: {gpu: 1}
-          license: {restricted: 1}
-        versionName: g16.A03
-      - description: Gaussian is a general purpose computational chemistry software
-          package.
+          parallel: {mpi: 1}
+        versionName: '20170901'
+      - description: The QUIP package is a collection of software tools to carry out
+          molecular dynamics simulations.
         markedDefault: false
         properties:
-          arch: {gpu: 1}
-          license: {restricted: 1}
-        versionName: g16.B01
+          parallel: {mpi: 1}
+        versionName: '20220426'
     - categories: chemistry, tools
       defaultVersionName: 3.1.1
       description: Open Babel is a chemical toolbox designed to speak the many languages
@@ -6053,17 +6031,27 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 1.0.0
-    - categories: chemistry, docking
-      defaultVersionName: 1.0.2
-      description: A deep learning framework for molecular docking
-      package: gnina
-      url: https://github.com/gnina/gnina
+    - categories: chemistry, computational chemistry
+      defaultVersionName: g16.B01
+      description: Gaussian is a general purpose computational chemistry software
+        package.
+      package: gaussian
+      url: https://www.gaussian.com
       versions:
-      - description: A deep learning framework for molecular docking
+      - description: Gaussian is a general purpose computational chemistry software
+          package.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-        versionName: 1.0.2
+          license: {restricted: 1}
+        versionName: g16.A03
+      - description: Gaussian is a general purpose computational chemistry software
+          package.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          license: {restricted: 1}
+        versionName: g16.B01
     - categories: chemistry, computational chemistry
       defaultVersionName: 5.2.2
       description: Libxc is a library of exchange-correlation functionals for density-functional
@@ -6100,18 +6088,17 @@ software_modules:
           can be used for the simulation of molecules in gases, fluids, zeolites,
           aluminosilicates, metal-organic frameworks, carbon nanotubes and external
           fields.', markedDefault: false, versionName: 2.0.3_py27}
-    - categories: chemistry, x-ray spectroscopy
-      defaultVersionName: 0.9.80_py312
-      description: Larch is a open-source library and set of applications for processing
-        and analyzing X-ray absorption and fluorescence spectroscopy data and X-ray
-        fluorescence and diffraction image data from synchrotron beamlines.
-      package: py-xraylarch
-      url: https://xraypy.github.io/xraylarch/
+    - categories: chemistry, docking
+      defaultVersionName: 1.0.2
+      description: A deep learning framework for molecular docking
+      package: gnina
+      url: https://github.com/gnina/gnina
       versions:
-      - {description: Larch is a open-source library and set of applications for processing
-          and analyzing X-ray absorption and fluorescence spectroscopy data and X-ray
-          fluorescence and diffraction image data from synchrotron beamlines., markedDefault: false,
-        versionName: 0.9.80_py312}
+      - description: A deep learning framework for molecular docking
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.0.2
     - categories: chemistry, quantum chemistry
       defaultVersionName: '4.1'
       description: CP2K is a quantum chemistry and solid state physics software package
@@ -6320,16 +6307,16 @@ software_modules:
           parallel: {mpi: 1}
         versionName: 2.9.7
     - categories: chemistry, molecular dynamics
-      defaultVersionName: 7.1.1
-      description: A high performance toolkit for molecular simulation.
-      package: openmm
-      url: http://openmm.org
+      defaultVersionName: 1.65.0
+      description: Qbox is a First-Principles Molecular Dynamics code.
+      package: qbox
+      url: http://www.qboxcode.org
       versions:
-      - description: A high performance toolkit for molecular simulation.
+      - description: Qbox is a First-Principles Molecular Dynamics code.
         markedDefault: false
         properties:
-          arch: {gpu: 1}
-        versionName: 7.1.1
+          parallel: {mpi: 1}
+        versionName: 1.65.0
     - categories: chemistry, molecular dynamicx
       defaultVersionName: 0.2.2_py39
       description: FATSLiM stands for “Fast Analysis Toolbox for Simulations of Lipid
@@ -6450,49 +6437,67 @@ software_modules:
       versions:
       - {description: A macromolecular superposition library., markedDefault: false,
         versionName: '1.4'}
-    - categories: chemistry, molecular dynamics
-      defaultVersionName: 1.65.0
-      description: Qbox is a First-Principles Molecular Dynamics code.
-      package: qbox
-      url: http://www.qboxcode.org
+    - categories: chemistry, quantum chemistry
+      defaultVersionName: '7.1'
+      description: Quantum ESPRESSO is an integrated suite of Open-Source computer
+        codes for electronic-structure calculations and materials modeling at the
+        nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
+      package: quantum-espresso_gpu
+      url: https://www.quantum-espresso.org
       versions:
-      - description: Qbox is a First-Principles Molecular Dynamics code.
+      - description: GPU-accelerated Quantum ESPRESSO using CUDA FORTRAN
+        family: qe
         markedDefault: false
         properties:
+          arch: {gpu: 1}
           parallel: {mpi: 1}
-        versionName: 1.65.0
-    - categories: chemistry, cheminformatics
-      defaultVersionName: 2018.09.1_py27
-      description: RDKit is a collection of cheminformatics and machine-learning software
-        written in C++ and Python.
-      package: py-rdkit
-      url: http://www.rdkit.org
-      versions:
-      - {description: RDKit is a collection of cheminformatics and machine-learning
-          software written in C++ and Python., markedDefault: false, versionName: 2018.09.1_py36}
-      - {description: RDKit is a collection of cheminformatics and machine-learning
-          software written in C++ and Python., markedDefault: false, versionName: 2022.09.1_py39}
-      - {description: RDKit is a collection of cheminformatics and machine-learning
-          software written in C++ and Python., markedDefault: true, versionName: 2018.09.1_py27}
-    - categories: chemistry, molecular dynamics
-      defaultVersionName: '20220426'
-      description: The QUIP package is a collection of software tools to carry out
-        molecular dynamics simulations.
-      package: quip
-      url: https://github.com/libAtoms/QUIP
-      versions:
-      - description: The QUIP package is a collection of software tools to carry out
-          molecular dynamics simulations.
+        versionName: '1.1'
+      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
+          codes for electronic-structure calculations and materials modeling at the
+          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
+        family: qe
         markedDefault: false
         properties:
+          arch: {gpu: 1}
           parallel: {mpi: 1}
-        versionName: '20170901'
-      - description: The QUIP package is a collection of software tools to carry out
-          molecular dynamics simulations.
+        versionName: '7.0'
+      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
+          codes for electronic-structure calculations and materials modeling at the
+          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
+        family: qe
         markedDefault: false
         properties:
+          arch: {gpu: 1}
           parallel: {mpi: 1}
-        versionName: '20220426'
+        versionName: '7.1'
+    - categories: chemistry, x-ray spectroscopy
+      defaultVersionName: 0.9.80_py312
+      description: Larch is a open-source library and set of applications for processing
+        and analyzing X-ray absorption and fluorescence spectroscopy data and X-ray
+        fluorescence and diffraction image data from synchrotron beamlines.
+      package: py-xraylarch
+      url: https://xraypy.github.io/xraylarch/
+      versions:
+      - {description: Larch is a open-source library and set of applications for processing
+          and analyzing X-ray absorption and fluorescence spectroscopy data and X-ray
+          fluorescence and diffraction image data from synchrotron beamlines., markedDefault: false,
+        versionName: 0.9.80_py312}
+    - categories: chemistry, tools
+      defaultVersionName: 8.1.1_py312
+      description: Python bindings for Open Babel.
+      package: py-openmm
+      url: http://openbabel.org/
+      versions:
+      - description: A high performance toolkit for molecular simulation.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 7.1.1_py27
+      - description: Python bindings for Open Babel.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 8.1.1_py312
   - name: devel
     packages:
     - categories: devel, build
