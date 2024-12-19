@@ -5873,19 +5873,6 @@ software_modules:
           Sequencing platforms., markedDefault: false, versionName: 2.2.1_py36}
   - name: chemistry
     packages:
-    - categories: chemistry, cheminformatics
-      defaultVersionName: 2018.09.1_py27
-      description: RDKit is a collection of cheminformatics and machine-learning software
-        written in C++ and Python.
-      package: py-rdkit
-      url: http://www.rdkit.org
-      versions:
-      - {description: RDKit is a collection of cheminformatics and machine-learning
-          software written in C++ and Python., markedDefault: false, versionName: 2018.09.1_py36}
-      - {description: RDKit is a collection of cheminformatics and machine-learning
-          software written in C++ and Python., markedDefault: false, versionName: 2022.09.1_py39}
-      - {description: RDKit is a collection of cheminformatics and machine-learning
-          software written in C++ and Python., markedDefault: true, versionName: 2018.09.1_py27}
     - categories: chemistry, computational chemistry
       defaultVersionName: 2.6.0
       description: Libint computes molecular integrals.
@@ -5898,25 +5885,6 @@ software_modules:
         versionName: 2.0.3}
       - {description: Libint computes molecular integrals., markedDefault: false,
         versionName: 2.6.0}
-    - categories: chemistry, molecular dynamics
-      defaultVersionName: '20220426'
-      description: The QUIP package is a collection of software tools to carry out
-        molecular dynamics simulations.
-      package: quip
-      url: https://github.com/libAtoms/QUIP
-      versions:
-      - description: The QUIP package is a collection of software tools to carry out
-          molecular dynamics simulations.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: '20170901'
-      - description: The QUIP package is a collection of software tools to carry out
-          molecular dynamics simulations.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: '20220426'
     - categories: chemistry, tools
       defaultVersionName: 3.1.1
       description: Open Babel is a chemical toolbox designed to speak the many languages
@@ -5926,6 +5894,165 @@ software_modules:
       versions:
       - {description: Open Babel is a chemical toolbox designed to speak the many
           languages of chemical data., markedDefault: false, versionName: 3.1.1}
+    - categories: chemistry, molecular dynamics
+      defaultVersionName: '20230802'
+      description: LAMMPS is a classical molecular dynamics code that models an ensemble
+        of particles in a liquid, solid, or gaseous state.
+      package: lammps
+      url: http://lammps.sandia.gov
+      versions:
+      - description: LAMMPS is a classical molecular dynamics code that models an
+          ensemble of particles in a liquid, solid, or gaseous state.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '20180316'
+      - description: LAMMPS is a classical molecular dynamics code that models an
+          ensemble of particles in a liquid, solid, or gaseous state.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '20200303'
+      - description: LAMMPS is a classical molecular dynamics code that models an
+          ensemble of particles in a liquid, solid, or gaseous state.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '20230802'
+    - categories: chemistry, docking
+      defaultVersionName: 1.0.2
+      description: A deep learning framework for molecular docking
+      package: gnina
+      url: https://github.com/gnina/gnina
+      versions:
+      - description: A deep learning framework for molecular docking
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.0.2
+    - categories: chemistry, computational chemistry
+      defaultVersionName: 5.2.2
+      description: Libxc is a library of exchange-correlation functionals for density-functional
+        theory.
+      package: libxc
+      url: https://www.tddft.org/programs/libxc
+      versions:
+      - {description: Libxc is a library of exchange-correlation functionals for density-functional
+          theory., markedDefault: false, versionName: 3.0.0}
+      - {description: Libxc is a library of exchange-correlation functionals for density-functional
+          theory., markedDefault: false, versionName: 5.2.2}
+    - categories: chemistry, computational chemistry
+      defaultVersionName: 3.22.1_py39
+      description: The Atomic Simulation Environment (ASE) is a set of tools and Python
+        modules for setting up, manipulating, running, visualizing and analyzing atomistic
+        simulations.
+      package: py-ase
+      url: https://wiki.fysik.dtu.dk/ase/
+      versions:
+      - {description: 'The Atomic Simulation Environment (ASE) is a set of tools and
+          Python modules for setting up, manipulating, running, visualizing and analyzing
+          atomistic simulations.', markedDefault: false, versionName: 3.14.1_py27}
+      - {description: 'The Atomic Simulation Environment (ASE) is a set of tools and
+          Python modules for setting up, manipulating, running, visualizing and analyzing
+          atomistic simulations.', markedDefault: false, versionName: 3.22.1_py39}
+    - categories: chemistry, quantum chemistry
+      defaultVersionName: 6.0.0
+      description: ORCA is a flexible, efficient and easy-to-use general purpose tool
+        for quantum chemistry.
+      package: orca
+      url: https://orcaforum.kofo.mpg.de/
+      versions:
+      - description: ORCA is a flexible, efficient and easy-to-use general purpose
+          tool for quantum chemistry.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 4.2.1
+      - description: ORCA is a flexible, efficient and easy-to-use general purpose
+          tool for quantum chemistry.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 5.0.0
+      - description: ORCA is a flexible, efficient and easy-to-use general purpose
+          tool for quantum chemistry.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 5.0.3
+      - description: ORCA is a flexible, efficient and easy-to-use general purpose
+          tool for quantum chemistry.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 6.0.0
+    - categories: chemistry, quantum chemistry
+      defaultVersionName: 2.9.7
+      description: OCEAN is a versatile and user-friendly package for calculating
+        core edge spectroscopy including excitonic effects.
+      package: ocean
+      url: http://monalisa.phys.washington.edu/OCEAN/index.html
+      versions:
+      - description: OCEAN is a versatile and user-friendly package for calculating
+          core edge spectroscopy including excitonic effects.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 2.9.7
+    - categories: chemistry, crystallography
+      defaultVersionName: 2.0.20
+      description: A C++ toolkit for working with macromolecular coordinate files.
+      package: mmdb2
+      url: https://www.ccp4.ac.uk/
+      versions:
+      - {description: A C++ toolkit for working with macromolecular coordinate files.,
+        markedDefault: false, versionName: 2.0.20}
+    - categories: chemistry, computational chemistry
+      defaultVersionName: 7.0.2
+      description: NWChem is an ab initio computational chemistry software package
+        which also includes quantum chemical and molecular dynamics functionality.
+      package: nwchem
+      url: https://nwchemgit.github.io
+      versions:
+      - description: NWChem is an ab initio computational chemistry software package
+          which also includes quantum chemical and molecular dynamics functionality.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '6.8'
+      - description: NWChem is an ab initio computational chemistry software package
+          which also includes quantum chemical and molecular dynamics functionality.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 7.0.2
+    - categories: chemistry, crystallography
+      defaultVersionName: 2.1.20180802
+      description: Crystallographic automation and complex data manipulation libraries.
+      package: clipper
+      url: https://www.ccp4.ac.uk/
+      versions:
+      - {description: Crystallographic automation and complex data manipulation libraries.,
+        markedDefault: false, versionName: 2.1.20180802}
+    - categories: chemistry, cheminformatics
+      defaultVersionName: 2018.09.1_py27
+      description: RDKit is a collection of cheminformatics and machine-learning software
+        written in C++ and Python.
+      package: py-rdkit
+      url: http://www.rdkit.org
+      versions:
+      - {description: RDKit is a collection of cheminformatics and machine-learning
+          software written in C++ and Python., markedDefault: false, versionName: 2018.09.1_py36}
+      - {description: RDKit is a collection of cheminformatics and machine-learning
+          software written in C++ and Python., markedDefault: false, versionName: 2022.09.1_py39}
+      - {description: RDKit is a collection of cheminformatics and machine-learning
+          software written in C++ and Python., markedDefault: false, versionName: 2024.3.2_py312}
+      - {description: RDKit is a collection of cheminformatics and machine-learning
+          software written in C++ and Python., markedDefault: true, versionName: 2018.09.1_py27}
     - categories: chemistry, computational chemistry
       defaultVersionName: 2021-1
       description: Schrödinger Suites (Small-molecule Drug Discovery Suite, Material
@@ -5997,348 +6124,6 @@ software_modules:
           license: {restricted: 1}
           parallel: {mpi: 1}
         versionName: 2021-1
-    - categories: chemistry, quantum chemistry
-      defaultVersionName: 1.95A
-      description: TeraChem is general purpose quantum chemistry software designed
-        to run on NVIDIA GPU architectures.
-      package: terachem
-      url: http://www.petachem.com/
-      versions:
-      - description: TeraChem is general purpose quantum chemistry software designed
-          to run on NVIDIA GPU architectures.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          license: {restricted: 1}
-        versionName: 1.96H-beta
-      - description: TeraChem is general purpose quantum chemistry software designed
-          to run on NVIDIA GPU architectures.
-        markedDefault: true
-        properties:
-          arch: {gpu: 1}
-          license: {restricted: 1}
-        versionName: 1.95A
-    - categories: chemistry, molecular dynamics
-      defaultVersionName: 1.0.0
-      description: A collection of tools for characterizing membrane structure and
-        dynamics within simulated trajectories of molecular systems.
-      package: mosaics
-      url: https://github.com/MOSAICS-NIH/MOSAICS
-      versions:
-      - description: A collection of tools for characterizing membrane structure and
-          dynamics within simulated trajectories of molecular systems.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 1.0.0
-    - categories: chemistry, computational chemistry
-      defaultVersionName: g16.B01
-      description: Gaussian is a general purpose computational chemistry software
-        package.
-      package: gaussian
-      url: https://www.gaussian.com
-      versions:
-      - description: Gaussian is a general purpose computational chemistry software
-          package.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          license: {restricted: 1}
-        versionName: g16.A03
-      - description: Gaussian is a general purpose computational chemistry software
-          package.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          license: {restricted: 1}
-        versionName: g16.B01
-    - categories: chemistry, computational chemistry
-      defaultVersionName: 5.2.2
-      description: Libxc is a library of exchange-correlation functionals for density-functional
-        theory.
-      package: libxc
-      url: https://www.tddft.org/programs/libxc
-      versions:
-      - {description: Libxc is a library of exchange-correlation functionals for density-functional
-          theory., markedDefault: false, versionName: 3.0.0}
-      - {description: Libxc is a library of exchange-correlation functionals for density-functional
-          theory., markedDefault: false, versionName: 5.2.2}
-    - categories: chemistry, molecular dynamics
-      defaultVersionName: 2.3.2
-      description: PLUMED is an open source library for free energy calculations in
-        molecular systems.
-      package: plumed
-      url: http://www.plumed.org/
-      versions:
-      - description: PLUMED is an open source library for free energy calculations
-          in molecular systems.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 2.3.2
-    - categories: chemistry, molecular dynamics
-      defaultVersionName: 2.0.3_py27
-      description: RASPA2 is a general purpose classical simulation package that can
-        be used for the simulation of molecules in gases, fluids, zeolites, aluminosilicates,
-        metal-organic frameworks, carbon nanotubes and external fields.
-      package: py-raspa2
-      url: https://github.com/numat/RASPA2
-      versions:
-      - {description: 'RASPA2 is a general purpose classical simulation package that
-          can be used for the simulation of molecules in gases, fluids, zeolites,
-          aluminosilicates, metal-organic frameworks, carbon nanotubes and external
-          fields.', markedDefault: false, versionName: 2.0.3_py27}
-    - categories: chemistry, docking
-      defaultVersionName: 1.0.2
-      description: A deep learning framework for molecular docking
-      package: gnina
-      url: https://github.com/gnina/gnina
-      versions:
-      - description: A deep learning framework for molecular docking
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 1.0.2
-    - categories: chemistry, quantum chemistry
-      defaultVersionName: '4.1'
-      description: CP2K is a quantum chemistry and solid state physics software package
-        that can perform atomistic simulations of solid state, liquid, molecular,
-        periodic, material, crystal, and biological systems.
-      package: cp2k
-      url: http://www.cp2k.org
-      versions:
-      - description: CP2K is a quantum chemistry and solid state physics software
-          package that can perform atomistic simulations of solid state, liquid, molecular,
-          periodic, material, crystal, and biological systems.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '9.1'
-      - description: CP2K is a quantum chemistry and solid state physics software
-          package that can perform atomistic simulations of solid state, liquid, molecular,
-          periodic, material, crystal, and biological systems.
-        markedDefault: true
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '4.1'
-    - categories: chemistry, computational chemistry
-      defaultVersionName: 3.22.1_py39
-      description: The Atomic Simulation Environment (ASE) is a set of tools and Python
-        modules for setting up, manipulating, running, visualizing and analyzing atomistic
-        simulations.
-      package: py-ase
-      url: https://wiki.fysik.dtu.dk/ase/
-      versions:
-      - {description: 'The Atomic Simulation Environment (ASE) is a set of tools and
-          Python modules for setting up, manipulating, running, visualizing and analyzing
-          atomistic simulations.', markedDefault: false, versionName: 3.14.1_py27}
-      - {description: 'The Atomic Simulation Environment (ASE) is a set of tools and
-          Python modules for setting up, manipulating, running, visualizing and analyzing
-          atomistic simulations.', markedDefault: false, versionName: 3.22.1_py39}
-    - categories: chemistry, tools
-      defaultVersionName: 3.1.1.1_py39
-      description: Python bindings for Open Babel.
-      package: py-openbabel
-      url: http://openbabel.org/
-      versions:
-      - {description: Python bindings for Open Babel., markedDefault: false, versionName: 3.1.1.1_py39}
-    - categories: chemistry, electrostatics
-      defaultVersionName: '1.5'
-      description: APBS solves the equations of continuum electrostatics for large
-        biomolecular assemblages.
-      package: apbs
-      url: http://www.poissonboltzmann.org/
-      versions:
-      - {description: APBS solves the equations of continuum electrostatics for large
-          biomolecular assemblages., markedDefault: false, versionName: '1.5'}
-    - categories: chemistry, quantum chemistry
-      defaultVersionName: 6.0.0
-      description: ORCA is a flexible, efficient and easy-to-use general purpose tool
-        for quantum chemistry.
-      package: orca
-      url: https://orcaforum.kofo.mpg.de/
-      versions:
-      - description: ORCA is a flexible, efficient and easy-to-use general purpose
-          tool for quantum chemistry.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 4.2.1
-      - description: ORCA is a flexible, efficient and easy-to-use general purpose
-          tool for quantum chemistry.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 5.0.0
-      - description: ORCA is a flexible, efficient and easy-to-use general purpose
-          tool for quantum chemistry.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 5.0.3
-      - description: ORCA is a flexible, efficient and easy-to-use general purpose
-          tool for quantum chemistry.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 6.0.0
-    - categories: chemistry, molecular dynamics
-      defaultVersionName: '20230802'
-      description: LAMMPS is a classical molecular dynamics code that models an ensemble
-        of particles in a liquid, solid, or gaseous state.
-      package: lammps
-      url: http://lammps.sandia.gov
-      versions:
-      - description: LAMMPS is a classical molecular dynamics code that models an
-          ensemble of particles in a liquid, solid, or gaseous state.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: '20180316'
-      - description: LAMMPS is a classical molecular dynamics code that models an
-          ensemble of particles in a liquid, solid, or gaseous state.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '20200303'
-      - description: LAMMPS is a classical molecular dynamics code that models an
-          ensemble of particles in a liquid, solid, or gaseous state.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '20230802'
-    - categories: chemistry, molecular dynamics
-      defaultVersionName: '2023.1'
-      description: GROMACS is a versatile package to perform molecular dynamics, i.e.
-        simulate the Newtonian equations of motion for systems with hundreds to millions
-        of particles.
-      package: gromacs
-      url: http://www.gromacs.org
-      versions:
-      - description: GROMACS is a versatile package to perform molecular dynamics,
-          i.e. simulate the Newtonian equations of motion for systems with hundreds
-          to millions of particles.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '2016.3'
-      - description: GROMACS is a versatile package to perform molecular dynamics,
-          i.e. simulate the Newtonian equations of motion for systems with hundreds
-          to millions of particles.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '2018'
-      - description: GROMACS is a versatile package to perform molecular dynamics,
-          i.e. simulate the Newtonian equations of motion for systems with hundreds
-          to millions of particles.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '2021.3'
-      - description: GROMACS is a versatile package to perform molecular dynamics,
-          i.e. simulate the Newtonian equations of motion for systems with hundreds
-          to millions of particles.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '2023.1'
-    - categories: chemistry, quantum chemistry
-      defaultVersionName: '7.1'
-      description: Quantum ESPRESSO is an integrated suite of Open-Source computer
-        codes for electronic-structure calculations and materials modeling at the
-        nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
-      package: quantum-espresso
-      url: https://www.quantum-espresso.org
-      versions:
-      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
-          codes for electronic-structure calculations and materials modeling at the
-          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
-        family: qe
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 6.2.1
-      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
-          codes for electronic-structure calculations and materials modeling at the
-          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
-        family: qe
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: '6.6'
-      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
-          codes for electronic-structure calculations and materials modeling at the
-          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
-        family: qe
-        help: https://www.sherlock.stanford.edu/docs/software/using/quantum-espresso
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: '7.0'
-      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
-          codes for electronic-structure calculations and materials modeling at the
-          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
-        family: qe
-        help: https://www.sherlock.stanford.edu/docs/software/using/quantum-espresso
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: '7.1'
-    - categories: chemistry, quantum chemistry
-      defaultVersionName: 2.9.7
-      description: OCEAN is a versatile and user-friendly package for calculating
-        core edge spectroscopy including excitonic effects.
-      package: ocean
-      url: http://monalisa.phys.washington.edu/OCEAN/index.html
-      versions:
-      - description: OCEAN is a versatile and user-friendly package for calculating
-          core edge spectroscopy including excitonic effects.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 2.9.7
-    - categories: chemistry, molecular dynamics
-      defaultVersionName: 1.65.0
-      description: Qbox is a First-Principles Molecular Dynamics code.
-      package: qbox
-      url: http://www.qboxcode.org
-      versions:
-      - description: Qbox is a First-Principles Molecular Dynamics code.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 1.65.0
-    - categories: chemistry, molecular dynamicx
-      defaultVersionName: 0.2.2_py39
-      description: FATSLiM stands for “Fast Analysis Toolbox for Simulations of Lipid
-        Membranes” and its goal is to provide an efficient, yet robust, tool to extract
-        physical parameters from MD trajectories.
-      package: py-fatslim
-      url: https://fatslim.github.io/
-      versions:
-      - {description: 'FATSLiM stands for “Fast Analysis Toolbox for Simulations of
-          Lipid Membranes” and its goal is to provide an efficient, yet robust, tool
-          to extract physical parameters from MD trajectories.', markedDefault: false,
-        versionName: 0.2.2_py39}
-    - categories: chemistry, crystallography
-      defaultVersionName: 3.4.4
-      description: VESTA is a 3D visualization program for structural models, volumetric
-        data such as electron/nuclear densities, and crystal morphologies.
-      package: vesta
-      url: http://jp-minerals.org/vesta/en/
-      versions:
-      - {description: 'VESTA is a 3D visualization program for structural models,
-          volumetric data such as electron/nuclear densities, and crystal morphologies.',
-        markedDefault: false, versionName: 3.4.4}
     - categories: chemistry, computational chemistry
       defaultVersionName: 5.4.1
       description: The Vienna Ab initio Simulation Package (VASP) is a computer program
@@ -6392,43 +6177,169 @@ software_modules:
           license: {restricted: 1}
           parallel: {mpi: 1}
         versionName: 5.4.1
-    - categories: chemistry, computational chemistry
-      defaultVersionName: 7.0.2
-      description: NWChem is an ab initio computational chemistry software package
-        which also includes quantum chemical and molecular dynamics functionality.
-      package: nwchem
-      url: https://nwchemgit.github.io
+    - categories: chemistry, molecular dynamics
+      defaultVersionName: 2.3.2
+      description: PLUMED is an open source library for free energy calculations in
+        molecular systems.
+      package: plumed
+      url: http://www.plumed.org/
       versions:
-      - description: NWChem is an ab initio computational chemistry software package
-          which also includes quantum chemical and molecular dynamics functionality.
+      - description: PLUMED is an open source library for free energy calculations
+          in molecular systems.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 2.3.2
+    - categories: chemistry, molecular dynamics
+      defaultVersionName: 2.0.3_py27
+      description: RASPA2 is a general purpose classical simulation package that can
+        be used for the simulation of molecules in gases, fluids, zeolites, aluminosilicates,
+        metal-organic frameworks, carbon nanotubes and external fields.
+      package: py-raspa2
+      url: https://github.com/numat/RASPA2
+      versions:
+      - {description: 'RASPA2 is a general purpose classical simulation package that
+          can be used for the simulation of molecules in gases, fluids, zeolites,
+          aluminosilicates, metal-organic frameworks, carbon nanotubes and external
+          fields.', markedDefault: false, versionName: 2.0.3_py27}
+    - categories: chemistry, quantum chemistry
+      defaultVersionName: '4.1'
+      description: CP2K is a quantum chemistry and solid state physics software package
+        that can perform atomistic simulations of solid state, liquid, molecular,
+        periodic, material, crystal, and biological systems.
+      package: cp2k
+      url: http://www.cp2k.org
+      versions:
+      - description: CP2K is a quantum chemistry and solid state physics software
+          package that can perform atomistic simulations of solid state, liquid, molecular,
+          periodic, material, crystal, and biological systems.
         markedDefault: false
         properties:
           arch: {gpu: 1}
           parallel: {mpi: 1}
-        versionName: '6.8'
-      - description: NWChem is an ab initio computational chemistry software package
-          which also includes quantum chemical and molecular dynamics functionality.
+        versionName: '9.1'
+      - description: CP2K is a quantum chemistry and solid state physics software
+          package that can perform atomistic simulations of solid state, liquid, molecular,
+          periodic, material, crystal, and biological systems.
+        markedDefault: true
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '4.1'
+    - categories: chemistry, tools
+      defaultVersionName: 3.1.1.1_py39
+      description: Python bindings for Open Babel.
+      package: py-openbabel
+      url: http://openbabel.org/
+      versions:
+      - {description: Python bindings for Open Babel., markedDefault: false, versionName: 3.1.1.1_py39}
+    - categories: chemistry, modelling
+      defaultVersionName: 0.3.2_py312
+      description: Boltz-1 is the state-of-the-art open-source model that predicts
+        the 3D structure of proteins, RNA, DNA, and small molecules.
+      package: py-boltz
+      url: https://jclinic.mit.edu/boltz-1/
+      versions:
+      - description: Boltz-1 is the state-of-the-art open-source model that predicts
+          the 3D structure of proteins, RNA, DNA, and small molecules.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.3.2_py312
+    - categories: chemistry, molecular dynamics
+      defaultVersionName: '2023.1'
+      description: GROMACS is a versatile package to perform molecular dynamics, i.e.
+        simulate the Newtonian equations of motion for systems with hundreds to millions
+        of particles.
+      package: gromacs
+      url: http://www.gromacs.org
+      versions:
+      - description: GROMACS is a versatile package to perform molecular dynamics,
+          i.e. simulate the Newtonian equations of motion for systems with hundreds
+          to millions of particles.
         markedDefault: false
         properties:
           arch: {gpu: 1}
           parallel: {mpi: 1}
-        versionName: 7.0.2
-    - categories: chemistry, crystallography
-      defaultVersionName: 2.1.20180802
-      description: Crystallographic automation and complex data manipulation libraries.
-      package: clipper
-      url: https://www.ccp4.ac.uk/
+        versionName: '2016.3'
+      - description: GROMACS is a versatile package to perform molecular dynamics,
+          i.e. simulate the Newtonian equations of motion for systems with hundreds
+          to millions of particles.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '2018'
+      - description: GROMACS is a versatile package to perform molecular dynamics,
+          i.e. simulate the Newtonian equations of motion for systems with hundreds
+          to millions of particles.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '2021.3'
+      - description: GROMACS is a versatile package to perform molecular dynamics,
+          i.e. simulate the Newtonian equations of motion for systems with hundreds
+          to millions of particles.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '2023.1'
+    - categories: chemistry, molecular dynamics
+      defaultVersionName: '20220426'
+      description: The QUIP package is a collection of software tools to carry out
+        molecular dynamics simulations.
+      package: quip
+      url: https://github.com/libAtoms/QUIP
       versions:
-      - {description: Crystallographic automation and complex data manipulation libraries.,
-        markedDefault: false, versionName: 2.1.20180802}
-    - categories: chemistry, crystallography
-      defaultVersionName: 2.0.20
-      description: A C++ toolkit for working with macromolecular coordinate files.
-      package: mmdb2
-      url: https://www.ccp4.ac.uk/
+      - description: The QUIP package is a collection of software tools to carry out
+          molecular dynamics simulations.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '20170901'
+      - description: The QUIP package is a collection of software tools to carry out
+          molecular dynamics simulations.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '20220426'
+    - categories: chemistry, x-ray spectroscopy
+      defaultVersionName: 0.9.80_py312
+      description: Larch is a open-source library and set of applications for processing
+        and analyzing X-ray absorption and fluorescence spectroscopy data and X-ray
+        fluorescence and diffraction image data from synchrotron beamlines.
+      package: py-xraylarch
+      url: https://xraypy.github.io/xraylarch/
       versions:
-      - {description: A C++ toolkit for working with macromolecular coordinate files.,
-        markedDefault: false, versionName: 2.0.20}
+      - {description: Larch is a open-source library and set of applications for processing
+          and analyzing X-ray absorption and fluorescence spectroscopy data and X-ray
+          fluorescence and diffraction image data from synchrotron beamlines., markedDefault: false,
+        versionName: 0.9.80_py312}
+    - categories: chemistry, molecular dynamics
+      defaultVersionName: 1.65.0
+      description: Qbox is a First-Principles Molecular Dynamics code.
+      package: qbox
+      url: http://www.qboxcode.org
+      versions:
+      - description: Qbox is a First-Principles Molecular Dynamics code.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.65.0
+    - categories: chemistry, molecular dynamicx
+      defaultVersionName: 0.2.2_py39
+      description: FATSLiM stands for “Fast Analysis Toolbox for Simulations of Lipid
+        Membranes” and its goal is to provide an efficient, yet robust, tool to extract
+        physical parameters from MD trajectories.
+      package: py-fatslim
+      url: https://fatslim.github.io/
+      versions:
+      - {description: 'FATSLiM stands for “Fast Analysis Toolbox for Simulations of
+          Lipid Membranes” and its goal is to provide an efficient, yet robust, tool
+          to extract physical parameters from MD trajectories.', markedDefault: false,
+        versionName: 0.2.2_py39}
     - categories: chemistry, crystallography
       defaultVersionName: '1.4'
       description: A macromolecular superposition library.
@@ -6437,6 +6348,122 @@ software_modules:
       versions:
       - {description: A macromolecular superposition library., markedDefault: false,
         versionName: '1.4'}
+    - categories: chemistry, quantum chemistry
+      defaultVersionName: 1.95A
+      description: TeraChem is general purpose quantum chemistry software designed
+        to run on NVIDIA GPU architectures.
+      package: terachem
+      url: http://www.petachem.com/
+      versions:
+      - description: TeraChem is general purpose quantum chemistry software designed
+          to run on NVIDIA GPU architectures.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          license: {restricted: 1}
+        versionName: 1.96H-beta
+      - description: TeraChem is general purpose quantum chemistry software designed
+          to run on NVIDIA GPU architectures.
+        markedDefault: true
+        properties:
+          arch: {gpu: 1}
+          license: {restricted: 1}
+        versionName: 1.95A
+    - categories: chemistry, quantum chemistry
+      defaultVersionName: '7.1'
+      description: Quantum ESPRESSO is an integrated suite of Open-Source computer
+        codes for electronic-structure calculations and materials modeling at the
+        nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
+      package: quantum-espresso
+      url: https://www.quantum-espresso.org
+      versions:
+      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
+          codes for electronic-structure calculations and materials modeling at the
+          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
+        family: qe
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 6.2.1
+      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
+          codes for electronic-structure calculations and materials modeling at the
+          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
+        family: qe
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '6.6'
+      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
+          codes for electronic-structure calculations and materials modeling at the
+          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
+        family: qe
+        help: https://www.sherlock.stanford.edu/docs/software/using/quantum-espresso
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '7.0'
+      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
+          codes for electronic-structure calculations and materials modeling at the
+          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
+        family: qe
+        help: https://www.sherlock.stanford.edu/docs/software/using/quantum-espresso
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '7.1'
+    - categories: chemistry, molecular dynamics
+      defaultVersionName: 1.0.0
+      description: A collection of tools for characterizing membrane structure and
+        dynamics within simulated trajectories of molecular systems.
+      package: mosaics
+      url: https://github.com/MOSAICS-NIH/MOSAICS
+      versions:
+      - description: A collection of tools for characterizing membrane structure and
+          dynamics within simulated trajectories of molecular systems.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.0.0
+    - categories: chemistry, computational chemistry
+      defaultVersionName: g16.B01
+      description: Gaussian is a general purpose computational chemistry software
+        package.
+      package: gaussian
+      url: https://www.gaussian.com
+      versions:
+      - description: Gaussian is a general purpose computational chemistry software
+          package.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          license: {restricted: 1}
+        versionName: g16.A03
+      - description: Gaussian is a general purpose computational chemistry software
+          package.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          license: {restricted: 1}
+        versionName: g16.B01
+    - categories: chemistry, electrostatics
+      defaultVersionName: '1.5'
+      description: APBS solves the equations of continuum electrostatics for large
+        biomolecular assemblages.
+      package: apbs
+      url: http://www.poissonboltzmann.org/
+      versions:
+      - {description: APBS solves the equations of continuum electrostatics for large
+          biomolecular assemblages., markedDefault: false, versionName: '1.5'}
+    - categories: chemistry, crystallography
+      defaultVersionName: 3.4.4
+      description: VESTA is a 3D visualization program for structural models, volumetric
+        data such as electron/nuclear densities, and crystal morphologies.
+      package: vesta
+      url: http://jp-minerals.org/vesta/en/
+      versions:
+      - {description: 'VESTA is a 3D visualization program for structural models,
+          volumetric data such as electron/nuclear densities, and crystal morphologies.',
+        markedDefault: false, versionName: 3.4.4}
     - categories: chemistry, quantum chemistry
       defaultVersionName: '7.1'
       description: Quantum ESPRESSO is an integrated suite of Open-Source computer
@@ -6470,18 +6497,6 @@ software_modules:
           arch: {gpu: 1}
           parallel: {mpi: 1}
         versionName: '7.1'
-    - categories: chemistry, x-ray spectroscopy
-      defaultVersionName: 0.9.80_py312
-      description: Larch is a open-source library and set of applications for processing
-        and analyzing X-ray absorption and fluorescence spectroscopy data and X-ray
-        fluorescence and diffraction image data from synchrotron beamlines.
-      package: py-xraylarch
-      url: https://xraypy.github.io/xraylarch/
-      versions:
-      - {description: Larch is a open-source library and set of applications for processing
-          and analyzing X-ray absorption and fluorescence spectroscopy data and X-ray
-          fluorescence and diffraction image data from synchrotron beamlines., markedDefault: false,
-        versionName: 0.9.80_py312}
     - categories: chemistry, molecular dynamics
       defaultVersionName: 8.1.1_py312
       description: A high performance toolkit for molecular simulation.
@@ -8625,7 +8640,7 @@ software_modules:
           arch: {gpu: 1}
         versionName: 1.0.0
     - categories: devel, lib
-      defaultVersionName: 1.79.0
+      defaultVersionName: 1.87.0
       description: Boost is a set of libraries for the C++ programming language that
         provide support for tasks and structures such as linear algebra, pseudorandom
         number generation, multithreading, image processing, regular expressions,
@@ -8669,6 +8684,14 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 1.79.0
+      - description: Boost is a set of libraries for the C++ programming language
+          that provide support for tasks and structures such as linear algebra, pseudorandom
+          number generation, multithreading, image processing, regular expressions,
+          and unit testing.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.87.0
     - categories: devel, data analytics
       defaultVersionName: 0.3_py27
       description: 'Launching and controlling spark on HPC clusters '
