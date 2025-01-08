@@ -113,7 +113,7 @@ when assembling the image, so requesting multiple cores in your job can make
 the pull operation faster:
 
 ``` shell
-$ srun -c 4 --pty bash
+$ sh_dev -c 4
 ```
 
 We recommend storing Singularity images in `$GROUP_HOME`, as container images
@@ -259,7 +259,7 @@ cores, loading the Singularity module and moving the directory where we'll save
 those images:
 
 ``` shell
-$ srun -c 4 --pty bash
+$ sh_dev -c 4
 $ cd $GROUP_HOME/simg
 ```
 
