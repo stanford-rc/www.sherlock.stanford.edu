@@ -71,17 +71,14 @@ software_modules:
       - {description: Seaborn is a Python data visualization library based on matplotlib.
           It provides a high-level interface for drawing attractive and informative
           statistical graphics., markedDefault: false, versionName: 0.13.2_py312}
-    - categories: viz, remote display
-      defaultVersionName: 2.5.2
-      description: VirtualGL is an open source toolkit that gives any Unix or Linux
-        remote display software the ability to run OpenGL applications with full 3D
-        hardware acceleration.
-      package: virtualgl
-      url: http://www.virtualgl.org
+    - categories: viz, toolkit
+      defaultVersionName: 9.4.1_py312
+      description: Python bindings for VTK, The Visualization Toolkit.
+      package: py-vtk
+      url: https://vtk.org/
       versions:
-      - {description: VirtualGL is an open source toolkit that gives any Unix or Linux
-          remote display software the ability to run OpenGL applications with full
-          3D hardware acceleration., markedDefault: false, versionName: 2.5.2}
+      - {description: 'Python bindings for VTK, The Visualization Toolkit.', markedDefault: false,
+        versionName: 9.4.1_py312}
     - categories: viz, data
       defaultVersionName: 2.1.7
       description: Ncview is a visual browser for netCDF format files.
@@ -202,6 +199,17 @@ software_modules:
           graphs online.', markedDefault: false, versionName: 5.19.0_py39}
       - {description: 'Plotly''s Python graphing library makes interactive, publication-quality
           graphs online.', markedDefault: false, versionName: 5.19.0_py312}
+    - categories: viz, remote display
+      defaultVersionName: 2.5.2
+      description: VirtualGL is an open source toolkit that gives any Unix or Linux
+        remote display software the ability to run OpenGL applications with full 3D
+        hardware acceleration.
+      package: virtualgl
+      url: http://www.virtualgl.org
+      versions:
+      - {description: VirtualGL is an open source toolkit that gives any Unix or Linux
+          remote display software the ability to run OpenGL applications with full
+          3D hardware acceleration., markedDefault: false, versionName: 2.5.2}
     - categories: viz, imaging
       defaultVersionName: 10.2.0_py312
       description: Pillow-SIMD is an optimized version of Pillow
@@ -233,6 +241,20 @@ software_modules:
       - {description: GMT (The Generic Mapping Tools) is an open source collection
           of command-line tools for manipulating geographic and Cartesian data sets.,
         markedDefault: false, versionName: 6.4.0}
+    - categories: viz, toolkit
+      defaultVersionName: 9.4.1
+      description: The Visualization Toolkit (VTK) is open source software for manipulating
+        and displaying scientific data.
+      package: vtk
+      url: https://vtk.org/
+      versions:
+      - description: The Visualization Toolkit (VTK) is open source software for manipulating
+          and displaying scientific data.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 9.4.1
   - name: system
     packages:
     - categories: system, libs
