@@ -31,13 +31,6 @@ software_modules:
       versions:
       - {description: 'Panoply plots geo-referenced and other arrays from netCDF,
           HDF, GRIB, and other datasets.', markedDefault: false, versionName: 4.10.8}
-    - categories: viz, data
-      defaultVersionName: 5.8.1
-      description: ParaView is an open-source, multi-platform data analysis and visualization
-        application based on Visualization Toolkit (VTK).
-      package: .paraview
-      url: https://www.paraview.org/
-      versions: []
     - categories: viz, gis
       defaultVersionName: 0.21.0_py39
       description: Cartopy is a Python package designed for geospatial data processing
@@ -1548,7 +1541,7 @@ software_modules:
       versions:
       - {description: OGG media container., markedDefault: false, versionName: 1.3.5}
     - categories: system, tools
-      defaultVersionName: 7.0.7-2
+      defaultVersionName: 7.1.1-43
       description: ImageMagick is a free and open-source software suite for displaying,
         converting, and editing raster image and vector image files.
       package: imagemagick
@@ -1556,10 +1549,10 @@ software_modules:
       versions:
       - {description: 'ImageMagick is a free and open-source software suite for displaying,
           converting, and editing raster image and vector image files.', markedDefault: false,
-        versionName: 7.1.1-43}
-      - {description: 'ImageMagick is a free and open-source software suite for displaying,
-          converting, and editing raster image and vector image files.', markedDefault: true,
         versionName: 7.0.7-2}
+      - {description: 'ImageMagick is a free and open-source software suite for displaying,
+          converting, and editing raster image and vector image files.', markedDefault: false,
+        versionName: 7.1.1-43}
     - categories: system, benchmark
       defaultVersionName: '29.4'
       description: mprime is used by GIMPS, a distributed computing project dedicated
@@ -6216,27 +6209,17 @@ software_modules:
           arch: {gpu: 1}
           parallel: {mpi: 1}
         versionName: '20230802'
-    - categories: chemistry, computational chemistry
-      defaultVersionName: g16.B01
-      description: Gaussian is a general purpose computational chemistry software
-        package.
-      package: gaussian
-      url: https://www.gaussian.com
+    - categories: chemistry, docking
+      defaultVersionName: 1.0.2
+      description: A deep learning framework for molecular docking
+      package: gnina
+      url: https://github.com/gnina/gnina
       versions:
-      - description: Gaussian is a general purpose computational chemistry software
-          package.
+      - description: A deep learning framework for molecular docking
         markedDefault: false
         properties:
           arch: {gpu: 1}
-          license: {restricted: 1}
-        versionName: g16.A03
-      - description: Gaussian is a general purpose computational chemistry software
-          package.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          license: {restricted: 1}
-        versionName: g16.B01
+        versionName: 1.0.2
     - categories: chemistry, computational chemistry
       defaultVersionName: 5.2.2
       description: Libxc is a library of exchange-correlation functionals for density-functional
@@ -6343,39 +6326,21 @@ software_modules:
       versions:
       - {description: Crystallographic automation and complex data manipulation libraries.,
         markedDefault: false, versionName: 2.1.20180802}
-    - categories: chemistry, quantum chemistry
-      defaultVersionName: '7.1'
-      description: Quantum ESPRESSO is an integrated suite of Open-Source computer
-        codes for electronic-structure calculations and materials modeling at the
-        nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
-      package: quantum-espresso_gpu
-      url: https://www.quantum-espresso.org
+    - categories: chemistry, cheminformatics
+      defaultVersionName: 2018.09.1_py27
+      description: RDKit is a collection of cheminformatics and machine-learning software
+        written in C++ and Python.
+      package: py-rdkit
+      url: http://www.rdkit.org
       versions:
-      - description: GPU-accelerated Quantum ESPRESSO using CUDA FORTRAN
-        family: qe
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '1.1'
-      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
-          codes for electronic-structure calculations and materials modeling at the
-          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
-        family: qe
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '7.0'
-      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
-          codes for electronic-structure calculations and materials modeling at the
-          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
-        family: qe
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: '7.1'
+      - {description: RDKit is a collection of cheminformatics and machine-learning
+          software written in C++ and Python., markedDefault: false, versionName: 2018.09.1_py36}
+      - {description: RDKit is a collection of cheminformatics and machine-learning
+          software written in C++ and Python., markedDefault: false, versionName: 2022.09.1_py39}
+      - {description: RDKit is a collection of cheminformatics and machine-learning
+          software written in C++ and Python., markedDefault: false, versionName: 2024.3.2_py312}
+      - {description: RDKit is a collection of cheminformatics and machine-learning
+          software written in C++ and Python., markedDefault: true, versionName: 2018.09.1_py27}
     - categories: chemistry, computational chemistry
       defaultVersionName: 2021-1
       description: Schrödinger Suites (Small-molecule Drug Discovery Suite, Material
@@ -6500,13 +6465,6 @@ software_modules:
           license: {restricted: 1}
           parallel: {mpi: 1}
         versionName: 5.4.1
-    - categories: chemistry, modelling
-      defaultVersionName: 3.0.0_py312
-      description: AlphaFold is an artificial intelligence (AI) system that predicts
-        the 3D structures of proteins from their amino acid sequences.
-      package: .py-alphafold
-      url: https://deepmind.google/technologies/alphafold/
-      versions: []
     - categories: chemistry, molecular dynamics
       defaultVersionName: 2.3.2
       description: PLUMED is an open source library for free energy calculations in
@@ -6635,14 +6593,18 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: '20220426'
-    - categories: chemistry, crystallography
-      defaultVersionName: '1.4'
-      description: A macromolecular superposition library.
-      package: ssm
-      url: https://www.ccp4.ac.uk/
+    - categories: chemistry, x-ray spectroscopy
+      defaultVersionName: 0.9.80_py312
+      description: Larch is a open-source library and set of applications for processing
+        and analyzing X-ray absorption and fluorescence spectroscopy data and X-ray
+        fluorescence and diffraction image data from synchrotron beamlines.
+      package: py-xraylarch
+      url: https://xraypy.github.io/xraylarch/
       versions:
-      - {description: A macromolecular superposition library., markedDefault: false,
-        versionName: '1.4'}
+      - {description: Larch is a open-source library and set of applications for processing
+          and analyzing X-ray absorption and fluorescence spectroscopy data and X-ray
+          fluorescence and diffraction image data from synchrotron beamlines., markedDefault: false,
+        versionName: 0.9.80_py312}
     - categories: chemistry, molecular dynamics
       defaultVersionName: 1.65.0
       description: Qbox is a First-Principles Molecular Dynamics code.
@@ -6666,29 +6628,35 @@ software_modules:
           Lipid Membranes” and its goal is to provide an efficient, yet robust, tool
           to extract physical parameters from MD trajectories.', markedDefault: false,
         versionName: 0.2.2_py39}
-    - categories: chemistry, x-ray spectroscopy
-      defaultVersionName: 0.9.80_py312
-      description: Larch is a open-source library and set of applications for processing
-        and analyzing X-ray absorption and fluorescence spectroscopy data and X-ray
-        fluorescence and diffraction image data from synchrotron beamlines.
-      package: py-xraylarch
-      url: https://xraypy.github.io/xraylarch/
+    - categories: chemistry, crystallography
+      defaultVersionName: '1.4'
+      description: A macromolecular superposition library.
+      package: ssm
+      url: https://www.ccp4.ac.uk/
       versions:
-      - {description: Larch is a open-source library and set of applications for processing
-          and analyzing X-ray absorption and fluorescence spectroscopy data and X-ray
-          fluorescence and diffraction image data from synchrotron beamlines., markedDefault: false,
-        versionName: 0.9.80_py312}
-    - categories: chemistry, docking
-      defaultVersionName: 1.0.2
-      description: A deep learning framework for molecular docking
-      package: gnina
-      url: https://github.com/gnina/gnina
+      - {description: A macromolecular superposition library., markedDefault: false,
+        versionName: '1.4'}
+    - categories: chemistry, quantum chemistry
+      defaultVersionName: 1.95A
+      description: TeraChem is general purpose quantum chemistry software designed
+        to run on NVIDIA GPU architectures.
+      package: terachem
+      url: http://www.petachem.com/
       versions:
-      - description: A deep learning framework for molecular docking
+      - description: TeraChem is general purpose quantum chemistry software designed
+          to run on NVIDIA GPU architectures.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-        versionName: 1.0.2
+          license: {restricted: 1}
+        versionName: 1.96H-beta
+      - description: TeraChem is general purpose quantum chemistry software designed
+          to run on NVIDIA GPU architectures.
+        markedDefault: true
+        properties:
+          arch: {gpu: 1}
+          license: {restricted: 1}
+        versionName: 1.95A
     - categories: chemistry, quantum chemistry
       defaultVersionName: '7.1'
       description: Quantum ESPRESSO is an integrated suite of Open-Source computer
@@ -6731,27 +6699,6 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: '7.1'
-    - categories: chemistry, quantum chemistry
-      defaultVersionName: 1.95A
-      description: TeraChem is general purpose quantum chemistry software designed
-        to run on NVIDIA GPU architectures.
-      package: terachem
-      url: http://www.petachem.com/
-      versions:
-      - description: TeraChem is general purpose quantum chemistry software designed
-          to run on NVIDIA GPU architectures.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          license: {restricted: 1}
-        versionName: 1.96H-beta
-      - description: TeraChem is general purpose quantum chemistry software designed
-          to run on NVIDIA GPU architectures.
-        markedDefault: true
-        properties:
-          arch: {gpu: 1}
-          license: {restricted: 1}
-        versionName: 1.95A
     - categories: chemistry, molecular dynamics
       defaultVersionName: 1.0.0
       description: A collection of tools for characterizing membrane structure and
@@ -6765,6 +6712,27 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 1.0.0
+    - categories: chemistry, computational chemistry
+      defaultVersionName: g16.B01
+      description: Gaussian is a general purpose computational chemistry software
+        package.
+      package: gaussian
+      url: https://www.gaussian.com
+      versions:
+      - description: Gaussian is a general purpose computational chemistry software
+          package.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          license: {restricted: 1}
+        versionName: g16.A03
+      - description: Gaussian is a general purpose computational chemistry software
+          package.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          license: {restricted: 1}
+        versionName: g16.B01
     - categories: chemistry, electrostatics
       defaultVersionName: '1.5'
       description: APBS solves the equations of continuum electrostatics for large
@@ -6784,21 +6752,39 @@ software_modules:
       - {description: 'VESTA is a 3D visualization program for structural models,
           volumetric data such as electron/nuclear densities, and crystal morphologies.',
         markedDefault: false, versionName: 3.4.4}
-    - categories: chemistry, cheminformatics
-      defaultVersionName: 2018.09.1_py27
-      description: RDKit is a collection of cheminformatics and machine-learning software
-        written in C++ and Python.
-      package: py-rdkit
-      url: http://www.rdkit.org
+    - categories: chemistry, quantum chemistry
+      defaultVersionName: '7.1'
+      description: Quantum ESPRESSO is an integrated suite of Open-Source computer
+        codes for electronic-structure calculations and materials modeling at the
+        nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
+      package: quantum-espresso_gpu
+      url: https://www.quantum-espresso.org
       versions:
-      - {description: RDKit is a collection of cheminformatics and machine-learning
-          software written in C++ and Python., markedDefault: false, versionName: 2018.09.1_py36}
-      - {description: RDKit is a collection of cheminformatics and machine-learning
-          software written in C++ and Python., markedDefault: false, versionName: 2022.09.1_py39}
-      - {description: RDKit is a collection of cheminformatics and machine-learning
-          software written in C++ and Python., markedDefault: false, versionName: 2024.3.2_py312}
-      - {description: RDKit is a collection of cheminformatics and machine-learning
-          software written in C++ and Python., markedDefault: true, versionName: 2018.09.1_py27}
+      - description: GPU-accelerated Quantum ESPRESSO using CUDA FORTRAN
+        family: qe
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '1.1'
+      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
+          codes for electronic-structure calculations and materials modeling at the
+          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
+        family: qe
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '7.0'
+      - description: Quantum ESPRESSO is an integrated suite of Open-Source computer
+          codes for electronic-structure calculations and materials modeling at the
+          nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials.
+        family: qe
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: '7.1'
     - categories: chemistry, molecular dynamics
       defaultVersionName: 8.1.1_py312
       description: A high performance toolkit for molecular simulation.
