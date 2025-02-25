@@ -113,7 +113,7 @@ when assembling the image, so requesting multiple cores in your job can make
 the pull operation faster:
 
 ``` shell
-$ srun -c 4 --pty bash
+$ sh_dev -c 4
 ```
 
 We recommend storing Singularity images in `$GROUP_HOME`, as container images
@@ -259,7 +259,7 @@ cores, loading the Singularity module and moving the directory where we'll save
 those images:
 
 ``` shell
-$ srun -c 4 --pty bash
+$ sh_dev -c 4
 $ cd $GROUP_HOME/simg
 ```
 
@@ -399,14 +399,6 @@ apoa1-out.coor  apoa1-out.vel  apoa1-out.xsc
 
 
 ### Building your own containers
-
-Building Singularity containers requires `root` privileges, and as such,
-cannot be done on Sherlock directly.
-
-If you need to modify existing containers or build your own from scratch, The
-recommended workflow is to prepare and build your containers on your local
-Linux machine (it could either be a workstation, a laptop or a virtual
-machine), transfer the resulting container image to Sherlock, and run it there.
 
 For complete details about how to build Singularity containers, please refer to
 the [Singularity documentation][url_singularity_build].
