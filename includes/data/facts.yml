@@ -2,12 +2,12 @@ facts:
   - name: users
     fields:
       - name: user accounts
-        value: 8062
+        value: 7853
       - name: PI groups
-        value: 1200
+        value: 1190
         desc: "from all Stanford's seven Schools, SLAC, Stanford Institutes, _etc._"
       - name: owner groups
-        value: 201
+        value: 199
   - name: interfaces
     icon: sitemap
     fields:
@@ -24,7 +24,7 @@ facts:
         desc: 22.60 (FP32) PFLOPs
       - name: CPU cores
         value: 57040
-        desc: "**7** CPU generations (**18** CPU models)"
+        desc: "**7** CPU generations (**19** CPU models)"
       - name: GPUs
         value: 836
         desc: "**5** GPU generations (**13** GPU models)"
@@ -41,7 +41,7 @@ facts:
     icon: plug
     fields:
       - name: kW
-        value: 640.35
+        value: 670.28
         desc: total power usage
       - name: PDUs
         value: 63
@@ -58,36 +58,37 @@ facts:
     icon: network-wired
     fields:
       - name: Infiniband switches
-        value: 123
+        value: 126
         desc: across **3** Infiniband fabrics (EDR, HDR, NDR)
       - name: Infiniband cables
-        value: 5877
-        desc: spanning about **30.46 km**
+        value: 5976
+        desc: spanning about **30.64 km**
       - name: Ethernet switches
         value: 58
   - name: scheduler
     icon: chart-bar
     fields:
       - name: Slurm partitions
-        value: 179
+        value: 178
       - name: CPU.hours/day
-        value: 47797
+        value: 48090
         desc: over **5 years** of computing in a single day
       - name: /month
         fmt: "${:,.0f}"
-        value: 3193661.6096
+        value: 3213215.4976
         desc: to run the same workload on t2.large on-demand cloud instances
 
   - name: partitions
     fields:
       - name: normal
         nodes: 211
-        cores: 5700
+        cores: 5704
         desc: compute nodes
         details: |
-                - 57 nodes w/ 20-core (Intel E5-2640v4), 128 GB RAM, EDR IB
+                - 56 nodes w/ 20-core (Intel E5-2640v4), 128 GB RAM, EDR IB
                 - 40 nodes w/ 24-core (Intel 5118), 191 GB RAM, EDR IB
                 - 14 nodes w/ 24-core (AMD 8224P), 192 GB RAM, NDR IB
+                - 1 nodes w/ 24-core (Intel 5118), 384 GB RAM, EDR IB
                 - 28 nodes w/ 32-core (AMD 7543), 256 GB RAM, HDR IB
                 - 70 nodes w/ 32-core (AMD 7502), 256 GB RAM, HDR IB
                 - 2 nodes w/ 64-core (AMD 9384X), 384 GB RAM, NDR IB
