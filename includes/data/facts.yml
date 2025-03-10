@@ -2,12 +2,12 @@ facts:
   - name: users
     fields:
       - name: user accounts
-        value: 7866
+        value: 7906
       - name: PI groups
-        value: 1191
+        value: 1196
         desc: "from all Stanford's seven Schools, SLAC, Stanford Institutes, _etc._"
       - name: owner groups
-        value: 200
+        value: 202
   - name: interfaces
     icon: sitemap
     fields:
@@ -24,7 +24,7 @@ facts:
         desc: 22.60 (FP32) PFLOPs
       - name: CPU cores
         value: 57040
-        desc: "**7** CPU generations (**18** CPU models)"
+        desc: "**7** CPU generations (**19** CPU models)"
       - name: GPUs
         value: 836
         desc: "**5** GPU generations (**13** GPU models)"
@@ -41,7 +41,7 @@ facts:
     icon: plug
     fields:
       - name: kW
-        value: 630.81
+        value: 753.85
         desc: total power usage
       - name: PDUs
         value: 81
@@ -61,21 +61,21 @@ facts:
         value: 128
         desc: across **3** Infiniband fabrics (EDR, HDR, NDR)
       - name: Infiniband cables
-        value: 6067
-        desc: spanning about **30.80 km**
+        value: 6180
+        desc: spanning about **31.00 km**
       - name: Ethernet switches
         value: 63
   - name: scheduler
     icon: chart-bar
     fields:
       - name: Slurm partitions
-        value: 180
+        value: 182
       - name: CPU.hours/day
-        value: 43302
-        desc: over **4 years** of computing in a single day
+        value: 45609
+        desc: over **5 years** of computing in a single day
       - name: /month
         fmt: "${:,.0f}"
-        value: 2893318.4928
+        value: 3047417.4400
         desc: to run the same workload on t2.large on-demand cloud instances
 
   - name: partitions
@@ -131,8 +131,8 @@ facts:
                 - 1 nodes w/ 64-core (Intel 8462Y+), 2048 GB RAM, NDR IB, 8x Tesla H100_SXM5 GPUs
         access: public
       - name: owners
-        nodes: 1500
-        cores: 49256
+        nodes: 1509
+        cores: 49896
         desc: privately-owned nodes
         details: |
                 - 146 nodes w/ 20-core (Intel E5-2640v4), 128 GB RAM, EDR IB
@@ -162,19 +162,22 @@ facts:
                 - 22 nodes w/ 32-core (AMD 7543P), 256 GB RAM, HDR IB, 4x Tesla A40 GPUs
                 - 2 nodes w/ 32-core (AMD 7502P), 256 GB RAM, HDR IB, 4x Tesla V100S PCIe GPUs
                 - 4 nodes w/ 32-core (AMD 7502P), 256 GB RAM, HDR IB, 4x Tesla A100 PCIe GPUs
+                - 4 nodes w/ 32-core (Intel 6426Y), 256 GB RAM, NDR IB, 4x Tesla L40S GPUs
                 - 1 nodes w/ 32-core (Intel E5-2697Av4), 512 GB RAM, EDR IB
                 - 1 nodes w/ 32-core (Intel E5-2697Av4), 1536 GB RAM, EDR IB
                 - 2 nodes w/ 36-core (Intel 6150), 768 GB RAM, EDR IB
                 - 1 nodes w/ 64-core (AMD 9384X), 384 GB RAM, NDR IB
                 - 13 nodes w/ 64-core (AMD 7543), 512 GB RAM, HDR IB, 4x Tesla A100_SXM4 GPUs
                 - 5 nodes w/ 64-core (AMD 7502), 512 GB RAM, HDR IB, 4x Tesla A100_SXM4 GPUs
+                - 3 nodes w/ 64-core (Intel 8462Y+), 1024 GB RAM, NDR IB, 4x Tesla H100_SXM5 GPUs
                 - 2 nodes w/ 64-core (Intel 8462Y+), 2048 GB RAM, NDR IB, 8x Tesla H100_SXM5 GPUs
                 - 3 nodes w/ 64-core (Intel 6130), 3072 GB RAM, EDR IB
                 - 1 nodes w/ 64-core (AMD 7502), 4096 GB RAM, HDR IB
                 - 4 nodes w/ 64-core (AMD 7543), 4096 GB RAM, HDR IB
+                - 1 nodes w/ 64-core (Intel 8462Y+), 4096 GB RAM, NDR IB
                 - 20 nodes w/ 128-core (AMD 7763), 1024 GB RAM, HDR IB
                 - 36 nodes w/ 128-core (AMD 7742), 1024 GB RAM, HDR IB
                 - 10 nodes w/ 128-core (AMD 7763), 1024 GB RAM, HDR IB, 8x Tesla A100_SXM4 GPUs
                 - 7 nodes w/ 128-core (AMD 7662), 1024 GB RAM, HDR IB, 8x Tesla A100_SXM4 GPUs
-                - 1 nodes w/ 256-core (AMD 9754), 1536 GB RAM, NDR IB
+                - 2 nodes w/ 256-core (AMD 9754), 1536 GB RAM, NDR IB
         access: private
