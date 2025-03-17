@@ -452,7 +452,7 @@ documentation][url_rclone].
 [url_sshfs_tuto]:           //www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
 [url_globus]:               //www.globus.org
 [url_globus_api]:           //docs.globus.org/api/transfer/
-[url_globus_doc]:           //www.globus.org/how-it-works
+[url_globus_doc]:           //www.globus.org/data-transfer
 [url_globus_cli]:           //docs.globus.org/cli/
 [url_globus_cli_quickstart]://docs.globus.org/cli/quickstart/
 [url_globus_login]:         //app.globus.org/
