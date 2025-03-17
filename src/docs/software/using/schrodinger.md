@@ -161,6 +161,6 @@ errors in the job output and error files: `water.<jobid>.{out,err}`.
 [url_sul]:                  //library.stanford.edu/
 [url_x11]:                  //uit.stanford.edu/service/sharedcomputing/moreX
 
-[url_modules]:              /docs/software/modules
-[url_sbatch]:               /docs/user-guide/running-jobs/#batch-jobs
-[url_ondemand_doc]:         /docs/user-guide/ondemand/
+[url_modules]:              /docs/software/modules.md
+[url_sbatch]:               /docs/user-guide/running-jobs.md#batch-jobs
+[url_ondemand_doc]:         /docs/user-guide/ondemand.md

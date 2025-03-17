@@ -12,9 +12,9 @@ directories in these file systems to store their data.
     actively being computed on with Sherlock, and should not be used as a
     target for backups from other systems.
 
-    If you're looking for a long-term storage solution for research data, SRCC
-    offers the [Oak storage system][url_oak], which is specifically intended
-    for this usage.
+    If you're looking for a long-term storage solution for research data,
+    Stanford Research Computing offers the [Oak storage system][url_oak], which
+    is specifically intended for this usage.
 
 Those file systems are shared with other users, and are subject to quota limits
 and for some of them, purge policies (time-residency limits).
@@ -295,11 +295,12 @@ Transfer][url_data_sshfs] page.
 [url_NFS]:              //en.wikipedia.org/wiki/Network_File_System
 [url_lustre]:           //en.wikipedia.org/wiki/Lustre_(file_system)
 [url_oak]:              //uit.stanford.edu/service/oak-storage
-[url_data_sshfs]:       /docs/storage/data-transfer#sshfs
-[url_purge]:            /docs/storage/filesystems/#expiration-policy
-[url_du]:               //www.gnu.org/software/coreutils/manual/html_node/du-invocation.html#du-invocation
 [url_ncdu]:             //dev.yorhel.nl/ncdu
-[url_sh_dev]:           /docs/user-guide/running-jobs/#interactive-jobs
+[url_du]:               //www.gnu.org/software/coreutils/manual/html_node/du-invocation.html#du-invocation
+
+[url_data_sshfs]:       /docs/storage/data-transfer.md#sshfs
+[url_purge]:            /docs/storage/filesystems.md#expiration-policy
+[url_sh_dev]:           /docs/user-guide/running-jobs.md#interactive-jobs
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

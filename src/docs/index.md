@@ -33,8 +33,8 @@ scientific computing.
 On Sherlock, simulations and workloads benefit from performance levels that
 only large scale HPC systems can offer: high-performance I/O infrastructure,
 petabytes of storage, large variety of hardware configurations, GPU
-accelerators, centralized system administration and management provided by the
-[Stanford Research Computing Center][url_srcc] (SRCC).
+accelerators, centralized system administration and management provided by
+[Stanford Research Computing][url_srcc].
 
 Such features are not easily accessible at the departmental level, and often
 require both significant initial investments and recurring costs. Joining
@@ -128,7 +128,8 @@ Research Computing support can be reached by sending an email to
 
 As a member of the Sherlock community, you're also automatically subscribed to
 the [sherlock-announce][url_sha_ml] mailing-list, which is only used by the
-SRCC team to send important announcements about Sherlock,
+Stanford Research Computing team to send important announcements about
+Sherlock.
 
 ### Onboarding sessions
 
@@ -164,10 +165,9 @@ nuanced questions that may not be easily answered with our ticketing system. In
 office hours some problems can indeed be solved quickly or progress can be made
 so that you can then work self-sufficiently towards a solution on your own.
 
-!!! bug "COVID-19 update"
+!!! important "Office hours are online"
 
-    **We'll be holding remote office hours via [Zoom][url_zoom], for the time
-    being.**
+    **Office hours are held virtually, online via [Zoom][url_zoom]**
 
 !!! info "Office hours times"
 
@@ -217,13 +217,14 @@ than welcome to join the following channels:
     practices, tutorials or other info, please feel free to do so there.
 
 For more details about the SRCC Slack Workspace, and instructions on how to
-join this workspace and its channels, please see the SRCC [support
-page][url_srcc_support].
+join this workspace and its channels, please see the Stanford Research
+Computing [support page][url_srcc_support].
 
 !!! warning "Slack is not an official support channel"
 
-    Please note that while SRCC staff will monitor these channels, the official
-    way to get support is still to email us at {{ support_email }}.
+    Please note that while Stanford Research Computing staff will monitor these
+    channels, the official way to get support is still to email us at {{
+    support_email }}.
 
 
 ## Quick Start
@@ -266,35 +267,31 @@ Here's what it looks like in motion:
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_srcc]:         //srcc.stanford.edu
-[url_docs]:         //www.sherlock.stanford.edu/docs
 [url_news]:         //news.sherlock.stanford.edu
 [url_status]:       //status.sherlock.stanford.edu
-[url_srcc_support]: //srcc/stanford.edu/support
-
-[url_invest]:       /docs/concepts#investing-in-sherlock
-[url_concepts]:     /docs/concepts
-[url_glossary]:     /docs/glossary
-[url_prereq]:       /docs/getting-started/
-[url_connect]:      /docs/getting-started/connecting
-[url_submit]:       /docs/getting-started/submitting
-[url_troubleshoot]: /docs/user-guide/troubleshoot/#how-to-submit-a-successful-support-request
-
+[url_srcc_support]: //srcc.stanford.edu/support
 [url_shu_ml]:       //mailman.stanford.edu/mailman/listinfo/sherlock-users
 [url_sha_ml]:       //mailman.stanford.edu/mailman/listinfo/sherlock-announce
 [url_polya]:        //campus-map.stanford.edu/?id=14-160&lat=37.42898333&lng=-122.17752929&zoom=17&srch=polya%20hall
-
 [url_zoom]:         //stanford.zoom.us
 [url_oh_zoom]:      //stanford.zoom.us/j/95962823750?pwd=cFM2U2ZRQ243Zkx0Ry83akdtWU9zUT09
 [url_ob_zoom]:      //stanford.zoom.us/j/97524291024?pwd=Q0g3b2wvSHhPaTdtOElGRVZFOCtqdz09
 [url_ob_slides]:    //srcc.stanford.edu/workshops/sherlock-boarding-session
 [url_ob_record]:    //youtu.be/iqq7GGqMRg8
-
 [url_calendar]:     //calendly.com/srcc-officehours/sherlock
-
 [url_sunet]:        //uit.stanford.edu/service/accounts/sunetids#services
 [url_su_slack]:     //uit.stanford.edu/service/slack
 [url_sl_sha]:       //srcc.slack.com/archives/C01862L37CN
 [url_sl_shu]:       //srcc.slack.com/archives/C0192KNKYSU
+
+[url_docs]:         index.md
+[url_invest]:       concepts.md#investing-in-sherlock
+[url_concepts]:     concepts.md
+[url_glossary]:     glossary.md
+[url_prereq]:       getting-started/index.md
+[url_connect]:      getting-started/connecting.md
+[url_submit]:       getting-started/submitting.md
+[url_troubleshoot]: user-guide/troubleshoot.md#how-to-submit-a-support-request
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

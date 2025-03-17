@@ -20,8 +20,8 @@ recommended (if not only) way to install it
 It is a useful solution for simplifying the management of Python and scientific
 libraries on a personal computer. However, on highly-specialized HPC systems
 like Sherlock, management of these libraries and dependencies should be done by
-SRCC staff, to ensure compatibility and optimal performance on the cluster
-hardware.
+Stanford Research Computing staff, to ensure compatibility and optimal
+performance on the cluster hardware.
 
 For instance:
 
@@ -104,11 +104,11 @@ container images, it could be useful to collect them all in a single location
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_modules]:        /docs/oftware/list
-[url_r]:              /docs/software/using/R
-[url_venv]:           /docs/software/using/python#virtual-environments
-[url_container]:      /docs/software/containers
-[url_sh_dev]:         /docs/user-guide/running-jobs/#interactive-jobs
+[url_modules]:        /docs/software/list.md
+[url_r]:              R.md
+[url_venv]:           python.md#virtual-environments
+[url_container]:      /docs/software/containers/index.md
+[url_sh_dev]:         /docs/user-guide/running-jobs.md#interactive-jobs
 
 [url_contact]:        mailto:{{ support_email }}
 

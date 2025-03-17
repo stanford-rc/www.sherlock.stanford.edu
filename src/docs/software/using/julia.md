@@ -310,8 +310,8 @@ process: 1 on host sh-06-33.int
 [url_julia_pkgs]:   //pkg.julialang.org/
 [url_helloworld]:   //en.wikipedia.org/wiki/%22Hello,_World!%22_program
 
-[url_modules]:      /docs/software/modules
-[url_software_list]:/docs/software/list
+[url_modules]:      ../modules.md
+[url_software_list]:../list.md
 
 
 --8<--- "includes/_acronyms.md"

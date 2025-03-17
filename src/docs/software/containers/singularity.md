@@ -1,24 +1,9 @@
 # Singularity
 
-[Singularity][url_singularity] is a tool for running
-[containers][url_containers] on HPC systems, similar to [Docker][url_docker].
-
-## Introduction
-
-Containers are a solution to the problem of how to get software to run reliably
-when moved from one computing environment to another. They also resolve
-installation problems by packaging all the dependencies of an application
-within a self-sustainable image, _a.k.a_ a container.
-
-!!! info "What's a container?"
-
-    Put simply, a container consists of an entire runtime environment: an
-    application, plus all its dependencies, libraries and other binaries, and
-    configuration files needed to run it, bundled into one package. By
-    containerizing the application platform and its dependencies, differences
-    in OS distributions and underlying infrastructure are abstracted away.
-
-
+[Singularity][url_singularity] is an open source [container][url_containers]
+platform designed to run complex applications on high-performance computing
+(HPC) clusters in a simple, portable, and reproducible way. It's like
+[Docker][url_docker], but for HPC systems.
 
 ### Why not Docker?
 
@@ -92,7 +77,7 @@ documentation][url_singularity_docs].
 As [announced][url_containernative] during the [SC'18 Supercomputing
 Conference][url_sc18], Singularity is an integral part of the Sherlock cluster,
 and Singularity commands can be executed natively on any login or compute node,
-without the need to load any additional module.
+without the need to load any additional module[^modules].
 
 ### Importing containers
 
@@ -122,13 +107,13 @@ Singularity makes it very easy.
     This example shows how to use Singularity interactively, but Singularity
     containers can be run in batch jobs as well.
 
-The first step is to request an interactive shell, and to load the singularity
-module. Singularity images can be pulled directly from the compute nodes, and
-Singularity uses multiple CPU cores when assembling the image, so requesting
-multiple cores in your job can make the pull operation faster:
+The first step is to request an interactive shell. Singularity images can be
+pulled directly on compute nodes, and Singularity uses multiple CPU cores
+when assembling the image, so requesting multiple cores in your job can make
+the pull operation faster:
 
 ``` shell
-$ srun -c 4 --pty bash
+$ sh_dev -c 4
 ```
 
 We recommend storing Singularity images in `$GROUP_HOME`, as container images
@@ -274,7 +259,7 @@ cores, loading the Singularity module and moving the directory where we'll save
 those images:
 
 ``` shell
-$ srun -c 4 --pty bash
+$ sh_dev -c 4
 $ cd $GROUP_HOME/simg
 ```
 
@@ -415,14 +400,6 @@ apoa1-out.coor  apoa1-out.vel  apoa1-out.xsc
 
 ### Building your own containers
 
-Building Singularity containers requires `root` privileges, and as such,
-cannot be done on Sherlock directly.
-
-If you need to modify existing containers or build your own from scratch, The
-recommended workflow is to prepare and build your containers on your local
-Linux machine (it could either be a workstation, a laptop or a virtual
-machine), transfer the resulting container image to Sherlock, and run it there.
-
 For complete details about how to build Singularity containers, please refer to
 the [Singularity documentation][url_singularity_build].
 
@@ -434,7 +411,7 @@ the [Singularity documentation][url_singularity_build].
 [url_singularity_docker]: //www.sylabs.io/guides/latest/user-guide/singularity_and_docker.html
 [url_singularity_build]:  //www.sylabs.io/guides/2.6/user-guide/build_a_container.html
 [url_containers]:         //en.wikipedia.org/wiki/Linux_containers
-[url_docker]:     //www.docker.com
+[url_docker]:             //www.docker.com
 [url_docker_hub]:         //hub.docker.com
 [url_singularity_hub]:    //singularity-hub.org
 [url_ngc]:                //ngc.nvidia.com
@@ -445,10 +422,9 @@ the [Singularity documentation][url_singularity_build].
 [url_sc18]:               //sc18.supercomputing.org/
 [url_containernative]:    //news.sherlock.stanford.edu/posts/sherlock-goes-container-native
 
-
-[url_modules]:     /docs/software/modules
-[url_gpu_job]:     /docs/user-guide/gpu#submitting-a-gpu-job
-[url_gpu_types]:         /docs/user-guide/gpu/#gpu-types
+[url_modules]:            /docs/software/modules.md
+[url_gpu_job]:            /docs/user-guide/gpu.md#submitting-a-gpu-job
+[url_gpu_types]:          /docs/user-guide/gpu.md#gpu-types
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

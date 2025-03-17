@@ -14,15 +14,24 @@ edit_uri:  www.sherlock.stanford.edu/edit/main/src/
 
 # Copyright
 copyright: >-
-  Copyright &copy; 2014 - 2022 &mdash;
-  <a href='mailto:srcc-support@stanford.edu'>Stanford Research Computing Center</a><br/>
+  Copyright &copy; 2014 - 2024 &mdash;
+  <a href='mailto:srcc-support@stanford.edu'>Stanford Research Computing</a><br/>
 
 # Configuration
 docs_dir: src
 site_dir: site
 
-theme:
+# Validation
+validation:
+  omitted_files: warn
+  absolute_links: relative_to_docs
+  unrecognized_links: warn
+  anchors: warn
+  nav:
+    omitted_files: info
 
+# Theme options
+theme:
   name: material
   custom_dir: overrides
 
@@ -50,6 +59,8 @@ theme:
     - search.share
     - search.suggest
 
+  palette:
+    scheme: sherlock
   font:
     text: Roboto
     code: Roboto Mono
@@ -60,7 +71,6 @@ theme:
   banner:     assets/images/banner.png
 
   icon:
-    logo: srcc/mono/sherlock
     repo: fontawesome/brands/github
     admonition:
       note:     octicons/note-16
@@ -120,6 +130,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/stanford-rc
       name: SRCC on GitHub
+    - icon: fontawesome/brands/bluesky
+      link: https://bsky.app/profile/stanford-rc.bsky.social
+      name: SRCC on BlueSky
     - icon: fontawesome/brands/slack
       link: https://srcc.slack.com/
       name: SRCC Users Slack workspace
@@ -137,10 +150,13 @@ plugins:
   - search:
       separator: "[\\s\\-,:!=\\[\\]()\"/]+|\\.(?!\\d)|&[lg]t;|(?!\\b)(?=[A-Z][a-z])"
 
-  #- social:
-  #    cards_layout_options:
-  #      font_family: Roboto
-  #      background_color: "#8C1515"
+  - social:
+      cards_layout: default
+      cards_layout_options:
+        #logo: src/assets/images/logo_small.png
+        font_family: Roboto
+        background_image: src/assets/images/logo.png
+        background_color: "#8C1515"
 
   - minify:
       minify_html: true
@@ -157,7 +173,7 @@ plugins:
         # external URLs
         ondemand.md:                     https://login.sherlock.stanford.edu/
         shell.md:                        https://login.sherlock.stanford.edu/pun/sys/shell/ssh
-        catalog.md:                      https://docs.google.com/spreadsheets/d/11CqpWe0XLoEbJEDAac6ag5nbrctkkZSJgRtG4hKh34w
+        catalog.md:                      https://docs.google.com/presentation/d/e/2PACX-1vSJmG4oG36AZTpyHS9Hbynvk8lUwdVRMxNcleUlPY9xwYoCrdWVgTkifHgf6zl_rgndOVzRZt0-qgi0/pub
         order.md:                        https://docs.google.com/forms/d/e/1FAIpQLSd95TJaPbStWEZAUYHXNQedp9lQJMsTjyISjKmRMSpmL0rVqg/viewform
         # nav refactor, legacy URLs
         docs/overview/index.md:          docs/index.md
@@ -174,10 +190,9 @@ plugins:
         docs/getting-started/prerequisites.md: docs/getting-started/index.md
         docs/storage/overview.md:        docs/storage/index.md
         docs/software/overview.md:       docs/software/index.md
-        docs/software/containers.md:     docs/software/using/singularity.md
 
-  - tags:
-      tags_file: docs/tags.md
+  - tags
+
 
 # Extensions
 markdown_extensions:
@@ -199,8 +214,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
       options:
         custom_icons:
           - overrides/.icons
@@ -269,7 +284,8 @@ nav:
       - List:                docs/software/list.md
       - Installation:        docs/software/install.md
       - Containers:
-        - Singularity:       docs/software/using/singularity.md
+        - docs/software/containers/index.md
+        - Singularity:       docs/software/containers/singularity.md
       - Tools:
           - ClusterShell:    docs/software/using/clustershell.md
       - Usage:

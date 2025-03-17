@@ -26,11 +26,10 @@ required for all user accounts.
     of access to Sherlock.
 
 
-Sherlock has been designed, deployed, and is maintained and operated by the
-[Stanford Research Computing Center (SRCC)][url_srcc] staff. The SRCC is a
-joint effort of the [Dean of Research][url_dor] and [IT Services][url_uit] to
-build and support a comprehensive program to advance computational research at
-Stanford.
+Sherlock is designed, deployed, maintained and operated by [Stanford Research
+Computing][url_srcc] staff. Stanford Research Computing is a joint effort of
+the [Dean of Research][url_dor] and [IT Services][url_uit] to build and support
+a comprehensive program to advance computational research at Stanford.
 
 Sherlock has been initially purchased and supported with seed funding from
 Stanford's [Provost][url_provost]. It comprises a set of freely available
@@ -68,8 +67,8 @@ dedicated computing resources.
 Unlike traditional clusters, Sherlock is a collaborative system where the
 majority of nodes are purchased and shared by the cluster users. When a user
 (typically a PI) purchases one or more nodes, they become an *owner*. Owners
-choose from a standard set of server configurations supported by SRCC staff
-(known as the Sherlock *catalog*) to add to the cluster.
+choose from a standard set of server configurations supported by Stanford
+Research Computing (known as the Sherlock *catalog*) to add to the cluster.
 
 When they're not in use, PI-purchased compute nodes can be used by other
 owners. This model also allows Sherlock owners to benefit from the scale of the
@@ -133,10 +132,10 @@ In particular, purchasing your own compute nodes on Sherlock will **NOT**
 allow:
 
 :fontawesome-solid-xmark:{ .chk_no } **root access**: owner nodes on Sherlock
-are still managed by SRCC in accordance with Stanford's [Minimum Security
-Standards][url_minsec]. Although users are welcome to install (or request) any
-software they may need, purchasing compute nodes on Sherlock does not allow
-`root` access to the nodes.
+are still managed by Stanford Research Computing staff in accordance with
+Stanford's [Minimum Security Standards][url_minsec]. Although users are welcome
+to install (or request) any software they may need, purchasing compute nodes on
+Sherlock does not allow `root` access to the nodes.
 
 :fontawesome-solid-xmark:{ .chk_no } **running permanent services**: permanent
 processes such as web servers or databases can only run on owner nodes through
@@ -168,8 +167,9 @@ the duration of a job and cannot be used to store long-term data.
 
 :fontawesome-solid-xmark:{ .chk_no } **additional storage space**: purchasing
 compute nodes on Sherlock does not provide additional storage space. Please
-note that SRCC does offer the possibility for PIs to purchase their own storage
-space on [Oak][url_oak], for their long-term research data needs.
+note that Stanford Research Computing does offer the possibility for PIs to
+purchase their own storage space on [Oak][url_oak], for their long-term
+research data needs.
 
 
 ### Purchasing nodes
@@ -223,11 +223,11 @@ generation of Sherlock.
 
 ## Maintenances and upgrades
 
-The SRCC institutes a monthly scheduled maintenance window on Sherlock, to
-ensure optimal operation, avoid potential issues and prepare for future
-expansions. This window will be used to make hardware repairs, software and
-firmware updates, and perform general manufacturer recommended maintenance on
-our environment.
+Stanford Research Computing institutes a monthly scheduled maintenance window
+on Sherlock, to ensure optimal operation, avoid potential issues and prepare
+for future expansions. This window will be used to make hardware repairs,
+software and firmware updates, and perform general manufacturer recommended
+maintenance on our environment.
 
 As often as possible, maintenance tasks are performed in a rolling,
 non-disruptive fashion, but downtimes are sometimes an unfortunate necessity to
@@ -288,19 +288,19 @@ lost when the maintenance starts.
 [email]:          mailto:{{ support_email }}
 [url_provost]:    //provost.stanford.edu/
 [url_dor]:        //doresearch.stanford.edu/research-offices/dor-office-vice-provost-and-dean-research
-[url_uit]:        //uit.stanford.edu
 [url_srcc]:       //srcc.stanford.edu/
+[url_uit]:        //uit.stanford.edu
 [url_risk]:       //uit.stanford.edu/guide/riskclassifications
 [url_datarisk]:   //uit.stanford.edu/guide/riskclassifications#data-classification-examples
 [url_minsec]:     //uit.stanford.edu/guide/securitystandards
-[url_admin]:      //adminguide.stanford.edu
-[url_farmshare]:  //uit.stanford.edu/service/sharedcomputing
-[url_fairshare]:  //slurm.schedmd.com/fair_tree.html
-[url_orders]:     /docs/orders
-[url_recurring]:  /docs/user-guide/running-jobs/#recurring-jobs
-[url_persistent]: /docs/user-guide/running-jobs/#persistent-jobs
-[url_lscratch]:   /docs/storage/filesystems/#l_scratch
 [url_oak]:        //uit.stanford.edu/service/oak-storage
+[url_farmshare]:  //uit.stanford.edu/service/sharedcomputing
+[url_admin]:      //adminguide.stanford.edu
+[url_fairshare]:  //slurm.schedmd.com/fair_tree.html
+[url_orders]:     orders.md
+[url_recurring]:  user-guide/running-jobs.md#recurring-jobs
+[url_persistent]: user-guide/running-jobs.md#persistent-jobs
+[url_lscratch]:   storage/filesystems.md#l_scratch
 
 [url_HIPAA]: //en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act
 [url_PHI]:   //en.wikipedia.org/wiki/Protected_health_information

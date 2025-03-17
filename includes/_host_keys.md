@@ -70,4 +70,4 @@ connections.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_dtn]:	/docs/storage/data-transfer/#data-transfer-node-dtn
+[url_dtn]:	/docs/storage/data-transfer.md#data-transfer-nodes-dtns

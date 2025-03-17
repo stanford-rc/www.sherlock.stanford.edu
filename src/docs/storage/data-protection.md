@@ -116,13 +116,14 @@ failure of the whole system or datacenter-level disaster.
 
 ## Backups
 
-Although the SRCC doesn't offer any backup service _per se_, we do provide all
-the tools required to [transfer data][url_datatransfer] in and out of Sherlock.
+Although Stanford Research Computing doesn't offer any backup service _per se_,
+we do provide all the tools required to [transfer data][url_datatransfer] in
+and out of Sherlock.
 
 Suggested options to backup your data include:
 
-* [Oak][url_oak], SRCC's long-term research data storage service
-  <small>(**Recommended**)</small>
+* [Oak][url_oak], Stanford Research Computing's long-term research data storage
+  service <small>(**Recommended**)</small>
 * [University IT Storage options][url_uit_storage] and [backup
   services][url_uit_backup]
 * Cloud storage providers (see the [Data transfer][url_datatransfer] page for
@@ -134,7 +135,7 @@ Suggested options to backup your data include:
 [url_uit_storage]:      //uit.stanford.edu/service/storage
 [url_uit_backup]:       //uit.stanford.edu/services/category/backup-and-storage
 
-[url_datatransfer]:     /docs/storage/data-transfer
+[url_datatransfer]:     /docs/storage/data-transfer.md
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

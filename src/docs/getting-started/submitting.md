@@ -181,15 +181,13 @@ there are many other options and areas to explore in the next sections:
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_slurm]:  https://slurm.schedmd.com
-[url_top500]: https://top500.org
+[url_slurm]:  //slurm.schedmd.com
+[url_top500]: //top500.org
 
-[url_texteditors]:    /docs/getting-started/#text-editors
-[url_running]:        /docs/user-guide/running-jobs/
-
-[url_transfer]:       /docs/storage/data-transfer
-[url_storage]:        /docs/storage
-[url_runningjobs]:    /docs/user-guide/running-jobs/
+[url_texteditors]:    index.md#text-editors
+[url_transfer]:       ../storage/data-transfer.md
+[url_storage]:        ../storage/index.md
+[url_runningjobs]:    ../user-guide/running-jobs.md
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
