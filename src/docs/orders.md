@@ -72,11 +72,12 @@ below:
 | Type | Description | Recommended usage | Price range |
 |----- | ----------- | ----------------- | ----------- |
 | `CBASE` | Base configuration | Best per-core performance for serial applications, multi-threaded (OpenMP) and distributed (MPI) applications.<br/> **Most flexible and cost-effective configuration** | ++"$"++ |
-| `CPERF` | High-core count configuration | Multi-threaded applications requiring higher numbers of CPU cores | ++"$$"++ |
-| `CBIGMEM` | Large-memory configuration | Serial or multi-threaded applications requiring terabytes of memory (genome assembly, etc...) | ++"$$$$"++ |
+| `CPERF` | High-performance cores | CPU-bound applications requiring high per-core performance and large L3 caches | ++"$$"++ |
+| `CSCALE` | Many-core configuration | Multi-threaded single-node applications requiring higher numbers of CPU cores (lower per-core performance) | ++"$$"++ |
+| `CBIGMEM` | Large-memory configuration | Serial or multi-threaded applications requiring terabytes of memory (genome assembly, etc...) | ++"$$$"++ |
 | `G4FP32` | Base GPU configuration | Single-precision (FP32) GPU-accelerated applications (CryoEM, MD...) with low GPU memory requirements | ++"$$"++ |
-| `G4FP64` | HPC GPU configuration | AI, ML/DL and GPU-accelerated HPC codes requiring double-precision (FP64) and larger amounts of GPU memory | ++"$$$"++ |
-| `G4TF64`<br/>`G8TF64` | Best-in-class GPU configuration | AI, ML/DL and GPU-accelerated HPC codes requiring double-precision (FP64), large amounts of GPU memory, and heavy multi-GPU scaling | ++"$$$$"++ |
+| `G4FT64` | HPC GPU configuration | AI, ML/DL and GPU-accelerated HPC codes requiring double-precision (FP64) and larger amounts of GPU memory | ++"$$$"++ |
+| `G8TF64` | Best-in-class GPU configuration | AI, ML/DL and GPU-accelerated HPC codes requiring double-precision (FP64), large amounts of GPU memory, and heavy multi-GPU scaling | ++"$$$$"++ |
 
 ??? tip "Choosing the best node configuration for your needs"
 
@@ -88,13 +89,13 @@ below:
 
     : There are other factors to take into account, notably the memory and I/O
     bandwidth per core, which could be lower on higher core-count
-    configurations like `CPERF`. With multiple times more cores than `CBASE`,
+    configurations like `CSCALE`. With multiple times more cores than `CBASE`,
     they still provide the same total amount of bandwidth to remote and local
     storage, as well as, to a lesser extend, to memory.  Higher core-count CPUs
     also often offer lower core frequencies, which combined with less bandwidth
     per core, may result in lower performance for serial jobs.
 
-    : `CPERF` nodes are an excellent fit for multi-threaded applications that
+    : `CSCALE` nodes are an excellent fit for multi-threaded applications that
     don't span multiple nodes. But for more diverse workloads, they don't offer
     the same level of flexibility than the `CBASE` nodes, which can run a mix
     of serial, multi-threaded and MPI applications equally well.
@@ -155,10 +156,10 @@ There are two components in the cost of a compute node purchase:
 
 !!! info "Single-node orders may incur additional delays"
 
-    Some node configurations need to be ordered from the vendor by sets of 4
-    nodes (see the [Sherlock catalog][url_catalog] for details). So orders for
-    quantities non-multiples of 4 need will to be grouped with other PI's
-    orders, which may incur additional delays.
+    Some node configurations need to be ordered from the vendor in
+    fully-populated chassis of 4 nodes (see the [Sherlock catalog][url_catalog]
+    for details). So orders for quantities non-multiples of 4 need will to be
+    grouped with other PI's orders, which may incur additional delays.
 
 Purchasing nodes on Sherlock is usually a 5-step process:
 
@@ -174,11 +175,6 @@ Purchasing nodes on Sherlock is usually a 5-step process:
 The typical delay between a PO submission to the vendor and the availability of
 the compute nodes to the PIs is usually between 4 and 8 weeks.
 
-!!! danger "Supply chain disruption and component shortages"
-
-    Global supply chain issues and component shortages have considerably
-    increased lead times, and compute node deliveries are currently
-    in the 6-month range.
 
 ### Required information
 

@@ -165,10 +165,9 @@ nuanced questions that may not be easily answered with our ticketing system. In
 office hours some problems can indeed be solved quickly or progress can be made
 so that you can then work self-sufficiently towards a solution on your own.
 
-!!! bug "COVID-19 update"
+!!! important "Office hours are online"
 
-    **We'll be holding remote office hours via [Zoom][url_zoom], for the time
-    being.**
+    **Office hours are held virtually, online via [Zoom][url_zoom]**
 
 !!! info "Office hours times"
 
