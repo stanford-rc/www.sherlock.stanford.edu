@@ -417,7 +417,7 @@ the [Singularity documentation][url_singularity_build].
 [url_ngc]:                //ngc.nvidia.com
 [url_openfoam]:           //openfoam.org/
 [url_ngc]:                //www.nvidia.com/en-us/gpu-cloud
-[url_ngc_auth]:           //docs.nvidia.com/ngc/ngc-getting-started-guide/index.html
+[url_ngc_auth]:           //docs.nvidia.com/ngc/gpu-cloud/ngc-user-guide/index.html
 [url_namd]:               //www.ks.uiuc.edu/Research/namd/
 [url_sc18]:               //sc18.supercomputing.org/
 [url_containernative]:    //news.sherlock.stanford.edu/posts/sherlock-goes-container-native
