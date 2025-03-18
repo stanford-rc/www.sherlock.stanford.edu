@@ -3869,7 +3869,7 @@ software_modules:
           parallel: {mpi: 1}
         versionName: 3.3.10
     - categories: math, computational geometry
-      defaultVersionName: '2015.2'
+      defaultVersionName: '2020.2'
       description: Qhull computes the convex hull, Delaunay triangulation, Voronoi
         diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
         and furthest-site Voronoi diagram.
@@ -3879,6 +3879,9 @@ software_modules:
       - {description: 'Qhull computes the convex hull, Delaunay triangulation, Voronoi
           diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
           and furthest-site Voronoi diagram.', markedDefault: false, versionName: '2015.2'}
+      - {description: 'Qhull computes the convex hull, Delaunay triangulation, Voronoi
+          diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
+          and furthest-site Voronoi diagram.', markedDefault: false, versionName: '2020.2'}
     - categories: math, numerical library
       defaultVersionName: 1.0_py39
       description: Autograd can automatically differentiate native Python and Numpy
@@ -4489,35 +4492,19 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 3.2.0
-    - categories: physics, photonics
-      defaultVersionName: 1.11.1
-      description: MPB is a free software package for computing the band structures,
-        or dispersion relations, and electromagnetic modes of periodic dielectric
-        structures, on both serial and parallel computers.
-      package: mpb
-      url: https://github.com/stevengj/mpb
+    - categories: physics, climate modeling
+      defaultVersionName: '2022.01'
+      description: FRE-NCtools is a collection of tools to help with the creation
+        and manipulation of netCDF files used for climate modeling.
+      package: fre-nctools
+      url: https://github.com/NOAA-GFDL/FRE-NCtools
       versions:
-      - description: MPB is a free software package for computing the band structures,
-          or dispersion relations, and electromagnetic modes of periodic dielectric
-          structures, on both serial and parallel computers.
+      - description: FRE-NCtools is a collection of tools to help with the creation
+          and manipulation of netCDF files used for climate modeling.
         markedDefault: false
         properties:
           parallel: {mpi: 1}
-        versionName: '1.5'
-      - description: MPB is a free software package for computing the band structures,
-          or dispersion relations, and electromagnetic modes of periodic dielectric
-          structures, on both serial and parallel computers.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 1.6.2
-      - description: MPB is a free software package for computing the band structures,
-          or dispersion relations, and electromagnetic modes of periodic dielectric
-          structures, on both serial and parallel computers.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 1.11.1
+        versionName: '2022.01'
     - categories: physics, geoscience
       defaultVersionName: 2.2.26
       description: The UDUNITS package from Unidata is a C-based package for the programatic
@@ -4559,6 +4546,16 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.9.0_py312
+    - categories: physics, geoscience
+      defaultVersionName: 3.5.3
+      description: PostGIS extends the capabilities of the PostgreSQL relational database
+        by adding support for storing, indexing, and querying geospatial data.
+      package: postgis
+      url: https://postgis.net/
+      versions:
+      - {description: 'PostGIS extends the capabilities of the PostgreSQL relational
+          database by adding support for storing, indexing, and querying geospatial
+          data.', markedDefault: false, versionName: 3.5.3}
     - categories: physics, astronomy
       defaultVersionName: 1.2.2_py36
       description: NaMaster is a C library, Python module and standalone program to
@@ -4622,6 +4619,9 @@ software_modules:
       - {description: GEOS is a C/C++ library for computational geometry with a focus
           on algorithms used in geographic information systems (GIS) software., markedDefault: false,
         versionName: 3.12.1}
+      - {description: GEOS is a C/C++ library for computational geometry with a focus
+          on algorithms used in geographic information systems (GIS) software., markedDefault: false,
+        versionName: 3.13.1}
       - {description: GEOS (Geometry Engine - Open Source) is a C++ port of Java Topology
           Suite (JTS)., markedDefault: true, versionName: 3.6.2}
     - categories: physics, astronomy
@@ -4684,21 +4684,19 @@ software_modules:
           and quantum dynamics of arbitrary boson, fermion and spin many-body systems.',
         markedDefault: false, versionName: 0.3.5_py36}
     - categories: physics, geoscience
-      defaultVersionName: 8.2.1
-      description: PROJ is a generic coordinate transformation software that transforms
-        geospatial coordinates from one coordinate reference system (CRS) to another.
-      package: proj
-      url: http://proj.org
+      defaultVersionName: 0.2.0-20220523
+      description: GEOSX is a simulation framework for modeling coupled flow, transport,
+        and geomechanics in the subsurface.
+      package: geosx
+      url: https://github.com/GEOSX/GEOSX
       versions:
-      - {description: PROJ is a generic coordinate transformation software that transforms
-          geospatial coordinates from one coordinate reference system (CRS) to another.,
-        markedDefault: false, versionName: 4.9.3}
-      - {description: PROJ is a generic coordinate transformation software that transforms
-          geospatial coordinates from one coordinate reference system (CRS) to another.,
-        markedDefault: false, versionName: 9.1.0}
-      - {description: PROJ is a generic coordinate transformation software that transforms
-          geospatial coordinates from one coordinate reference system (CRS) to another.,
-        markedDefault: true, versionName: 8.2.1}
+      - description: GEOSX is a simulation framework for modeling coupled flow, transport,
+          and geomechanics in the subsurface.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 0.2.0-20220523
     - categories: physics, particle
       defaultVersionName: 0.10.0
       description: OpenMC is a Monte Carlo particle transport simulation code focused
@@ -4744,41 +4742,43 @@ software_modules:
       - {description: Python interface to PROJ4 library for cartographic transformations.,
         markedDefault: true, versionName: 1.9.5.1_py27}
     - categories: physics, geoscience
-      defaultVersionName: 9.01a
-      description: SWASH (an acronym of Simulating WAves till SHore) is a non-hydrostatic
-        wave-flow model.
-      package: swash
-      url: https://swash.sourceforge.io/
+      defaultVersionName: 8.2.1
+      description: PROJ is a generic coordinate transformation software that transforms
+        geospatial coordinates from one coordinate reference system (CRS) to another.
+      package: proj
+      url: http://proj.org
       versions:
-      - description: SWASH (an acronym of Simulating WAves till SHore) is a non-hydrostatic
-          wave-flow model.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 9.01a
-    - categories: physics, geoscience
-      defaultVersionName: 0.2.0-20220523
-      description: GEOSX is a simulation framework for modeling coupled flow, transport,
-        and geomechanics in the subsurface.
-      package: geosx
-      url: https://github.com/GEOSX/GEOSX
+      - {description: PROJ is a generic coordinate transformation software that transforms
+          geospatial coordinates from one coordinate reference system (CRS) to another.,
+        markedDefault: false, versionName: 4.9.3}
+      - {description: PROJ is a generic coordinate transformation software that transforms
+          geospatial coordinates from one coordinate reference system (CRS) to another.,
+        markedDefault: false, versionName: 9.1.0}
+      - {description: PROJ is a generic coordinate transformation software that transforms
+          geospatial coordinates from one coordinate reference system (CRS) to another.,
+        markedDefault: false, versionName: 9.5.1}
+      - {description: PROJ is a generic coordinate transformation software that transforms
+          geospatial coordinates from one coordinate reference system (CRS) to another.,
+        markedDefault: true, versionName: 8.2.1}
+    - categories: physics, materials science
+      defaultVersionName: 2022.5.26_py39
+      description: Pymatgen (Python Materials Genomics) is a robust, open-source Python
+        library for materials analysis.
+      package: py-pymatgen
+      url: https://pymatgen.org/
       versions:
-      - description: GEOSX is a simulation framework for modeling coupled flow, transport,
-          and geomechanics in the subsurface.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 0.2.0-20220523
-    - categories: physics, quantum mechanics
-      defaultVersionName: 4.5.2_py36
-      description: QuTiP is open-source software for simulating the dynamics of closed
-        and open quantum systems.
-      package: py-qutip
-      url: http://qutip.org/
+      - {description: 'Pymatgen (Python Materials Genomics) is a robust, open-source
+          Python library for materials analysis.', markedDefault: false, versionName: 2022.5.26_py39}
+    - categories: physics, materials science
+      defaultVersionName: '3.36'
+      description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
+        coupled configurational and vibrational disorder in alloy systems.'
+      package: atat
+      url: https://www.brown.edu/Departments/Engineering/Labs/avdw/atat/
       versions:
-      - {description: QuTiP is open-source software for simulating the dynamics of
-          closed and open quantum systems., markedDefault: false, versionName: 4.5.2_py36}
+      - {description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
+          coupled configurational and vibrational disorder in alloy systems.', markedDefault: false,
+        versionName: '3.36'}
     - categories: physics, quantum information science
       defaultVersionName: 22.03.0.40
       description: NVIDIA cuQuantum is an SDK of optimized libraries and tools for
@@ -4803,15 +4803,48 @@ software_modules:
       - {description: NVIDIA cuQuantum Python provides Python bindings and high-level
           object-oriented models for accessing the full functionalities of NVIDIA
           cuQuantum SDK from Python., markedDefault: false, versionName: 22.3.0_py39}
-    - categories: physics, materials science
-      defaultVersionName: 2022.5.26_py39
-      description: Pymatgen (Python Materials Genomics) is a robust, open-source Python
-        library for materials analysis.
-      package: py-pymatgen
-      url: https://pymatgen.org/
+    - categories: physics, geoscience
+      defaultVersionName: 9.01a
+      description: SWASH (an acronym of Simulating WAves till SHore) is a non-hydrostatic
+        wave-flow model.
+      package: swash
+      url: https://swash.sourceforge.io/
       versions:
-      - {description: 'Pymatgen (Python Materials Genomics) is a robust, open-source
-          Python library for materials analysis.', markedDefault: false, versionName: 2022.5.26_py39}
+      - description: SWASH (an acronym of Simulating WAves till SHore) is a non-hydrostatic
+          wave-flow model.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 9.01a
+    - categories: physics, photonics
+      defaultVersionName: 1.11.1
+      description: MPB is a free software package for computing the band structures,
+        or dispersion relations, and electromagnetic modes of periodic dielectric
+        structures, on both serial and parallel computers.
+      package: mpb
+      url: https://github.com/stevengj/mpb
+      versions:
+      - description: MPB is a free software package for computing the band structures,
+          or dispersion relations, and electromagnetic modes of periodic dielectric
+          structures, on both serial and parallel computers.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '1.5'
+      - description: MPB is a free software package for computing the band structures,
+          or dispersion relations, and electromagnetic modes of periodic dielectric
+          structures, on both serial and parallel computers.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.6.2
+      - description: MPB is a free software package for computing the band structures,
+          or dispersion relations, and electromagnetic modes of periodic dielectric
+          structures, on both serial and parallel computers.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.11.1
     - categories: physics, astronomy
       defaultVersionName: 6.26.1
       description: HEAsoft is a Unified Release of the FTOOLS (General and mission-specific
@@ -4829,19 +4862,6 @@ software_modules:
           tools to manipulate FITS files) and XANADU (High-level, multi-mission tasks
           for X-ray astronomical spectral, timing, and imaging data analysis) software
           packages.', markedDefault: false, versionName: 6.26.1}
-    - categories: physics, climate modeling
-      defaultVersionName: '2022.01'
-      description: FRE-NCtools is a collection of tools to help with the creation
-        and manipulation of netCDF files used for climate modeling.
-      package: fre-nctools
-      url: https://github.com/NOAA-GFDL/FRE-NCtools
-      versions:
-      - description: FRE-NCtools is a collection of tools to help with the creation
-          and manipulation of netCDF files used for climate modeling.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: '2022.01'
     - categories: physics, geoscience
       defaultVersionName: 3.4.1
       description: GDAL is a translator library for raster and vector geospatial data
@@ -4889,16 +4909,15 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.3.0_py39
-    - categories: physics, materials science
-      defaultVersionName: '3.36'
-      description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
-        coupled configurational and vibrational disorder in alloy systems.'
-      package: atat
-      url: https://www.brown.edu/Departments/Engineering/Labs/avdw/atat/
+    - categories: physics, quantum mechanics
+      defaultVersionName: 4.5.2_py36
+      description: QuTiP is open-source software for simulating the dynamics of closed
+        and open quantum systems.
+      package: py-qutip
+      url: http://qutip.org/
       versions:
-      - {description: 'Alloy Theoretic Automated Toolkit: a software toolkit for modeling
-          coupled configurational and vibrational disorder in alloy systems.', markedDefault: false,
-        versionName: '3.36'}
+      - {description: QuTiP is open-source software for simulating the dynamics of
+          closed and open quantum systems., markedDefault: false, versionName: 4.5.2_py36}
   - name: biology
     packages:
     - categories: biology, genomics
@@ -7068,7 +7087,7 @@ software_modules:
       - {description: Ninja is a small build system with a focus on speed., markedDefault: false,
         versionName: 1.9.0}
     - categories: devel, language
-      defaultVersionName: 1.10.5
+      defaultVersionName: 1.11.4
       description: Julia is a high-level, high-performance dynamic programming language
         for numerical computing.
       package: julia
@@ -7089,6 +7108,9 @@ software_modules:
       - {description: 'Julia is a high-level, high-performance dynamic programming
           language for numerical computing.', help: 'https://www.sherlock.stanford.edu/docs/software/using/julia',
         markedDefault: false, versionName: 1.10.5}
+      - {description: 'Julia is a high-level, high-performance dynamic programming
+          language for numerical computing.', help: 'https://www.sherlock.stanford.edu/docs/software/using/julia',
+        markedDefault: false, versionName: 1.11.4}
     - categories: devel, language
       defaultVersionName: '20180301'
       description: Manticore is a high-level parallel programming language aimed at
