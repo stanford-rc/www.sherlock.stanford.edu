@@ -129,15 +129,11 @@ Then, the OpenFOAM container could be pulled directly from
 
 ``` shell
 $ singularity pull docker://openfoam/openfoam6-paraview54
-Docker image path: index.docker.io/openfoam/openfoam6-paraview54:latest
-Cache folder set to /scratch/users/kilian/.singularity/docker
-Importing: base Singularity environment
-Exploding layer: sha256:1be7f2b886e89a58e59c4e685fcc5905a26ddef3201f290b96f1eff7d778e122.tar.gz
-[...]
-Building Singularity image...
-Singularity container built: ./openfoam6-paraview54.simg
-Cleaning up...
-Done. Container is at: ./openfoam6-paraview54.simg
+INFO:    Converting OCI blobs to SIF format
+INFO:    Starting build...
+Copying blob 1be7f2b886e8 done   | ...
+...
+INFO:    Creating SIF file...
 ```
 
 ### Running containers
