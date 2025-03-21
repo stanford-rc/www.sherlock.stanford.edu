@@ -154,13 +154,12 @@ will be wiped out at the end of the job), and start the container shell there:
 
 ``` shell
 $ mkdir /tmp/openfoam_test
-$ singularity shell --pwd /tmp/openfoam_test openfoam6-paraview54.simg
-Singularity: Invoking an interactive shell within container...
-Singularity openfoam6-paraview54.simg:/tmp/openfoam_test>
+$ singularity shell --pwd /tmp/openfoam_test openfoam6-paraview54_latest.sif
+[Apptainer>
 ```
 
 You're now in the container, as denoted by the shell prompt
-(`Singularity[...].simg:[path]>`), which is different from the prompt displayed
+(`Apptainer[...].simg:[path]>`), which is different from the prompt displayed
 on the compute node (which usually looks like `[login]@[compute_node] [path]$`.
 
 OpenFOAM provides a convenience script that can be sourced to make OpenFOAM
@@ -173,9 +172,9 @@ commands directly accessible and set a few useful environment variables:
 Now, we can run a simple example using OpenFOAM:
 
 ``` shell
-> cp -r $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily .
-> cd pitzDaily
-> blockMesh
+[Apptainer> cp -r $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily .
+[Apptainer> cd pitzDaily
+[Apptainer> blockMesh
 [...]
 End
 
