@@ -4874,6 +4874,8 @@ software_modules:
       - {description: GDAL is a translator library for raster and vector geospatial
           data formats., markedDefault: false, versionName: 3.5.2}
       - {description: GDAL is a translator library for raster and vector geospatial
+          data formats., markedDefault: false, versionName: 3.10.2}
+      - {description: GDAL is a translator library for raster and vector geospatial
           data formats., markedDefault: true, versionName: 3.4.1}
     - categories: physics, magnetism
       defaultVersionName: '3.10'
@@ -7034,14 +7036,25 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 4.5.4
-    - categories: devel, lib
-      defaultVersionName: 2.0.0
-      description: libtree prints shared object dependencies as a tree.
-      package: libtree
-      url: https://github.com/haampie/libtree
+    - categories: devel, data
+      defaultVersionName: 3.4.0
+      description: Protocol Buffers (a.k.a., protobuf) are Google's language-neutral,
+        platform-neutral, extensible mechanism for serializing structured data.
+      package: protobuf
+      url: https://developers.google.com/protocol-buffers/
       versions:
-      - {description: libtree prints shared object dependencies as a tree., markedDefault: false,
-        versionName: 2.0.0}
+      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
+          platform-neutral, extensible mechanism for serializing structured data.',
+        markedDefault: false, versionName: 3.20.0}
+      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
+          platform-neutral, extensible mechanism for serializing structured data.',
+        markedDefault: false, versionName: '21.9'}
+      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
+          platform-neutral, extensible mechanism for serializing structured data.',
+        markedDefault: false, versionName: '29.1'}
+      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
+          platform-neutral, extensible mechanism for serializing structured data.',
+        markedDefault: true, versionName: 3.4.0}
     - categories: devel, data
       defaultVersionName: 3.4.0_py27
       description: Python bindings for Google's Protocol Buffers data interchange
@@ -7323,19 +7336,24 @@ software_modules:
       versions:
       - {description: The LLVM-based D Compiler., markedDefault: false, versionName: 1.26.0}
       - {description: The LLVM-based D Compiler., markedDefault: false, versionName: 1.40.0}
-    - categories: devel, language
-      defaultVersionName: 2.2.2
-      description: GNU Guile is the preferred extension system for the GNU Project,
-        which features an implementation of the Scheme programming language.
-      package: guile
-      url: https://www.gnu.org/software/guile/
+    - categories: devel, lib
+      defaultVersionName: 3.1.0
+      description: CUTLASS is a collection of CUDA C++ template abstractions for implementing
+        high-performance matrix-multiplication (GEMM) at all levels and scales within
+        CUDA.
+      package: cutlass
+      url: https://github.com/NVIDIA/cutlass
       versions:
-      - {description: 'GNU Guile is the preferred extension system for the GNU Project,
-          which features an implementation of the Scheme programming language.', markedDefault: false,
-        versionName: 2.0.11}
-      - {description: 'GNU Guile is the preferred extension system for the GNU Project,
-          which features an implementation of the Scheme programming language.', markedDefault: false,
-        versionName: 2.2.2}
+      - {description: CUTLASS is a collection of CUDA C++ template abstractions for
+          implementing high-performance matrix-multiplication (GEMM) at all levels
+          and scales within CUDA., markedDefault: false, versionName: 0.1.0}
+      - description: CUTLASS is a collection of CUDA C++ template abstractions for
+          implementing high-performance matrix-multiplication (GEMM) at all levels
+          and scales within CUDA.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 3.1.0
     - categories: devel, mpi
       defaultVersionName: 2.8.1
       description: Mellanox HPC-X toolkit is a comprehensive software package that
@@ -7383,18 +7401,19 @@ software_modules:
       - {description: 'Jupyter is a browser-based interactive notebook for programming,
           mathematics, and data science. It supports a number of languages via plugins.',
         markedDefault: false, versionName: 4.3.2_py312}
-    - categories: devel, lib
-      defaultVersionName: 20247.24_py312
-      description: Alternative regular expression module for Python, to replace re.
-      package: py-regex
-      url: https://github.com/mrabarnett/mrab-regex
+    - categories: devel, build
+      defaultVersionName: 1.6.1_py312
+      description: Meson is an open source build system meant to be both extremely
+        fast, and, even more importantly, as user friendly as possible.
+      package: py-meson
+      url: https://mesonbuild.com/
       versions:
-      - {description: 'Alternative regular expression module for Python, to replace
-          re.', markedDefault: false, versionName: 20247.24_py36}
-      - {description: 'Alternative regular expression module for Python, to replace
-          re.', markedDefault: false, versionName: 20247.24_py39}
-      - {description: 'Alternative regular expression module for Python, to replace
-          re.', markedDefault: false, versionName: 20247.24_py312}
+      - {description: 'Meson is an open source build system meant to be both extremely
+          fast, and, even more importantly, as user friendly as possible.', markedDefault: false,
+        versionName: 0.51.1_py36}
+      - {description: 'Meson is an open source build system meant to be both extremely
+          fast, and, even more importantly, as user friendly as possible.', markedDefault: false,
+        versionName: 1.6.1_py312}
     - categories: devel, networking
       defaultVersionName: 1.17.0
       description: UCX is a communication library implementing high-performance messaging
@@ -7453,14 +7472,31 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 1.0.4
-    - categories: devel, profiling
-      defaultVersionName: 3.3.462
-      description: AMD uProf is a performance analysis tool for applications.
-      package: amd-uprof
-      url: https://developer.amd.com/amd-uprof/
+    - categories: devel, lib
+      defaultVersionName: 0.3.2_py39
+      description: schwimmbad provides a uniform interface to parallel processing
+        pools and enables switching easily between local development (e.g., serial
+        processing or with multiprocessing) and deployment on a cluster or supercomputer
+        (via, e.g., MPI or JobLib).
+      package: py-schwimmbad
+      url: http://scikit-image.org/
       versions:
-      - {description: AMD uProf is a performance analysis tool for applications.,
-        markedDefault: false, versionName: 3.3.462}
+      - description: schwimmbad provides a uniform interface to parallel processing
+          pools and enables switching easily between local development (e.g., serial
+          processing or with multiprocessing) and deployment on a cluster or supercomputer
+          (via, e.g., MPI or JobLib).
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 0.3.1_py36
+      - description: schwimmbad provides a uniform interface to parallel processing
+          pools and enables switching easily between local development (e.g., serial
+          processing or with multiprocessing) and deployment on a cluster or supercomputer
+          (via, e.g., MPI or JobLib).
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 0.3.2_py39
     - categories: devel, lib
       defaultVersionName: 3.0.12
       description: SWIG is an interface compiler that connects programs written in
@@ -7720,22 +7756,16 @@ software_modules:
       - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
           C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
         versionName: '2019'}
-    - categories: devel, networking
-      defaultVersionName: 1.30.0
-      description: GASNet is a language-independent, low-level networking layer that
-        provides network-independent, high-performance communication primitives tailored
-        for implementing parallel global address space SPMD languages and libraries.
-      package: gasnet
-      url: https://gasnet.lbl.gov
+    - categories: devel, lib
+      defaultVersionName: 4.2.2
+      description: ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous
+        messaging library, aimed at use in distributed or concurrent applications.
+      package: zeromq
+      url: http://zeromq.org
       versions:
-      - description: GASNet is a language-independent, low-level networking layer
-          that provides network-independent, high-performance communication primitives
-          tailored for implementing parallel global address space SPMD languages and
-          libraries.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 1.30.0
+      - {description: 'ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance
+          asynchronous messaging library, aimed at use in distributed or concurrent
+          applications.', markedDefault: false, versionName: 4.2.2}
     - categories: devel, package management
       defaultVersionName: 0.3.5
       description: An extremely fast Python package and project manager, written in
@@ -8208,6 +8238,14 @@ software_modules:
       - {description: GNU Make is a tool which controls the generation of executables
           and other non-source files of a program from the program's source files.,
         markedDefault: false, versionName: '4.4'}
+    - categories: devel, profiling
+      defaultVersionName: 3.3.462
+      description: AMD uProf is a performance analysis tool for applications.
+      package: amd-uprof
+      url: https://developer.amd.com/amd-uprof/
+      versions:
+      - {description: AMD uProf is a performance analysis tool for applications.,
+        markedDefault: false, versionName: 3.3.462}
     - categories: devel, lib
       defaultVersionName: 0.13.0_py312
       description: Python bindings for CV_CUDA.
@@ -8219,18 +8257,19 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.13.0_py312
-    - categories: devel, lib
-      defaultVersionName: 0.5.1
-      description: Simplified Data Exchange for HPC Simulations.
-      package: conduit
-      url: https://software.llnl.gov/conduit/
+    - categories: devel, language
+      defaultVersionName: 2.2.2
+      description: GNU Guile is the preferred extension system for the GNU Project,
+        which features an implementation of the Scheme programming language.
+      package: guile
+      url: https://www.gnu.org/software/guile/
       versions:
-      - description: Simplified Data Exchange for HPC Simulations.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 0.5.1
+      - {description: 'GNU Guile is the preferred extension system for the GNU Project,
+          which features an implementation of the Scheme programming language.', markedDefault: false,
+        versionName: 2.0.11}
+      - {description: 'GNU Guile is the preferred extension system for the GNU Project,
+          which features an implementation of the Scheme programming language.', markedDefault: false,
+        versionName: 2.2.2}
     - categories: devel, lib
       defaultVersionName: 0.13.0
       description: CV-CUDA is an open-source project that enables building efficient
@@ -8246,15 +8285,18 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.13.0
-    - categories: devel, framework
-      defaultVersionName: 0.18.0_py39
-      description: Kedro is an open-source Python framework for creating reproducible,
-        maintainable and modular data science code.
-      package: py-kedro
-      url: https://kedro.readthedocs.io/
+    - categories: devel, lib
+      defaultVersionName: 0.5.1
+      description: Simplified Data Exchange for HPC Simulations.
+      package: conduit
+      url: https://software.llnl.gov/conduit/
       versions:
-      - {description: 'Kedro is an open-source Python framework for creating reproducible,
-          maintainable and modular data science code.', markedDefault: false, versionName: 0.18.0_py39}
+      - description: Simplified Data Exchange for HPC Simulations.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 0.5.1
     - categories: devel, data analytics
       defaultVersionName: 3.1.0
       description: The Apache Hadoop software library is a framework that allows for
@@ -8481,19 +8523,19 @@ software_modules:
           data format., markedDefault: false, versionName: 3.10.0_py312}
       - {description: The h5py package is a Pythonic interface to the HDF5 binary
           data format., markedDefault: true, versionName: 2.7.1_py27}
-    - categories: devel, build
-      defaultVersionName: 1.6.1_py312
-      description: Meson is an open source build system meant to be both extremely
-        fast, and, even more importantly, as user friendly as possible.
-      package: py-meson
-      url: https://mesonbuild.com/
+    - categories: devel, language
+      defaultVersionName: 5.36.1
+      description: Perl 5 is a highly capable, feature-rich programming language with
+        over 29 years of development.
+      package: perl
+      url: https://www.perl.org
       versions:
-      - {description: 'Meson is an open source build system meant to be both extremely
-          fast, and, even more importantly, as user friendly as possible.', markedDefault: false,
-        versionName: 0.51.1_py36}
-      - {description: 'Meson is an open source build system meant to be both extremely
-          fast, and, even more importantly, as user friendly as possible.', markedDefault: false,
-        versionName: 1.6.1_py312}
+      - {description: 'Perl 5 is a highly capable, feature-rich programming language
+          with over 29 years of development.', help: 'https://www.sherlock.stanford.edu/docs/software/using/perl',
+        markedDefault: false, versionName: 5.26.0}
+      - {description: 'Perl 5 is a highly capable, feature-rich programming language
+          with over 29 years of development.', help: 'https://www.sherlock.stanford.edu/docs/software/using/perl',
+        markedDefault: false, versionName: 5.36.1}
     - categories: devel, lib
       defaultVersionName: 8.1.0
       description: C++ wrappers for SIMD intrinsics and parallelized, optimized mathematical
@@ -8570,19 +8612,17 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.10.0
-    - categories: devel, language
-      defaultVersionName: 5.36.1
-      description: Perl 5 is a highly capable, feature-rich programming language with
-        over 29 years of development.
-      package: perl
-      url: https://www.perl.org
+    - categories: devel, parser
+      defaultVersionName: 2.7.7
+      description: ANTLR (ANother Tool for Language Recognition) is a powerful parser
+        generator for reading, processing, executing, or translating structured text
+        or binary files.
+      package: antlr
+      url: https://xerces.apache.org/xerces-c/index.html
       versions:
-      - {description: 'Perl 5 is a highly capable, feature-rich programming language
-          with over 29 years of development.', help: 'https://www.sherlock.stanford.edu/docs/software/using/perl',
-        markedDefault: false, versionName: 5.26.0}
-      - {description: 'Perl 5 is a highly capable, feature-rich programming language
-          with over 29 years of development.', help: 'https://www.sherlock.stanford.edu/docs/software/using/perl',
-        markedDefault: false, versionName: 5.36.1}
+      - {description: 'ANTLR (ANother Tool for Language Recognition) is a powerful
+          parser generator for reading, processing, executing, or translating structured
+          text or binary files.', markedDefault: false, versionName: 2.7.7}
     - categories: devel, lib
       defaultVersionName: 1.10.1
       description: Apache Ant is a Java library and command-line tool whose mission
@@ -8602,17 +8642,18 @@ software_modules:
       versions:
       - {description: LuaRocks is the package manager for Lua modules., markedDefault: false,
         versionName: 2.4.3}
-    - categories: devel, parser
-      defaultVersionName: 2.7.7
-      description: ANTLR (ANother Tool for Language Recognition) is a powerful parser
-        generator for reading, processing, executing, or translating structured text
-        or binary files.
-      package: antlr
-      url: https://xerces.apache.org/xerces-c/index.html
+    - categories: devel, libs
+      defaultVersionName: '0.18'
+      description: JSON-C implements a reference counting object model that allows
+        you to easily construct JSON objects in C, output them as JSON formatted strings
+        and parse JSON formatted strings back into the C representation of JSON objects.
+      package: json-c
+      url: https://json-c.github.io/json-c/
       versions:
-      - {description: 'ANTLR (ANother Tool for Language Recognition) is a powerful
-          parser generator for reading, processing, executing, or translating structured
-          text or binary files.', markedDefault: false, versionName: 2.7.7}
+      - {description: 'JSON-C implements a reference counting object model that allows
+          you to easily construct JSON objects in C, output them as JSON formatted
+          strings and parse JSON formatted strings back into the C representation
+          of JSON objects.', markedDefault: false, versionName: '0.18'}
     - categories: devel, parser
       defaultVersionName: 3.2.1
       description: Xerces-C++ is a validating XML parser written in a portable subset
@@ -8698,16 +8739,17 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.3.0
-    - categories: devel, lib
-      defaultVersionName: 4.2.2
-      description: ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous
-        messaging library, aimed at use in distributed or concurrent applications.
-      package: zeromq
-      url: http://zeromq.org
+    - categories: devel, language
+      defaultVersionName: 7.3.0
+      description: 'PHP (recursive acronym for PHP: Hypertext Preprocessor) is an
+        open source general-purpose scripting language that is especially suited for
+        web development.'
+      package: php
+      url: http://www.php.net
       versions:
-      - {description: 'ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance
-          asynchronous messaging library, aimed at use in distributed or concurrent
-          applications.', markedDefault: false, versionName: 4.2.2}
+      - {description: 'PHP (recursive acronym for PHP: Hypertext Preprocessor) is
+          an open source general-purpose scripting language that is especially suited
+          for web development.', markedDefault: false, versionName: 7.3.0}
     - categories: devel, data
       defaultVersionName: 4.0.1
       description: Redis is an open source, in-memory data structure store, used as
@@ -8717,6 +8759,117 @@ software_modules:
       versions:
       - {description: 'Redis is an open source, in-memory data structure store, used
           as a database, cache and message broker.', markedDefault: false, versionName: 4.0.1}
+    - categories: devel, lib
+      defaultVersionName: 2.0.0
+      description: libtree prints shared object dependencies as a tree.
+      package: libtree
+      url: https://github.com/haampie/libtree
+      versions:
+      - {description: libtree prints shared object dependencies as a tree., markedDefault: false,
+        versionName: 2.0.0}
+    - categories: devel, lib
+      defaultVersionName: 2.6.2
+      description: A high-level Parallel I/O Library for structured grid applications.
+      package: pio
+      url: https://github.com/NCAR/ParallelIO
+      versions:
+      - {description: A high-level Parallel I/O Library for structured grid applications.,
+        markedDefault: false, versionName: 2.6.2}
+    - categories: devel, lib
+      defaultVersionName: 23.04.00_py39
+      description: Python interface for RMM
+      package: py-rmm
+      url: https://github.com/rapidsai/rmm
+      versions:
+      - description: Python interface for RMM
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 23.04.00_py39
+    - categories: devel, lib
+      defaultVersionName: 2.2.2
+      description: Copy-hiding array abstraction to automatically migrate data between
+        memory spaces.
+      package: chai
+      url: https://github.com/LLNL/CHAI
+      versions:
+      - description: Copy-hiding array abstraction to automatically migrate data between
+          memory spaces.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 2.2.2
+    - categories: devel, data
+      defaultVersionName: 1.44.0_py312
+      description: The NVIDIA Data Loading Library (DALI) is a GPU-accelerated library
+        for data loading and pre-processing to accelerate deep learning applications.
+      package: py-dali
+      url: https://github.com/NVIDIA/DALI
+      versions:
+      - description: The NVIDIA Data Loading Library (DALI) is a GPU-accelerated library
+          for data loading and pre-processing to accelerate deep learning applications.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.44.0_py312
+    - categories: devel, lib
+      defaultVersionName: 0.24.0_py312
+      description: scikit-image is a collection of algorithms for image processing.
+      package: py-scikit-image
+      url: http://scikit-image.org/
+      versions:
+      - {description: scikit-image is a collection of algorithms for image processing.,
+        markedDefault: false, versionName: 0.13.0_py27}
+      - {description: scikit-image is a collection of algorithms for image processing.,
+        markedDefault: false, versionName: 0.14.0_py27}
+      - {description: scikit-image is a collection of algorithms for image processing.,
+        markedDefault: false, versionName: 0.15.0_py27}
+      - {description: scikit-image is a collection of algorithms for image processing.,
+        markedDefault: false, versionName: 0.15.0_py36}
+      - {description: scikit-image is a collection of algorithms for image processing.,
+        markedDefault: false, versionName: 0.17.2_py36}
+      - {description: scikit-image is a collection of algorithms for image processing.,
+        markedDefault: false, versionName: 0.19.3_py39}
+      - {description: scikit-image is a collection of algorithms for image processing.,
+        markedDefault: false, versionName: 0.20.0_py39}
+      - {description: scikit-image is a collection of algorithms for image processing.,
+        markedDefault: false, versionName: 0.24.0_py312}
+    - categories: devel, build
+      defaultVersionName: 3.31.4
+      description: CMake is an extensible, open-source system that manages the build
+        process in an operating system and in a compiler-independent manner.
+      package: cmake
+      url: https://www.cmake.org
+      versions:
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.8.1}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.11.1}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.13.1}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.20.3}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.24.2}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.31.4}
+    - categories: devel, build
+      defaultVersionName: 1.8.0
+      description: Bazelisk is a wrapper for Bazel written in Go.
+      package: bazelisk
+      url: https://github.com/bazelbuild/bazelisk
+      versions:
+      - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
+        markedDefault: false, versionName: 1.3.0}
+      - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
+        markedDefault: false, versionName: 1.8.0}
     - categories: devel, mpi
       defaultVersionName: 4.1.2
       description: The Open MPI Project is an open source Message Passing Interface
@@ -8795,120 +8948,6 @@ software_modules:
           arch: {gpu: 1}
           parallel: {mpi: 1}
         versionName: 4.1.2
-    - categories: devel, lib
-      defaultVersionName: 2.2.2
-      description: Copy-hiding array abstraction to automatically migrate data between
-        memory spaces.
-      package: chai
-      url: https://github.com/LLNL/CHAI
-      versions:
-      - description: Copy-hiding array abstraction to automatically migrate data between
-          memory spaces.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 2.2.2
-    - categories: devel, lib
-      defaultVersionName: 23.04.00_py39
-      description: Python interface for RMM
-      package: py-rmm
-      url: https://github.com/rapidsai/rmm
-      versions:
-      - description: Python interface for RMM
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 23.04.00_py39
-    - categories: devel, lib
-      defaultVersionName: 2.6.2
-      description: A high-level Parallel I/O Library for structured grid applications.
-      package: pio
-      url: https://github.com/NCAR/ParallelIO
-      versions:
-      - {description: A high-level Parallel I/O Library for structured grid applications.,
-        markedDefault: false, versionName: 2.6.2}
-    - categories: devel, data
-      defaultVersionName: 1.44.0_py312
-      description: The NVIDIA Data Loading Library (DALI) is a GPU-accelerated library
-        for data loading and pre-processing to accelerate deep learning applications.
-      package: py-dali
-      url: https://github.com/NVIDIA/DALI
-      versions:
-      - description: The NVIDIA Data Loading Library (DALI) is a GPU-accelerated library
-          for data loading and pre-processing to accelerate deep learning applications.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 1.44.0_py312
-    - categories: devel, lib
-      defaultVersionName: 0.24.0_py312
-      description: scikit-image is a collection of algorithms for image processing.
-      package: py-scikit-image
-      url: http://scikit-image.org/
-      versions:
-      - {description: scikit-image is a collection of algorithms for image processing.,
-        markedDefault: false, versionName: 0.13.0_py27}
-      - {description: scikit-image is a collection of algorithms for image processing.,
-        markedDefault: false, versionName: 0.14.0_py27}
-      - {description: scikit-image is a collection of algorithms for image processing.,
-        markedDefault: false, versionName: 0.15.0_py27}
-      - {description: scikit-image is a collection of algorithms for image processing.,
-        markedDefault: false, versionName: 0.15.0_py36}
-      - {description: scikit-image is a collection of algorithms for image processing.,
-        markedDefault: false, versionName: 0.17.2_py36}
-      - {description: scikit-image is a collection of algorithms for image processing.,
-        markedDefault: false, versionName: 0.19.3_py39}
-      - {description: scikit-image is a collection of algorithms for image processing.,
-        markedDefault: false, versionName: 0.20.0_py39}
-      - {description: scikit-image is a collection of algorithms for image processing.,
-        markedDefault: false, versionName: 0.24.0_py312}
-    - categories: devel, build
-      defaultVersionName: 3.31.4
-      description: CMake is an extensible, open-source system that manages the build
-        process in an operating system and in a compiler-independent manner.
-      package: cmake
-      url: https://www.cmake.org
-      versions:
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.8.1}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.11.1}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.13.1}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.20.3}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.24.2}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.31.4}
-    - categories: devel, build
-      defaultVersionName: 1.8.0
-      description: Bazelisk is a wrapper for Bazel written in Go.
-      package: bazelisk
-      url: https://github.com/bazelbuild/bazelisk
-      versions:
-      - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
-        markedDefault: false, versionName: 1.3.0}
-      - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
-        markedDefault: false, versionName: 1.8.0}
-    - categories: devel, language
-      defaultVersionName: 7.3.0
-      description: 'PHP (recursive acronym for PHP: Hypertext Preprocessor) is an
-        open source general-purpose scripting language that is especially suited for
-        web development.'
-      package: php
-      url: http://www.php.net
-      versions:
-      - {description: 'PHP (recursive acronym for PHP: Hypertext Preprocessor) is
-          an open source general-purpose scripting language that is especially suited
-          for web development.', markedDefault: false, versionName: 7.3.0}
     - categories: devel, data analytics
       defaultVersionName: 0.3_py27
       description: 'Launching and controlling spark on HPC clusters '
@@ -8930,25 +8969,22 @@ software_modules:
       - {description: 'Eigen is a C++ template library for linear algebra: matrices,
           vectors, numerical solvers, and related algorithms.', markedDefault: false,
         versionName: 3.4.0}
-    - categories: devel, data
-      defaultVersionName: 3.4.0
-      description: Protocol Buffers (a.k.a., protobuf) are Google's language-neutral,
-        platform-neutral, extensible mechanism for serializing structured data.
-      package: protobuf
-      url: https://developers.google.com/protocol-buffers/
+    - categories: devel, networking
+      defaultVersionName: 1.30.0
+      description: GASNet is a language-independent, low-level networking layer that
+        provides network-independent, high-performance communication primitives tailored
+        for implementing parallel global address space SPMD languages and libraries.
+      package: gasnet
+      url: https://gasnet.lbl.gov
       versions:
-      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
-          platform-neutral, extensible mechanism for serializing structured data.',
-        markedDefault: false, versionName: 3.20.0}
-      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
-          platform-neutral, extensible mechanism for serializing structured data.',
-        markedDefault: false, versionName: '21.9'}
-      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
-          platform-neutral, extensible mechanism for serializing structured data.',
-        markedDefault: false, versionName: '29.1'}
-      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
-          platform-neutral, extensible mechanism for serializing structured data.',
-        markedDefault: true, versionName: 3.4.0}
+      - description: GASNet is a language-independent, low-level networking layer
+          that provides network-independent, high-performance communication primitives
+          tailored for implementing parallel global address space SPMD languages and
+          libraries.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.30.0
     - categories: devel, analytics
       defaultVersionName: 18.1.0_py312
       description: Python library for Apache Arrow, a development platform for in-memory
@@ -8993,6 +9029,15 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: '2019'
+    - categories: devel, framework
+      defaultVersionName: 0.18.0_py39
+      description: Kedro is an open-source Python framework for creating reproducible,
+        maintainable and modular data science code.
+      package: py-kedro
+      url: https://kedro.readthedocs.io/
+      versions:
+      - {description: 'Kedro is an open-source Python framework for creating reproducible,
+          maintainable and modular data science code.', markedDefault: false, versionName: 0.18.0_py39}
     - categories: devel, data
       defaultVersionName: 0.13.3
       description: Hiredis is a minimalistic C client library for the Redis database.
@@ -9016,24 +9061,6 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 4.9.0
-    - categories: devel, lib
-      defaultVersionName: 3.1.0
-      description: CUTLASS is a collection of CUDA C++ template abstractions for implementing
-        high-performance matrix-multiplication (GEMM) at all levels and scales within
-        CUDA.
-      package: cutlass
-      url: https://github.com/NVIDIA/cutlass
-      versions:
-      - {description: CUTLASS is a collection of CUDA C++ template abstractions for
-          implementing high-performance matrix-multiplication (GEMM) at all levels
-          and scales within CUDA., markedDefault: false, versionName: 0.1.0}
-      - description: CUTLASS is a collection of CUDA C++ template abstractions for
-          implementing high-performance matrix-multiplication (GEMM) at all levels
-          and scales within CUDA.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 3.1.0
     - categories: devel, compiler
       defaultVersionName: '110.81'
       description: Standard ML of New Jersey (abbreviated SML/NJ) is a compiler for
@@ -9044,28 +9071,15 @@ software_modules:
       - {description: Standard ML of New Jersey (abbreviated SML/NJ) is a compiler
           for the Standard ML '97 programming language., markedDefault: false, versionName: '110.81'}
     - categories: devel, lib
-      defaultVersionName: 0.3.2_py39
-      description: schwimmbad provides a uniform interface to parallel processing
-        pools and enables switching easily between local development (e.g., serial
-        processing or with multiprocessing) and deployment on a cluster or supercomputer
-        (via, e.g., MPI or JobLib).
-      package: py-schwimmbad
-      url: http://scikit-image.org/
+      defaultVersionName: 20247.24_py312
+      description: Alternative regular expression module for Python, to replace re.
+      package: py-regex
+      url: https://github.com/mrabarnett/mrab-regex
       versions:
-      - description: schwimmbad provides a uniform interface to parallel processing
-          pools and enables switching easily between local development (e.g., serial
-          processing or with multiprocessing) and deployment on a cluster or supercomputer
-          (via, e.g., MPI or JobLib).
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 0.3.1_py36
-      - description: schwimmbad provides a uniform interface to parallel processing
-          pools and enables switching easily between local development (e.g., serial
-          processing or with multiprocessing) and deployment on a cluster or supercomputer
-          (via, e.g., MPI or JobLib).
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 0.3.2_py39
+      - {description: 'Alternative regular expression module for Python, to replace
+          re.', markedDefault: false, versionName: 20247.24_py36}
+      - {description: 'Alternative regular expression module for Python, to replace
+          re.', markedDefault: false, versionName: 20247.24_py39}
+      - {description: 'Alternative regular expression module for Python, to replace
+          re.', markedDefault: false, versionName: 20247.24_py312}
 
