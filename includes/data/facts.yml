@@ -2,9 +2,9 @@ facts:
   - name: users
     fields:
       - name: user accounts
-        value: 7980
+        value: 7972
       - name: PI groups
-        value: 1204
+        value: 1205
         desc: "from all Stanford's seven Schools, SLAC, Stanford Institutes, _etc._"
       - name: owner groups
         value: 211
@@ -21,10 +21,10 @@ facts:
       - name: PFLOPs (FP64)
         fmt: "{:0.2f}"
         value: 11.58
-        desc: 38.08 (FP32) PFLOPs
+        desc: 38.07 (FP32) PFLOPs
       - name: CPU cores
-        value: 72112
-        desc: "**7** CPU generations (**18** CPU models)"
+        value: 71932
+        desc: "**7** CPU generations (**19** CPU models)"
       - name: GPUs
         value: 1028
         desc: "**5** GPU generations (**13** GPU models)"
@@ -36,12 +36,12 @@ facts:
         desc: "**25** server models (from **4** different manufacturers)"
       - name: racks
         value: 55
-        desc: "**1,502** rack units"
+        desc: "**1,498** rack units"
   - name: energy
     icon: plug
     fields:
       - name: kW
-        value: 878.81
+        value: 852.82
         desc: total power usage
       - name: PDUs
         value: 93
@@ -61,31 +61,31 @@ facts:
         value: 140
         desc: across **3** Infiniband fabrics (EDR, HDR, NDR)
       - name: Infiniband cables
-        value: 6511
-        desc: spanning about **31.51 km**
+        value: 6521
+        desc: spanning about **31.55 km**
       - name: Ethernet switches
         value: 73
   - name: scheduler
     icon: chart-bar
     fields:
       - name: Slurm partitions
-        value: 191
+        value: 190
       - name: CPU.hours/day
-        value: 61958
-        desc: over **7 years** of computing in a single day
+        value: 61072
+        desc: over **6 years** of computing in a single day
       - name: /month
         fmt: "${:,.0f}"
-        value: 4139850.7808
+        value: 4080624.3360
         desc: to run the same workload on t2.large on-demand cloud instances
 
   - name: partitions
     fields:
       - name: normal
-        nodes: 211
-        cores: 5704
+        nodes: 218
+        cores: 5844
         desc: compute nodes
         details: |
-                - 56 nodes w/ 20-core (Intel E5-2640v4), 128 GB RAM, EDR IB
+                - 63 nodes w/ 20-core (Intel E5-2640v4), 128 GB RAM, EDR IB
                 - 40 nodes w/ 24-core (Intel 5118), 191 GB RAM, EDR IB
                 - 14 nodes w/ 24-core (AMD 8224P), 192 GB RAM, NDR IB
                 - 1 nodes w/ 24-core (Intel 5118), 384 GB RAM, EDR IB
@@ -131,13 +131,13 @@ facts:
                 - 1 nodes w/ 64-core (Intel 8462Y+), 2048 GB RAM, NDR IB, 8x Tesla H100_SXM5 GPUs
         access: public
       - name: owners
-        nodes: 1758
-        cores: 64264
+        nodes: 1738
+        cores: 63864
         desc: privately-owned nodes
         details: |
-                - 146 nodes w/ 20-core (Intel E5-2640v4), 128 GB RAM, EDR IB
+                - 127 nodes w/ 20-core (Intel E5-2640v4), 128 GB RAM, EDR IB
                 - 8 nodes w/ 20-core (Intel E5-2640v4), 128 GB RAM, EDR IB, 4x Geforce TITAN_Xp GPUs
-                - 94 nodes w/ 20-core (Intel E5-2640v4), 256 GB RAM, EDR IB
+                - 93 nodes w/ 20-core (Intel E5-2640v4), 256 GB RAM, EDR IB
                 - 2 nodes w/ 20-core (Intel E5-2640v4), 256 GB RAM, EDR IB, 4x Geforce TITAN_Xp GPUs
                 - 4 nodes w/ 20-core (Intel E5-2640v4), 256 GB RAM, EDR IB, 4x Geforce TITAN_V GPUs
                 - 1 nodes w/ 20-core (Intel E5-2640v4), 256 GB RAM, EDR IB, 4x Tesla P40 GPUs
