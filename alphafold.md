@@ -172,7 +172,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
          --bind $SCRATCH/af_output:/root/af_output \
          --bind $MODEL_PARAMS_PATH:/root/models \
          --bind $DB_PATH:/root/public_databases \
-     af3-final.sif \
+     af3.sif \
      --norun_data_pipeline \
      --json_path=/root/af_output/2pv7/2pv7_data.json \
      --model_dir=/root/models \
