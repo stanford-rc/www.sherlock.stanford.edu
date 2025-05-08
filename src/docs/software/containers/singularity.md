@@ -129,15 +129,11 @@ Then, the OpenFOAM container could be pulled directly from
 
 ``` shell
 $ singularity pull docker://openfoam/openfoam6-paraview54
-Docker image path: index.docker.io/openfoam/openfoam6-paraview54:latest
-Cache folder set to /scratch/users/kilian/.singularity/docker
-Importing: base Singularity environment
-Exploding layer: sha256:1be7f2b886e89a58e59c4e685fcc5905a26ddef3201f290b96f1eff7d778e122.tar.gz
-[...]
-Building Singularity image...
-Singularity container built: ./openfoam6-paraview54.simg
-Cleaning up...
-Done. Container is at: ./openfoam6-paraview54.simg
+INFO:    Converting OCI blobs to SIF format
+INFO:    Starting build...
+Copying blob 1be7f2b886e8 done   | ...
+...
+INFO:    Creating SIF file...
 ```
 
 ### Running containers
@@ -154,13 +150,12 @@ will be wiped out at the end of the job), and start the container shell there:
 
 ``` shell
 $ mkdir /tmp/openfoam_test
-$ singularity shell --pwd /tmp/openfoam_test openfoam6-paraview54.simg
-Singularity: Invoking an interactive shell within container...
-Singularity openfoam6-paraview54.simg:/tmp/openfoam_test>
+$ singularity shell --pwd /tmp/openfoam_test openfoam6-paraview54_latest.sif
+[Apptainer>
 ```
 
 You're now in the container, as denoted by the shell prompt
-(`Singularity[...].simg:[path]>`), which is different from the prompt displayed
+(`Apptainer[...].simg:[path]>`), which is different from the prompt displayed
 on the compute node (which usually looks like `[login]@[compute_node] [path]$`.
 
 OpenFOAM provides a convenience script that can be sourced to make OpenFOAM
@@ -173,9 +168,9 @@ commands directly accessible and set a few useful environment variables:
 Now, we can run a simple example using OpenFOAM:
 
 ``` shell
-> cp -r $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily .
-> cd pitzDaily
-> blockMesh
+[Apptainer> cp -r $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily .
+[Apptainer> cd pitzDaily
+[Apptainer> blockMesh
 [...]
 End
 
@@ -400,14 +395,6 @@ apoa1-out.coor  apoa1-out.vel  apoa1-out.xsc
 
 ### Building your own containers
 
-Building Singularity containers requires `root` privileges, and as such,
-cannot be done on Sherlock directly.
-
-If you need to modify existing containers or build your own from scratch, The
-recommended workflow is to prepare and build your containers on your local
-Linux machine (it could either be a workstation, a laptop or a virtual
-machine), transfer the resulting container image to Sherlock, and run it there.
-
 For complete details about how to build Singularity containers, please refer to
 the [Singularity documentation][url_singularity_build].
 
@@ -425,7 +412,7 @@ the [Singularity documentation][url_singularity_build].
 [url_ngc]:                //ngc.nvidia.com
 [url_openfoam]:           //openfoam.org/
 [url_ngc]:                //www.nvidia.com/en-us/gpu-cloud
-[url_ngc_auth]:           //docs.nvidia.com/ngc/ngc-getting-started-guide/index.html
+[url_ngc_auth]:           //docs.nvidia.com/ngc/gpu-cloud/ngc-user-guide/index.html
 [url_namd]:               //www.ks.uiuc.edu/Research/namd/
 [url_sc18]:               //sc18.supercomputing.org/
 [url_containernative]:    //news.sherlock.stanford.edu/posts/sherlock-goes-container-native
