@@ -28,23 +28,23 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     download the model parameters to `$HOME`. The file is ~1 GB in size.
     
     ```
-    mkdir $HOME/af3_model
-	cd $HOME/af3_model
-	wget <personal_download_link>
+    $ mkdir $HOME/af3_model
+    $ cd $HOME/af3_model
+    $ wget <personal_download_link>
     ```
     You can make a copy of your model parameters to `$SCRATCH`, which will
     for faster performance when running AlphaFold 3.
     
     ```
-    cp -R $HOME/af3_model $SCRATCH
+    $ cp -R $HOME/af3_model $SCRATCH
     ```
     
 3. Clone the AlphaFold 3 GitHub Repo into `$GROUP_HOME`
 
     ```
-    mkdir -p $GROUP_HOME/$USER
-    cd $GROUP_HOME/$USER
-    git clone https://github.com/google-deepmind/alphafold3.git
+    $ mkdir -p $GROUP_HOME/$USER
+    $ cd $GROUP_HOME/$USER
+    $ git clone https://github.com/google-deepmind/alphafold3.git
     ```
     
 4. Download the Databases to `$SCRATCH` or `$GROUP_SCRATCH`.
@@ -80,15 +80,15 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     a `.sif` file, or container image.
     
     ```
-    sh_dev -m 12GB
+    $ sh_dev -m 12GB
     
-    cd $GROUP_HOME/$USER/alphafold3
+    $ cd $GROUP_HOME/$USER/alphafold3
     
-    wget https://gist.githubusercontent.com/cagancayco/a71ae18ab5044e14526e0c83becaf647/raw/9f6104366d59fa9a96bb92693cfa60930184c981/af3.def
+    $ wget https://gist.githubusercontent.com/cagancayco/a71ae18ab5044e14526e0c83becaf647/raw/9f6104366d59fa9a96bb92693cfa60930184c981/af3.def
     
-    apptainer build af3.sif af3.def
+    $ apptainer build af3.sif af3.def
     
-    exit
+    $ exit
     ```
     
     Once you have created the `af3.sif` file, you should put a copy in
@@ -105,8 +105,8 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
     `$GROUP_SCRATCH`.
     
     ```
-    mkdir -p $SCRATCH/af_input
-    mkdir -p $SCRATCH/af_output
+    $ mkdir -p $SCRATCH/af_input
+    $ mkdir -p $SCRATCH/af_output
     ```
     
     The input directory is where you will put the `.json` files containing
