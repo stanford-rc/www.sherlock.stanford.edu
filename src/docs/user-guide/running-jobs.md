@@ -309,6 +309,7 @@ each time step specified with `-t`. You can also request the reports to be
 displayed directly on `stdout` rather than stored in a file.
 
 For instance, this will report usage every 10 seconds:
+
 ```none
 $ ruse -s -t10 --stdout ./myapp
    time         mem   processes  process usage
@@ -424,9 +425,9 @@ The table below summarizes the advantages and inconvenients of each approach:
 | Unique, controlled execution          | :fontawesome-solid-xmark:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
 | Precise schedule                      | :fontawesome-solid-check:{: .chk_yes :}| :fontawesome-solid-xmark:{: .chk_no :}  |
 
-### Recurrent job example
+### Recurring job example
 
-The script below presents an example of such a recurrent job, that would
+The script below presents an example of such a recurring job, that would
 emulate a `cron` task. It will append a timestamped line to a `cron.log` file
 in your `$HOME` directory and run every 7 days.
 
@@ -468,7 +469,7 @@ details are given below:
 
 You can save the script as `cron.sbatch` or any other name, and submit it with:
 
-``` shell
+``` none
 $ sbatch cron.sbatch
 ```
 
@@ -476,7 +477,7 @@ It will start running for the first time 7 days after
 you submit it, and it will continue to run until you cancel it with the
 following command (using the job name, as defined by the `--job-name` option):
 
-``` shell
+``` none
 $ scancel -n cron
 ```
 
@@ -571,7 +572,7 @@ done
     the `while true ... done` loop in the previous example could be replaced by
     something like this:
 
-    ``` shell
+    ``` none
     postgres -i -D $DB_DIR &
     wait
     ```
