@@ -352,32 +352,29 @@ are available to you, and its output looks like this:
 
 ```none
 $ sh_part
-     QUEUE STA   FREE  TOTAL   FREE  TOTAL RESORC  OTHER MAXJOBTIME    CORES       NODE   GRES
- PARTITION TUS  CORES  CORES  NODES  NODES PENDNG PENDNG  DAY-HR:MN    /NODE     MEM-GB (COUNT)
-    normal   *    153   1792      0     84    23k    127    7-00:00    20-24    128-191 -
-    bigmem         29     88      0      2      0      8    1-00:00    32-56   512-3072 -
-       dev         31     40      0      2      0      0    0-02:00       20        128 -
-       gpu         47    172      0      8    116      1    7-00:00    20-24    191-256 gpu:4(S:0-1)(2),gpu:4(S:0)(6)
+ partition           || nodes         | CPU cores             | GPUs                 || job runtime     | mem/core        | per-node
+ name         public ||   idle  total |   idle  total  queued |   idle  total queued || default maximum | default maximum |    cores   mem(GB)  gpus
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+ normal*      yes    ||      0    218 |    438   5844    6949 |      0      0      0 ||      2h      7d |     6GB     8GB |    20-64   128-384     0
+ bigmem       yes    ||      0     11 |    537    824     255 |      0      0      0 ||      2h      1d |     6GB    64GB |   24-256  384-4096     0
+ gpu          yes    ||      0     33 |    354   1068     905 |     25    136    196 ||      1h      2d |     8GB    32GB |    20-64  191-2048   4-8
+ dev          yes    ||      1      4 |     64    104       0 |     62     64      0 ||      1h      2h |     6GB     8GB |    20-32   128-256  0-32
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 ```
 
 The above example shows four possible partitions where jobs can be submitted:
 `normal,` `bigmem,` `dev,` or `gpu.` It also provides additional information
-such as the maximum amount of time allowed in each partition (`MAXJOBTIME`),
-the number of other jobs already in queue, along with the ranges of memory
-available on nodes in each partition.
+such as the maximum amount of time allowed in each partition, the number of
+other jobs already in queue, along with the ranges of resoruces available on
+nodes in each partition. In particular:
 
-* in the `QUEUE PARTITION` column, the `*` character indicates the default
+* in the `partition name` column, the `*` character indicates the default
   partition.
-* the `RESOURCE PENDING` column shows the core count of pending jobs that are
-  waiting on resources,
-* the `OTHER PENDING` column lists core counts for jobs that are pending for
-  other reasons, such as licenses, user, group or any other limit,
-* the `GRES` column shows the number and type of Generic RESsources available
-  in that partition (typically, GPUs), which CPU socket they're available
-  from, and the number of nodes that feature that specific GRES combination.
-  So for instance, in the output above, `gpu:4(S:0-1)(2)` means that the `gpu`
-  partition features 2 nodes with 4 GPUs each, and that those GPUs are
-  accessible from both CPU sockets (`S:0-1`).
+* the `queued` columns show the amount ot CPU cores or GPUs requested by
+  pending jobs,
+* the `per-node` columns show the range of resources available on each node in
+  the partition. For instance, the `gpu` partition has nodes with 20 to 64 CPU
+  cores and 191 to 2048 GB of memory, and up to 8 GPUs per node.
 
 
 
