@@ -158,7 +158,20 @@ account.
 ## Batch jobs
 <!-- TODO needs review -->
 
-It's easy to schedule batch jobs on Sherlock. A job is simply an instance of your program, for example your R, Python or Matlab script that is submitted to and executed by the scheduler (Slurm). When you submit a job with the sbatch command it's called a batch job and it will either run immediately or will pend (wait) in the queue.
+Batch jobs form the core of Sherlock's workload management system. These jobs, submitted via the `sbatch` command, execute on compute nodes rather than login nodes, ensuring optimal resource utilization across the cluster. When you submit a script using `sbatch`, Slurm schedules its execution based on available resources and priority.
+
+The time-to-start for a batch job depends on two primary factors:
+1. Current queue length (number of pending jobs ahead of yours)
+2. Resource requirements specified in your job script
+
+Key resource parameters include:
+- **CPUs**: Number of CPU cores required
+- **GPUs**: GPU resources needed
+- **Memory**: RAM allocation
+- **Time**: Maximum runtime duration
+- **Partition**: Target compute node group
+
+Proper resource specification is crucial - requesting only necessary resources helps minimize queue wait times while ensuring job completion within allocated limits.
 
 The length of time a job will pend is determined by several factors; how many other jobs are in the queue ahead or your job and how many resources your job is requesting are the most important factors. One key principle when requesting resources is to always try to request as few resources as you need to get your job done. This will ensure your job pends in the queue for as little time as necessary. To get a rough idea of what resources are needed, you can profile your code/jobs in an [sh_dev session][url_sh_dev] in real-time with [`htop`][url_htop], [`nvtop`][url_nvtop], [`sacct`][url_sacct] etc. The basic concept is to tell the scheduler what resources your job needs and how long is should run. These resources are:
 
