@@ -37,20 +37,20 @@ main Slurm commands to submit jobs are listed in the table below:
 
 | Command  | Description | Behavior |
 | -------- | ----------- | -------- |
-| `salloc` | Request resources and allocates them to a job | Starts a new shell, but does not execute anything |
-| `srun`   | Request resources and runs a command on the allocated compute node(s) | Blocking command: will not return until the job ends |
+| `salloc` | Request resources and allocates them to a job | Starts a new interactive shell on a compute node |
+| `srun`   | Request resources and runs a command on the allocated compute node(s) | Blocking command: will not return until the executed command ends |
 | `sbatch` | Request resources and runs a script on the allocated compute node(s) | Asynchronous command: will return as soon as the job is submitted |
 
 ## Interactive jobs
 
-### Dedicated nodes
+### Dedicated partition
 
 Interactive jobs allow users to log in to a compute node to run commands
 interactively on the command line. They could be an integral
 part of an interactive programming and debugging workflow. The simplest way to
 establish an interactive session on Sherlock is to use the `sh_dev` command:
 
-``` shell
+``` none
 $ sh_dev
 ```
 
@@ -63,13 +63,13 @@ code or any kind of interactive work.
 login node you're connected to) and can thus be used to run GUI applications.
 
 
-### Compute nodes
+### Generic compute nodes
 
 If you need more resources[^dev_limits], you can pass options to `sh_dev`, to
 request more CPU cores, more nodes, or even run in a different partition.
 `sh_dev -h` will provide more information:
 
-``` shell
+``` none
 $ sh_dev -h
 sh_dev: start an interactive shell on a compute node.
 
@@ -95,7 +95,7 @@ execute a shell through the scheduler. For instance, to start a `bash` session
 on a compute node, with the default resource requirements (one core for 2
 hours), you can run:
 
-``` shell
+``` none
 $ srun --pty bash
 ```
 
@@ -105,7 +105,7 @@ whole range of submission options that `sh_dev` may not support.
 Finally, if you prefer to submit an existing job script or other executable as
 an interactive job, you can use the `salloc` command:
 
-``` shell
+``` none
 $ salloc script.sh
 ```
 
@@ -116,7 +116,7 @@ allocated node(s). It will only start a new shell on the same node you launched
 variables. So you will typically need to look at them to see
 what nodes have been assigned to your job. For instance:
 
-``` shell
+``` none
 $ salloc
 salloc: Granted job allocation 655914
 $ echo $SLURM_NODELIST
@@ -136,7 +136,7 @@ sh02-01n55 ~ $
 If you SSH to a compute node without any active job allocation, you'll be
 greeted by the following message:
 
-``` shell
+``` none
 $ ssh sh02-01n01
 Access denied by pam_slurm_adopt: you have no active jobs on this node
 Connection closed
