@@ -2,9 +2,9 @@ facts:
   - name: users
     fields:
       - name: user accounts
-        value: 7976
+        value: 7999
       - name: PI groups
-        value: 1207
+        value: 1212
         desc: "from all Stanford's seven Schools, SLAC, Stanford Institutes, _etc._"
       - name: owner groups
         value: 211
@@ -41,7 +41,7 @@ facts:
     icon: plug
     fields:
       - name: kW
-        value: 773.34
+        value: 740.70
         desc: total power usage
       - name: PDUs
         value: 93
@@ -61,8 +61,8 @@ facts:
         value: 140
         desc: across **3** Infiniband fabrics (EDR, HDR, NDR)
       - name: Infiniband cables
-        value: 6511
-        desc: spanning about **31.52 km**
+        value: 6522
+        desc: spanning about **31.55 km**
       - name: Ethernet switches
         value: 73
   - name: scheduler
@@ -71,11 +71,11 @@ facts:
       - name: Slurm partitions
         value: 190
       - name: CPU.hours/day
-        value: 58444
+        value: 57157
         desc: over **6 years** of computing in a single day
       - name: /month
         fmt: "${:,.0f}"
-        value: 3905007.3888
+        value: 3819046.1920
         desc: to run the same workload on t2.large on-demand cloud instances
 
   - name: partitions
@@ -129,6 +129,14 @@ facts:
                 - 4 nodes w/ 32-core (Intel 6426Y), 256 GB RAM, NDR IB, 4x Tesla L40S GPUs
                 - 2 nodes w/ 64-core (Intel 8462Y+), 1024 GB RAM, NDR IB, 4x Tesla H100_SXM5 GPUs
                 - 1 nodes w/ 64-core (Intel 8462Y+), 2048 GB RAM, NDR IB, 8x Tesla H100_SXM5 GPUs
+        access: public
+      - name: service
+        nodes: 6
+        cores: 132
+        desc: service nodes
+        details: |
+                - 5 nodes w/ 20-core (Intel E5-2640v4), 128 GB RAM, EDR IB
+                - 1 nodes w/ 32-core (AMD 7502), 256 GB RAM, HDR IB
         access: public
       - name: owners
         nodes: 1741
