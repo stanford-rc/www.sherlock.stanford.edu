@@ -12,9 +12,10 @@ tags:
     the scheduler which will dispatch them on compute nodes.
 
 The key principle of a shared computing environment is that resources are
-shared among users and must be scheduled. It is **mandatory** to schedule work
-by submitting jobs to the scheduler on Sherlock. And since login nodes are a
-shared resource, they must not be used to execute computing tasks.
+shared among users and access to them must be scheduled. On Sherlock, it is
+**mandatory** to schedule work by requesting resources and submitting jobs to
+the scheduler. Because login nodes are shared by all users, they must not be
+used to execute computational tasks.
 
 Acceptable use of login nodes include:
 
@@ -25,15 +26,18 @@ Acceptable use of login nodes include:
 !!! warning "Resource limits are enforced"
 
     To minimize disruption and ensure a comfortable working environment for
-    users, resource limits are enforced on login nodes, and processes started
+    users, resource limits are enforced on login nodes. Processes started
     there will automatically be terminated if their resource usage (including
     CPU time, memory and run time) exceed those limits.
 
 
 ## Slurm commands
 
-Slurm allows requesting resources and submitting jobs in a variety of ways. The
-main Slurm commands to submit jobs are listed in the table below:
+Slurm is the job scheduler used on Sherlock. It is responsible for managing the
+resources of the cluster and scheduling jobs on compute nodes.
+
+There are several ways to request resources and submit jobs. The main Slurm
+commands to submit jobs are listed in the table below:
 
 | Command  | Description | Behavior |
 | -------- | ----------- | -------- |
@@ -43,12 +47,12 @@ main Slurm commands to submit jobs are listed in the table below:
 
 ## Interactive jobs
 
-### Dedicated partition
+### Dedicated nodes
 
 Interactive jobs allow users to log in to a compute node to run commands
-interactively on the command line. They could be an integral
-part of an interactive programming and debugging workflow. The simplest way to
-establish an interactive session on Sherlock is to use the `sh_dev` command:
+interactively on the command line. They could be an integral part of an
+interactive programming and debugging workflow. The simplest way to establish
+an interactive session on Sherlock is to use the `sh_dev` command:
 
 ``` none
 $ sh_dev
@@ -63,11 +67,11 @@ code or any kind of interactive work.
 login node you're connected to) and can thus be used to run GUI applications.
 
 
-### Generic compute nodes
+### Compute nodes
 
 If you need more resources[^dev_limits], you can pass options to `sh_dev`, to
-request more CPU cores, more nodes, or even run in a different partition.
-`sh_dev -h` will provide more information:
+request more CPU cores, more nodes, or even run in a different
+[partition][anc_public_parts]. `sh_dev -h` will provide more information:
 
 ``` none
 $ sh_dev -h
@@ -76,13 +80,14 @@ sh_dev: start an interactive shell on a compute node.
 Usage: sh_dev [OPTIONS]
     Optional arguments:
         -c      number of CPU cores to request (OpenMP/pthreads, default: 1)
+        -g      number of GPUs to request (default: none)
         -n      number of tasks to request (MPI ranks, default: 1)
         -N      number of nodes to request (default: 1)
         -m      memory amount to request (default: 4GB)
         -p      partition to run the job in (default: dev)
         -t      time limit (default: 01:00:00)
         -r      allocate resources from the named reservation (default: none)
-        -J      job name (default: sh_dev)
+        -J      job name (default: sdev)
         -q      quality of service to request for the job (default: normal)
 
     Note: the default partition only allows for limited amount of resources.
@@ -90,47 +95,39 @@ Usage: sh_dev [OPTIONS]
     alternative partition with -p.
 ```
 
-Another way to get an interactive session on a compute node is to use `srun` to
-execute a shell through the scheduler. For instance, to start a `bash` session
-on a compute node, with the default resource requirements (one core for 2
-hours), you can run:
+For instance, you can request 4 CPU cores, 8 GB of memory and 1 GPU in the `gpu`
+partition with:
 
 ``` none
-$ srun --pty bash
+$ sh_dev -c 4 -m 8GB -g 1 -p gpu
+```
+
+
+Another way to get an interactive session on a compute node is to use `salloc`
+to execute a shell through the scheduler. For instance, to start a shell on a
+compute node in the `normal` partition, with the default resource requirements
+(one core for 2 hours), you can run:
+
+``` none
+$ salloc
 ```
 
 The main advantage of this approach is that it will allow you to specify the
 whole range of submission options that `sh_dev` may not support.
 
-Finally, if you prefer to submit an existing job script or other executable as
-an interactive job, you can use the `salloc` command:
+You can also submit an existing job script or other executable as
+an interactive job:
 
 ``` none
-$ salloc script.sh
+$ salloc ./script.sh
 ```
 
-If you don't provide a command to execute, `salloc` will start a Slurm job and
-allocate resources for it, but it will not automatically connect you to the
-allocated node(s). It will only start a new shell on the same node you launched
-`salloc` from, and set up the appropriate `$SLURM_*` environment
-variables. So you will typically need to look at them to see
-what nodes have been assigned to your job. For instance:
-
-``` none
-$ salloc
-salloc: Granted job allocation 655914
-$ echo $SLURM_NODELIST
-sh02-01n55
-$ ssh sh02-01n55
-[...]
-sh02-01n55 ~ $
-```
 
 #### Connecting to nodes
 
-!!! warning "Login to compute nodes"
+!!! warning "Connecting to compute nodes"
 
-    Users are not allowed to login to compute nodes unless they have a job
+    Users are not allowed to connect to compute nodes unless they have a job
     running there.
 
 If you SSH to a compute node without any active job allocation, you'll be
@@ -158,42 +155,72 @@ account.
 ## Batch jobs
 <!-- TODO needs review -->
 
-Batch jobs form the core of Sherlock's workload management system. These jobs, submitted via the `sbatch` command, execute on compute nodes rather than login nodes, ensuring optimal resource utilization across the cluster. When you submit a script using `sbatch`, Slurm schedules its execution based on available resources and priority.
+It's easy to schedule batch jobs on Sherlock. A **job** is simply an instance
+of your program (for example an R, Python or Matlab script) that is submitted
+to the scheduler (Slurm) for asynchronous execution on a compute node.
+Submitting a job using the `sbatch` command creates a batch job, which will
+either start immediately or enter a pending state in the queue, depending on
+current cluster load and resource availability.
 
-The time-to-start for a batch job depends on two primary factors:
-1. Current queue length (number of pending jobs ahead of yours)
-2. Resource requirements specified in your job script
 
-Key resource parameters include:
-- **CPUs**: Number of CPU cores required
-- **GPUs**: GPU resources needed
-- **Memory**: RAM allocation
-- **Time**: Maximum runtime duration
-- **Partition**: Target compute node group
+### Job queuing
 
-Proper resource specification is crucial - requesting only necessary resources helps minimize queue wait times while ensuring job completion within allocated limits.
+The time a job spends pending is primarily influenced by two factors:
 
-The length of time a job will pend is determined by several factors; how many other jobs are in the queue ahead or your job and how many resources your job is requesting are the most important factors. One key principle when requesting resources is to always try to request as few resources as you need to get your job done. This will ensure your job pends in the queue for as little time as necessary. To get a rough idea of what resources are needed, you can profile your code/jobs in an [sh_dev session][url_sh_dev] in real-time with [`htop`][url_htop], [`nvtop`][url_nvtop], [`sacct`][url_sacct] etc. The basic concept is to tell the scheduler what resources your job needs and how long is should run. These resources are:
+* the number of jobs ahead of yours in the queue,
+* the amount and type of resources your job requests.
 
-**CPUs:** How many CPUs the program you are calling the in the sbatch script needs, unless it can utilize multiple CPUs at once you should request a single CPU. Check your code's documentation or try running in an interactive session with [`sh_dev`][url_sh_dev] and run htop if you are unsure.
+To minimize queue time, request only the resources necessary for your workload.
+Overestimating resource needs can result in longer wait times. Profiling your
+code interactively (for example, in an [`sh_dev` session][anc_sh_dev] session
+using tools like [`htop`][url_htop], [`nvtop`][anc_nvtop],
+[`sacct`][url_sacct]) can help you determine appropriate resource requirements.
 
-**GPUs:** If your code is GPU enabled, how many GPUs does your code need? Use the diagnostic tool [`nvtop`][url_nvtop] to see if your code is capable of running on multiple GPUs and how much GPU memory it's using in real-time.
 
-**memory (RAM):** How much memory your job will consume. Some things to consider, will it load a large file or matrix into memory? Does it consume a lot of memory on your laptop? Often the default memory is sufficient for many jobs.
+### Requesting resources
 
-**time:** How long will it take for your code to run to completion?
+When submitting a job, you can request the following:
 
-**partition:** What set of compute nodes on Sherlock will you run on, normal, gpu, owners, bigmem? Use the [`sh_part`][url_sh_part] command to see what partitions you are allowed to run on. The default partition on Sherlock is the normal partition.
+* **[CPUs][anc_cpus]:** How many CPU cores the program you are calling the in
+  the `sbatch` script needs. Unless it can utilize multiple CPUs at once you
+  should request a single CPU. Check your code's documentation or try running
+  in an interactive session with [`sh_dev`][anc_sh_dev] and run `htop` if you
+  are unsure.
 
-Next, you tell the scheduler what your job should should do: load modules and run your code. Note that any logic you can code into a bash script with the [bash scripting language][url_bash] can also be coded into an sbatch script.
+* **[GPUs][anc_gpus]:** If your code is GPU-enabled, how many GPUs does your
+  code need?
 
-This example job, will run the Python script mycode.py for 10 minutes on the normal partition using 1 CPU and 8 GB of memory. To aid in debugging we are naming this job "test_job" and appending the Job ID (%j) to the two output files that Slurm creates when a job is run. The output files are written to the directory in which you launched your job in, you can also specify a different path. One file will contain any errors and the other will contain non-error output.  Look in these 2 files ending in .err and .out for useful debugging information and error output.
+* **Memory (RAM):** Estimate how much memory your job will consume. Consider
+  whether your program loads large datasets or uses significant memory on your
+  local machine. For most jobs, the default memory allocation usually suffices.
 
-Because it's a Python 3 script that uses some Numpy code, we need to load the python/3.6.1 and the py-numpy/1.19.2_py36 modules. The Python script is then called just as you would on the command line at the end of the sbatch script:
+* **Time:** Specify how long your job will take to run to completion.
 
-sbatch script:
+* **[Partition][anc_partition]:** Choose the compute partition (e.g., `normal`,
+  `gpu`, `owners`, `bigmem`).
 
-```shell
+You also need to indicate the scheduler what your job should should do: what
+modules to load, and how to execute your application. Note that any logic you
+can code into a bash script with the [bash scripting language][url_bash] can
+also be coded into an `sbatch` script.
+
+#### Example `sbatch` script
+
+The example job below will run the Python script `mycode.py` for 10 minutes on
+the `normal` partition using 1 CPU and 8 GB of memory. To aid in debugging, we
+are naming this job "test_job" and appending the Job ID (`%j`) to the two
+output files that Slurm creates when a job is executed. The output files are
+written to the directory in which you launched your job (you can also specify a
+different path). One file will contain any errors and the other will contain
+non-error output. Look in these 2 files ending in `.err` and `.out` for useful
+debugging information and error output.
+
+Because it's a Python script that uses some NumPy code, we need to load the
+`python/3.6.1` and the `py-numpy/1.19.2_py36` modules. The Python script is
+then called just as you would on the command line, at the end of the `sbatch`
+script.
+
+``` shell
 #!/usr/bin/bash
 #SBATCH --job-name=test_job
 #SBATCH --output=test_job.%j.out
@@ -202,44 +229,69 @@ sbatch script:
 #SBATCH -p normal
 #SBATCH -c 1
 #SBATCH --mem=8GB
+
 module load python/3.6.1
 module load py-numpy/1.19.2_py36
 python3 mycode.py
 ```
-Create and edit the sbatch script with a [text editor][url_texteditors] like vim/nano or the [OnDemand file manager][url_filemanager]. Then save the file, in this example we call it "test.sbatch".
 
-Submit to the scheduler with the [`sbatch`][url_sbatch] command:
+Here are the steps to create and submit this batch script:
 
+1. Create and edit the `sbatch` script with a [text editor][anc_texteditors]
+   like `vim`/`nano` or the [OnDemand file manager][anc_filemanager]. Then save
+   the file, in this example we call it `test.sbatch`.
+
+2. Submit to the scheduler with the [`sbatch`][url_sbatch] command:
+
+    ``` none
+    $ sbatch test.sbatch
+    ```
+
+3. Monitor your job and job ID in the queue with the [`squeue`][url_squeue]
+   command:
+
+    ``` none
+    $ squeue --me
+       JOBID    PARTITION   NAME      USER      ST  TIME  NODES  NODELIST(REASON)
+       4915821     normal   test_job  <userID>  PD  0:00      1  (Resources)
+    ```
+
+    Notice that the jobs state is "Pending" (`PD`). Once the job starts to run,
+    its state will change to "Running" (`R`), and the `NODES` column will
+    indicate how many nodes are being used. The `NODELIST(REASON)` column will
+    show the reason why the job is pending. In this case, it is waiting for
+    resources to become available.
+
+    ``` none
+    $ squeue --me
+       JOBID    PARTITION   NAME      USER      ST  TIME  NODES  NODELIST(REASON)
+       4915821     normal   test_job  <userID>   R  0:10      1  sh02-01n49
+    ```
+
+    This last output means that job 44915821 has been running (R) on compute
+    node `sh02-01n49` for 10 seconds (0:10).
+
+While your job is running you can connect to the node it's running on via SSH,
+to monitor your job in real-time. For example, if your job is running on node
+`sh02-01n49`, you can connect to it with:
+
+``` none
+$ ssh sh02-01n49
 ```
-$sbatch test.sbatch
-```
-Monitor your job and job ID in the queue with the [squeue][url_squeue] command:
+and then use tools like [`htop`][url_htop] to watch processes and resource
+usage.
 
-```
-$squeue -u $USER
-   JOBID     PARTITION     NAME     USER    ST       TIME  NODES  NODELIST(REASON)
-   44915821    normal    test_job  <userID>  PD       0:00      1 (Priority)
-```
-
-Notice that the jobs state (ST) in pending (PD)
-
-Once the job starts to run that will change to R:
-
-```
-$squeue -u $USER
-    JOBID     PARTITION     NAME     USER     ST      TIME  NODES   NODELIST(REASON)
-    44915854    normal test_job  <userID>     R	     0:10	  1     sh02-01n49
-```
-
-Here you can see it has been running (R) on the compute node sh02-01n49 for 10 seconds.  While your job is running you have ssh access to that
-node and can run diagnostic tools such as [`htop`][url_htop] and [`nvtop`][url_nvtop] in order to monitor your job's memory and CPU/GPU utilization in real-time.
-You can also manage this job based on the JobID assigned to it (44915854).  For example the job can be cancelled with the [`scancel`][url_scancel] command.  After your job completes you can asses and fine-tune your resource requests (time, CPU/GPU, memory) with the [`sacct`][url_sacct] or seff commands.
+You can also manage this job based on the jobid assigned to it (44915854). For
+example the job can be canceled with the [`scancel`][url_scancel] command
+.
+After your job completes you can asses and fine-tune your resource requests
+(time, CPU/GPU, memory) with the [`sacct`][url_sacct] or `seff` commands.
 
 
-### Resource requests
+### Estimating resources
 
 To get a better idea of the amount of resources your job will need, you can use
-the `ruse` command, available as a [module][url_modules]:
+the `ruse` command, available as a [module][anc_modules]:
 
 ```none
 $ module load system ruse
@@ -247,12 +299,12 @@ $ module load system ruse
 
 [`ruse`][url_ruse] is a command line tool developed by Jan Moren to measure a
 process' resource usage. It periodically measures the resource use of a process
-and its subprocesses, and can help you find out how much resource to allocate
+and its sub-processes, and can help you find out how much resource to allocate
 to your job. It will determine the actual memory, execution time and cores that
 individual programs or MPI applications need to request in their job submission
 options.
 
-`ruse` periodically samples the process and its subprocesses and keeps track of
+`ruse` periodically samples the process and its sub-processes and keeps track of
 the CPU, time and maximum memory use. It also optionally records the sampled
 values over time. The purpose or Ruse is not to profile processes in detail,
 but to follow jobs that run for many minutes, hours or days, with no
@@ -261,7 +313,7 @@ performance impact and without changing the measured application in any way.
 You'll find complete documentation and details about `ruse`'s usage on the
 [project webpage][url_ruse], but here are a few useful examples.
 
-##### Sizing a job
+#### Sizing a job
 
 In its simplest form, `ruse` can help discover how much resources a new script
 or application will need. For instance, you can start a sizing session on a
@@ -287,11 +339,11 @@ Proc(%): 99.9  99.9
 
 It shows that `myapp`:
 
-  * ran for almost 3 hours
-  * used a little less than 8B of memory
-  * had 4 cores available,
-  * spawned 3 processes, among which at most 2 were active at the same time,
-  * that both active processes each used 99.9% of a CPU core
+* ran for almost 3 hours
+* used a little less than 8B of memory
+* had 4 cores available,
+* spawned 3 processes, among which at most 2 were active at the same time,
+* that both active processes each used 99.9% of a CPU core
 
 This information could be useful in tailoring the job resource requirements to
 its exact needs, making sure that the job won't be killed for exceeding one of
@@ -349,6 +401,7 @@ important to modify the application parameters to make sure that it doesn't
 start more computing processes than the number of requested CPU cores.
 
 
+
 ## Available resources
 
 Whether you are submitting a [batch job](#batch-jobs), or an or [interactive
@@ -356,7 +409,7 @@ job](#interactive-jobs), it's important to know the resources that are
 available to you. For this reason, we provide [`sh_part`][url_sh_part], a
 command-line tool to help answer questions such as:
 
-* which [partitions][url_partition] do I have access to?
+* which [partitions][anc_partition] do I have access to?
 * how many jobs are running on them?
 * how many CPUs can I use?
 * where should I submit my jobs?
@@ -373,14 +426,15 @@ $ sh_part
  bigmem       yes    ||      0     11 |    537    824     255 |      0      0      0 ||      2h      1d |     6GB    64GB |   24-256  384-4096     0
  gpu          yes    ||      0     33 |    354   1068     905 |     25    136    196 ||      1h      2d |     8GB    32GB |    20-64  191-2048   4-8
  dev          yes    ||      1      4 |     64    104       0 |     62     64      0 ||      1h      2h |     6GB     8GB |    20-32   128-256  0-32
+ service      yes    ||      5      6 |    129    132       0 |      0      0      0 ||      1h      2h |     1GB     8GB |    20-32   128-256     0
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 ```
 
 The above example shows four possible partitions where jobs can be submitted:
-`normal,` `bigmem,` `dev,` or `gpu.` It also provides additional information
-such as the maximum amount of time allowed in each partition, the number of
-other jobs already in queue, along with the ranges of resoruces available on
-nodes in each partition. In particular:
+`normal,` `bigmem,` `gpu,`, `dev`, and `service`. It also provides additional
+information such as the maximum amount of time allowed in each partition, the
+number of other jobs already in queue, along with the ranges of resources
+available on nodes in each partition. In particular:
 
 * in the `partition name` column, the `*` character indicates the default
   partition.
@@ -391,8 +445,65 @@ nodes in each partition. In particular:
   cores and 191 to 2048 GB of memory, and up to 8 GPUs per node.
 
 
+### Public partitions
 
-## Recurring jobs
+Here are the main public partitions available to everyone on Sherlock:
+
+
+| Partition | Purpose | Resources | Limits |
+| --------- | ------- | --------- | ------ |
+| `normal`  | General purpose compute jobs | 20-64 cores/node, 6-8 GB RAM/core | default runtime of 2 hours, max. 2 days (up to 7 days with the `long` QOS[^long_qos]) |
+| `bigmem`  | High memory compute jobs | for jobs requiring > 256GB, up to 4 TB RAM/node | Maximum runtime of 1 day |
+| `gpu`     | GPU compute jobs | 20-64 cores/node, up to 2TB RAM/node, 4 or 8 GPUs/node | 16 GPUs/user |
+| `dev`     | Development and testing jobs | dedicated nodes and lightweight GPU instances (MIG) | 2h max, 4 cores + 2 GPUs/user |
+| `service` | Lightweight, recurring administrative tasks | massively over-subscribed resources | 2 jobs, 16 cores/user, 2 days runtime |
+
+
+
+
+
+## Service jobs
+
+It's often useful to run lightweight, recurring administrative tasks on a
+cluster, such as data transfer or monitoring jobs. On Sherlock, these tasks can
+be run in the **service** partition, which is designed specifically for this
+purpose.
+
+The `service` partition is not intended for compute intensive workloads,
+but rather for lightweight tasks that do not require significant computing
+resources. This includes jobs such as data transfers, backups, archival
+processes, CI/CD pipelines, lightweight database servers, job managers, and
+other menial or cron-like operations.
+
+* **Purpose:** Intended for non-computational, background, or administrative
+  tasks that are important for cluster operations but do not need high
+  performance.
+
+* **Resource Allocation:** Resources in the service partition are heavily
+  oversubscribed. This means that multiple jobs may share the same CPU and
+  memory resources, leading to minimal compute performance. The focus is on
+  maximizing throughput for many small, low-impact jobs, not on delivering fast
+  or isolated execution.
+
+* **Performance:** Not suitable for regular compute-intensive workloads. Jobs
+  running here may experience significant slowdowns or contention if they
+  attempt to use substantial CPU or memory.
+
+* **Best Fit:**
+
+    * Scheduled and recurring jobs (e.g., via [`scrontab`][anc_scrontab])
+    * Data movement (`rsync`, `scp`, etc.)
+    * Automated backups and data archival tasks
+    * Monitoring agents, job managers, or lightweight daemons
+    * CI/CD tasks that do not require high performance nor specialized hardware
+
+* **Partition Usage:** The service partition is an ideal replacement for
+  traditional cron jobs on login nodes, providing a dedicated and isolated
+  environment for such workloads without impacting user-facing compute
+  partitions.
+
+
+### Recurring jobs
 
 !!! Warning
 
@@ -427,18 +538,17 @@ scheduled by Slurm like any other jobs. Typical recurring jobs, such as file
 synchronization, database updates or backup tasks don't require strict starting
 times, though, so most users find this an acceptable trade-off.
 
-The table below summarizes the advantages and inconvenients of each approach:
-
+The table below summarizes the advantages and drawbacks of each approach:
 
 |     | Cron tasks | Recurring jobs |
 | --- | :--------: | :------------: |
-| Authorized on Sherlock                | :fontawesome-solid-xmark:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
-| Dedicated resources for the task      | :fontawesome-solid-xmark:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
-| Persistent across node redeployments  | :fontawesome-solid-xmark:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
-| Unique, controlled execution          | :fontawesome-solid-xmark:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
-| Precise schedule                      | :fontawesome-solid-check:{: .chk_yes :}| :fontawesome-solid-xmark:{: .chk_no :}  |
+| Authorized on Sherlock              | :fontawesome-solid-xmark:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
+| Dedicated resources for the task    | :fontawesome-solid-xmark:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
+| Persistent across node redeployment | :fontawesome-solid-xmark:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
+| Unique, controlled execution        | :fontawesome-solid-xmark:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
+| Precise schedule                    | :fontawesome-solid-check:{: .chk_yes :}| :fontawesome-solid-xmark:{: .chk_no :}  |
 
-### Recurring job example
+#### Recurring job example
 
 The script below presents an example of such a recurring job, that would
 emulate a `cron` task. It will append a timestamped line to a `cron.log` file
@@ -473,7 +583,7 @@ details are given below:
 
 | Submission\ option\ or\ command | Explanation |
 | ------- | ----------- |
-| `--job-name=cron` |  makes it easy to identify the job, is used by the  `--dependency=singleton` option to identify identical jobs, and will allow  cancelling the job by name (because its jobid will change each time it's  submitted) |
+| `--job-name=cron` |  makes it easy to identify the job, is used by the  `--dependency=singleton` option to identify identical jobs, and will allow canceling the job by name (because its jobid will change each time it's  submitted) |
 | `--begin=now+7days`  |  will instruct the scheduler to not even consider the job   for scheduling before 7 days after it's been submitted |
 | `--dependency=singleton` |  will make sure that only one `cron` job runs at any given time |
 | `--time=00:02:00` |  runtime limit for the job (here 2 minutes). You'll need to adjust the value   depending on the task you need to run (shorter runtime requests usually   result in the job running closer to the clock mark) |
@@ -496,7 +606,7 @@ $ scancel -n cron
 
 
 
-## Persistent jobs
+### Persistent jobs
 
 [Recurring jobs](#recurring-jobs) described above are a good way to emulate
 `cron` jobs on Sherlock, but don't fit all needs, especially when a persistent
@@ -505,8 +615,8 @@ service is required.
 For instance, workflows that require a persistent database connection would
 benefit from an ever-running database server instance. We don't provide
 persistent database services on Sherlock, but instructions and examples on how
-to submit database server jobs are provided for [MariaDB][url_mariadb] or
-[PostgreSQL][url_pgsql].
+to submit database server jobs are provided for [MariaDB][anc_mariadb] or
+[PostgreSQL][anc_pgsql].
 
 In case those database instances need to run pretty much continuously (within
 the limits of available resources and runtime maximums), the previous approach
@@ -516,7 +626,7 @@ time and don't reach their time limit, but need to run at given intervals (like
 synchronization or backup jobs, for instance).
 
 Because a database server process will never end within the job, and will
-continue until the job reaches its time limit, the last resubmission command
+continue until the job reaches its time limit, the last re-submission command
 (`sbatch $0`) will actually never be executed, and the job won't be
 resubmitted.
 
@@ -526,7 +636,7 @@ time limit is reached, and then re-queue the job. This is easily done with the
 Bash [`trap`][url_trap] command, which can be instructed to re-submit a job
 when it receives the [`SIGUSR1`][url_signals] signal.
 
-!!! important "Automatically resubmitting a job doesn't make it immediately runnable"
+!!! important "Job re-submission and execution delay"
 
     Jobs that are automatically re-submitted using this technique won't restart
     right away: the will get back in queue and stay pending until their
@@ -534,7 +644,7 @@ when it receives the [`SIGUSR1`][url_signals] signal.
 
 
 
-### Persistent job example
+#### Persistent job example
 
 Here's the recurring job example from above, modified to:
 
@@ -581,7 +691,7 @@ done
     command and then add a `wait` statement at the end of the script, to make
     the shell wait until the end of the job.
 
-    For instance, if you were to run a [PostgreSQL database server][url_pgsql],
+    For instance, if you were to run a [PostgreSQL database server][anc_pgsql],
     the `while true ... done` loop in the previous example could be replaced by
     something like this:
 
@@ -591,7 +701,7 @@ done
     ```
 
 
-### Persistent `$JOBID`
+#### Persistent `$JOBID`
 
 One potential issue with having a persistent job re-submit itself when it
 reaches its runtime limit is that it will get a different `$JOBID` each time
@@ -601,8 +711,8 @@ This could be particularly challenging when other jobs depend on it, like in
 the database server scenario, where client jobs would need to start only if the
 database server is running. This can be achieved with [job
 dependencies][url_job_deps], but those dependencies have to be expressed using
-jobids, so having the server job's id changing at each re-submission will be
-difficult to handle.
+jobid numbers, so having the server job's id changing at each re-submission
+will be difficult to handle.
 
 To avoid this, the re-submission command (`sbatch $0`) can be replaced by
 a re-queuing command:
@@ -644,7 +754,7 @@ done
 
 Submitting that job will produce an output similar to this:
 
-```
+``` none
 Mon Nov  5 10:30:59 PST 2018: Job 31182239 starting on sh-06-34
 Mon Nov  5 10:30:59 PST 2018: normal execution
 Mon Nov  5 10:31:59 PST 2018: normal execution
@@ -661,6 +771,147 @@ The job runs for 5 minutes, then received the `SIGUSR1` signal, is re-queued,
 restarts for 5 minutes, and so on, until it's properly `scancel`led.
 
 
+
+### Slurm crontab
+
+As an alternative, Slurm also offers the possibility to emulate regular
+traditional `cron` jobs using the [`scrontab`][url_scrontab] command. This is a
+Slurm-specific command that allows users to schedule jobs to run at specific
+times or intervals, similar to the traditional `cron` system. The main
+difference is that `scrontab` jobs are managed by Slurm, and can take advantage
+of the scheduler resource management capabilities.
+
+The full documentation about `scrontab` is available in the [Slurm
+documentation][url_scrontab], but you'll find some more Sherlock-specific
+information below.
+
+To edit your `scrontab` script, you can use the following command:
+
+``` none
+$ scrontab -e
+```
+
+This will open your default editor on Sherlock (`vim` is the default), where
+you can edit your script, and once you save it, it will automatically be
+scheduled for execution.
+
+You can view your existing `scron` scripts with:
+
+``` none
+$ scrontab -l
+```
+
+
+#### Example `scrontab` script
+
+Each `scrontab` script can include regular Slurm submissions, (like
+`-t-`/`--time`, `-c`/`--cpus-per-task`, etc).  Here's an example `scrontab` job
+script that will run every three hours in the `service` partition, and run a
+script that won't need more than 10 minutes to complete.
+
+!!! note "Log file output"
+
+    By default, Slurm will **overwrite** output files at each execution. If you
+    want to keep a runnin glog of each execution, you can add a `#SCRON
+    --open-mode=append` line to your `scrontab` script, which will tell Slurm
+    to append any new output to the exisitng output file.
+
+``` crontab
+#SCRON -p service
+#SCRON -t 00:10:00
+#SCRON -o mycron_output-%j.out
+#SCRON --open-mode=append
+
+0 */3 * * * /path/to/your/script.sh
+```
+
+!!! info "Exceeding resource limits"
+
+    If your job requirement specifications exceed the defined limits in the
+    requested partition, the job will be rejected and an error message will be
+    displayed when saving the `scrontab` script. For instance, requesting `-c
+    32` in the `service` partition will result in the following massage:
+
+    ``` none
+    There was an issue with the job submission on lines 26-29
+    The error code return was: Job violates accounting/QOS policy (job submit limit, user's size and/or time limits)
+    The error message was: QOSMaxCpuPerUserLimit
+    The failed lines are commented out with #BAD:
+    Do you want to retry the edit? (y/n)
+    ```
+
+#### Long-running `scrontab` jobs
+
+In most cases, `scron` jobs will be short-lived, and their execution duration
+will be smaller than the interval between executions. But sometimes, it may be
+useful to maintain a long-running process, to manage jobs or keep a database
+instance running for longer than the maximum runtime.
+
+For those long-running jobs, you can set the execution interval to be fairly
+short (so the job is restarted early when it's interrupted), and add the
+`--dependency=singleton` submission option, to make sure that only one instance
+of the job is running at any given time:
+
+``` crontab
+#SCRON -p service
+#SCRON -t 1-00:00:00
+#SCRON --dependency=singleton
+#SCRON --name=my_process
+
+0 * * * * /path/to/your/script.sh
+```
+
+This will instruct The scheduler to check every hour whether an instance of the
+job is running, and start it if it's not.
+
+!!! warning "Avoiding duplicate job instances"
+
+    To avoid having multiple instances of the same job running at the same
+    time, and starting multiple instances each time the `scrontab` file is
+    edited, make sure to the `--dependency=singleton` option.
+
+
+#### Monitoring `scrontab` jobs
+
+You can monitor your `scrontab` jobs with `squeue`, like every other Slurm job.
+For instance, to only list your `scrontab` jobs, you can use the following
+command:
+
+``` none
+$ squeue --me -O JobID,EligibleTime,CronJob | awk 'NR==1 || $NF=="Yes"'
+JOBID               ELIGIBLE_TIME       CRON_JOB
+105650              2025-05-23T13:20:00 Yes
+```
+
+The `ELIGIBLE_TIME` column indicates the next time the batch system will run
+your job.
+
+
+#### Canceling a `scrontab` job
+
+To cancel a `scrontab` job, you can edit the `scrontab` file with `scrontab -e`
+and comment out all the lines associated with the job you want to cancel. This
+will immediately remove the `scrontab` job from the queue when the script is
+saved, and prevent the job from being executed in the future.
+
+!!! info "Using `scancel` on a `scrontab` job"
+
+    The `scancel` command will give a warning when attempting
+    to remove a job started with `scrontab`.
+
+    ```bash
+    $ scancel 105650
+    scancel: error: Kill job error on job id 105650: Cannot cancel scrontab jobs without --cron flag.
+    ```
+
+    When canceling a `scrontab` job with the `--cron` flag, the corresponding
+    entries in the `scrontab` file are prepended with `#DISABLED`. These
+    comments will need to be removed before the job will be able to start
+    again.
+
+
+
+
 [comment]: #  (TODO: batch jobs, resource requirements, partitions, qos, limits, mail...)
 
 
@@ -674,18 +925,23 @@ restarts for 5 minutes, and so on, until it's properly `scancel`led.
 [url_htop]:         //htop.dev/
 [url_sacct]:        //slurm.schedmd.com/sacct.html
 [url_squeue]:       //slurm.schedmd.com/squeue.html
+[url_scrontab]:     //slurm.schedmd.com/scrontab.html
 [url_bash]:         //www.gnu.org/software/bash/manual/bash.html
 [url_scancel]:      //slurm.schedmd.com/scancel.html
 [url_ruse]:         //github.com/JanneM/Ruse
 
-[url_modules]:      /docs/software/modules.md
-[url_mariadb]:      /docs/software/using/mariadb.md
-[url_pgsql]:        /docs/software/using/postgresql.md
-[url_partition]:    /docs/glossary.md#partition
-[url_nvtop]:        /docs/user-guide/gpu.md#advanced-options
-[url_sh_dev]:       /docs/user-guide/running-jobs.md#interactive-jobs
-[url_filemanager]:  /docs/user-guide/ondemand.md#managing-files
-[url_texteditors]:  /docs/getting-started/index.md#text-editors
+[anc_modules]:      /docs/software/modules.md
+[anc_mariadb]:      /docs/software/using/mariadb.md
+[anc_pgsql]:        /docs/software/using/postgresql.md
+[anc_partition]:    /docs/glossary.md#partition
+[anc_cpus]:         /docs/glossary.md#cpu
+[anc_gpus]:         /docs/glossary.md#gpu
+[anc_nvtop]:        /docs/user-guide/gpu.md#advanced-options
+[anc_sh_dev]:       /docs/user-guide/running-jobs.md#interactive-jobs
+[anc_public_parts]: /docs/user-guide/running-jobs.md#public-partitions
+[anc_filemanager]:  /docs/user-guide/ondemand.md#managing-files
+[anc_texteditors]:  /docs/getting-started/index.md#text-editors
+[anc_scrontab]:     /docs/user-guide/running-jobs.md#slurm-crontab
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
@@ -700,9 +956,12 @@ restarts for 5 minutes, and so on, until it's properly `scancel`led.
   amounts of memory via SSH while your job is running, you may hit the job's
   memory limits, which will trigger its termination.
 
-
 [^signal_delay]: Due to the resolution of event handling by the scheduler, the
   signal may be sent up to 60 seconds earlier than specified.
+
+[^long_qos]: the `long` QOS can only be used in the `normal` partition, and is
+  only accessible to users who are *not* part of an owners group (since owner
+  groups can already run for up to 7 days in their respective partition).
 
 
 --8<--- "includes/_acronyms.md"
