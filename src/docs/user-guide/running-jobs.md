@@ -278,6 +278,7 @@ to monitor your job in real-time. For example, if your job is running on node
 ``` none
 $ ssh sh02-01n49
 ```
+
 and then use tools like [`htop`][url_htop] to watch processes and resource
 usage.
 
