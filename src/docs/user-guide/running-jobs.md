@@ -87,7 +87,7 @@ Usage: sh_dev [OPTIONS]
         -p      partition to run the job in (default: dev)
         -t      time limit (default: 01:00:00)
         -r      allocate resources from the named reservation (default: none)
-        -J      job name (default: sdev)
+        -J      job name (default: sh_dev)
         -q      quality of service to request for the job (default: normal)
 
     Note: the default partition only allows for limited amount of resources.
