@@ -33,7 +33,7 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     $ wget <personal_download_link>
     ```
     You can make a copy of your model parameters to `$SCRATCH`, which will
-    for faster performance when running AlphaFold 3.
+    have faster performance when running AlphaFold 3.
     
     ```
     $ cp -R $HOME/af3_model $SCRATCH
@@ -55,7 +55,7 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     
     ```
     #!/bin/bash
-    #SBATCH -t 10:00:00
+    #SBATCH -t 5:00:00
     
     bash fetch_databases.sh $SCRATCH/af3_db
     ```
@@ -63,7 +63,9 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     This script assumes that you are submitting the job from within the 
     GitHub repository that you cloned into `$GROUP_HOME/$USER`. Feel free to
     modify the script if you want to use your own partition, download to a
-    different location, or submit the job from a different directory.
+    different location, or submit the job from a different directory. The
+    database will take approximately 1 hour to download, you may proceed to
+    next step while it completes.
     
     Although unmodified files are purged from `$SCRATCH` and `$GROUP_SCRATCH`
     every 90 days, Stanford Research Computing maintains a copy of the
@@ -72,7 +74,7 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     `$SCRATCH` databases with those on `$OAK` and automatically copies over
     any missing files.
     
-5. Build the AlphaFold 3 Apptainer Image
+6. Build the AlphaFold 3 Apptainer Image
 
     Container software like Apptainer allow researchers to easily "contain"
     or package software and port it between compute platforms. The following
@@ -109,14 +111,19 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
     $ mkdir -p $SCRATCH/af_output
     ```
     
-    The input directory is where you will put the `.json` files containing
+    The input directory is where you will put the `.json` files containing your input sequence.
     
 2. Write and submit a batch script for running the AlphaFold 3 pipeline.
 
     Running AlphaFold3 can be broken down into two parts: pipeline and
     inference. GPUs are only utilized during inference, so we are going
     to run the pipeline on CPUs. You can use the following batch script
-    as a template.
+    as a template. 
+
+    In order to run the pipline step on a particular sequence, the bash variable
+    `INPUT_JSON` needs to be set to the filename of the input `.json` file
+    you would like to fold, and the `.json` file needs to be placed in the `af_input`
+    directory. In the template below the example input file is `fold_input_2PV7.json`.
     
     ```
     #!/bin/bash
@@ -128,6 +135,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
     # model and database paths variables
     MODEL_PARAMS_PATH=$SCRATCH/af3_model
     DB_PATH=$SCRATCH/af3_db
+    INPUT_JSON=fold_input_2PV7.json
     
     # run alphafold3 singularity container
     singularity run \
@@ -138,17 +146,23 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
          --bind $DB_PATH:/root/public_databases \
          af3.sif \
          --norun_inference \
-         --json_path=/root/af_input/fold_input_2PV7.json \
+         --json_path=/root/af_input/$INPUT_JSON \
          --model_dir=/root/models \
          --db_dir=/root/public_databases \
          --output_dir=/root/af_output
     ```
     
-3. Write and submit a batch script for running inference.
+4. Write and submit a batch script for running inference.
 
-    AlphaFold 3 runs fastest on GPUs with CUDA Capability > 7.x. When writing
+    AlphaFold 3 runs best on GPUs with CUDA Capability > 7.x. When writing
     your batch script for inference, you should include a constraint for the
-    GPU type.
+    GPU type. You can use the following batch script as a template. 
+
+    In order to run the inference step on your particular sequence of interest,
+    you will need to modify the bash variable `DATA_JSON` with the directory and
+    filename of the data `.json` file created during the pipeline step. The
+    directory and data file are located in your `af_output` directory. In the
+    template below the data directory and file is `/2pv7/2pv7_data.json`.
     
     ```
     #!/bin/bash
@@ -163,6 +177,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
     # model and database paths variables
     MODEL_PARAMS_PATH=$SCRATCH/af3_model
     DB_PATH=$SCRATCH/af3_db
+    DATA_JSON=/2pv7/2pv7_data.json
 
     # run alphafold3 singularity container
     singularity run \
@@ -172,11 +187,11 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
          --bind $SCRATCH/af_output:/root/af_output \
          --bind $MODEL_PARAMS_PATH:/root/models \
          --bind $DB_PATH:/root/public_databases \
-     af3.sif \
-     --norun_data_pipeline \
-     --json_path=/root/af_output/2pv7/2pv7_data.json \
-     --model_dir=/root/models \
-     --output_dir=/root/af_output
+         af3.sif \
+         --norun_data_pipeline \
+         --json_path=/root/af_output/$DATA_JSON \
+         --model_dir=/root/models \
+         --output_dir=/root/af_output
     ```
 
 [comment]: #  (link URLs -----------------------------------------------------)
