@@ -70,7 +70,7 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     Although unmodified files are purged from `$SCRATCH` and `$GROUP_SCRATCH`
     every 90 days, Stanford Research Computing maintains a copy of the
     AlphaFold 3 databases within the Oak Common Datasets Repository. As you run
-    AlphaFold, you can include a `dsync` in your scripts that compares your
+    AlphaFold, you can include a `dcp` in your scripts that compares your
     `$SCRATCH` databases with those on `$OAK` and automatically copies over
     any missing files.
     
@@ -160,9 +160,9 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
 
     In order to run the inference step on your particular sequence of interest,
     you will need to modify the bash variable `DATA_JSON` with the directory and
-    filename of the data `.json` file created during the pipeline step. The
-    directory and data file are located in your `af_output` directory. In the
-    template below the data directory and file is `/2pv7/2pv7_data.json`.
+    filename of the data `.json` file created during the pipeline step. The data
+    directory and file are located in your `af_output` directory. In the
+    template example below the data directory and file is `/2pv7/2pv7_data.json`.
     
     ```
     #!/bin/bash
@@ -193,6 +193,66 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
          --model_dir=/root/models \
          --output_dir=/root/af_output
     ```
+### Best Practices
+
+1. Using `dcp` to maintain your in Databases to `$SCRATCH` or `$GROUP_SCRATCH`
+
+    Stanford Research Computing maintains a copy of the AlphaFold3 database within
+    the Oak Common Datasets Repository. We recommend, however, intially downloading
+    the AlphaFold3 database files directly from Google DeepMind to a scratch directory.
+    This reduces the traffic on the network between Oak and Sherlock and is typically
+    faster than  a direct copy. Unmodified files within `$SCRATCH` and `$GROUP_SCRATCH`
+    are purged every 90 days. In order to maintain a complete database you can include
+    the `dcp` command in your pipeline and inference sbatch scripts, which compares
+    your `$SCRATCH` databases with those on Oak and automatically copies over any
+    missing files.
+
+    The `dcp` command is located in the `mpifileutils` module. mpiFileUtils is a
+    suite of MPI-based tools used to manage large datasets. `dcp` functions similar to
+    `cp` but can leverage multiple cpu cores to copy files faster. 
+
+    ```
+    module load system mpifileutils
+    srun -n $SLURM_TASKS_PER_NODE dcp --quite /oak/stanford/datasets/common/alphafold3 $SCRATCH/af3_db
+    ```
+
+    Please keep in mind that running `dcp` will increase the runtime of your job 
+    depending on how many files need to be re-copied. You can also run the `dcp` 
+    command periodically from its own sbatch script. 
+
+3. Running on GPUs with CUDA Capability 8.x or higher
+
+   The singularity container has been tested extensively on Sherlock GPU's with 
+   CUDA capability 8.x or higher. These include H100, L40S, RTX 3090, A100, and 
+   A40 model GPU's. New models, such as the H100 and L40S, produce the fastest 
+   runtimes, with older models taking slightly longer. Consumer grade GPU's, such
+   as the RTX 3090, are sequence limited do to lower GPU memory.
+
+   To run exclusively on a particular GPU's module, you can use the SLURM `--constraint`
+   option. This option takes a node's feature as an argument and sets it as a requirement
+   of the job. Use the Sherlock utility `sh_node_feat -h` to see a list of available
+   node features.
+   
+   Multiple job constraints can also be specified with AND (&) and OR (|) operators. For example, 
+   if you are submiting an inference job to the queue and want to run from a larger pool of
+   GPU resources, you can specify both H100 or L40S GPU's:
+   ```
+   #SBATCH --constraint="GPU_SKU:H100_SXM5|GPU_SKU:L40S"
+   ```
+
+4. Running on GPUs with CUDA Capability 7.x or lower
+
+   Successful inference runs on GPU's with CUDA capabilty 7.x or lower are limited
+   by sequence length and GPU memory. If you do wish to run an inference job on an
+   older GPU, the singularity container contains logic to test for the computate
+   capability of the available GPU and set the appropriate environmental variables
+   before running. A successful run, however, is not guarenteed. To specify a 
+   particular GPU use the SLURM `--constraint` option mentioned above.
+
+5. Notes on Singularity Container
+
+
+
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
