@@ -115,7 +115,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
     
 2. Write and submit a batch script for running the AlphaFold 3 pipeline.
 
-    Running AlphaFold3 can be broken down into two parts: pipeline and
+    Running AlphaFold 3 can be broken down into two parts: pipeline and
     inference. GPUs are only utilized during inference, so we are going
     to run the pipeline on CPUs. You can use the following batch script
     as a template. 
@@ -197,9 +197,9 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
 
 1. Using `dcp` to maintain your in Databases to `$SCRATCH` or `$GROUP_SCRATCH`
 
-    Stanford Research Computing maintains a copy of the AlphaFold3 database within
+    Stanford Research Computing maintains a copy of the AlphaFold 3 database within
     the Oak Common Datasets Repository. We recommend, however, intially downloading
-    the AlphaFold3 database files directly from Google DeepMind to a scratch directory.
+    the AlphaFold 3 database files directly from Google DeepMind to a scratch directory.
     This reduces the traffic on the network between Oak and Sherlock and is typically
     faster than  a direct copy. Unmodified files within `$SCRATCH` and `$GROUP_SCRATCH`
     are purged every 90 days. In order to maintain a complete database you can include
@@ -209,50 +209,64 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
 
     The `dcp` command is located in the `mpifileutils` module. mpiFileUtils is a
     suite of MPI-based tools used to manage large datasets. `dcp` functions similar to
-    `cp` but can leverage multiple cpu cores to copy files faster. 
-
-    ```
+    `cp` but can leverage multiple cpu cores to copy files faster. Here is an example usage for an AlphaFold database located in `$SCRATCH`.
+ 
+   ```
     module load system mpifileutils
     srun -n $SLURM_TASKS_PER_NODE dcp --quite /oak/stanford/datasets/common/alphafold3 $SCRATCH/af3_db
     ```
 
     Please keep in mind that running `dcp` will increase the runtime of your job 
     depending on how many files need to be re-copied. You can also run the `dcp` 
-    command periodically from its own sbatch script. 
+    command separately and periodically from its own sbatch script. 
 
-3. Running on GPUs with CUDA Capability 8.x or higher
+2. Running on GPUs with CUDA Capability 8.x or higher
 
    The singularity container has been tested extensively on Sherlock GPU's with 
    CUDA capability 8.x or higher. These include H100, L40S, RTX 3090, A100, and 
    A40 model GPU's. New models, such as the H100 and L40S, produce the fastest 
    runtimes, with older models taking slightly longer. Consumer grade GPU's, such
-   as the RTX 3090, are sequence limited do to lower GPU memory.
+   as the RTX 3090, are also sequence limited due to lower GPU memory.
 
-   To run exclusively on a particular GPU's module, you can use the SLURM `--constraint`
+   To run exclusively on a particular GPU model, you can use the SLURM `--constraint`
    option. This option takes a node's feature as an argument and sets it as a requirement
    of the job. Use the Sherlock utility `sh_node_feat -h` to see a list of available
    node features.
    
    Multiple job constraints can also be specified with AND (&) and OR (|) operators. For example, 
-   if you are submiting an inference job to the queue and want to run from a larger pool of
+   if you are submitting an inference job to the queue and want to run from a larger pool of
    GPU resources, you can specify both H100 or L40S GPU's:
    ```
    #SBATCH --constraint="GPU_SKU:H100_SXM5|GPU_SKU:L40S"
    ```
 
-4. Running on GPUs with CUDA Capability 7.x or lower
+3. Running on GPUs with CUDA Capability 7.x or lower
 
    Successful inference runs on GPU's with CUDA capabilty 7.x or lower are limited
    by sequence length and GPU memory. If you do wish to run an inference job on an
    older GPU, the singularity container contains logic to test for the computate
    capability of the available GPU and set the appropriate environmental variables
-   before running. A successful run, however, is not guarenteed. To specify a 
+   before running AlphaFold 3. A successful run, however, is not guarenteed. To specify a 
    particular GPU use the SLURM `--constraint` option mentioned above.
 
-5. Notes on Singularity Container
+4. Notes on Singularity Container
 
+   On Sherlock, the prefered method for running AlphaFold 3 is from a Singularity 
+   container. The Singularity definition file (`af3.def`) SRC provides is modified
+   from the Docker file that Google DeepMind's publishes with AlphaFold 3. SRC's 
+   definition file takes into account the heterogenatity of the Sherlock cluster, and 
+   provides logic to determine which environment variables need to be set based on the 
+   compute capability of the available GPU. 
 
+   AlphaFold 3 reads and write to several directories during runtime such as `af_input`,
+   `af_output`, `af3_model`, and `af3_db` directories. In order to run from a container, 
+   the necessary directories on Sherlock's filesystem need to be bound to the filesystem
+   within the container; this the purpose of `--bind` flags in the sbatch scripts above.
 
+   The container also runs AlphaFold 3 using the `%runscript` section option. The contents
+   of the `%runscript` section are executed when the container image (af3.sif) is run with 
+   `singularity run`. This is different from the typical usage of Singularity containers, 
+   where software within the container are explicitly called during runtime.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
