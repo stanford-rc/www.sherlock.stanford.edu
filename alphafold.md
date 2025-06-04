@@ -116,9 +116,10 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
 2. Write and submit a batch script for running the AlphaFold 3 pipeline.
 
     Running AlphaFold 3 can be broken down into two parts: pipeline and
-    inference. GPUs are only utilized during inference, so we are going
-    to run the pipeline on CPUs. You can use the following batch script
-    as a template. 
+    inference. The pipeline refers to the genetic sequence search/template 
+    search, and inference refers to predicting structures. GPU's are only 
+    utilized during inference, so we are going to run the pipeline on CPUs.
+    You can use the following batch script as a template. 
 
     In order to run the pipline step on a particular sequence, the bash variable
     `INPUT_JSON` needs to be set to the filename of the input `.json` file
