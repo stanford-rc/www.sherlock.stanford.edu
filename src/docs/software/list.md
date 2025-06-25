@@ -82,7 +82,7 @@ count }} fields of science:*
     {%- if v.properties -%}
         {%- if v.properties.arch     and v.properties.arch.gpu     -%}^<b class="sw_gpu"></b>^&nbsp;{%- endif -%}
         {%- if v.properties.parallel and v.properties.parallel.mpi -%}^<b class="sw_mpi"></b>^&nbsp;{%- endif -%}
-        {%- if v.properties.license  and v.properties.license.restricted -%}^<b class="sw_lic"></b>^&nbsp;</>{%- endif -%}
+        {%- if v.properties.license  and v.properties.license.restricted -%}^<b class="sw_lic"></b>^&nbsp;{%- endif -%}
     {%- endif -%}
 {%- endmacro %}
 <!-- markdownlint-enable MD013 -->
