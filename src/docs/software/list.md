@@ -103,9 +103,9 @@ count }} fields of science:*
 
 ### **{{ c.name }}**
 
+<!-- markdownlint-disable MD056 -->
 Field | {{ h_name }} | {{ h_vers }} | URL | Description
 :---- | :----------- | :----------- | :-- | :----------
-<!-- markdownlint-disable MD056 -->
   {% for p in c.packages | sort(attribute="categories,package") -%}
     {{ module_line(p) }}
   {% endfor -%}
