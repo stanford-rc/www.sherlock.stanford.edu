@@ -65,7 +65,7 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     modify the script if you want to use your own partition, download to a
     different location, or submit the job from a different directory. The
     database will take approximately 1 hour to download, you may proceed to
-    next step while it completes.
+    the next step while it completes.
     
     Although unmodified files are purged from `$SCRATCH` and `$GROUP_SCRATCH`
     every 90 days, Stanford Research Computing maintains a copy of the
@@ -121,7 +121,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
     utilized during inference, so we are going to run the pipeline on CPUs.
     You can use the following batch script as a template. 
 
-    In order to run the pipline step on a particular sequence, the bash variable
+    In order to run the pipeline step on a particular sequence, the bash variable
     `INPUT_JSON` needs to be set to the filename of the input `.json` file
     you would like to fold, and the `.json` file needs to be placed in the `af_input`
     directory. In the template below the example input file is `fold_input_2PV7.json`.
