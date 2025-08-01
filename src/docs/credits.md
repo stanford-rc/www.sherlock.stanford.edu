@@ -48,6 +48,7 @@ img[alt="screencap"] {
 * ![favicon](//github.com/favicon.ico) [GitHub](//github.com)
 * ![favicon](//hund.io/favicon.ico) [Hund](//hund.io)
 * ![favicon](//images.noticeable.cloud/favicon.ico) [Noticeable](//noticeable.io)
+* ![favicon](//uptimerobot.com/favicon.ico) [UptimeRobot](//uptimerobot.com)
 
 
 The Sherlock website and documentation also rely on the following projects:
