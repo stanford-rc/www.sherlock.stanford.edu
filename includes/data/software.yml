@@ -7542,14 +7542,25 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 4.5.4
-    - categories: devel, lib
-      defaultVersionName: 2.0.0
-      description: libtree prints shared object dependencies as a tree.
-      package: libtree
-      url: https://github.com/haampie/libtree
+    - categories: devel, data
+      defaultVersionName: 3.4.0
+      description: Protocol Buffers (a.k.a., protobuf) are Google's language-neutral,
+        platform-neutral, extensible mechanism for serializing structured data.
+      package: protobuf
+      url: https://developers.google.com/protocol-buffers/
       versions:
-      - {description: libtree prints shared object dependencies as a tree., markedDefault: false,
-        versionName: 2.0.0}
+      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
+          platform-neutral, extensible mechanism for serializing structured data.',
+        markedDefault: false, versionName: 3.20.0}
+      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
+          platform-neutral, extensible mechanism for serializing structured data.',
+        markedDefault: false, versionName: '21.9'}
+      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
+          platform-neutral, extensible mechanism for serializing structured data.',
+        markedDefault: false, versionName: '29.1'}
+      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
+          platform-neutral, extensible mechanism for serializing structured data.',
+        markedDefault: true, versionName: 3.4.0}
     - categories: devel, data
       defaultVersionName: 3.4.0_py27
       description: Python bindings for Google's Protocol Buffers data interchange
@@ -7631,17 +7642,31 @@ software_modules:
       - {description: Manticore is a high-level parallel programming language aimed
           at general-purpose applications running on multi-core processors., markedDefault: false,
         versionName: '20180301'}
-    - categories: devel, lib
-      defaultVersionName: 0.7.5
-      description: Library to manipulate tensors on the GPU.
-      package: libgpuarray
-      url: http://deeplearning.net/software/libgpuarray
+    - categories: devel, AI
+      defaultVersionName: 0.11.4
+      description: Ollama is a free, open-source platform that allows users to run
+        large language models (LLMs) locally.
+      package: ollama
+      url: https://github.com/ollama/ollama
       versions:
-      - description: Library to manipulate tensors on the GPU.
+      - description: Ollama is a free, open-source platform that allows users to run
+          large language models (LLMs) locally.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-        versionName: 0.7.5
+        versionName: 0.5.7
+      - description: Ollama is a free, open-source platform that allows users to run
+          large language models (LLMs) locally.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.9.2
+      - description: Ollama is a free, open-source platform that allows users to run
+          large language models (LLMs) locally.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.11.4
     - categories: devel, lib
       defaultVersionName: 1.3.7_py39
       description: nose is nicer testing for python.
@@ -7745,16 +7770,15 @@ software_modules:
           command line tool implemented in Python 3.', markedDefault: false, versionName: 1.6.3_py312}
       - {description: 'Official API for https://www.kaggle.com, accessible using a
           command line tool implemented in Python 3.', markedDefault: false, versionName: 1.7.4.5_py312}
-    - categories: devel, data
-      defaultVersionName: 0.11.1_py312
-      description: anndata is a Python package for handling annotated data matrices
-        in memory and on disk, positioned between pandas and xarray.
-      package: py-anndata
-      url: https://github.com/scverse/anndata
+    - categories: devel, framework
+      defaultVersionName: 5.8.2
+      description: Global Arrays (GA) is a Partitioned Global Address Space (PGAS)
+        programming model.
+      package: ga
+      url: https://hpc.pnl.gov/globalarrays
       versions:
-      - {description: 'anndata is a Python package for handling annotated data matrices
-          in memory and on disk, positioned between pandas and xarray.', markedDefault: false,
-        versionName: 0.11.1_py312}
+      - {description: Global Arrays (GA) is a Partitioned Global Address Space (PGAS)
+          programming model., markedDefault: false, versionName: 5.8.2}
     - categories: devel, build
       defaultVersionName: 1.8.5
       description: Kerl is a tool to easily build and install Erlang/OTP instances.
@@ -7980,6 +8004,15 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 1.0.6
+    - categories: devel, AI
+      defaultVersionName: 0.6.3
+      description: "The glamourous AI coding agent for your favourite terminal \U0001F498\
+        C"
+      package: crush
+      url: https://github.com/charmbracelet/crush
+      versions:
+      - {description: "The glamourous AI coding agent for your favourite terminal\
+          \ \U0001F498C", markedDefault: false, versionName: 0.6.3}
     - categories: devel, lib
       defaultVersionName: 0.3.2_py39
       description: schwimmbad provides a uniform interface to parallel processing
@@ -8262,36 +8295,24 @@ software_modules:
       - {description: GCL is the official Common Lisp for the GNU project., markedDefault: false,
         versionName: 2.6.14}
     - categories: devel, compiler
-      defaultVersionName: 7.0.0
-      description: The LLVM Project is a collection of modular and reusable compiler
-        and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,
-      package: llvm
-      url: http://llvm.org
+      defaultVersionName: '2019'
+      description: Intel C++ Compiler, also known as icc or icl, is a group of C and
+        C++ compilers from Intel
+      package: icc
+      url: https://software.intel.com/en-us/c-compilers
       versions:
-      - {description: 'The LLVM Project is a collection of modular and reusable compiler
-          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
-        markedDefault: false, versionName: 3.8.1}
-      - {description: 'The LLVM Project is a collection of modular and reusable compiler
-          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
-        markedDefault: false, versionName: 4.0.0}
-      - {description: 'The LLVM Project is a collection of modular and reusable compiler
-          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
-        markedDefault: false, versionName: 5.0.0}
-      - {description: 'The LLVM Project is a collection of modular and reusable compiler
-          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
-        markedDefault: false, versionName: 9.0.1}
-      - {description: 'The LLVM Project is a collection of modular and reusable compiler
-          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
-        markedDefault: false, versionName: 15.0.3}
-      - {description: 'The LLVM Project is a collection of modular and reusable compiler
-          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
-        markedDefault: false, versionName: 17.0.6}
-      - {description: 'The LLVM Project is a collection of modular and reusable compiler
-          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
-        markedDefault: false, versionName: 19.1.7}
-      - {description: 'The LLVM Project is a collection of modular and reusable compiler
-          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
-        markedDefault: true, versionName: 7.0.0}
+      - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
+          C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
+        versionName: 2017.u2}
+      - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
+          C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
+        versionName: 2018.u1}
+      - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
+          C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
+        versionName: '2018'}
+      - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
+          C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
+        versionName: '2019'}
     - categories: devel, networking
       defaultVersionName: 1.30.0
       description: GASNet is a language-independent, low-level networking layer that
@@ -8590,13 +8611,15 @@ software_modules:
       versions:
       - {description: 'V8 is Google’s open source high-performance JavaScript and
           WebAssembly engine, written in C++.', markedDefault: false, versionName: 8.4.371.22}
-    - categories: devel, networking
-      defaultVersionName: 0.24.0_py39
-      description: Python bindinbgs for UCX.
-      package: py-ucx-py
-      url: https://github.com/rapidsai/ucx-py
+    - categories: devel, data analytics
+      defaultVersionName: 0.48.0
+      description: xan is a command line tool that can be used to process CSV files
+        directly from the shell.
+      package: xan
+      url: https://github.com/medialab/xan
       versions:
-      - {description: Python bindinbgs for UCX., markedDefault: false, versionName: 0.24.0_py39}
+      - {description: xan is a command line tool that can be used to process CSV files
+          directly from the shell., markedDefault: false, versionName: 0.48.0}
     - categories: devel, language
       defaultVersionName: 5.4.1_py27
       description: IPython is a command shell for interactive computing in multiple
@@ -8681,25 +8704,17 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.3.0
-    - categories: devel, lib
-      defaultVersionName: 2021.1_py36
-      description: PyCUDA lets you access Nvidia‘s CUDA parallel computation API from
-        Python.
-      package: py-pycuda
-      url: https://mathema.tician.de/software/pycuda/
+    - categories: devel, parser
+      defaultVersionName: 2.7.7
+      description: ANTLR (ANother Tool for Language Recognition) is a powerful parser
+        generator for reading, processing, executing, or translating structured text
+        or binary files.
+      package: antlr
+      url: https://xerces.apache.org/xerces-c/index.html
       versions:
-      - description: PyCUDA lets you access Nvidia‘s CUDA parallel computation API
-          from Python.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2017.1.1_py27
-      - description: PyCUDA lets you access Nvidia‘s CUDA parallel computation API
-          from Python.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2021.1_py36
+      - {description: 'ANTLR (ANother Tool for Language Recognition) is a powerful
+          parser generator for reading, processing, executing, or translating structured
+          text or binary files.', markedDefault: false, versionName: 2.7.7}
     - categories: devel, data
       defaultVersionName: 4.8.0
       description: The NCO toolkit manipulates and analyzes data stored in netCDF-accessible
@@ -8757,23 +8772,17 @@ software_modules:
       - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
         markedDefault: false, versionName: 1.8.0}
     - categories: devel, lib
-      defaultVersionName: 3.1.0
-      description: CUTLASS is a collection of CUDA C++ template abstractions for implementing
-        high-performance matrix-multiplication (GEMM) at all levels and scales within
-        CUDA.
-      package: cutlass
-      url: https://github.com/NVIDIA/cutlass
+      defaultVersionName: 0.5.1
+      description: Simplified Data Exchange for HPC Simulations.
+      package: conduit
+      url: https://software.llnl.gov/conduit/
       versions:
-      - {description: CUTLASS is a collection of CUDA C++ template abstractions for
-          implementing high-performance matrix-multiplication (GEMM) at all levels
-          and scales within CUDA., markedDefault: false, versionName: 0.1.0}
-      - description: CUTLASS is a collection of CUDA C++ template abstractions for
-          implementing high-performance matrix-multiplication (GEMM) at all levels
-          and scales within CUDA.
+      - description: Simplified Data Exchange for HPC Simulations.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-        versionName: 3.1.0
+          parallel: {mpi: 1}
+        versionName: 0.5.1
     - categories: devel, lib
       defaultVersionName: 0.35.0_py27
       description: Numba is a compiler for Python array and numerical functions that
@@ -8800,21 +8809,35 @@ software_modules:
       - {description: Numba is a compiler for Python array and numerical functions
           that gives you the power to speed up your applications with high performance
           functions written directly in Python.., markedDefault: true, versionName: 0.35.0_py27}
-    - categories: devel, data
-      defaultVersionName: 4.9.0
-      description: NetCDF is a set of software libraries and self-describing, machine-independent
-        data formats that support the creation, access, and sharing of array-oriented
-        scientific data. This module provides C libraries.
-      package: netcdf-c
-      url: https://www.unidata.ucar.edu/software/netcdf
+    - categories: devel, language
+      defaultVersionName: 1.81.0
+      description: A language empowering everyone to build reliable and efficient
+        software.
+      package: rust
+      url: https://www.rust-lang.org/
       versions:
-      - description: NetCDF is a set of software libraries and self-describing, machine-independent
-          data formats that support the creation, access, and sharing of array-oriented
-          scientific data. This module provides C libraries.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 4.9.0
+      - {description: A language empowering everyone to build reliable and efficient
+          software., markedDefault: false, versionName: 1.35.0}
+      - {description: A language empowering everyone to build reliable and efficient
+          software., markedDefault: false, versionName: 1.56.1}
+      - {description: A language empowering everyone to build reliable and efficient
+          software., markedDefault: false, versionName: 1.63.0}
+      - {description: A language empowering everyone to build reliable and efficient
+          software., markedDefault: false, versionName: 1.72.0}
+      - {description: A language empowering everyone to build reliable and efficient
+          software., markedDefault: false, versionName: 1.81.0}
+    - categories: devel, lib
+      defaultVersionName: 20247.24_py312
+      description: Alternative regular expression module for Python, to replace re.
+      package: py-regex
+      url: https://github.com/mrabarnett/mrab-regex
+      versions:
+      - {description: 'Alternative regular expression module for Python, to replace
+          re.', markedDefault: false, versionName: 20247.24_py36}
+      - {description: 'Alternative regular expression module for Python, to replace
+          re.', markedDefault: false, versionName: 20247.24_py39}
+      - {description: 'Alternative regular expression module for Python, to replace
+          re.', markedDefault: false, versionName: 20247.24_py312}
     - categories: devel, language
       defaultVersionName: 5.36.1
       description: Perl 5 is a highly capable, feature-rich programming language with
@@ -8828,31 +8851,6 @@ software_modules:
       - {description: 'Perl 5 is a highly capable, feature-rich programming language
           with over 29 years of development.', help: 'https://www.sherlock.stanford.edu/docs/software/using/perl',
         markedDefault: false, versionName: 5.36.1}
-    - categories: devel, AI
-      defaultVersionName: 0.11.4
-      description: Ollama is a free, open-source platform that allows users to run
-        large language models (LLMs) locally.
-      package: ollama
-      url: https://github.com/ollama/ollama
-      versions:
-      - description: Ollama is a free, open-source platform that allows users to run
-          large language models (LLMs) locally.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.5.7
-      - description: Ollama is a free, open-source platform that allows users to run
-          large language models (LLMs) locally.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.9.2
-      - description: Ollama is a free, open-source platform that allows users to run
-          large language models (LLMs) locally.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.11.4
     - categories: devel, build
       defaultVersionName: '4.4'
       description: GNU Make is a tool which controls the generation of executables
@@ -8863,29 +8861,6 @@ software_modules:
       - {description: GNU Make is a tool which controls the generation of executables
           and other non-source files of a program from the program's source files.,
         markedDefault: false, versionName: '4.4'}
-    - categories: devel, parser
-      defaultVersionName: 2.7.7
-      description: ANTLR (ANother Tool for Language Recognition) is a powerful parser
-        generator for reading, processing, executing, or translating structured text
-        or binary files.
-      package: antlr
-      url: https://xerces.apache.org/xerces-c/index.html
-      versions:
-      - {description: 'ANTLR (ANother Tool for Language Recognition) is a powerful
-          parser generator for reading, processing, executing, or translating structured
-          text or binary files.', markedDefault: false, versionName: 2.7.7}
-    - categories: devel, lib
-      defaultVersionName: 20247.24_py312
-      description: Alternative regular expression module for Python, to replace re.
-      package: py-regex
-      url: https://github.com/mrabarnett/mrab-regex
-      versions:
-      - {description: 'Alternative regular expression module for Python, to replace
-          re.', markedDefault: false, versionName: 20247.24_py36}
-      - {description: 'Alternative regular expression module for Python, to replace
-          re.', markedDefault: false, versionName: 20247.24_py39}
-      - {description: 'Alternative regular expression module for Python, to replace
-          re.', markedDefault: false, versionName: 20247.24_py312}
     - categories: devel, language
       defaultVersionName: 0.29.28_py39
       description: Cython is an optimising static compiler for both the Python programming
@@ -8905,27 +8880,44 @@ software_modules:
       - {description: Cython is an optimising static compiler for both the Python
           programming language and the extended Cython programming language (based
           on Pyrex)., markedDefault: false, versionName: 0.29.28_py39}
-    - categories: devel, lib
-      defaultVersionName: 0.5.1
-      description: Simplified Data Exchange for HPC Simulations.
-      package: conduit
-      url: https://software.llnl.gov/conduit/
+    - categories: devel, parser
+      defaultVersionName: 3.2.1
+      description: Xerces-C++ is a validating XML parser written in a portable subset
+        of C++.
+      package: xerces-c
+      url: https://xerces.apache.org/xerces-c/index.html
       versions:
-      - description: Simplified Data Exchange for HPC Simulations.
+      - {description: Xerces-C++ is a validating XML parser written in a portable
+          subset of C++., markedDefault: false, versionName: 3.2.1}
+    - categories: devel, lib
+      defaultVersionName: 3.7.13
+      description: RabbitMQ is an open-source message broker.
+      package: rabbitmq
+      url: http://rabbitmq.com
+      versions:
+      - {description: RabbitMQ is an open-source message broker., markedDefault: false,
+        versionName: 3.7.13}
+    - categories: devel, lib
+      defaultVersionName: 0.7.5
+      description: Library to manipulate tensors on the GPU.
+      package: libgpuarray
+      url: http://deeplearning.net/software/libgpuarray
+      versions:
+      - description: Library to manipulate tensors on the GPU.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 0.5.1
+        versionName: 0.7.5
     - categories: devel, data
-      defaultVersionName: 4.0.1
-      description: Redis is an open source, in-memory data structure store, used as
-        a database, cache and message broker.
-      package: redis
-      url: https://redis.io
+      defaultVersionName: 0.11.1_py312
+      description: anndata is a Python package for handling annotated data matrices
+        in memory and on disk, positioned between pandas and xarray.
+      package: py-anndata
+      url: https://github.com/scverse/anndata
       versions:
-      - {description: 'Redis is an open source, in-memory data structure store, used
-          as a database, cache and message broker.', markedDefault: false, versionName: 4.0.1}
+      - {description: 'anndata is a Python package for handling annotated data matrices
+          in memory and on disk, positioned between pandas and xarray.', markedDefault: false,
+        versionName: 0.11.1_py312}
     - categories: devel, lib
       defaultVersionName: 0.13.0_py312
       description: Python bindings for CV_CUDA.
@@ -8937,18 +8929,15 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.13.0_py312
-    - categories: devel, lib
-      defaultVersionName: '0.18'
-      description: JSON-C implements a reference counting object model that allows
-        you to easily construct JSON objects in C, output them as JSON formatted strings
-        and parse JSON formatted strings back into the C representation of JSON objects.
-      package: json-c
-      url: https://json-c.github.io/json-c/
+    - categories: devel, data
+      defaultVersionName: 4.0.1
+      description: Redis is an open source, in-memory data structure store, used as
+        a database, cache and message broker.
+      package: redis
+      url: https://redis.io
       versions:
-      - {description: 'JSON-C implements a reference counting object model that allows
-          you to easily construct JSON objects in C, output them as JSON formatted
-          strings and parse JSON formatted strings back into the C representation
-          of JSON objects.', markedDefault: false, versionName: '0.18'}
+      - {description: 'Redis is an open source, in-memory data structure store, used
+          as a database, cache and message broker.', markedDefault: false, versionName: 4.0.1}
     - categories: devel, lib
       defaultVersionName: 0.13.0
       description: CV-CUDA is an open-source project that enables building efficient
@@ -9191,15 +9180,25 @@ software_modules:
       - {description: 'PHP (recursive acronym for PHP: Hypertext Preprocessor) is
           an open source general-purpose scripting language that is especially suited
           for web development.', markedDefault: false, versionName: 7.3.0}
-    - categories: devel, data analytics
-      defaultVersionName: 0.48.0
-      description: xan is a command line tool that can be used to process CSV files
-        directly from the shell.
-      package: xan
-      url: https://github.com/medialab/xan
+    - categories: devel, lib
+      defaultVersionName: 2021.1_py36
+      description: PyCUDA lets you access Nvidia‘s CUDA parallel computation API from
+        Python.
+      package: py-pycuda
+      url: https://mathema.tician.de/software/pycuda/
       versions:
-      - {description: xan is a command line tool that can be used to process CSV files
-          directly from the shell., markedDefault: false, versionName: 0.48.0}
+      - description: PyCUDA lets you access Nvidia‘s CUDA parallel computation API
+          from Python.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2017.1.1_py27
+      - description: PyCUDA lets you access Nvidia‘s CUDA parallel computation API
+          from Python.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2021.1_py36
     - categories: devel, lib
       defaultVersionName: 8.1.0
       description: C++ wrappers for SIMD intrinsics and parallelized, optimized mathematical
@@ -9213,23 +9212,24 @@ software_modules:
       - {description: 'C++ wrappers for SIMD intrinsics and parallelized, optimized
           mathematical functions (SSE, AVX, NEON, AVX512)', markedDefault: false,
         versionName: 8.1.0}
-    - categories: devel, language
-      defaultVersionName: 1.81.0
-      description: A language empowering everyone to build reliable and efficient
-        software.
-      package: rust
-      url: https://www.rust-lang.org/
+    - categories: devel, lib
+      defaultVersionName: 3.1.0
+      description: CUTLASS is a collection of CUDA C++ template abstractions for implementing
+        high-performance matrix-multiplication (GEMM) at all levels and scales within
+        CUDA.
+      package: cutlass
+      url: https://github.com/NVIDIA/cutlass
       versions:
-      - {description: A language empowering everyone to build reliable and efficient
-          software., markedDefault: false, versionName: 1.35.0}
-      - {description: A language empowering everyone to build reliable and efficient
-          software., markedDefault: false, versionName: 1.56.1}
-      - {description: A language empowering everyone to build reliable and efficient
-          software., markedDefault: false, versionName: 1.63.0}
-      - {description: A language empowering everyone to build reliable and efficient
-          software., markedDefault: false, versionName: 1.72.0}
-      - {description: A language empowering everyone to build reliable and efficient
-          software., markedDefault: false, versionName: 1.81.0}
+      - {description: CUTLASS is a collection of CUDA C++ template abstractions for
+          implementing high-performance matrix-multiplication (GEMM) at all levels
+          and scales within CUDA., markedDefault: false, versionName: 0.1.0}
+      - description: CUTLASS is a collection of CUDA C++ template abstractions for
+          implementing high-performance matrix-multiplication (GEMM) at all levels
+          and scales within CUDA.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 3.1.0
     - categories: devel, lib
       defaultVersionName: 3.1.0_py39
       description: Python interface for CUTLASS
@@ -9273,16 +9273,13 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.10.0
-    - categories: devel, lib
-      defaultVersionName: 4.2.2
-      description: ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous
-        messaging library, aimed at use in distributed or concurrent applications.
-      package: zeromq
-      url: http://zeromq.org
+    - categories: devel, networking
+      defaultVersionName: 0.24.0_py39
+      description: Python bindinbgs for UCX.
+      package: py-ucx-py
+      url: https://github.com/rapidsai/ucx-py
       versions:
-      - {description: 'ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance
-          asynchronous messaging library, aimed at use in distributed or concurrent
-          applications.', markedDefault: false, versionName: 4.2.2}
+      - {description: Python bindinbgs for UCX., markedDefault: false, versionName: 0.24.0_py39}
     - categories: devel, lib
       defaultVersionName: 1.10.1
       description: Apache Ant is a Java library and command-line tool whose mission
@@ -9294,6 +9291,19 @@ software_modules:
       - {description: Apache Ant is a Java library and command-line tool whose mission
           is to drive processes described in build files as targets and extension
           points dependent upon each other., markedDefault: false, versionName: 1.10.1}
+    - categories: devel, lib
+      defaultVersionName: 3.4.0
+      description: 'Eigen is a C++ template library for linear algebra: matrices,
+        vectors, numerical solvers, and related algorithms.'
+      package: eigen
+      url: http://eigen.tuxfamily.org
+      versions:
+      - {description: 'Eigen is a C++ template library for linear algebra: matrices,
+          vectors, numerical solvers, and related algorithms.', markedDefault: false,
+        versionName: 3.3.3}
+      - {description: 'Eigen is a C++ template library for linear algebra: matrices,
+          vectors, numerical solvers, and related algorithms.', markedDefault: false,
+        versionName: 3.4.0}
     - categories: devel, lib
       defaultVersionName: 2.7.1_py27
       description: The h5py package is a Pythonic interface to the HDF5 binary data
@@ -9313,15 +9323,6 @@ software_modules:
           data format., markedDefault: false, versionName: 3.10.0_py312}
       - {description: The h5py package is a Pythonic interface to the HDF5 binary
           data format., markedDefault: true, versionName: 2.7.1_py27}
-    - categories: devel, AI
-      defaultVersionName: 0.1.9
-      description: An open-source AI agent that brings the power of Gemini directly
-        into your terminal.
-      package: gemini-cli
-      url: https://github.com/google-gemini/gemini-cli
-      versions:
-      - {description: An open-source AI agent that brings the power of Gemini directly
-          into your terminal., markedDefault: false, versionName: 0.1.9}
     - categories: devel, parser
       defaultVersionName: 0.0.2_py312
       description: Python tool for converting files and office documents to Markdown.
@@ -9330,36 +9331,6 @@ software_modules:
       versions:
       - {description: Python tool for converting files and office documents to Markdown.,
         markedDefault: false, versionName: 0.0.2_py312}
-    - categories: devel, lib
-      defaultVersionName: '2019'
-      description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
-        C++ library for shared-memory parallel programming and heterogeneous computing
-        (intra-node distributed memory programming).
-      package: tbb
-      url: https://software.intel.com/en-us/intel-tbb
-      versions:
-      - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
-          C++ library for shared-memory parallel programming and heterogeneous computing
-          (intra-node distributed memory programming)., markedDefault: false, versionName: 2017.u2}
-      - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
-          C++ library for shared-memory parallel programming and heterogeneous computing
-          (intra-node distributed memory programming)., markedDefault: false, versionName: 2018.u1}
-      - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
-          C++ library for shared-memory parallel programming and heterogeneous computing
-          (intra-node distributed memory programming)., markedDefault: false, versionName: '2018'}
-      - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
-          C++ library for shared-memory parallel programming and heterogeneous computing
-          (intra-node distributed memory programming)., markedDefault: false, versionName: '2019'}
-    - categories: devel, build
-      defaultVersionName: '2.45'
-      description: The GNU Binutils are a collection of binary tools.
-      package: binutils
-      url: https://www.gnu.org/software/binutils/
-      versions:
-      - {description: The GNU Binutils are a collection of binary tools., markedDefault: false,
-        versionName: '2.38'}
-      - {description: The GNU Binutils are a collection of binary tools., markedDefault: false,
-        versionName: '2.45'}
     - categories: devel, mpi
       defaultVersionName: 4.1.2
       description: The Open MPI Project is an open source Message Passing Interface
@@ -9438,6 +9409,36 @@ software_modules:
           arch: {gpu: 1}
           parallel: {mpi: 1}
         versionName: 4.1.2
+    - categories: devel, build
+      defaultVersionName: '2.45'
+      description: The GNU Binutils are a collection of binary tools.
+      package: binutils
+      url: https://www.gnu.org/software/binutils/
+      versions:
+      - {description: The GNU Binutils are a collection of binary tools., markedDefault: false,
+        versionName: '2.38'}
+      - {description: The GNU Binutils are a collection of binary tools., markedDefault: false,
+        versionName: '2.45'}
+    - categories: devel, lib
+      defaultVersionName: '2019'
+      description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
+        C++ library for shared-memory parallel programming and heterogeneous computing
+        (intra-node distributed memory programming).
+      package: tbb
+      url: https://software.intel.com/en-us/intel-tbb
+      versions:
+      - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
+          C++ library for shared-memory parallel programming and heterogeneous computing
+          (intra-node distributed memory programming)., markedDefault: false, versionName: 2017.u2}
+      - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
+          C++ library for shared-memory parallel programming and heterogeneous computing
+          (intra-node distributed memory programming)., markedDefault: false, versionName: 2018.u1}
+      - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
+          C++ library for shared-memory parallel programming and heterogeneous computing
+          (intra-node distributed memory programming)., markedDefault: false, versionName: '2018'}
+      - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
+          C++ library for shared-memory parallel programming and heterogeneous computing
+          (intra-node distributed memory programming)., markedDefault: false, versionName: '2019'}
     - categories: devel, language
       defaultVersionName: 3.1.2
       description: A dynamic, open source programming language with a focus on simplicity
@@ -9455,65 +9456,6 @@ software_modules:
       - {description: 'A dynamic, open source programming language with a focus on
           simplicity and productivity. It has an elegant syntax that is natural to
           read and easy to write.', markedDefault: false, versionName: 3.1.2}
-    - categories: devel, language
-      defaultVersionName: 2.4.3
-      description: LuaRocks is the package manager for Lua modules.
-      package: luarocks
-      url: https://luarocks.org/
-      versions:
-      - {description: LuaRocks is the package manager for Lua modules., markedDefault: false,
-        versionName: 2.4.3}
-    - categories: devel, data
-      defaultVersionName: 3.4.0
-      description: Protocol Buffers (a.k.a., protobuf) are Google's language-neutral,
-        platform-neutral, extensible mechanism for serializing structured data.
-      package: protobuf
-      url: https://developers.google.com/protocol-buffers/
-      versions:
-      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
-          platform-neutral, extensible mechanism for serializing structured data.',
-        markedDefault: false, versionName: 3.20.0}
-      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
-          platform-neutral, extensible mechanism for serializing structured data.',
-        markedDefault: false, versionName: '21.9'}
-      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
-          platform-neutral, extensible mechanism for serializing structured data.',
-        markedDefault: false, versionName: '29.1'}
-      - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
-          platform-neutral, extensible mechanism for serializing structured data.',
-        markedDefault: true, versionName: 3.4.0}
-    - categories: devel, lib
-      defaultVersionName: 3.4.0
-      description: 'Eigen is a C++ template library for linear algebra: matrices,
-        vectors, numerical solvers, and related algorithms.'
-      package: eigen
-      url: http://eigen.tuxfamily.org
-      versions:
-      - {description: 'Eigen is a C++ template library for linear algebra: matrices,
-          vectors, numerical solvers, and related algorithms.', markedDefault: false,
-        versionName: 3.3.3}
-      - {description: 'Eigen is a C++ template library for linear algebra: matrices,
-          vectors, numerical solvers, and related algorithms.', markedDefault: false,
-        versionName: 3.4.0}
-    - categories: devel, compiler
-      defaultVersionName: '2019'
-      description: Intel C++ Compiler, also known as icc or icl, is a group of C and
-        C++ compilers from Intel
-      package: icc
-      url: https://software.intel.com/en-us/c-compilers
-      versions:
-      - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
-          C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
-        versionName: 2017.u2}
-      - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
-          C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
-        versionName: 2018.u1}
-      - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
-          C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
-        versionName: '2018'}
-      - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
-          C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
-        versionName: '2019'}
     - categories: devel, analytics
       defaultVersionName: 18.1.0_py312
       description: Python library for Apache Arrow, a development platform for in-memory
@@ -9523,17 +9465,45 @@ software_modules:
       versions:
       - {description: 'Python library for Apache Arrow, a development platform for
           in-memory analytics.', markedDefault: false, versionName: 18.1.0_py312}
-    - categories: devel, lib
-      defaultVersionName: 23.04.00_py39
-      description: Python interface for RMM
-      package: py-rmm
-      url: https://github.com/rapidsai/rmm
+    - categories: devel, language
+      defaultVersionName: 2.4.3
+      description: LuaRocks is the package manager for Lua modules.
+      package: luarocks
+      url: https://luarocks.org/
       versions:
-      - description: Python interface for RMM
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 23.04.00_py39
+      - {description: LuaRocks is the package manager for Lua modules., markedDefault: false,
+        versionName: 2.4.3}
+    - categories: devel, compiler
+      defaultVersionName: 7.0.0
+      description: The LLVM Project is a collection of modular and reusable compiler
+        and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,
+      package: llvm
+      url: http://llvm.org
+      versions:
+      - {description: 'The LLVM Project is a collection of modular and reusable compiler
+          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
+        markedDefault: false, versionName: 3.8.1}
+      - {description: 'The LLVM Project is a collection of modular and reusable compiler
+          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
+        markedDefault: false, versionName: 4.0.0}
+      - {description: 'The LLVM Project is a collection of modular and reusable compiler
+          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
+        markedDefault: false, versionName: 5.0.0}
+      - {description: 'The LLVM Project is a collection of modular and reusable compiler
+          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
+        markedDefault: false, versionName: 9.0.1}
+      - {description: 'The LLVM Project is a collection of modular and reusable compiler
+          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
+        markedDefault: false, versionName: 15.0.3}
+      - {description: 'The LLVM Project is a collection of modular and reusable compiler
+          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
+        markedDefault: false, versionName: 17.0.6}
+      - {description: 'The LLVM Project is a collection of modular and reusable compiler
+          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
+        markedDefault: false, versionName: 19.1.7}
+      - {description: 'The LLVM Project is a collection of modular and reusable compiler
+          and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
+        markedDefault: true, versionName: 7.0.0}
     - categories: devel, lib
       defaultVersionName: 2.2.2
       description: Copy-hiding array abstraction to automatically migrate data between
@@ -9548,6 +9518,36 @@ software_modules:
           arch: {gpu: 1}
           parallel: {mpi: 1}
         versionName: 2.2.2
+    - categories: devel, language
+      defaultVersionName: 1.2.20
+      description: Bun is a fast JavaScript runtime, bundler, test runner, and package
+        manager – all in one.
+      package: bun
+      url: https://bun.com/
+      versions:
+      - {description: 'Bun is a fast JavaScript runtime, bundler, test runner, and
+          package manager – all in one.', markedDefault: false, versionName: 1.2.20}
+    - categories: devel, lib
+      defaultVersionName: 23.04.00_py39
+      description: Python interface for RMM
+      package: py-rmm
+      url: https://github.com/rapidsai/rmm
+      versions:
+      - description: Python interface for RMM
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 23.04.00_py39
+    - categories: devel, lib
+      defaultVersionName: 4.2.2
+      description: ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous
+        messaging library, aimed at use in distributed or concurrent applications.
+      package: zeromq
+      url: http://zeromq.org
+      versions:
+      - {description: 'ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance
+          asynchronous messaging library, aimed at use in distributed or concurrent
+          applications.', markedDefault: false, versionName: 4.2.2}
     - categories: devel, data
       defaultVersionName: 1.44.0_py312
       description: The NVIDIA Data Loading Library (DALI) is a GPU-accelerated library
@@ -9601,15 +9601,15 @@ software_modules:
       versions:
       - {description: A high-level Parallel I/O Library for structured grid applications.,
         markedDefault: false, versionName: 2.6.2}
-    - categories: devel, language
-      defaultVersionName: 1.2.20
-      description: Bun is a fast JavaScript runtime, bundler, test runner, and package
-        manager – all in one.
-      package: bun
-      url: https://bun.com/
+    - categories: devel, AI
+      defaultVersionName: 0.1.22
+      description: An open-source AI agent that brings the power of Gemini directly
+        into your terminal.
+      package: gemini-cli
+      url: https://github.com/google-gemini/gemini-cli
       versions:
-      - {description: 'Bun is a fast JavaScript runtime, bundler, test runner, and
-          package manager – all in one.', markedDefault: false, versionName: 1.2.20}
+      - {description: An open-source AI agent that brings the power of Gemini directly
+          into your terminal., markedDefault: false, versionName: 0.1.22}
     - categories: devel, data analytics
       defaultVersionName: 0.3_py27
       description: 'Launching and controlling spark on HPC clusters '
@@ -9618,23 +9618,23 @@ software_modules:
       versions:
       - {description: 'Launching and controlling spark on HPC clusters ', markedDefault: false,
         versionName: 0.3_py27}
-    - categories: devel, data
-      defaultVersionName: 0.13.3
-      description: Hiredis is a minimalistic C client library for the Redis database.
-      package: hiredis
-      url: https://github.com/redis/hiredis
+    - categories: devel, lib
+      defaultVersionName: 2.0.0
+      description: libtree prints shared object dependencies as a tree.
+      package: libtree
+      url: https://github.com/haampie/libtree
       versions:
-      - {description: Hiredis is a minimalistic C client library for the Redis database.,
-        markedDefault: false, versionName: 0.13.3}
-    - categories: devel, parser
-      defaultVersionName: 3.2.1
-      description: Xerces-C++ is a validating XML parser written in a portable subset
-        of C++.
-      package: xerces-c
-      url: https://xerces.apache.org/xerces-c/index.html
+      - {description: libtree prints shared object dependencies as a tree., markedDefault: false,
+        versionName: 2.0.0}
+    - categories: devel, framework
+      defaultVersionName: 0.18.0_py39
+      description: Kedro is an open-source Python framework for creating reproducible,
+        maintainable and modular data science code.
+      package: py-kedro
+      url: https://kedro.readthedocs.io/
       versions:
-      - {description: Xerces-C++ is a validating XML parser written in a portable
-          subset of C++., markedDefault: false, versionName: 3.2.1}
+      - {description: 'Kedro is an open-source Python framework for creating reproducible,
+          maintainable and modular data science code.', markedDefault: false, versionName: 0.18.0_py39}
     - categories: devel, build
       defaultVersionName: 3.31.4
       description: CMake is an extensible, open-source system that manages the build
@@ -9660,6 +9660,25 @@ software_modules:
       - {description: 'CMake is an extensible, open-source system that manages the
           build process in an operating system and in a compiler-independent manner.',
         markedDefault: false, versionName: 3.31.4}
+    - categories: devel, data
+      defaultVersionName: 0.13.3
+      description: Hiredis is a minimalistic C client library for the Redis database.
+      package: hiredis
+      url: https://github.com/redis/hiredis
+      versions:
+      - {description: Hiredis is a minimalistic C client library for the Redis database.,
+        markedDefault: false, versionName: 0.13.3}
+    - categories: devel, AI
+      defaultVersionName: b5760
+      description: LLM inference in C/C++
+      package: llama.cpp
+      url: https://github.com/ggml-org/llama.cpp
+      versions:
+      - description: LLM inference in C/C++
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: b5760
     - categories: devel, mpi
       defaultVersionName: '2019'
       description: Intel® MPI Library is a multi-fabric message passing library that
@@ -9695,35 +9714,21 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: '2019'
-    - categories: devel, framework
-      defaultVersionName: 5.8.2
-      description: Global Arrays (GA) is a Partitioned Global Address Space (PGAS)
-        programming model.
-      package: ga
-      url: https://hpc.pnl.gov/globalarrays
+    - categories: devel, data
+      defaultVersionName: 4.9.0
+      description: NetCDF is a set of software libraries and self-describing, machine-independent
+        data formats that support the creation, access, and sharing of array-oriented
+        scientific data. This module provides C libraries.
+      package: netcdf-c
+      url: https://www.unidata.ucar.edu/software/netcdf
       versions:
-      - {description: Global Arrays (GA) is a Partitioned Global Address Space (PGAS)
-          programming model., markedDefault: false, versionName: 5.8.2}
-    - categories: devel, AI
-      defaultVersionName: b5760
-      description: LLM inference in C/C++
-      package: llama.cpp
-      url: https://github.com/ggml-org/llama.cpp
-      versions:
-      - description: LLM inference in C/C++
+      - description: NetCDF is a set of software libraries and self-describing, machine-independent
+          data formats that support the creation, access, and sharing of array-oriented
+          scientific data. This module provides C libraries.
         markedDefault: false
         properties:
-          arch: {gpu: 1}
-        versionName: b5760
-    - categories: devel, framework
-      defaultVersionName: 0.18.0_py39
-      description: Kedro is an open-source Python framework for creating reproducible,
-        maintainable and modular data science code.
-      package: py-kedro
-      url: https://kedro.readthedocs.io/
-      versions:
-      - {description: 'Kedro is an open-source Python framework for creating reproducible,
-          maintainable and modular data science code.', markedDefault: false, versionName: 0.18.0_py39}
+          parallel: {mpi: 1}
+        versionName: 4.9.0
     - categories: devel, compiler
       defaultVersionName: '110.81'
       description: Standard ML of New Jersey (abbreviated SML/NJ) is a compiler for
@@ -9734,11 +9739,15 @@ software_modules:
       - {description: Standard ML of New Jersey (abbreviated SML/NJ) is a compiler
           for the Standard ML '97 programming language., markedDefault: false, versionName: '110.81'}
     - categories: devel, lib
-      defaultVersionName: 3.7.13
-      description: RabbitMQ is an open-source message broker.
-      package: rabbitmq
-      url: http://rabbitmq.com
+      defaultVersionName: '0.18'
+      description: JSON-C implements a reference counting object model that allows
+        you to easily construct JSON objects in C, output them as JSON formatted strings
+        and parse JSON formatted strings back into the C representation of JSON objects.
+      package: json-c
+      url: https://json-c.github.io/json-c/
       versions:
-      - {description: RabbitMQ is an open-source message broker., markedDefault: false,
-        versionName: 3.7.13}
+      - {description: 'JSON-C implements a reference counting object model that allows
+          you to easily construct JSON objects in C, output them as JSON formatted
+          strings and parse JSON formatted strings back into the C representation
+          of JSON objects.', markedDefault: false, versionName: '0.18'}
 
