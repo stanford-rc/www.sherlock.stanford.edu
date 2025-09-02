@@ -6,6 +6,20 @@ learning, Alphafold's accuracy matches that of traditional experimental
 techniques at a fraction of the cost and in less time. This document provides
 guidelines for installing and running AlphaFold in user space on Sherlock.
 
+!!! Note "Immediate access to Boltz-1"
+
+    [Boltz][url_boltz] is an open-source AI model released by MIT, designed 
+    to accurately model complex biomolecular interactions, and that achieves
+    state-of-the-art performance at the level of AlphaFold 3.
+    
+    To access Boltz-1 on Sherlock, you can simply load the `py-boltz`
+    module, in the `biology` category, and start predicting structures:
+
+    ```
+    $ ml biology py-boltz
+    $ boltz predict <input_path> --use_msa_server
+    ```
+
 ## Alphafold 3
 
 ### Installing Alphafold 3 on Sherlock
@@ -273,8 +287,10 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
 
 [url_modules]:        /docs/software/list.md
 [url_af]:             https://deepmind.google/technologies/alphafold/
+[url_boltz1]:         https://github.com/jwohlwend/boltz
+[url_
 [url_deepmind]:       https://deepmind.google/
-[url_tou]: https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md
+[url_tou]:            https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md
 [url_form]:           https://github.com/google-deepmind/alphafold3?tab=readme-ov-file#obtaining-model-parameters
 
 --8<--- "includes/_acronyms.md"
