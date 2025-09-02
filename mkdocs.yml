@@ -59,6 +59,28 @@ theme:
     - search.share
     - search.suggest
 
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: sherlock
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      # https://github.com/squidfunk/mkdocs-material/issues/5537
+      primary: custom
+      accent:  custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
   font:
     text: Roboto
     code: Roboto Mono
@@ -128,6 +150,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/stanford-rc
       name: SRCC on GitHub
+    - icon: fontawesome/brands/bluesky
+      link: https://bsky.app/profile/stanford-rc.bsky.social
+      name: SRCC on BlueSky
     - icon: fontawesome/brands/slack
       link: https://srcc.slack.com/
       name: SRCC Users Slack workspace
