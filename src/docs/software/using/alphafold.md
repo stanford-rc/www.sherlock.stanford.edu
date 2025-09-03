@@ -257,7 +257,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
 
 3. Running on GPUs with CUDA Capability 7.x or lower
 
-   Successful inference runs on GPU's with CUDA capabilty 7.x or lower are limited
+   Successful inference runs on GPU's with CUDA capability 7.x or lower are limited
    by sequence length and GPU memory. If you do wish to run an inference job on an
    older GPU, the singularity container contains logic to test for the computate
    capability of the available GPU and set the appropriate environmental variables
