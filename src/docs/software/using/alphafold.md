@@ -96,7 +96,7 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     commands will allow you to build your own copy of AlphaFold 3 into
     a `.sif` file, or container image.
     
-    ```
+    ``` none
     $ sh_dev -m 12GB
     $ cd $GROUP_HOME/$USER/alphafold3
     $ wget https://gist.githubusercontent.com/cagancayco/a71ae18ab5044e14526e0c83becaf647/raw/9f6104366d59fa9a96bb92693cfa60930184c981/af3.def
@@ -149,8 +149,8 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
     DB_PATH=$SCRATCH/af3_db
     INPUT_JSON=fold_input_2PV7.json
     
-    # run alphafold3 singularity container
-    singularity run \
+    # run alphafold3 apptainer container
+    apptainer run \
          --nv \
          --bind $SCRATCH/af_input:/root/af_input \
          --bind $SCRATCH/af_output:/root/af_output \
@@ -191,7 +191,8 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
     DB_PATH=$SCRATCH/af3_db
     DATA_JSON=/2pv7/2pv7_data.json
 
-    # run alphafold3 singularity container
+    # run alphafold3 apptainer container
+    apptainer run \
     singularity run \
          --nv \
          --env JAX_TRACEBACK_FILTERING=off \
@@ -234,7 +235,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
 
 2. Running on GPUs with CUDA Capability 8.x or higher
 
-   The singularity container has been tested extensively on Sherlock GPU's with 
+   The apptainer container has been tested extensively on Sherlock GPU's with 
    CUDA capability 8.x or higher. These include H100, L40S, RTX 3090, A100, and 
    A40 model GPU's. New models, such as the H100 and L40S, produce the fastest 
    runtimes, with older models taking slightly longer. Consumer grade GPU's, such
@@ -256,17 +257,17 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
 
    Successful inference runs on GPU's with CUDA capability 7.x or lower are limited
    by sequence length and GPU memory. If you do wish to run an inference job on an
-   older GPU, the singularity container contains logic to test for the computate
+   older GPU, the apptainer container contains logic to test for the compute
    capability of the available GPU and set the appropriate environmental variables
-   before running AlphaFold 3. A successful run, however, is not guarenteed. To specify a 
+   before running AlphaFold 3. A successful run, however, is not guaranteed. To specify a 
    particular GPU use the SLURM `--constraint` option mentioned above.
 
-4. Notes on Singularity Container
+4. Notes on Apptainer containers
 
-   On Sherlock, the prefered method for running AlphaFold 3 is from a Singularity 
-   container. The Singularity definition file (`af3.def`) SRC provides is modified
+   On Sherlock, the prefered method for running AlphaFold 3 is from an Apptainer 
+   container. The Apptainer definition file (`af3.def`) SRC provides is modified
    from the Docker file that Google DeepMind's publishes with AlphaFold 3. SRC's 
-   definition file takes into account the heterogenatity of the Sherlock cluster, and 
+   definition file takes into account the heterogeneity of the Sherlock cluster, and 
    provides logic to determine which environment variables need to be set based on the 
    compute capability of the available GPU. 
 
