@@ -280,7 +280,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
 
    The container also runs AlphaFold 3 using the `%runscript` section option. The contents
    of the `%runscript` section are executed when the container image (af3.sif) is run with 
-   `singularity run`. This is different from the typical usage of Singularity containers, 
+   `apptainer run`. This is different from the typical usage of Apptainer containers, 
    where software within the container are explicitly called during runtime.
 
 [comment]: #  (link URLs -----------------------------------------------------)
