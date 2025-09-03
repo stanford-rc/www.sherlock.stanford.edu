@@ -41,15 +41,16 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     to download the model parameters file, `af3.bin.zst`. It is recommended to
     download the model parameters to `$HOME`. The file is ~1 GB in size.
     
-    ```
+    ``` none
     $ mkdir $HOME/af3_model
     $ cd $HOME/af3_model
     $ wget <personal_download_link>
     ```
+
     You can make a copy of your model parameters to `$SCRATCH`, which will
     have faster performance when running AlphaFold 3.
     
-    ```
+    ``` none
     $ cp -R $HOME/af3_model $SCRATCH
     ```
     
@@ -97,13 +98,9 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     
     ```
     $ sh_dev -m 12GB
-    
     $ cd $GROUP_HOME/$USER/alphafold3
-    
     $ wget https://gist.githubusercontent.com/cagancayco/a71ae18ab5044e14526e0c83becaf647/raw/9f6104366d59fa9a96bb92693cfa60930184c981/af3.def
-    
     $ apptainer build af3.sif af3.def
-    
     $ exit
     ```
     
@@ -226,7 +223,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
     suite of MPI-based tools used to manage large datasets. `dcp` functions similar to
     `cp` but can leverage multiple cpu cores to copy files faster. Here is an example usage for an AlphaFold database located in `$SCRATCH`.
  
-   ```
+    ```
     module load system mpifileutils
     srun -n $SLURM_TASKS_PER_NODE dcp --quite /oak/stanford/datasets/common/alphafold3 $SCRATCH/af3_db
     ```
@@ -279,7 +276,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
    within the container; this the purpose of `--bind` flags in the sbatch scripts above.
 
    The container also runs AlphaFold 3 using the `%runscript` section option. The contents
-   of the `%runscript` section are executed when the container image (af3.sif) is run with 
+   of the `%runscript` section are executed when the container image (`af3.sif`) is run with 
    `apptainer run`. This is different from the typical usage of Apptainer containers, 
    where software within the container are explicitly called during runtime.
 
@@ -287,8 +284,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
 
 [url_modules]:        /docs/software/list.md
 [url_af]:             https://deepmind.google/technologies/alphafold/
-[url_boltz1]:         https://github.com/jwohlwend/boltz
-[url_
+[url_boltz]:          https://github.com/jwohlwend/boltz
 [url_deepmind]:       https://deepmind.google/
 [url_tou]:            https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md
 [url_form]:           https://github.com/google-deepmind/alphafold3?tab=readme-ov-file#obtaining-model-parameters
