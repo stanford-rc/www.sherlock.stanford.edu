@@ -72,15 +72,14 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     #!/bin/bash
     #SBATCH -t 5:00:00
     
-    bash fetch_databases.sh $SCRATCH/af3_db
+    bash $GROUP_HOME/$USER/alphafold3/fetch_databases.sh $SCRATCH/af3_db
     ```
     
-    This script assumes that you are submitting the job from within the 
-    GitHub repository that you cloned into `$GROUP_HOME/$USER`. Feel free to
-    modify the script if you want to use your own partition, download to a
-    different location, or submit the job from a different directory. The
-    database will take approximately 1 hour to download, you may proceed to
-    the next step while it completes.
+    Feel free to modify the script if you want to use your own partition,
+    downloaded AlphaFold 3 to location different from `$GROUP_HOME/$USER`,
+    or want to download the database to a different location. The database
+    will take approximately 1 hour to download, you may proceed to the next
+    step while it completes.
     
     Although unmodified files are purged from `$SCRATCH` and `$GROUP_SCRATCH`
     every 90 days, Stanford Research Computing maintains a copy of the
@@ -193,7 +192,6 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
 
     # run alphafold3 apptainer container
     apptainer run \
-    singularity run \
          --nv \
          --env JAX_TRACEBACK_FILTERING=off \
          --bind $SCRATCH/af_input:/root/af_input \
@@ -206,6 +204,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
          --model_dir=/root/models \
          --output_dir=/root/af_output
     ```
+
 ### Best Practices
 
 1. Using `dcp` to maintain your in Databases to `$SCRATCH` or `$GROUP_SCRATCH`
@@ -264,7 +263,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
 
 4. Notes on Apptainer containers
 
-   On Sherlock, the prefered method for running AlphaFold 3 is from an Apptainer 
+   On Sherlock, the preferred method for running AlphaFold 3 is from an Apptainer 
    container. The Apptainer definition file (`af3.def`) SRC provides is modified
    from the Docker file that Google DeepMind's publishes with AlphaFold 3. SRC's 
    definition file takes into account the heterogeneity of the Sherlock cluster, and 
