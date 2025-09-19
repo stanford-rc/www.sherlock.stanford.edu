@@ -20,9 +20,9 @@ jobs:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - name: checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: setup python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: 3.x
           cache: pip
@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: list changed yaml files
         id: changedfiles
         uses: tj-actions/changed-files@v46
@@ -60,14 +60,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: list changed markdown files
         id: changedfiles
         uses: tj-actions/changed-files@v46
         with:
           files: '**.md'
       - name: lint markdown files
-        uses: nosborn/github-action-markdown-cli@v3.4.0
+        uses: nosborn/github-action-markdown-cli@v3.5.0
         if: steps.changedfiles.outputs.any_changed == 'true'
         with:
           files: ${{ steps.changedfiles.outputs.all_changed_files }}
@@ -78,13 +78,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: list changed markdown files
         id: changedfiles
         uses: tj-actions/changed-files@v46
         with:
           files: '**.md'
-      - uses: rojopolis/spellcheck-github-actions@0.47.0
+      - uses: rojopolis/spellcheck-github-actions@0.52.0
         if: steps.changedfiles.outputs.any_changed == 'true'
         with:
           source_files: ${{ steps.changedfiles.outputs.all_changed_files }}
@@ -95,6 +95,6 @@ jobs:
 #  linkcheck: # -------------------------------------------------------------
 #    runs-on: ubuntu-20.04
 #    steps:
-#      - uses: actions/checkout@v4
+#      - uses: actions/checkout@v5
 
 
