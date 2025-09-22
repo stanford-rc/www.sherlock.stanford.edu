@@ -232,7 +232,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
     depending on how many files need to be re-copied. You can also run the `dcp` 
     command separately and periodically from its own sbatch script. 
 
-2. Running on GPUs with CUDA Capability 8.x or higher
+2. Running on GPUs with CUDA Compute Capability 8.x or higher
 
    The apptainer container has been tested extensively on Sherlock GPU's with 
    CUDA capability 8.x or higher. These include H100, L40S, RTX 3090, A100, and 
@@ -251,8 +251,30 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
    ```
    #SBATCH --constraint="GPU_SKU:H100_SXM5|GPU_SKU:L40S"
    ```
+   
+   Additionally, the compute capability is also listed as a node feature, and you can specify
+   it directly as a constraint. For example, you can specify compute capabilities 8.9 or 9.0 with:
+   ```
+   #SBATCH --constraint="GPU_CC:8.9|GPU_CC:9.0"
+   ```
 
-3. Running on GPUs with CUDA Capability 7.x or lower
+   Specifying the compute capability can simplify your `--constraint` list because some GPU
+   models have the same compute capability, as seen in the table below. It also addresses the
+   central problem we are working around, since you can directly limit your SLURM job to the
+   GPU's which statisfy the 8.x or higher requirement.
+      
+    | GPU Model | Compute Capability |
+    |:---:|:---:|
+    | GPU_SKU:H100_SXM5 | GPU_CC:9.0 |
+    | GPU_SKU:L40S | GPU_CC:8.9 |
+    | GPU_SKU:A40 <br> GPU_SKU:RTX_3090 | GPU_CC:8.6 |
+    | GPU_SKU:A100_PCIE <br> GPU_SKU:A100_SXM4 | GPU_CC:8.0 |
+    | GPU_SKU:RTX_2080Ti | GPU_CC:7.5 |
+    | GPU_SKU:V100_PCIE <br> GPU_SKU:V100S_PCIE <br> GPU_SKU:V100_SXM2 <br> GPU_SKU:TITAN_V | GPU_CC:7.0 |
+    | GPU_SKU:P40 <br> GPU_SKU:TITAN_Xp | GPU_CC:6.1 |
+    | GPU_SKU:P100_PCIE | GPU_CC:6.0 |
+
+4. Running on GPUs with CUDA Compute Capability 7.x or lower
 
    Successful inference runs on GPU's with CUDA capability 7.x or lower are limited
    by sequence length and GPU memory. If you do wish to run an inference job on an
@@ -261,7 +283,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
    before running AlphaFold 3. A successful run, however, is not guaranteed. To specify a 
    particular GPU use the SLURM `--constraint` option mentioned above.
 
-4. Notes on Apptainer containers
+5. Notes on Apptainer containers
 
    On Sherlock, the preferred method for running AlphaFold 3 is from an Apptainer 
    container. The Apptainer definition file (`af3.def`) SRC provides is modified
