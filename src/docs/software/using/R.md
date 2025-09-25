@@ -439,7 +439,7 @@ $ sh_dev -c 4
 
 $ ml purge
 $ ml R/4.2.0
-$ ml system harfbuzz fribidi
+$ ml system harfbuzz fribidi libwebp
 $ ml cmake libgit2
 $ ml openssl
 
