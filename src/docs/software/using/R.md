@@ -366,7 +366,9 @@ $ module spider udunits
       physics
 ```
 
-So for `sf`, as well as other geo-type libraries like `terra` and `raster`, in order to load the dependencies, exit `R`, load the `udunits` and `gdal` modules, and try installing `sf` again:
+So for `sf`, as well as other geo-type libraries like `terra` and `raster`, in
+order to load the dependencies, exit `R`, load the `udunits` and `gdal`
+modules, and try installing `sf` again:
 
 ``` none
 $ ml physics geos/3.13.1 udunits/2.2.26 gdal/3.10.2 proj/9.5.1
