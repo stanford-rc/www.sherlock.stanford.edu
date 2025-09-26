@@ -485,7 +485,7 @@ To submit a ticket about your current or recent interactive session:
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_contact]:      mailto:{{ support_email }}
+[url_contact]:      mailto:{{support_email}}
 [url_oak]:          //uit.stanford.edu/service/oak-storage
 [url_osc]:          //www.osc.edu
 [url_ood]:          //openondemand.org

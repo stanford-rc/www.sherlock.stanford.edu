@@ -252,7 +252,7 @@ section][url_submit].
 [url_twostep]:      //uit.stanford.edu/service/webauth/twostep
 [url_vpn]:          //uit.stanford.edu/service/vpn
 
-[url_contact]:      mailto:{{ support_email }}
+[url_contact]:      mailto:{{support_email}}
 
 [url_prereq]:       index.md#prerequisites
 [url_account]:      index.md#how-to-request-an-account
