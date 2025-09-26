@@ -428,7 +428,7 @@ those on GitHub.
 Installing `devtools` is somewhat memory-intensive and has several
 dependencies. The following example shows how to run an interactive session
 with 4 CPUs, load the modules for the necessary dependencies, and install
-`devtools` for R version 4.2.0.
+`devtools` for R version 4.2.0. Note: these dependencies will also work for installing the popular library `tidyverse`.
 
 ```none
 # Launch interactive dev session with 4 CPUs
@@ -438,10 +438,8 @@ $ sh_dev -c 4
 # Load the required modules
 
 $ ml purge
-$ ml R/4.2.0
-$ ml system harfbuzz fribidi libwebp
-$ ml cmake libgit2
-$ ml openssl
+$ ml R/4.4.0 cmake/3.31.4 libgit2/1.9.1 openssl/3.0.7
+$ ml system harfbuzz/1.4.8 fribidi/1.0.12 libwebp/0.6.1
 
 # Launch R and install devtools
 
