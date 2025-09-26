@@ -384,7 +384,7 @@ and many R package dependencies are already available as modules on Sherlock,
 you just need to search for them with `module spider` and load them.
 
 And in case you're stuck, you can of course always [send us an
-email][url_support] and we'll be happy to assist.
+email][url_contact] and we'll be happy to assist.
 
 #### Updating Packages
 
@@ -730,7 +730,7 @@ which shows a decent speedup for running on a GPU for the largest matrix sizes.
 [url_cran]:             //cran.r-project.org/
 [url_rmpi]:             //cran.r-project.org/web/packages/Rmpi
 [url_gpur]:             //cran.r-project.org/web/packages/gpuR
-[url_support]:          mailto:{{ support_email }}
+[url_contact]:          mailto:{{support_email}}
 
 [url_modules]:          ../modules.md
 [url_software_list]:    ../list.md
