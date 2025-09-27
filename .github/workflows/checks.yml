@@ -14,7 +14,7 @@ on:
 
 jobs:
 
-  build:  # --------------------------------------------------------------------
+  build_check:  # -- limited build check (no Insiders) -----------------------
     runs-on: ubuntu-latest
     env:
       MKDOCS_MATERIAL_FORK_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -26,11 +26,9 @@ jobs:
         with:
           python-version: 3.x
           cache: pip
-      - name: set Material for MkDocs version
-        run: echo "MKM_VER=$(cat .mkdocs-material.version)" >> $GITHUB_ENV
       - name: install Material for MkDocs and dependencies
         run: |
-          pip install git+https://${MKDOCS_MATERIAL_FORK_TOKEN}@github.com/stanford-rc/mkdocs-material-insiders.git@${MKM_VER}
+          pip install git+https://github.com/squidfunk/mkdocs-material.git
           pip install -r requirements.txt
       - name: build site
         run: mkdocs build --strict
