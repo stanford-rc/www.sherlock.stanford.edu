@@ -366,12 +366,13 @@ $ module spider udunits
       physics
 ```
 
-So for `sf`, in order to load the dependencies, exit `R`, load the `udunits`
-and `gdal` modules, and try installing `sf` again:
+So for `sf`, as well as other geo-type libraries like `terra` and `raster`, in
+order to load the dependencies, exit `R`, load the `udunits` and `gdal`
+modules, and try installing `sf` again:
 
 ``` none
-$ ml load physics udunits gdal geos
-$ ml R/4.3.2
+$ ml physics geos/3.13.1 udunits/2.2.26 gdal/3.10.2 proj/9.5.1
+$ ml R/4.4.2
 $ R
 > install.packages("sf")
 ```
@@ -383,7 +384,7 @@ and many R package dependencies are already available as modules on Sherlock,
 you just need to search for them with `module spider` and load them.
 
 And in case you're stuck, you can of course always [send us an
-email][url_support] and we'll be happy to assist.
+email][url_contact] and we'll be happy to assist.
 
 #### Updating Packages
 
@@ -428,7 +429,8 @@ those on GitHub.
 Installing `devtools` is somewhat memory-intensive and has several
 dependencies. The following example shows how to run an interactive session
 with 4 CPUs, load the modules for the necessary dependencies, and install
-`devtools` for R version 4.2.0.
+`devtools` for R version 4.4.2. Note: these dependencies will also work for
+installing the popular library `tidyverse`.
 
 ```none
 # Launch interactive dev session with 4 CPUs
@@ -438,10 +440,8 @@ $ sh_dev -c 4
 # Load the required modules
 
 $ ml purge
-$ ml R/4.2.0
-$ ml system harfbuzz fribidi
-$ ml cmake libgit2
-$ ml openssl
+$ ml R/4.4.2 cmake/3.31.4 libgit2/1.9.1 openssl/3.0.7
+$ ml system harfbuzz/1.4.8 fribidi/1.0.12 libwebp/0.6.1
 
 # Launch R and install devtools
 
@@ -729,7 +729,7 @@ which shows a decent speedup for running on a GPU for the largest matrix sizes.
 [url_cran]:             //cran.r-project.org/
 [url_rmpi]:             //cran.r-project.org/web/packages/Rmpi
 [url_gpur]:             //cran.r-project.org/web/packages/gpuR
-[url_support]:          mailto:{{ support_email }}
+[url_contact]:          mailto:{{support_email}}
 
 [url_modules]:          ../modules.md
 [url_software_list]:    ../list.md

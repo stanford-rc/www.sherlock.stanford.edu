@@ -16,8 +16,6 @@ jobs:
 
   build:  # --------------------------------------------------------------------
     runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - name: checkout repo
         uses: actions/checkout@v5
@@ -30,7 +28,7 @@ jobs:
         run: echo "MKM_VER=$(cat .mkdocs-material.version)" >> $GITHUB_ENV
       - name: install Material for MkDocs and dependencies
         run: |
-          pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@${MKM_VER}
+          pip install git+https://${{ secrets.MKDOCS_MATERIAL_FORK_TOKEN }}@github.com/stanford-rc/mkdocs-material-insiders.git@${MKM_VER}
           pip install -r requirements.txt
       - name: build site
         run: mkdocs build --strict
@@ -43,7 +41,7 @@ jobs:
         uses: actions/checkout@v5
       - name: list changed yaml files
         id: changedfiles
-        uses: tj-actions/changed-files@v46
+        uses: tj-actions/changed-files@v47
         with:
           files: |
             **.yml
@@ -63,7 +61,7 @@ jobs:
         uses: actions/checkout@v5
       - name: list changed markdown files
         id: changedfiles
-        uses: tj-actions/changed-files@v46
+        uses: tj-actions/changed-files@v47
         with:
           files: '**.md'
       - name: lint markdown files
@@ -81,7 +79,7 @@ jobs:
         uses: actions/checkout@v5
       - name: list changed markdown files
         id: changedfiles
-        uses: tj-actions/changed-files@v46
+        uses: tj-actions/changed-files@v47
         with:
           files: '**.md'
       - uses: rojopolis/spellcheck-github-actions@0.52.0

@@ -251,7 +251,7 @@ it scales.
 [url_parfor]:           //www.mathworks.com/help/parallel-computing/parfor.html
 [url_slurm_env]:        //slurm.schedmd.com/sbatch.html#SECTION_INPUT-ENVIRONMENT-VARIABLES
 
-[url_contact]:          mailto:{{ support_email }}
+[url_contact]:          mailto:{{support_email}}
 
 [url_R]:                /docs/software/using/R.md
 [url_julia]:            /docs/software/using/julia.md
