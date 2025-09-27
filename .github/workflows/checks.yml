@@ -16,6 +16,8 @@ jobs:
 
   build:  # --------------------------------------------------------------------
     runs-on: ubuntu-latest
+    env:
+      MKDOCS_MATERIAL_FORK_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - name: checkout repo
         uses: actions/checkout@v5
@@ -28,7 +30,7 @@ jobs:
         run: echo "MKM_VER=$(cat .mkdocs-material.version)" >> $GITHUB_ENV
       - name: install Material for MkDocs and dependencies
         run: |
-          pip install git+https://${{ secrets.MKDOCS_MATERIAL_FORK_TOKEN }}@github.com/stanford-rc/mkdocs-material-insiders.git@${MKM_VER}
+          pip install git+https://${MKDOCS_MATERIAL_FORK_TOKEN}@github.com/stanford-rc/mkdocs-material-insiders.git@${MKM_VER}
           pip install -r requirements.txt
       - name: build site
         run: mkdocs build --strict
