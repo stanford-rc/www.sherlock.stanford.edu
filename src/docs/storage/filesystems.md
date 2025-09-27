@@ -397,7 +397,7 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 
 [url_oak]:              //uit.stanford.edu/service/oak-storage
 
-[url_contact]:          mailto:{{ support_email }}
+[url_contact]:          mailto:{{support_email}}
 
 [url_check_quotas]:     /docs/storage/index.md#checking-quotas
 [url_snapshots]:        /docs/storage/data-protection.md#snapshots

@@ -285,7 +285,7 @@ lost when the maintenance starts.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[email]:          mailto:{{ support_email }}
+[email]:          mailto:{{support_email}}
 [url_provost]:    //provost.stanford.edu/
 [url_dor]:        //doresearch.stanford.edu/research-offices/dor-office-vice-provost-and-dean-research
 [url_srcc]:       //srcc.stanford.edu/

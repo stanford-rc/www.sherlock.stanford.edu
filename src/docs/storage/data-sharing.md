@@ -284,7 +284,7 @@ there are two possibilities:
 [url_globus_sharing]:   //www.globus.org/data-sharing
 [url_oak_endpoint]:     //srcc.stanford.edu/private/oak-gateways
 
-[url_contact]:          mailto:{{ support_email }}
+[url_contact]:          mailto:{{support_email}}
 
 [url_oak]:              /docs/storage/filesystems.md#oak
 
