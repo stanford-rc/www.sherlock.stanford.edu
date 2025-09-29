@@ -138,5 +138,5 @@ model"][url_ollama_customize] in their documentation for instructions.
 [url_ollama_library]:       //ollama.com/library
 [url_ollama_customize]:     //github.com/ollama/ollama#customize-a-model
 
-[url_software_list]:        ../software_list.md
+[url_software_list]:        ../list.md
 [url_modules]:              ../modules.md
