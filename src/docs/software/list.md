@@ -57,7 +57,7 @@ count }} fields of science:*
     Stanford Research Computing is not funded to provide commercial software on
     Sherlock and researchers are responsible for the costs of purchasing and
     renewing commercial software licenses. For more information, please feel
-    free to [contact us](mailto:{{ support_email }}) and see the [Stanford
+    free to [contact us](mailto:{{support_email}}) and see the [Stanford
     Software Licensing page](https://uit.stanford.edu/service/softwarelic) for
     purchasing information.
 
@@ -103,9 +103,9 @@ count }} fields of science:*
 
 ### **{{ c.name }}**
 
+<!-- markdownlint-disable MD056 -->
 Field | {{ h_name }} | {{ h_vers }} | URL | Description
 :---- | :----------- | :----------- | :-- | :----------
-<!-- markdownlint-disable MD056 -->
   {% for p in c.packages | sort(attribute="categories,package") -%}
     {{ module_line(p) }}
   {% endfor -%}

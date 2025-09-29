@@ -55,6 +55,7 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
+    - navigation.path
     - search.highlight
     - search.share
     - search.suggest
@@ -167,11 +168,23 @@ extra:
 # Plugins
 plugins:
 
+  - group: # Insiders-specific configuration
+      enabled: !ENV INSIDERS
+      plugins:
+        - social:
+            cards_layout: default
+            cards_layout_options:
+              #logo: src/assets/images/logo_small.png
+              font_family: Roboto
+              background_image: src/assets/images/logo.png
+              background_color: "#8C1515"
+        - typeset
+
+
   - search:
       separator: "[\\s\\-,:!=\\[\\]()\"/]+|\\.(?!\\d)|&[lg]t;|(?!\\b)(?=[A-Z][a-z])"
 
   - social:
-      cards_layout: default
       cards_layout_options:
         #logo: src/assets/images/logo_small.png
         font_family: Roboto

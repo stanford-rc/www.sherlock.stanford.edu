@@ -20,15 +20,14 @@ jobs:
 
     env:
       GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      MKDOCS_MATERIAL_FORK_TOKEN: ${{ secrets.GH_TOKEN }}
 
     steps:
-      - uses: actions/checkout@v4
-      - run: echo "MKM_VER=$(cat .mkdocs-material.version)" >> $GITHUB_ENV
+      - uses: actions/checkout@v5
       - run: |
-          pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@${MKM_VER}
+          pip install git+https://${MKDOCS_MATERIAL_FORK_TOKEN}@github.com/stanford-rc/mkdocs-material-insiders.git
           pip install -r requirements.txt
-          mkdocs gh-deploy --force
+          INSIDERS=true mkdocs gh-deploy --force
       - uses: iRoachie/slack-github-actions@v2.3.2
         if: ${{ always() }}
         with:
