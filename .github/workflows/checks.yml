@@ -16,8 +16,6 @@ jobs:
 
   build_check:  # -- limited build check (no Insiders) -----------------------
     runs-on: ubuntu-latest
-    env:
-      MKDOCS_MATERIAL_FORK_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - name: checkout repo
         uses: actions/checkout@v5
@@ -28,7 +26,6 @@ jobs:
           cache: pip
       - name: install Material for MkDocs and dependencies
         run: |
-          pip install git+https://github.com/squidfunk/mkdocs-material.git
           pip install -r requirements.txt
       - name: build site
         run: mkdocs build --strict
@@ -94,5 +91,3 @@ jobs:
 #    runs-on: ubuntu-20.04
 #    steps:
 #      - uses: actions/checkout@v5
-
-
