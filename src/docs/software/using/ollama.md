@@ -223,7 +223,7 @@ to your local Ollama server.
 
 After installation, the Continue icon should be visible in the left-hand side
 panel, or via the ++ctrl+l++ key-binding. Before it could be used, the
-estension needs to be [configured][url_continue_config] to use the Ollama
+extension needs to be [configured][url_continue_config] to use the Ollama
 server.
 
 
@@ -238,7 +238,7 @@ models:
     model: AUTODETECT
 ```
 
-After that, in the Continue pannel, you can start chatting with the model.
+After that, in the Continue panel, you can start chatting with the model.
 
 More details and examples are also available in the [Ollama
 documentation][url_ollama_continue].
