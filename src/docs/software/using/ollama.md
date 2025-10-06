@@ -264,4 +264,4 @@ model"][url_ollama_customize] in their documentation for instructions.
 
 [url_software_list]:        ../list.md
 [url_modules]:              ../modules.md
-[url_code-server]:          ../../user-guide/ondemand/#vs-code
+[url_code-server]:          ../../../user-guide/ondemand/#vs-code
