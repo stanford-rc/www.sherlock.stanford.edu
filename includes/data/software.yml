@@ -5224,6 +5224,19 @@ software_modules:
       - {description: GATK (Genome Analysis Toolkit) offers a wide variety of tools
           with a primary focus on variant discovery and genotyping., markedDefault: false,
         versionName: 4.6.0.0}
+    - categories: biology, microscopy
+      defaultVersionName: 0.4.5
+      description: Deconvolution of widefield microscopy images and generation of
+        point spread functions.
+      package: deconwolf
+      url: https://github.com/elgw/deconwolf/
+      versions:
+      - description: Deconvolution of widefield microscopy images and generation of
+          point spread functions.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.4.5
     - categories: biology, molecular biology
       defaultVersionName: 4.0.3
       description: DSSP is an application to assign secondary structure to proteins.
@@ -5351,21 +5364,22 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 2.3.10_py39
-    - categories: biology, neurosciences
-      defaultVersionName: 0.10.9_py36
-      description: The Maastricht Diffusion Toolbox, MDT, is a framework and library
-        for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging
-        (MRI) modeling.
-      package: py-mdt
-      url: https://github.com/cbclab/MDT
+    - categories: biology, genomics
+      defaultVersionName: 0.44.0
+      description: kallisto is a program for quantifying abundances of transcripts
+        from RNA-Seq data using high-throughput sequencing reads.
+      package: kallisto
+      url: https://pachterlab.github.io/kallisto/
       versions:
-      - description: The Maastricht Diffusion Toolbox, MDT, is a framework and library
-          for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging
-          (MRI) modeling.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.10.9_py36
+      - {description: kallisto is a program for quantifying abundances of transcripts
+          from RNA-Seq data using high-throughput sequencing reads., markedDefault: false,
+        versionName: 0.46.1}
+      - {description: kallisto is a program for quantifying abundances of transcripts
+          from RNA-Seq data using high-throughput sequencing reads., markedDefault: false,
+        versionName: 0.50.1}
+      - {description: kallisto is a program for quantifying abundances of transcripts
+          from RNA-Seq data using high-throughput sequencing reads., markedDefault: true,
+        versionName: 0.44.0}
     - categories: biology, genomics
       defaultVersionName: 2.0.0
       description: The Bases2Fastq Software demultiplexess sequencing data from Element
@@ -5505,22 +5519,21 @@ software_modules:
       - {description: OpenSlide is a C library that provides a simple interface to
           read whole-slide images (also known as virtual slides)., markedDefault: false,
         versionName: 3.4.1}
-    - categories: biology, genomics
-      defaultVersionName: 0.44.0
-      description: kallisto is a program for quantifying abundances of transcripts
-        from RNA-Seq data using high-throughput sequencing reads.
-      package: kallisto
-      url: https://pachterlab.github.io/kallisto/
+    - categories: biology, neurosciences
+      defaultVersionName: 0.10.9_py36
+      description: The Maastricht Diffusion Toolbox, MDT, is a framework and library
+        for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging
+        (MRI) modeling.
+      package: py-mdt
+      url: https://github.com/cbclab/MDT
       versions:
-      - {description: kallisto is a program for quantifying abundances of transcripts
-          from RNA-Seq data using high-throughput sequencing reads., markedDefault: false,
-        versionName: 0.46.1}
-      - {description: kallisto is a program for quantifying abundances of transcripts
-          from RNA-Seq data using high-throughput sequencing reads., markedDefault: false,
-        versionName: 0.50.1}
-      - {description: kallisto is a program for quantifying abundances of transcripts
-          from RNA-Seq data using high-throughput sequencing reads., markedDefault: true,
-        versionName: 0.44.0}
+      - description: The Maastricht Diffusion Toolbox, MDT, is a framework and library
+          for parallelized (GPU and multi-core CPU) diffusion Magnetic Resonance Imaging
+          (MRI) modeling.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.10.9_py36
     - categories: biology, genomics
       defaultVersionName: 0.38.1
       description: breseq is a computational pipeline for finding mutations relative
@@ -8948,7 +8961,7 @@ software_modules:
       - {description: An open-source AI agent that brings the power of Gemini directly
           into your terminal., markedDefault: false, versionName: 0.0.2}
       - {description: An open-source AI agent that brings the power of Gemini directly
-          into your terminal., markedDefault: false, versionName: 0.0.335}
+          into your terminal., markedDefault: true, versionName: 0.0.335}
     - categories: devel, lib
       defaultVersionName: 1.10.0
       description: CUB is a flexible library of cooperative threadblock primitives
