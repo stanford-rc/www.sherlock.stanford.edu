@@ -441,7 +441,7 @@ $ sh_dev -c 4
 
 $ ml purge
 $ ml R/4.4.2
-$ ml freetype/2.9.1 libgit2/1.9.1 fribidi/1.0.12 libwebp/0.6.1 libjpeg-turbo/2.1.4
+$ ml libgit2/1.9.1 fribidi/1.0.12 libwebp/1.3.0
 
 # Launch R and install devtools
 
