@@ -437,6 +437,42 @@ To start a VS Code session via Sherlock OnDemand:
 
 ![ood_code-server](images/ood_code-server.png)
 
+## Common Issues
+
+### No Space Left on Device
+
+Occassionally, you may get an error message like the one below:
+
+![errno](images/errno.png)
+
+This means that you have exceeded your storage quota on Sherlock, where your OnDemand session is running, and the app can't create files it needs to run. Because this issue prevents OnDemand from running,
+you will probably not be able to use the "Files" function in the web browser to help you clean up. Instead, you will need to `ssh` into the cluster, where
+there are handy utilities that will actually make the job very easy. To connect to Sherlock via `ssh`, you can open up the Terminal (Linux/Mac) or Powershell (Windows) program
+on your computers and type:
+
+```bash
+ssh SUNetID@sherlock.stanford.edu
+```
+
+You may need to type "yes" to authenticate the connection and will need to complete a 2FA. Once your connected, you'll want to load a program called ncdu: `ml system ncdu` and launch it: `ncdu`. It will take a moment to analyze your $HOME space, but it will come back will a nice ordered list of the biggest storage offenders.
+
+![ncdu](ncdu.png)
+
+Usually they're hidden Python folders `~/.local` and `~/.cache`. `.cache` is very safe to delete, it just helps Python load common packages more quickly. 
+'.local' is a bit trickier: it holds the actual packages Python uses, so deleting these means you'll need to redownload packages when you need them. You might be able to download 3.9, though, if you no longer use that version.
+
+### Bad Request
+
+Another common error looks something like:
+
+```
+Bad Request
+Your browser sent a request that this server could not understand.
+Size of a request header field exceeds server limit.
+```
+
+This can usually be addressed by clearing your browser cookies. If you have some issue with this, switching browsers or using "Incognito Mode" can work as temporary workarounds"
+  
 ## Support
 
 If you are experiencing issues with Sherlock or your interactive session, you can
