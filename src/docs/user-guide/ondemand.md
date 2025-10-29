@@ -443,23 +443,26 @@ To start a VS Code session via Sherlock OnDemand:
 
 Occassionally, you may get an error message like the one below:
 
-![errno](images/errno.png)
+![nospc](images/ood_nospc.png)
 
-This means that you have exceeded your storage quota on Sherlock, where your OnDemand session is running, and the app can't create files it needs to run. Because this issue prevents OnDemand from running,
-you will probably not be able to use the "Files" function in the web browser to help you clean up. Instead, you will need to `ssh` into the cluster, where
-there are handy utilities that will actually make the job very easy. To connect to Sherlock via `ssh`, you can open up the Terminal (Linux/Mac) or Powershell (Windows) program
-on your computers and type:
+This means that you have exceeded your [storage quota][url_quota] in your
+Sherlock `$HOME` directory.
 
-```bash
-ssh SUNetID@sherlock.stanford.edu
-```
+Because this issue prevents OnDemand from running, you will probably not be
+able to use the "Files" function in the web browser to help you clean up.
+Instead, you will need to [connect][url_connect] to the cluster with `ssh`.
 
-You may need to type "yes" to authenticate the connection and will need to complete a 2FA. Once your connected, you'll want to load a program called ncdu: `ml system ncdu` and launch it: `ncdu`. It will take a moment to analyze your $HOME space, but it will come back will a nice ordered list of the biggest storage offenders.
+Once your connected, you'll be able to [identify the largest
+consumers][url_ncdu] of space in your `$HOME` directory, and either delete or
+move those to a different storage location.
 
-![ncdu](ncdu.png)
+![ncdu](images/ood_ncdu.png)
 
-Usually they're hidden Python folders `~/.local` and `~/.cache`. `.cache` is very safe to delete, it just helps Python load common packages more quickly. 
-'.local' is a bit trickier: it holds the actual packages Python uses, so deleting these means you'll need to redownload packages when you need them. You might be able to download 3.9, though, if you no longer use that version.
+Usually they're hidden Python folders `~/.local` and `~/.cache`. `.cache` is
+very safe to delete, it just helps Python load common packages more quickly.
+'.local' is a bit trickier: it holds the actual packages Python uses, so
+deleting these means you'll need to redownload packages when you need them. You
+might be able to download 3.9, though, if you no longer use that version.
 
 ### Bad Request
 
@@ -472,7 +475,7 @@ Size of a request header field exceeds server limit.
 ```
 
 This can usually be addressed by clearing your browser cookies. If you have some issue with this, switching browsers or using "Incognito Mode" can work as temporary workarounds"
-  
+
 ## Support
 
 If you are experiencing issues with Sherlock or your interactive session, you can
@@ -529,10 +532,13 @@ To submit a ticket about your current or recent interactive session:
 [url_ood_logout]:   //login.sherlock.stanford.edu/logout
 
 [url_storage]:      /docs/storage/index.md
+[url_quota]:        /docs/storage/index.md#quotas-and-limits
+[url_ncdu]:         /docs/storage/index.md#locating-large-directories
 [url_rclone]:       /docs/software/using/rclone.md
 [url_gssapi]:       /docs/advanced-topics/connection.md#gssapi
 [url_avoid_duo]:    /docs/advanced-topics/connection.md#avoiding-multiple-duo-prompts
 [url_running_jobs]: /docs/user-guide/running-jobs.md
+[url_connect]:      /docs/getting-started/connecting.md
 [url_r_packages]:   /docs/software/using/R.md#r-packages
 
 [comment]: #  (footnotes -----------------------------------------------------)
