@@ -441,40 +441,57 @@ To start a VS Code session via Sherlock OnDemand:
 
 ### No Space Left on Device
 
-Occassionally, you may get an error message like the one below:
+Occasionally, you may get an error message like the one below:
 
 ![nospc](images/ood_nospc.png)
 
-This means that you have exceeded your [storage quota][url_quota] in your
-Sherlock `$HOME` directory.
+!!! Info "Quota exceeded"
+
+    This means that you have exceeded your [storage quota][url_quota] in your
+    Sherlock `$HOME` directory.
 
 Because this issue prevents OnDemand from running, you will probably not be
-able to use the "Files" function in the web browser to help you clean up.
+able to use the ["Files"][url_files] menu the web browser to help you clean up.
 Instead, you will need to [connect][url_connect] to the cluster with `ssh`.
 
-Once your connected, you'll be able to [identify the largest
-consumers][url_ncdu] of space in your `$HOME` directory, and either delete or
-move those to a different storage location.
+Once connected, you'll be able to [identify the largest space
+consumers][url_ncdu] in your `$HOME` directory, and either delete or
+move them to a different storage location.
 
-![ncdu](images/ood_ncdu.png)
+!!! tip "Emptying `~/.cache`"
 
-Usually they're hidden Python folders `~/.local` and `~/.cache`. `.cache` is
-very safe to delete, it just helps Python load common packages more quickly.
-'.local' is a bit trickier: it holds the actual packages Python uses, so
-deleting these means you'll need to redownload packages when you need them. You
-might be able to download 3.9, though, if you no longer use that version.
+    Among potential candidates, your `~/.cache` directory is usually safe to
+    empty, since files there are temporary files that can be re-created as
+    needed. You can empty this directory by running:
+
+    ```none
+    rm -rf ~/.cache/*
+    ```
+
 
 ### Bad Request
 
-Another common error looks something like:
+Another common error looks something like this:
 
-```
-Bad Request
-Your browser sent a request that this server could not understand.
-Size of a request header field exceeds server limit.
-```
+![badrequest](images/ood_badrequest.png)
 
-This can usually be addressed by clearing your browser cookies. If you have some issue with this, switching browsers or using "Incognito Mode" can work as temporary workarounds"
+This issue is caused by some session cookies that may have grown beyond what
+can be handled by the server. This can usually be addressed by clearing your
+browser cookies.
+
+!!! tip "Cleaning site-specific cookies"
+
+    For a more targetted approach, you can delete only the cookies for the
+    `ondemand.sherlock.stanford.edu` site. Instruction to do this vary by
+    browser, but for Chrome, Firefox and Edge, you can usually click on the
+    padlock icon to the left of the URL in the address bar, then click on
+    "Cookies" or "Site Settings" to manage or delete cookies for that site.
+    Please refer to your browser's documentation for details.
+
+
+If the issue persists, switching browsers or using "Incognito Mode" can work as
+a temporary workaround.
+
 
 ## Support
 
@@ -533,6 +550,7 @@ To submit a ticket about your current or recent interactive session:
 
 [url_storage]:      /docs/storage/index.md
 [url_quota]:        /docs/storage/index.md#quotas-and-limits
+[url_files]:        #managing-files
 [url_ncdu]:         /docs/storage/index.md#locating-large-directories
 [url_rclone]:       /docs/software/using/rclone.md
 [url_gssapi]:       /docs/advanced-topics/connection.md#gssapi
