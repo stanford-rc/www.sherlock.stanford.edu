@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBreak - Your Stress Relief Companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <h1 class="app-title">🧠 MindBreak</h1>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-icon">🔥</span>
+                        <span class="stat-value" id="streak">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">⭐</span>
+                        <span class="stat-value" id="points">0</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <button class="nav-btn active" data-section="home">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Home</span>
+            </button>
+            <button class="nav-btn" data-section="facts">
+                <span class="nav-icon">💡</span>
+                <span class="nav-label">Facts</span>
+            </button>
+            <button class="nav-btn" data-section="games">
+                <span class="nav-icon">🎮</span>
+                <span class="nav-label">Games</span>
+            </button>
+            <button class="nav-btn" data-section="breathe">
+                <span class="nav-icon">🌬️</span>
+                <span class="nav-label">Breathe</span>
+            </button>
+            <button class="nav-btn" data-section="mood">
+                <span class="nav-icon">😊</span>
+                <span class="nav-label">Mood</span>
+            </button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Home Section -->
+            <section id="home" class="section active">
+                <div class="welcome-card">
+                    <h2>Welcome back! 👋</h2>
+                    <p class="subtitle">Take a break and relax your mind</p>
+
+                    <!-- Daily Challenge -->
+                    <div class="daily-challenge">
+                        <div class="challenge-header">
+                            <h3>🎯 Daily Challenge</h3>
+                            <span class="challenge-time" id="challengeTime">23:45:12</span>
+                        </div>
+                        <p class="challenge-text" id="dailyChallengeText">Complete 3 activities today!</p>
+                        <div class="challenge-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="challengeProgress" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text" id="challengeProgressText">0/3</span>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="quick-actions">
+                        <h3>Quick Start</h3>
+                        <div class="action-grid">
+                            <button class="action-card" data-action="random-fact">
+                                <span class="action-icon">💡</span>
+                                <span class="action-label">Random Fact</span>
+                            </button>
+                            <button class="action-card" data-action="quick-game">
+                                <span class="action-icon">⚡</span>
+                                <span class="action-label">Quick Game</span>
+                            </button>
+                            <button class="action-card" data-action="breathe">
+                                <span class="action-icon">🌬️</span>
+                                <span class="action-label">Breathe</span>
+                            </button>
+                            <button class="action-card" data-action="riddle">
+                                <span class="action-icon">🧩</span>
+                                <span class="action-label">Brain Teaser</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Achievements Preview -->
+                    <div class="achievements-preview">
+                        <h3>🏆 Recent Achievements</h3>
+                        <div class="achievement-list" id="achievementsList">
+                            <div class="achievement-item locked">
+                                <span class="achievement-icon">🎯</span>
+                                <div class="achievement-info">
+                                    <p class="achievement-name">First Steps</p>
+                                    <p class="achievement-desc">Complete your first activity</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fun Facts Section -->
+            <section id="facts" class="section">
+                <div class="section-header">
+                    <h2>💡 Fun Facts</h2>
+                    <p class="section-subtitle">Learn something new and interesting!</p>
+                </div>
+
+                <div class="category-tabs">
+                    <button class="category-tab active" data-category="all">All</button>
+                    <button class="category-tab" data-category="science">Science</button>
+                    <button class="category-tab" data-category="nature">Nature</button>
+                    <button class="category-tab" data-category="history">History</button>
+                    <button class="category-tab" data-category="space">Space</button>
+                    <button class="category-tab" data-category="animals">Animals</button>
+                </div>
+
+                <div class="fact-card" id="factCard">
+                    <div class="fact-category" id="factCategory">Science</div>
+                    <p class="fact-text" id="factText">Loading...</p>
+                    <div class="fact-actions">
+                        <button class="btn btn-primary" id="nextFactBtn">
+                            <span>Next Fact</span>
+                            <span class="btn-icon">→</span>
+                        </button>
+                        <button class="btn btn-secondary" id="shareFact">
+                            <span class="btn-icon">📤</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Games Section -->
+            <section id="games" class="section">
+                <div class="section-header">
+                    <h2>🎮 Mind Games</h2>
+                    <p class="section-subtitle">Challenge yourself and have fun!</p>
+                </div>
+
+                <!-- Game Selection -->
+                <div class="game-selection" id="gameSelection">
+                    <div class="game-card" data-game="memory">
+                        <div class="game-icon">🧠</div>
+                        <h3>Memory Match</h3>
+                        <p>Test your memory with matching pairs</p>
+                        <button class="btn btn-primary">Play</button>
+                    </div>
+                    <div class="game-card" data-game="reaction">
+                        <div class="game-icon">⚡</div>
+                        <h3>Reaction Time</h3>
+                        <p>How fast can you react?</p>
+                        <button class="btn btn-primary">Play</button>
+                    </div>
+                    <div class="game-card" data-game="pattern">
+                        <div class="game-icon">🎨</div>
+                        <h3>Pattern Memory</h3>
+                        <p>Remember and repeat the pattern</p>
+                        <button class="btn btn-primary">Play</button>
+                    </div>
+                    <div class="game-card" data-game="riddle">
+                        <div class="game-icon">🧩</div>
+                        <h3>Brain Teasers</h3>
+                        <p>Solve challenging riddles</p>
+                        <button class="btn btn-primary">Play</button>
+                    </div>
+                </div>
+
+                <!-- Memory Game -->
+                <div class="game-container hidden" id="memoryGame">
+                    <div class="game-header">
+                        <button class="btn btn-secondary" id="memoryBackBtn">← Back</button>
+                        <div class="game-stats">
+                            <span>Moves: <strong id="memoryMoves">0</strong></span>
+                            <span>Time: <strong id="memoryTime">0:00</strong></span>
+                        </div>
+                    </div>
+                    <div class="memory-grid" id="memoryGrid"></div>
+                </div>
+
+                <!-- Reaction Game -->
+                <div class="game-container hidden" id="reactionGame">
+                    <div class="game-header">
+                        <button class="btn btn-secondary" id="reactionBackBtn">← Back</button>
+                        <div class="game-stats">
+                            <span>Best: <strong id="reactionBest">--</strong></span>
+                        </div>
+                    </div>
+                    <div class="reaction-area" id="reactionArea">
+                        <div class="reaction-content">
+                            <h3 id="reactionText">Click to Start</h3>
+                            <p id="reactionResult"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pattern Game -->
+                <div class="game-container hidden" id="patternGame">
+                    <div class="game-header">
+                        <button class="btn btn-secondary" id="patternBackBtn">← Back</button>
+                        <div class="game-stats">
+                            <span>Level: <strong id="patternLevel">1</strong></span>
+                            <span>Score: <strong id="patternScore">0</strong></span>
+                        </div>
+                    </div>
+                    <div class="pattern-grid" id="patternGrid">
+                        <div class="pattern-cell" data-index="0"></div>
+                        <div class="pattern-cell" data-index="1"></div>
+                        <div class="pattern-cell" data-index="2"></div>
+                        <div class="pattern-cell" data-index="3"></div>
+                    </div>
+                    <div class="pattern-message" id="patternMessage">Watch the pattern...</div>
+                </div>
+
+                <!-- Riddle Game -->
+                <div class="game-container hidden" id="riddleGame">
+                    <div class="game-header">
+                        <button class="btn btn-secondary" id="riddleBackBtn">← Back</button>
+                        <div class="game-stats">
+                            <span>Solved: <strong id="riddleSolved">0</strong></span>
+                        </div>
+                    </div>
+                    <div class="riddle-content">
+                        <div class="riddle-card">
+                            <p class="riddle-text" id="riddleText">Loading riddle...</p>
+                            <div class="riddle-input-area">
+                                <input type="text" id="riddleInput" placeholder="Type your answer..." class="riddle-input">
+                                <button class="btn btn-primary" id="riddleSubmit">Submit</button>
+                            </div>
+                            <div class="riddle-hint hidden" id="riddleHint"></div>
+                            <button class="btn btn-secondary" id="riddleHintBtn">💡 Need a hint?</button>
+                        </div>
+                        <div class="riddle-result hidden" id="riddleResult"></div>
+                        <button class="btn btn-primary hidden" id="riddleNext">Next Riddle →</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Breathe Section -->
+            <section id="breathe" class="section">
+                <div class="section-header">
+                    <h2>🌬️ Breathing Exercises</h2>
+                    <p class="section-subtitle">Take a moment to relax and breathe</p>
+                </div>
+
+                <div class="breathing-card">
+                    <div class="breathing-circle" id="breathingCircle">
+                        <div class="breathing-text" id="breathingText">Start</div>
+                    </div>
+
+                    <div class="breathing-controls">
+                        <button class="btn btn-large btn-primary" id="breatheStartBtn">Start Exercise</button>
+                        <button class="btn btn-large btn-secondary hidden" id="breatheStopBtn">Stop</button>
+                    </div>
+
+                    <div class="breathing-options">
+                        <div class="option-group">
+                            <label>Exercise Type:</label>
+                            <select id="breathingType" class="breathing-select">
+                                <option value="calm">Calm (4-4-4)</option>
+                                <option value="deep">Deep Relaxation (4-7-8)</option>
+                                <option value="energy">Energy Boost (4-4-4-4)</option>
+                            </select>
+                        </div>
+                        <div class="option-group">
+                            <label>Duration:</label>
+                            <select id="breathingDuration" class="breathing-select">
+                                <option value="1">1 minute</option>
+                                <option value="2" selected>2 minutes</option>
+                                <option value="5">5 minutes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="breathing-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="breathingProgress"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mood Section -->
+            <section id="mood" class="section">
+                <div class="section-header">
+                    <h2>😊 Mood Tracker</h2>
+                    <p class="section-subtitle">How are you feeling today?</p>
+                </div>
+
+                <div class="mood-selector">
+                    <h3>Select Your Mood</h3>
+                    <div class="mood-options">
+                        <button class="mood-option" data-mood="amazing">
+                            <span class="mood-emoji">🤩</span>
+                            <span class="mood-label">Amazing</span>
+                        </button>
+                        <button class="mood-option" data-mood="happy">
+                            <span class="mood-emoji">😊</span>
+                            <span class="mood-label">Happy</span>
+                        </button>
+                        <button class="mood-option" data-mood="okay">
+                            <span class="mood-emoji">😐</span>
+                            <span class="mood-label">Okay</span>
+                        </button>
+                        <button class="mood-option" data-mood="stressed">
+                            <span class="mood-emoji">😰</span>
+                            <span class="mood-label">Stressed</span>
+                        </button>
+                        <button class="mood-option" data-mood="sad">
+                            <span class="mood-emoji">😢</span>
+                            <span class="mood-label">Sad</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mood-history">
+                    <h3>Your Mood This Week</h3>
+                    <div class="mood-chart" id="moodChart">
+                        <div class="chart-placeholder">
+                            <p>Start tracking to see your mood history</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mood-insights">
+                    <h3>💭 Insights</h3>
+                    <div class="insights-content" id="insightsContent">
+                        <p>Track your mood regularly to get personalized insights!</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Achievement Notification -->
+        <div class="achievement-notification hidden" id="achievementNotification">
+            <div class="notification-content">
+                <span class="notification-icon">🎉</span>
+                <div class="notification-text">
+                    <strong>Achievement Unlocked!</strong>
+                    <p id="achievementNotificationText"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
