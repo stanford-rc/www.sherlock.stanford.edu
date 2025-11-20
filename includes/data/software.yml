@@ -2747,15 +2747,17 @@ software_modules:
       - {description: Octeract Engine is a proprietary massively parallel deterministic
           global optimization solver for general Mixed-Integer Nonlinear Programs
           (MINLP)., markedDefault: false, versionName: 3.3.0}
-    - categories: math, symbolic
-      defaultVersionName: 5.47.0
-      description: Maxima is a system for the manipulation of symbolic and numerical
-        expressions.
-      package: maxima
-      url: https://maxima.sourceforge.io/
+    - categories: math, machine learning
+      defaultVersionName: 1.22.0_py312
+      description: Python bindings for ONNX Runtime
+      package: py-onnxruntime
+      url: https://onnxruntime.ai
       versions:
-      - {description: Maxima is a system for the manipulation of symbolic and numerical
-          expressions., markedDefault: false, versionName: 5.47.0}
+      - description: Python bindings for ONNX Runtime
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.22.0_py312
     - categories: math, deep learning
       defaultVersionName: 3.1.0_py312
       description: Triton is a language and compiler for writing highly efficient
@@ -2879,17 +2881,25 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.22.0
-    - categories: math, numerical library
-      defaultVersionName: 1.6.0
-      description: TetGen provides various features to generate good quality and adaptive
-        tetrahedral meshes suitable for numerical methods, such as finite element
-        or finite volume methods.
-      package: tetgen
-      url: http://wias-berlin.de/software/index.jsp?id=TetGen
+    - categories: math, machine learning
+      defaultVersionName: 0.19.1_py27
+      description: Scikit-learn is a free software machine learning library for the
+        Python programming language.
+      package: py-scikit-learn
+      url: http://scikit-learn.org
       versions:
-      - {description: 'TetGen provides various features to generate good quality and
-          adaptive tetrahedral meshes suitable for numerical methods, such as finite
-          element or finite volume methods.', markedDefault: false, versionName: 1.6.0}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 0.19.1_py36}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 0.24.2_py36}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 1.0.2_py39}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 1.3.2_py39}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 1.5.1_py312}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: true, versionName: 0.19.1_py27}
     - categories: math, statistics
       defaultVersionName: 4.3.1
       description: Just another Gibbs sampler (JAGS) is a program for simulation from
@@ -3881,17 +3891,15 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.2.1_py312
-    - categories: math, numerical analysis
-      defaultVersionName: 0.0.3
-      description: RunMat is a modern, high-performance runtime for MATLAB® and GNU
-        Octave code that eliminates license fees, vendor lock-in, and performance
-        bottlenecks.
-      package: runmat
-      url: https://runmat.org/
+    - categories: math, computational geometry
+      defaultVersionName: 7.6.2
+      description: Open CASCADE Technology (OCCT) is an open-source full-scale 3D
+        geometry library
+      package: opencascade
+      url: https://dev.opencascade.org/
       versions:
-      - {description: 'RunMat is a modern, high-performance runtime for MATLAB® and
-          GNU Octave code that eliminates license fees, vendor lock-in, and performance
-          bottlenecks.', markedDefault: false, versionName: 0.0.3}
+      - {description: Open CASCADE Technology (OCCT) is an open-source full-scale
+          3D geometry library, markedDefault: false, versionName: 7.6.2}
     - categories: math, numerical library
       defaultVersionName: 0.5.0_py312
       description: Optimal transport tools implemented with the JAX framework, to
@@ -3925,6 +3933,21 @@ software_modules:
       - {description: High-Performance Symbolic Regression in Python and Julia., markedDefault: false,
         versionName: 0.12.3_py39}
     - categories: math, statistics
+      defaultVersionName: '9.4'
+      description: SAS is a software suite developed by SAS Institute for advanced
+        analytics, multivariate analyses, business intelligence, data management,
+        and predictive analytics.
+      package: sas
+      url: http://www.sas.com/
+      versions:
+      - description: SAS is a software suite developed by SAS Institute for advanced
+          analytics, multivariate analyses, business intelligence, data management,
+          and predictive analytics.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: '9.4'
+    - categories: math, statistics
       defaultVersionName: '1.3'
       description: GNU datamash is a command-line program which performs basic numeric,
         textual and statistical operations on input textual data files.
@@ -3955,21 +3978,6 @@ software_modules:
       - {description: GNU libmatheval is a library (callable from C and Fortran) to
           parse and evaluate symbolic expressions input as text., markedDefault: false,
         versionName: 1.1.11}
-    - categories: math, statistics
-      defaultVersionName: '9.4'
-      description: SAS is a software suite developed by SAS Institute for advanced
-        analytics, multivariate analyses, business intelligence, data management,
-        and predictive analytics.
-      package: sas
-      url: http://www.sas.com/
-      versions:
-      - description: SAS is a software suite developed by SAS Institute for advanced
-          analytics, multivariate analyses, business intelligence, data management,
-          and predictive analytics.
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: '9.4'
     - categories: math, numerical library
       defaultVersionName: 3.18.5_py39
       description: Python bindings for PETSc, the Portable, Extensible Toolkit for
@@ -3979,6 +3987,16 @@ software_modules:
       versions:
       - {description: 'Python bindings for PETSc, the Portable, Extensible Toolkit
           for Scientific Computation.', markedDefault: false, versionName: 3.18.5_py39}
+    - categories: math, numerical library
+      defaultVersionName: 5.1.0
+      description: METIS is a set of serial programs for partitioning graphs, partitioning
+        finite element meshes, and producing fill reducing orderings for sparse matrices.
+      package: metis
+      url: http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
+      versions:
+      - {description: 'METIS is a set of serial programs for partitioning graphs,
+          partitioning finite element meshes, and producing fill reducing orderings
+          for sparse matrices.', markedDefault: false, versionName: 5.1.0}
     - categories: math, technical computing
       defaultVersionName: 13.1.0
       description: A symbolic language and platform for modern technical computing.
@@ -4008,16 +4026,6 @@ software_modules:
       - {description: Praat is a speech analysis tool used for doing phonetics by
           computer., markedDefault: false, versionName: 6.4.26}
     - categories: math, numerical library
-      defaultVersionName: 5.1.0
-      description: METIS is a set of serial programs for partitioning graphs, partitioning
-        finite element meshes, and producing fill reducing orderings for sparse matrices.
-      package: metis
-      url: http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
-      versions:
-      - {description: 'METIS is a set of serial programs for partitioning graphs,
-          partitioning finite element meshes, and producing fill reducing orderings
-          for sparse matrices.', markedDefault: false, versionName: 5.1.0}
-    - categories: math, numerical library
       defaultVersionName: 1.4.1
       description: 'harminv is a program designed to solve the problem of harmonic
         inversion: given a time series consisting of a sum of sinusoids (modes), extract
@@ -4041,6 +4049,17 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 2.8_py312
+    - categories: math, numerical library
+      defaultVersionName: 1.6.0
+      description: TetGen provides various features to generate good quality and adaptive
+        tetrahedral meshes suitable for numerical methods, such as finite element
+        or finite volume methods.
+      package: tetgen
+      url: http://wias-berlin.de/software/index.jsp?id=TetGen
+      versions:
+      - {description: 'TetGen provides various features to generate good quality and
+          adaptive tetrahedral meshes suitable for numerical methods, such as finite
+          element or finite volume methods.', markedDefault: false, versionName: 1.6.0}
     - categories: math, linear algebra
       defaultVersionName: 0.3.0.9
       description: NVIDIA cuDSS is an optimized, first-generation GPU-accelerated
@@ -4102,25 +4121,6 @@ software_modules:
       versions:
       - {description: A mesh and field I/O library and scientific database., markedDefault: false,
         versionName: '4.11'}
-    - categories: math, machine learning
-      defaultVersionName: 0.19.1_py27
-      description: Scikit-learn is a free software machine learning library for the
-        Python programming language.
-      package: py-scikit-learn
-      url: http://scikit-learn.org
-      versions:
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 0.19.1_py36}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 0.24.2_py36}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 1.0.2_py39}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 1.3.2_py39}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 1.5.1_py312}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: true, versionName: 0.19.1_py27}
     - categories: math, lib
       defaultVersionName: 3.0.0_py312
       description: Python bindings for xgboost
@@ -4132,6 +4132,25 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 3.0.0_py312
+    - categories: math, optimization
+      defaultVersionName: 11.0.2
+      description: The Gurobi Optimizer is a commercial optimization solver for mathematical
+        programming.
+      package: gurobi
+      url: http://www.gurobi.com
+      versions:
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 7.5.1}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 8.0.1_py27}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 8.0.1_py36}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 9.0.3_py36}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 10.0.1_py39}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 11.0.2}
     - categories: math, topic modelling
       defaultVersionName: 4.2.0_py39
       description: Gensim is a Python library for topic modelling, document indexing
@@ -4201,33 +4220,6 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.5.0_py312
-    - categories: math, optimization
-      defaultVersionName: 11.0.2
-      description: The Gurobi Optimizer is a commercial optimization solver for mathematical
-        programming.
-      package: gurobi
-      url: http://www.gurobi.com
-      versions:
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 7.5.1}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 8.0.1_py27}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 8.0.1_py36}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 9.0.3_py36}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 10.0.1_py39}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 11.0.2}
-    - categories: math, numerical library
-      defaultVersionName: 2.9.0
-      description: FLINT is a C library for doing number theory.
-      package: flint
-      url: https://flintlib.org/
-      versions:
-      - {description: FLINT is a C library for doing number theory., markedDefault: false,
-        versionName: 2.9.0}
     - categories: math, numerical library
       defaultVersionName: 1.14.3_py27
       description: NumPy is the fundamental package for scientific computing with
@@ -4253,6 +4245,28 @@ software_modules:
           Python., markedDefault: false, versionName: 2.2.6_py312}
       - {description: NumPy is the fundamental package for scientific computing with
           Python., markedDefault: true, versionName: 1.14.3_py27}
+    - categories: math, numerical library
+      defaultVersionName: 2.9.0
+      description: FLINT is a C library for doing number theory.
+      package: flint
+      url: https://flintlib.org/
+      versions:
+      - {description: FLINT is a C library for doing number theory., markedDefault: false,
+        versionName: 2.9.0}
+    - categories: math, computational geometry
+      defaultVersionName: '2020.2'
+      description: Qhull computes the convex hull, Delaunay triangulation, Voronoi
+        diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
+        and furthest-site Voronoi diagram.
+      package: qhull
+      url: http://www.qhull.org/
+      versions:
+      - {description: 'Qhull computes the convex hull, Delaunay triangulation, Voronoi
+          diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
+          and furthest-site Voronoi diagram.', markedDefault: false, versionName: '2015.2'}
+      - {description: 'Qhull computes the convex hull, Delaunay triangulation, Voronoi
+          diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
+          and furthest-site Voronoi diagram.', markedDefault: false, versionName: '2020.2'}
     - categories: math, deep learning
       defaultVersionName: 1.8.0_py39
       description: Sparsity-aware deep learning inference runtime for CPUs.
@@ -4280,25 +4294,15 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.7.0_py312
-    - categories: math, linear algebra
-      defaultVersionName: 0.6.3.2
-      description: NVIDIA cuSPARSELt is a high-performance CUDA library for sparse
-        matrix-matrix multiplication.
-      package: cusparselt
-      url: https://docs.nvidia.com/cuda/cusparselt/index.html
+    - categories: math, symbolic
+      defaultVersionName: 5.47.0
+      description: Maxima is a system for the manipulation of symbolic and numerical
+        expressions.
+      package: maxima
+      url: https://maxima.sourceforge.io/
       versions:
-      - description: NVIDIA cuSPARSELt is a high-performance CUDA library for sparse
-          matrix-matrix multiplication.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.2.0.1
-      - description: NVIDIA cuSPARSELt is a high-performance CUDA library for sparse
-          matrix-matrix multiplication.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.6.3.2
+      - {description: Maxima is a system for the manipulation of symbolic and numerical
+          expressions., markedDefault: false, versionName: 5.47.0}
     - categories: math, numerical library
       defaultVersionName: 5.2.1
       description: SuperLU is a general purpose library for the direct solution of
@@ -4332,15 +4336,17 @@ software_modules:
       - {description: 'The huggingface_hub library allows you to interact with the
           Hugging Face Hub, a machine learning platform for creators and collaborators.',
         markedDefault: false, versionName: 0.22.1_py312}
-    - categories: math, computational geometry
-      defaultVersionName: 7.6.2
-      description: Open CASCADE Technology (OCCT) is an open-source full-scale 3D
-        geometry library
-      package: opencascade
-      url: https://dev.opencascade.org/
+    - categories: math, numerical analysis
+      defaultVersionName: 0.0.3
+      description: RunMat is a modern, high-performance runtime for MATLAB® and GNU
+        Octave code that eliminates license fees, vendor lock-in, and performance
+        bottlenecks.
+      package: runmat
+      url: https://runmat.org/
       versions:
-      - {description: Open CASCADE Technology (OCCT) is an open-source full-scale
-          3D geometry library, markedDefault: false, versionName: 7.6.2}
+      - {description: 'RunMat is a modern, high-performance runtime for MATLAB® and
+          GNU Octave code that eliminates license fees, vendor lock-in, and performance
+          bottlenecks.', markedDefault: false, versionName: 0.0.3}
     - categories: math, optimization
       defaultVersionName: 6.4.1
       description: SUNDIALS is a family of software packages providing robust and
@@ -4485,20 +4491,6 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: '25.06'
-    - categories: math, computational geometry
-      defaultVersionName: '2020.2'
-      description: Qhull computes the convex hull, Delaunay triangulation, Voronoi
-        diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
-        and furthest-site Voronoi diagram.
-      package: qhull
-      url: http://www.qhull.org/
-      versions:
-      - {description: 'Qhull computes the convex hull, Delaunay triangulation, Voronoi
-          diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
-          and furthest-site Voronoi diagram.', markedDefault: false, versionName: '2015.2'}
-      - {description: 'Qhull computes the convex hull, Delaunay triangulation, Voronoi
-          diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
-          and furthest-site Voronoi diagram.', markedDefault: false, versionName: '2020.2'}
     - categories: math, numerical library
       defaultVersionName: 3.1.0
       description: libflame is a portable library for dense matrix computations, providing
@@ -4536,32 +4528,25 @@ software_modules:
           arch: {gpu: 1}
           parallel: {mpi: 1}
         versionName: 0.12.1_py27
-    - categories: math, machine learning
-      defaultVersionName: 1.22.0_py312
-      description: Python bindings for ONNX Runtime
-      package: py-onnxruntime
-      url: https://onnxruntime.ai
+    - categories: math, linear algebra
+      defaultVersionName: 0.6.3.2
+      description: NVIDIA cuSPARSELt is a high-performance CUDA library for sparse
+        matrix-matrix multiplication.
+      package: cusparselt
+      url: https://docs.nvidia.com/cuda/cusparselt/index.html
       versions:
-      - description: Python bindings for ONNX Runtime
+      - description: NVIDIA cuSPARSELt is a high-performance CUDA library for sparse
+          matrix-matrix multiplication.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-        versionName: 1.22.0_py312
-    - categories: math, numerical library
-      defaultVersionName: 4.0.3
-      description: ParMETIS is an MPI-based parallel library that implements a variety
-        of algorithms for partitioning unstructured graphs, meshes, and for computing
-        fill-reducing orderings of sparse matrices.
-      package: parmetis
-      url: http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview
-      versions:
-      - description: ParMETIS is an MPI-based parallel library that implements a variety
-          of algorithms for partitioning unstructured graphs, meshes, and for computing
-          fill-reducing orderings of sparse matrices.
+        versionName: 0.2.0.1
+      - description: NVIDIA cuSPARSELt is a high-performance CUDA library for sparse
+          matrix-matrix multiplication.
         markedDefault: false
         properties:
-          parallel: {mpi: 1}
-        versionName: 4.0.3
+          arch: {gpu: 1}
+        versionName: 0.6.3.2
     - categories: math, numerical library
       defaultVersionName: 6.0.4
       description: Software package and libraries for sequential and parallel graph
@@ -4577,6 +4562,28 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 6.0.4
+    - defaultVersionName: 25.10.0_py312
+      package: py-cudf
+      versions:
+      - markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 25.10.0_py312
+    - categories: math, numerical library
+      defaultVersionName: 4.0.3
+      description: ParMETIS is an MPI-based parallel library that implements a variety
+        of algorithms for partitioning unstructured graphs, meshes, and for computing
+        fill-reducing orderings of sparse matrices.
+      package: parmetis
+      url: http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview
+      versions:
+      - description: ParMETIS is an MPI-based parallel library that implements a variety
+          of algorithms for partitioning unstructured graphs, meshes, and for computing
+          fill-reducing orderings of sparse matrices.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 4.0.3
     - categories: math, optimization
       defaultVersionName: 2.6.2
       description: NLopt is a free/open-source library for nonlinear optimization.
@@ -5318,13 +5325,14 @@ software_modules:
       - {description: DSSP is an application to assign secondary structure to proteins.,
         markedDefault: false, versionName: 4.0.3}
     - categories: biology, genomics
-      defaultVersionName: 4.1.0
-      description: SIMD partial order alignment tool/library.
-      package: spoa
-      url: https://github.com/rvaser/spoa
+      defaultVersionName: 1.5.4
+      description: abPOA is a SIMD-based C library for fast partial order alignment
+        using adaptive band.
+      package: abpoa
+      url: https://github.com/yangao07/abPOA
       versions:
-      - {description: SIMD partial order alignment tool/library., markedDefault: false,
-        versionName: 4.1.0}
+      - {description: abPOA is a SIMD-based C library for fast partial order alignment
+          using adaptive band., markedDefault: false, versionName: 1.5.4}
     - categories: biology, genomics
       defaultVersionName: 1.1.4
       description: bgen is the reference implementation of the BGEN format, a binary
@@ -5359,14 +5367,21 @@ software_modules:
           parallel: {mpi: 1}
         versionName: '2.91'
     - categories: biology, genomics
-      defaultVersionName: 1.2.3
-      description: Cellsnp-lite is a C/C++ tool for efficient genotyping bi-allelic
-        SNPs on single cells.
-      package: cellsnp-lite
-      url: https://github.com/single-cell-genetics/cellsnp-lite
+      defaultVersionName: 2.3.10_py39
+      description: A software package for animal pose estimation.
+      package: py-deeplabcut
+      url: http://deeplabcut.org
       versions:
-      - {description: Cellsnp-lite is a C/C++ tool for efficient genotyping bi-allelic
-          SNPs on single cells., markedDefault: false, versionName: 1.2.3}
+      - description: A software package for animal pose estimation.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.2.3_py39
+      - description: A software package for animal pose estimation.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.3.10_py39
     - categories: biology, genomics
       defaultVersionName: 2.0.0
       description: The Bases2Fastq Software demultiplexess sequencing data from Element
@@ -5549,14 +5564,17 @@ software_modules:
           of brain structure and function., markedDefault: false, versionName: 2.3.1}
       - {description: ANTs computes high-dimensional mappings to capture the statistics
           of brain structure and function., markedDefault: false, versionName: 2.4.0}
-    - categories: biology, molecular biology
-      defaultVersionName: 3.0.0
-      description: Library to work with mmCIF and PDB files.
-      package: libcifpp
-      url: https://github.com/PDB-REDO/libcifpp
+    - categories: biology, neurosciences
+      defaultVersionName: 1.0.20211006
+      description: dcm2niix is a program esigned to convert neuroimaging data from
+        the DICOM format to the NIfTI format.
+      package: dcm2niix
+      url: https://github.com/rordenlab/dcm2niix
       versions:
-      - {description: Library to work with mmCIF and PDB files., markedDefault: false,
-        versionName: 3.0.0}
+      - {description: dcm2niix is a program esigned to convert neuroimaging data from
+          the DICOM format to the NIfTI format., markedDefault: false, versionName: 1.0.20171215}
+      - {description: dcm2niix is a program esigned to convert neuroimaging data from
+          the DICOM format to the NIfTI format., markedDefault: false, versionName: 1.0.20211006}
     - categories: biology, genomics
       defaultVersionName: 7.1.0
       description: Cell Ranger is a set of analysis pipelines that process Chromium  single-cell
@@ -5859,6 +5877,14 @@ software_modules:
       versions:
       - {description: Long read based human genomic structural variation detection
           with cuteSV, markedDefault: false, versionName: 2.1.2_py312}
+    - categories: biology, genomics
+      defaultVersionName: 0.7.4
+      description: Bayesian haplotype-based mutation calling.
+      package: octopus
+      url: https://luntergroup.github.io/octopus/
+      versions:
+      - {description: Bayesian haplotype-based mutation calling., markedDefault: false,
+        versionName: 0.7.4}
     - categories: biology, cryo-em
       defaultVersionName: 1.3.1
       description: MotionCor2 is a multi-GPU accelerated program which corrects anisotropic
@@ -5996,16 +6022,30 @@ software_modules:
       versions:
       - {description: Structural variation caller using third generation sequencing.,
         markedDefault: false, versionName: 2.6.3_py312}
-    - categories: biology, genomics
-      defaultVersionName: 2.13.1
-      description: Trinity RNA-Seq de novo transcriptome assembly.
-      package: trinity
-      url: https://github.com/trinityrnaseq/trinityrnaseq
+    - categories: biology, computational biology
+      defaultVersionName: '3.14'
+      description: Rosetta is the premier software suite for modeling macromolecular
+        structures. As a flexible, multi-purpose application, it includes tools for
+        structure prediction, design, and remodeling of proteins and nucleic acids.
+      package: rosetta
+      url: https://www.rosettacommons.org
       versions:
-      - {description: Trinity RNA-Seq de novo transcriptome assembly., markedDefault: false,
-        versionName: 2.8.4}
-      - {description: Trinity RNA-Seq de novo transcriptome assembly., markedDefault: false,
-        versionName: 2.13.1}
+      - description: Rosetta is the premier software suite for modeling macromolecular
+          structures. As a flexible, multi-purpose application, it includes tools
+          for structure prediction, design, and remodeling of proteins and nucleic
+          acids.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '3.8'
+      - description: Rosetta is the premier software suite for modeling macromolecular
+          structures. As a flexible, multi-purpose application, it includes tools
+          for structure prediction, design, and remodeling of proteins and nucleic
+          acids.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '3.14'
     - categories: biology, genomics
       defaultVersionName: 3.0.7
       description: The SRA Toolkit and SDK from NCBI is a collection of tools and
@@ -6221,21 +6261,21 @@ software_modules:
       - {description: Python API for comprehensive GWAS analysis using GEMMA., markedDefault: false,
         versionName: 0.8.9_py39}
     - categories: biology, genomics
-      defaultVersionName: 0.6.10
-      description: Trim Galore! is a wrapper script to automate quality and adapter
-        trimming as well as quality control, with some added functionality to remove
-        biased methylation positions for RRBS sequence files.
-      package: trim_galore
-      url: https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
+      defaultVersionName: '1.16'
+      description: BCFtools is a program for variant calling and manipulating files
+        in the Variant Call Format (VCF) and its binary counterpart BCF.
+      package: bcftools
+      url: https://github.com/samtools/bcftools
       versions:
-      - {description: 'Trim Galore! is a wrapper script to automate quality and adapter
-          trimming as well as quality control, with some added functionality to remove
-          biased methylation positions for RRBS sequence files.', markedDefault: false,
-        versionName: 0.5.0}
-      - {description: 'Trim Galore! is a wrapper script to automate quality and adapter
-          trimming as well as quality control, with some added functionality to remove
-          biased methylation positions for RRBS sequence files.', markedDefault: false,
-        versionName: 0.6.10}
+      - {description: BCFtools is a program for variant calling and manipulating files
+          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
+        versionName: '1.6'}
+      - {description: BCFtools is a program for variant calling and manipulating files
+          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
+        versionName: '1.8'}
+      - {description: BCFtools is a program for variant calling and manipulating files
+          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
+        versionName: '1.16'}
     - categories: biology, computational biology
       defaultVersionName: 4.0.4_py312
       description: A generalist algorithm for cellular segmentation with human-in-the-loop
@@ -6347,6 +6387,28 @@ software_modules:
       versions:
       - {description: Call select base modifications in PacBio HiFi reads, markedDefault: false,
         versionName: 2.4.0}
+    - categories: biology, cryo-em
+      defaultVersionName: 4.11.5
+      description: IMOD is a set of image processing, modeling and display programs
+        used for tomographic reconstruction and for 3D reconstruction of EM serial
+        sections and optical sections.
+      package: imod
+      url: http://bio3d.colorado.edu/imod
+      versions:
+      - description: IMOD is a set of image processing, modeling and display programs
+          used for tomographic reconstruction and for 3D reconstruction of EM serial
+          sections and optical sections.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 4.9.12
+      - description: IMOD is a set of image processing, modeling and display programs
+          used for tomographic reconstruction and for 3D reconstruction of EM serial
+          sections and optical sections.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 4.11.5
     - categories: biology, genomics
       defaultVersionName: 3.3.2
       description: AUGUSTUS is a program that predicts genes in eukaryotic genomic
@@ -6396,22 +6458,17 @@ software_modules:
       versions:
       - {description: FreeBayes is a Bayesian genetic variant detector designed to
           find small polymorphisms., markedDefault: false, versionName: 1.2.0}
-    - categories: biology, genomics
-      defaultVersionName: '1.16'
-      description: BCFtools is a program for variant calling and manipulating files
-        in the Variant Call Format (VCF) and its binary counterpart BCF.
-      package: bcftools
-      url: https://github.com/samtools/bcftools
+    - categories: biology, neurosciences
+      defaultVersionName: 0.7.00
+      description: BART is a toolbox for Computational Magnetic Resonance Imaging.
+      package: bart
+      url: https://mrirecon.github.io/bart/
       versions:
-      - {description: BCFtools is a program for variant calling and manipulating files
-          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
-        versionName: '1.6'}
-      - {description: BCFtools is a program for variant calling and manipulating files
-          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
-        versionName: '1.8'}
-      - {description: BCFtools is a program for variant calling and manipulating files
-          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
-        versionName: '1.16'}
+      - description: BART is a toolbox for Computational Magnetic Resonance Imaging.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.7.00
     - categories: biology, genomics
       defaultVersionName: 1.0.0_py39
       description: SCENIC+ is a python package to build enhancer driven gene regulatory
@@ -6425,18 +6482,21 @@ software_modules:
           and single-cell chromatin accessibility (scATAC-seq) data., markedDefault: false,
         versionName: 1.0.0_py39}
     - categories: biology, genomics
-      defaultVersionName: 1.16.1
-      description: Tools (written in C using htslib) for manipulating next-generation
-        sequencing data.
-      package: samtools
-      url: https://github.com/samtools/samtools
+      defaultVersionName: 0.6.10
+      description: Trim Galore! is a wrapper script to automate quality and adapter
+        trimming as well as quality control, with some added functionality to remove
+        biased methylation positions for RRBS sequence files.
+      package: trim_galore
+      url: https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
       versions:
-      - {description: Tools (written in C using htslib) for manipulating next-generation
-          sequencing data., markedDefault: false, versionName: '1.6'}
-      - {description: Tools (written in C using htslib) for manipulating next-generation
-          sequencing data., markedDefault: false, versionName: '1.8'}
-      - {description: Tools (written in C using htslib) for manipulating next-generation
-          sequencing data., markedDefault: false, versionName: 1.16.1}
+      - {description: 'Trim Galore! is a wrapper script to automate quality and adapter
+          trimming as well as quality control, with some added functionality to remove
+          biased methylation positions for RRBS sequence files.', markedDefault: false,
+        versionName: 0.5.0}
+      - {description: 'Trim Galore! is a wrapper script to automate quality and adapter
+          trimming as well as quality control, with some added functionality to remove
+          biased methylation positions for RRBS sequence files.', markedDefault: false,
+        versionName: 0.6.10}
     - categories: biology, genomics
       defaultVersionName: '0.1'
       description: popscle is a suite of population scale analysis tools for single-cell
@@ -6458,13 +6518,15 @@ software_modules:
           parallel: {mpi: 1}
         versionName: '7.525'
     - categories: biology, genomics
-      defaultVersionName: 2.1.1
-      description: TopHat is a fast splice junction mapper for RNA-Seq reads.
-      package: tophat
-      url: http://ccb.jhu.edu/software/tophat/index.shtml
+      defaultVersionName: '2.20'
+      description: The bcl2fastq2 conversion software can be used to convert BCL files
+        from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.
+      package: bcl2fastq
+      url: https://support.illumina.com/downloads/bcl2fastq-conversion-software-v2-20.html
       versions:
-      - {description: TopHat is a fast splice junction mapper for RNA-Seq reads.,
-        markedDefault: false, versionName: 2.1.1}
+      - {description: 'The bcl2fastq2 conversion software can be used to convert BCL
+          files from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.',
+        markedDefault: false, versionName: '2.20'}
     - categories: biology, genomics
       defaultVersionName: 2.1.0
       description: HISAT2 is a fast and sensitive alignment program for mapping next-generation
@@ -6477,17 +6539,14 @@ software_modules:
           next-generation sequencing reads (both DNA and RNA) to a population of human
           genomes (as well as to a single reference genome)., markedDefault: false,
         versionName: 2.1.0}
-    - categories: biology, neurosciences
-      defaultVersionName: 0.7.00
-      description: BART is a toolbox for Computational Magnetic Resonance Imaging.
-      package: bart
-      url: https://mrirecon.github.io/bart/
+    - categories: biology, genomics
+      defaultVersionName: 2.1.1
+      description: TopHat is a fast splice junction mapper for RNA-Seq reads.
+      package: tophat
+      url: http://ccb.jhu.edu/software/tophat/index.shtml
       versions:
-      - description: BART is a toolbox for Computational Magnetic Resonance Imaging.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.7.00
+      - {description: TopHat is a fast splice junction mapper for RNA-Seq reads.,
+        markedDefault: false, versionName: 2.1.1}
     - categories: biology, genomics
       defaultVersionName: 0.9.0_py39
       description: Pybedtools wraps and extends BEDTools and offers feature-level
@@ -6501,47 +6560,35 @@ software_modules:
           manipulations from within Python., markedDefault: false, versionName: 0.8.2_py36}
       - {description: Pybedtools wraps and extends BEDTools and offers feature-level
           manipulations from within Python., markedDefault: false, versionName: 0.9.0_py39}
-    - categories: biology, cryo-em
-      defaultVersionName: 4.11.5
-      description: IMOD is a set of image processing, modeling and display programs
-        used for tomographic reconstruction and for 3D reconstruction of EM serial
-        sections and optical sections.
-      package: imod
-      url: http://bio3d.colorado.edu/imod
-      versions:
-      - description: IMOD is a set of image processing, modeling and display programs
-          used for tomographic reconstruction and for 3D reconstruction of EM serial
-          sections and optical sections.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 4.9.12
-      - description: IMOD is a set of image processing, modeling and display programs
-          used for tomographic reconstruction and for 3D reconstruction of EM serial
-          sections and optical sections.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 4.11.5
     - categories: biology, genomics
-      defaultVersionName: 1.5.4_py312
-      description: Python bindings for abPOA, a SIMD-based C library for fast partial
-        order alignment using adaptive band.
-      package: py-abpoa
-      url: https://github.com/yangao07/abPOA
+      defaultVersionName: 3.0.7
+      description: NCBI VDB is the database engine used by NCBI SRA tools.
+      package: ncbi-vdb
+      url: https://github.com/ncbi/ncbi-vdb
       versions:
-      - {description: 'Python bindings for abPOA, a SIMD-based C library for fast
-          partial order alignment using adaptive band.', markedDefault: false, versionName: 1.5.4_py312}
+      - {description: NCBI VDB is the database engine used by NCBI SRA tools., markedDefault: false,
+        versionName: 3.0.7}
+    - categories: biology, molecular biology
+      defaultVersionName: 3.0.0
+      description: Library to work with mmCIF and PDB files.
+      package: libcifpp
+      url: https://github.com/PDB-REDO/libcifpp
+      versions:
+      - {description: Library to work with mmCIF and PDB files., markedDefault: false,
+        versionName: 3.0.0}
     - categories: biology, genomics
-      defaultVersionName: 0.1.15
-      description: VCFtools is a program package designed for working with VCF files,
-        such as those generated by the 1000 Genomes Project.
-      package: vcftools
-      url: https://vcftools.github.io
+      defaultVersionName: 1.16.1
+      description: Tools (written in C using htslib) for manipulating next-generation
+        sequencing data.
+      package: samtools
+      url: https://github.com/samtools/samtools
       versions:
-      - {description: 'VCFtools is a program package designed for working with VCF
-          files, such as those generated by the 1000 Genomes Project.', markedDefault: false,
-        versionName: 0.1.15}
+      - {description: Tools (written in C using htslib) for manipulating next-generation
+          sequencing data., markedDefault: false, versionName: '1.6'}
+      - {description: Tools (written in C using htslib) for manipulating next-generation
+          sequencing data., markedDefault: false, versionName: '1.8'}
+      - {description: Tools (written in C using htslib) for manipulating next-generation
+          sequencing data., markedDefault: false, versionName: 1.16.1}
     - categories: biology, genomics
       defaultVersionName: 2.5.1
       description: A C code library and several stand-alone programs for the prediction
@@ -6581,22 +6628,6 @@ software_modules:
       - {description: The NBIA Data Retriever is an application to download radiology
           images from the TCIA Radiology Portal., markedDefault: false, versionName: '4.2'}
     - categories: biology, genomics
-      defaultVersionName: 2.3.10_py39
-      description: A software package for animal pose estimation.
-      package: py-deeplabcut
-      url: http://deeplabcut.org
-      versions:
-      - description: A software package for animal pose estimation.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.2.3_py39
-      - description: A software package for animal pose estimation.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.3.10_py39
-    - categories: biology, genomics
       defaultVersionName: 0.11.8
       description: FastQC aims to provide a simple way to do some quality control
         checks on raw sequence data coming from high throughput sequencing pipelines.
@@ -6606,6 +6637,17 @@ software_modules:
       - {description: FastQC aims to provide a simple way to do some quality control
           checks on raw sequence data coming from high throughput sequencing pipelines.,
         markedDefault: false, versionName: 0.11.8}
+    - categories: biology, neurosciences
+      defaultVersionName: 1.3.1
+      description: Connectome Workbench is an open source, freely available visualization
+        and discovery tool used to map neuroimaging data, especially data generated
+        by the Human Connectome Project.
+      package: workbench
+      url: https://www.humanconnectome.org/software/connectome-workbench
+      versions:
+      - {description: 'Connectome Workbench is an open source, freely available visualization
+          and discovery tool used to map neuroimaging data, especially data generated
+          by the Human Connectome Project.', markedDefault: false, versionName: 1.3.1}
     - categories: biology, genomics
       defaultVersionName: 2.7.10b
       description: 'STAR: ultrafast universal RNA-seq aligner.'
@@ -6625,33 +6667,6 @@ software_modules:
       - {description: MUMmer is a versatile alignment tool for DNA and protein sequences.,
         markedDefault: false, versionName: 4.0.1}
     - categories: biology, genomics
-      defaultVersionName: '3.4'
-      description: HMMER is used for searching sequence databases for sequence homologs,
-        and for making sequence alignments.
-      package: hmmer
-      url: http://hmmer.org/
-      versions:
-      - {description: 'HMMER is used for searching sequence databases for sequence
-          homologs, and for making sequence alignments.', markedDefault: false, versionName: '3.4'}
-    - categories: biology, genomics
-      defaultVersionName: 3.0.2_py27
-      description: Assessing genome assembly and annotation completeness with Benchmarking
-        Universal Single-Copy Orthologs (BUSCO).
-      package: py-busco
-      url: https://busco.ezlab.org/
-      versions:
-      - {description: Assessing genome assembly and annotation completeness with Benchmarking
-          Universal Single-Copy Orthologs (BUSCO)., markedDefault: false, versionName: 3.0.2_py27}
-    - categories: biology, genomics
-      defaultVersionName: 1.5.4
-      description: abPOA is a SIMD-based C library for fast partial order alignment
-        using adaptive band.
-      package: abpoa
-      url: https://github.com/yangao07/abPOA
-      versions:
-      - {description: abPOA is a SIMD-based C library for fast partial order alignment
-          using adaptive band., markedDefault: false, versionName: 1.5.4}
-    - categories: biology, genomics
       defaultVersionName: 0.44.0
       description: kallisto is a program for quantifying abundances of transcripts
         from RNA-Seq data using high-throughput sequencing reads.
@@ -6667,6 +6682,44 @@ software_modules:
       - {description: kallisto is a program for quantifying abundances of transcripts
           from RNA-Seq data using high-throughput sequencing reads., markedDefault: true,
         versionName: 0.44.0}
+    - categories: biology, genomics
+      defaultVersionName: 3.0.2_py27
+      description: Assessing genome assembly and annotation completeness with Benchmarking
+        Universal Single-Copy Orthologs (BUSCO).
+      package: py-busco
+      url: https://busco.ezlab.org/
+      versions:
+      - {description: Assessing genome assembly and annotation completeness with Benchmarking
+          Universal Single-Copy Orthologs (BUSCO)., markedDefault: false, versionName: 3.0.2_py27}
+    - categories: biology, genomics
+      defaultVersionName: 4.1.0
+      description: SIMD partial order alignment tool/library.
+      package: spoa
+      url: https://github.com/rvaser/spoa
+      versions:
+      - {description: SIMD partial order alignment tool/library., markedDefault: false,
+        versionName: 4.1.0}
+    - categories: biology, genomics
+      defaultVersionName: '3.4'
+      description: HMMER is used for searching sequence databases for sequence homologs,
+        and for making sequence alignments.
+      package: hmmer
+      url: http://hmmer.org/
+      versions:
+      - {description: 'HMMER is used for searching sequence databases for sequence
+          homologs, and for making sequence alignments.', markedDefault: false, versionName: '3.4'}
+    - categories: biology, genomics
+      defaultVersionName: 0.5.5
+      description: NextGenMap is a flexible highly sensitive short read mapping tool.
+      package: nextgenmap
+      url: https://github.com/Cibiv/NextGenMap
+      versions:
+      - description: NextGenMap is a flexible highly sensitive short read mapping
+          tool.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.5.5
     - categories: biology, genomics
       defaultVersionName: 0.98.5
       description: GEMMA is a software toolkit for fast application of linear mixed
@@ -6689,17 +6742,6 @@ software_modules:
       - {description: 'BWA (Burrows-Wheeler Aligner) is a software package for mapping
           low-divergent sequences against a large reference genome, such as the human
           genome.', markedDefault: false, versionName: 0.7.17}
-    - categories: biology, neurosciences
-      defaultVersionName: 1.0.20211006
-      description: dcm2niix is a program esigned to convert neuroimaging data from
-        the DICOM format to the NIfTI format.
-      package: dcm2niix
-      url: https://github.com/rordenlab/dcm2niix
-      versions:
-      - {description: dcm2niix is a program esigned to convert neuroimaging data from
-          the DICOM format to the NIfTI format., markedDefault: false, versionName: 1.0.20171215}
-      - {description: dcm2niix is a program esigned to convert neuroimaging data from
-          the DICOM format to the NIfTI format., markedDefault: false, versionName: 1.0.20211006}
     - categories: biology, genomics
       defaultVersionName: 2.5.4_py39
       description: OrthoFinder is a fast, accurate and comprehensive platform for
@@ -6726,50 +6768,34 @@ software_modules:
       - {description: C library for high-throughput sequencing data formats., markedDefault: false,
         versionName: '1.16'}
     - categories: biology, genomics
-      defaultVersionName: '2.20'
-      description: The bcl2fastq2 conversion software can be used to convert BCL files
-        from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.
-      package: bcl2fastq
-      url: https://support.illumina.com/downloads/bcl2fastq-conversion-software-v2-20.html
+      defaultVersionName: 0.1.15
+      description: VCFtools is a program package designed for working with VCF files,
+        such as those generated by the 1000 Genomes Project.
+      package: vcftools
+      url: https://vcftools.github.io
       versions:
-      - {description: 'The bcl2fastq2 conversion software can be used to convert BCL
-          files from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.',
-        markedDefault: false, versionName: '2.20'}
-    - categories: biology, computational biology
-      defaultVersionName: '3.14'
-      description: Rosetta is the premier software suite for modeling macromolecular
-        structures. As a flexible, multi-purpose application, it includes tools for
-        structure prediction, design, and remodeling of proteins and nucleic acids.
-      package: rosetta
-      url: https://www.rosettacommons.org
+      - {description: 'VCFtools is a program package designed for working with VCF
+          files, such as those generated by the 1000 Genomes Project.', markedDefault: false,
+        versionName: 0.1.15}
+    - categories: biology, genomics
+      defaultVersionName: 2.13.1
+      description: Trinity RNA-Seq de novo transcriptome assembly.
+      package: trinity
+      url: https://github.com/trinityrnaseq/trinityrnaseq
       versions:
-      - description: Rosetta is the premier software suite for modeling macromolecular
-          structures. As a flexible, multi-purpose application, it includes tools
-          for structure prediction, design, and remodeling of proteins and nucleic
-          acids.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: '3.8'
-      - description: Rosetta is the premier software suite for modeling macromolecular
-          structures. As a flexible, multi-purpose application, it includes tools
-          for structure prediction, design, and remodeling of proteins and nucleic
-          acids.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: '3.14'
-    - categories: biology, neurosciences
-      defaultVersionName: 1.3.1
-      description: Connectome Workbench is an open source, freely available visualization
-        and discovery tool used to map neuroimaging data, especially data generated
-        by the Human Connectome Project.
-      package: workbench
-      url: https://www.humanconnectome.org/software/connectome-workbench
+      - {description: Trinity RNA-Seq de novo transcriptome assembly., markedDefault: false,
+        versionName: 2.8.4}
+      - {description: Trinity RNA-Seq de novo transcriptome assembly., markedDefault: false,
+        versionName: 2.13.1}
+    - categories: biology, genomics
+      defaultVersionName: 1.5.4_py312
+      description: Python bindings for abPOA, a SIMD-based C library for fast partial
+        order alignment using adaptive band.
+      package: py-abpoa
+      url: https://github.com/yangao07/abPOA
       versions:
-      - {description: 'Connectome Workbench is an open source, freely available visualization
-          and discovery tool used to map neuroimaging data, especially data generated
-          by the Human Connectome Project.', markedDefault: false, versionName: 1.3.1}
+      - {description: 'Python bindings for abPOA, a SIMD-based C library for fast
+          partial order alignment using adaptive band.', markedDefault: false, versionName: 1.5.4_py312}
     - categories: biology, genomics
       defaultVersionName: 0.8.13_py39
       description: Tools for manipulating biological data, particularly multiple sequence
@@ -6782,13 +6808,14 @@ software_modules:
       - {description: 'Tools for manipulating biological data, particularly multiple
           sequence alignments.', markedDefault: false, versionName: 0.8.13_py39}
     - categories: biology, genomics
-      defaultVersionName: 3.0.7
-      description: NCBI VDB is the database engine used by NCBI SRA tools.
-      package: ncbi-vdb
-      url: https://github.com/ncbi/ncbi-vdb
+      defaultVersionName: 1.2.3
+      description: Cellsnp-lite is a C/C++ tool for efficient genotyping bi-allelic
+        SNPs on single cells.
+      package: cellsnp-lite
+      url: https://github.com/single-cell-genetics/cellsnp-lite
       versions:
-      - {description: NCBI VDB is the database engine used by NCBI SRA tools., markedDefault: false,
-        versionName: 3.0.7}
+      - {description: Cellsnp-lite is a C/C++ tool for efficient genotyping bi-allelic
+          SNPs on single cells., markedDefault: false, versionName: 1.2.3}
     - categories: biology, genomics
       defaultVersionName: '1.8'
       description: A single molecule sequence assembler for genomes large and small.
@@ -7679,6 +7706,14 @@ software_modules:
         markedDefault: false
         properties:
           parallel: {mpi: 1}
+        versionName: 1.89.0
+      - description: Boost is a set of libraries for the C++ programming language
+          that provide support for tasks and structures such as linear algebra, pseudorandom
+          number generation, multithreading, image processing, regular expressions,
+          and unit testing.
+        markedDefault: true
+        properties:
+          parallel: {mpi: 1}
         versionName: 1.87.0
     - categories: devel, AI
       defaultVersionName: 1.0.43
@@ -7824,7 +7859,7 @@ software_modules:
           at general-purpose applications running on multi-core processors., markedDefault: false,
         versionName: '20180301'}
     - categories: devel, AI
-      defaultVersionName: 0.12.6
+      defaultVersionName: 0.13.0
       description: Ollama is a free, open-source platform that allows users to run
         large language models (LLMs) locally.
       package: ollama
@@ -7854,6 +7889,12 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.12.6
+      - description: Ollama is a free, open-source platform that allows users to run
+          large language models (LLMs) locally.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.13.0
     - categories: devel, lib
       defaultVersionName: 1.3.7_py39
       description: nose is nicer testing for python.
@@ -8134,6 +8175,14 @@ software_modules:
       - {description: 'Meson is an open source build system meant to be both extremely
           fast, and, even more importantly, as user friendly as possible.', markedDefault: false,
         versionName: 1.6.1_py312}
+    - categories: devel, AI
+      defaultVersionName: 1.0.55
+      description: The AI coding agent built for the terminal.
+      package: opencode
+      url: https://github.com/sst/opencode
+      versions:
+      - {description: The AI coding agent built for the terminal., markedDefault: false,
+        versionName: 1.0.55}
     - categories: devel, networking
       defaultVersionName: 1.17.0
       description: UCX is a communication library implementing high-performance messaging
@@ -8298,6 +8347,11 @@ software_modules:
         markedDefault: false
         properties:
           arch: {gpu: 1}
+        versionName: 25.10.0
+      - description: RAPIDS Memory Manager library
+        markedDefault: true
+        properties:
+          arch: {gpu: 1}
         versionName: 23.04.00
     - categories: devel, runtime
       defaultVersionName: 1.3.2
@@ -8414,16 +8468,15 @@ software_modules:
       - {description: 'pandas is an open source, BSD-licensed library providing high-performance,
           easy-to-use data structures and data analysis tools for the Python programming
           language.', family: pandas, markedDefault: false, versionName: 2.2.1_py312}
-    - categories: devel, language
-      defaultVersionName: 8.6.5
-      description: Haskell is a statically typed, purely functional programming language
-        with type inference and lazy evaluation.
-      package: haskell
-      url: https://www.haskell.org/
+    - categories: devel, parser
+      defaultVersionName: 3.2.1
+      description: Xerces-C++ is a validating XML parser written in a portable subset
+        of C++.
+      package: xerces-c
+      url: https://xerces.apache.org/xerces-c/index.html
       versions:
-      - {description: 'Haskell is a statically typed, purely functional programming
-          language with type inference and lazy evaluation.', markedDefault: false,
-        versionName: 8.6.5}
+      - {description: Xerces-C++ is a validating XML parser written in a portable
+          subset of C++., markedDefault: false, versionName: 3.2.1}
     - categories: devel, data
       defaultVersionName: 6.6.2
       description: NCL is a free interpreted language designed specifically for scientific
@@ -8521,16 +8574,22 @@ software_modules:
       - {description: 'The LLVM Project is a collection of modular and reusable compiler
           and toolchain technologies. Clang is an LLVM native C/C++/Objective-C compiler,',
         markedDefault: true, versionName: 7.0.0}
-    - categories: devel, lib
-      defaultVersionName: 4.2.2
-      description: ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous
-        messaging library, aimed at use in distributed or concurrent applications.
-      package: zeromq
-      url: http://zeromq.org
+    - categories: devel, networking
+      defaultVersionName: 1.30.0
+      description: GASNet is a language-independent, low-level networking layer that
+        provides network-independent, high-performance communication primitives tailored
+        for implementing parallel global address space SPMD languages and libraries.
+      package: gasnet
+      url: https://gasnet.lbl.gov
       versions:
-      - {description: 'ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance
-          asynchronous messaging library, aimed at use in distributed or concurrent
-          applications.', markedDefault: false, versionName: 4.2.2}
+      - description: GASNet is a language-independent, low-level networking layer
+          that provides network-independent, high-performance communication primitives
+          tailored for implementing parallel global address space SPMD languages and
+          libraries.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.30.0
     - categories: devel, package management
       defaultVersionName: 0.9.5
       description: An extremely fast Python package and project manager, written in
@@ -8822,13 +8881,15 @@ software_modules:
       versions:
       - {description: 'V8 is Google’s open source high-performance JavaScript and
           WebAssembly engine, written in C++.', markedDefault: false, versionName: 8.4.371.22}
-    - categories: devel, networking
-      defaultVersionName: 0.24.0_py39
-      description: Python bindinbgs for UCX.
-      package: py-ucx-py
-      url: https://github.com/rapidsai/ucx-py
+    - categories: devel, data analytics
+      defaultVersionName: 0.48.0
+      description: xan is a command line tool that can be used to process CSV files
+        directly from the shell.
+      package: xan
+      url: https://github.com/medialab/xan
       versions:
-      - {description: Python bindinbgs for UCX., markedDefault: false, versionName: 0.24.0_py39}
+      - {description: xan is a command line tool that can be used to process CSV files
+          directly from the shell., markedDefault: false, versionName: 0.48.0}
     - categories: devel, language
       defaultVersionName: 5.4.1_py27
       description: IPython is a command shell for interactive computing in multiple
@@ -8972,15 +9033,18 @@ software_modules:
       versions:
       - {description: C/C++ library for processing structured configuration files.,
         markedDefault: false, versionName: 1.7.3}
-    - categories: devel, parser
-      defaultVersionName: 3.2.1
-      description: Xerces-C++ is a validating XML parser written in a portable subset
-        of C++.
-      package: xerces-c
-      url: https://xerces.apache.org/xerces-c/index.html
+    - categories: devel, lib
+      defaultVersionName: 20247.24_py312
+      description: Alternative regular expression module for Python, to replace re.
+      package: py-regex
+      url: https://github.com/mrabarnett/mrab-regex
       versions:
-      - {description: Xerces-C++ is a validating XML parser written in a portable
-          subset of C++., markedDefault: false, versionName: 3.2.1}
+      - {description: 'Alternative regular expression module for Python, to replace
+          re.', markedDefault: false, versionName: 20247.24_py36}
+      - {description: 'Alternative regular expression module for Python, to replace
+          re.', markedDefault: false, versionName: 20247.24_py39}
+      - {description: 'Alternative regular expression module for Python, to replace
+          re.', markedDefault: false, versionName: 20247.24_py312}
     - categories: devel, profiling
       defaultVersionName: 1.55.4_py312
       description: Scalene is a high-performance, high-precision CPU, GPU, and memory
@@ -9000,18 +9064,6 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.55.4_py312
-    - categories: devel, lib
-      defaultVersionName: 20247.24_py312
-      description: Alternative regular expression module for Python, to replace re.
-      package: py-regex
-      url: https://github.com/mrabarnett/mrab-regex
-      versions:
-      - {description: 'Alternative regular expression module for Python, to replace
-          re.', markedDefault: false, versionName: 20247.24_py36}
-      - {description: 'Alternative regular expression module for Python, to replace
-          re.', markedDefault: false, versionName: 20247.24_py39}
-      - {description: 'Alternative regular expression module for Python, to replace
-          re.', markedDefault: false, versionName: 20247.24_py312}
     - categories: devel, lib
       defaultVersionName: 0.5.1
       description: Simplified Data Exchange for HPC Simulations.
@@ -9048,6 +9100,25 @@ software_modules:
       - {description: 'ANTLR (ANother Tool for Language Recognition) is a powerful
           parser generator for reading, processing, executing, or translating structured
           text or binary files.', markedDefault: false, versionName: 2.7.7}
+    - categories: devel, language
+      defaultVersionName: 0.29.28_py39
+      description: Cython is an optimising static compiler for both the Python programming
+        language and the extended Cython programming language (based on Pyrex).
+      package: py-cython
+      url: http://cython.org/
+      versions:
+      - {description: Cython is an optimising static compiler for both the Python
+          programming language and the extended Cython programming language (based
+          on Pyrex)., markedDefault: false, versionName: 0.27.3_py27}
+      - {description: Cython is an optimising static compiler for both the Python
+          programming language and the extended Cython programming language (based
+          on Pyrex)., markedDefault: false, versionName: 0.27.3_py36}
+      - {description: Cython is an optimising static compiler for both the Python
+          programming language and the extended Cython programming language (based
+          on Pyrex)., markedDefault: false, versionName: 0.29.21_py36}
+      - {description: Cython is an optimising static compiler for both the Python
+          programming language and the extended Cython programming language (based
+          on Pyrex)., markedDefault: false, versionName: 0.29.28_py39}
     - categories: devel, lib
       defaultVersionName: 0.35.0_py27
       description: Numba is a compiler for Python array and numerical functions that
@@ -9089,25 +9160,6 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 4.9.0
-    - categories: devel, language
-      defaultVersionName: 0.29.28_py39
-      description: Cython is an optimising static compiler for both the Python programming
-        language and the extended Cython programming language (based on Pyrex).
-      package: py-cython
-      url: http://cython.org/
-      versions:
-      - {description: Cython is an optimising static compiler for both the Python
-          programming language and the extended Cython programming language (based
-          on Pyrex)., markedDefault: false, versionName: 0.27.3_py27}
-      - {description: Cython is an optimising static compiler for both the Python
-          programming language and the extended Cython programming language (based
-          on Pyrex)., markedDefault: false, versionName: 0.27.3_py36}
-      - {description: Cython is an optimising static compiler for both the Python
-          programming language and the extended Cython programming language (based
-          on Pyrex)., markedDefault: false, versionName: 0.29.21_py36}
-      - {description: Cython is an optimising static compiler for both the Python
-          programming language and the extended Cython programming language (based
-          on Pyrex)., markedDefault: false, versionName: 0.29.28_py39}
     - categories: devel, lib
       defaultVersionName: 3.7.13
       description: RabbitMQ is an open-source message broker.
@@ -9116,6 +9168,16 @@ software_modules:
       versions:
       - {description: RabbitMQ is an open-source message broker., markedDefault: false,
         versionName: 3.7.13}
+    - categories: devel, language
+      defaultVersionName: 8.6.5
+      description: Haskell is a statically typed, purely functional programming language
+        with type inference and lazy evaluation.
+      package: haskell
+      url: https://www.haskell.org/
+      versions:
+      - {description: 'Haskell is a statically typed, purely functional programming
+          language with type inference and lazy evaluation.', markedDefault: false,
+        versionName: 8.6.5}
     - categories: devel, AI
       defaultVersionName: b5760
       description: LLM inference in C/C++
@@ -9127,15 +9189,16 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: b5760
-    - categories: devel, language
-      defaultVersionName: 1.2.20
-      description: Bun is a fast JavaScript runtime, bundler, test runner, and package
-        manager – all in one.
-      package: bun
-      url: https://bun.com/
+    - categories: devel, build
+      defaultVersionName: '4.4'
+      description: GNU Make is a tool which controls the generation of executables
+        and other non-source files of a program from the program's source files.
+      package: make
+      url: https://www.gnu.org/software/make/
       versions:
-      - {description: 'Bun is a fast JavaScript runtime, bundler, test runner, and
-          package manager – all in one.', markedDefault: false, versionName: 1.2.20}
+      - {description: GNU Make is a tool which controls the generation of executables
+          and other non-source files of a program from the program's source files.,
+        markedDefault: false, versionName: '4.4'}
     - categories: devel, library
       defaultVersionName: 3.0.1_py312
       description: Seamless operability between C++11 and Python.
@@ -9145,7 +9208,7 @@ software_modules:
       - {description: Seamless operability between C++11 and Python., markedDefault: false,
         versionName: 3.0.1_py312}
     - categories: devel, AI
-      defaultVersionName: 0.0.335
+      defaultVersionName: 0.0.361
       description: GitHub Copilot CLI brings the power of Copilot coding agent directly
         to your terminal.
       package: copilot-cli
@@ -9154,20 +9217,19 @@ software_modules:
       - {description: GitHub Copilot CLI brings the power of Copilot coding agent
           directly to your terminal., markedDefault: false, versionName: 0.0.2}
       - {description: GitHub Copilot CLI brings the power of Copilot coding agent
-          directly to your terminal., markedDefault: false, versionName: 0.0.353}
+          directly to your terminal., markedDefault: false, versionName: 0.0.335}
       - {description: GitHub Copilot CLI brings the power of Copilot coding agent
-          directly to your terminal., markedDefault: true, versionName: 0.0.335}
-    - categories: devel, language
-      defaultVersionName: 7.3.0
-      description: 'PHP (recursive acronym for PHP: Hypertext Preprocessor) is an
-        open source general-purpose scripting language that is especially suited for
-        web development.'
-      package: php
-      url: http://www.php.net
+          directly to your terminal., markedDefault: false, versionName: 0.0.354}
+      - {description: GitHub Copilot CLI brings the power of Copilot coding agent
+          directly to your terminal., markedDefault: false, versionName: 0.0.361}
+    - categories: devel, lib
+      defaultVersionName: 2.6.2
+      description: A high-level Parallel I/O Library for structured grid applications.
+      package: pio
+      url: https://github.com/NCAR/ParallelIO
       versions:
-      - {description: 'PHP (recursive acronym for PHP: Hypertext Preprocessor) is
-          an open source general-purpose scripting language that is especially suited
-          for web development.', markedDefault: false, versionName: 7.3.0}
+      - {description: A high-level Parallel I/O Library for structured grid applications.,
+        markedDefault: false, versionName: 2.6.2}
     - categories: devel, lib
       defaultVersionName: 0.7.5
       description: Library to manipulate tensors on the GPU.
@@ -9190,15 +9252,25 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.13.0_py312
-    - categories: devel, data analytics
-      defaultVersionName: 0.48.0
-      description: xan is a command line tool that can be used to process CSV files
-        directly from the shell.
-      package: xan
-      url: https://github.com/medialab/xan
+    - categories: devel, language
+      defaultVersionName: 1.90.0
+      description: A language empowering everyone to build reliable and efficient
+        software.
+      package: rust
+      url: https://www.rust-lang.org/
       versions:
-      - {description: xan is a command line tool that can be used to process CSV files
-          directly from the shell., markedDefault: false, versionName: 0.48.0}
+      - {description: A language empowering everyone to build reliable and efficient
+          software., markedDefault: false, versionName: 1.35.0}
+      - {description: A language empowering everyone to build reliable and efficient
+          software., markedDefault: false, versionName: 1.56.1}
+      - {description: A language empowering everyone to build reliable and efficient
+          software., markedDefault: false, versionName: 1.63.0}
+      - {description: A language empowering everyone to build reliable and efficient
+          software., markedDefault: false, versionName: 1.72.0}
+      - {description: A language empowering everyone to build reliable and efficient
+          software., markedDefault: false, versionName: 1.81.0}
+      - {description: A language empowering everyone to build reliable and efficient
+          software., markedDefault: false, versionName: 1.90.0}
     - categories: devel, lib
       defaultVersionName: 0.13.0
       description: CV-CUDA is an open-source project that enables building efficient
@@ -9438,41 +9510,54 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 9.0.176
-    - categories: devel, language
-      defaultVersionName: 1.90.0
-      description: A language empowering everyone to build reliable and efficient
-        software.
-      package: rust
-      url: https://www.rust-lang.org/
+    - categories: devel, mpi
+      defaultVersionName: '2019'
+      description: Intel® MPI Library is a multi-fabric message passing library that
+        implements the Message Passing Interface, version 3.1 (MPI-3.1) specification.
+      package: impi
+      url: https://software.intel.com/en-us/intel-mpi-library
       versions:
-      - {description: A language empowering everyone to build reliable and efficient
-          software., markedDefault: false, versionName: 1.35.0}
-      - {description: A language empowering everyone to build reliable and efficient
-          software., markedDefault: false, versionName: 1.56.1}
-      - {description: A language empowering everyone to build reliable and efficient
-          software., markedDefault: false, versionName: 1.63.0}
-      - {description: A language empowering everyone to build reliable and efficient
-          software., markedDefault: false, versionName: 1.72.0}
-      - {description: A language empowering everyone to build reliable and efficient
-          software., markedDefault: false, versionName: 1.81.0}
-      - {description: A language empowering everyone to build reliable and efficient
-          software., markedDefault: false, versionName: 1.90.0}
-    - categories: devel, networking
-      defaultVersionName: 1.30.0
-      description: GASNet is a language-independent, low-level networking layer that
-        provides network-independent, high-performance communication primitives tailored
-        for implementing parallel global address space SPMD languages and libraries.
-      package: gasnet
-      url: https://gasnet.lbl.gov
-      versions:
-      - description: GASNet is a language-independent, low-level networking layer
-          that provides network-independent, high-performance communication primitives
-          tailored for implementing parallel global address space SPMD languages and
-          libraries.
+      - description: Intel® MPI Library is a multi-fabric message passing library
+          that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification.
+        family: mpi
         markedDefault: false
         properties:
           parallel: {mpi: 1}
-        versionName: 1.30.0
+        versionName: 2017.u2
+      - description: Intel® MPI Library is a multi-fabric message passing library
+          that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification.
+        family: mpi
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 2018.u1
+      - description: Intel® MPI Library is a multi-fabric message passing library
+          that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification.
+        family: mpi
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '2018'
+      - description: Intel® MPI Library is a multi-fabric message passing library
+          that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification.
+        family: mpi
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: '2019'
+    - categories: devel, lib
+      defaultVersionName: 3.4.0
+      description: 'Eigen is a C++ template library for linear algebra: matrices,
+        vectors, numerical solvers, and related algorithms.'
+      package: eigen
+      url: http://eigen.tuxfamily.org
+      versions:
+      - {description: 'Eigen is a C++ template library for linear algebra: matrices,
+          vectors, numerical solvers, and related algorithms.', markedDefault: false,
+        versionName: 3.3.3}
+      - {description: 'Eigen is a C++ template library for linear algebra: matrices,
+          vectors, numerical solvers, and related algorithms.', markedDefault: false,
+        versionName: 3.4.0}
     - categories: devel, lib
       defaultVersionName: 8.1.0
       description: C++ wrappers for SIMD intrinsics and parallelized, optimized mathematical
@@ -9589,7 +9674,7 @@ software_modules:
           parallel: {mpi: 1}
         versionName: 0.3.0
     - categories: devel, AI
-      defaultVersionName: 0.1.22
+      defaultVersionName: 0.16.0
       description: An open-source AI agent that brings the power of Gemini directly
         into your terminal.
       package: gemini-cli
@@ -9597,6 +9682,8 @@ software_modules:
       versions:
       - {description: An open-source AI agent that brings the power of Gemini directly
           into your terminal., markedDefault: false, versionName: 0.1.22}
+      - {description: An open-source AI agent that brings the power of Gemini directly
+          into your terminal., markedDefault: false, versionName: 0.16.0}
     - categories: devel, compiler
       defaultVersionName: '2019'
       description: Intel C++ Compiler, also known as icc or icl, is a group of C and
@@ -9627,15 +9714,31 @@ software_modules:
       - {description: Apache Ant is a Java library and command-line tool whose mission
           is to drive processes described in build files as targets and extension
           points dependent upon each other., markedDefault: false, versionName: 1.10.1}
-    - categories: devel, data
-      defaultVersionName: 4.0.1
-      description: Redis is an open source, in-memory data structure store, used as
-        a database, cache and message broker.
-      package: redis
-      url: https://redis.io
+    - categories: devel, build
+      defaultVersionName: 3.31.4
+      description: CMake is an extensible, open-source system that manages the build
+        process in an operating system and in a compiler-independent manner.
+      package: cmake
+      url: https://www.cmake.org
       versions:
-      - {description: 'Redis is an open source, in-memory data structure store, used
-          as a database, cache and message broker.', markedDefault: false, versionName: 4.0.1}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.8.1}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.11.1}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.13.1}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.20.3}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.24.2}
+      - {description: 'CMake is an extensible, open-source system that manages the
+          build process in an operating system and in a compiler-independent manner.',
+        markedDefault: false, versionName: 3.31.4}
     - categories: devel, compiler
       defaultVersionName: '19.10'
       description: PGI compilers and tools, including Open MPI (Community Edition).
@@ -9652,6 +9755,26 @@ software_modules:
       versions:
       - {description: Python tool for converting files and office documents to Markdown.,
         markedDefault: false, versionName: 0.0.2_py312}
+    - categories: devel, analytics
+      defaultVersionName: 19.0.1
+      description: Apache Arrow is a universal columnar format and multi-language
+        toolbox for fast data interchange and in-memory analytics.
+      package: arrow
+      url: https://arrow.apache.org/
+      versions:
+      - {description: Apache Arrow is a universal columnar format and multi-language
+          toolbox for fast data interchange and in-memory analytics., markedDefault: false,
+        versionName: 19.0.1}
+    - categories: devel, build
+      defaultVersionName: '2.45'
+      description: The GNU Binutils are a collection of binary tools.
+      package: binutils
+      url: https://www.gnu.org/software/binutils/
+      versions:
+      - {description: The GNU Binutils are a collection of binary tools., markedDefault: false,
+        versionName: '2.38'}
+      - {description: The GNU Binutils are a collection of binary tools., markedDefault: false,
+        versionName: '2.45'}
     - categories: devel, lib
       defaultVersionName: 2.7.1_py27
       description: The h5py package is a Pythonic interface to the HDF5 binary data
@@ -9671,25 +9794,6 @@ software_modules:
           data format., markedDefault: false, versionName: 3.10.0_py312}
       - {description: The h5py package is a Pythonic interface to the HDF5 binary
           data format., markedDefault: true, versionName: 2.7.1_py27}
-    - categories: devel, build
-      defaultVersionName: '2.45'
-      description: The GNU Binutils are a collection of binary tools.
-      package: binutils
-      url: https://www.gnu.org/software/binutils/
-      versions:
-      - {description: The GNU Binutils are a collection of binary tools., markedDefault: false,
-        versionName: '2.38'}
-      - {description: The GNU Binutils are a collection of binary tools., markedDefault: false,
-        versionName: '2.45'}
-    - categories: devel, analytics
-      defaultVersionName: 18.1.0_py312
-      description: Python library for Apache Arrow, a development platform for in-memory
-        analytics.
-      package: py-pyarrow
-      url: https://arrow.apache.org/
-      versions:
-      - {description: 'Python library for Apache Arrow, a development platform for
-          in-memory analytics.', markedDefault: false, versionName: 18.1.0_py312}
     - categories: devel, language
       defaultVersionName: 3.1.2
       description: A dynamic, open source programming language with a focus on simplicity
@@ -9707,6 +9811,15 @@ software_modules:
       - {description: 'A dynamic, open source programming language with a focus on
           simplicity and productivity. It has an elegant syntax that is natural to
           read and easy to write.', markedDefault: false, versionName: 3.1.2}
+    - categories: devel, data
+      defaultVersionName: 4.0.1
+      description: Redis is an open source, in-memory data structure store, used as
+        a database, cache and message broker.
+      package: redis
+      url: https://redis.io
+      versions:
+      - {description: 'Redis is an open source, in-memory data structure store, used
+          as a database, cache and message broker.', markedDefault: false, versionName: 4.0.1}
     - categories: devel, lib
       defaultVersionName: '2019'
       description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
@@ -9727,16 +9840,24 @@ software_modules:
       - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
           C++ library for shared-memory parallel programming and heterogeneous computing
           (intra-node distributed memory programming)., markedDefault: false, versionName: '2019'}
+    - categories: devel, framework
+      defaultVersionName: 0.18.0_py39
+      description: Kedro is an open-source Python framework for creating reproducible,
+        maintainable and modular data science code.
+      package: py-kedro
+      url: https://kedro.readthedocs.io/
+      versions:
+      - {description: 'Kedro is an open-source Python framework for creating reproducible,
+          maintainable and modular data science code.', markedDefault: false, versionName: 0.18.0_py39}
     - categories: devel, analytics
-      defaultVersionName: 19.0.1
-      description: Apache Arrow is a universal columnar format and multi-language
-        toolbox for fast data interchange and in-memory analytics.
-      package: arrow
+      defaultVersionName: 18.1.0_py312
+      description: Python library for Apache Arrow, a development platform for in-memory
+        analytics.
+      package: py-pyarrow
       url: https://arrow.apache.org/
       versions:
-      - {description: Apache Arrow is a universal columnar format and multi-language
-          toolbox for fast data interchange and in-memory analytics., markedDefault: false,
-        versionName: 19.0.1}
+      - {description: 'Python library for Apache Arrow, a development platform for
+          in-memory analytics.', markedDefault: false, versionName: 18.1.0_py312}
     - categories: devel, lib
       defaultVersionName: 2.2.2
       description: Copy-hiding array abstraction to automatically migrate data between
@@ -9751,50 +9872,6 @@ software_modules:
           arch: {gpu: 1}
           parallel: {mpi: 1}
         versionName: 2.2.2
-    - categories: devel, framework
-      defaultVersionName: 0.18.0_py39
-      description: Kedro is an open-source Python framework for creating reproducible,
-        maintainable and modular data science code.
-      package: py-kedro
-      url: https://kedro.readthedocs.io/
-      versions:
-      - {description: 'Kedro is an open-source Python framework for creating reproducible,
-          maintainable and modular data science code.', markedDefault: false, versionName: 0.18.0_py39}
-    - categories: devel, mpi
-      defaultVersionName: '2019'
-      description: Intel® MPI Library is a multi-fabric message passing library that
-        implements the Message Passing Interface, version 3.1 (MPI-3.1) specification.
-      package: impi
-      url: https://software.intel.com/en-us/intel-mpi-library
-      versions:
-      - description: Intel® MPI Library is a multi-fabric message passing library
-          that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification.
-        family: mpi
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 2017.u2
-      - description: Intel® MPI Library is a multi-fabric message passing library
-          that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification.
-        family: mpi
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 2018.u1
-      - description: Intel® MPI Library is a multi-fabric message passing library
-          that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification.
-        family: mpi
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: '2018'
-      - description: Intel® MPI Library is a multi-fabric message passing library
-          that implements the Message Passing Interface, version 3.1 (MPI-3.1) specification.
-        family: mpi
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: '2019'
     - categories: devel, lib
       defaultVersionName: 23.04.00_py39
       description: Python interface for RMM
@@ -9805,16 +9882,22 @@ software_modules:
         markedDefault: false
         properties:
           arch: {gpu: 1}
+        versionName: 25.10.0_py312
+      - description: Python interface for RMM
+        markedDefault: true
+        properties:
+          arch: {gpu: 1}
         versionName: 23.04.00_py39
-    - categories: devel, AI
-      defaultVersionName: 0.48.0
-      description: Codex CLI is a coding agent from OpenAI that runs locally on your
-        computer.
-      package: codex
-      url: https://github.com/openai/codex
+    - categories: devel, lib
+      defaultVersionName: 4.2.2
+      description: ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous
+        messaging library, aimed at use in distributed or concurrent applications.
+      package: zeromq
+      url: http://zeromq.org
       versions:
-      - {description: Codex CLI is a coding agent from OpenAI that runs locally on
-          your computer., markedDefault: false, versionName: 0.48.0}
+      - {description: 'ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance
+          asynchronous messaging library, aimed at use in distributed or concurrent
+          applications.', markedDefault: false, versionName: 4.2.2}
     - categories: devel, data
       defaultVersionName: 1.44.0_py312
       description: The NVIDIA Data Loading Library (DALI) is a GPU-accelerated library
@@ -9850,6 +9933,25 @@ software_modules:
         markedDefault: false, versionName: 0.20.0_py39}
       - {description: scikit-image is a collection of algorithms for image processing.,
         markedDefault: false, versionName: 0.24.0_py312}
+    - categories: devel, AI
+      defaultVersionName: 0.48.0
+      description: Codex CLI is a coding agent from OpenAI that runs locally on your
+        computer.
+      package: codex
+      url: https://github.com/openai/codex
+      versions:
+      - {description: Codex CLI is a coding agent from OpenAI that runs locally on
+          your computer., markedDefault: false, versionName: 0.48.0}
+    - categories: devel, build
+      defaultVersionName: 1.27.0
+      description: Bazelisk is a wrapper for Bazel written in Go.
+      package: bazelisk
+      url: https://github.com/bazelbuild/bazelisk
+      versions:
+      - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
+        markedDefault: false, versionName: 1.8.0}
+      - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
+        markedDefault: false, versionName: 1.27.0}
     - categories: devel, lib
       defaultVersionName: 1.10.0
       description: CUB is a flexible library of cooperative threadblock primitives
@@ -9869,26 +9971,6 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.10.0
-    - categories: devel, build
-      defaultVersionName: 1.8.0
-      description: Bazelisk is a wrapper for Bazel written in Go.
-      package: bazelisk
-      url: https://github.com/bazelbuild/bazelisk
-      versions:
-      - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
-        markedDefault: false, versionName: 1.3.0}
-      - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
-        markedDefault: false, versionName: 1.8.0}
-    - categories: devel, build
-      defaultVersionName: '4.4'
-      description: GNU Make is a tool which controls the generation of executables
-        and other non-source files of a program from the program's source files.
-      package: make
-      url: https://www.gnu.org/software/make/
-      versions:
-      - {description: GNU Make is a tool which controls the generation of executables
-          and other non-source files of a program from the program's source files.,
-        markedDefault: false, versionName: '4.4'}
     - categories: devel, data analytics
       defaultVersionName: 0.3_py27
       description: 'Launching and controlling spark on HPC clusters '
@@ -9916,60 +9998,24 @@ software_modules:
       - {description: 'Protocol Buffers (a.k.a., protobuf) are Google''s language-neutral,
           platform-neutral, extensible mechanism for serializing structured data.',
         markedDefault: true, versionName: 3.4.0}
-    - categories: devel, lib
-      defaultVersionName: 2.6.2
-      description: A high-level Parallel I/O Library for structured grid applications.
-      package: pio
-      url: https://github.com/NCAR/ParallelIO
+    - categories: devel, language
+      defaultVersionName: 1.3.2
+      description: Bun is a fast JavaScript runtime, bundler, test runner, and package
+        manager – all in one.
+      package: bun
+      url: https://bun.com/
       versions:
-      - {description: A high-level Parallel I/O Library for structured grid applications.,
-        markedDefault: false, versionName: 2.6.2}
-    - categories: devel, data
-      defaultVersionName: 0.13.3
-      description: Hiredis is a minimalistic C client library for the Redis database.
-      package: hiredis
-      url: https://github.com/redis/hiredis
+      - {description: 'Bun is a fast JavaScript runtime, bundler, test runner, and
+          package manager – all in one.', markedDefault: false, versionName: 1.2.20}
+      - {description: 'Bun is a fast JavaScript runtime, bundler, test runner, and
+          package manager – all in one.', markedDefault: false, versionName: 1.3.2}
+    - categories: devel, networking
+      defaultVersionName: 0.24.0_py39
+      description: Python bindinbgs for UCX.
+      package: py-ucx-py
+      url: https://github.com/rapidsai/ucx-py
       versions:
-      - {description: Hiredis is a minimalistic C client library for the Redis database.,
-        markedDefault: false, versionName: 0.13.3}
-    - categories: devel, lib
-      defaultVersionName: 3.4.0
-      description: 'Eigen is a C++ template library for linear algebra: matrices,
-        vectors, numerical solvers, and related algorithms.'
-      package: eigen
-      url: http://eigen.tuxfamily.org
-      versions:
-      - {description: 'Eigen is a C++ template library for linear algebra: matrices,
-          vectors, numerical solvers, and related algorithms.', markedDefault: false,
-        versionName: 3.3.3}
-      - {description: 'Eigen is a C++ template library for linear algebra: matrices,
-          vectors, numerical solvers, and related algorithms.', markedDefault: false,
-        versionName: 3.4.0}
-    - categories: devel, build
-      defaultVersionName: 3.31.4
-      description: CMake is an extensible, open-source system that manages the build
-        process in an operating system and in a compiler-independent manner.
-      package: cmake
-      url: https://www.cmake.org
-      versions:
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.8.1}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.11.1}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.13.1}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.20.3}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.24.2}
-      - {description: 'CMake is an extensible, open-source system that manages the
-          build process in an operating system and in a compiler-independent manner.',
-        markedDefault: false, versionName: 3.31.4}
+      - {description: Python bindinbgs for UCX., markedDefault: false, versionName: 0.24.0_py39}
     - categories: devel, static analysis
       defaultVersionName: 0.11.0
       description: A shell script static analysis tool
@@ -9987,6 +10033,25 @@ software_modules:
       - {description: 'anndata is a Python package for handling annotated data matrices
           in memory and on disk, positioned between pandas and xarray.', markedDefault: false,
         versionName: 0.11.1_py312}
+    - categories: devel, data
+      defaultVersionName: 0.13.3
+      description: Hiredis is a minimalistic C client library for the Redis database.
+      package: hiredis
+      url: https://github.com/redis/hiredis
+      versions:
+      - {description: Hiredis is a minimalistic C client library for the Redis database.,
+        markedDefault: false, versionName: 0.13.3}
+    - categories: devel, language
+      defaultVersionName: 7.3.0
+      description: 'PHP (recursive acronym for PHP: Hypertext Preprocessor) is an
+        open source general-purpose scripting language that is especially suited for
+        web development.'
+      package: php
+      url: http://www.php.net
+      versions:
+      - {description: 'PHP (recursive acronym for PHP: Hypertext Preprocessor) is
+          an open source general-purpose scripting language that is especially suited
+          for web development.', markedDefault: false, versionName: 7.3.0}
     - categories: devel, compiler
       defaultVersionName: '110.81'
       description: Standard ML of New Jersey (abbreviated SML/NJ) is a compiler for
