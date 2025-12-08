@@ -875,7 +875,7 @@ software_modules:
           encode, transcode, mux, demux, stream, filter and play pretty much anything
           that humans and machines have created.', markedDefault: false, versionName: '7.1'}
     - categories: system, libs
-      defaultVersionName: 1.3.0
+      defaultVersionName: 1.6.0
       description: WebP is a modern image format that provides superior lossless and
         lossy compression for images on the web.
       package: libwebp
@@ -885,6 +885,8 @@ software_modules:
           and lossy compression for images on the web., markedDefault: false, versionName: 0.6.1}
       - {description: WebP is a modern image format that provides superior lossless
           and lossy compression for images on the web., markedDefault: false, versionName: 1.3.0}
+      - {description: WebP is a modern image format that provides superior lossless
+          and lossy compression for images on the web., markedDefault: false, versionName: 1.6.0}
     - categories: system, compression
       defaultVersionName: 1.2.20
       description: C library for manipulating tar files.
@@ -1695,6 +1697,8 @@ software_modules:
           a widely used format for storing image data.', markedDefault: false, versionName: 4.4.0}
       - {description: 'libtiff provides support for the Tag Image File Format (TIFF),
           a widely used format for storing image data.', markedDefault: false, versionName: 4.5.0}
+      - {description: 'libtiff provides support for the Tag Image File Format (TIFF),
+          a widely used format for storing image data.', markedDefault: false, versionName: 4.7.1}
       - {description: 'libtiff provides support for the Tag Image File Format (TIFF),
           a widely used format for storing image data.', markedDefault: true, versionName: 4.0.8}
     - categories: system, compression
@@ -2722,19 +2726,17 @@ software_modules:
       versions:
       - {description: Gmsh is an open source 3D finite element mesh generator with
           a built-in CAD engine and post-processor., markedDefault: false, versionName: 4.10.1}
-    - categories: math, deep learning
-      defaultVersionName: 0.19.1_py312
-      description: Datasets, model architectures, and common image transformations
-        for computer vision for PyTorch.
-      package: py-torchvision
-      url: http://pytorch.org/vision
+    - categories: math, numerical analysis
+      defaultVersionName: 0.0.3
+      description: RunMat is a modern, high-performance runtime for MATLAB® and GNU
+        Octave code that eliminates license fees, vendor lock-in, and performance
+        bottlenecks.
+      package: runmat
+      url: https://runmat.org/
       versions:
-      - {description: 'Datasets, model architectures, and common image transformations
-          for computer vision for PyTorch.', markedDefault: false, versionName: 0.15.1_py39}
-      - {description: 'Datasets, model architectures, and common image transformations
-          for computer vision for PyTorch.', markedDefault: false, versionName: 0.17.1_py312}
-      - {description: 'Datasets, model architectures, and common image transformations
-          for computer vision for PyTorch.', markedDefault: false, versionName: 0.19.1_py312}
+      - {description: 'RunMat is a modern, high-performance runtime for MATLAB® and
+          GNU Octave code that eliminates license fees, vendor lock-in, and performance
+          bottlenecks.', markedDefault: false, versionName: 0.0.3}
     - categories: math, statistics
       defaultVersionName: 1.3.1093
       description: RStudio is an integrated development environment (IDE) for R. It
@@ -2896,19 +2898,17 @@ software_modules:
       versions:
       - {description: tinygrad is a deep learning framework that aims to provide a
           balance between simplicity and functionality., markedDefault: false, versionName: 0.8.0_py312}
-    - categories: math, machine learning
-      defaultVersionName: 1.22.0
-      description: 'ONNX Runtime is a cross-platform machine-learning model accelerator,
-        with a flexible interface to integrate hardware-specific libraries. '
-      package: onnxruntime
-      url: https://onnxruntime.ai
+    - categories: math, lib
+      defaultVersionName: 3.0.0_py312
+      description: Python bindings for xgboost
+      package: py-xgboost
+      url: https://github.com/dmlc/xgboost/
       versions:
-      - description: 'ONNX Runtime is a cross-platform machine-learning model accelerator,
-          with a flexible interface to integrate hardware-specific libraries. '
+      - description: Python bindings for xgboost
         markedDefault: false
         properties:
           arch: {gpu: 1}
-        versionName: 1.22.0
+        versionName: 3.0.0_py312
     - categories: math, machine learning
       defaultVersionName: 0.19.1_py27
       description: Scikit-learn is a free software machine learning library for the
@@ -3064,14 +3064,14 @@ software_modules:
       versions:
       - {description: NLopt is a free/open-source library for nonlinear optimization.,
         markedDefault: false, versionName: 2.6.2}
-    - categories: math, machine learning
-      defaultVersionName: 0.4.2_py312
-      description: Simple, safe way to store and distribute tensors.
-      package: py-safetensors
-      url: https://huggingface.co/docs/safetensors
+    - categories: math, deep learning
+      defaultVersionName: 2.1.2_py312
+      description: PyTorch Extension Library of Optimized Scatter Operations.
+      package: py-torch-scatter
+      url: https://github.com/rusty1s/pytorch_scatter
       versions:
-      - {description: 'Simple, safe way to store and distribute tensors.', markedDefault: false,
-        versionName: 0.4.2_py312}
+      - {description: PyTorch Extension Library of Optimized Scatter Operations.,
+        markedDefault: false, versionName: 2.1.2_py312}
     - categories: math, numerical library
       defaultVersionName: 4.1.0
       description: The MPFR library is a C library for multiple-precision floating-point
@@ -3243,17 +3243,27 @@ software_modules:
       url: https://mumps-solver.org/
       versions:
       - {description: A parallel sparse direct solver., markedDefault: false, versionName: 5.1.2}
-    - categories: math, machine learning
-      defaultVersionName: 2.18.0_py312
-      description: Hugging Face Datasets is a library for easily accessing and sharing
-        datasets for Audio, Computer Vision, and Natural Language Processing (NLP)
-        tasks.
-      package: py-datasets
-      url: https://huggingface.co/docs/datasets
+    - categories: math, numerical library
+      defaultVersionName: 3.9.0
+      description: Collection of Fortran77 subroutines designed to solve large scale
+        eigenvalue problems.
+      package: arpack
+      url: https://github.com/opencollab/arpack-ng
       versions:
-      - {description: 'Hugging Face Datasets is a library for easily accessing and
-          sharing datasets for Audio, Computer Vision, and Natural Language Processing
-          (NLP) tasks.', markedDefault: false, versionName: 2.18.0_py312}
+      - {description: Collection of Fortran77 subroutines designed to solve large
+          scale eigenvalue problems., markedDefault: false, versionName: 3.5.0}
+      - description: Collection of Fortran77 subroutines designed to solve large scale
+          eigenvalue problems.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 3.7.0
+      - description: Collection of Fortran77 subroutines designed to solve large scale
+          eigenvalue problems.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 3.9.0
     - categories: math, numerical library
       defaultVersionName: 2.2.0
       description: ScaLAPACK is a library of high-performance linear algebra routines
@@ -3358,109 +3368,17 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 1.0_py39
-    - categories: math, deep learning
-      defaultVersionName: 9.14.0.64
-      description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
-        neural networks.
-      package: cudnn
-      url: https://developer.nvidia.com/cudnn
+    - categories: math, numerical library
+      defaultVersionName: '4.63'
+      description: The GLPK (GNU Linear Programming Kit) package is intended for solving
+        large-scale linear programming (LP), mixed integer programming (MIP), and
+        other related problems.
+      package: glpk
+      url: http://www.openblas.net/
       versions:
-      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
-          neural networks.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: '6.0'
-      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
-          neural networks.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 7.0.1
-      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
-          neural networks.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 7.0.4
-      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
-          neural networks.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 7.0.5
-      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
-          neural networks.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 7.1.4
-      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
-          neural networks.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 7.4.1.5
-      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
-          neural networks.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 7.6.4
-      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
-          neural networks.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 7.6.5
-      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
-          neural networks.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 8.1.1.33
-      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
-          neural networks.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 8.3.3.40
-      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
-          neural networks.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 8.6.0.163
-      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
-          neural networks.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 8.9.0.131
-      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
-          neural networks.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 9.0.0.312
-      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
-          neural networks.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 9.4.0
-      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
-          neural networks.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 9.13.1.26
-      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
-          neural networks.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 9.14.0.64
+      - {description: 'The GLPK (GNU Linear Programming Kit) package is intended for
+          solving large-scale linear programming (LP), mixed integer programming (MIP),
+          and other related problems.', markedDefault: false, versionName: '4.63'}
     - categories: math, numerical library
       defaultVersionName: 1.6.0_py312
       description: PyWavelets is a free Open Source library for wavelet transforms
@@ -3933,45 +3851,28 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.2.1_py312
-    - categories: math, numerical library
-      defaultVersionName: 5.2.1
-      description: SuperLU is a general purpose library for the direct solution of
-        large, sparse, nonsymmetric systems of linear equations.
-      package: superlu
-      url: https://github.com/xiaoyeli/superlu
+    - categories: math, technical computing
+      defaultVersionName: 13.1.0
+      description: A symbolic language and platform for modern technical computing.
+      package: mathematica
+      url: http://www.wolfram.com/mathematica
       versions:
-      - description: SuperLU is a general purpose library for the direct solution
-          of large, sparse, nonsymmetric systems of linear equations.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 5.2.1
-    - categories: math, statistics
-      defaultVersionName: '9.4'
-      description: SAS is a software suite developed by SAS Institute for advanced
-        analytics, multivariate analyses, business intelligence, data management,
-        and predictive analytics.
-      package: sas
-      url: http://www.sas.com/
-      versions:
-      - description: SAS is a software suite developed by SAS Institute for advanced
-          analytics, multivariate analyses, business intelligence, data management,
-          and predictive analytics.
+      - description: A symbolic language and platform for modern technical computing.
         markedDefault: false
         properties:
           license: {restricted: 1}
-        versionName: '9.4'
-    - categories: math, numerical library
-      defaultVersionName: '4.63'
-      description: The GLPK (GNU Linear Programming Kit) package is intended for solving
-        large-scale linear programming (LP), mixed integer programming (MIP), and
-        other related problems.
-      package: glpk
-      url: http://www.openblas.net/
+        versionName: 13.1.0
+    - categories: math, machine learning
+      defaultVersionName: 2.18.0_py312
+      description: Hugging Face Datasets is a library for easily accessing and sharing
+        datasets for Audio, Computer Vision, and Natural Language Processing (NLP)
+        tasks.
+      package: py-datasets
+      url: https://huggingface.co/docs/datasets
       versions:
-      - {description: 'The GLPK (GNU Linear Programming Kit) package is intended for
-          solving large-scale linear programming (LP), mixed integer programming (MIP),
-          and other related problems.', markedDefault: false, versionName: '4.63'}
+      - {description: 'Hugging Face Datasets is a library for easily accessing and
+          sharing datasets for Audio, Computer Vision, and Natural Language Processing
+          (NLP) tasks.', markedDefault: false, versionName: 2.18.0_py312}
     - categories: math, symbolic
       defaultVersionName: 0.12.3_py39
       description: High-Performance Symbolic Regression in Python and Julia.
@@ -3993,6 +3894,23 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.5.0_py312
+    - categories: math, machine learning
+      defaultVersionName: 0.4.2_py312
+      description: Simple, safe way to store and distribute tensors.
+      package: py-safetensors
+      url: https://huggingface.co/docs/safetensors
+      versions:
+      - {description: 'Simple, safe way to store and distribute tensors.', markedDefault: false,
+        versionName: 0.4.2_py312}
+    - categories: math, numerical library
+      defaultVersionName: 3.18.5_py39
+      description: Python bindings for PETSc, the Portable, Extensible Toolkit for
+        Scientific Computation.
+      package: py-petsc4py
+      url: http://petsc.org
+      versions:
+      - {description: 'Python bindings for PETSc, the Portable, Extensible Toolkit
+          for Scientific Computation.', markedDefault: false, versionName: 3.18.5_py39}
     - categories: math, statistics
       defaultVersionName: '1.3'
       description: GNU datamash is a command-line program which performs basic numeric,
@@ -4024,37 +3942,41 @@ software_modules:
       - {description: GNU libmatheval is a library (callable from C and Fortran) to
           parse and evaluate symbolic expressions input as text., markedDefault: false,
         versionName: 1.1.11}
-    - categories: math, numerical library
-      defaultVersionName: 3.18.5_py39
-      description: Python bindings for PETSc, the Portable, Extensible Toolkit for
-        Scientific Computation.
-      package: py-petsc4py
-      url: http://petsc.org
-      versions:
-      - {description: 'Python bindings for PETSc, the Portable, Extensible Toolkit
-          for Scientific Computation.', markedDefault: false, versionName: 3.18.5_py39}
     - categories: math, machine learning
-      defaultVersionName: 1.0.12_py312
-      description: timm is a library containing SOTA computer vision models, layers,
-        utilities, optimizers, schedulers, data-loaders, augmentations, and training/evaluation
-        scripts.
-      package: py-timm
-      url: https://huggingface.co/docs/timm
+      defaultVersionName: 2.8_py312
+      description: Transformer Engine (TE) is a library for accelerating Transformer
+        models on NVIDIA GPUs, including using 8-bit floating point (FP8) precision.
+      package: py-transformer-engine
+      url: https://github.com/NVIDIA/TransformerEngine
       versions:
-      - {description: 'timm is a library containing SOTA computer vision models, layers,
-          utilities, optimizers, schedulers, data-loaders, augmentations, and training/evaluation
-          scripts.', markedDefault: false, versionName: 1.0.12_py312}
-    - categories: math, technical computing
-      defaultVersionName: 13.1.0
-      description: A symbolic language and platform for modern technical computing.
-      package: mathematica
-      url: http://www.wolfram.com/mathematica
-      versions:
-      - description: A symbolic language and platform for modern technical computing.
+      - description: Transformer Engine (TE) is a library for accelerating Transformer
+          models on NVIDIA GPUs, including using 8-bit floating point (FP8) precision.
         markedDefault: false
         properties:
-          license: {restricted: 1}
-        versionName: 13.1.0
+          arch: {gpu: 1}
+        versionName: 2.8_py312
+    - categories: math, numerical library
+      defaultVersionName: 1.6.0
+      description: TetGen provides various features to generate good quality and adaptive
+        tetrahedral meshes suitable for numerical methods, such as finite element
+        or finite volume methods.
+      package: tetgen
+      url: http://wias-berlin.de/software/index.jsp?id=TetGen
+      versions:
+      - {description: 'TetGen provides various features to generate good quality and
+          adaptive tetrahedral meshes suitable for numerical methods, such as finite
+          element or finite volume methods.', markedDefault: false, versionName: 1.6.0}
+    - categories: math, deep learning
+      defaultVersionName: 0.14.1_py314
+      description: torchao is a library for custom data types and optimizations.
+      package: py-torchao
+      url: http://pytorch.org/ao
+      versions:
+      - description: torchao is a library for custom data types and optimizations.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.14.1_py314
     - categories: math, machine learning
       defaultVersionName: 0.4.3_py312
       description: Hugging Face Evaluate is a library for easily evaluating machine
@@ -4072,41 +3994,129 @@ software_modules:
       versions:
       - {description: Praat is a speech analysis tool used for doing phonetics by
           computer., markedDefault: false, versionName: 6.4.26}
-    - categories: math, numerical library
-      defaultVersionName: 1.4.1
-      description: 'harminv is a program designed to solve the problem of harmonic
-        inversion: given a time series consisting of a sum of sinusoids (modes), extract
-        their frequencies and amplitudes.'
-      package: harminv
-      url: https://github.com/stevengj/harminv
+    - categories: math, deep learning
+      defaultVersionName: 9.14.0.64
+      description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+        neural networks.
+      package: cudnn
+      url: https://developer.nvidia.com/cudnn
       versions:
-      - {description: 'harminv is a program designed to solve the problem of harmonic
-          inversion: given a time series consisting of a sum of sinusoids (modes),
-          extract their frequencies and amplitudes.', markedDefault: false, versionName: 1.4.1}
-    - categories: math, machine learning
-      defaultVersionName: 2.8_py312
-      description: Transformer Engine (TE) is a library for accelerating Transformer
-        models on NVIDIA GPUs, including using 8-bit floating point (FP8) precision.
-      package: py-transformer-engine
-      url: https://github.com/NVIDIA/TransformerEngine
-      versions:
-      - description: Transformer Engine (TE) is a library for accelerating Transformer
-          models on NVIDIA GPUs, including using 8-bit floating point (FP8) precision.
+      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+          neural networks.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-        versionName: 2.8_py312
-    - categories: math, lib
-      defaultVersionName: 3.0.0_py312
-      description: Python bindings for xgboost
-      package: py-xgboost
-      url: https://github.com/dmlc/xgboost/
-      versions:
-      - description: Python bindings for xgboost
+        versionName: '6.0'
+      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+          neural networks.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-        versionName: 3.0.0_py312
+        versionName: 7.0.1
+      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+          neural networks.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 7.0.4
+      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+          neural networks.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 7.0.5
+      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+          neural networks.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 7.1.4
+      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+          neural networks.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 7.4.1.5
+      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+          neural networks.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 7.6.4
+      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+          neural networks.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 7.6.5
+      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+          neural networks.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 8.1.1.33
+      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+          neural networks.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 8.3.3.40
+      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+          neural networks.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 8.6.0.163
+      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+          neural networks.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 8.9.0.131
+      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+          neural networks.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 9.0.0.312
+      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+          neural networks.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 9.4.0
+      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+          neural networks.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 9.13.1.26
+      - description: NVIDIA cuDNN is a GPU-accelerated library of primitives for deep
+          neural networks.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 9.14.0.64
+    - categories: math, computational geometry
+      defaultVersionName: '4.10'
+      description: polymake is open source software for research in polyhedral geometry.
+      package: polymake
+      url: https://polymake.org
+      versions:
+      - {description: polymake is open source software for research in polyhedral
+          geometry., markedDefault: false, versionName: '4.10'}
+    - categories: math, data science
+      defaultVersionName: 25.10.0_py312
+      description: cuDF is a GPU-accelerated DataFrame library for tabular data processing.
+      package: py-cudf
+      url: https://github.com/rapidsai/cudf
+      versions:
+      - description: cuDF is a GPU-accelerated DataFrame library for tabular data
+          processing.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 25.10.0_py312
     - categories: math, linear algebra
       defaultVersionName: 0.3.0.9
       description: NVIDIA cuDSS is an optimized, first-generation GPU-accelerated
@@ -4168,36 +4178,29 @@ software_modules:
       versions:
       - {description: A mesh and field I/O library and scientific database., markedDefault: false,
         versionName: '4.11'}
-    - categories: math, numerical library
-      defaultVersionName: 1.6.0
-      description: TetGen provides various features to generate good quality and adaptive
-        tetrahedral meshes suitable for numerical methods, such as finite element
-        or finite volume methods.
-      package: tetgen
-      url: http://wias-berlin.de/software/index.jsp?id=TetGen
+    - categories: math, machine learning
+      defaultVersionName: 0.22.1_py312
+      description: The huggingface_hub library allows you to interact with the Hugging
+        Face Hub, a machine learning platform for creators and collaborators.
+      package: py-huggingface-hub
+      url: https://huggingface.co/docs/huggingface_hub
       versions:
-      - {description: 'TetGen provides various features to generate good quality and
-          adaptive tetrahedral meshes suitable for numerical methods, such as finite
-          element or finite volume methods.', markedDefault: false, versionName: 1.6.0}
-    - categories: math, optimization
-      defaultVersionName: 11.0.2
-      description: The Gurobi Optimizer is a commercial optimization solver for mathematical
-        programming.
-      package: gurobi
-      url: http://www.gurobi.com
+      - {description: 'The huggingface_hub library allows you to interact with the
+          Hugging Face Hub, a machine learning platform for creators and collaborators.',
+        markedDefault: false, versionName: 0.22.1_py312}
+    - categories: math, machine learning
+      defaultVersionName: 1.22.0
+      description: 'ONNX Runtime is a cross-platform machine-learning model accelerator,
+        with a flexible interface to integrate hardware-specific libraries. '
+      package: onnxruntime
+      url: https://onnxruntime.ai
       versions:
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 7.5.1}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 8.0.1_py27}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 8.0.1_py36}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 9.0.3_py36}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 10.0.1_py39}
-      - {description: The Gurobi Optimizer is a commercial optimization solver for
-          mathematical programming., markedDefault: false, versionName: 11.0.2}
+      - description: 'ONNX Runtime is a cross-platform machine-learning model accelerator,
+          with a flexible interface to integrate hardware-specific libraries. '
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.22.0
     - categories: math, topic modelling
       defaultVersionName: 4.2.0_py39
       description: Gensim is a Python library for topic modelling, document indexing
@@ -4267,6 +4270,61 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.5.0_py312
+    - categories: math, optimization
+      defaultVersionName: 10.3.0
+      description: Artelys Knitro is an optimization solver for difficult large-scale
+        nonlinear problems.
+      package: knitro
+      url: https://www.artelys.com/en/optimization-tools/knitro
+      versions:
+      - {description: Artelys Knitro is an optimization solver for difficult large-scale
+          nonlinear problems., markedDefault: false, versionName: 12.4.0}
+      - {description: Artelys Knitro is an optimization solver for difficult large-scale
+          nonlinear problems., markedDefault: true, versionName: 10.3.0}
+    - categories: math, numerical library
+      defaultVersionName: 5.2.1
+      description: SuperLU is a general purpose library for the direct solution of
+        large, sparse, nonsymmetric systems of linear equations.
+      package: superlu
+      url: https://github.com/xiaoyeli/superlu
+      versions:
+      - description: SuperLU is a general purpose library for the direct solution
+          of large, sparse, nonsymmetric systems of linear equations.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 5.2.1
+    - categories: math, numerical library
+      defaultVersionName: 2.9.0
+      description: FLINT is a C library for doing number theory.
+      package: flint
+      url: https://flintlib.org/
+      versions:
+      - {description: FLINT is a C library for doing number theory., markedDefault: false,
+        versionName: 2.9.0}
+    - categories: math, deep learning
+      defaultVersionName: 1.8.0_py39
+      description: Sparsity-aware deep learning inference runtime for CPUs.
+      package: py-deepsparse
+      url: https://neuralmagic.com/deepsparse/
+      versions:
+      - {description: Sparsity-aware deep learning inference runtime for CPUs., markedDefault: false,
+        versionName: 1.8.0_py39}
+    - categories: math, numerical library
+      defaultVersionName: 6.0.4
+      description: Software package and libraries for sequential and parallel graph
+        partitioning, static mapping and clustering, sequential mesh and hypergraph
+        partitioning, and sequential and parallel sparse matrix block ordering.
+      package: scotch
+      url: http://www.labri.fr/perso/pelegrin/scotch
+      versions:
+      - description: Software package and libraries for sequential and parallel graph
+          partitioning, static mapping and clustering, sequential mesh and hypergraph
+          partitioning, and sequential and parallel sparse matrix block ordering.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 6.0.4
     - categories: math, numerical library
       defaultVersionName: 1.14.3_py27
       description: NumPy is the fundamental package for scientific computing with
@@ -4294,37 +4352,6 @@ software_modules:
           Python., markedDefault: false, versionName: 2.3.5_py314}
       - {description: NumPy is the fundamental package for scientific computing with
           Python., markedDefault: true, versionName: 1.14.3_py27}
-    - categories: math, deep learning
-      defaultVersionName: 2.1.2_py312
-      description: PyTorch Extension Library of Optimized Scatter Operations.
-      package: py-torch-scatter
-      url: https://github.com/rusty1s/pytorch_scatter
-      versions:
-      - {description: PyTorch Extension Library of Optimized Scatter Operations.,
-        markedDefault: false, versionName: 2.1.2_py312}
-    - categories: math, numerical library
-      defaultVersionName: 2.9.0
-      description: FLINT is a C library for doing number theory.
-      package: flint
-      url: https://flintlib.org/
-      versions:
-      - {description: FLINT is a C library for doing number theory., markedDefault: false,
-        versionName: 2.9.0}
-    - categories: math, deep learning
-      defaultVersionName: 1.8.0_py39
-      description: Sparsity-aware deep learning inference runtime for CPUs.
-      package: py-deepsparse
-      url: https://neuralmagic.com/deepsparse/
-      versions:
-      - {description: Sparsity-aware deep learning inference runtime for CPUs., markedDefault: false,
-        versionName: 1.8.0_py39}
-    - categories: math, numerical library
-      defaultVersionName: 3.18.2_py39
-      description: Python bindings for SLEPc.
-      package: py-slepc4py
-      url: https://slepc.upv.es/
-      versions:
-      - {description: Python bindings for SLEPc., markedDefault: false, versionName: 3.18.2_py39}
     - categories: math, computational geometry
       defaultVersionName: 7.6.2
       description: Open CASCADE Technology (OCCT) is an open-source full-scale 3D
@@ -4334,29 +4361,25 @@ software_modules:
       versions:
       - {description: Open CASCADE Technology (OCCT) is an open-source full-scale
           3D geometry library, markedDefault: false, versionName: 7.6.2}
-    - categories: math, machine learning
-      defaultVersionName: 0.7.0_py312
-      description: vLLM is a fast and easy-to-use library for LLM inference and serving.
-      package: py-vllm
-      url: https://vllm.ai
+    - categories: math, optimization
+      defaultVersionName: 11.0.2
+      description: The Gurobi Optimizer is a commercial optimization solver for mathematical
+        programming.
+      package: gurobi
+      url: http://www.gurobi.com
       versions:
-      - description: vLLM is a fast and easy-to-use library for LLM inference and
-          serving.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.7.0_py312
-    - categories: math, numerical analysis
-      defaultVersionName: 0.0.3
-      description: RunMat is a modern, high-performance runtime for MATLAB® and GNU
-        Octave code that eliminates license fees, vendor lock-in, and performance
-        bottlenecks.
-      package: runmat
-      url: https://runmat.org/
-      versions:
-      - {description: 'RunMat is a modern, high-performance runtime for MATLAB® and
-          GNU Octave code that eliminates license fees, vendor lock-in, and performance
-          bottlenecks.', markedDefault: false, versionName: 0.0.3}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 7.5.1}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 8.0.1_py27}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 8.0.1_py36}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 9.0.3_py36}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 10.0.1_py39}
+      - {description: The Gurobi Optimizer is a commercial optimization solver for
+          mathematical programming., markedDefault: false, versionName: 11.0.2}
     - categories: math, numerical library
       defaultVersionName: 1.2.1
       description: GNU MPC is a C library for the arithmetic of complex numbers with
@@ -4367,16 +4390,20 @@ software_modules:
       - {description: GNU MPC is a C library for the arithmetic of complex numbers
           with arbitrarily high precision and correct rounding of the result., markedDefault: false,
         versionName: 1.2.1}
-    - categories: math, machine learning
-      defaultVersionName: 0.22.1_py312
-      description: The huggingface_hub library allows you to interact with the Hugging
-        Face Hub, a machine learning platform for creators and collaborators.
-      package: py-huggingface-hub
-      url: https://huggingface.co/docs/huggingface_hub
+    - categories: math, computational geometry
+      defaultVersionName: '2020.2'
+      description: Qhull computes the convex hull, Delaunay triangulation, Voronoi
+        diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
+        and furthest-site Voronoi diagram.
+      package: qhull
+      url: http://www.qhull.org/
       versions:
-      - {description: 'The huggingface_hub library allows you to interact with the
-          Hugging Face Hub, a machine learning platform for creators and collaborators.',
-        markedDefault: false, versionName: 0.22.1_py312}
+      - {description: 'Qhull computes the convex hull, Delaunay triangulation, Voronoi
+          diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
+          and furthest-site Voronoi diagram.', markedDefault: false, versionName: '2015.2'}
+      - {description: 'Qhull computes the convex hull, Delaunay triangulation, Voronoi
+          diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
+          and furthest-site Voronoi diagram.', markedDefault: false, versionName: '2020.2'}
     - categories: math, symbolic
       defaultVersionName: 5.47.0
       description: Maxima is a system for the manipulation of symbolic and numerical
@@ -4397,22 +4424,21 @@ software_modules:
       - {description: SUNDIALS is a family of software packages providing robust and
           efficient time integrators and nonlinear solvers that can easily be incorporated
           into existing simulation codes., markedDefault: false, versionName: 6.4.1}
-    - categories: math, machine learning
-      defaultVersionName: 0.1.8_py312
-      description: XGrammar is open-source solution for flexible, portable, and fast
-        structured generations, aiming at bring flexible zero-overhead structure generation
-        everywhere.
-      package: py-xgrammar
-      url: https://xgrammar.mlc.ai/
+    - categories: math, numerical library
+      defaultVersionName: 4.0.3
+      description: ParMETIS is an MPI-based parallel library that implements a variety
+        of algorithms for partitioning unstructured graphs, meshes, and for computing
+        fill-reducing orderings of sparse matrices.
+      package: parmetis
+      url: http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview
       versions:
-      - description: XGrammar is open-source solution for flexible, portable, and
-          fast structured generations, aiming at bring flexible zero-overhead structure
-          generation everywhere.
+      - description: ParMETIS is an MPI-based parallel library that implements a variety
+          of algorithms for partitioning unstructured graphs, meshes, and for computing
+          fill-reducing orderings of sparse matrices.
         markedDefault: false
         properties:
-          arch: {gpu: 1}
           parallel: {mpi: 1}
-        versionName: 0.1.8_py312
+        versionName: 4.0.3
     - categories: math, optimization
       defaultVersionName: 2.2.0
       description: Ceres Solver is an open source C++ library for modeling and solving
@@ -4453,61 +4479,56 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 7.4.0
-    - categories: math, deep learning
-      defaultVersionName: 0.21.0_py39
-      description: Gym is a toolkit for developing and comparing reinforcement learning
-        algorithms.
-      package: py-gym
-      url: https://gym.openai.com/
+    - categories: math, machine learning
+      defaultVersionName: 0.7.0_py312
+      description: vLLM is a fast and easy-to-use library for LLM inference and serving.
+      package: py-vllm
+      url: https://vllm.ai
       versions:
-      - {description: Gym is a toolkit for developing and comparing reinforcement
-          learning algorithms., markedDefault: false, versionName: 0.21.0_py39}
-    - categories: math, optimization
-      defaultVersionName: 10.3.0
-      description: Artelys Knitro is an optimization solver for difficult large-scale
-        nonlinear problems.
-      package: knitro
-      url: https://www.artelys.com/en/optimization-tools/knitro
-      versions:
-      - {description: Artelys Knitro is an optimization solver for difficult large-scale
-          nonlinear problems., markedDefault: false, versionName: 12.4.0}
-      - {description: Artelys Knitro is an optimization solver for difficult large-scale
-          nonlinear problems., markedDefault: true, versionName: 10.3.0}
+      - description: vLLM is a fast and easy-to-use library for LLM inference and
+          serving.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.7.0_py312
     - categories: math, numerical library
-      defaultVersionName: 3.9.0
-      description: Collection of Fortran77 subroutines designed to solve large scale
-        eigenvalue problems.
-      package: arpack
-      url: https://github.com/opencollab/arpack-ng
+      defaultVersionName: 1.4.1
+      description: 'harminv is a program designed to solve the problem of harmonic
+        inversion: given a time series consisting of a sum of sinusoids (modes), extract
+        their frequencies and amplitudes.'
+      package: harminv
+      url: https://github.com/stevengj/harminv
       versions:
-      - {description: Collection of Fortran77 subroutines designed to solve large
-          scale eigenvalue problems., markedDefault: false, versionName: 3.5.0}
-      - description: Collection of Fortran77 subroutines designed to solve large scale
-          eigenvalue problems.
+      - {description: 'harminv is a program designed to solve the problem of harmonic
+          inversion: given a time series consisting of a sum of sinusoids (modes),
+          extract their frequencies and amplitudes.', markedDefault: false, versionName: 1.4.1}
+    - categories: math, machine learning
+      defaultVersionName: 1.0.12_py312
+      description: timm is a library containing SOTA computer vision models, layers,
+        utilities, optimizers, schedulers, data-loaders, augmentations, and training/evaluation
+        scripts.
+      package: py-timm
+      url: https://huggingface.co/docs/timm
+      versions:
+      - {description: 'timm is a library containing SOTA computer vision models, layers,
+          utilities, optimizers, schedulers, data-loaders, augmentations, and training/evaluation
+          scripts.', markedDefault: false, versionName: 1.0.12_py312}
+    - categories: math, machine learning
+      defaultVersionName: 0.1.8_py312
+      description: XGrammar is open-source solution for flexible, portable, and fast
+        structured generations, aiming at bring flexible zero-overhead structure generation
+        everywhere.
+      package: py-xgrammar
+      url: https://xgrammar.mlc.ai/
+      versions:
+      - description: XGrammar is open-source solution for flexible, portable, and
+          fast structured generations, aiming at bring flexible zero-overhead structure
+          generation everywhere.
         markedDefault: false
         properties:
+          arch: {gpu: 1}
           parallel: {mpi: 1}
-        versionName: 3.7.0
-      - description: Collection of Fortran77 subroutines designed to solve large scale
-          eigenvalue problems.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 3.9.0
-    - categories: math, computational geometry
-      defaultVersionName: '2020.2'
-      description: Qhull computes the convex hull, Delaunay triangulation, Voronoi
-        diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
-        and furthest-site Voronoi diagram.
-      package: qhull
-      url: http://www.qhull.org/
-      versions:
-      - {description: 'Qhull computes the convex hull, Delaunay triangulation, Voronoi
-          diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
-          and furthest-site Voronoi diagram.', markedDefault: false, versionName: '2015.2'}
-      - {description: 'Qhull computes the convex hull, Delaunay triangulation, Voronoi
-          diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
-          and furthest-site Voronoi diagram.', markedDefault: false, versionName: '2020.2'}
+        versionName: 0.1.8_py312
     - categories: math, deep learning
       defaultVersionName: 8.3.14_py312
       description: Ultra YOLO11 is a cutting-edge, state-of-the-art (SOTA) model that
@@ -4536,6 +4557,15 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: '25.06'
+    - categories: math, deep learning
+      defaultVersionName: 0.21.0_py39
+      description: Gym is a toolkit for developing and comparing reinforcement learning
+        algorithms.
+      package: py-gym
+      url: https://gym.openai.com/
+      versions:
+      - {description: Gym is a toolkit for developing and comparing reinforcement
+          learning algorithms., markedDefault: false, versionName: 0.21.0_py39}
     - categories: math, numerical library
       defaultVersionName: 3.1.0
       description: libflame is a portable library for dense matrix computations, providing
@@ -4573,6 +4603,28 @@ software_modules:
           arch: {gpu: 1}
           parallel: {mpi: 1}
         versionName: 0.12.1_py27
+    - categories: math, statistics
+      defaultVersionName: '9.4'
+      description: SAS is a software suite developed by SAS Institute for advanced
+        analytics, multivariate analyses, business intelligence, data management,
+        and predictive analytics.
+      package: sas
+      url: http://www.sas.com/
+      versions:
+      - description: SAS is a software suite developed by SAS Institute for advanced
+          analytics, multivariate analyses, business intelligence, data management,
+          and predictive analytics.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: '9.4'
+    - categories: math, numerical library
+      defaultVersionName: 3.18.2_py39
+      description: Python bindings for SLEPc.
+      package: py-slepc4py
+      url: https://slepc.upv.es/
+      versions:
+      - {description: Python bindings for SLEPc., markedDefault: false, versionName: 3.18.2_py39}
     - categories: math, linear algebra
       defaultVersionName: 0.6.3.2
       description: NVIDIA cuSPARSELt is a high-performance CUDA library for sparse
@@ -4592,56 +4644,21 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.6.3.2
-    - categories: math, computational geometry
-      defaultVersionName: '4.10'
-      description: polymake is open source software for research in polyhedral geometry.
-      package: polymake
-      url: https://polymake.org
+    - categories: math, deep learning
+      defaultVersionName: 0.24.1_py314
+      description: Datasets, model architectures, and common image transformations
+        for computer vision for PyTorch.
+      package: py-torchvision
+      url: http://pytorch.org/vision
       versions:
-      - {description: polymake is open source software for research in polyhedral
-          geometry., markedDefault: false, versionName: '4.10'}
-    - categories: math, numerical library
-      defaultVersionName: 6.0.4
-      description: Software package and libraries for sequential and parallel graph
-        partitioning, static mapping and clustering, sequential mesh and hypergraph
-        partitioning, and sequential and parallel sparse matrix block ordering.
-      package: scotch
-      url: http://www.labri.fr/perso/pelegrin/scotch
-      versions:
-      - description: Software package and libraries for sequential and parallel graph
-          partitioning, static mapping and clustering, sequential mesh and hypergraph
-          partitioning, and sequential and parallel sparse matrix block ordering.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 6.0.4
-    - categories: math, data science
-      defaultVersionName: 25.10.0_py312
-      description: cuDF is a GPU-accelerated DataFrame library for tabular data processing.
-      package: py-cudf
-      url: https://github.com/rapidsai/cudf
-      versions:
-      - description: cuDF is a GPU-accelerated DataFrame library for tabular data
-          processing.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 25.10.0_py312
-    - categories: math, numerical library
-      defaultVersionName: 4.0.3
-      description: ParMETIS is an MPI-based parallel library that implements a variety
-        of algorithms for partitioning unstructured graphs, meshes, and for computing
-        fill-reducing orderings of sparse matrices.
-      package: parmetis
-      url: http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview
-      versions:
-      - description: ParMETIS is an MPI-based parallel library that implements a variety
-          of algorithms for partitioning unstructured graphs, meshes, and for computing
-          fill-reducing orderings of sparse matrices.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 4.0.3
+      - {description: 'Datasets, model architectures, and common image transformations
+          for computer vision for PyTorch.', markedDefault: false, versionName: 0.15.1_py39}
+      - {description: 'Datasets, model architectures, and common image transformations
+          for computer vision for PyTorch.', markedDefault: false, versionName: 0.17.1_py312}
+      - {description: 'Datasets, model architectures, and common image transformations
+          for computer vision for PyTorch.', markedDefault: false, versionName: 0.19.1_py312}
+      - {description: 'Datasets, model architectures, and common image transformations
+          for computer vision for PyTorch.', markedDefault: false, versionName: 0.24.1_py314}
     - categories: math, numerical library
       defaultVersionName: '2019'
       description: Intel Math Kernel Library (Intel MKL) is a library of optimized
