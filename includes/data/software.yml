@@ -2935,17 +2935,19 @@ software_modules:
       versions:
       - {description: tinygrad is a deep learning framework that aims to provide a
           balance between simplicity and functionality., markedDefault: false, versionName: 0.8.0_py312}
-    - categories: math, lib
-      defaultVersionName: 3.0.0_py312
-      description: Python bindings for xgboost
-      package: py-xgboost
-      url: https://github.com/dmlc/xgboost/
+    - categories: math, machine learning
+      defaultVersionName: 1.22.0
+      description: 'ONNX Runtime is a cross-platform machine-learning model accelerator,
+        with a flexible interface to integrate hardware-specific libraries. '
+      package: onnxruntime
+      url: https://onnxruntime.ai
       versions:
-      - description: Python bindings for xgboost
+      - description: 'ONNX Runtime is a cross-platform machine-learning model accelerator,
+          with a flexible interface to integrate hardware-specific libraries. '
         markedDefault: false
         properties:
           arch: {gpu: 1}
-        versionName: 3.0.0_py312
+        versionName: 1.22.0
     - categories: math, data science
       defaultVersionName: 25.8.0_py312
       description: RAPIDS Machine Learning Library.
@@ -2957,27 +2959,17 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 25.8.0_py312
-    - categories: math, machine learning
-      defaultVersionName: 0.19.1_py27
-      description: Scikit-learn is a free software machine learning library for the
-        Python programming language.
-      package: py-scikit-learn
-      url: http://scikit-learn.org
+    - categories: math, numerical library
+      defaultVersionName: 1.6.0
+      description: TetGen provides various features to generate good quality and adaptive
+        tetrahedral meshes suitable for numerical methods, such as finite element
+        or finite volume methods.
+      package: tetgen
+      url: http://wias-berlin.de/software/index.jsp?id=TetGen
       versions:
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 0.19.1_py36}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 0.24.2_py36}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 1.0.2_py39}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 1.3.2_py39}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 1.5.1_py312}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: false, versionName: 1.8.0_py314}
-      - {description: Scikit-learn is a free software machine learning library for
-          the Python programming language., markedDefault: true, versionName: 0.19.1_py27}
+      - {description: 'TetGen provides various features to generate good quality and
+          adaptive tetrahedral meshes suitable for numerical methods, such as finite
+          element or finite volume methods.', markedDefault: false, versionName: 1.6.0}
     - categories: math, statistics
       defaultVersionName: 4.3.1
       description: Just another Gibbs sampler (JAGS) is a program for simulation from
@@ -2991,54 +2983,43 @@ software_modules:
       - {description: Just another Gibbs sampler (JAGS) is a program for simulation
           from Bayesian hierarchical models using Markov chain Monte Carlo (MCMC).,
         markedDefault: false, versionName: 4.3.1}
-    - categories: math, numerical library
-      defaultVersionName: 3.1.0
-      description: libflame is a portable library for dense matrix computations, providing
-        much of the functionality present in LAPACK
-      package: libflame
-      url: https://github.com/amd/libflame
-      versions:
-      - {description: 'libflame is a portable library for dense matrix computations,
-          providing much of the functionality present in LAPACK', markedDefault: false,
-        versionName: '2.1'}
-      - {description: 'libflame is a portable library for dense matrix computations,
-          providing much of the functionality present in LAPACK', markedDefault: false,
-        versionName: 2.2.4}
-      - {description: 'libflame is a portable library for dense matrix computations,
-          providing much of the functionality present in LAPACK', markedDefault: false,
-        versionName: 3.1.0}
     - categories: math, deep learning
-      defaultVersionName: 0.12.1_py27
-      description: Horovod is a distributed training framework for TensorFlow. The
-        goal of Horovod is to make distributed Deep Learning fast and easy to use.
-      package: py-horovod
-      url: https://github.com/uber/horovod
+      defaultVersionName: 1.8_py27
+      description: TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet, NumPy...)
+      package: py-tensorboardx
+      url: https://tensorboardx.readthedocs.io
       versions:
-      - description: Horovod is a distributed training framework for TensorFlow. The
-          goal of Horovod is to make distributed Deep Learning fast and easy to use.
+      - description: TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet,
+          NumPy...)
         markedDefault: false
         properties:
           arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 0.12.1_py36
-      - description: Horovod is a distributed training framework for TensorFlow. The
-          goal of Horovod is to make distributed Deep Learning fast and easy to use.
-        markedDefault: true
+        versionName: 1.8_py27
+    - categories: math, machine learning
+      defaultVersionName: 2.10_py314
+      description: Transformer Engine (TE) is a library for accelerating Transformer
+        models on NVIDIA GPUs, including using 8-bit floating point (FP8) precision.
+      package: py-transformer-engine
+      url: https://github.com/NVIDIA/TransformerEngine
+      versions:
+      - description: Transformer Engine (TE) is a library for accelerating Transformer
+          models on NVIDIA GPUs, including using 8-bit floating point (FP8) precision.
+        markedDefault: false
         properties:
           arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 0.12.1_py27
-    - categories: math, numerical library
-      defaultVersionName: 1.4.1
-      description: 'harminv is a program designed to solve the problem of harmonic
-        inversion: given a time series consisting of a sum of sinusoids (modes), extract
-        their frequencies and amplitudes.'
-      package: harminv
-      url: https://github.com/stevengj/harminv
+        versionName: 2.10_py314
+    - categories: math, lib
+      defaultVersionName: 0.1.80_py314
+      description: Library for reading and writing large multi-dimensional arrays.
+      package: py-tensorstore
+      url: https://github.com/google/tensorstore
       versions:
-      - {description: 'harminv is a program designed to solve the problem of harmonic
-          inversion: given a time series consisting of a sum of sinusoids (modes),
-          extract their frequencies and amplitudes.', markedDefault: false, versionName: 1.4.1}
+      - {description: Library for reading and writing large multi-dimensional arrays.,
+        markedDefault: false, versionName: 0.1.71_py312}
+      - {description: Library for reading and writing large multi-dimensional arrays.,
+        markedDefault: false, versionName: 0.1.78_py312}
+      - {description: Library for reading and writing large multi-dimensional arrays.,
+        markedDefault: false, versionName: 0.1.80_py314}
     - categories: math, deep learning
       defaultVersionName: 2.1.0_py36
       description: TensorFlow™ is an open source software library for numerical computation
@@ -3133,15 +3114,16 @@ software_modules:
       versions:
       - {description: NLopt is a free/open-source library for nonlinear optimization.,
         markedDefault: false, versionName: 2.6.2}
-    - categories: math, deep learning
-      defaultVersionName: 0.21.0_py39
-      description: Gym is a toolkit for developing and comparing reinforcement learning
-        algorithms.
-      package: py-gym
-      url: https://gym.openai.com/
+    - categories: math, machine learning
+      defaultVersionName: 0.7.0_py314
+      description: Simple, safe way to store and distribute tensors.
+      package: py-safetensors
+      url: https://huggingface.co/docs/safetensors
       versions:
-      - {description: Gym is a toolkit for developing and comparing reinforcement
-          learning algorithms., markedDefault: false, versionName: 0.21.0_py39}
+      - {description: 'Simple, safe way to store and distribute tensors.', markedDefault: false,
+        versionName: 0.4.2_py312}
+      - {description: 'Simple, safe way to store and distribute tensors.', markedDefault: false,
+        versionName: 0.7.0_py314}
     - categories: math, numerical library
       defaultVersionName: 4.1.0
       description: The MPFR library is a C library for multiple-precision floating-point
@@ -3200,19 +3182,17 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 1.6.3_py27
-    - categories: math, deep learning
-      defaultVersionName: 0.15.4_py312
-      description: DeepSpeed is a deep learning optimization library that makes distributed
-        training and inference easy, efficient, and effective.
-      package: py-deepspeed
-      url: https://www.deepspeed.ai/
+    - categories: math, data science
+      defaultVersionName: 25.8.0_py312
+      description: RAPIDS GPU-accelerated image processing library.
+      package: py-cucim
+      url: https://github.com/rapidsai/cucim
       versions:
-      - description: DeepSpeed is a deep learning optimization library that makes
-          distributed training and inference easy, efficient, and effective.
+      - description: RAPIDS GPU-accelerated image processing library.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-        versionName: 0.15.4_py312
+        versionName: 25.8.0_py312
     - categories: math, numerical library
       defaultVersionName: 2017.1_py27
       description: PyUblas provides a seamless glue layer between Numpy and Boost.Ublas
@@ -3309,6 +3289,19 @@ software_modules:
       versions:
       - {description: The MPI-IS Mesh Processing Library contains core functions for
           manipulating meshes and visualizing them., markedDefault: false, versionName: 0.4_py39}
+    - categories: math, deep learning
+      defaultVersionName: 2.6.0_py314
+      description: Pretrain, finetune ANY AI model of ANY size on 1 or 10,000+ GPUs
+        with zero code changes.
+      package: py-pytorch-lightning
+      url: https://github.com/Lightning-AI/pytorch-lightning
+      versions:
+      - description: Pretrain, finetune ANY AI model of ANY size on 1 or 10,000+ GPUs
+          with zero code changes.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.6.0_py314
     - categories: math, symbolic
       defaultVersionName: 0.12.3_py39
       description: High-Performance Symbolic Regression in Python and Julia.
@@ -3369,22 +3362,28 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 25.8.0_py312
-    - categories: math, machine learning
-      defaultVersionName: 0.1.8_py312
-      description: XGrammar is open-source solution for flexible, portable, and fast
-        structured generations, aiming at bring flexible zero-overhead structure generation
-        everywhere.
-      package: py-xgrammar
-      url: https://xgrammar.mlc.ai/
+    - categories: math, lib
+      defaultVersionName: 0.8.0_py314
+      description: cuEquivariance is an NVIDIA Python library designed to facilitate
+        the construction of high-performance geometric neural networks using segmented
+        polynomials and triangular operations.
+      package: py-cuequivariance
+      url: https://github.com/NVIDIA/cuEquivariance
       versions:
-      - description: XGrammar is open-source solution for flexible, portable, and
-          fast structured generations, aiming at bring flexible zero-overhead structure
-          generation everywhere.
+      - description: cuEquivariance is an NVIDIA Python library designed to facilitate
+          the construction of high-performance geometric neural networks using segmented
+          polynomials and triangular operations.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 0.1.8_py312
+        versionName: 0.6.0_py312
+      - description: cuEquivariance is an NVIDIA Python library designed to facilitate
+          the construction of high-performance geometric neural networks using segmented
+          polynomials and triangular operations.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.8.0_py314
     - categories: math, numerical library
       defaultVersionName: 4.0.1
       description: mpdecimal is a package for correctly-rounded arbitrary precision
@@ -3917,28 +3916,32 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 10.0.1_py312
-    - categories: math, deep learning
-      defaultVersionName: 0.5.6_py314
-      description: ONNX Script enables developers to naturally author ONNX functions
-        and models using a subset of Python.
-      package: py-onnxscript
-      url: https://microsoft.github.io/onnxscript/
-      versions:
-      - {description: ONNX Script enables developers to naturally author ONNX functions
-          and models using a subset of Python., markedDefault: false, versionName: 0.5.6_py314}
     - categories: math, numerical library
-      defaultVersionName: 0.5.0_py312
-      description: Optimal transport tools implemented with the JAX framework, to
-        solve large scale matching problems of any flavor.
-      package: py-ott-jax
-      url: https://github.com/ott-jax/ott
+      defaultVersionName: '4.63'
+      description: The GLPK (GNU Linear Programming Kit) package is intended for solving
+        large-scale linear programming (LP), mixed integer programming (MIP), and
+        other related problems.
+      package: glpk
+      url: http://www.openblas.net/
       versions:
-      - description: Optimal transport tools implemented with the JAX framework, to
-          solve large scale matching problems of any flavor.
+      - {description: 'The GLPK (GNU Linear Programming Kit) package is intended for
+          solving large-scale linear programming (LP), mixed integer programming (MIP),
+          and other related problems.', markedDefault: false, versionName: '4.63'}
+    - categories: math, statistics
+      defaultVersionName: '9.4'
+      description: SAS is a software suite developed by SAS Institute for advanced
+        analytics, multivariate analyses, business intelligence, data management,
+        and predictive analytics.
+      package: sas
+      url: http://www.sas.com/
+      versions:
+      - description: SAS is a software suite developed by SAS Institute for advanced
+          analytics, multivariate analyses, business intelligence, data management,
+          and predictive analytics.
         markedDefault: false
         properties:
-          arch: {gpu: 1}
-        versionName: 0.5.0_py312
+          license: {restricted: 1}
+        versionName: '9.4'
     - categories: math, computational geometry
       defaultVersionName: '4.10'
       description: polymake is open source software for research in polyhedral geometry.
@@ -3976,27 +3979,15 @@ software_modules:
       url: https://mumps-solver.org/
       versions:
       - {description: A parallel sparse direct solver., markedDefault: false, versionName: 5.1.2}
-    - categories: math, numerical library
-      defaultVersionName: 3.9.0
-      description: Collection of Fortran77 subroutines designed to solve large scale
-        eigenvalue problems.
-      package: arpack
-      url: https://github.com/opencollab/arpack-ng
+    - categories: math, deep learning
+      defaultVersionName: 0.5.6_py314
+      description: ONNX Script enables developers to naturally author ONNX functions
+        and models using a subset of Python.
+      package: py-onnxscript
+      url: https://microsoft.github.io/onnxscript/
       versions:
-      - {description: Collection of Fortran77 subroutines designed to solve large
-          scale eigenvalue problems., markedDefault: false, versionName: 3.5.0}
-      - description: Collection of Fortran77 subroutines designed to solve large scale
-          eigenvalue problems.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 3.7.0
-      - description: Collection of Fortran77 subroutines designed to solve large scale
-          eigenvalue problems.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 3.9.0
+      - {description: ONNX Script enables developers to naturally author ONNX functions
+          and models using a subset of Python., markedDefault: false, versionName: 0.5.6_py314}
     - categories: math, numerical library
       defaultVersionName: '1.17'
       description: LIBXSMM is a library for small dense and small sparse matrix-matrix
@@ -4066,17 +4057,15 @@ software_modules:
       versions:
       - {description: Extra precise basic linear algebra subroutines., markedDefault: false,
         versionName: 1.0.248}
-    - categories: math, machine learning
-      defaultVersionName: 0.4.6_py314
-      description: Hugging Face Evaluate is a library for easily evaluating machine
-        learning models and datasets.
-      package: py-evaluate
-      url: https://huggingface.co/docs/evaluate
+    - categories: math, numerical library
+      defaultVersionName: 3.18.5_py39
+      description: Python bindings for PETSc, the Portable, Extensible Toolkit for
+        Scientific Computation.
+      package: py-petsc4py
+      url: http://petsc.org
       versions:
-      - {description: Hugging Face Evaluate is a library for easily evaluating machine
-          learning models and datasets., markedDefault: false, versionName: 0.4.3_py312}
-      - {description: Hugging Face Evaluate is a library for easily evaluating machine
-          learning models and datasets., markedDefault: false, versionName: 0.4.6_py314}
+      - {description: 'Python bindings for PETSc, the Portable, Extensible Toolkit
+          for Scientific Computation.', markedDefault: false, versionName: 3.18.5_py39}
     - categories: math, numerical library
       defaultVersionName: 0.2.1_py312
       description: NVIDIA Math Libraries for the Python Ecosystem
@@ -4088,16 +4077,6 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.2.1_py312
-    - categories: math, machine learning
-      defaultVersionName: 0.7.0_py314
-      description: Simple, safe way to store and distribute tensors.
-      package: py-safetensors
-      url: https://huggingface.co/docs/safetensors
-      versions:
-      - {description: 'Simple, safe way to store and distribute tensors.', markedDefault: false,
-        versionName: 0.4.2_py312}
-      - {description: 'Simple, safe way to store and distribute tensors.', markedDefault: false,
-        versionName: 0.7.0_py314}
     - categories: math, computational geometry
       defaultVersionName: 7.6.2
       description: Open CASCADE Technology (OCCT) is an open-source full-scale 3D
@@ -4107,15 +4086,6 @@ software_modules:
       versions:
       - {description: Open CASCADE Technology (OCCT) is an open-source full-scale
           3D geometry library, markedDefault: false, versionName: 7.6.2}
-    - categories: math, deep learning
-      defaultVersionName: 0.11.0_py314
-      description: A PyTorch repo for data loading and utilities to be shared by the
-        PyTorch domain libraries.
-      package: py-torchdata
-      url: http://pytorch.org/data
-      versions:
-      - {description: A PyTorch repo for data loading and utilities to be shared by
-          the PyTorch domain libraries., markedDefault: false, versionName: 0.11.0_py314}
     - categories: math, numerical library
       defaultVersionName: 5.1.0
       description: METIS is a set of serial programs for partitioning graphs, partitioning
@@ -4126,71 +4096,138 @@ software_modules:
       - {description: 'METIS is a set of serial programs for partitioning graphs,
           partitioning finite element meshes, and producing fill reducing orderings
           for sparse matrices.', markedDefault: false, versionName: 5.1.0}
-    - categories: math, lib
-      defaultVersionName: 0.1.80_py314
-      description: Library for reading and writing large multi-dimensional arrays.
-      package: py-tensorstore
-      url: https://github.com/google/tensorstore
-      versions:
-      - {description: Library for reading and writing large multi-dimensional arrays.,
-        markedDefault: false, versionName: 0.1.71_py312}
-      - {description: Library for reading and writing large multi-dimensional arrays.,
-        markedDefault: false, versionName: 0.1.78_py312}
-      - {description: Library for reading and writing large multi-dimensional arrays.,
-        markedDefault: false, versionName: 0.1.80_py314}
-    - categories: math, deep learning
-      defaultVersionName: 1.8_py27
-      description: TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet, NumPy...)
-      package: py-tensorboardx
-      url: https://tensorboardx.readthedocs.io
-      versions:
-      - description: TensorboardX is TensorBoard™ for PyTorch (and Chainer, MXNet,
-          NumPy...)
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 1.8_py27
-    - categories: math, optimization
-      defaultVersionName: 2.10.0_py39
-      description: Optuna is an automatic hyperparameter optimization software framework,
-        particularly designed for machine learning.
-      package: py-optuna
-      url: https://optuna.readthedocs.io/
-      versions:
-      - {description: 'Optuna is an automatic hyperparameter optimization software
-          framework, particularly designed for machine learning.', markedDefault: false,
-        versionName: 2.10.0_py39}
-    - categories: math, lib
-      defaultVersionName: 0.8.0_py314
-      description: cuEquivariance is an NVIDIA Python library designed to facilitate
-        the construction of high-performance geometric neural networks using segmented
-        polynomials and triangular operations.
-      package: py-cuequivariance
-      url: https://github.com/NVIDIA/cuEquivariance
-      versions:
-      - description: cuEquivariance is an NVIDIA Python library designed to facilitate
-          the construction of high-performance geometric neural networks using segmented
-          polynomials and triangular operations.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.6.0_py312
-      - description: cuEquivariance is an NVIDIA Python library designed to facilitate
-          the construction of high-performance geometric neural networks using segmented
-          polynomials and triangular operations.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.8.0_py314
     - categories: math, numerical library
-      defaultVersionName: 3.18.5_py39
-      description: Python bindings for PETSc, the Portable, Extensible Toolkit for
-        Scientific Computation.
-      package: py-petsc4py
-      url: http://petsc.org
+      defaultVersionName: 1.0_py39
+      description: Autograd can automatically differentiate native Python and Numpy
+        code.
+      package: py-autograd
+      url: https://github.com/HIPS/autograd
       versions:
-      - {description: 'Python bindings for PETSc, the Portable, Extensible Toolkit
-          for Scientific Computation.', markedDefault: false, versionName: 3.18.5_py39}
+      - description: Autograd can automatically differentiate native Python and Numpy
+          code.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.0_py39
+    - categories: math, numerical library
+      defaultVersionName: 1.4.1
+      description: 'harminv is a program designed to solve the problem of harmonic
+        inversion: given a time series consisting of a sum of sinusoids (modes), extract
+        their frequencies and amplitudes.'
+      package: harminv
+      url: https://github.com/stevengj/harminv
+      versions:
+      - {description: 'harminv is a program designed to solve the problem of harmonic
+          inversion: given a time series consisting of a sum of sinusoids (modes),
+          extract their frequencies and amplitudes.', markedDefault: false, versionName: 1.4.1}
+    - categories: math, deep learning
+      defaultVersionName: 0.12.1_py27
+      description: Horovod is a distributed training framework for TensorFlow. The
+        goal of Horovod is to make distributed Deep Learning fast and easy to use.
+      package: py-horovod
+      url: https://github.com/uber/horovod
+      versions:
+      - description: Horovod is a distributed training framework for TensorFlow. The
+          goal of Horovod is to make distributed Deep Learning fast and easy to use.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 0.12.1_py36
+      - description: Horovod is a distributed training framework for TensorFlow. The
+          goal of Horovod is to make distributed Deep Learning fast and easy to use.
+        markedDefault: true
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 0.12.1_py27
+    - categories: math, numerical library
+      defaultVersionName: 3.1.0
+      description: libflame is a portable library for dense matrix computations, providing
+        much of the functionality present in LAPACK
+      package: libflame
+      url: https://github.com/amd/libflame
+      versions:
+      - {description: 'libflame is a portable library for dense matrix computations,
+          providing much of the functionality present in LAPACK', markedDefault: false,
+        versionName: '2.1'}
+      - {description: 'libflame is a portable library for dense matrix computations,
+          providing much of the functionality present in LAPACK', markedDefault: false,
+        versionName: 2.2.4}
+      - {description: 'libflame is a portable library for dense matrix computations,
+          providing much of the functionality present in LAPACK', markedDefault: false,
+        versionName: 3.1.0}
+    - categories: math, lib
+      defaultVersionName: 3.0.0_py312
+      description: Python bindings for xgboost
+      package: py-xgboost
+      url: https://github.com/dmlc/xgboost/
+      versions:
+      - description: Python bindings for xgboost
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 3.0.0_py312
+    - categories: math, statistics
+      defaultVersionName: '15'
+      description: Stata is a complete, integrated statistical software package that
+        provides everything you need for data analysis, data management, and graphics.
+      package: stata
+      url: https://www.stata.com
+      versions:
+      - description: Stata is a complete, integrated statistical software package
+          that provides everything you need for data analysis, data management, and
+          graphics.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: '14'
+      - description: Stata is a complete, integrated statistical software package
+          that provides everything you need for data analysis, data management, and
+          graphics.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: '16'
+      - description: Stata is a complete, integrated statistical software package
+          that provides everything you need for data analysis, data management, and
+          graphics.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: '17'
+      - description: Stata is a complete, integrated statistical software package
+          that provides everything you need for data analysis, data management, and
+          graphics.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: '18'
+      - description: Stata is a complete, integrated statistical software package
+          that provides everything you need for data analysis, data management, and
+          graphics.
+        markedDefault: false
+        properties:
+          license: {restricted: 1}
+        versionName: '19'
+      - description: Stata is a complete, integrated statistical software package
+          that provides everything you need for data analysis, data management, and
+          graphics.
+        markedDefault: true
+        properties:
+          license: {restricted: 1}
+        versionName: '15'
+    - categories: math, optimization
+      defaultVersionName: 10.3.0
+      description: Artelys Knitro is an optimization solver for difficult large-scale
+        nonlinear problems.
+      package: knitro
+      url: https://www.artelys.com/en/optimization-tools/knitro
+      versions:
+      - {description: Artelys Knitro is an optimization solver for difficult large-scale
+          nonlinear problems., markedDefault: false, versionName: 12.4.0}
+      - {description: Artelys Knitro is an optimization solver for difficult large-scale
+          nonlinear problems., markedDefault: true, versionName: 10.3.0}
     - categories: math, statistics
       defaultVersionName: '1.3'
       description: GNU datamash is a command-line program which performs basic numeric,
@@ -4224,19 +4261,18 @@ software_modules:
       - {description: GNU libmatheval is a library (callable from C and Fortran) to
           parse and evaluate symbolic expressions input as text., markedDefault: false,
         versionName: 1.1.11}
-    - categories: math, machine learning
-      defaultVersionName: 1.22.0
-      description: 'ONNX Runtime is a cross-platform machine-learning model accelerator,
-        with a flexible interface to integrate hardware-specific libraries. '
-      package: onnxruntime
-      url: https://onnxruntime.ai
+    - categories: math, deep learning
+      defaultVersionName: 2.9.1_py314
+      description: Torchaudio is a library for audio and signal processing with PyTorch.
+      package: py-torchaudio
+      url: http://pytorch.org/audio
       versions:
-      - description: 'ONNX Runtime is a cross-platform machine-learning model accelerator,
-          with a flexible interface to integrate hardware-specific libraries. '
+      - description: Torchaudio is a library for audio and signal processing with
+          PyTorch.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-        versionName: 1.22.0
+        versionName: 2.9.1_py314
     - categories: math, numerical library
       defaultVersionName: 1.1.0_py27
       description: The SciPy library provides many user-friendly and efficient numerical
@@ -4279,17 +4315,17 @@ software_modules:
         properties:
           license: {restricted: 1}
         versionName: 13.1.0
-    - categories: math, neural networks
-      defaultVersionName: 0.5.8_py314
-      description: A modular framework for neural networks with Euclidean symmetry.
-      package: py-e3nn
-      url: https://github.com/e3nn/e3nn
+    - categories: math, machine learning
+      defaultVersionName: 0.4.6_py314
+      description: Hugging Face Evaluate is a library for easily evaluating machine
+        learning models and datasets.
+      package: py-evaluate
+      url: https://huggingface.co/docs/evaluate
       versions:
-      - description: A modular framework for neural networks with Euclidean symmetry.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.5.8_py314
+      - {description: Hugging Face Evaluate is a library for easily evaluating machine
+          learning models and datasets., markedDefault: false, versionName: 0.4.3_py312}
+      - {description: Hugging Face Evaluate is a library for easily evaluating machine
+          learning models and datasets., markedDefault: false, versionName: 0.4.6_py314}
     - categories: math, speech analysis
       defaultVersionName: 6.4.26
       description: Praat is a speech analysis tool used for doing phonetics by computer.
@@ -4323,19 +4359,19 @@ software_modules:
       - {description: BLIS is a portable software framework for instantiating high-performance
           BLAS-like dense linear algebra libraries., family: blas, markedDefault: false,
         versionName: 3.1.0}
-    - categories: math, numerical library
-      defaultVersionName: 5.2.1
-      description: SuperLU is a general purpose library for the direct solution of
-        large, sparse, nonsymmetric systems of linear equations.
-      package: superlu
-      url: https://github.com/xiaoyeli/superlu
+    - categories: math, deep learning
+      defaultVersionName: 0.15.4_py312
+      description: DeepSpeed is a deep learning optimization library that makes distributed
+        training and inference easy, efficient, and effective.
+      package: py-deepspeed
+      url: https://www.deepspeed.ai/
       versions:
-      - description: SuperLU is a general purpose library for the direct solution
-          of large, sparse, nonsymmetric systems of linear equations.
+      - description: DeepSpeed is a deep learning optimization library that makes
+          distributed training and inference easy, efficient, and effective.
         markedDefault: false
         properties:
-          parallel: {mpi: 1}
-        versionName: 5.2.1
+          arch: {gpu: 1}
+        versionName: 0.15.4_py312
     - categories: math, linear algebra
       defaultVersionName: 0.3.0.9
       description: NVIDIA cuDSS is an optimized, first-generation GPU-accelerated
@@ -4397,6 +4433,17 @@ software_modules:
       versions:
       - {description: A mesh and field I/O library and scientific database., markedDefault: false,
         versionName: '4.11'}
+    - categories: math, machine learning
+      defaultVersionName: 1.22.0_py312
+      description: Python bindings for ONNX Runtime
+      package: py-onnxruntime
+      url: https://onnxruntime.ai
+      versions:
+      - description: Python bindings for ONNX Runtime
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.22.0_py312
     - categories: math, numerical library
       defaultVersionName: 4.0.3
       description: ParMETIS is an MPI-based parallel library that implements a variety
@@ -4412,17 +4459,6 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 4.0.3
-    - categories: math, machine learning
-      defaultVersionName: 1.22.0_py312
-      description: Python bindings for ONNX Runtime
-      package: py-onnxruntime
-      url: https://onnxruntime.ai
-      versions:
-      - description: Python bindings for ONNX Runtime
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 1.22.0_py312
     - categories: math, topic modelling
       defaultVersionName: 4.2.0_py39
       description: Gensim is a Python library for topic modelling, document indexing
@@ -4492,17 +4528,17 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.5.0_py312
-    - categories: math, machine learning
-      defaultVersionName: 1.0.12_py312
-      description: timm is a library containing SOTA computer vision models, layers,
-        utilities, optimizers, schedulers, data-loaders, augmentations, and training/evaluation
-        scripts.
-      package: py-timm
-      url: https://huggingface.co/docs/timm
+    - categories: math, numerical analysis
+      defaultVersionName: 0.0.3
+      description: RunMat is a modern, high-performance runtime for MATLAB® and GNU
+        Octave code that eliminates license fees, vendor lock-in, and performance
+        bottlenecks.
+      package: runmat
+      url: https://runmat.org/
       versions:
-      - {description: 'timm is a library containing SOTA computer vision models, layers,
-          utilities, optimizers, schedulers, data-loaders, augmentations, and training/evaluation
-          scripts.', markedDefault: false, versionName: 1.0.12_py312}
+      - {description: 'RunMat is a modern, high-performance runtime for MATLAB® and
+          GNU Octave code that eliminates license fees, vendor lock-in, and performance
+          bottlenecks.', markedDefault: false, versionName: 0.0.3}
     - categories: math, machine learning
       defaultVersionName: 1.2.1_py314
       description: The huggingface_hub library allows you to interact with the Hugging
@@ -4526,18 +4562,14 @@ software_modules:
       url: https://slepc.upv.es/
       versions:
       - {description: Python bindings for SLEPc., markedDefault: false, versionName: 3.18.2_py39}
-    - categories: math, data science
-      defaultVersionName: 25.8.0_py312
-      description: cuDF is a GPU-accelerated DataFrame library for tabular data processing.
-      package: py-cudf
-      url: https://github.com/rapidsai/cudf
+    - categories: math, deep learning
+      defaultVersionName: 1.8.0_py39
+      description: Sparsity-aware deep learning inference runtime for CPUs.
+      package: py-deepsparse
+      url: https://neuralmagic.com/deepsparse/
       versions:
-      - description: cuDF is a GPU-accelerated DataFrame library for tabular data
-          processing.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 25.8.0_py312
+      - {description: Sparsity-aware deep learning inference runtime for CPUs., markedDefault: false,
+        versionName: 1.8.0_py39}
     - categories: math, numerical library
       defaultVersionName: 6.0.4
       description: Software package and libraries for sequential and parallel graph
@@ -4553,14 +4585,6 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 6.0.4
-    - categories: math, deep learning
-      defaultVersionName: 1.8.0_py39
-      description: Sparsity-aware deep learning inference runtime for CPUs.
-      package: py-deepsparse
-      url: https://neuralmagic.com/deepsparse/
-      versions:
-      - {description: Sparsity-aware deep learning inference runtime for CPUs., markedDefault: false,
-        versionName: 1.8.0_py39}
     - categories: math, optimization
       defaultVersionName: 11.0.2
       description: The Gurobi Optimizer is a commercial optimization solver for mathematical
@@ -4580,17 +4604,35 @@ software_modules:
           mathematical programming., markedDefault: false, versionName: 10.0.1_py39}
       - {description: The Gurobi Optimizer is a commercial optimization solver for
           mathematical programming., markedDefault: false, versionName: 11.0.2}
-    - categories: math, numerical library
-      defaultVersionName: '4.63'
-      description: The GLPK (GNU Linear Programming Kit) package is intended for solving
-        large-scale linear programming (LP), mixed integer programming (MIP), and
-        other related problems.
-      package: glpk
-      url: http://www.openblas.net/
+    - categories: math, machine learning
+      defaultVersionName: 0.1.8_py312
+      description: XGrammar is open-source solution for flexible, portable, and fast
+        structured generations, aiming at bring flexible zero-overhead structure generation
+        everywhere.
+      package: py-xgrammar
+      url: https://xgrammar.mlc.ai/
       versions:
-      - {description: 'The GLPK (GNU Linear Programming Kit) package is intended for
-          solving large-scale linear programming (LP), mixed integer programming (MIP),
-          and other related problems.', markedDefault: false, versionName: '4.63'}
+      - description: XGrammar is open-source solution for flexible, portable, and
+          fast structured generations, aiming at bring flexible zero-overhead structure
+          generation everywhere.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 0.1.8_py312
+    - categories: math, numerical library
+      defaultVersionName: 0.5.0_py312
+      description: Optimal transport tools implemented with the JAX framework, to
+        solve large scale matching problems of any flavor.
+      package: py-ott-jax
+      url: https://github.com/ott-jax/ott
+      versions:
+      - description: Optimal transport tools implemented with the JAX framework, to
+          solve large scale matching problems of any flavor.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.5.0_py312
     - categories: math, numerical library
       defaultVersionName: 1.2.1
       description: GNU MPC is a C library for the arithmetic of complex numbers with
@@ -4615,43 +4657,42 @@ software_modules:
       - {description: 'Qhull computes the convex hull, Delaunay triangulation, Voronoi
           diagram, halfspace intersection about a point, furthest-site Delaunay triangulation,
           and furthest-site Voronoi diagram.', markedDefault: false, versionName: '2020.2'}
-    - categories: math, statistics
-      defaultVersionName: '9.4'
-      description: SAS is a software suite developed by SAS Institute for advanced
-        analytics, multivariate analyses, business intelligence, data management,
-        and predictive analytics.
-      package: sas
-      url: http://www.sas.com/
+    - categories: math, data science
+      defaultVersionName: 25.8.0_py312
+      description: cuDF is a GPU-accelerated DataFrame library for tabular data processing.
+      package: py-cudf
+      url: https://github.com/rapidsai/cudf
       versions:
-      - description: SAS is a software suite developed by SAS Institute for advanced
-          analytics, multivariate analyses, business intelligence, data management,
-          and predictive analytics.
+      - description: cuDF is a GPU-accelerated DataFrame library for tabular data
+          processing.
         markedDefault: false
         properties:
-          license: {restricted: 1}
-        versionName: '9.4'
-    - categories: math, numerical analysis
-      defaultVersionName: 0.0.3
-      description: RunMat is a modern, high-performance runtime for MATLAB® and GNU
-        Octave code that eliminates license fees, vendor lock-in, and performance
-        bottlenecks.
-      package: runmat
-      url: https://runmat.org/
+          arch: {gpu: 1}
+        versionName: 25.8.0_py312
+    - categories: math, machine learning
+      defaultVersionName: 1.0.12_py312
+      description: timm is a library containing SOTA computer vision models, layers,
+        utilities, optimizers, schedulers, data-loaders, augmentations, and training/evaluation
+        scripts.
+      package: py-timm
+      url: https://huggingface.co/docs/timm
       versions:
-      - {description: 'RunMat is a modern, high-performance runtime for MATLAB® and
-          GNU Octave code that eliminates license fees, vendor lock-in, and performance
-          bottlenecks.', markedDefault: false, versionName: 0.0.3}
-    - categories: math, optimization
-      defaultVersionName: 10.3.0
-      description: Artelys Knitro is an optimization solver for difficult large-scale
-        nonlinear problems.
-      package: knitro
-      url: https://www.artelys.com/en/optimization-tools/knitro
+      - {description: 'timm is a library containing SOTA computer vision models, layers,
+          utilities, optimizers, schedulers, data-loaders, augmentations, and training/evaluation
+          scripts.', markedDefault: false, versionName: 1.0.12_py312}
+    - categories: math, numerical library
+      defaultVersionName: 5.2.1
+      description: SuperLU is a general purpose library for the direct solution of
+        large, sparse, nonsymmetric systems of linear equations.
+      package: superlu
+      url: https://github.com/xiaoyeli/superlu
       versions:
-      - {description: Artelys Knitro is an optimization solver for difficult large-scale
-          nonlinear problems., markedDefault: false, versionName: 12.4.0}
-      - {description: Artelys Knitro is an optimization solver for difficult large-scale
-          nonlinear problems., markedDefault: true, versionName: 10.3.0}
+      - description: SuperLU is a general purpose library for the direct solution
+          of large, sparse, nonsymmetric systems of linear equations.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 5.2.1
     - categories: math, optimization
       defaultVersionName: 2.2.0
       description: Ceres Solver is an open source C++ library for modeling and solving
@@ -4676,29 +4717,17 @@ software_modules:
       - {description: SUNDIALS is a family of software packages providing robust and
           efficient time integrators and nonlinear solvers that can easily be incorporated
           into existing simulation codes., markedDefault: false, versionName: 6.4.1}
-    - categories: math, numerical library
-      defaultVersionName: 1.6.0
-      description: TetGen provides various features to generate good quality and adaptive
-        tetrahedral meshes suitable for numerical methods, such as finite element
-        or finite volume methods.
-      package: tetgen
-      url: http://wias-berlin.de/software/index.jsp?id=TetGen
+    - categories: math, neural networks
+      defaultVersionName: 0.5.8_py314
+      description: A modular framework for neural networks with Euclidean symmetry.
+      package: py-e3nn
+      url: https://github.com/e3nn/e3nn
       versions:
-      - {description: 'TetGen provides various features to generate good quality and
-          adaptive tetrahedral meshes suitable for numerical methods, such as finite
-          element or finite volume methods.', markedDefault: false, versionName: 1.6.0}
-    - categories: math, deep learning
-      defaultVersionName: 2.9.1_py314
-      description: Torchaudio is a library for audio and signal processing with PyTorch.
-      package: py-torchaudio
-      url: http://pytorch.org/audio
-      versions:
-      - description: Torchaudio is a library for audio and signal processing with
-          PyTorch.
+      - description: A modular framework for neural networks with Euclidean symmetry.
         markedDefault: false
         properties:
           arch: {gpu: 1}
-        versionName: 2.9.1_py314
+        versionName: 0.5.8_py314
     - categories: math, numerical library
       defaultVersionName: 1.14.3_py27
       description: NumPy is the fundamental package for scientific computing with
@@ -4726,68 +4755,46 @@ software_modules:
           Python., markedDefault: false, versionName: 2.3.5_py314}
       - {description: NumPy is the fundamental package for scientific computing with
           Python., markedDefault: true, versionName: 1.14.3_py27}
+    - categories: math, deep learning
+      defaultVersionName: 0.21.0_py39
+      description: Gym is a toolkit for developing and comparing reinforcement learning
+        algorithms.
+      package: py-gym
+      url: https://gym.openai.com/
+      versions:
+      - {description: Gym is a toolkit for developing and comparing reinforcement
+          learning algorithms., markedDefault: false, versionName: 0.21.0_py39}
+    - categories: math, optimization
+      defaultVersionName: 2.10.0_py39
+      description: Optuna is an automatic hyperparameter optimization software framework,
+        particularly designed for machine learning.
+      package: py-optuna
+      url: https://optuna.readthedocs.io/
+      versions:
+      - {description: 'Optuna is an automatic hyperparameter optimization software
+          framework, particularly designed for machine learning.', markedDefault: false,
+        versionName: 2.10.0_py39}
     - categories: math, machine learning
-      defaultVersionName: 2.10_py314
-      description: Transformer Engine (TE) is a library for accelerating Transformer
-        models on NVIDIA GPUs, including using 8-bit floating point (FP8) precision.
-      package: py-transformer-engine
-      url: https://github.com/NVIDIA/TransformerEngine
+      defaultVersionName: 0.19.1_py27
+      description: Scikit-learn is a free software machine learning library for the
+        Python programming language.
+      package: py-scikit-learn
+      url: http://scikit-learn.org
       versions:
-      - description: Transformer Engine (TE) is a library for accelerating Transformer
-          models on NVIDIA GPUs, including using 8-bit floating point (FP8) precision.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.10_py314
-    - categories: math, statistics
-      defaultVersionName: '15'
-      description: Stata is a complete, integrated statistical software package that
-        provides everything you need for data analysis, data management, and graphics.
-      package: stata
-      url: https://www.stata.com
-      versions:
-      - description: Stata is a complete, integrated statistical software package
-          that provides everything you need for data analysis, data management, and
-          graphics.
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: '14'
-      - description: Stata is a complete, integrated statistical software package
-          that provides everything you need for data analysis, data management, and
-          graphics.
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: '16'
-      - description: Stata is a complete, integrated statistical software package
-          that provides everything you need for data analysis, data management, and
-          graphics.
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: '17'
-      - description: Stata is a complete, integrated statistical software package
-          that provides everything you need for data analysis, data management, and
-          graphics.
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: '18'
-      - description: Stata is a complete, integrated statistical software package
-          that provides everything you need for data analysis, data management, and
-          graphics.
-        markedDefault: false
-        properties:
-          license: {restricted: 1}
-        versionName: '19'
-      - description: Stata is a complete, integrated statistical software package
-          that provides everything you need for data analysis, data management, and
-          graphics.
-        markedDefault: true
-        properties:
-          license: {restricted: 1}
-        versionName: '15'
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 0.19.1_py36}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 0.24.2_py36}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 1.0.2_py39}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 1.3.2_py39}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 1.5.1_py312}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: false, versionName: 1.8.0_py314}
+      - {description: Scikit-learn is a free software machine learning library for
+          the Python programming language., markedDefault: true, versionName: 0.19.1_py27}
     - categories: math, deep learning
       defaultVersionName: 8.3.14_py312
       description: Ultra YOLO11 is a cutting-edge, state-of-the-art (SOTA) model that
@@ -4816,17 +4823,27 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: '25.06'
-    - categories: math, data science
-      defaultVersionName: 25.8.0_py312
-      description: RAPIDS GPU-accelerated image processing library.
-      package: py-cucim
-      url: https://github.com/rapidsai/cucim
+    - categories: math, numerical library
+      defaultVersionName: 3.9.0
+      description: Collection of Fortran77 subroutines designed to solve large scale
+        eigenvalue problems.
+      package: arpack
+      url: https://github.com/opencollab/arpack-ng
       versions:
-      - description: RAPIDS GPU-accelerated image processing library.
+      - {description: Collection of Fortran77 subroutines designed to solve large
+          scale eigenvalue problems., markedDefault: false, versionName: 3.5.0}
+      - description: Collection of Fortran77 subroutines designed to solve large scale
+          eigenvalue problems.
         markedDefault: false
         properties:
-          arch: {gpu: 1}
-        versionName: 25.8.0_py312
+          parallel: {mpi: 1}
+        versionName: 3.7.0
+      - description: Collection of Fortran77 subroutines designed to solve large scale
+          eigenvalue problems.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 3.9.0
     - categories: math, deep learning
       defaultVersionName: 0.1.12_py314
       description: An in-memory IR that supports the full ONNX spec, designed for
@@ -4838,13 +4855,14 @@ software_modules:
           for graph construction, analysis and transformation.', markedDefault: false,
         versionName: 0.1.12_py314}
     - categories: math, deep learning
-      defaultVersionName: 2.1.2_py312
-      description: PyTorch Extension Library of Optimized Scatter Operations.
-      package: py-torch-scatter
-      url: https://github.com/rusty1s/pytorch_scatter
+      defaultVersionName: 0.11.0_py314
+      description: A PyTorch repo for data loading and utilities to be shared by the
+        PyTorch domain libraries.
+      package: py-torchdata
+      url: http://pytorch.org/data
       versions:
-      - {description: PyTorch Extension Library of Optimized Scatter Operations.,
-        markedDefault: false, versionName: 2.1.2_py312}
+      - {description: A PyTorch repo for data loading and utilities to be shared by
+          the PyTorch domain libraries., markedDefault: false, versionName: 0.11.0_py314}
     - categories: math, data science
       defaultVersionName: 25.8.0_py312
       description: GPU accelerated cross filtering with cuDF.
@@ -4856,19 +4874,14 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 25.8.0_py312
-    - categories: math, numerical library
-      defaultVersionName: 1.0_py39
-      description: Autograd can automatically differentiate native Python and Numpy
-        code.
-      package: py-autograd
-      url: https://github.com/HIPS/autograd
+    - categories: math, deep learning
+      defaultVersionName: 2.1.2_py312
+      description: PyTorch Extension Library of Optimized Scatter Operations.
+      package: py-torch-scatter
+      url: https://github.com/rusty1s/pytorch_scatter
       versions:
-      - description: Autograd can automatically differentiate native Python and Numpy
-          code.
-        markedDefault: false
-        properties:
-          parallel: {mpi: 1}
-        versionName: 1.0_py39
+      - {description: PyTorch Extension Library of Optimized Scatter Operations.,
+        markedDefault: false, versionName: 2.1.2_py312}
     - categories: math, linear algebra
       defaultVersionName: 0.6.3.2
       description: NVIDIA cuSPARSELt is a high-performance CUDA library for sparse
@@ -5678,6 +5691,21 @@ software_modules:
       versions:
       - {description: DSSP is an application to assign secondary structure to proteins.,
         markedDefault: false, versionName: 4.0.3}
+    - categories: biology, modelling
+      defaultVersionName: 0.2.0_py314
+      description: BoltzGen is an all-atom generative AI model and computational pipeline
+        used for designing novel proteins and peptides to bind a wide range of biological
+        targets.
+      package: py-boltzgen
+      url: https://github.com/HannesStark/boltzgen
+      versions:
+      - description: BoltzGen is an all-atom generative AI model and computational
+          pipeline used for designing novel proteins and peptides to bind a wide range
+          of biological targets.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.2.0_py314
     - categories: biology, genomics
       defaultVersionName: 1.5.4
       description: abPOA is a SIMD-based C library for fast partial order alignment
@@ -5898,19 +5926,17 @@ software_modules:
           expression data., markedDefault: false, versionName: 1.8.2_py39}
       - {description: Scanpy is a scalable toolkit for analyzing single-cell gene
           expression data., markedDefault: false, versionName: 1.10.2_py312}
-    - categories: biology, neurosciences
-      defaultVersionName: 2.4.0
-      description: ANTs computes high-dimensional mappings to capture the statistics
-        of brain structure and function.
-      package: ants
-      url: https://stnava.github.io/ANTs
+    - categories: biology, genomics
+      defaultVersionName: 0.7.17
+      description: BWA (Burrows-Wheeler Aligner) is a software package for mapping
+        low-divergent sequences against a large reference genome, such as the human
+        genome.
+      package: bwa
+      url: http://bio-bwa.sourceforge.net/
       versions:
-      - {description: ANTs computes high-dimensional mappings to capture the statistics
-          of brain structure and function., markedDefault: false, versionName: 2.1.0}
-      - {description: ANTs computes high-dimensional mappings to capture the statistics
-          of brain structure and function., markedDefault: false, versionName: 2.3.1}
-      - {description: ANTs computes high-dimensional mappings to capture the statistics
-          of brain structure and function., markedDefault: false, versionName: 2.4.0}
+      - {description: 'BWA (Burrows-Wheeler Aligner) is a software package for mapping
+          low-divergent sequences against a large reference genome, such as the human
+          genome.', markedDefault: false, versionName: 0.7.17}
     - categories: biology, neurosciences
       defaultVersionName: 1.0.20211006
       description: dcm2niix is a program esigned to convert neuroimaging data from
@@ -6121,17 +6147,17 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 5.0.10
-    - categories: biology, genomics
-      defaultVersionName: 2.30.0
-      description: The bedtools utilities are a swiss-army knife of tools for a wide-range
-        of genomics analysis tasks.
-      package: bedtools
-      url: https://bedtools.readthedocs.io
+    - categories: biology, neurosciences
+      defaultVersionName: 0.7.00
+      description: BART is a toolbox for Computational Magnetic Resonance Imaging.
+      package: bart
+      url: https://mrirecon.github.io/bart/
       versions:
-      - {description: The bedtools utilities are a swiss-army knife of tools for a
-          wide-range of genomics analysis tasks., markedDefault: false, versionName: 2.27.1}
-      - {description: The bedtools utilities are a swiss-army knife of tools for a
-          wide-range of genomics analysis tasks., markedDefault: false, versionName: 2.30.0}
+      - description: BART is a toolbox for Computational Magnetic Resonance Imaging.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.7.00
     - categories: biology, genomics
       defaultVersionName: 1.2.2
       description: Bowtie is an ultrafast, memory-efficient short read aligner.
@@ -6505,14 +6531,14 @@ software_modules:
           to existing neuroimaging software and facilitates interaction between these
           packages within a single workflow., markedDefault: false, versionName: 1.1.3_py36}
     - categories: biology, genomics
-      defaultVersionName: 2.2.1
-      description: StringTie is a fast and highly efficient assembler of RNA-Seq alignments
-        into potential transcripts.
-      package: stringtie
-      url: https://ccb.jhu.edu/software/stringtie/
+      defaultVersionName: '3.4'
+      description: HMMER is used for searching sequence databases for sequence homologs,
+        and for making sequence alignments.
+      package: hmmer
+      url: http://hmmer.org/
       versions:
-      - {description: StringTie is a fast and highly efficient assembler of RNA-Seq
-          alignments into potential transcripts., markedDefault: false, versionName: 2.2.1}
+      - {description: 'HMMER is used for searching sequence databases for sequence
+          homologs, and for making sequence alignments.', markedDefault: false, versionName: '3.4'}
     - categories: biology, genomics
       defaultVersionName: 0.5.2_py312
       description: A Python implementation of the DESeq2 pipeline for bulk RNA-seq
@@ -6610,21 +6636,21 @@ software_modules:
       - {description: Python API for comprehensive GWAS analysis using GEMMA., markedDefault: false,
         versionName: 0.8.9_py39}
     - categories: biology, genomics
-      defaultVersionName: '1.16'
-      description: BCFtools is a program for variant calling and manipulating files
-        in the Variant Call Format (VCF) and its binary counterpart BCF.
-      package: bcftools
-      url: https://github.com/samtools/bcftools
+      defaultVersionName: 0.6.10
+      description: Trim Galore! is a wrapper script to automate quality and adapter
+        trimming as well as quality control, with some added functionality to remove
+        biased methylation positions for RRBS sequence files.
+      package: trim_galore
+      url: https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
       versions:
-      - {description: BCFtools is a program for variant calling and manipulating files
-          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
-        versionName: '1.6'}
-      - {description: BCFtools is a program for variant calling and manipulating files
-          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
-        versionName: '1.8'}
-      - {description: BCFtools is a program for variant calling and manipulating files
-          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
-        versionName: '1.16'}
+      - {description: 'Trim Galore! is a wrapper script to automate quality and adapter
+          trimming as well as quality control, with some added functionality to remove
+          biased methylation positions for RRBS sequence files.', markedDefault: false,
+        versionName: 0.5.0}
+      - {description: 'Trim Galore! is a wrapper script to automate quality and adapter
+          trimming as well as quality control, with some added functionality to remove
+          biased methylation positions for RRBS sequence files.', markedDefault: false,
+        versionName: 0.6.10}
     - categories: biology, computational biology
       defaultVersionName: 4.0.4_py312
       description: A generalist algorithm for cellular segmentation with human-in-the-loop
@@ -6675,6 +6701,14 @@ software_modules:
       - {description: 'MRtrix3 provides a set of tools to perform various types of
           diffusion MRI analyses, from various forms of tractography through to next-generation
           group-level analyses.', markedDefault: false, versionName: 3.0.3}
+    - categories: biology, genomics
+      defaultVersionName: 2.4.0
+      description: Call select base modifications in PacBio HiFi reads
+      package: jasmine
+      url: https://github.com/PacificBiosciences/jasmine
+      versions:
+      - {description: Call select base modifications in PacBio HiFi reads, markedDefault: false,
+        versionName: 2.4.0}
     - categories: biology, neurology
       defaultVersionName: 8.1.0
       description: An open source software suite for processing and analyzing (human)
@@ -6718,6 +6752,17 @@ software_modules:
           the Chromium Single Cell Multiome ATAC + Gene Expression sequencing., markedDefault: false,
         versionName: 2.1.0}
     - categories: biology, genomics
+      defaultVersionName: 2.30.0
+      description: The bedtools utilities are a swiss-army knife of tools for a wide-range
+        of genomics analysis tasks.
+      package: bedtools
+      url: https://bedtools.readthedocs.io
+      versions:
+      - {description: The bedtools utilities are a swiss-army knife of tools for a
+          wide-range of genomics analysis tasks., markedDefault: false, versionName: 2.27.1}
+      - {description: The bedtools utilities are a swiss-army knife of tools for a
+          wide-range of genomics analysis tasks., markedDefault: false, versionName: 2.30.0}
+    - categories: biology, genomics
       defaultVersionName: 2.5.4
       description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning
         sequencing reads to long reference sequences.
@@ -6729,45 +6774,31 @@ software_modules:
       - {description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning
           sequencing reads to long reference sequences., markedDefault: false, versionName: 2.5.4}
     - categories: biology, genomics
-      defaultVersionName: 2.4.0
-      description: Call select base modifications in PacBio HiFi reads
-      package: jasmine
-      url: https://github.com/PacificBiosciences/jasmine
+      defaultVersionName: '7.525'
+      description: Multiple alignment program for amino acid or nucleotide sequences.
+      package: mafft
+      url: https://mafft.cbrc.jp/
       versions:
-      - {description: Call select base modifications in PacBio HiFi reads, markedDefault: false,
-        versionName: 2.4.0}
-    - categories: biology, genomics
-      defaultVersionName: 2.3.10_py39
-      description: A software package for animal pose estimation.
-      package: py-deeplabcut
-      url: http://deeplabcut.org
-      versions:
-      - description: A software package for animal pose estimation.
+      - description: Multiple alignment program for amino acid or nucleotide sequences.
         markedDefault: false
         properties:
-          arch: {gpu: 1}
-        versionName: 2.2.3_py39
-      - description: A software package for animal pose estimation.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 2.3.10_py39
+          parallel: {mpi: 1}
+        versionName: '7.525'
     - categories: biology, genomics
-      defaultVersionName: 4.6.0.0
-      description: GATK (Genome Analysis Toolkit) offers a wide variety of tools with
-        a primary focus on variant discovery and genotyping.
-      package: gatk
-      url: https://software.broadinstitute.org/gatk/
+      defaultVersionName: 4.1.0
+      description: SIMD partial order alignment tool/library.
+      package: spoa
+      url: https://github.com/rvaser/spoa
       versions:
-      - {description: GATK (Genome Analysis Toolkit) offers a wide variety of tools
-          with a primary focus on variant discovery and genotyping., markedDefault: false,
-        versionName: 4.1.0.0}
-      - {description: GATK (Genome Analysis Toolkit) offers a wide variety of tools
-          with a primary focus on variant discovery and genotyping., markedDefault: false,
-        versionName: 4.1.4.1}
-      - {description: GATK (Genome Analysis Toolkit) offers a wide variety of tools
-          with a primary focus on variant discovery and genotyping., markedDefault: false,
-        versionName: 4.6.0.0}
+      - {description: SIMD partial order alignment tool/library., markedDefault: false,
+        versionName: 4.1.0}
+    - categories: biology, genomics
+      defaultVersionName: 0.3.1_py312
+      description: Python bindings to spoa.
+      package: py-pyspoa
+      url: https://github.com/nanoporetech/pyspoa
+      versions:
+      - {description: Python bindings to spoa., markedDefault: false, versionName: 0.3.1_py312}
     - categories: biology, genomics
       defaultVersionName: 3.3.2
       description: AUGUSTUS is a program that predicts genes in eukaryotic genomic
@@ -6777,24 +6808,33 @@ software_modules:
       versions:
       - {description: AUGUSTUS is a program that predicts genes in eukaryotic genomic
           sequences., markedDefault: false, versionName: 3.3.2}
-    - categories: biology, neurosciences
-      defaultVersionName: 0.7.00
-      description: BART is a toolbox for Computational Magnetic Resonance Imaging.
-      package: bart
-      url: https://mrirecon.github.io/bart/
-      versions:
-      - description: BART is a toolbox for Computational Magnetic Resonance Imaging.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.7.00
     - categories: biology, genomics
-      defaultVersionName: 0.3.1_py312
-      description: Python bindings to spoa.
-      package: py-pyspoa
-      url: https://github.com/nanoporetech/pyspoa
+      defaultVersionName: '1.16'
+      description: BCFtools is a program for variant calling and manipulating files
+        in the Variant Call Format (VCF) and its binary counterpart BCF.
+      package: bcftools
+      url: https://github.com/samtools/bcftools
       versions:
-      - {description: Python bindings to spoa., markedDefault: false, versionName: 0.3.1_py312}
+      - {description: BCFtools is a program for variant calling and manipulating files
+          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
+        versionName: '1.6'}
+      - {description: BCFtools is a program for variant calling and manipulating files
+          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
+        versionName: '1.8'}
+      - {description: BCFtools is a program for variant calling and manipulating files
+          in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
+        versionName: '1.16'}
+    - categories: biology, genomics
+      defaultVersionName: 0.8.13_py39
+      description: Tools for manipulating biological data, particularly multiple sequence
+        alignments.
+      package: py-bx-python
+      url: https://github.com/bxlab/bx-python
+      versions:
+      - {description: 'Tools for manipulating biological data, particularly multiple
+          sequence alignments.', markedDefault: false, versionName: 0.8.1_py27}
+      - {description: 'Tools for manipulating biological data, particularly multiple
+          sequence alignments.', markedDefault: false, versionName: 0.8.13_py39}
     - categories: biology, genomics
       defaultVersionName: 1.0.0
       description: A C++ library for parsing and manipulating VCF files.
@@ -6813,21 +6853,15 @@ software_modules:
       - {description: FreeBayes is a Bayesian genetic variant detector designed to
           find small polymorphisms., markedDefault: false, versionName: 1.2.0}
     - categories: biology, genomics
-      defaultVersionName: 0.6.10
-      description: Trim Galore! is a wrapper script to automate quality and adapter
-        trimming as well as quality control, with some added functionality to remove
-        biased methylation positions for RRBS sequence files.
-      package: trim_galore
-      url: https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
+      defaultVersionName: '2.20'
+      description: The bcl2fastq2 conversion software can be used to convert BCL files
+        from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.
+      package: bcl2fastq
+      url: https://support.illumina.com/downloads/bcl2fastq-conversion-software-v2-20.html
       versions:
-      - {description: 'Trim Galore! is a wrapper script to automate quality and adapter
-          trimming as well as quality control, with some added functionality to remove
-          biased methylation positions for RRBS sequence files.', markedDefault: false,
-        versionName: 0.5.0}
-      - {description: 'Trim Galore! is a wrapper script to automate quality and adapter
-          trimming as well as quality control, with some added functionality to remove
-          biased methylation positions for RRBS sequence files.', markedDefault: false,
-        versionName: 0.6.10}
+      - {description: 'The bcl2fastq2 conversion software can be used to convert BCL
+          files from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.',
+        markedDefault: false, versionName: '2.20'}
     - categories: biology, genomics
       defaultVersionName: 1.0.0_py39
       description: SCENIC+ is a python package to build enhancer driven gene regulatory
@@ -6840,15 +6874,14 @@ software_modules:
           networks (GRNs) using combined or separate single-cell gene expression (scRNA-seq)
           and single-cell chromatin accessibility (scATAC-seq) data., markedDefault: false,
         versionName: 1.0.0_py39}
-    - categories: biology, genomics
-      defaultVersionName: 1.5.4_py312
-      description: Python bindings for abPOA, a SIMD-based C library for fast partial
-        order alignment using adaptive band.
-      package: py-abpoa
-      url: https://github.com/yangao07/abPOA
+    - categories: biology, molecular biology
+      defaultVersionName: 3.0.0
+      description: Library to work with mmCIF and PDB files.
+      package: libcifpp
+      url: https://github.com/PDB-REDO/libcifpp
       versions:
-      - {description: 'Python bindings for abPOA, a SIMD-based C library for fast
-          partial order alignment using adaptive band.', markedDefault: false, versionName: 1.5.4_py312}
+      - {description: Library to work with mmCIF and PDB files., markedDefault: false,
+        versionName: 3.0.0}
     - categories: biology, genomics
       defaultVersionName: '0.1'
       description: popscle is a suite of population scale analysis tools for single-cell
@@ -6859,24 +6892,25 @@ software_modules:
       - {description: popscle is a suite of population scale analysis tools for single-cell
           genomics data., markedDefault: false, versionName: '0.1'}
     - categories: biology, genomics
-      defaultVersionName: '7.525'
-      description: Multiple alignment program for amino acid or nucleotide sequences.
-      package: mafft
-      url: https://mafft.cbrc.jp/
+      defaultVersionName: 2.5.4_py39
+      description: OrthoFinder is a fast, accurate and comprehensive platform for
+        comparative genomics.
+      package: py-orthofinder
+      url: https://github.com/davidemms/OrthoFinder
       versions:
-      - description: Multiple alignment program for amino acid or nucleotide sequences.
+      - {description: 'OrthoFinder is a fast, accurate and comprehensive platform
+          for comparative genomics.', markedDefault: false, versionName: 2.5.4_py39}
+    - categories: biology, genomics
+      defaultVersionName: 0.4.0_py314
+      description: Genome modeling and design across all domains of life.
+      package: py-evo2
+      url: https://github.com/arcinstitute/evo2
+      versions:
+      - description: Genome modeling and design across all domains of life.
         markedDefault: false
         properties:
-          parallel: {mpi: 1}
-        versionName: '7.525'
-    - categories: biology, genomics
-      defaultVersionName: 3.0.7
-      description: NCBI VDB is the database engine used by NCBI SRA tools.
-      package: ncbi-vdb
-      url: https://github.com/ncbi/ncbi-vdb
-      versions:
-      - {description: NCBI VDB is the database engine used by NCBI SRA tools., markedDefault: false,
-        versionName: 3.0.7}
+          arch: {gpu: 1}
+        versionName: 0.4.0_py314
     - categories: biology, genomics
       defaultVersionName: 2.1.0
       description: HISAT2 is a fast and sensitive alignment program for mapping next-generation
@@ -6910,24 +6944,26 @@ software_modules:
           manipulations from within Python., markedDefault: false, versionName: 0.8.2_py36}
       - {description: Pybedtools wraps and extends BEDTools and offers feature-level
           manipulations from within Python., markedDefault: false, versionName: 0.9.0_py39}
-    - categories: biology, molecular biology
-      defaultVersionName: 3.0.0
-      description: Library to work with mmCIF and PDB files.
-      package: libcifpp
-      url: https://github.com/PDB-REDO/libcifpp
+    - categories: biology, population genetics
+      defaultVersionName: 0.6.1_py36
+      description: Admixfrog is a HMM to infer ancestry frogments (fragments) from
+        low-coverage, contaminated data.
+      package: py-admixfrog
+      url: https://github.com/BenjaminPeter/admixfrog
       versions:
-      - {description: Library to work with mmCIF and PDB files., markedDefault: false,
-        versionName: 3.0.0}
-    - categories: biology, genomics
-      defaultVersionName: 2.2.0
-      description: FastTree infers approximately-maximum-likelihood phylogenetic trees
-        from alignments of nucleotide or protein sequences.
-      package: fasttree
-      url: https://github.com/morgannprice/fasttree
+      - {description: 'Admixfrog is a HMM to infer ancestry frogments (fragments)
+          from low-coverage, contaminated data.', markedDefault: false, versionName: 0.6.1_py36}
+    - categories: biology, neurosciences
+      defaultVersionName: 1.3.1
+      description: Connectome Workbench is an open source, freely available visualization
+        and discovery tool used to map neuroimaging data, especially data generated
+        by the Human Connectome Project.
+      package: workbench
+      url: https://www.humanconnectome.org/software/connectome-workbench
       versions:
-      - {description: FastTree infers approximately-maximum-likelihood phylogenetic
-          trees from alignments of nucleotide or protein sequences., markedDefault: false,
-        versionName: 2.2.0}
+      - {description: 'Connectome Workbench is an open source, freely available visualization
+          and discovery tool used to map neuroimaging data, especially data generated
+          by the Human Connectome Project.', markedDefault: false, versionName: 1.3.1}
     - categories: biology, genomics
       defaultVersionName: 1.16.1
       description: Tools (written in C using htslib) for manipulating next-generation
@@ -6951,46 +6987,21 @@ software_modules:
       - {description: A C code library and several stand-alone programs for the prediction
           and comparison of RNA secondary structures., markedDefault: false, versionName: 2.5.1}
     - categories: biology, genomics
-      defaultVersionName: 0.4.0_py314
-      description: Genome modeling and design across all domains of life.
-      package: py-evo2
-      url: https://github.com/arcinstitute/evo2
+      defaultVersionName: 4.6.0.0
+      description: GATK (Genome Analysis Toolkit) offers a wide variety of tools with
+        a primary focus on variant discovery and genotyping.
+      package: gatk
+      url: https://software.broadinstitute.org/gatk/
       versions:
-      - description: Genome modeling and design across all domains of life.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.4.0_py314
-    - categories: biology, genomics
-      defaultVersionName: '2.20'
-      description: The bcl2fastq2 conversion software can be used to convert BCL files
-        from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.
-      package: bcl2fastq
-      url: https://support.illumina.com/downloads/bcl2fastq-conversion-software-v2-20.html
-      versions:
-      - {description: 'The bcl2fastq2 conversion software can be used to convert BCL
-          files from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.',
-        markedDefault: false, versionName: '2.20'}
-    - categories: biology, radiology
-      defaultVersionName: '4.2'
-      description: The NBIA Data Retriever is an application to download radiology
-        images from the TCIA Radiology Portal.
-      package: nbia-data-retriever
-      url: https://wiki.cancerimagingarchive.net/display/NBIA/Current+NBIA+Data+Retriever+Help
-      versions:
-      - {description: The NBIA Data Retriever is an application to download radiology
-          images from the TCIA Radiology Portal., markedDefault: false, versionName: '4.2'}
-    - categories: biology, neurosciences
-      defaultVersionName: 1.3.1
-      description: Connectome Workbench is an open source, freely available visualization
-        and discovery tool used to map neuroimaging data, especially data generated
-        by the Human Connectome Project.
-      package: workbench
-      url: https://www.humanconnectome.org/software/connectome-workbench
-      versions:
-      - {description: 'Connectome Workbench is an open source, freely available visualization
-          and discovery tool used to map neuroimaging data, especially data generated
-          by the Human Connectome Project.', markedDefault: false, versionName: 1.3.1}
+      - {description: GATK (Genome Analysis Toolkit) offers a wide variety of tools
+          with a primary focus on variant discovery and genotyping., markedDefault: false,
+        versionName: 4.1.0.0}
+      - {description: GATK (Genome Analysis Toolkit) offers a wide variety of tools
+          with a primary focus on variant discovery and genotyping., markedDefault: false,
+        versionName: 4.1.4.1}
+      - {description: GATK (Genome Analysis Toolkit) offers a wide variety of tools
+          with a primary focus on variant discovery and genotyping., markedDefault: false,
+        versionName: 4.6.0.0}
     - categories: biology, genomics
       defaultVersionName: 0.44.0
       description: kallisto is a program for quantifying abundances of transcripts
@@ -7007,6 +7018,41 @@ software_modules:
       - {description: kallisto is a program for quantifying abundances of transcripts
           from RNA-Seq data using high-throughput sequencing reads., markedDefault: true,
         versionName: 0.44.0}
+    - categories: biology, radiology
+      defaultVersionName: '4.2'
+      description: The NBIA Data Retriever is an application to download radiology
+        images from the TCIA Radiology Portal.
+      package: nbia-data-retriever
+      url: https://wiki.cancerimagingarchive.net/display/NBIA/Current+NBIA+Data+Retriever+Help
+      versions:
+      - {description: The NBIA Data Retriever is an application to download radiology
+          images from the TCIA Radiology Portal., markedDefault: false, versionName: '4.2'}
+    - categories: biology, genomics
+      defaultVersionName: 2.2.0
+      description: FastTree infers approximately-maximum-likelihood phylogenetic trees
+        from alignments of nucleotide or protein sequences.
+      package: fasttree
+      url: https://github.com/morgannprice/fasttree
+      versions:
+      - {description: FastTree infers approximately-maximum-likelihood phylogenetic
+          trees from alignments of nucleotide or protein sequences., markedDefault: false,
+        versionName: 2.2.0}
+    - categories: biology, genomics
+      defaultVersionName: 2.3.10_py39
+      description: A software package for animal pose estimation.
+      package: py-deeplabcut
+      url: http://deeplabcut.org
+      versions:
+      - description: A software package for animal pose estimation.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.2.3_py39
+      - description: A software package for animal pose estimation.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 2.3.10_py39
     - categories: biology, genomics
       defaultVersionName: 2.7.10b
       description: 'STAR: ultrafast universal RNA-seq aligner.'
@@ -7026,15 +7072,15 @@ software_modules:
       - {description: MUMmer is a versatile alignment tool for DNA and protein sequences.,
         markedDefault: false, versionName: 4.0.1}
     - categories: biology, genomics
-      defaultVersionName: 0.11.8
-      description: FastQC aims to provide a simple way to do some quality control
-        checks on raw sequence data coming from high throughput sequencing pipelines.
-      package: fastqc
-      url: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+      defaultVersionName: 1.1.3_py27
+      description: Fit-Hi-C is a tool for assigning statistical confidence estimates
+        to chromosomal contact maps produced by genome architecture assays.
+      package: py-fithic
+      url: https://github.com/ay-lab/fithic
       versions:
-      - {description: FastQC aims to provide a simple way to do some quality control
-          checks on raw sequence data coming from high throughput sequencing pipelines.,
-        markedDefault: false, versionName: 0.11.8}
+      - {description: Fit-Hi-C is a tool for assigning statistical confidence estimates
+          to chromosomal contact maps produced by genome architecture assays., markedDefault: false,
+        versionName: 1.1.3_py27}
     - categories: biology, genomics
       defaultVersionName: 3.0.2_py27
       description: Assessing genome assembly and annotation completeness with Benchmarking
@@ -7045,22 +7091,26 @@ software_modules:
       - {description: Assessing genome assembly and annotation completeness with Benchmarking
           Universal Single-Copy Orthologs (BUSCO)., markedDefault: false, versionName: 3.0.2_py27}
     - categories: biology, genomics
-      defaultVersionName: 4.1.0
-      description: SIMD partial order alignment tool/library.
-      package: spoa
-      url: https://github.com/rvaser/spoa
+      defaultVersionName: 0.11.8
+      description: FastQC aims to provide a simple way to do some quality control
+        checks on raw sequence data coming from high throughput sequencing pipelines.
+      package: fastqc
+      url: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
       versions:
-      - {description: SIMD partial order alignment tool/library., markedDefault: false,
-        versionName: 4.1.0}
+      - {description: FastQC aims to provide a simple way to do some quality control
+          checks on raw sequence data coming from high throughput sequencing pipelines.,
+        markedDefault: false, versionName: 0.11.8}
     - categories: biology, genomics
-      defaultVersionName: '3.4'
-      description: HMMER is used for searching sequence databases for sequence homologs,
-        and for making sequence alignments.
-      package: hmmer
-      url: http://hmmer.org/
+      defaultVersionName: 0.98.5
+      description: GEMMA is a software toolkit for fast application of linear mixed
+        models (LMMs) and related models to genome-wide association studies (GWAS)
+        and other large-scale data sets.
+      package: gemma
+      url: https://github.com/genetics-statistics/GEMMA
       versions:
-      - {description: 'HMMER is used for searching sequence databases for sequence
-          homologs, and for making sequence alignments.', markedDefault: false, versionName: '3.4'}
+      - {description: GEMMA is a software toolkit for fast application of linear mixed
+          models (LMMs) and related models to genome-wide association studies (GWAS)
+          and other large-scale data sets., markedDefault: false, versionName: 0.98.5}
     - categories: biology, genomics
       defaultVersionName: 0.5.5
       description: NextGenMap is a flexible highly sensitive short read mapping tool.
@@ -7074,37 +7124,37 @@ software_modules:
           arch: {gpu: 1}
         versionName: 0.5.5
     - categories: biology, genomics
-      defaultVersionName: 1.1.3_py27
-      description: Fit-Hi-C is a tool for assigning statistical confidence estimates
-        to chromosomal contact maps produced by genome architecture assays.
-      package: py-fithic
-      url: https://github.com/ay-lab/fithic
+      defaultVersionName: 2.2.1
+      description: StringTie is a fast and highly efficient assembler of RNA-Seq alignments
+        into potential transcripts.
+      package: stringtie
+      url: https://ccb.jhu.edu/software/stringtie/
       versions:
-      - {description: Fit-Hi-C is a tool for assigning statistical confidence estimates
-          to chromosomal contact maps produced by genome architecture assays., markedDefault: false,
-        versionName: 1.1.3_py27}
+      - {description: StringTie is a fast and highly efficient assembler of RNA-Seq
+          alignments into potential transcripts., markedDefault: false, versionName: 2.2.1}
     - categories: biology, genomics
-      defaultVersionName: 0.98.5
-      description: GEMMA is a software toolkit for fast application of linear mixed
-        models (LMMs) and related models to genome-wide association studies (GWAS)
-        and other large-scale data sets.
-      package: gemma
-      url: https://github.com/genetics-statistics/GEMMA
+      defaultVersionName: 2.13.1
+      description: Trinity RNA-Seq de novo transcriptome assembly.
+      package: trinity
+      url: https://github.com/trinityrnaseq/trinityrnaseq
       versions:
-      - {description: GEMMA is a software toolkit for fast application of linear mixed
-          models (LMMs) and related models to genome-wide association studies (GWAS)
-          and other large-scale data sets., markedDefault: false, versionName: 0.98.5}
-    - categories: biology, genomics
-      defaultVersionName: 0.7.17
-      description: BWA (Burrows-Wheeler Aligner) is a software package for mapping
-        low-divergent sequences against a large reference genome, such as the human
-        genome.
-      package: bwa
-      url: http://bio-bwa.sourceforge.net/
+      - {description: Trinity RNA-Seq de novo transcriptome assembly., markedDefault: false,
+        versionName: 2.8.4}
+      - {description: Trinity RNA-Seq de novo transcriptome assembly., markedDefault: false,
+        versionName: 2.13.1}
+    - categories: biology, neurosciences
+      defaultVersionName: 2.4.0
+      description: ANTs computes high-dimensional mappings to capture the statistics
+        of brain structure and function.
+      package: ants
+      url: https://stnava.github.io/ANTs
       versions:
-      - {description: 'BWA (Burrows-Wheeler Aligner) is a software package for mapping
-          low-divergent sequences against a large reference genome, such as the human
-          genome.', markedDefault: false, versionName: 0.7.17}
+      - {description: ANTs computes high-dimensional mappings to capture the statistics
+          of brain structure and function., markedDefault: false, versionName: 2.1.0}
+      - {description: ANTs computes high-dimensional mappings to capture the statistics
+          of brain structure and function., markedDefault: false, versionName: 2.3.1}
+      - {description: ANTs computes high-dimensional mappings to capture the statistics
+          of brain structure and function., markedDefault: false, versionName: 2.4.0}
     - categories: biology, genomics
       defaultVersionName: '1.16'
       description: C library for high-throughput sequencing data formats.
@@ -7122,45 +7172,13 @@ software_modules:
       - {description: C library for high-throughput sequencing data formats., markedDefault: false,
         versionName: '1.16'}
     - categories: biology, genomics
-      defaultVersionName: 0.1.15
-      description: VCFtools is a program package designed for working with VCF files,
-        such as those generated by the 1000 Genomes Project.
-      package: vcftools
-      url: https://vcftools.github.io
+      defaultVersionName: 3.0.7
+      description: NCBI VDB is the database engine used by NCBI SRA tools.
+      package: ncbi-vdb
+      url: https://github.com/ncbi/ncbi-vdb
       versions:
-      - {description: 'VCFtools is a program package designed for working with VCF
-          files, such as those generated by the 1000 Genomes Project.', markedDefault: false,
-        versionName: 0.1.15}
-    - categories: biology, genomics
-      defaultVersionName: 2.13.1
-      description: Trinity RNA-Seq de novo transcriptome assembly.
-      package: trinity
-      url: https://github.com/trinityrnaseq/trinityrnaseq
-      versions:
-      - {description: Trinity RNA-Seq de novo transcriptome assembly., markedDefault: false,
-        versionName: 2.8.4}
-      - {description: Trinity RNA-Seq de novo transcriptome assembly., markedDefault: false,
-        versionName: 2.13.1}
-    - categories: biology, genomics
-      defaultVersionName: 2.5.4_py39
-      description: OrthoFinder is a fast, accurate and comprehensive platform for
-        comparative genomics.
-      package: py-orthofinder
-      url: https://github.com/davidemms/OrthoFinder
-      versions:
-      - {description: 'OrthoFinder is a fast, accurate and comprehensive platform
-          for comparative genomics.', markedDefault: false, versionName: 2.5.4_py39}
-    - categories: biology, genomics
-      defaultVersionName: 0.8.13_py39
-      description: Tools for manipulating biological data, particularly multiple sequence
-        alignments.
-      package: py-bx-python
-      url: https://github.com/bxlab/bx-python
-      versions:
-      - {description: 'Tools for manipulating biological data, particularly multiple
-          sequence alignments.', markedDefault: false, versionName: 0.8.1_py27}
-      - {description: 'Tools for manipulating biological data, particularly multiple
-          sequence alignments.', markedDefault: false, versionName: 0.8.13_py39}
+      - {description: NCBI VDB is the database engine used by NCBI SRA tools., markedDefault: false,
+        versionName: 3.0.7}
     - categories: biology, cryo-em
       defaultVersionName: 4.11.5
       description: IMOD is a set of image processing, modeling and display programs
@@ -7183,6 +7201,44 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 4.11.5
+    - categories: biology, molecular biology
+      defaultVersionName: 1.5.0_py314
+      description: A comprehensive library for computational molecular biology.
+      package: py-biotite
+      url: https://www.biotite-python.org
+      versions:
+      - {description: A comprehensive library for computational molecular biology.,
+        markedDefault: false, versionName: 1.5.0_py314}
+    - categories: biology, genomics
+      defaultVersionName: 1.5.4_py312
+      description: Python bindings for abPOA, a SIMD-based C library for fast partial
+        order alignment using adaptive band.
+      package: py-abpoa
+      url: https://github.com/yangao07/abPOA
+      versions:
+      - {description: 'Python bindings for abPOA, a SIMD-based C library for fast
+          partial order alignment using adaptive band.', markedDefault: false, versionName: 1.5.4_py312}
+    - categories: biology, genomics
+      defaultVersionName: 0.1.15
+      description: VCFtools is a program package designed for working with VCF files,
+        such as those generated by the 1000 Genomes Project.
+      package: vcftools
+      url: https://vcftools.github.io
+      versions:
+      - {description: 'VCFtools is a program package designed for working with VCF
+          files, such as those generated by the 1000 Genomes Project.', markedDefault: false,
+        versionName: 0.1.15}
+    - categories: biology, molecular biology
+      defaultVersionName: 1.2.3_py314
+      description: Adding hydrogens to molecular models.
+      package: py-hydride
+      url: https://github.com/biotite-dev/hydride
+      versions:
+      - description: Adding hydrogens to molecular models.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 1.2.3_py314
     - categories: biology, genomics
       defaultVersionName: '1.8'
       description: A single molecule sequence assembler for genomes large and small.
@@ -7191,15 +7247,6 @@ software_modules:
       versions:
       - {description: A single molecule sequence assembler for genomes large and small.,
         markedDefault: false, versionName: '1.8'}
-    - categories: biology, population genetics
-      defaultVersionName: 0.6.1_py36
-      description: Admixfrog is a HMM to infer ancestry frogments (fragments) from
-        low-coverage, contaminated data.
-      package: py-admixfrog
-      url: https://github.com/BenjaminPeter/admixfrog
-      versions:
-      - {description: 'Admixfrog is a HMM to infer ancestry frogments (fragments)
-          from low-coverage, contaminated data.', markedDefault: false, versionName: 0.6.1_py36}
     - categories: biology, genomics
       defaultVersionName: 2.2.1_py36
       description: mapDamage2 is a computational framework which tracks and quantifies
@@ -7897,6 +7944,8 @@ software_modules:
       - {description: RDKit is a collection of cheminformatics and machine-learning
           software written in C++ and Python., markedDefault: false, versionName: 2024.3.2_py312}
       - {description: RDKit is a collection of cheminformatics and machine-learning
+          software written in C++ and Python., markedDefault: false, versionName: 2025.09.3_py314}
+      - {description: RDKit is a collection of cheminformatics and machine-learning
           software written in C++ and Python., markedDefault: true, versionName: 2018.09.1_py27}
     - categories: chemistry, molecular dynamics
       defaultVersionName: 8.1.1_py312
@@ -8100,6 +8149,14 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 1.89.0
+      - description: Boost is a set of libraries for the C++ programming language
+          that provide support for tasks and structures such as linear algebra, pseudorandom
+          number generation, multithreading, image processing, regular expressions,
+          and unit testing.
+        markedDefault: false
+        properties:
+          parallel: {mpi: 1}
+        versionName: 1.90.0
       - description: Boost is a set of libraries for the C++ programming language
           that provide support for tasks and structures such as linear algebra, pseudorandom
           number generation, multithreading, image processing, regular expressions,
@@ -9591,6 +9648,9 @@ software_modules:
       - {description: Numba is a compiler for Python array and numerical functions
           that gives you the power to speed up your applications with high performance
           functions written directly in Python.., markedDefault: false, versionName: 0.60.0_py312}
+      - {description: Numba is a compiler for Python array and numerical functions
+          that gives you the power to speed up your applications with high performance
+          functions written directly in Python.., markedDefault: false, versionName: 0.63.1_py314}
       - {description: Numba is a compiler for Python array and numerical functions
           that gives you the power to speed up your applications with high performance
           functions written directly in Python.., markedDefault: true, versionName: 0.35.0_py27}
