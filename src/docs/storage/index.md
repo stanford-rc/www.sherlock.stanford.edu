@@ -216,6 +216,15 @@ when getting close to the quota limits. Some tools can help with that.
     information about the volume used by your directories, which should make easy
     to pinpoint where most space is used.
 
+  Sometimes there is a discrepancy between what is reported by sh_quota
+  versus what is reported by [`du`][url_du] and ncdu.  When this happens use ncdu with the
+  --apparent-size flag:
+
+  ``` none
+    $ ml system ncdu
+    $ ncdu --apparent-size $HOME
+    ```
+
 !!! info
 
     Note that any tool you use to view directory contents will only be able to
