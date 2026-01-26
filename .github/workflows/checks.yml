@@ -79,7 +79,7 @@ jobs:
         uses: tj-actions/changed-files@v47
         with:
           files: '**.md'
-      - uses: rojopolis/spellcheck-github-actions@0.54.0
+      - uses: rojopolis/spellcheck-github-actions@0.58.0
         if: steps.changedfiles.outputs.any_changed == 'true'
         with:
           source_files: ${{ steps.changedfiles.outputs.all_changed_files }}
