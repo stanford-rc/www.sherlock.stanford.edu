@@ -14,10 +14,8 @@ on:
 
 jobs:
 
-  build:  # --------------------------------------------------------------------
+  build_check:  # -- limited build check (no Insiders) -----------------------
     runs-on: ubuntu-latest
-    env:
-      MKDOCS_MATERIAL_FORK_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - name: checkout repo
         uses: actions/checkout@v5
@@ -26,11 +24,8 @@ jobs:
         with:
           python-version: 3.x
           cache: pip
-      - name: set Material for MkDocs version
-        run: echo "MKM_VER=$(cat .mkdocs-material.version)" >> $GITHUB_ENV
       - name: install Material for MkDocs and dependencies
         run: |
-          pip install git+https://${MKDOCS_MATERIAL_FORK_TOKEN}@github.com/stanford-rc/mkdocs-material-insiders.git@${MKM_VER}
           pip install -r requirements.txt
       - name: build site
         run: mkdocs build --strict
@@ -84,7 +79,7 @@ jobs:
         uses: tj-actions/changed-files@v47
         with:
           files: '**.md'
-      - uses: rojopolis/spellcheck-github-actions@0.52.0
+      - uses: rojopolis/spellcheck-github-actions@0.54.0
         if: steps.changedfiles.outputs.any_changed == 'true'
         with:
           source_files: ${{ steps.changedfiles.outputs.all_changed_files }}
@@ -96,5 +91,3 @@ jobs:
 #    runs-on: ubuntu-20.04
 #    steps:
 #      - uses: actions/checkout@v5
-
-

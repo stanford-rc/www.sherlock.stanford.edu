@@ -24,11 +24,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
-      - run: echo "MKM_VER=$(cat .mkdocs-material.version)" >> $GITHUB_ENV
       - run: |
-          pip install git+https://${MKDOCS_MATERIAL_FORK_TOKEN}@github.com/stanford-rc/mkdocs-material-insiders.git@${MKM_VER}
+          pip install git+https://${MKDOCS_MATERIAL_FORK_TOKEN}@github.com/stanford-rc/mkdocs-material-insiders.git
           pip install -r requirements.txt
-          mkdocs gh-deploy --force
+          INSIDERS=true mkdocs gh-deploy --force
       - uses: iRoachie/slack-github-actions@v2.3.2
         if: ${{ always() }}
         with:

@@ -55,6 +55,7 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
+    - navigation.path
     - search.highlight
     - search.share
     - search.suggest
@@ -167,11 +168,23 @@ extra:
 # Plugins
 plugins:
 
+  - group: # Insiders-specific configuration
+      enabled: !ENV INSIDERS
+      plugins:
+        - social:
+            cards_layout: default
+            cards_layout_options:
+              #logo: src/assets/images/logo_small.png
+              font_family: Roboto
+              background_image: src/assets/images/logo.png
+              background_color: "#8C1515"
+        - typeset
+
+
   - search:
       separator: "[\\s\\-,:!=\\[\\]()\"/]+|\\.(?!\\d)|&[lg]t;|(?!\\b)(?=[A-Z][a-z])"
 
   - social:
-      cards_layout: default
       cards_layout_options:
         #logo: src/assets/images/logo_small.png
         font_family: Roboto
@@ -309,19 +322,20 @@ nav:
       - Tools:
           - ClusterShell:    docs/software/using/clustershell.md
       - Usage:
-          - R:               docs/software/using/R.md
-          - Julia:           docs/software/using/julia.md
-          - Python:          docs/software/using/python.md
-          - Anaconda:        docs/software/using/anaconda.md
-          - Perl:            docs/software/using/perl.md
-          - Matlab:          docs/software/using/matlab.md
-          - Rclone:          docs/software/using/rclone.md
-          - Spark:           docs/software/using/spark.md
-          - MariaDB:         docs/software/using/mariadb.md
-          - PostgreSQL:      docs/software/using/postgresql.md
-          - Schrödinger:     docs/software/using/schrodinger.md
-          - Quantum Espresso: docs/software/using/quantum-espresso.md
           - AlphaFold:       docs/software/using/alphafold.md
+          - Anaconda:        docs/software/using/anaconda.md
+          - Julia:           docs/software/using/julia.md
+          - MariaDB:         docs/software/using/mariadb.md
+          - Matlab:          docs/software/using/matlab.md
+          - Ollama:          docs/software/using/ollama.md
+          - Perl:            docs/software/using/perl.md
+          - PostgreSQL:      docs/software/using/postgresql.md
+          - Python:          docs/software/using/python.md
+          - Quantum Espresso: docs/software/using/quantum-espresso.md
+          - R:               docs/software/using/R.md
+          - Rclone:          docs/software/using/rclone.md
+          - Schrödinger:     docs/software/using/schrodinger.md
+          - Spark:           docs/software/using/spark.md
   - Advanced topics:
       - Connection options:  docs/advanced-topics/connection.md
       - Job management:      docs/advanced-topics/job-management.md

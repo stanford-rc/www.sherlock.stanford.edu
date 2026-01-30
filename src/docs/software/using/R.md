@@ -440,8 +440,8 @@ $ sh_dev -c 4
 # Load the required modules
 
 $ ml purge
-$ ml R/4.4.2 cmake/3.31.4 libgit2/1.9.1 openssl/3.0.7
-$ ml system harfbuzz/1.4.8 fribidi/1.0.12 libwebp/0.6.1
+$ ml R/4.4.2
+$ ml libgit2/1.9.1 fribidi/1.0.12 libwebp/1.3.0 freetype/2.9.1
 
 # Launch R and install devtools
 
