@@ -6685,6 +6685,14 @@ software_modules:
           from raw sequences to quantitated clonotypes., markedDefault: false, versionName: 2.1.12}
       - {description: MiXCR is a universal framework that processes big immunome data
           from raw sequences to quantitated clonotypes., markedDefault: false, versionName: 4.6.0}
+    - categories: biology, genomics
+      defaultVersionName: 2.4.0
+      description: Call select base modifications in PacBio HiFi reads
+      package: jasmine
+      url: https://github.com/PacificBiosciences/jasmine
+      versions:
+      - {description: Call select base modifications in PacBio HiFi reads, markedDefault: false,
+        versionName: 2.4.0}
     - categories: biology, neurosciences
       defaultVersionName: 3.0.3
       description: MRtrix3 provides a set of tools to perform various types of diffusion
@@ -6699,14 +6707,17 @@ software_modules:
       - {description: 'MRtrix3 provides a set of tools to perform various types of
           diffusion MRI analyses, from various forms of tractography through to next-generation
           group-level analyses.', markedDefault: false, versionName: 3.0.3}
-    - categories: biology, genomics
-      defaultVersionName: 2.4.0
-      description: Call select base modifications in PacBio HiFi reads
-      package: jasmine
-      url: https://github.com/PacificBiosciences/jasmine
+    - categories: biology, neurosciences
+      defaultVersionName: 0.7.00
+      description: BART is a toolbox for Computational Magnetic Resonance Imaging.
+      package: bart
+      url: https://mrirecon.github.io/bart/
       versions:
-      - {description: Call select base modifications in PacBio HiFi reads, markedDefault: false,
-        versionName: 2.4.0}
+      - description: BART is a toolbox for Computational Magnetic Resonance Imaging.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.7.00
     - categories: biology, neurology
       defaultVersionName: 8.1.0
       description: An open source software suite for processing and analyzing (human)
@@ -6749,28 +6760,6 @@ software_modules:
       - {description: Cell Ranger ARC is an advanced analytical suite designed for
           the Chromium Single Cell Multiome ATAC + Gene Expression sequencing., markedDefault: false,
         versionName: 2.1.0}
-    - categories: biology, neurosciences
-      defaultVersionName: 0.7.00
-      description: BART is a toolbox for Computational Magnetic Resonance Imaging.
-      package: bart
-      url: https://mrirecon.github.io/bart/
-      versions:
-      - description: BART is a toolbox for Computational Magnetic Resonance Imaging.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.7.00
-    - categories: biology, genomics
-      defaultVersionName: 2.5.4
-      description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning
-        sequencing reads to long reference sequences.
-      package: bowtie2
-      url: http://bowtie-bio.sourceforge.net/bowtie2
-      versions:
-      - {description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning
-          sequencing reads to long reference sequences., markedDefault: false, versionName: 2.3.4.1}
-      - {description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning
-          sequencing reads to long reference sequences., markedDefault: false, versionName: 2.5.4}
     - categories: biology, molecular biology
       defaultVersionName: 1.2.3_py314
       description: Adding hydrogens to molecular models.
@@ -6783,13 +6772,38 @@ software_modules:
           arch: {gpu: 1}
         versionName: 1.2.3_py314
     - categories: biology, genomics
-      defaultVersionName: 2.1.1
-      description: TopHat is a fast splice junction mapper for RNA-Seq reads.
-      package: tophat
-      url: http://ccb.jhu.edu/software/tophat/index.shtml
+      defaultVersionName: 2.5.4
+      description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning
+        sequencing reads to long reference sequences.
+      package: bowtie2
+      url: http://bowtie-bio.sourceforge.net/bowtie2
       versions:
-      - {description: TopHat is a fast splice junction mapper for RNA-Seq reads.,
-        markedDefault: false, versionName: 2.1.1}
+      - {description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning
+          sequencing reads to long reference sequences., markedDefault: false, versionName: 2.3.4.1}
+      - {description: Bowtie 2 is an ultrafast and memory-efficient tool for aligning
+          sequencing reads to long reference sequences., markedDefault: false, versionName: 2.5.4}
+    - categories: biology, population genetics
+      defaultVersionName: 0.6.1_py36
+      description: Admixfrog is a HMM to infer ancestry frogments (fragments) from
+        low-coverage, contaminated data.
+      package: py-admixfrog
+      url: https://github.com/BenjaminPeter/admixfrog
+      versions:
+      - {description: 'Admixfrog is a HMM to infer ancestry frogments (fragments)
+          from low-coverage, contaminated data.', markedDefault: false, versionName: 0.6.1_py36}
+    - categories: biology, genomics
+      defaultVersionName: 0.5.1_py312
+      description: The AlphaGenome API provides access to AlphaGenome, Google DeepMind’s
+        unifying model for deciphering the regulatory code within DNA sequences.
+      package: py-alphagenome
+      url: https://github.com/google-deepmind/alphagenome
+      versions:
+      - description: The AlphaGenome API provides access to AlphaGenome, Google DeepMind’s
+          unifying model for deciphering the regulatory code within DNA sequences.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.5.1_py312
     - categories: biology, genomics
       defaultVersionName: 0.3.1_py312
       description: Python bindings to spoa.
@@ -6816,16 +6830,15 @@ software_modules:
       - {description: 'OrthoFinder is a fast, accurate and comprehensive platform
           for comparative genomics.', markedDefault: false, versionName: 2.5.4_py39}
     - categories: biology, genomics
-      defaultVersionName: 0.8.13_py39
-      description: Tools for manipulating biological data, particularly multiple sequence
-        alignments.
-      package: py-bx-python
-      url: https://github.com/bxlab/bx-python
+      defaultVersionName: '2.20'
+      description: The bcl2fastq2 conversion software can be used to convert BCL files
+        from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.
+      package: bcl2fastq
+      url: https://support.illumina.com/downloads/bcl2fastq-conversion-software-v2-20.html
       versions:
-      - {description: 'Tools for manipulating biological data, particularly multiple
-          sequence alignments.', markedDefault: false, versionName: 0.8.1_py27}
-      - {description: 'Tools for manipulating biological data, particularly multiple
-          sequence alignments.', markedDefault: false, versionName: 0.8.13_py39}
+      - {description: 'The bcl2fastq2 conversion software can be used to convert BCL
+          files from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.',
+        markedDefault: false, versionName: '2.20'}
     - categories: biology, genomics
       defaultVersionName: 1.0.0
       description: A C++ library for parsing and manipulating VCF files.
@@ -6844,15 +6857,16 @@ software_modules:
       - {description: FreeBayes is a Bayesian genetic variant detector designed to
           find small polymorphisms., markedDefault: false, versionName: 1.2.0}
     - categories: biology, genomics
-      defaultVersionName: '2.20'
-      description: The bcl2fastq2 conversion software can be used to convert BCL files
-        from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.
-      package: bcl2fastq
-      url: https://support.illumina.com/downloads/bcl2fastq-conversion-software-v2-20.html
+      defaultVersionName: 0.98.5
+      description: GEMMA is a software toolkit for fast application of linear mixed
+        models (LMMs) and related models to genome-wide association studies (GWAS)
+        and other large-scale data sets.
+      package: gemma
+      url: https://github.com/genetics-statistics/GEMMA
       versions:
-      - {description: 'The bcl2fastq2 conversion software can be used to convert BCL
-          files from MiniSeq, MiSeq, NextSeq, HiSeq, iSeq and NovaSeq sequening systems.',
-        markedDefault: false, versionName: '2.20'}
+      - {description: GEMMA is a software toolkit for fast application of linear mixed
+          models (LMMs) and related models to genome-wide association studies (GWAS)
+          and other large-scale data sets., markedDefault: false, versionName: 0.98.5}
     - categories: biology, genomics
       defaultVersionName: 1.0.0_py39
       description: SCENIC+ is a python package to build enhancer driven gene regulatory
@@ -6866,14 +6880,14 @@ software_modules:
           and single-cell chromatin accessibility (scATAC-seq) data., markedDefault: false,
         versionName: 1.0.0_py39}
     - categories: biology, genomics
-      defaultVersionName: 2.2.1
-      description: StringTie is a fast and highly efficient assembler of RNA-Seq alignments
-        into potential transcripts.
-      package: stringtie
-      url: https://ccb.jhu.edu/software/stringtie/
+      defaultVersionName: 1.5.4_py312
+      description: Python bindings for abPOA, a SIMD-based C library for fast partial
+        order alignment using adaptive band.
+      package: py-abpoa
+      url: https://github.com/yangao07/abPOA
       versions:
-      - {description: StringTie is a fast and highly efficient assembler of RNA-Seq
-          alignments into potential transcripts., markedDefault: false, versionName: 2.2.1}
+      - {description: 'Python bindings for abPOA, a SIMD-based C library for fast
+          partial order alignment using adaptive band.', markedDefault: false, versionName: 1.5.4_py312}
     - categories: biology, genomics
       defaultVersionName: '0.1'
       description: popscle is a suite of population scale analysis tools for single-cell
@@ -6922,36 +6936,6 @@ software_modules:
           next-generation sequencing reads (both DNA and RNA) to a population of human
           genomes (as well as to a single reference genome)., markedDefault: false,
         versionName: 2.1.0}
-    - categories: biology, population genetics
-      defaultVersionName: 0.6.1_py36
-      description: Admixfrog is a HMM to infer ancestry frogments (fragments) from
-        low-coverage, contaminated data.
-      package: py-admixfrog
-      url: https://github.com/BenjaminPeter/admixfrog
-      versions:
-      - {description: 'Admixfrog is a HMM to infer ancestry frogments (fragments)
-          from low-coverage, contaminated data.', markedDefault: false, versionName: 0.6.1_py36}
-    - categories: biology, genomics
-      defaultVersionName: 0.9.0_py39
-      description: Pybedtools wraps and extends BEDTools and offers feature-level
-        manipulations from within Python.
-      package: py-pybedtools
-      url: https://github.com/daler/pybedtools
-      versions:
-      - {description: Pybedtools wraps and extends BEDTools and offers feature-level
-          manipulations from within Python., markedDefault: false, versionName: 0.8.0_py27}
-      - {description: Pybedtools wraps and extends BEDTools and offers feature-level
-          manipulations from within Python., markedDefault: false, versionName: 0.8.2_py36}
-      - {description: Pybedtools wraps and extends BEDTools and offers feature-level
-          manipulations from within Python., markedDefault: false, versionName: 0.9.0_py39}
-    - categories: biology, genomics
-      defaultVersionName: 4.1.0
-      description: SIMD partial order alignment tool/library.
-      package: spoa
-      url: https://github.com/rvaser/spoa
-      versions:
-      - {description: SIMD partial order alignment tool/library., markedDefault: false,
-        versionName: 4.1.0}
     - categories: biology, genomics
       defaultVersionName: 0.44.0
       description: kallisto is a program for quantifying abundances of transcripts
@@ -6969,6 +6953,27 @@ software_modules:
           from RNA-Seq data using high-throughput sequencing reads., markedDefault: true,
         versionName: 0.44.0}
     - categories: biology, genomics
+      defaultVersionName: 0.9.0_py39
+      description: Pybedtools wraps and extends BEDTools and offers feature-level
+        manipulations from within Python.
+      package: py-pybedtools
+      url: https://github.com/daler/pybedtools
+      versions:
+      - {description: Pybedtools wraps and extends BEDTools and offers feature-level
+          manipulations from within Python., markedDefault: false, versionName: 0.8.0_py27}
+      - {description: Pybedtools wraps and extends BEDTools and offers feature-level
+          manipulations from within Python., markedDefault: false, versionName: 0.8.2_py36}
+      - {description: Pybedtools wraps and extends BEDTools and offers feature-level
+          manipulations from within Python., markedDefault: false, versionName: 0.9.0_py39}
+    - categories: biology, genomics
+      defaultVersionName: 2.1.1
+      description: TopHat is a fast splice junction mapper for RNA-Seq reads.
+      package: tophat
+      url: http://ccb.jhu.edu/software/tophat/index.shtml
+      versions:
+      - {description: TopHat is a fast splice junction mapper for RNA-Seq reads.,
+        markedDefault: false, versionName: 2.1.1}
+    - categories: biology, genomics
       defaultVersionName: 4.6.0.0
       description: GATK (Genome Analysis Toolkit) offers a wide variety of tools with
         a primary focus on variant discovery and genotyping.
@@ -6984,6 +6989,16 @@ software_modules:
       - {description: GATK (Genome Analysis Toolkit) offers a wide variety of tools
           with a primary focus on variant discovery and genotyping., markedDefault: false,
         versionName: 4.6.0.0}
+    - categories: biology, genomics
+      defaultVersionName: 2.2.0
+      description: FastTree infers approximately-maximum-likelihood phylogenetic trees
+        from alignments of nucleotide or protein sequences.
+      package: fasttree
+      url: https://github.com/morgannprice/fasttree
+      versions:
+      - {description: FastTree infers approximately-maximum-likelihood phylogenetic
+          trees from alignments of nucleotide or protein sequences., markedDefault: false,
+        versionName: 2.2.0}
     - categories: biology, genomics
       defaultVersionName: 2.5.1
       description: A C code library and several stand-alone programs for the prediction
@@ -7027,15 +7042,24 @@ software_modules:
       - {description: The NBIA Data Retriever is an application to download radiology
           images from the TCIA Radiology Portal., markedDefault: false, versionName: '4.2'}
     - categories: biology, genomics
-      defaultVersionName: 2.2.0
-      description: FastTree infers approximately-maximum-likelihood phylogenetic trees
-        from alignments of nucleotide or protein sequences.
-      package: fasttree
-      url: https://github.com/morgannprice/fasttree
+      defaultVersionName: 1.1.0
+      description: Dorado is a high-performance, easy-to-use, open source basecaller
+        for Oxford Nanopore reads.
+      package: dorado
+      url: https://github.com/nanoporetech/dorado
       versions:
-      - {description: FastTree infers approximately-maximum-likelihood phylogenetic
-          trees from alignments of nucleotide or protein sequences., markedDefault: false,
-        versionName: 2.2.0}
+      - {description: 'Dorado is a high-performance, easy-to-use, open source basecaller
+          for Oxford Nanopore reads.', markedDefault: false, versionName: 0.3.4}
+      - {description: 'Dorado is a high-performance, easy-to-use, open source basecaller
+          for Oxford Nanopore reads.', markedDefault: false, versionName: 0.5.3}
+      - {description: 'Dorado is a high-performance, easy-to-use, open source basecaller
+          for Oxford Nanopore reads.', markedDefault: false, versionName: 0.7.3}
+      - {description: 'Dorado is a high-performance, easy-to-use, open source basecaller
+          for Oxford Nanopore reads.', markedDefault: false, versionName: 0.9.6}
+      - {description: 'Dorado is a high-performance, easy-to-use, open source basecaller
+          for Oxford Nanopore reads.', markedDefault: false, versionName: 1.0.0}
+      - {description: 'Dorado is a high-performance, easy-to-use, open source basecaller
+          for Oxford Nanopore reads.', markedDefault: false, versionName: 1.1.0}
     - categories: biology, genomics
       defaultVersionName: 2.3.10_py39
       description: A software package for animal pose estimation.
@@ -7063,25 +7087,6 @@ software_modules:
       - {description: 'STAR: ultrafast universal RNA-seq aligner.', markedDefault: false,
         versionName: 2.7.10b}
     - categories: biology, genomics
-      defaultVersionName: 1.1.0
-      description: Dorado is a high-performance, easy-to-use, open source basecaller
-        for Oxford Nanopore reads.
-      package: dorado
-      url: https://github.com/nanoporetech/dorado
-      versions:
-      - {description: 'Dorado is a high-performance, easy-to-use, open source basecaller
-          for Oxford Nanopore reads.', markedDefault: false, versionName: 0.3.4}
-      - {description: 'Dorado is a high-performance, easy-to-use, open source basecaller
-          for Oxford Nanopore reads.', markedDefault: false, versionName: 0.5.3}
-      - {description: 'Dorado is a high-performance, easy-to-use, open source basecaller
-          for Oxford Nanopore reads.', markedDefault: false, versionName: 0.7.3}
-      - {description: 'Dorado is a high-performance, easy-to-use, open source basecaller
-          for Oxford Nanopore reads.', markedDefault: false, versionName: 0.9.6}
-      - {description: 'Dorado is a high-performance, easy-to-use, open source basecaller
-          for Oxford Nanopore reads.', markedDefault: false, versionName: 1.0.0}
-      - {description: 'Dorado is a high-performance, easy-to-use, open source basecaller
-          for Oxford Nanopore reads.', markedDefault: false, versionName: 1.1.0}
-    - categories: biology, genomics
       defaultVersionName: 1.1.3_py27
       description: Fit-Hi-C is a tool for assigning statistical confidence estimates
         to chromosomal contact maps produced by genome architecture assays.
@@ -7092,15 +7097,6 @@ software_modules:
           to chromosomal contact maps produced by genome architecture assays., markedDefault: false,
         versionName: 1.1.3_py27}
     - categories: biology, genomics
-      defaultVersionName: 3.0.2_py27
-      description: Assessing genome assembly and annotation completeness with Benchmarking
-        Universal Single-Copy Orthologs (BUSCO).
-      package: py-busco
-      url: https://busco.ezlab.org/
-      versions:
-      - {description: Assessing genome assembly and annotation completeness with Benchmarking
-          Universal Single-Copy Orthologs (BUSCO)., markedDefault: false, versionName: 3.0.2_py27}
-    - categories: biology, genomics
       defaultVersionName: 0.11.8
       description: FastQC aims to provide a simple way to do some quality control
         checks on raw sequence data coming from high throughput sequencing pipelines.
@@ -7110,6 +7106,15 @@ software_modules:
       - {description: FastQC aims to provide a simple way to do some quality control
           checks on raw sequence data coming from high throughput sequencing pipelines.,
         markedDefault: false, versionName: 0.11.8}
+    - categories: biology, genomics
+      defaultVersionName: 3.0.2_py27
+      description: Assessing genome assembly and annotation completeness with Benchmarking
+        Universal Single-Copy Orthologs (BUSCO).
+      package: py-busco
+      url: https://busco.ezlab.org/
+      versions:
+      - {description: Assessing genome assembly and annotation completeness with Benchmarking
+          Universal Single-Copy Orthologs (BUSCO)., markedDefault: false, versionName: 3.0.2_py27}
     - categories: biology, genomics
       defaultVersionName: '1.16'
       description: BCFtools is a program for variant calling and manipulating files
@@ -7126,6 +7131,14 @@ software_modules:
       - {description: BCFtools is a program for variant calling and manipulating files
           in the Variant Call Format (VCF) and its binary counterpart BCF., markedDefault: false,
         versionName: '1.16'}
+    - categories: biology, genomics
+      defaultVersionName: 4.1.0
+      description: SIMD partial order alignment tool/library.
+      package: spoa
+      url: https://github.com/rvaser/spoa
+      versions:
+      - {description: SIMD partial order alignment tool/library., markedDefault: false,
+        versionName: 4.1.0}
     - categories: biology, genomics
       defaultVersionName: 0.5.5
       description: NextGenMap is a flexible highly sensitive short read mapping tool.
@@ -7150,17 +7163,6 @@ software_modules:
       - {description: The BCL Convert App generates demultiplexed FASTQ files from
           a run as input., markedDefault: false, versionName: 4.3.6}
     - categories: biology, genomics
-      defaultVersionName: 0.98.5
-      description: GEMMA is a software toolkit for fast application of linear mixed
-        models (LMMs) and related models to genome-wide association studies (GWAS)
-        and other large-scale data sets.
-      package: gemma
-      url: https://github.com/genetics-statistics/GEMMA
-      versions:
-      - {description: GEMMA is a software toolkit for fast application of linear mixed
-          models (LMMs) and related models to genome-wide association studies (GWAS)
-          and other large-scale data sets., markedDefault: false, versionName: 0.98.5}
-    - categories: biology, genomics
       defaultVersionName: 2.13.1
       description: Trinity RNA-Seq de novo transcriptome assembly.
       package: trinity
@@ -7170,6 +7172,15 @@ software_modules:
         versionName: 2.8.4}
       - {description: Trinity RNA-Seq de novo transcriptome assembly., markedDefault: false,
         versionName: 2.13.1}
+    - categories: biology, genomics
+      defaultVersionName: 2.2.1
+      description: StringTie is a fast and highly efficient assembler of RNA-Seq alignments
+        into potential transcripts.
+      package: stringtie
+      url: https://ccb.jhu.edu/software/stringtie/
+      versions:
+      - {description: StringTie is a fast and highly efficient assembler of RNA-Seq
+          alignments into potential transcripts., markedDefault: false, versionName: 2.2.1}
     - categories: biology, genomics
       defaultVersionName: '1.16'
       description: C library for high-throughput sequencing data formats.
@@ -7218,14 +7229,16 @@ software_modules:
       - {description: Library to work with mmCIF and PDB files., markedDefault: false,
         versionName: 3.0.0}
     - categories: biology, genomics
-      defaultVersionName: 1.5.4_py312
-      description: Python bindings for abPOA, a SIMD-based C library for fast partial
-        order alignment using adaptive band.
-      package: py-abpoa
-      url: https://github.com/yangao07/abPOA
+      defaultVersionName: 0.8.13_py39
+      description: Tools for manipulating biological data, particularly multiple sequence
+        alignments.
+      package: py-bx-python
+      url: https://github.com/bxlab/bx-python
       versions:
-      - {description: 'Python bindings for abPOA, a SIMD-based C library for fast
-          partial order alignment using adaptive band.', markedDefault: false, versionName: 1.5.4_py312}
+      - {description: 'Tools for manipulating biological data, particularly multiple
+          sequence alignments.', markedDefault: false, versionName: 0.8.1_py27}
+      - {description: 'Tools for manipulating biological data, particularly multiple
+          sequence alignments.', markedDefault: false, versionName: 0.8.13_py39}
     - categories: biology, genomics
       defaultVersionName: 3.0.7
       description: NCBI VDB is the database engine used by NCBI SRA tools.
