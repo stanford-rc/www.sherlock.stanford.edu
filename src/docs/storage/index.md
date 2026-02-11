@@ -210,20 +210,39 @@ when getting close to the quota limits. Some tools can help with that.
     ```
 
     For very large directories, running `ncdu` in an interactive shell on a
-    compute node is recommended, via [`sh_dev`][url_sh_dev].
+    compute node is recommended, via [`sh_dev`][url_sh_dev]. You can request
+    multiple codes, and run multiple `ncdu` threads to speed up processing of
+    large directories:
 
-    You'll been there presented with an interactive file browser, showing
+    ```
+    $ sh_dev -c 4
+    $ ml system ncdu
+    $ ncduf -t 4
+    ```
+
+    You'll been then presented with an interactive file browser, showing
     information about the volume used by your directories, which should make easy
     to pinpoint where most space is used.
 
-  Sometimes there is a discrepancy between what is reported by sh_quota
-  versus what is reported by [`du`][url_du] and ncdu.  When this happens use ncdu with the
-  --apparent-size flag:
+    !!! warning "Apparent size vs. disk usage"
 
-  ``` none
-    $ ml system ncdu
-    $ ncdu --apparent-size $HOME
-    ```
+        By default, `du` and `ncdu` report **disk usage**, which is the actual
+        space allocated on disk. On some file systems, there could be some
+        difference with the real size of your files, because of block
+        allocation overhead. Data reported by `sh_quota` is based on real block
+        usage on the file system.
+
+        To see the actual logical size of your files (i.e. what you would
+        transfer or back up), you can use the `--apparent-size` flag:
+
+        ```
+        $ du --apparent-size $HOME/dir
+        $ ncdu --apparent-size $HOME/dir
+        ```
+
+        Within `ncdu`, you can also toggle between apparent size and disk usage
+        by pressing ++"a"++ while browsing.
+
 
 !!! info
 
