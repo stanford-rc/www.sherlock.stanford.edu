@@ -224,7 +224,7 @@ when getting close to the quota limits. Some tools can help with that.
     information about the volume used by your directories, which should make easy
     to pinpoint where most space is used.
 
-    !!! warning "Apparent size vs. disk usage"
+    !!! note "Apparent size vs. disk usage"
 
         By default, `du` and `ncdu` report **disk usage**, which is the actual
         space allocated on disk. On some file systems, there could be some
