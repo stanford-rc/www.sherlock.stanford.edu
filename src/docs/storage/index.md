@@ -214,7 +214,7 @@ when getting close to the quota limits. Some tools can help with that.
     multiple codes, and run multiple `ncdu` threads to speed up processing of
     large directories:
 
-    ```
+    ``` none
     $ sh_dev -c 4
     $ ml system ncdu
     $ ncduf -t 4
