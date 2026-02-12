@@ -2,7 +2,7 @@
 
 [AlphaFold][url_af] is an artificial intelligence (AI) system developed by
 [Google DeepMind][url_deepmind] for predicting protein structures. Using deep
-learning, Alphafold's accuracy matches that of traditional experimental
+learning, AlphaFold's accuracy matches that of traditional experimental
 techniques at a fraction of the cost and in less time. This document provides
 guidelines for installing and running AlphaFold in user space on Sherlock.
 
@@ -29,7 +29,7 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     Access to AlphaFold 3 model parameters is granted at the discretion of
     Google DeepMind and is subject to their [Terms of Use][url_tou]. Each
     user must request their own copy of the model parameters. Researchers
-    can complete the form the request form found [here][url_form].
+    can complete the request form found [here][url_form].
     
     When filling out the request form, **you must use a personal Gmail
     address for the Google account email address field.** Your Stanford
@@ -56,7 +56,7 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     
 3. Clone the AlphaFold 3 GitHub Repo into `$GROUP_HOME`
 
-    ```
+    ``` none
     $ mkdir -p $GROUP_HOME/$USER
     $ cd $GROUP_HOME/$USER
     $ git clone https://github.com/google-deepmind/alphafold3.git
@@ -68,10 +68,10 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     in `$SCRATCH` or `$GROUP_SCRATCH`. You can use the following template to
     create a batch job for downloading the databases.
     
-    ```
+    ``` shell
     #!/bin/bash
     #SBATCH -t 5:00:00
-    
+
     bash $GROUP_HOME/$USER/alphafold3/fetch_databases.sh $SCRATCH/af3_db
     ```
     
@@ -88,7 +88,7 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     `$SCRATCH` databases with those on `$OAK` and automatically copies over
     any missing files.
     
-6. Build the AlphaFold 3 Apptainer Image
+5. Build the AlphaFold 3 Apptainer Image
 
     Container software like Apptainer allow researchers to easily "contain"
     or package software and port it between compute platforms. The following
@@ -116,7 +116,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
     Create directories for AlphaFold 3 inputs and outputs in `$SCRATCH` or
     `$GROUP_SCRATCH`.
     
-    ```
+    ``` none
     $ mkdir -p $SCRATCH/af_input
     $ mkdir -p $SCRATCH/af_output
     ```
@@ -127,7 +127,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
 
     Running AlphaFold 3 can be broken down into two parts: pipeline and
     inference. The pipeline refers to the genetic sequence search/template 
-    search, and inference refers to predicting structures. GPU's are only 
+    search, and inference refers to predicting structures. GPUs are only 
     utilized during inference, so we are going to run the pipeline on CPUs.
     You can use the following batch script as a template. 
 
@@ -136,7 +136,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
     you would like to fold, and the `.json` file needs to be placed in the `af_input`
     directory. In the template below the example input file is `fold_input_2PV7.json`.
     
-    ```
+    ``` shell
     #!/bin/bash
     #SBATCH --partition=normal
     #SBATCH --cpus-per-task=8
@@ -147,7 +147,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
     MODEL_PARAMS_PATH=$SCRATCH/af3_model
     DB_PATH=$SCRATCH/af3_db
     INPUT_JSON=fold_input_2PV7.json
-    
+
     # run alphafold3 apptainer container
     apptainer run \
          --nv \
@@ -163,7 +163,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
          --output_dir=/root/af_output
     ```
     
-4. Write and submit a batch script for running inference.
+3. Write and submit a batch script for running inference.
 
     AlphaFold 3 runs best on GPUs with CUDA Capability > 7.x. When writing
     your batch script for inference, you should include a constraint for the
@@ -175,7 +175,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
     directory and file are located in your `af_output` directory. In the
     template example below the data directory and file is `/2pv7/2pv7_data.json`.
     
-    ```
+    ``` shell
     #!/bin/bash
     #
     #SBATCH --partition=gpu
@@ -207,13 +207,13 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
 
 ### Best Practices
 
-1. Using `dcp` to maintain your in Databases to `$SCRATCH` or `$GROUP_SCRATCH`
+1. Using `dcp` to maintain your databases in `$SCRATCH` or `$GROUP_SCRATCH`
 
     Stanford Research Computing maintains a copy of the AlphaFold 3 database within
-    the Oak Common Datasets Repository. We recommend, however, intially downloading
+    the Oak Common Datasets Repository. We recommend, however, initially downloading
     the AlphaFold 3 database files directly from Google DeepMind to a scratch directory.
     This reduces the traffic on the network between Oak and Sherlock and is typically
-    faster than  a direct copy. Unmodified files within `$SCRATCH` and `$GROUP_SCRATCH`
+    faster than a direct copy. Unmodified files within `$SCRATCH` and `$GROUP_SCRATCH`
     are purged every 90 days. In order to maintain a complete database you can include
     the `dcp` command in your pipeline and inference sbatch scripts, which compares
     your `$SCRATCH` databases with those on Oak and automatically copies over any
@@ -223,9 +223,9 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
     suite of MPI-based tools used to manage large datasets. `dcp` functions similar to
     `cp` but can leverage multiple cpu cores to copy files faster. Here is an example usage for an AlphaFold database located in `$SCRATCH`.
  
-    ```
-    module load system mpifileutils
-    srun -n $SLURM_TASKS_PER_NODE dcp --quite /oak/stanford/datasets/common/alphafold3 $SCRATCH/af3_db
+    ``` none
+    $ module load system mpifileutils
+    $ srun -n $SLURM_TASKS_PER_NODE dcp --quiet /oak/stanford/datasets/common/alphafold3 $SCRATCH/af3_db
     ```
 
     Please keep in mind that running `dcp` will increase the runtime of your job 
@@ -234,10 +234,10 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
 
 2. Running on GPUs with CUDA Compute Capability 8.x or higher
 
-   The apptainer container has been tested extensively on Sherlock GPU's with 
+   The apptainer container has been tested extensively on Sherlock GPUs with 
    CUDA capability 8.x or higher. These include H100, L40S, RTX 3090, A100, and 
-   A40 model GPU's. New models, such as the H100 and L40S, produce the fastest 
-   runtimes, with older models taking slightly longer. Consumer grade GPU's, such
+   A40 model GPUs. New models, such as the H100 and L40S, produce the fastest 
+   runtimes, with older models taking slightly longer. Consumer grade GPUs, such
    as the RTX 3090, are also sequence limited due to lower GPU memory.
 
    To run exclusively on a particular GPU model, you can use the SLURM `--constraint`
@@ -247,21 +247,21 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
    
    Multiple job constraints can also be specified with AND (&) and OR (|) operators. For example, 
    if you are submitting an inference job to the queue and want to run from a larger pool of
-   GPU resources, you can specify both H100 or L40S GPU's:
-   ```
+   GPU resources, you can specify both H100 or L40S GPUs:
+   ``` none
    #SBATCH --constraint="GPU_SKU:H100_SXM5|GPU_SKU:L40S"
    ```
-   
+
    Additionally, the compute capability is also listed as a node feature, and you can specify
    it directly as a constraint. For example, you can specify compute capabilities 8.9 or 9.0 with:
-   ```
+   ``` none
    #SBATCH --constraint="GPU_CC:8.9|GPU_CC:9.0"
    ```
 
    Specifying the compute capability can simplify your `--constraint` list because some GPU
    models have the same compute capability, as seen in the table below. It also addresses the
    central problem we are working around, since you can directly limit your SLURM job to the
-   GPU's which statisfy the 8.x or higher requirement.
+   GPUs which statisfy the 8.x or higher requirement.
       
     | GPU Model | Compute Capability |
     |:---:|:---:|
@@ -274,16 +274,16 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
     | GPU_SKU:P40 <br> GPU_SKU:TITAN_Xp | GPU_CC:6.1 |
     | GPU_SKU:P100_PCIE | GPU_CC:6.0 |
 
-4. Running on GPUs with CUDA Compute Capability 7.x or lower
+3. Running on GPUs with CUDA Compute Capability 7.x or lower
 
-   Successful inference runs on GPU's with CUDA capability 7.x or lower are limited
+   Successful inference runs on GPUs with CUDA capability 7.x or lower are limited
    by sequence length and GPU memory. If you do wish to run an inference job on an
    older GPU, the apptainer container contains logic to test for the compute
    capability of the available GPU and set the appropriate environmental variables
    before running AlphaFold 3. A successful run, however, is not guaranteed. To specify a 
    particular GPU use the SLURM `--constraint` option mentioned above.
 
-5. Notes on Apptainer containers
+4. Notes on Apptainer containers
 
    On Sherlock, the preferred method for running AlphaFold 3 is from an Apptainer 
    container. The Apptainer definition file (`af3.def`) SRC provides is modified
