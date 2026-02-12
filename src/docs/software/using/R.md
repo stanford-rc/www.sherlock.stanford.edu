@@ -417,6 +417,54 @@ To remove a package from your local R library, you can use the
 > remove.packages('doParallel')
 ```
 
+
+### Common packages
+
+#### Seurat
+
+[Seurat][url_seurat] is a commonly used R package for QC, analysis, and
+exploration of single-cell RNA-seq data. It can also be a bit hard to install
+on Sherlock because one of its dependencies, Matrix, doesn't install cleanly
+from [CRAN][url_cran]. However, with the help of a few helper modules on Linux
+and some special syntax for installing Matrix in R, Seurat can be a breeze to
+install in many of our [R module versions][url_software_list].
+
+First, you'll want to get a compute session and purge your current environment:
+
+``` none
+$ sh_dev -c 4
+$ ml purge
+```
+
+You may have to wait a bit for an allocation, but once you do, you can load R
+and some helper modules and then launch R.
+
+``` none
+$ ml R/4.2
+$ ml glpk gmp
+$ R
+```
+
+We've tested this on 4.2 and 4.3, but you can try it on other versions as well.
+
+Once you're in R, first install Matrix manually from a tarball:
+
+``` R
+>>> install.packages("https://cran.r-project.org/src/contrib/Archive/Matrix/Matrix_1.6-5.tar.gz", repos=NULL, type="source", Ncpus=4)
+```
+
+and finally, install and launch Seurat:
+
+``` R
+>>> install.packages("Seurat", Ncpus=4)
+>>> library(Seurat)
+```
+
+If you run into any issues, feel free to reach out to [support][url_contact].
+
+
+
+
 ### Examples
 
 #### Installing `devtools`
@@ -729,7 +777,9 @@ which shows a decent speedup for running on a GPU for the largest matrix sizes.
 [url_cran]:             //cran.r-project.org/
 [url_rmpi]:             //cran.r-project.org/web/packages/Rmpi
 [url_gpur]:             //cran.r-project.org/web/packages/gpuR
+[url_seurat]:           //satijalab.org/seurat/
 [url_contact]:          mailto:{{support_email}}
+
 
 [url_modules]:          ../modules.md
 [url_software_list]:    ../list.md
