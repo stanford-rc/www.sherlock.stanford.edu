@@ -612,9 +612,9 @@ session.
 [url_module_scipy]:     ../list.md#py-scipy
 [url_module_tensorflow]:../list.md#py-tensorflow
 [url_module_uv]:        ../list.md#uv
-[url_sh_dev]:           ../../../user-guide/running-jobs#interactive-jobs
-[url_file_expiration]:  ../../../storage/filesystems#expiration-policy
-[url_ood_codeserver]:   ../../../user-guide/ondemand#vs-code
+[url_sh_dev]:           ../../user-guide/running-jobs.md#interactive-jobs
+[url_file_expiration]:  ../../storage/filesystems.md#expiration-policy
+[url_ood_codeserver]:   ../../user-guide/ondemand.md#vs-code
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
