@@ -444,7 +444,7 @@ workflows, largely due to its speed and its built-in support for reproducible
 project configurations.
 
 For the full `uv` documentation, see the [official docs][url_uv]. For details
-on `uv`'s virtual environment support, see [uv venv][url_uv_venv].
+on `uv`'s virtual environment support, see [`uv venv`][url_uv_venv].
 
 ##### uv on Sherlock
 
