@@ -54,7 +54,7 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     $ cp -R $HOME/af3_model $SCRATCH
     ```
 
-3. Clone the AlphaFold 3 GitHub Repo into `$GROUP_HOME`
+3. Clone the AlphaFold 3 GitHub repository into `$GROUP_HOME`
 
     ``` none
     $ mkdir -p $GROUP_HOME/$USER
@@ -223,10 +223,11 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
     databases with those on Oak and automatically copies over any missing
     files.
 
-    The `dcp` command is located in the `mpifileutils` module. mpiFileUtils is
-    a suite of MPI-based tools used to manage large datasets. `dcp` functions
-    similar to `cp` but can leverage multiple cpu cores to copy files faster.
-    Here is an example usage for an AlphaFold database located in `$SCRATCH`.
+    The `dcp` command is located in the `mpifileutils` module.
+    [mpiFileUtils][url_mpifileutils is a suite of MPI-based tools used to
+    manage large datasets. `dcp` functions similar to `cp` but can leverage
+    multiple cpu cores to copy files faster.  Here is an example usage for an
+    AlphaFold database located in `$SCRATCH`.
 
     ``` none
     $ module load system mpifileutils
@@ -242,7 +243,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
    The apptainer container has been tested extensively on Sherlock GPUs with
    CUDA capability 8.x or higher. These include H100, L40S, RTX 3090, A100, and
    A40 model GPUs. New models, such as the H100 and L40S, produce the fastest
-   runtimes, with older models taking slightly longer. Consumer grade GPUs,
+   run times, with older models taking slightly longer. Consumer grade GPUs,
    such as the RTX 3090, are also sequence limited due to lower GPU memory.
 
    To run exclusively on a particular GPU model, you can use the SLURM
@@ -270,7 +271,7 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
    Specifying the compute capability can simplify your `--constraint` list
    because some GPU models have the same compute capability, as seen in the
    table below. It also addresses the central problem we are working around,
-   since you can directly limit your SLURM job to the GPUs which statisfy the
+   since you can directly limit your SLURM job to the GPUs which satisfy the
    8.x or higher requirement.
 
     | GPU Model | Compute Capability |
@@ -298,11 +299,11 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
 
    On Sherlock, the preferred method for running AlphaFold 3 is from an
    Apptainer container. The Apptainer definition file (`af3.def`) SRC provides
-   is modified from the Docker file that Google DeepMind's publishes with
-   AlphaFold 3. SRC's definition file takes into account the heterogeneity of
-   the Sherlock cluster, and provides logic to determine which environment
-   variables need to be set based on the compute capability of the available
-   GPU.
+   is modified from the Docker file that Google DeepMind publishes with
+   AlphaFold 3. The definition file we provide takes into account the
+   heterogeneity of the Sherlock cluster, and provides logic to determine which
+   environment variables need to be set based on the compute capability of the
+   available GPU.
 
    AlphaFold 3 reads and write to several directories during runtime such as
    `af_input`, `af_output`, `af3_model`, and `af3_db` directories. In order to
@@ -324,5 +325,6 @@ image, you are ready to start running AlphaFold 3 on Sherlock.
 [url_deepmind]:       //deepmind.google/
 [url_tou]:            //github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md
 [url_form]:           //github.com/google-deepmind/alphafold3?tab=readme-ov-file#obtaining-model-parameters
+[url_mpifileutils]:   //github.com/hpc/mpifileutils
 
 --8<--- "includes/_acronyms.md"
