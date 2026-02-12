@@ -25,13 +25,13 @@ the other.
 
 You can load either version on Sherlock by doing the following commands:
 
-``` shell
+``` none
 $ ml python/2.7.13
 ```
 
 or
 
-``` shell
+``` none
 $ ml python/3.6.1
 ```
 
@@ -52,7 +52,7 @@ $ ml python/3.6.1
 Once your environment is configured (ie. when the Python module is loaded),
 Python can be started by simply typing `python` at the shell prompt:
 
-``` shell
+``` none
 $ python
 Python 2.7.13 (default, Apr 27 2017, 14:19:21)
 [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)] on linux2
@@ -349,7 +349,244 @@ $ pip uninstall -r requirements.txt
 
 ### Virtual environments
 
---8<--- "includes/_wip.md"
+A [virtual environment][url_venv_docs] is a self-contained directory that holds
+its own Python interpreter and installed packages, isolated from the
+system-wide installation and from other virtual environments. This is useful
+when different projects require different (and potentially conflicting) versions
+of the same package, or when you want a clean, reproducible set of dependencies
+for a specific workflow.
+
+On Sherlock, virtual environments also help keep your `$HOME` directory clean
+by concentrating installed packages in a single, easily removable directory
+rather than scattering them across `~/.local`.
+
+!!! warning "Use a compute node for environment creation"
+
+    Building virtual environments can be resource-intensive (compiling C
+    extensions, resolving dependencies, etc.). This should be done on a compute
+    node, for instance using the [`sh_dev`][url_sh_dev] command, rather than on
+    a login node.
+
+
+#### Using `venv`
+
+Python 3 includes the `venv` module in its standard library. This is the
+simplest way to create a virtual environment without any additional tools.
+
+To create and activate a virtual environment:
+
+``` none
+$ ml python/3.12.1
+$ python3 -m venv myenv
+$ source myenv/bin/activate
+```
+
+Once activated, your shell prompt will be prefixed with the environment name,
+and `pip` will install packages into the virtual environment directory rather
+than into `~/.local`:
+
+``` none
+(myenv) $ pip install numpy pandas
+```
+
+To deactivate the environment and return to your normal shell:
+
+``` shell
+(myenv) $ deactivate
+```
+
+To use a virtual environment in a batch job, simply activate it in your Slurm
+script:
+
+``` shell title="job.sh"
+#!/bin/bash
+#SBATCH --job-name=my_job
+#SBATCH --output=my_job-%j.out
+#SBATCH --partition=normal
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=16GB
+#SBATCH --time=02:00:00
+
+ml python/3.12.1
+source myenv/bin/activate
+python3 my_script.py
+```
+
+To remove a virtual environment, simply delete its directory:
+
+``` none
+$ rm -rf myenv
+```
+
+!!! tip "Where to store virtual environments"
+
+    Virtual environments can contain a large number of files. It is best to
+    create them on `$GROUP_HOME` rather than in `$HOME`, to avoid running into
+    space quota limits.
+
+!!! warning "Concurrent jobs and virtual environments"
+
+    Please also note that running multiple concurrent jobs using the same
+    virtual environment can generate a lot of I/O on file systems not designed
+    to handle direct I/O from jobs (like `$HOME`, `$GROUP_HOME`, or `$OAK`). If
+    you need to run multiple jobs using the same virtual environment, consider
+    installing it on `$SCRATCH` (keeping in mind the [file expiration
+    policy][url_file_expiration] there), or copying it to a local scratch
+    directory on the compute node (like `$L_SCRATCH`) before activating it.
+
+
+#### Using `uv`
+
+[uv][url_uv] is a fast Python package and project manager that handles
+dependency resolution, virtual environments, and Python version management. It
+has gained significant popularity as a modern alternative to `pip` + `venv`
+workflows, largely due to its speed and its built-in support for reproducible
+project configurations.
+
+For the full `uv` documentation, see the [official docs][url_uv]. For details
+on `uv`'s virtual environment support, see [uv venv][url_uv_venv].
+
+##### uv on Sherlock
+
+`uv` is available on Sherlock and the corresponding [module][url_modules] can
+be loaded with:
+
+``` none
+$ ml uv
+```
+
+For a list of available versions, you can execute `ml spider uv` at the
+Sherlock prompt, or refer to the [Software list page][url_module_uv].
+
+##### Configuration
+
+By default, `uv` will try to download its own Python interpreter. On Sherlock,
+it is generally better to use the Python provided by the module system. After
+loading a Python module, set `UV_PYTHON` so that `uv` uses it:
+
+``` none
+$ ml python/3.12.1
+$ export UV_PYTHON=$(which python3)
+```
+
+##### Quick start with `uv pip`
+
+This approach is closest to the traditional `pip` + `venv` workflow:
+
+``` none
+$ ml python/3.12.1 uv gcc/12.4.0
+$ export UV_PYTHON=$(which python3)
+$ uv venv
+$ source .venv/bin/activate
+$ uv pip install numpy pandas matplotlib
+```
+
+##### Project-based workflow with `uv init`
+
+For reproducible environments, `uv` can manage a `pyproject.toml` file that
+tracks all dependencies and their exact versions. This is the recommended
+approach for projects that need to be shared or reproduced.
+
+To initialize a new project:
+
+``` none
+$ cd /path/to/projects
+$ uv init --package my_project
+$ cd my_project
+```
+
+This creates a `pyproject.toml`, a `src/my_project/` directory for reusable
+modules, and (after adding packages) a `.venv` directory. If your code is not
+structured as a package, you can use `uv init my_project` instead (without
+`--package`).
+
+To add dependencies:
+
+``` none
+$ uv add pandas numpy matplotlib
+```
+
+`uv add` both installs the package into `.venv` and records it in
+`pyproject.toml`, so the environment can be recreated from the file alone.
+
+For packages hosted on GitHub:
+
+``` none
+$ uv add git+https://github.com/user/repo.git@main
+```
+
+!!! warning "Avoid modifying the environment manually after activation"
+
+    Changing a `uv`-managed environment using `pip install` directly (after
+    activating the `.venv`) can break the alignment between `.venv` and
+    `pyproject.toml`. Use `uv add` or `uv pip` instead. When in doubt, check
+    `uv --help`.
+
+##### Running scripts with `uv run`
+
+`uv run` executes a command using the project's `.venv` without needing to
+activate it first:
+
+``` none
+$ uv run --project /path/to/my_project python analysis/my_script.py
+```
+
+##### Batch jobs with `uv`
+
+For the quick `uv pip` workflow, batch scripts only need to activate the
+`.venv`:
+
+``` shell title="run_script.sh"
+#!/bin/bash
+#SBATCH --job-name=my_job
+#SBATCH --output=my_job-%j.out
+#SBATCH --partition=normal
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=16GB
+#SBATCH --time=02:00:00
+
+source .venv/bin/activate
+python3 my_script.py
+```
+
+For the project-based workflow, use `uv run` after having loaded the required
+modules:
+
+``` shell title="run_project.sh"
+#!/bin/bash
+#SBATCH --job-name=my_job
+#SBATCH --output=my_job-%j.out
+#SBATCH --partition=normal
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=16GB
+#SBATCH --time=02:00:00
+
+module load python/3.12.1
+module load gcc/12.4.0
+module load uv
+export UV_PYTHON=$(which python3)
+
+uv run --project /path/to/my_project python analysis/my_script.py
+```
+
+Submit with:
+
+``` none
+$ sbatch run_project.sh
+```
+
+##### Using with VS Code
+
+To use your `uv` environment in VS Code on Sherlock (via the
+[OnDemand code server][url_ood_codeserver]):
+
+1. Make sure your `.venv` is already created before starting the code server.
+2. Open your project folder in VS Code, then open any Python file or notebook.
+3. When prompted, pick `.venv/bin/python` as the interpreter (or kernel for
+   notebooks).
+
+If VS Code doesn't find the `.venv` automatically, restart the code server
+session.
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
@@ -360,16 +597,24 @@ $ pip uninstall -r requirements.txt
 [url_pip_docs]:         //pip.pypa.io/en/stable/user_guide/
 [url_pypi]:             //pypi.python.org/pypi
 [url_pep394]:           //www.python.org/dev/peps/pep-0394
+[url_venv_docs]:        //docs.python.org/3/library/venv.html
+
+[url_uv]:               //docs.astral.sh/uv/
+[url_uv_venv]:          //docs.astral.sh/uv/pip/environments/
 
 [url_numpy]:            //www.numpy.org/
 [url_scipy]:            //www.scipy.org/
 [url_httpie]:           //httpie.org/
 
-[url_modules]:          /docs/software/list.md
-[url_module_python]:    /docs/software/list.md#python
-[url_module_numpy]:     /docs/software/list.md#py-numpy
-[url_module_scipy]:     /docs/software/list.md#py-scipy
-[url_module_tensorflow]:/docs/software/list.md#py-tensorflow
+[url_modules]:          ../list.md
+[url_module_python]:    ../list.md#python
+[url_module_numpy]:     ../list.md#py-numpy
+[url_module_scipy]:     ../list.md#py-scipy
+[url_module_tensorflow]:../list.md#py-tensorflow
+[url_module_uv]:        ../list.md#uv
+[url_sh_dev]:           ../../../user-guide/running-jobs#interactive-jobs
+[url_file_expiration]:  ../../../storage/filesystems#expiration-policy
+[url_ood_codeserver]:   ../../../user-guide/ondemand#vs-code
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
