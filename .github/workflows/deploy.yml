@@ -23,7 +23,7 @@ jobs:
       MKDOCS_MATERIAL_FORK_TOKEN: ${{ secrets.GH_TOKEN }}
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - run: |
           pip install git+https://${MKDOCS_MATERIAL_FORK_TOKEN}@github.com/stanford-rc/mkdocs-material-insiders.git
           pip install -r requirements.txt
