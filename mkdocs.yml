@@ -14,7 +14,7 @@ edit_uri:  www.sherlock.stanford.edu/edit/main/src/
 
 # Copyright
 copyright: >-
-  Copyright &copy; 2014 - 2024 &mdash;
+  Copyright &copy; 2014 - 2025 &mdash;
   <a href='mailto:srcc-support@stanford.edu'>Stanford Research Computing</a><br/>
 
 # Configuration
@@ -55,9 +55,32 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
+    - navigation.path
     - search.highlight
     - search.share
     - search.suggest
+
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: sherlock
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      # https://github.com/squidfunk/mkdocs-material/issues/5537
+      primary: custom
+      accent:  custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
 
   font:
     text: Roboto
@@ -128,6 +151,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/stanford-rc
       name: SRCC on GitHub
+    - icon: fontawesome/brands/bluesky
+      link: https://bsky.app/profile/stanford-rc.bsky.social
+      name: SRCC on BlueSky
     - icon: fontawesome/brands/slack
       link: https://srcc.slack.com/
       name: SRCC Users Slack workspace
@@ -142,11 +168,23 @@ extra:
 # Plugins
 plugins:
 
+  - group: # Insiders-specific configuration
+      enabled: !ENV INSIDERS
+      plugins:
+        - social:
+            cards_layout: default
+            cards_layout_options:
+              #logo: src/assets/images/logo_small.png
+              font_family: Roboto
+              background_image: src/assets/images/logo.png
+              background_color: "#8C1515"
+        - typeset
+
+
   - search:
       separator: "[\\s\\-,:!=\\[\\]()\"/]+|\\.(?!\\d)|&[lg]t;|(?!\\b)(?=[A-Z][a-z])"
 
   - social:
-      cards_layout: default
       cards_layout_options:
         #logo: src/assets/images/logo_small.png
         font_family: Roboto
@@ -284,19 +322,20 @@ nav:
       - Tools:
           - ClusterShell:    docs/software/using/clustershell.md
       - Usage:
-          - R:               docs/software/using/R.md
-          - Julia:           docs/software/using/julia.md
-          - Python:          docs/software/using/python.md
-          - Anaconda:        docs/software/using/anaconda.md
-          - Perl:            docs/software/using/perl.md
-          - Matlab:          docs/software/using/matlab.md
-          - Rclone:          docs/software/using/rclone.md
-          - Spark:           docs/software/using/spark.md
-          - MariaDB:         docs/software/using/mariadb.md
-          - PostgreSQL:      docs/software/using/postgresql.md
-          - Schrödinger:     docs/software/using/schrodinger.md
-          - Quantum Espresso: docs/software/using/quantum-espresso.md
           - AlphaFold:       docs/software/using/alphafold.md
+          - Anaconda:        docs/software/using/anaconda.md
+          - Julia:           docs/software/using/julia.md
+          - MariaDB:         docs/software/using/mariadb.md
+          - Matlab:          docs/software/using/matlab.md
+          - Ollama:          docs/software/using/ollama.md
+          - Perl:            docs/software/using/perl.md
+          - PostgreSQL:      docs/software/using/postgresql.md
+          - Python:          docs/software/using/python.md
+          - Quantum Espresso: docs/software/using/quantum-espresso.md
+          - R:               docs/software/using/R.md
+          - Rclone:          docs/software/using/rclone.md
+          - Schrödinger:     docs/software/using/schrodinger.md
+          - Spark:           docs/software/using/spark.md
   - Advanced topics:
       - Connection options:  docs/advanced-topics/connection.md
       - Job management:      docs/advanced-topics/job-management.md

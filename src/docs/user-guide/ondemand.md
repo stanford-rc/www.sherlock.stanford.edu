@@ -437,6 +437,62 @@ To start a VS Code session via Sherlock OnDemand:
 
 ![ood_code-server](images/ood_code-server.png)
 
+## Common Issues
+
+### No Space Left on Device
+
+Occasionally, you may get an error message like the one below:
+
+![nospc](images/ood_nospc.png)
+
+!!! Info "Quota exceeded"
+
+    This means that you have exceeded your [storage quota][url_quota] in your
+    Sherlock `$HOME` directory.
+
+Because this issue prevents OnDemand from running, you will probably not be
+able to use the ["Files"][url_files] menu the web browser to help you clean up.
+Instead, you will need to [connect][url_connect] to the cluster with `ssh`.
+
+Once connected, you'll be able to [identify the largest space
+consumers][url_ncdu] in your `$HOME` directory, and either delete or
+move them to a different storage location.
+
+!!! tip "Emptying `~/.cache`"
+
+    Among potential candidates, your `~/.cache` directory is usually safe to
+    empty, since files there are temporary files that can be re-created as
+    needed. You can empty this directory by running:
+
+    ```none
+    rm -rf ~/.cache/*
+    ```
+
+
+### Bad Request
+
+Another common error looks something like this:
+
+![badrequest](images/ood_badrequest.png)
+
+This issue is caused by some session cookies that may have grown beyond what
+can be handled by the server. This can usually be addressed by clearing your
+browser cookies.
+
+!!! tip "Cleaning site-specific cookies"
+
+    For a more targetted approach, you can delete only the cookies for the
+    `ondemand.sherlock.stanford.edu` site. Instruction to do this vary by
+    browser, but for Chrome, Firefox and Edge, you can usually click on the
+    padlock icon to the left of the URL in the address bar, then click on
+    "Cookies" or "Site Settings" to manage or delete cookies for that site.
+    Please refer to your browser's documentation for details.
+
+
+If the issue persists, switching browsers or using "Incognito Mode" can work as
+a temporary workaround.
+
+
 ## Support
 
 If you are experiencing issues with Sherlock or your interactive session, you can
@@ -485,7 +541,7 @@ To submit a ticket about your current or recent interactive session:
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_contact]:      mailto:{{ support_email }}
+[url_contact]:      mailto:{{support_email}}
 [url_oak]:          //uit.stanford.edu/service/oak-storage
 [url_osc]:          //www.osc.edu
 [url_ood]:          //openondemand.org
@@ -493,10 +549,14 @@ To submit a ticket about your current or recent interactive session:
 [url_ood_logout]:   //login.sherlock.stanford.edu/logout
 
 [url_storage]:      /docs/storage/index.md
+[url_quota]:        /docs/storage/index.md#quotas-and-limits
+[url_files]:        #managing-files
+[url_ncdu]:         /docs/storage/index.md#locating-large-directories
 [url_rclone]:       /docs/software/using/rclone.md
 [url_gssapi]:       /docs/advanced-topics/connection.md#gssapi
 [url_avoid_duo]:    /docs/advanced-topics/connection.md#avoiding-multiple-duo-prompts
 [url_running_jobs]: /docs/user-guide/running-jobs.md
+[url_connect]:      /docs/getting-started/connecting.md
 [url_r_packages]:   /docs/software/using/R.md#r-packages
 
 [comment]: #  (footnotes -----------------------------------------------------)

@@ -53,7 +53,7 @@ guidelines for installing and running AlphaFold in user space on Sherlock.
     ``` none
     $ cp -R $HOME/af3_model $SCRATCH
     ```
-
+    
 3. Copy the Databases to `$SCRATCH` or `$GROUP_SCRATCH`.
 
     For faster performance, you will need a copy of the AlphaFold 3 databases

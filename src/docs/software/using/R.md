@@ -366,12 +366,13 @@ $ module spider udunits
       physics
 ```
 
-So for `sf`, in order to load the dependencies, exit `R`, load the `udunits`
-and `gdal` modules, and try installing `sf` again:
+So for `sf`, as well as other geo-type libraries like `terra` and `raster`, in
+order to load the dependencies, exit `R`, load the `udunits` and `gdal`
+modules, and try installing `sf` again:
 
 ``` none
-$ ml load physics udunits gdal geos
-$ ml R/4.3.2
+$ ml physics geos/3.13.1 udunits/2.2.26 gdal/3.10.2 proj/9.5.1
+$ ml R/4.4.2
 $ R
 > install.packages("sf")
 ```
@@ -383,7 +384,7 @@ and many R package dependencies are already available as modules on Sherlock,
 you just need to search for them with `module spider` and load them.
 
 And in case you're stuck, you can of course always [send us an
-email][url_support] and we'll be happy to assist.
+email][url_contact] and we'll be happy to assist.
 
 #### Updating Packages
 
@@ -416,6 +417,54 @@ To remove a package from your local R library, you can use the
 > remove.packages('doParallel')
 ```
 
+
+### Common packages
+
+#### Seurat
+
+[Seurat][url_seurat] is a commonly used R package for QC, analysis, and
+exploration of single-cell RNA-seq data. It can also be a bit hard to install
+on Sherlock because one of its dependencies, Matrix, doesn't install cleanly
+from [CRAN][url_cran]. However, with the help of a few helper modules on Linux
+and some special syntax for installing Matrix in R, Seurat can be a breeze to
+install in many of our [R module versions][url_software_list].
+
+First, you'll want to get a compute session and purge your current environment:
+
+``` none
+$ sh_dev -c 4
+$ ml purge
+```
+
+You may have to wait a bit for an allocation, but once you do, you can load R
+and some helper modules and then launch R.
+
+``` none
+$ ml R/4.2
+$ ml glpk gmp
+$ R
+```
+
+We've tested this on 4.2 and 4.3, but you can try it on other versions as well.
+
+Once you're in R, first install Matrix manually from a tarball:
+
+``` R
+>>> install.packages("https://cran.r-project.org/src/contrib/Archive/Matrix/Matrix_1.6-5.tar.gz", repos=NULL, type="source", Ncpus=4)
+```
+
+and finally, install and launch Seurat:
+
+``` R
+>>> install.packages("Seurat", Ncpus=4)
+>>> library(Seurat)
+```
+
+If you run into any issues, feel free to reach out to [support][url_contact].
+
+
+
+
 ### Examples
 
 #### Installing `devtools`
@@ -428,7 +477,8 @@ those on GitHub.
 Installing `devtools` is somewhat memory-intensive and has several
 dependencies. The following example shows how to run an interactive session
 with 4 CPUs, load the modules for the necessary dependencies, and install
-`devtools` for R version 4.2.0.
+`devtools` for R version 4.4.2. Note: these dependencies will also work for
+installing the popular library `tidyverse`.
 
 ```none
 # Launch interactive dev session with 4 CPUs
@@ -438,10 +488,8 @@ $ sh_dev -c 4
 # Load the required modules
 
 $ ml purge
-$ ml R/4.2.0
-$ ml system harfbuzz fribidi
-$ ml cmake libgit2
-$ ml openssl
+$ ml R/4.4.2
+$ ml libgit2/1.9.1 fribidi/1.0.12 libwebp/1.3.0 freetype/2.9.1
 
 # Launch R and install devtools
 
@@ -729,7 +777,9 @@ which shows a decent speedup for running on a GPU for the largest matrix sizes.
 [url_cran]:             //cran.r-project.org/
 [url_rmpi]:             //cran.r-project.org/web/packages/Rmpi
 [url_gpur]:             //cran.r-project.org/web/packages/gpuR
-[url_support]:          mailto:{{ support_email }}
+[url_seurat]:           //satijalab.org/seurat/
+[url_contact]:          mailto:{{support_email}}
+
 
 [url_modules]:          ../modules.md
 [url_software_list]:    ../list.md

@@ -317,7 +317,7 @@ $ srun dsync /oak/stanford/datasets/common/source $SCRATCH/source
 [url_sh_rsync]:         /docs/storage/data-transfer.md#rsync
 [url_dsync]:            //mpifileutils.readthedocs.io/en/0.12-rtd/dsync.1.html
 
-[url_contact]:          mailto:{{ support_email }}
+[url_contact]:          mailto:{{support_email}}
 
 [url_oak]:              /docs/storage/filesystems.md#oak
 

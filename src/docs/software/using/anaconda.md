@@ -110,7 +110,7 @@ container images, it could be useful to collect them all in a single location
 [url_container]:      /docs/software/containers/index.md
 [url_sh_dev]:         /docs/user-guide/running-jobs.md#interactive-jobs
 
-[url_contact]:        mailto:{{ support_email }}
+[url_contact]:        mailto:{{support_email}}
 
 [url_pypi]:           //pypi.org
 
