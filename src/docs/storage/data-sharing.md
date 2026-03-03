@@ -152,27 +152,27 @@ Commonly used entries for these fields are:
   special principles: `OWNER@`, `GROUP@`, and `EVERYONE@`.
 * **permissions**: there are 14 permission characters, as well as the shortcuts
   `R`, `W`, and `X`. Here is a list of possible permissions that can be
-  included in the permissions field (options are Case Sensitive)<small>
-  * `r` read-data (files) / list-directory (directories)
-  * `w` write-data (files) / create-file (directories)
-  * `x` execute (files) / change-directory (directories)
-  * `a` append-data (files) / create-subdirectory (directories)
-  * `t` read-attributes: read the attributes of the file/directory.
-  * `T` write-attributes: write the attributes of the file/directory.
-  * `n` read-named-attributes: read the named attributes of the
+  included in the permissions field (options are Case Sensitive)
+  <small>
+    * `r` read-data (files) / list-directory (directories)
+    * `w` write-data (files) / create-file (directories)
+    * `x` execute (files) / change-directory (directories)
+    * `a` append-data (files) / create-subdirectory (directories)
+    * `t` read-attributes: read the attributes of the file/directory.
+    * `T` write-attributes: write the attributes of the file/directory.
+    * `n` read-named-attributes: read the named attributes of the
       file/directory.
-  * `N` write-named-attributes: write the named attributes of the
+    * `N` write-named-attributes: write the named attributes of the
       file/directory.
-  * `c` read-ACL: read the file/directory NFSv4 ACL.
-  * `C` write-ACL: write the file/directory NFSv4 ACL.
-  * `o` write-owner: change ownership of the file/directory.
-  * `y` synchronize: allow clients to use synchronous I/O with the server.
-  * `d` delete: delete the file/directory. Some servers will allow a delete
+    * `c` read-ACL: read the file/directory NFSv4 ACL.
+    * `C` write-ACL: write the file/directory NFSv4 ACL.
+    * `o` write-owner: change ownership of the file/directory.
+    * `y` synchronize: allow clients to use synchronous I/O with the server.
+    * `d` delete: delete the file/directory. Some servers will allow a delete
       to occur if either this permission is set in the file/directory or if the
       delete-child permission is set in its parent directory.
-  * `D` delete-child: remove a file or subdirectory from within the given
+    * `D` delete-child: remove a file or subdirectory from within the given
       directory (directories only)
-
    </small>
 
 A comprehensive listing of allowable field strings is given in the manual page
@@ -271,8 +271,6 @@ there are two possibilities:
 
      For complete details about sharing data with Globus, please see the Globus
      documentation at https://docs.globus.org/how-to/share-files/
-
-
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
