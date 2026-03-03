@@ -65,18 +65,18 @@ the following template to create a batch job for copying the databases.
 
 ``` shell
 #!/bin/bash
-#SBATCH --cpus-per-task=8
+#SBATCH --ntasks=4
 #SBATCH --partition=service
 #SBATCH --time=6:00:00
 
 ml system mpifileutils
-srun -n $SLURM_TASKS_PER_NODE dcp /oak/stanford/datasets/common/alphafold3 $SCRATCH/af3_db
+srun dcp $COMMON_DATASETS/alphafold3 $SCRATCH/af3_db
 ```
 
 Unmodified files are purged from `$SCRATCH` and `$GROUP_SCRATCH` every 90
 days. As you run AlphaFold, you can include a `dsync` in your scripts that
 compares your `$SCRATCH` databases with those in
-`/oak/stanford/datasets/common/alphafold3` and automatically copies over any
+`$COMMON_DATASETS/alphafold3` and automatically copies over any
 missing files (shown in the example scripts below).
 
 #### Getting the Apptainer image
@@ -135,9 +135,30 @@ $ mkdir -p $SCRATCH/af_input
 $ mkdir -p $SCRATCH/af_output
 ```
 
-The input directory is where you will put the `.json` files describing the
-sequences you want to fold. For details on the input format, see the
-[AlphaFold 3 input documentation][url_af3_input].
+AlphaFold 3 takes `.json` files as input, describing the sequences you want
+to fold. For the full input format specification, see the [AlphaFold 3 input
+documentation][url_af3_input]. Here is a minimal example for a single protein
+chain:
+
+``` json
+{
+  "name": "my_protein",
+  "modelSeeds": [1],
+  "sequences": [
+    {
+      "protein": {
+        "id": "A",
+        "sequence": "MGYINVVKDMTQNLRSLLNLLDKKVTSGLGASEVDGQLISLRGAGQFPASQASNSS"
+      }
+    }
+  ],
+  "dialect": "alphafold3",
+  "version": 1
+}
+```
+
+Save the file in your `af_input` directory. The `name` field determines the
+name of the output subdirectory.
 
 #### Running the data pipeline
 
@@ -160,10 +181,8 @@ file you would like to fold, and the `.json` file needs to be placed in the
 #SBATCH --mem=20G
 #SBATCH --time=0-01:00:00
 
-### This section is for automatically syncing from Oak databases
-### Uncomment to activate this in your script
-# module load system mpifileutils
-# srun -n $SLURM_TASKS_PER_NODE dsync --quiet /oak/stanford/datasets/common/alphafold3 $SCRATCH/af3_db
+### Uncomment to sync missing database files from Oak before running
+# rsync -a $COMMON_DATASETS/alphafold3/ $SCRATCH/af3_db/
 
 # model and database paths variables
 SIF_FILE=af3_dev.sif
@@ -186,6 +205,13 @@ apptainer run \
      --output_dir=/root/af_output
 ```
 
+!!! tip "8 CPUs is the sweet spot for the data pipeline"
+
+    AlphaFold 3 uses `jackhmmer` and `nhmmer` for sequence searches, which
+    are capped at 8 CPUs. Going beyond 8 provides almost no additional
+    speedup. If you do change `--cpus-per-task`, pass the matching values
+    explicitly with `--jackhmmer_n_cpu=<N>` and `--nhmmer_n_cpu=<N>`.
+
 #### Running inference
 
 AlphaFold 3 runs best on [GPUs with CUDA Capability > 7.x][url_cuda_gpus].
@@ -201,18 +227,15 @@ template example below the data directory and file is `/2pv7/2pv7_data.json`.
 
 ``` shell
 #!/bin/bash
-#
 #SBATCH --partition=gpu
 #SBATCH --cpus-per-task=8
-#SBATCH --mem=12G
+#SBATCH --mem=20G
 #SBATCH --gpus=1
 #SBATCH --constraint=GPU_SKU:H100_SXM5
 #SBATCH --time=0-00:10:00
 
-### This section is for automatically syncing from Oak databases
-### Uncomment to activate this in your script
-# module load system mpifileutils
-# srun -n $SLURM_TASKS_PER_NODE dsync --quiet /oak/stanford/datasets/common/alphafold3 $SCRATCH/af3_db
+### Uncomment to sync missing database files from Oak before running
+# rsync -a $COMMON_DATASETS/alphafold3/ $SCRATCH/af3_db/
 
 # model and database paths variables
 SIF_FILE=af3_dev.sif
@@ -220,20 +243,78 @@ MODEL_PARAMS_PATH=$SCRATCH/af3_model
 DB_PATH=$SCRATCH/af3_db
 DATA_JSON=/2pv7/2pv7_data.json
 
+# JAX compilation cache (avoids recompiling kernels on every run)
+CACHE_DIR=$SCRATCH/.cache/jax
+mkdir -p $CACHE_DIR
+
 # run alphafold3 apptainer container
 apptainer run \
      --nv \
      --env JAX_TRACEBACK_FILTERING=off \
+     --env XLA_FLAGS="--xla_gpu_enable_triton_gemm=false" \
+     --env JAX_COMPILATION_CACHE_DIR=/root/.cache/jax \
      --bind $SCRATCH/af_input:/root/af_input \
      --bind $SCRATCH/af_output:/root/af_output \
      --bind $MODEL_PARAMS_PATH:/root/models \
      --bind $DB_PATH:/root/public_databases \
+     --bind $CACHE_DIR:/root/.cache/jax \
      $SIF_FILE \
      --norun_data_pipeline \
      --json_path=/root/af_output/$DATA_JSON \
      --model_dir=/root/models \
      --output_dir=/root/af_output
 ```
+
+!!! tip "Out of GPU memory on large inputs?"
+
+    For very long sequences or large complexes (roughly >5,000 tokens),
+    inference may run out of GPU memory. You can enable JAX unified memory
+    to spill overflow to system RAM by adding
+    `--env XLA_PYTHON_CLIENT_ALLOCATOR=platform` to your `apptainer run`
+    command. This allows larger inputs to run at the cost of some performance.
+
+#### Chaining pipeline and inference jobs
+
+Rather than waiting for the pipeline job to finish before submitting
+inference, you can use Slurm's `--dependency` flag to submit both jobs
+upfront and have inference start automatically once the pipeline succeeds.
+
+``` shell
+# Submit the pipeline job and capture its job ID
+PIPELINE_JOB=$(sbatch --parsable run_pipeline.sh)
+
+# Submit inference to run only after the pipeline job completes successfully
+sbatch --dependency=afterok:$PIPELINE_JOB run_inference.sh
+```
+
+If the pipeline job fails, the dependent inference job will not start. You
+can cancel it with `scancel <inference_job_id>`.
+
+#### Understanding the output
+
+After running both steps, your `af_output` directory will contain a
+subdirectory named after the `name` field in your input JSON. Its contents
+after a full run look like this:
+
+``` none
+af_output/
+└── my_protein/
+    ├── my_protein_data.json          # intermediate output from the pipeline step
+    ├── my_protein_model.cif          # best predicted structure
+    ├── my_protein_confidences.json   # per-residue confidence scores (pLDDT, PAE)
+    ├── my_protein_summary_confidences.json
+    ├── ranking_scores.csv            # ranking of all generated samples
+    ├── seed-1_sample-0/
+    │   ├── model.cif
+    │   ├── confidences.json
+    │   └── summary_confidences.json
+    ├── seed-1_sample-1/
+    ...
+    └── TERMS_OF_USE.md
+```
+
+By default, AlphaFold 3 generates 5 samples per seed. The top-ranked
+structure is copied to `my_protein_model.cif` at the top level.
 
 ### Best Practices
 
@@ -248,12 +329,23 @@ files that are missing or outdated.
 
 ``` none
 $ module load system mpifileutils
-$ srun -n $SLURM_TASKS_PER_NODE dsync --quiet /oak/stanford/datasets/common/alphafold3 $SCRATCH/af3_db
+$ srun dsync --quiet $COMMON_DATASETS/alphafold3 $SCRATCH/af3_db
 ```
 
 Note that running `dsync` will increase the runtime of your job depending on
 how many files need to be re-copied. You can also run it separately and
 periodically from its own sbatch script.
+
+#### JAX compilation cache
+
+On its first run, AlphaFold 3 compiles GPU kernels via XLA, which can take
+several minutes. By pointing the compilation cache to `$SCRATCH`, subsequent
+runs reuse the compiled kernels and start significantly faster. The inference
+script above already sets this up — just make sure `CACHE_DIR` points to a
+consistent location across runs.
+
+If you are running multiple jobs in parallel, they can safely share the same
+cache directory.
 
 #### GPU selection
 
