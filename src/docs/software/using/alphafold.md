@@ -88,7 +88,7 @@ of AlphaFold 3. However, if you would like to use the most recent
 development version of AlphaFold 3, you can follow the instructions below
 for building your own container.
 
-To copy the pre-built container for AlphaFold 3:
+To copy the prebuilt container for AlphaFold 3:
 
 ``` none
 $ cp /home/groups/sh_support/share/containers/af3_v301.sif $SCRATCH/af3_v301.sif
@@ -158,7 +158,7 @@ chain:
 ```
 
 Save the file in your `af_input` directory. The `name` field determines the
-name of the output subdirectory.
+name of the output sub-directory.
 
 #### Running the data pipeline
 
@@ -275,9 +275,9 @@ apptainer run \
 
 #### Chaining pipeline and inference jobs
 
-Rather than waiting for the pipeline job to finish before submitting
-inference, you can use Slurm's `--dependency` flag to submit both jobs
-upfront and have inference start automatically once the pipeline succeeds.
+Rather than waiting for the pipeline job to finish before submitting inference,
+you can use the `--dependency` option to submit both jobs upfront and have
+inference start automatically once the pipeline succeeds.
 
 ``` shell
 # Submit the pipeline job and capture its job ID
@@ -293,7 +293,7 @@ can cancel it with `scancel <inference_job_id>`.
 #### Understanding the output
 
 After running both steps, your `af_output` directory will contain a
-subdirectory named after the `name` field in your input JSON. Its contents
+sub-directory named after the `name` field in your input JSON. Its contents
 after a full run look like this:
 
 ``` none
