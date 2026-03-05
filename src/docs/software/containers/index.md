@@ -21,7 +21,7 @@ specifically.
 
 <div class="grid cards" markdown>
 
--   :material-docker: **[Apptainer][url_apptainer]**
+- :material-docker: **[Apptainer][url_apptainer]**
 
     ---
 
@@ -31,7 +31,7 @@ specifically.
 
     [:octicons-arrow-right-24: More information][url_apptainer]
 
--   More to come...
+- More to come...
 
 
 </div>
@@ -39,10 +39,9 @@ specifically.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_apptainer_web]://apptainer.org/
+[url_apptainer_web]:  //apptainer.org/
 
-<!-- TODO -->
-[url_apptainer]:    singularity.md
+[url_apptainer]:      singularity.md
 
 
 [comment]: #  (footnotes -----------------------------------------------------)
