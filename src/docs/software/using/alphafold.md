@@ -73,11 +73,19 @@ ml system mpifileutils
 srun dcp $COMMON_DATASETS/alphafold3 $SCRATCH/af3_db
 ```
 
-Unmodified files are purged from `$SCRATCH` and `$GROUP_SCRATCH` every 90
-days. As you run AlphaFold, you can include a `dsync` in your scripts that
-compares your `$SCRATCH` databases with those in
-`$COMMON_DATASETS/alphafold3` and automatically copies over any
-missing files (shown in the example scripts below).
+!!! tip "Keeping databases up to date"
+
+    Unmodified files in `$SCRATCH` and `$GROUP_SCRATCH` are purged every 90
+    days. Use `dsync` to periodically re-sync only missing or outdated files
+    from Oak:
+
+    ``` none
+    $ module load system mpifileutils
+    $ srun dsync --quiet $COMMON_DATASETS/alphafold3 $SCRATCH/af3_db
+    ```
+
+    You can run this in a standalone job, or uncomment the `rsync` line in
+    the batch scripts below to sync automatically before each run.
 
 #### Getting the Apptainer image
 
@@ -345,26 +353,6 @@ af_output/
 
 By default, AlphaFold 3 generates 5 samples per seed. The top-ranked
 structure is copied to `my_protein_model.cif` at the top level.
-
-### Best Practices
-
-#### Maintaining databases with `dsync`
-
-Stanford Research Computing maintains a copy of the AlphaFold 3 databases
-in the [Common Datasets repository][url_oak_common], so you don't need to
-download them from Google DeepMind yourself. Since unmodified files in
-`$SCRATCH` and `$GROUP_SCRATCH` are purged every 90 days, you can use
-`dsync` to periodically re-sync your local copy from Oak, transferring only
-files that are missing or outdated.
-
-``` none
-$ module load system mpifileutils
-$ srun dsync --quiet $COMMON_DATASETS/alphafold3 $SCRATCH/af3_db
-```
-
-Note that running `dsync` will increase the runtime of your job depending on
-how many files need to be re-copied. You can also run it separately and
-periodically from its own sbatch script.
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
