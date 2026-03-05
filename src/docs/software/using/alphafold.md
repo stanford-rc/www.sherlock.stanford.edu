@@ -174,7 +174,7 @@ file you would like to fold, and the `.json` file needs to be placed in the
 `af_input` directory. In the template below the example input file is
 `fold_input_2PV7.json`.
 
-``` shell
+``` { .shell .annotate }
 #!/bin/bash
 #SBATCH --partition=normal
 #SBATCH --cpus-per-task=8
@@ -193,7 +193,7 @@ INPUT_JSON=fold_input_2PV7.json
 # run alphafold3 apptainer container
 apptainer run \
      --nv \
-     --bind $SCRATCH/af_input:/root/af_input \
+     --bind $SCRATCH/af_input:/root/af_input \ # (1)!
      --bind $SCRATCH/af_output:/root/af_output \
      --bind $MODEL_PARAMS_PATH:/root/models \
      --bind $DB_PATH:/root/public_databases \
@@ -204,6 +204,14 @@ apptainer run \
      --db_dir=/root/public_databases \
      --output_dir=/root/af_output
 ```
+
+1.  AlphaFold 3 reads and writes to fixed paths inside the container
+    (`/root/af_input`, `/root/af_output`, `/root/models`,
+    `/root/public_databases`). These `--bind` flags map your `$SCRATCH`
+    directories to those internal paths. `--nv` passes through the host's NVIDIA
+    drivers. The container executes AlphaFold 3 via its `%runscript` section
+    when invoked with `apptainer run` — no explicit command is needed after the
+    image filename.
 
 !!! tip "8 CPUs is the sweet spot for the data pipeline"
 
@@ -225,13 +233,13 @@ filename of the data `.json` file created during the pipeline step. The data
 directory and file are located in your `af_output` directory. In the
 template example below the data directory and file is `/2pv7/2pv7_data.json`.
 
-``` shell
+``` { .shell .annotate }
 #!/bin/bash
 #SBATCH --partition=gpu
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=20G
 #SBATCH --gpus=1
-#SBATCH --constraint=GPU_SKU:H100_SXM5
+#SBATCH --constraint=GPU_SKU:H100_SXM5 (1)
 #SBATCH --time=0-00:10:00
 
 ### Uncomment to sync missing database files from Oak before running
@@ -244,7 +252,7 @@ DB_PATH=$SCRATCH/af3_db
 DATA_JSON=/2pv7/2pv7_data.json
 
 # JAX compilation cache (avoids recompiling kernels on every run)
-CACHE_DIR=$SCRATCH/.cache/jax
+CACHE_DIR=$SCRATCH/.cache/jax # (2)!
 mkdir -p $CACHE_DIR
 
 # run alphafold3 apptainer container
@@ -264,6 +272,28 @@ apptainer run \
      --model_dir=/root/models \
      --output_dir=/root/af_output
 ```
+
+1.  AF3 requires CUDA capability ≥ 8.x. H100 and L40S give the fastest runtimes;
+    A100, A40, and RTX 3090 also work (the RTX 3090 is memory-limited for longer
+    sequences). To target multiple GPU types or compute capabilities, use
+    Slurm's `|` operator:
+
+    ``` shell
+    #SBATCH --constraint="GPU_SKU:H100_SXM5|GPU_SKU:L40S"
+    ```
+
+    Or by CUDA compute capability:
+
+    ``` shell
+    #SBATCH --constraint="GPU_CC:8.9|GPU_CC:9.0"
+    ```
+
+    Run `sh_node_feat -h` to list all available node features.
+
+2.  On its first run, AF3 compiles GPU kernels via XLA, which can take several
+    minutes. Pointing the cache to `$SCRATCH` lets subsequent runs reuse those
+    kernels and start significantly faster. Multiple parallel jobs can safely
+    share the same cache directory.
 
 !!! tip "Out of GPU memory on large inputs?"
 
@@ -336,75 +366,6 @@ Note that running `dsync` will increase the runtime of your job depending on
 how many files need to be re-copied. You can also run it separately and
 periodically from its own sbatch script.
 
-#### JAX compilation cache
-
-On its first run, AlphaFold 3 compiles GPU kernels via XLA, which can take
-several minutes. By pointing the compilation cache to `$SCRATCH`, subsequent
-runs reuse the compiled kernels and start significantly faster. The inference
-script above already sets this up — just make sure `CACHE_DIR` points to a
-consistent location across runs.
-
-If you are running multiple jobs in parallel, they can safely share the same
-cache directory.
-
-#### GPU selection
-
-The Apptainer container has been tested extensively on Sherlock GPUs with
-CUDA capability 8.x or higher. These include H100, L40S, RTX 3090, A100, and
-A40 model GPUs. New models, such as the H100 and L40S, produce the fastest
-run times, with older models taking slightly longer. Consumer grade GPUs,
-such as the RTX 3090, are also sequence limited due to lower GPU memory.
-
-To run exclusively on a particular GPU model, you can use the SLURM
-`--constraint` option. This option takes a node's feature as an argument and
-sets it as a requirement of the job. Use the Sherlock utility `sh_node_feat
--h` to see a list of available node features.
-
-Multiple job constraints can also be specified with AND (&) and OR (|)
-operators. For example, if you are submitting an inference job to the queue
-and want to run from a larger pool of GPU resources, you can specify both
-H100 or L40S GPUs:
-
-``` shell
-#SBATCH --constraint="GPU_SKU:H100_SXM5|GPU_SKU:L40S"
-```
-
-Additionally, the compute capability is also listed as a node feature, and
-you can specify it directly as a constraint. For example, you can specify
-compute capabilities 8.9 or 9.0 with:
-
-``` shell
-#SBATCH --constraint="GPU_CC:8.9|GPU_CC:9.0"
-```
-
-Successful inference runs on GPUs with CUDA capability 7.x or lower are
-limited by sequence length and GPU memory. If you do wish to run an
-inference job on an older GPU, the Apptainer container contains logic to
-test for the compute capability of the available GPU and set the appropriate
-environmental variables before running AlphaFold 3. A successful run,
-however, is not guaranteed. To specify a particular GPU use the SLURM
-`--constraint` option mentioned above.
-
-#### Notes on Apptainer containers
-
-On Sherlock, the preferred method for running AlphaFold 3 is from an
-Apptainer container. The definition file (`af3_dev.def`) provided by SRC is
-modified from the Dockerfile that Google DeepMind publishes with AlphaFold 3.
-It takes into account the heterogeneity of the Sherlock cluster, and provides
-logic to determine which environment variables need to be set based on the
-compute capability of the available GPU.
-
-AlphaFold 3 reads and writes to several directories during runtime such as
-`af_input`, `af_output`, `af3_model`, and `af3_db`. In order to run from a
-container, the necessary directories on Sherlock's filesystem need to be
-bound to the filesystem within the container; this is the purpose of the
-`--bind` flags in the sbatch scripts above.
-
-The container runs AlphaFold 3 using the `%runscript` section. The contents
-of the `%runscript` section are executed when the container image is run with
-`apptainer run`. This is different from the typical usage of Apptainer
-containers, where software within the container is explicitly called during
-runtime.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
