@@ -2,8 +2,7 @@
 
 To help researchers save time on downloads, Stanford Research Computing hosts
 databases and models for commonly used software in `$COMMON_DATASETS`. This is
-a read-only storage space that is accessible to all Sherlock users, even those
-who do not own Oak storage.
+a read-only storage space that is accessible to all Sherlock users.
 
 ### Available datasets
 
@@ -33,8 +32,7 @@ Tools such as [`rsync`][url_sh_rsync] or [`dsync`][url_dsync] can be used to
 restore files that may have been deleted from `$SCRATCH` due to the 90-day
 purge policy.
 
-The code snippet below shows an example of starting an interactive session on
-the `service` partition and using `dsync` to copy a common dataset to `$SCRATCH`.
+For example, to copy the AlphaFold 3 databases to `$SCRATCH`:
 
 ```shell
 $ sh_dev -c 4 -p service -t 2:00:00
