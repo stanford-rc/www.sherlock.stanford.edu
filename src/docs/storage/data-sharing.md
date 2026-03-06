@@ -284,7 +284,7 @@ there are two possibilities:
 
 [url_contact]:          mailto:{{support_email}}
 
-[url_oak]:              /docs/storage/filesystems.md#oak
+[url_oak]:              filesystems.md#oak
 
 
 [comment]: #  (footnotes -----------------------------------------------------)

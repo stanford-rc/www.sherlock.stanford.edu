@@ -125,12 +125,12 @@ can find the same files and directories from all of the Sherlock nodes.
 [url_status]:   //status.sherlock.stanford.edu
 [url_oak]:      //uit.stanford.edu/service/oak-storage
 
-[url_gpus]:     /docs/user-guide/gpu.md
-[url_storage]:  /docs/storage/index.md
-[url_login]:    /docs/user-guide/running-jobs.md#login-nodes
-[url_dtn]:      /docs/storage/data-transfer.md#data-transfer-nodes-dtns
-[url_clugens]:  /docs/concepts.md#cluster-generations
-[url_owners]:   /docs/concepts.md#investing-in-sherlock
+[url_gpus]:     ../user-guide/gpu.md
+[url_storage]:  ../storage/index.md
+[url_login]:    ../user-guide/running-jobs.md#login-nodes
+[url_dtn]:      ../storage/data-transfer.md#data-transfer-nodes-dtns
+[url_clugens]:  ../concepts.md#cluster-generations
+[url_owners]:   ../concepts.md#investing-in-sherlock
 
 
 

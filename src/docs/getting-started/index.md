@@ -161,7 +161,7 @@ For an introduction to shell scripting, you can refer to:
 
 [url_nano]:         //wiki.gentoo.org/wiki/Nano
 [url_vim]:          //wiki.gentoo.org/wiki/Vim/Guide
-[url_ood_files]:    //www.sherlock.stanford.edu/docs/user-guide/ondemand/#managing-files
+[url_ood_files]:    ../user-guide/ondemand.md#managing-files
 
 
 --8<--- "includes/_acronyms.md"

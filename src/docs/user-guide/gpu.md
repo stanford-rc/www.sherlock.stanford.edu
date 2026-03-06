@@ -345,10 +345,10 @@ user's GPU code is running.
 [url_nvtop]:        //github.com/Syllo/nvtop
 [url_htop]:         //hisham.hm/htop/
 
-[url_investing]:    /docs/concepts.md#investing-in-sherlock
-[url_modules]:      /docs/software/modules.md
-[url_ondemand]:     /docs/user-guide/ondemand.md
-[url_node_features]:/docs/advanced-topics/node-features.md
+[url_investing]:    ../concepts.md#investing-in-sherlock
+[url_modules]:      ../software/modules.md
+[url_ondemand]:     ondemand.md
+[url_node_features]:../advanced-topics/node-features.md
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

@@ -257,10 +257,10 @@ section][url_submit].
 [url_prereq]:       index.md#prerequisites
 [url_account]:      index.md#how-to-request-an-account
 [url_submit]:       submitting.md
-[url_avoid_duo]:    /docs/advanced-topics/connection.md#avoiding-multiple-duo-prompts
-[url_other_auth]:   /docs/advanced-topics/connection.md#authentication-methods
-[url_sshfs]:        /docs/storage/data-transfer.md#sshfs
-[url_login]:        /docs/glossary.md#login-nodes
+[url_avoid_duo]:    ../advanced-topics/connection.md#avoiding-multiple-duo-prompts
+[url_other_auth]:   ../advanced-topics/connection.md#authentication-methods
+[url_sshfs]:        ../storage/data-transfer.md#sshfs
+[url_login]:        ../glossary.md#login-nodes
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

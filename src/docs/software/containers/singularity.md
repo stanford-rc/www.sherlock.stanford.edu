@@ -417,9 +417,9 @@ the [Singularity documentation][url_singularity_build].
 [url_sc18]:               //sc18.supercomputing.org/
 [url_containernative]:    //news.sherlock.stanford.edu/posts/sherlock-goes-container-native
 
-[url_modules]:            /docs/software/modules.md
-[url_gpu_job]:            /docs/user-guide/gpu.md#submitting-a-gpu-job
-[url_gpu_types]:          /docs/user-guide/gpu.md#gpu-types
+[url_modules]:            ../modules.md
+[url_gpu_job]:            ../../user-guide/gpu.md#submitting-a-gpu-job
+[url_gpu_types]:          ../../user-guide/gpu.md#gpu-types
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

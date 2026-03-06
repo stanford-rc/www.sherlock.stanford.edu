@@ -135,7 +135,7 @@ Suggested options to backup your data include:
 [url_uit_storage]:      //uit.stanford.edu/service/storage
 [url_uit_backup]:       //uit.stanford.edu/services/category/backup-and-storage
 
-[url_datatransfer]:     /docs/storage/data-transfer.md
+[url_datatransfer]:     data-transfer.md
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

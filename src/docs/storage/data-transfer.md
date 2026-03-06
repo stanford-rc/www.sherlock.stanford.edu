@@ -466,9 +466,9 @@ documentation][url_rclone].
 [url_uit_gdrive]:           //uit.stanford.edu/service/googleapps/drive
 [url_oak]:                  //uit.stanford.edu/service/oak-storage
 
-[url_rclone_tutorial]:      /docs/software/using/rclone.md
-[url_ssh_clients]:          /docs/getting-started/index.md#ssh-clients
-[url_auth_fail]:            /docs/getting-started/connecting.md#authentication-failures
+[url_rclone_tutorial]:      ../software/using/rclone.md
+[url_ssh_clients]:          ../getting-started/index.md#ssh-clients
+[url_auth_fail]:            ../getting-started/connecting.md#authentication-failures
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

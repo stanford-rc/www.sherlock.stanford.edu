@@ -361,8 +361,8 @@ associated with the job. The job is removed from the queue immediately on save.
 [url_job_deps]:     //slurm.schedmd.com/sbatch.html#OPT_dependency
 [url_scrontab]:     //slurm.schedmd.com/scrontab.html
 
-[anc_mariadb]:      /docs/software/using/mariadb.md
-[anc_pgsql]:        /docs/software/using/postgresql.md
+[anc_mariadb]:      ../software/using/mariadb.md
+[anc_pgsql]:        ../software/using/postgresql.md
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

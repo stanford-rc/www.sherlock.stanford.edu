@@ -47,9 +47,9 @@ $ srun dsync $COMMON_DATASETS/alphafold3 $SCRATCH/alphafold3
 [url_ollama_lib]:       //ollama.com/library
 [url_dsync]:            //mpifileutils.readthedocs.io/en/0.12-rtd/dsync.1.html
 
-[url_af3_docs]:         /docs/software/using/alphafold.md
-[url_ollama_docs]:      /docs/software/using/ollama.md
-[url_sh_rsync]:         /docs/storage/data-transfer.md#rsync
+[url_af3_docs]:         ../software/using/alphafold.md
+[url_ollama_docs]:      ../software/using/ollama.md
+[url_sh_rsync]:         data-transfer.md#rsync
 
 
 --8<--- "includes/_acronyms.md"

@@ -495,18 +495,18 @@ including examples of recurring and persistent job scripts.
 [url_scancel]:      //slurm.schedmd.com/scancel.html
 [url_ruse]:         //github.com/JanneM/Ruse
 
-[url_sbatch_opts]:  /docs/advanced-topics/sbatch-options.md
-[url_service_jobs]: /docs/advanced-topics/service-jobs.md
+[url_sbatch_opts]:  ../advanced-topics/sbatch-options.md
+[url_service_jobs]: ../advanced-topics/service-jobs.md
 
-[anc_modules]:      /docs/software/modules.md
-[anc_partition]:    /docs/glossary.md#partition
-[anc_cpus]:         /docs/glossary.md#cpu
-[anc_gpus]:         /docs/glossary.md#gpu
-[anc_nvtop]:        /docs/user-guide/gpu.md#advanced-options
-[anc_sh_dev]:       /docs/user-guide/running-jobs.md#interactive-jobs
-[anc_public_parts]: /docs/user-guide/running-jobs.md#public-partitions
-[anc_filemanager]:  /docs/user-guide/ondemand.md#managing-files
-[anc_texteditors]:  /docs/getting-started/index.md#text-editors
+[anc_modules]:      ../software/modules.md
+[anc_partition]:    ../glossary.md#partition
+[anc_cpus]:         ../glossary.md#cpu
+[anc_gpus]:         ../glossary.md#gpu
+[anc_nvtop]:        gpu.md#advanced-options
+[anc_sh_dev]:       #interactive-jobs
+[anc_public_parts]: #public-partitions
+[anc_filemanager]:  ondemand.md#managing-files
+[anc_texteditors]:  ../getting-started/index.md#text-editors
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

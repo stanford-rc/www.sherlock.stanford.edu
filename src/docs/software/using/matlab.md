@@ -253,19 +253,19 @@ it scales.
 
 [url_contact]:          mailto:{{support_email}}
 
-[url_R]:                /docs/software/using/R.md
-[url_julia]:            /docs/software/using/julia.md
-[url_python]:           /docs/software/using/python.md
-[url_submit]:           /docs/getting-started/submitting.md#batch-scripts
-[url_node]:             /docs/user-guide/running-jobs.md#compute-nodes
-[url_interactive]:      /docs/user-guide/running-jobs.md#interactive-jobs
-[url_ssh_client]:       /docs/getting-started/index.md#ssh-clients
-[url_modules]:          /docs/software/modules.md
-[url_software_list]:    /docs/software/list.md
-[url_text_editor]:      /docs/getting-started/index.md#text-editors
-[url_partition]:        /docs/glossary.md#partition
-[url_cpu]:              /docs/glossary.md#cpu
-[url_squeue]:           /docs/getting-started/submitting.md#check-the-job
+[url_R]:                R.md
+[url_julia]:            julia.md
+[url_python]:           python.md
+[url_submit]:           ../../getting-started/submitting.md#batch-scripts
+[url_node]:             ../../user-guide/running-jobs.md#compute-nodes
+[url_interactive]:      ../../user-guide/running-jobs.md#interactive-jobs
+[url_ssh_client]:       ../../getting-started/index.md#ssh-clients
+[url_modules]:          ../modules.md
+[url_software_list]:    ../list.md
+[url_text_editor]:      ../../getting-started/index.md#text-editors
+[url_partition]:        ../../glossary.md#partition
+[url_cpu]:              ../../glossary.md#cpu
+[url_squeue]:           ../../getting-started/submitting.md#check-the-job
 
 
 

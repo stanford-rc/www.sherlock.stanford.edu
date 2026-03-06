@@ -216,7 +216,7 @@ $ sbatch qe-bench_gpu_singularity.sbatch
 
 [url_qe]:           //www.quantum-espresso.org
 [url_qe_docs]:      //www.quantum-espresso.org/documentation/
-[url_spof_qe]:      /docs/software/list/#quantum-espresso
+[url_spof_qe]:      ../list/#quantum-espresso
 
 [url_ngc]:          //ngc.nvidia.com
 [url_ngc_qe]:       //ngc.nvidia.com/catalog/containers/hpc:quantum_espresso

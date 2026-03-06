@@ -326,9 +326,9 @@ Transfer][url_data_sshfs] page.
 [url_ncdu]:             //dev.yorhel.nl/ncdu
 [url_du]:               //www.gnu.org/software/coreutils/manual/html_node/du-invocation.html#du-invocation
 
-[url_data_sshfs]:       /docs/storage/data-transfer.md#sshfs
-[url_purge]:            /docs/storage/filesystems.md#expiration-policy
-[url_sh_dev]:           /docs/user-guide/running-jobs.md#interactive-jobs
+[url_data_sshfs]:       data-transfer.md#sshfs
+[url_purge]:            filesystems.md#expiration-policy
+[url_sh_dev]:           ../user-guide/running-jobs.md#interactive-jobs
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

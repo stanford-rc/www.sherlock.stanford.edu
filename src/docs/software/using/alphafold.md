@@ -364,9 +364,9 @@ structure is copied to `my_protein_model.cif` at the top level.
 [url_form]:           //github.com/google-deepmind/alphafold3?tab=readme-ov-file#obtaining-model-parameters
 [url_release]:        //github.com/google-deepmind/alphafold3/releases
 [url_af3_input]:      //github.com/google-deepmind/alphafold3/blob/main/docs/input.md
-[url_oak_common]:     /docs/storage/common-datasets.md
+[url_oak_common]:     ../../storage/common-datasets.md
 [url_cuda_gpus]:      //developer.nvidia.com/cuda-gpus
-[url_node_feat]:      /docs/advanced-topics/node-features.md
+[url_node_feat]:      ../../advanced-topics/node-features.md
 [url_mpifileutils]:   //github.com/hpc/mpifileutils
 
 --8<--- "includes/_acronyms.md"

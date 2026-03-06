@@ -399,9 +399,9 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 
 [url_contact]:          mailto:{{support_email}}
 
-[url_check_quotas]:     /docs/storage/index.md#checking-quotas
-[url_snapshots]:        /docs/storage/data-protection.md#snapshots
-[url_gdrive]:           /docs/storage/data-transfer.md#google-drive
+[url_check_quotas]:     index.md#checking-quotas
+[url_snapshots]:        data-protection.md#snapshots
+[url_gdrive]:           data-transfer.md#google-drive
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
