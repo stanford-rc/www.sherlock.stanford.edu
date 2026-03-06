@@ -153,14 +153,12 @@ account.
 
 
 ## Batch jobs
-<!-- TODO needs review -->
 
-It's easy to schedule batch jobs on Sherlock. A **job** is simply an instance
-of your program (for example an R, Python or Matlab script) that is submitted
-to the scheduler (Slurm) for asynchronous execution on a compute node.
-Submitting a job using the `sbatch` command creates a batch job, which will
-either start immediately or enter a pending state in the queue, depending on
-current cluster load and resource availability.
+A **batch job** is a script submitted to the scheduler (Slurm) for
+asynchronous execution on a compute node. It can run any program (an R,
+Python, or Matlab script, a compiled binary, or any sequence of shell
+commands). Submitting a job with `sbatch` will either start it immediately or
+place it in a pending state in the queue, depending on resource availability.
 
 
 ### Job queuing
@@ -172,7 +170,7 @@ The time a job spends pending is primarily influenced by two factors:
 
 To minimize queue time, request only the resources necessary for your workload.
 Overestimating resource needs can result in longer wait times. Profiling your
-code interactively (for example, in an [`sh_dev` session][anc_sh_dev] session
+code interactively (for example, in an [`sh_dev` session][anc_sh_dev]
 using tools like [`htop`][url_htop], [`nvtop`][anc_nvtop],
 [`sacct`][url_sacct]) can help you determine appropriate resource requirements.
 
@@ -181,11 +179,10 @@ using tools like [`htop`][url_htop], [`nvtop`][anc_nvtop],
 
 When submitting a job, you can request the following:
 
-* **[CPUs][anc_cpus]:** How many CPU cores the program you are calling the in
-  the `sbatch` script needs. Unless it can utilize multiple CPUs at once you
-  should request a single CPU. Check your code's documentation or try running
-  in an interactive session with [`sh_dev`][anc_sh_dev] and run `htop` if you
-  are unsure.
+* **[CPUs][anc_cpus]:** How many CPU cores the program called in the `sbatch`
+  script needs. Unless it can utilize multiple CPUs at once, request a single
+  CPU. Check your code's documentation or profile it interactively with
+  [`sh_dev`][anc_sh_dev] and `htop` if unsure.
 
 * **[GPUs][anc_gpus]:** If your code is GPU-enabled, how many GPUs does your
   code need?
@@ -199,8 +196,8 @@ When submitting a job, you can request the following:
 * **[Partition][anc_partition]:** Choose the compute partition (e.g., `normal`,
   `gpu`, `owners`, `bigmem`).
 
-You also need to indicate the scheduler what your job should should do: what
-modules to load, and how to execute your application. Note that any logic you
+You also need to tell the scheduler what your job should do: what modules to
+load, and how to execute your application. Note that any logic you
 can code into a bash script with the [bash scripting language][url_bash] can
 also be coded into an `sbatch` script.
 
@@ -221,13 +218,13 @@ then called just as you would on the command line, at the end of the `sbatch`
 script.
 
 ``` shell
-#!/usr/bin/bash
+#!/bin/bash
 #SBATCH --job-name=test_job
 #SBATCH --output=test_job.%j.out
 #SBATCH --error=test_job.%j.err
 #SBATCH --time=10:00
-#SBATCH -p normal
-#SBATCH -c 1
+#SBATCH --partition=normal
+#SBATCH --cpus-per-task=1
 #SBATCH --mem=8GB
 
 module load python/3.6.1
@@ -912,8 +909,6 @@ saved, and prevent the job from being executed in the future.
 
 
 
-
-[comment]: #  (TODO: batch jobs, resource requirements, partitions, qos, limits, mail...)
 
 
 [comment]: #  (link URLs -----------------------------------------------------)

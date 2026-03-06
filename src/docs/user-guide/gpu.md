@@ -335,10 +335,6 @@ user's GPU code is running.
 ![nvtop](images/nvtop.png)
 
 
-[comment]: #  (# TODO: modules, cuda nvcc, nvidia-smi,  CUDA_VISIBLE_DEVICES)
-
-[comment]: #  (## Multi-GPU topologies, ## GPU mode )
-
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_gpu]:          //blogs.nvidia.com/blog/2009/12/16/whats-the-difference-between-a-cpu-and-a-gpu/
