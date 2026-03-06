@@ -307,7 +307,7 @@ After your job completes you can assess and fine-tune your resource requests
 To get a better idea of the amount of resources your job will need, you can use
 the `ruse` command, available as a [module][anc_modules]:
 
-```none
+```none { .no-copy }
 $ module load system ruse
 ```
 
@@ -334,7 +334,7 @@ or application will need. For instance, you can start a sizing session on a
 compute node with an overestimated amount of resources, and start your
 application like this:
 
-```none
+```none { .no-copy }
 $ ruse ./myapp
 
 ```
@@ -342,7 +342,7 @@ $ ruse ./myapp
 This will generate a `<myapp>-<pid>/ruse` output file in the current directory,
 looking like this:
 
-```none
+```none { .no-copy }
 Time:           02:55:47
 Memory:         7.4 GB
 Cores:          4
@@ -365,7 +365,7 @@ its resource limits, and that the job won't have to wait too long in queue for
 resources that it won't use. The corresponding job request could look like
 this:
 
-```none
+```none { .no-copy }
 #SBATCH --time 3:00:00
 #SBATCH --mem 8GB
 #SBATCH --cpus-per-task 2
@@ -389,7 +389,7 @@ displayed directly on `stdout` rather than stored in a file.
 
 For instance, this will report usage every 10 seconds:
 
-```none
+```none { .no-copy }
 $ ruse -s -t10 --stdout ./myapp
    time         mem   processes  process usage
   (secs)        (MB)  tot  actv  (sorted, %CPU)
@@ -431,7 +431,7 @@ command-line tool to help answer questions such as:
 `sh_part` can be executed on any login or compute node to see what partitions
 are available to you, and its output looks like this:
 
-```none
+```none { .no-copy }
 $ sh_part
  partition           || nodes         | CPU cores             | GPUs                 || job runtime     | mem/core        | per-node
  name         public ||   idle  total |   idle  total  queued |   idle  total queued || default maximum | default maximum |    cores   mem(GB)  gpus

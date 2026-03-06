@@ -480,7 +480,7 @@ with 4 CPUs, load the modules for the necessary dependencies, and install
 `devtools` for R version 4.4.2. Note: these dependencies will also work for
 installing the popular library `tidyverse`.
 
-```none
+```none { .no-copy }
 # Launch interactive dev session with 4 CPUs
 
 $ sh_dev -c 4

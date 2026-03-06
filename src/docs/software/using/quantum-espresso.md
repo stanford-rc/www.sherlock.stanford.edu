@@ -31,13 +31,13 @@ modules][url_soft_qe], or run it from a container.
 The CPU version of Quantum Espresso can be loaded via the `quantum-espresso`
 module:
 
-```bash
+```bash { .no-copy }
 $ ml chemistry quantum-espresso
 ```
 
 and the GPU version can be loaded via the `quantum-espresso_gpu` module:
 
-```bash
+```bash { .no-copy }
 $ ml chemistry quantum-espresso_gpu
 ```
 
@@ -50,7 +50,7 @@ Here are a few examples showing how to run the AUSURF112 benchmark.
 
 The first step is to get the benchmark files:
 
-```bash
+```bash { .no-copy }
 $ cd $SCRATCH
 $ git clone https://github.com/QEF/benchmarks qe_benchmarks
 $ cd qe_benchmarks/AUSURF112
@@ -88,7 +88,7 @@ ends.
 
 The job can be submitted with:
 
-```bash
+```bash { .no-copy }
 $ sbatch qe-bench_cpu.sbatch
 ```
 
@@ -128,7 +128,7 @@ and will send an email notification when the job starts and when it ends.
 
 It can be submitted with:
 
-```bash
+```bash { .no-copy }
 $ sbatch qe-bench_gpu.sbatch
 ```
 
@@ -146,7 +146,7 @@ container][url_ngc_qe] container that could be used on Sherlock.
 To use the container with Singularity, first pull the Quantum Espresso
 container with:
 
-```shell
+```shell { .no-copy }
 $ cd $SCRATCH
 $ singularity pull docker://nvcr.io/hpc/quantum_espresso:qe-7.0
 ```
@@ -175,7 +175,7 @@ Then create the following script:
 
 and submit it:
 
-```bash
+```bash { .no-copy }
 $ sbatch qe-bench_gpu_singularity.sbatch
 ```
 
@@ -205,7 +205,7 @@ script:
 
 and submit it:
 
-```bash
+```bash { .no-copy }
 $ sbatch qe-bench_gpu_singularity.sbatch
 ```
 

@@ -31,7 +31,7 @@ first time.
 When running `rclone config` you will be prompted to enter names and values,
 indicated by the `>` symbol. To leave it empty, press Enter.
 
-```shell
+```shell { .no-copy }
 # Connect to Sherlock with local port fowarding
 $ ssh -L localhost:53682:localhost:53682 <SUNetID>@login.sherlock.stanford.edu
 
@@ -122,7 +122,7 @@ will be asked to confirm that you want to allow `rclone` to access your files.
 Once you have successfully done so, you can complete the configuration in the
 terminal.
 
-```shell
+```shell { .no-copy }
 Configure this as a Shared Drive (Team Drive)?
 
 y) Yes
@@ -182,7 +182,7 @@ $ rclone copy /oak/stanford/groups/<group name>/<file name> gdrive:
 To view the files and folders in your cloud storage, you can use the `rclone
 ls` and `rclone lsd` commands, respectively.
 
-```shell
+```shell { .no-copy }
 # Load the rclone module
 $ ml system rclone
 

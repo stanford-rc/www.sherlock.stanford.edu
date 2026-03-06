@@ -309,7 +309,7 @@ For more information about the CLI, please see the
 [Globus CLI quick start][url_globus_cli_quickstart]. Note that the Globus CLI
 is available through the module system on Sherlock:
 
-```shell
+```shell { .no-copy }
 $ module load system py-globus-cli
 $ globus login
 # follow instructions to get set up
@@ -325,7 +325,7 @@ endpoints or collections.
 For example, to asynchronously copy files between Sherlock and Oak (if
 that you have already been allocated Oak storage):
 
-```shell
+```shell { .no-copy }
 $ GLOBUS_SHERLOCK_UUID="6881ae2e-db26-11e5-9772-22000b9da45e"
 $ GLOBUS_OAK_UUID="8b3a8b64-d4ab-4551-b37e-ca0092f769a7"
 $ globus transfer --recursive \
@@ -415,7 +415,7 @@ Stanford's Google Drive.
 You can also access AWS storage from the Sherlock command line with the [AWS
 Command Line Interface][url_aws-cli]:
 
-```shell
+```shell { .no-copy }
 $ module load system aws-cli
 $ aws help
 ```
