@@ -91,7 +91,7 @@ semantics.
 | `module load gsl/2.3` | `ml gsl/2.3` | Load specific version of a module |
 | `module unload gcc` | `ml -gcc` | Unload a module |
 | `module swap gcc icc` |  `ml -gcc icc` | Swap a module (unload `gcc` and replace it with `icc`) |
-| `module purge` | `ml purge` | Remove all modules[^sticky_mod]
+| `module purge` | `ml purge` | Remove all modules[^sticky_mod] |
 | `module save foo` | `ml save foo` | Save the state of all loaded modules in a collection named `foo` |
 | `module restore foo` | `ml restore foo` | Restore the state of saved modules from the `foo` collection |
 
