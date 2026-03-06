@@ -187,6 +187,11 @@ Use "module keyword key1 key2 ..." to search for all possible modules matching
 any of the "keys".
 ```
 
+!!! note
+
+    The output above is illustrative. The actual list of available modules and
+    their versions will differ. Run `ml av` on Sherlock to see the current list.
+
 #### Searching
 
 To search for a specific string in modules names and descriptions, you can run:
@@ -292,6 +297,11 @@ $ ml av
 
 [...]
 ```
+
+!!! note
+
+    The output above is illustrative. The actual list of available modules and
+    their versions will differ. Run `ml av` on Sherlock to see the current list.
 
 ### Resetting the modules environment
 
