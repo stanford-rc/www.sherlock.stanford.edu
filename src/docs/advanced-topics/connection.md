@@ -24,7 +24,7 @@ $ ssh <sunetid>@ln21.sherlock.stanford.edu
 ```
 
 This can be useful if you run long-standing processes on the login nodes, such
-as [screen][url_screen] or [tmux][url_tmux] sessions. To find them back when you
+as [`screen`][url_screen] or [`tmux`][url_tmux] sessions. To find them back when you
 reconnect to Sherlock, you will indeed need to login to the same login node you
 started them on.
 
