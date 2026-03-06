@@ -298,8 +298,8 @@ lost when the maintenance starts.
 [url_admin]:      //adminguide.stanford.edu
 [url_fairshare]:  //slurm.schedmd.com/fair_tree.html
 [url_orders]:     orders.md
-[url_recurring]:  user-guide/running-jobs.md#recurring-jobs
-[url_persistent]: user-guide/running-jobs.md#persistent-jobs
+[url_recurring]:  advanced-topics/service-jobs.md#recurring-jobs
+[url_persistent]: advanced-topics/service-jobs.md#persistent-jobs
 [url_lscratch]:   storage/filesystems.md#l_scratch
 
 [url_HIPAA]: //en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act

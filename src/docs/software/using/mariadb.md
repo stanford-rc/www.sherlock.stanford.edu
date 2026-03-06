@@ -334,7 +334,7 @@ jobs][url_recurring_jobs] and submit long-running database instances.
 
 [url_compute_node]:     ../../glossary.md#node
 [url_storage]:          ../../storage/index.md
-[url_recurring_jobs]:   ../..//user-guide/running-jobs.md#recurring-jobs
+[url_recurring_jobs]:   ../../advanced-topics/service-jobs.md#recurring-jobs
 
 
 --8<--- "includes/_acronyms.md"
