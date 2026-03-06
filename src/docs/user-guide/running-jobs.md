@@ -1,4 +1,5 @@
 ---
+title: Running jobs
 tags:
     - slurm
 ---
@@ -57,6 +58,12 @@ an interactive session on Sherlock is to use the `sh_dev` command:
 ``` none
 $ sh_dev
 ```
+
+!!! tip
+
+    `sh_dev` is the recommended starting point for interactive work. It uses
+    sensible defaults, runs on dedicated nodes, and typically gives you
+    immediate access without any wait time.
 
 This will open a login shell using one core and 4 GB of memory on one node for
 one hour. The `sh_dev` sessions run on dedicated compute nodes. This ensures
@@ -141,7 +148,7 @@ $
 ```
 
 Once you have a job running on a node, you can SSH directly to it and
-run additional processes[^ssh_job_limits], or observe how you application
+run additional processes[^ssh_job_limits], or observe how your application
 behaves, debug issues, and so on.
 
 The `salloc` command supports the same parameters as `sbatch`, and can override
@@ -212,25 +219,34 @@ different path). One file will contain any errors and the other will contain
 non-error output. Look in these 2 files ending in `.err` and `.out` for useful
 debugging information and error output.
 
-Because it's a Python script that uses some NumPy code, we need to load the
-`python/3.6.1` and the `py-numpy/1.19.2_py36` modules. The Python script is
-then called just as you would on the command line, at the end of the `sbatch`
-script.
-
-``` shell
+``` shell title="test.sbatch"
 #!/bin/bash
-#SBATCH --job-name=test_job
-#SBATCH --output=test_job.%j.out
-#SBATCH --error=test_job.%j.err
-#SBATCH --time=10:00
-#SBATCH --partition=normal
-#SBATCH --cpus-per-task=1
-#SBATCH --mem=8GB
+#SBATCH --job-name=test_job       (1)
+#SBATCH --output=test_job.%j.out  (2)
+#SBATCH --error=test_job.%j.err   (3)
+#SBATCH --time=10:00              (4)
+#SBATCH --partition=normal        (5)
+#SBATCH --cpus-per-task=1         (6)
+#SBATCH --mem=8GB                 (7)
 
-module load python/3.6.1
+module load python/3.6.1 # (8)!
 module load py-numpy/1.19.2_py36
 python3 mycode.py
 ```
+
+1. Job name shown in `squeue` output and email notifications.
+2. Standard output file; `%j` is replaced by the job ID at runtime.
+3. Standard error file; keeping it separate from `stdout` makes debugging easier.
+4. Wall-clock time limit (10 minutes here); the job is killed if it exceeds this.
+5. Partition to submit to; `normal` is the default general-purpose partition.
+6. Number of CPU cores; set to `1` unless your code is explicitly multi-threaded.
+7. Memory (RAM) to allocate; adjust based on your application's needs.
+8. Always load software modules explicitly, with the version, for reproducibility.
+
+!!! info "More `#SBATCH` options"
+
+    The example above covers the basics. For a curated list of commonly used
+    directives with examples, see the [SBATCH options][url_sbatch_opts] page.
 
 Here are the steps to create and submit this batch script:
 
@@ -265,7 +281,7 @@ Here are the steps to create and submit this batch script:
        4915821     normal   test_job  <userID>   R  0:10      1  sh02-01n49
     ```
 
-    This last output means that job 44915821 has been running (R) on compute
+    This last output means that job 4915821 has been running (R) on compute
     node `sh02-01n49` for 10 seconds (0:10).
 
 While your job is running you can connect to the node it's running on via SSH,
@@ -279,10 +295,10 @@ $ ssh sh02-01n49
 and then use tools like [`htop`][url_htop] to watch processes and resource
 usage.
 
-You can also manage this job based on the jobid assigned to it (44915854). For
-example the job can be canceled with the [`scancel`][url_scancel] command
-.
-After your job completes you can asses and fine-tune your resource requests
+You can also manage this job based on the jobid assigned to it (4915821). For
+example, the job can be canceled with the [`scancel`][url_scancel] command.
+
+After your job completes you can assess and fine-tune your resource requests
 (time, CPU/GPU, memory) with the [`sacct`][url_sacct] or `seff` commands.
 
 
@@ -304,7 +320,7 @@ options.
 
 `ruse` periodically samples the process and its sub-processes and keeps track of
 the CPU, time and maximum memory use. It also optionally records the sampled
-values over time. The purpose or Ruse is not to profile processes in detail,
+values over time. The purpose of `ruse` is not to profile processes in detail,
 but to follow jobs that run for many minutes, hours or days, with no
 performance impact and without changing the measured application in any way.
 
@@ -338,7 +354,7 @@ Proc(%): 99.9  99.9
 It shows that `myapp`:
 
 * ran for almost 3 hours
-* used a little less than 8B of memory
+* used a little less than 8 GB of memory
 * had 4 cores available,
 * spawned 3 processes, among which at most 2 were active at the same time,
 * that both active processes each used 99.9% of a CPU core
@@ -356,7 +372,7 @@ this:
 ```
 
 
-##### Verifying a job's usage
+#### Verifying a job's usage
 
 It's also important to verify that applications, especially parallel ones, stay
 in the confines of the resources they've requested. For instance, a number of
@@ -436,7 +452,7 @@ available on nodes in each partition. In particular:
 
 * in the `partition name` column, the `*` character indicates the default
   partition.
-* the `queued` columns show the amount ot CPU cores or GPUs requested by
+* the `queued` columns show the amount of CPU cores or GPUs requested by
   pending jobs,
 * the `per-node` columns show the range of resources available on each node in
   the partition. For instance, the `gpu` partition has nodes with 20 to 64 CPU
@@ -462,473 +478,27 @@ Here are the main public partitions available to everyone on Sherlock:
 
 ## Service jobs
 
-It's often useful to run lightweight, recurring administrative tasks on a
-cluster, such as data transfer or monitoring jobs. On Sherlock, these tasks can
-be run in the **service** partition, which is designed specifically for this
-purpose.
-
-The `service` partition is not intended for compute intensive workloads,
-but rather for lightweight tasks that do not require significant computing
-resources. This includes jobs such as data transfers, backups, archival
-processes, CI/CD pipelines, lightweight database servers, job managers, and
-other menial or cron-like operations.
-
-* **Purpose:** Intended for non-computational, background, or administrative
-  tasks that are important for cluster operations but do not need high
-  performance.
-
-* **Resource Allocation:** Resources in the service partition are heavily
-  oversubscribed. This means that multiple jobs may share the same CPU and
-  memory resources, leading to minimal compute performance. The focus is on
-  maximizing throughput for many small, low-impact jobs, not on delivering fast
-  or isolated execution.
-
-* **Performance:** Not suitable for regular compute-intensive workloads. Jobs
-  running here may experience significant slowdowns or contention if they
-  attempt to use substantial CPU or memory.
-
-* **Best Fit:**
-
-    * Scheduled and recurring jobs (e.g., via [`scrontab`][anc_scrontab])
-    * Data movement (`rsync`, `scp`, etc.)
-    * Automated backups and data archival tasks
-    * Monitoring agents, job managers, or lightweight daemons
-    * CI/CD tasks that do not require high performance nor specialized hardware
-
-* **Partition Usage:** The service partition is an ideal replacement for
-  traditional cron jobs on login nodes, providing a dedicated and isolated
-  environment for such workloads without impacting user-facing compute
-  partitions.
-
-
-### Recurring jobs
-
-!!! Warning
-
-    `Cron` tasks are not supported on Sherlock.
-
-Users are not allowed to create `cron` jobs on Sherlock, for a variety of
-reasons:
-
-* resources limits cannot be easily enforced in `cron` jobs, meaning that a
-  single user can end up monopolizing all the resources of a login node,
-* no amount of resources can be guaranteed when executing a `cron` job, leading
-  to unreliable runtime and performance,
-* user `cron` jobs have the potential of bringing down whole
-  nodes by creating fork bombs, if they're not carefully crafted and tested,
-* compute and login nodes could be redeployed at any time, meaning that
-  `cron` jobs scheduled there could go away without the user being notified,
-  and cause all sorts of unexpected results,
-* `cron` jobs could be mistakenly scheduled on several nodes and run multiple
-  times, which could result in corrupted files.
-
-As an alternative, if you need to run recurring tasks at regular intervals, we
-recommend the following approach: by using the `--begin` job submission option,
-and creating a job that resubmits itself once it's done, you can virtually
-emulate the behavior and benefits of a `cron` job, without its disadvantages:
-your task will be scheduled on a compute node, and use all of the resources it
-requested, without being impacted by anything else.
-
-Depending on your recurring job's specificities, where you submit it and the
-state of the cluster at the time of execution, the starting time of that task
-may not be guaranteed and result in a delay in execution, as it will be
-scheduled by Slurm like any other jobs. Typical recurring jobs, such as file
-synchronization, database updates or backup tasks don't require strict starting
-times, though, so most users find this an acceptable trade-off.
-
-The table below summarizes the advantages and drawbacks of each approach:
-
-|     | Cron tasks | Recurring jobs |
-| --- | :--------: | :------------: |
-| Authorized on Sherlock              | :fontawesome-solid-xmark:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
-| Dedicated resources for the task    | :fontawesome-solid-xmark:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
-| Persistent across node redeployment | :fontawesome-solid-xmark:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
-| Unique, controlled execution        | :fontawesome-solid-xmark:{: .chk_no :} | :fontawesome-solid-check:{: .chk_yes :} |
-| Precise schedule                    | :fontawesome-solid-check:{: .chk_yes :}| :fontawesome-solid-xmark:{: .chk_no :}  |
-
-#### Recurring job example
-
-The script below presents an example of such a recurring job, that would
-emulate a `cron` task. It will append a timestamped line to a `cron.log` file
-in your `$HOME` directory and run every 7 days.
-
-
-``` shell title="cron.sbatch"
-#!/bin/bash
-#SBATCH --job-name=cron
-#SBATCH --begin=now+7days
-#SBATCH --dependency=singleton
-#SBATCH --time=00:02:00
-#SBATCH --mail-type=FAIL
-
-
-## Insert the command to run below. Here, we're just storing the date in a
-## cron.log file
-date -R >> $HOME/cron.log
-
-## Resubmit the job for the next execution
-sbatch $0
-```
-
-If the job payload (here the `date` command) fails for some reason and
-generates and error, the job will not be resubmitted, and the user will be
-notified by email.
-
-We encourage users to get familiar with the submission options used in this
-script by giving a look at the `sbatch` [man page][url_sbatch], but some
-details are given below:
-
-
-| Submission\ option\ or\ command | Explanation |
-| ------- | ----------- |
-| `--job-name=cron` |  makes it easy to identify the job, is used by the  `--dependency=singleton` option to identify identical jobs, and will allow canceling the job by name (because its jobid will change each time it's  submitted) |
-| `--begin=now+7days`  |  will instruct the scheduler to not even consider the job   for scheduling before 7 days after it's been submitted |
-| `--dependency=singleton` |  will make sure that only one `cron` job runs at any given time |
-| `--time=00:02:00` |  runtime limit for the job (here 2 minutes). You'll need to adjust the value   depending on the task you need to run (shorter runtime requests usually   result in the job running closer to the clock mark) |
-| `--mail-type=FAIL` |  will send an email notification to the user if the job ever fails |
-| `sbatch $0` |  will resubmit the job script by calling its own name (`$0`)   after successful execution |
-
-You can save the script as `cron.sbatch` or any other name, and submit it with:
-
-``` none
-$ sbatch cron.sbatch
-```
-
-It will start running for the first time 7 days after
-you submit it, and it will continue to run until you cancel it with the
-following command (using the job name, as defined by the `--job-name` option):
-
-``` none
-$ scancel -n cron
-```
-
-
-
-### Persistent jobs
-
-[Recurring jobs](#recurring-jobs) described above are a good way to emulate
-`cron` jobs on Sherlock, but don't fit all needs, especially when a persistent
-service is required.
-
-For instance, workflows that require a persistent database connection would
-benefit from an ever-running database server instance. We don't provide
-persistent database services on Sherlock, but instructions and examples on how
-to submit database server jobs are provided for [MariaDB][anc_mariadb] or
-[PostgreSQL][anc_pgsql].
-
-In case those database instances need to run pretty much continuously (within
-the limits of available resources and runtime maximums), the previous approach
-described in the [recurring jobs](#recurring-jobs) section could fall a bit
-short.  Recurring jobs are mainly designed for jobs that have a fixed execution
-time and don't reach their time limit, but need to run at given intervals (like
-synchronization or backup jobs, for instance).
-
-Because a database server process will never end within the job, and will
-continue until the job reaches its time limit, the last re-submission command
-(`sbatch $0`) will actually never be executed, and the job won't be
-resubmitted.
-
-To work around this, a possible approach is to catch a specific
-[signal][url_signals] sent by the scheduler at a predefined time, before the
-time limit is reached, and then re-queue the job. This is easily done with the
-Bash [`trap`][url_trap] command, which can be instructed to re-submit a job
-when it receives the [`SIGUSR1`][url_signals] signal.
-
-!!! important "Job re-submission and execution delay"
-
-    Jobs that are automatically re-submitted using this technique won't restart
-    right away: the will get back in queue and stay pending until their
-    execution conditions (priority, resources, usage limits...) are satisfied.
-
-
-
-#### Persistent job example
-
-Here's the recurring job example from above, modified to:
-
-1. instruct the scheduler to send a `SIGUSR1` signal to the job 90
-   seconds[^signal_delay] before reaching its time limit (with the `#SBATCH
-   --signal` option),
-2. re-submit itself upon receiving that `SIGUSR1` signal (with the `trap`
-   command)
-
-
-``` shell title="persistent.sbatch"
-#!/bin/bash
-#
-#SBATCH --job-name=persistent
-#SBATCH --dependency=singleton
-#SBATCH --time=00:05:00
-#SBATCH --signal=B:SIGUSR1@90
-
-# catch the SIGUSR1 signal
-_resubmit() {
-    ## Resubmit the job for the next execution
-    echo "$(date): job $SLURM_JOBID received SIGUSR1 at $(date), re-submitting"
-    sbatch $0
-}
-trap _resubmit SIGUSR1
-
-## Insert the command to run below. Here, we're just outputting the date every
-## 10 seconds, forever
-
-echo "$(date): job $SLURM_JOBID starting on $SLURM_NODELIST"
-while true; do
-    echo "$(date): normal execution"
-    sleep 60
-done
-```
-
-!!! danger "Long running processes need to run in the background"
-
-    If your job's actual payload (the application or command you want to run) is
-    running continuously for the whole duration of the job, it needs to be
-    executed in the background, so the trap can be processed.
-
-    To run your application in the background, just add a `&` at the end of the
-    command and then add a `wait` statement at the end of the script, to make
-    the shell wait until the end of the job.
-
-    For instance, if you were to run a [PostgreSQL database server][anc_pgsql],
-    the `while true ... done` loop in the previous example could be replaced by
-    something like this:
-
-    ``` none
-    postgres -i -D $DB_DIR &
-    wait
-    ```
-
-
-#### Persistent `$JOBID`
-
-One potential issue with having a persistent job re-submit itself when it
-reaches its runtime limit is that it will get a different `$JOBID` each time
-it's (re-)submitted.
-
-This could be particularly challenging when other jobs depend on it, like in
-the database server scenario, where client jobs would need to start only if the
-database server is running. This can be achieved with [job
-dependencies][url_job_deps], but those dependencies have to be expressed using
-jobid numbers, so having the server job's id changing at each re-submission
-will be difficult to handle.
-
-To avoid this, the re-submission command (`sbatch $0`) can be replaced by
-a re-queuing command:
-
-    scontrol requeue $SLURM_JOBID
-
-The benefit of that change is that the job will keep the same `$JOBID` across
-all re-submissions. And now, dependencies can be added to other jobs using that
-specific `$JOBID`, without having to worry about it changing. And there will be
-only one `$JOBID` to track for that database server job.
-
-
-The previous [example](#persistent-job-example) can then be modified as
-follows:
-
-``` shell title="persistent.sbatch" hl_lines="10"
-#!/bin/bash
-#SBATCH --job-name=persistent
-#SBATCH --dependency=singleton
-#SBATCH --time=00:05:00
-#SBATCH --signal=B:SIGUSR1@90
-
-# catch the SIGUSR1 signal
-_requeue() {
-    echo "$(date): job $SLURM_JOBID received SIGUSR1, re-queueing"
-    scontrol requeue $SLURM_JOBID
-}
-trap '_requeue' SIGUSR1
-
-## Insert the command to run below. Here, we're just outputting the date every
-## 60 seconds, forever
-
-echo "$(date): job $SLURM_JOBID starting on $SLURM_NODELIST"
-while true; do
-    echo "$(date): normal execution"
-    sleep 60
-done
-```
-
-Submitting that job will produce an output similar to this:
-
-``` none
-Mon Nov  5 10:30:59 PST 2018: Job 31182239 starting on sh-06-34
-Mon Nov  5 10:30:59 PST 2018: normal execution
-Mon Nov  5 10:31:59 PST 2018: normal execution
-Mon Nov  5 10:32:59 PST 2018: normal execution
-Mon Nov  5 10:33:59 PST 2018: normal execution
-Mon Nov  5 10:34:59 PST 2018: Job 31182239 received SIGUSR1, re-queueing
-slurmstepd: error: *** JOB 31182239 ON sh-06-34 CANCELLED AT 2018-11-05T10:35:06 DUE TO JOB REQUEUE ***
-Mon Nov  5 10:38:11 PST 2018: Job 31182239 starting on sh-06-34
-Mon Nov  5 10:38:11 PST 2018: normal execution
-Mon Nov  5 10:39:11 PST 2018: normal execution
-```
-
-The job runs for 5 minutes, then received the `SIGUSR1` signal, is re-queued,
-restarts for 5 minutes, and so on, until it's properly `scancel`led.
-
-
-
-### Slurm crontab
-
-As an alternative, Slurm also offers the possibility to emulate regular
-traditional `cron` jobs using the [`scrontab`][url_scrontab] command. This is a
-Slurm-specific command that allows users to schedule jobs to run at specific
-times or intervals, similar to the traditional `cron` system. The main
-difference is that `scrontab` jobs are managed by Slurm, and can take advantage
-of the scheduler resource management capabilities.
-
-The full documentation about `scrontab` is available in the [Slurm
-documentation][url_scrontab], but you'll find some more Sherlock-specific
-information below.
-
-To edit your `scrontab` script, you can use the following command:
-
-``` none
-$ scrontab -e
-```
-
-This will open your default editor on Sherlock (`vim` is the default), where
-you can edit your script, and once you save it, it will automatically be
-scheduled for execution.
-
-You can view your existing `scron` scripts with:
-
-``` none
-$ scrontab -l
-```
-
-
-#### Example `scrontab` script
-
-Each `scrontab` script can include regular Slurm submissions, (like
-`-t-`/`--time`, `-c`/`--cpus-per-task`, etc).  Here's an example `scrontab` job
-script that will run every three hours in the `service` partition, and run a
-script that won't need more than 10 minutes to complete.
-
-!!! note "Log file output"
-
-    By default, Slurm will **overwrite** output files at each execution. If you
-    want to keep a runnin glog of each execution, you can add a `#SCRON
-    --open-mode=append` line to your `scrontab` script, which will tell Slurm
-    to append any new output to the exisitng output file.
-
-``` crontab
-#SCRON -p service
-#SCRON -t 00:10:00
-#SCRON -o mycron_output-%j.out
-#SCRON --open-mode=append
-
-0 */3 * * * /path/to/your/script.sh
-```
-
-!!! info "Exceeding resource limits"
-
-    If your job requirement specifications exceed the defined limits in the
-    requested partition, the job will be rejected and an error message will be
-    displayed when saving the `scrontab` script. For instance, requesting `-c
-    32` in the `service` partition will result in the following massage:
-
-    ``` none
-    There was an issue with the job submission on lines 26-29
-    The error code return was: Job violates accounting/QOS policy (job submit limit, user's size and/or time limits)
-    The error message was: QOSMaxCpuPerUserLimit
-    The failed lines are commented out with #BAD:
-    Do you want to retry the edit? (y/n)
-    ```
-
-#### Long-running `scrontab` jobs
-
-In most cases, `scron` jobs will be short-lived, and their execution duration
-will be smaller than the interval between executions. But sometimes, it may be
-useful to maintain a long-running process, to manage jobs or keep a database
-instance running for longer than the maximum runtime.
-
-For those long-running jobs, you can set the execution interval to be fairly
-short (so the job is restarted early when it's interrupted), and add the
-`--dependency=singleton` submission option, to make sure that only one instance
-of the job is running at any given time:
-
-``` crontab
-#SCRON -p service
-#SCRON -t 1-00:00:00
-#SCRON --dependency=singleton
-#SCRON --name=my_process
-
-0 * * * * /path/to/your/script.sh
-```
-
-This will instruct The scheduler to check every hour whether an instance of the
-job is running, and start it if it's not.
-
-!!! warning "Avoiding duplicate job instances"
-
-    To avoid having multiple instances of the same job running at the same
-    time, and starting multiple instances each time the `scrontab` file is
-    edited, make sure to the `--dependency=singleton` option.
-
-
-#### Monitoring `scrontab` jobs
-
-You can monitor your `scrontab` jobs with `squeue`, like every other Slurm job.
-For instance, to only list your `scrontab` jobs, you can use the following
-command:
-
-``` none
-$ squeue --me -O JobID,EligibleTime,CronJob | awk 'NR==1 || $NF=="Yes"'
-JOBID               ELIGIBLE_TIME       CRON_JOB
-105650              2025-05-23T13:20:00 Yes
-```
-
-The `ELIGIBLE_TIME` column indicates the next time the batch system will run
-your job.
-
-
-#### Canceling a `scrontab` job
-
-To cancel a `scrontab` job, you can edit the `scrontab` file with `scrontab -e`
-and comment out all the lines associated with the job you want to cancel. This
-will immediately remove the `scrontab` job from the queue when the script is
-saved, and prevent the job from being executed in the future.
-
-!!! info "Using `scancel` on a `scrontab` job"
-
-    The `scancel` command will give a warning when attempting
-    to remove a job started with `scrontab`.
-
-    ```bash
-    $ scancel 105650
-    scancel: error: Kill job error on job id 105650: Cannot cancel scrontab jobs without --cron flag.
-    ```
-
-    When canceling a `scrontab` job with the `--cron` flag, the corresponding
-    entries in the `scrontab` file are prepended with `#DISABLED`. These
-    comments will need to be removed before the job will be able to start
-    again.
-
-
-
+For lightweight, recurring, or persistent tasks (data transfers, backups,
+database servers, cron-like jobs), Sherlock provides a dedicated `service`
+partition. See the [Service jobs][url_service_jobs] page for full details,
+including examples of recurring and persistent job scripts.
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_sbatch]:       //slurm.schedmd.com/sbatch.html
-[url_trap]:         //tldp.org/LDP/Bash-Beginners-Guide/html/sect_12_02.html
-[url_signals]:      //en.wikipedia.org/wiki/Signal_(IPC)
-[url_job_deps]:     //slurm.schedmd.com/sbatch.html#OPT_dependency
 [url_sh_part]:      //news.sherlock.stanford.edu/posts/a-better-view-at-sherlock-s-resources
 [url_htop]:         //htop.dev/
 [url_sacct]:        //slurm.schedmd.com/sacct.html
 [url_squeue]:       //slurm.schedmd.com/squeue.html
-[url_scrontab]:     //slurm.schedmd.com/scrontab.html
 [url_bash]:         //www.gnu.org/software/bash/manual/bash.html
 [url_scancel]:      //slurm.schedmd.com/scancel.html
 [url_ruse]:         //github.com/JanneM/Ruse
 
+[url_sbatch_opts]:  /docs/advanced-topics/sbatch-options.md
+[url_service_jobs]: /docs/advanced-topics/service-jobs.md
+
 [anc_modules]:      /docs/software/modules.md
-[anc_mariadb]:      /docs/software/using/mariadb.md
-[anc_pgsql]:        /docs/software/using/postgresql.md
 [anc_partition]:    /docs/glossary.md#partition
 [anc_cpus]:         /docs/glossary.md#cpu
 [anc_gpus]:         /docs/glossary.md#gpu
@@ -937,7 +507,6 @@ saved, and prevent the job from being executed in the future.
 [anc_public_parts]: /docs/user-guide/running-jobs.md#public-partitions
 [anc_filemanager]:  /docs/user-guide/ondemand.md#managing-files
 [anc_texteditors]:  /docs/getting-started/index.md#text-editors
-[anc_scrontab]:     /docs/user-guide/running-jobs.md#slurm-crontab
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
@@ -951,9 +520,6 @@ saved, and prevent the job from being executed in the future.
   towards your job's resource limits. So if you start a process using large
   amounts of memory via SSH while your job is running, you may hit the job's
   memory limits, which will trigger its termination.
-
-[^signal_delay]: Due to the resolution of event handling by the scheduler, the
-  signal may be sent up to 60 seconds earlier than specified.
 
 [^long_qos]: the `long` QOS can only be used in the `normal` partition, and is
   only accessible to users who are *not* part of an owners group (since owner
