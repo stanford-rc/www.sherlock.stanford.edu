@@ -135,6 +135,13 @@ OpenSSH offers a variety of configuration options that you can use in
 the options you can use with Sherlock that may make connecting and transferring
 files more convenient.
 
+!!! note "Compression"
+
+    Enabling SSH compression (`Compression yes`) is generally **not**
+    recommended on fast networks, as the CPU overhead typically outweighs the
+    bandwidth savings. It may help on slow or high-latency connections such as
+    when [connecting from abroad](#connecting-from-abroad).
+
 ### Avoiding multiple Duo prompts
 
 In order to avoid getting a second-factor (Duo) prompt every time you want to
@@ -178,7 +185,21 @@ load-balancing mechanism used by the login nodes.
 
 
 
-[comment]: #  ( TODO: Network, Ciphers )
+### Ciphers
+
+OpenSSH negotiates the encryption cipher automatically, and modern versions
+will default to fast, hardware-accelerated ciphers such as
+`aes128-gcm@openssh.com` or `chacha20-poly1305@openssh.com` when both client
+and server support them. **You should not need to change this** in the vast
+majority of cases.
+
+If you are transferring very large amounts of data over SSH and have a specific
+reason to override the cipher, you can do so in your `~/.ssh/config`:
+
+``` shell
+Host login.sherlock.stanford.edu
+    Ciphers aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com
+```
 
 
 
