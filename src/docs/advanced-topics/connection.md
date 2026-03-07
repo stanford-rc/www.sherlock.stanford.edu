@@ -25,9 +25,9 @@ $ ssh <sunetid>@ln21.sherlock.stanford.edu
 ```
 
 This can be useful if you run long-standing processes on the login nodes, such
-as [`screen`][url_screen] or [`tmux`][url_tmux] sessions. To find them back when you
-reconnect to Sherlock, you will indeed need to login to the same login node you
-started them on.
+as [`screen`][url_screen] or [`tmux`][url_tmux] sessions. To find them back
+when you reconnect to Sherlock, you will indeed need to login to the same login
+node you started them on.
 
 The drawback is that by connecting to a specific login node, you will forfeit
 the load-balancing benefits, which could result in a crowded environment, or

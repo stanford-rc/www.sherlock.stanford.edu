@@ -45,7 +45,7 @@ The table below lists the possible features defined for each node.
 | `GPU_MEM:xxx` | GPU memory | `GPU_MEM:32GB`, `GPU_MEM:80GB` |
 | `GPU_CC:xxx`  | GPU [Compute Capability][url_gpu_cc] | `GPU_CC:6.1`, `GPU_CC:8.0` |
 | `IB:xxx`      | Infiniband generation/speed | `IB:EDR`, `IB:HDR` |
-| `NO_GPU`      | special tag set on CPU-only nodes |
+| `NO_GPU`      | special tag set on CPU-only nodes ||
 
 
 ### Listing the features available in a partition
