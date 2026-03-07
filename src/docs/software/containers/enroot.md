@@ -116,6 +116,14 @@ $ srun --container-image ./debian+12.sqsh \
        python3 my_script.py
 ```
 
+!!! tip "Caching imported images"
+
+    When referencing a Docker Hub image directly with `--container-image
+    docker://...`, Pyxis imports and caches it automatically on first use.
+    Subsequent jobs reuse the cached image, avoiding redundant downloads. The
+    cache is stored under `$SCRATCH/.enroot` by default.
+
+
 #### Example batch script
 
 ``` shell
@@ -129,12 +137,6 @@ srun --container-image $SCRATCH/debian+12.sqsh \
      python3 my_script.py
 ```
 
-#### Caching imported images
-
-When referencing a Docker Hub image directly with `--container-image
-docker://...`, Pyxis imports and caches it automatically on first use.
-Subsequent jobs reuse the cached image, avoiding redundant downloads. The
-cache is stored under `$SCRATCH/.enroot` by default.
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
