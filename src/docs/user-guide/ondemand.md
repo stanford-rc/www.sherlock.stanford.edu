@@ -1,3 +1,8 @@
+---
+tags:
+    - interactive
+---
+
 ## Introduction
 
 The Sherlock OnDemand interface allows you to conduct your research on Sherlock

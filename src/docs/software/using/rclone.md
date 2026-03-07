@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 ## Introduction
 
 If you need to sync files between cloud storage to Sherlock,

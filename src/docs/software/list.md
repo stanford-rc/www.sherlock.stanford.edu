@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 <link rel="alternate" type="application/rss+xml" href="/docs/software/updates.xml">
 
 # Software list

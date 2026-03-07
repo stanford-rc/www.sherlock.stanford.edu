@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 ## Environment modules
 
 Software is provided on Sherlock under the form of loadable *environment

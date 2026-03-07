@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 ## Introduction
 
 The [Schrödinger][url_schrodinger] suite is a commercial and licensed software

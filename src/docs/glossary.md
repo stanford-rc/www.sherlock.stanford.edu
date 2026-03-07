@@ -1,3 +1,8 @@
+---
+tags:
+    - reference
+---
+
 ## What's a cluster?
 <!-- markdownlint-disable MD001 -->
 

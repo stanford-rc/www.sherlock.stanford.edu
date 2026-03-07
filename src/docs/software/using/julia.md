@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 ## Introduction
 
 [Julia][url_julia] is a high-level general-purpose dynamic programming language

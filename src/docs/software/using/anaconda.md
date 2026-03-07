@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 ## Introduction
 
 Anaconda is a Python/R distribution that aims to simplify package management

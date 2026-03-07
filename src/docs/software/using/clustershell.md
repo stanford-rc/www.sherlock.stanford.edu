@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 ## Introduction
 
 [ClusterShell][url_clush] is a command-line tool and library that helps running

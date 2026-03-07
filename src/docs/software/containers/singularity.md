@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 # Singularity
 
 [Singularity][url_singularity] is an open source [container][url_containers]

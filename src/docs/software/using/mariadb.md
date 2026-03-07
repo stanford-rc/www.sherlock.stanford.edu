@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 ## Introduction
 
 [MariaDB][url_mariadb] is a community-developed fork of the [MySQL][url_mysql]

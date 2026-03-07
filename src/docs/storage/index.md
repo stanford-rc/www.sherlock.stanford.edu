@@ -1,3 +1,8 @@
+---
+tags:
+    - storage
+---
+
 # Storage <small>on Sherlock</small>
 
 Sherlock provides access to several file systems, each with distinct storage

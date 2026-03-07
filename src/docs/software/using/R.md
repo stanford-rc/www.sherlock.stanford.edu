@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 ## Introduction
 
 [R][url_r] is a programming language and software environment for statistical

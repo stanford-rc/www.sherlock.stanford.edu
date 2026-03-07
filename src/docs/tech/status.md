@@ -1,3 +1,8 @@
+---
+tags:
+    - tech
+---
+
 <script src="//libraries.hund.io/status-js/status-3.5.0.js"></script>
 <script>
   var statusWidget = new Status.Widget({

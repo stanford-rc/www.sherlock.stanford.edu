@@ -1,3 +1,8 @@
+---
+tags:
+    - storage
+---
+
 The following sections present and detail options to share data across users
 and groups on Sherlock.
 

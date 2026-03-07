@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 ## Introduction
 
 [Ollama][url_ollama] provides a streamlined way to start using Large Language

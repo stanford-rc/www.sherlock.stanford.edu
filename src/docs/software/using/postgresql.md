@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 ## Introduction
 
 [PostgreSQL][url_postgresql] is a powerful, open source object-relational

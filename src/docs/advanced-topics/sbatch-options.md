@@ -2,6 +2,7 @@
 title: SBATCH options
 tags:
     - slurm
+    - advanced
 ---
 
 `#SBATCH` directives are Slurm options embedded in a batch script as special

@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 !!! tip "Software installation requests"
 
     For more information about software installation requests, please see [the

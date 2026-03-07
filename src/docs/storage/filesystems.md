@@ -1,3 +1,8 @@
+---
+tags:
+    - storage
+---
+
 <!-- markdownlint-disable MD024 -->
 The following sections describe the characteristics and best uses of each of
 the Sherlock's filesystems.

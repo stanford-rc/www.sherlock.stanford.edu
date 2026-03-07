@@ -1,3 +1,8 @@
+---
+tags:
+    - overview
+---
+
 # Getting started
 
 ## Prerequisites

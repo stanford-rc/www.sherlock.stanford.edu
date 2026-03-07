@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 ## Introduction
 
 [Enroot][url_enroot] is a container runtime developed by NVIDIA that runs

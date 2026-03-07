@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 ## Introduction
 
 [Quantum ESPRESSO][url_qe] is an integrated suite of Open-Source computer codes

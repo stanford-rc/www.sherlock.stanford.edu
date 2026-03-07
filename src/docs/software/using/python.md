@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 ## Introduction
 
 [Python][url_python] is an interpreted high-level programming language for

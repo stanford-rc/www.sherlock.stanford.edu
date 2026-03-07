@@ -1,6 +1,7 @@
 ---
 tags:
     - slurm
+    - advanced
 ---
 
 ## Job submission limits

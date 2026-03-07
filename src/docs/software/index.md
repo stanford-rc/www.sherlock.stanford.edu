@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 # Software <small>on Sherlock</small>
 
 ## Available software

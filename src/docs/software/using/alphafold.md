@@ -1,3 +1,8 @@
+---
+tags:
+    - software
+---
+
 ## Introduction
 
 [AlphaFold][url_af] is an artificial intelligence (AI) system developed by

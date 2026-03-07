@@ -2,6 +2,7 @@
 title: Service jobs
 tags:
     - slurm
+    - advanced
 ---
 
 The `service` partition is designed for lightweight, recurring, or persistent

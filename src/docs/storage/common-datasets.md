@@ -1,3 +1,8 @@
+---
+tags:
+    - storage
+---
+
 To help researchers save time on downloads, Stanford Research Computing hosts
 databases and models for commonly used software in `$COMMON_DATASETS`. This is
 a read-only storage space that is accessible to all Sherlock users.

@@ -1,3 +1,8 @@
+---
+tags:
+    - gpu
+---
+
 To support the latest computing advancements in many fields of science,
 Sherlock features a number of compute nodes with [GPUs][url_gpu] that can be
 used to run a variety of GPU-accelerated applications. Those nodes are

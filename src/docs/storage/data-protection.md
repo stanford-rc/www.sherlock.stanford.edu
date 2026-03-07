@@ -1,3 +1,7 @@
+---
+tags:
+    - storage
+---
 
 !!! Warning "Data protection is mostly a task for the user"
 

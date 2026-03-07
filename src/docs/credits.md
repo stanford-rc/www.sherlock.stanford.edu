@@ -1,3 +1,8 @@
+---
+tags:
+    - overview
+---
+
 # About us
 
 ## Stanford Research Computing

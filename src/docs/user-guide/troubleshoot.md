@@ -1,3 +1,8 @@
+---
+tags:
+    - troubleshooting
+---
+
 Sherlock is a resource for research, and as such, it is in perpetual
 evolution, as hardware, applications, libraries, and modules are added,
 updated, and/or modified on a regular basis.  Sometimes issues can appear where

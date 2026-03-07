@@ -1,6 +1,7 @@
 ---
 tags:
     - connection
+    - advanced
 ---
 
 # Advanced connection options
