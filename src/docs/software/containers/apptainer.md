@@ -12,6 +12,8 @@ tags:
     projects maintain compatibility, and `singularity` commands remain available
     as aliases to `apptainer` commands on Sherlock.
 
+## Introdution
+
 [Apptainer][url_apptainer] is an open source [container][url_containers]
 platform designed to run complex applications on high-performance computing
 (HPC) clusters in a simple, portable, and reproducible way. It's like
@@ -75,7 +77,7 @@ developed with HPC systems in mind, to solve those specific problems:
 * ability to run MPI jobs based on containers,
 * [and more][url_apptainer_docs]...
 
-### More documentation
+## More documentation
 
 The following documentation is specifically intended for using Apptainer on
 Sherlock. For more complete documentation about building and running containers
