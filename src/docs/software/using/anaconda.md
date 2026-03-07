@@ -96,7 +96,7 @@ these situations, we recommend using a [container][url_container].
 
 !!! tip
 
-    Existing Docker images can easily be converted into Apptainer/Singularity
+    Existing Docker images can easily be converted into Apptainer
     images.
 
 The only potential downside of using containers is their size and the

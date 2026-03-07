@@ -146,19 +146,19 @@ container.
 The NVIDIA GPU Cloud ([NGC][url_ngc]) hosts a [Quantum Espresso
 container][url_ngc_qe] container that could be used on Sherlock.
 
-##### With Singularity
+##### With Apptainer
 
-To use the container with Singularity, first pull the Quantum Espresso
+To use the container with Apptainer, first pull the Quantum Espresso
 container with:
 
 ```shell { .no-copy }
 $ cd $SCRATCH
-$ singularity pull docker://nvcr.io/hpc/quantum_espresso:qe-7.0
+$ apptainer pull docker://nvcr.io/hpc/quantum_espresso:qe-7.0
 ```
 
 Then create the following script:
 
-=== "qe-bench_gpu_singularity.sbatch"
+=== "qe-bench_gpu_apptainer.sbatch"
     ```
     #!/bin/bash
     #SBATCH --partition=gpu          # partition to submit the job to
@@ -172,7 +172,7 @@ Then create the following script:
     cd $SCRATCH/qe_benchmarks
     cd AUSURF112
 
-    srun singularity run --nv \
+    srun apptainer run --nv \
         $SCRATCH/quantum_espresso_qe-7.0.sif \
         pw.x -input ausurf.in -npool 2
 
@@ -181,7 +181,7 @@ Then create the following script:
 and submit it:
 
 ```bash { .no-copy }
-$ sbatch qe-bench_gpu_singularity.sbatch
+$ sbatch qe-bench_gpu_apptainer.sbatch
 ```
 
 ##### With pyxis/enroot
@@ -211,7 +211,7 @@ script:
 and submit it:
 
 ```bash { .no-copy }
-$ sbatch qe-bench_gpu_singularity.sbatch
+$ sbatch qe-bench_gpu_apptainer.sbatch
 ```
 
 
