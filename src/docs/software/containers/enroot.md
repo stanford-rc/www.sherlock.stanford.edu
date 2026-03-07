@@ -146,5 +146,5 @@ srun --container-image $SCRATCH/debian+12.sqsh \
 [url_dockerhub]:    //hub.docker.com/
 [url_ngc]:          //catalog.ngc.nvidia.com/
 
-[url_apptainer]:    singularity.md
+[url_apptainer]:    apptainer.md
 [url_filesystems]:  ../../storage/filesystems.md
