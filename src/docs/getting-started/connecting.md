@@ -38,7 +38,7 @@ typing the `ssh` command in a terminal window.
 To login to Sherlock, open a terminal and type the following command, where
 `<sunetid>` should be replaced by your *actual* SUNet ID:
 
-``` shell
+``` none
 $ ssh <sunetid>@login.sherlock.stanford.edu
 ```
 
@@ -120,7 +120,7 @@ If your second factor is accepted, you'll see the following message:
 If you ever encounter timeout errors when connecting to Sherlock, like
 these:
 
-``` shell
+``` none
 $ ssh login.sherlock.stanford.edu
 ssh: connect to host login.sherlock.stanford.edu port 22: Operation timed out
 

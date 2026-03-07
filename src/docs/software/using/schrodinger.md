@@ -32,13 +32,13 @@ You can use Schrödinger software after having loaded the corresponding
 [software module][url_modules] with the `module` command. To load the current
 default version:
 
-```bash { .no-copy }
+``` bash
 module load chemistry schrodinger
 ```
 
 To see all the available versions, you can use the `module spider` command:
 
-```bash { .no-copy }
+``` none
 $ module spider schrodinger
 ```
 
@@ -46,19 +46,19 @@ Once loaded, the `$SCHRODINGER` environment variable is automatically set to
 allow all Schrödinger commands to run. For example, to run the `jaguar`
 command:
 
-```bash { .no-copy }
+``` none
 $ jaguar run -WAIT H20.in
 ```
 
 To call the basic Schrödinger `run` command, just enter:
 
-```bash { .no-copy }
+``` none
 $ run
 ```
 
 or `glide`:
 
-```bash { .no-copy }
+``` none
 $ glide
 usage: glide_startup.py [options] <input_file>
 glide_startup.py: error: the following arguments are required: input_file
@@ -77,7 +77,7 @@ glide_startup.py: error: the following arguments are required: input_file
 To launch the Maestro GUI, once you have loaded the Schrödinger module, simply
 run:
 
-```bash { .no-copy }
+``` none
 $ maestro
 ```
 
@@ -86,7 +86,7 @@ and request it as well for your job allocation.
 
 Here are some example commands you can run:
 
-```bash { .no-copy }
+``` none
 # on your local machine
 $ ssh -X login.sherlock.stanford.edu
 
@@ -120,7 +120,7 @@ For more information about X11 forwarding, you can refer to this
 Here's an example [batch][url_sbatch] script, requesting 1 CPU, for 10 minutes
 on the `normal` partition, that can be saved as `water.sbatch`:
 
-```bash { .no-copy }
+``` bash
 #!/usr/bin/bash
 #SBATCH -o water.%j.out
 #SBATCH -e water.%j.err
@@ -137,7 +137,7 @@ jaguar run -WAIT H20.in
 
 Save this input file as `H2O.in`:
 
-```none { .no-copy }
+``` none
 &gen
 &
 &echo
@@ -151,7 +151,7 @@ H2      0.0000000000000  -0.7531080000000   0.4540064000000
 
 And you can submit the batch script with:
 
-```bash { .no-copy }
+``` none
 $ sbatch water.sbatch
 ```
 

@@ -24,7 +24,7 @@ documentation][url_julia_docs].
 Julia is available on Sherlock and the corresponding [module][url_modules] can
 be loaded with:
 
-``` shell
+``` none
 $ ml julia
 ```
 
@@ -37,7 +37,7 @@ Sherlock prompt, or refer to the [Software list page][url_software_list].
 Once your environment is configured (_ie._ when the `julia` module is loaded),
 julia can be started by simply typing julia at the shell prompt:
 
-``` shell
+``` none
 $ julia
 
 _
@@ -54,7 +54,7 @@ julia>
 
 For a listing of command line options:
 
-``` shell
+``` none
 $ julia --help
 
 julia [switches] -- [programfile] [args...]
@@ -91,14 +91,14 @@ mode.
 Here is an example where we create a simple [Hello World][url_helloworld]
 program and launch it with Julia
 
-``` shell
+``` none
 $ echo 'println("hello world")' > helloworld.jl
 ```
 
 
 That script can now simply be executed by calling `julia <script_name>`:
 
-``` shell
+``` none
 $ julia helloworld.jl
 hello world
 ```
@@ -127,14 +127,14 @@ Here's an example Julia sbatch script that can be submitted via `sbatch`:
 You can save this script as `julia_test.sbatch` and submit it to the scheduler
 with:
 
-``` shell
+``` none
 $ sbatch julia_test.sbatch
 ```
 
 Once the job is done, you should get a `julia_test.log` file in the current
 directory, with the following contents:
 
-``` shell
+``` none
 $ cat julia_test.log
 hello world
 ```
@@ -283,7 +283,7 @@ You can submit the following job:
 
 Save as `julia_test.sbatch`, and then:
 
-``` shell
+``` none
 $ sbatch  julia_test.sbatch
 ```
 

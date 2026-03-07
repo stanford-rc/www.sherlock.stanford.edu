@@ -20,7 +20,7 @@ and bypass the automatic load-balanced dispatching of new connections
 (which **we don't recommend**), you can use that login node's hostname
 explicitly. For instance:
 
-``` shell
+``` none
 $ ssh <sunetid>@ln21.sherlock.stanford.edu
 ```
 
@@ -93,7 +93,7 @@ test that your Kerberos installation works by running `kinit
 <sunetid>@stanford.edu`. You should get a password prompt, and upon success,
 you'll be able to list your Kerberos credentials with the `klist` command:
 
-``` shell
+``` none
 $ kinit kilian@stanford.edu
 Password for kilian@stanford.edu:
 $ klist
@@ -117,7 +117,7 @@ open to Sherlock for several days without any issue.
 
 You're now ready to connect to Sherlock using GSSAPI. Simply SSH as usual:
 
-``` shell
+``` none
 $ ssh <sunetid>@login.sherlock.stanford.edu
 ```
 
@@ -154,7 +154,7 @@ machine to activate the `ControlMaster` option. If you already have a `Host
 login.sherlock.stanford.edu` block in your configuration file, simply add the
 `Control*` option lines in the same block.
 
-``` shell
+``` shell { .copy .select }
 Host login.sherlock.stanford.edu
     ControlMaster auto
     ControlPath ~/.ssh/%l%r@%h:%p
@@ -197,7 +197,7 @@ majority of cases.
 If you are transferring very large amounts of data over SSH and have a specific
 reason to override the cipher, you can do so in your `~/.ssh/config`:
 
-``` shell
+``` shell { .copy .select }
 Host login.sherlock.stanford.edu
     Ciphers aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com
 ```

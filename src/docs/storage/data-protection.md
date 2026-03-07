@@ -28,7 +28,7 @@ directory at any level of the hierarchy. Those `.snapshot` directories don't
 appear when listing directory contents with `ls`, but they can be listed
 explicitly or accessed with `cd`:
 
-``` shell
+``` none
 $ cd $HOME
 $ ls -ald .snapshot/users*
 [...]

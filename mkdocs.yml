@@ -49,8 +49,8 @@ theme:
     - announce.dismiss
     - content.annotations
     - content.code.annotate
-    - content.code.copy
-    - content.code.select
+   #- content.code.copy    # Disabled globally, enabled per-block for scripts
+   #- content.code.select  # Disabled globally, enabled per-block for scripts
     - navigation.indexes
    #- navigation.instant # instant loading doesn't work well with our landing page
     - navigation.sections
@@ -247,7 +247,10 @@ markdown_extensions:
       options:
         custom_icons:
           - overrides/.icons
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink:

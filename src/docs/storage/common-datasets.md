@@ -37,7 +37,7 @@ purge policy.
 
 For example, to copy the AlphaFold 3 databases to `$SCRATCH`:
 
-```shell { .no-copy }
+``` none
 $ sh_dev -c 4 -p service -t 2:00:00
 salloc: Granted job allocation 16755526
 

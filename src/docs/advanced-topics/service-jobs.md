@@ -75,7 +75,7 @@ The table below summarizes the advantages and drawbacks of each approach:
 The script below emulates a `cron` task: it appends a timestamped line to a
 `cron.log` file in your `$HOME` directory and runs every 7 days.
 
-``` shell title="cron.sbatch"
+``` shell { title="cron.sbatch" .copy .select }
 #!/bin/bash
 #SBATCH --job-name=cron
 #SBATCH --begin=now+7days
@@ -147,7 +147,7 @@ The example below is modified from the recurring job above to:
    time limit (via `--signal`),
 2. requeue itself upon receiving that signal (via `trap`).
 
-``` shell title="persistent.sbatch"
+``` shell { title="persistent.sbatch" .copy .select }
 #!/bin/bash
 #SBATCH --job-name=persistent
 #SBATCH --dependency=singleton
@@ -201,7 +201,7 @@ scontrol requeue $SLURM_JOBID
 
 The updated script (highlighted line):
 
-``` shell title="persistent.sbatch" hl_lines="10"
+``` shell title="persistent.sbatch" hl_lines="10" { .copy .select }
 #!/bin/bash
 #SBATCH --job-name=persistent
 #SBATCH --dependency=singleton
@@ -275,7 +275,7 @@ with a 10-minute runtime limit.
     By default, Slurm will **overwrite** output files at each execution. Add
     `#SCRON --open-mode=append` to keep a running log across executions.
 
-``` crontab
+``` crontab { .copy .select }
 #SCRON -p service
 #SCRON -t 00:10:00
 #SCRON -o mycron_output-%j.out
@@ -304,7 +304,7 @@ For long-running processes (database servers, job managers), set a short
 execution interval so the job restarts quickly if interrupted, and use
 `--dependency=singleton` to prevent duplicate instances:
 
-``` crontab
+``` crontab { .copy .select }
 #SCRON -p service
 #SCRON -t 1-00:00:00
 #SCRON --dependency=singleton

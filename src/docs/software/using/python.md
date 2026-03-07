@@ -90,7 +90,7 @@ my_script.py`. The `-u` option stands for "unbuffered".
 
 For instance:
 
-```shell
+``` shell { title="venv_job.sbatch" .copy .select }
 #!/bin/bash
 #SBATCH -n 1
 
@@ -129,7 +129,7 @@ provided on Sherlock:
 
 Python modules on Sherlock generally follow the naming scheme below:
 
-``` shell
+``` shell { .copy .select }
 py-<package_name>/version_py<python_version>
 ```
 
@@ -142,7 +142,7 @@ For instance, NumPy modules are:
 You can list all available module versions for a package with `ml spider
 <package_name>`. For instance:
 
-``` shell
+``` none
 $ ml spider tensorflow
 -------------------------------------------------------------------------------
   py-tensorflow:
@@ -186,13 +186,13 @@ cluster.
 
 For example:
 
-``` shell
+``` none
 $ pip install --user <package_name>
 ```
 
 For Python 3, use `pip3`:
 
-``` shell
+``` none
 $ pip3 install --user <package_name>
 ```
 
@@ -208,7 +208,7 @@ Python version.
 You can easily see the list of the Python packages installed in your
 environment, and their location, with `pip list`:
 
-``` shell
+``` none
 $ pip list -v
 Package    Version Location                                                            Installer
 ---------- ------- ------------------------------------------------------------------- ---------
@@ -237,14 +237,14 @@ users from the group use it without having to install it themselves.
 First, you need to create a directory to store those packages. We'll put it in
 `$GROUP_HOME`:
 
-``` shell
+``` none
 $ mkdir -p $GROUP_HOME/python/
 ```
 
 Then, we load the Python module we need, and we instruct `pip` to install its
 packages in the directory we just created:
 
-``` shell
+``` none
 $ ml python/2.7.13
 $ PYTHONUSERBASE=$GROUP_HOME/python pip install --user urllib3
 ```
@@ -257,13 +257,13 @@ default directory, you (and all the members of the group who will want to use
 that module) need to set their `PYTHONPATH` to include our new shared
 directory[^profile]:
 
-``` shell
+``` none
 $ export PYTHONPATH=$GROUP_HOME/python/lib/python2.7/site-packages:$PYTHONPATH
 ```
 
 And now, the module should be visible:
 
-``` shell
+``` none
 $ pip list -v
 Package    Version Location                                                            Installer
 ---------- ------- ------------------------------------------------------------------- ---------
@@ -298,7 +298,7 @@ GitHub repositories.
 
 For instance, to install [HTTPie][url_httpie], you can do:
 
-``` shell
+``` none
 $ pip install --user git+git://github.com/jkbr/httpie.git
 ```
 
@@ -322,7 +322,7 @@ each package you would like to install on its own line:
 
 You can now install your modules like so:
 
-``` shell
+``` none
 $ ml python
 $ pip install --user -r requirements.txt
 ```
@@ -331,13 +331,13 @@ $ pip install --user -r requirements.txt
 
 `pip` can update already installed packages with the following command:
 
-``` shell
+``` none
 $ pip install --user --upgrade <package_name>
 ```
 
 Upgrading packages also works with `requirements.txt` files:
 
-``` shell
+``` none
 $ pip install --user --upgrade -r requirements.txt
 ```
 
@@ -347,7 +347,7 @@ $ pip install --user --upgrade -r requirements.txt
 To uninstall a Python package, you can use the `pip uninstall` command (note
 that it doesn't take any `--user` option):
 
-``` shell
+``` none
 $ pip uninstall <package_name>
 $ pip uninstall -r requirements.txt
 ```
@@ -403,7 +403,7 @@ To deactivate the environment and return to your normal shell:
 To use a virtual environment in a batch job, simply activate it in your Slurm
 script:
 
-``` shell title="job.sh"
+``` shell { title="job.sh" .copy .select }
 #!/bin/bash
 #SBATCH --job-name=my_job
 #SBATCH --output=my_job-%j.out
@@ -541,7 +541,7 @@ $ uv run --project /path/to/my_project python analysis/my_script.py
 For the quick `uv pip` workflow, batch scripts only need to activate the
 `.venv`:
 
-``` shell title="run_script.sh"
+``` shell { title="run_script.sh" .copy .select }
 #!/bin/bash
 #SBATCH --job-name=my_job
 #SBATCH --output=my_job-%j.out
@@ -557,7 +557,7 @@ python3 my_script.py
 For the project-based workflow, use `uv run` after having loaded the required
 modules:
 
-``` shell title="run_project.sh"
+``` shell { title="run_project.sh" .copy .select }
 #!/bin/bash
 #SBATCH --job-name=my_job
 #SBATCH --output=my_job-%j.out

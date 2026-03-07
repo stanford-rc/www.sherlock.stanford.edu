@@ -68,7 +68,7 @@ in `$SCRATCH` or `$GROUP_SCRATCH`. Stanford Research Computing maintains
 a copy in the [Common Datasets repository][url_oak_common]. You can use
 the following template to create a batch job for copying the databases.
 
-``` shell
+``` shell { title="alphafold.sbatch" .copy .select }
 #!/bin/bash
 #SBATCH --ntasks=4
 #SBATCH --partition=service
@@ -153,7 +153,7 @@ to fold. For the full input format specification, see the [AlphaFold 3 input
 documentation][url_af3_input]. Here is a minimal example for a single protein
 chain:
 
-``` json
+``` json { .copy .select }
 {
   "name": "my_protein",
   "modelSeeds": [1],
@@ -187,7 +187,7 @@ file you would like to fold, and the `.json` file needs to be placed in the
 `af_input` directory. In the template below the example input file is
 `fold_input_2PV7.json`.
 
-``` { .shell .annotate }
+``` { .shell .annotate  .select }
 #!/bin/bash
 #SBATCH --partition=normal
 #SBATCH --cpus-per-task=8
@@ -246,7 +246,7 @@ filename of the data `.json` file created during the pipeline step. The data
 directory and file are located in your `af_output` directory. In the
 template example below the data directory and file is `/2pv7/2pv7_data.json`.
 
-``` { .shell .annotate }
+``` { .shell .annotate  .select }
 #!/bin/bash
 #SBATCH --partition=gpu
 #SBATCH --cpus-per-task=8

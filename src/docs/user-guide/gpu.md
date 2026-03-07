@@ -36,7 +36,7 @@ batch script or command line submission options.
 For instance, the following script will request one GPU for two hours in the
 `gpu` partition, and run the GPU-enabled version of `gromacs`:
 
-``` shell
+``` shell { title="gpu_job.sbatch" .copy .select }
 #!/bin/bash
 #SBATCH -p gpu
 #SBATCH -c 10

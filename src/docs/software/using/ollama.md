@@ -140,7 +140,7 @@ or as a coding assistant for your development / interactive sessions.
 
 Here's an example Slurm script that requests a GPU and starts the Ollama server:
 
-``` bash title="ollama_server.sh"
+``` bash { title="ollama_server.sh" .copy .select }
 #!/bin/bash
 #SBATCH --job-name      ollama_server-%j
 #SBATCH --output        ollama_server-%j.out
@@ -235,7 +235,7 @@ server.
 Here's an example configuration snippet, assuming the Ollama server is running
 on `sh03-16n12:18137`:
 
-``` yaml
+``` yaml { .copy .select }
 models:
   - name: Autodetect
     apiBase: http://sh03-16n12:18137

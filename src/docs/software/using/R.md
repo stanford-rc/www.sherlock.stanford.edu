@@ -209,7 +209,7 @@ The downloaded source packages are in
 
 and when it's done, you should be able to load the package within R with:
 
-``` R
+``` R { .copy .select }
 > library(doParallel)
 Loading required package: foreach
 Loading required package: iterators
@@ -251,7 +251,7 @@ Specifying the full destination path for each package installation could
 quickly become tiresome, so to avoid this, you can create a `.Renviron`
 file in your `$HOME` directory, and define your `R_libs` path there:
 
-``` shell
+``` none
 $ cat << EOF > $HOME/.Renviron
 R_LIBS=~/R_libs
 EOF
@@ -293,7 +293,7 @@ For instance, adding the following contents to your `~/.Rprofile` will make
 sure that every `install.packages()` invocation will use the closest CRAN
 mirror:
 
-``` R
+``` R { .copy .select }
 ## local creates a new, empty environment
 ## This avoids polluting the global environment with
 ## the object r
@@ -321,14 +321,14 @@ downloaded 169 KB
 R packages can be directly installed from GitHub using the `devtools` package.
 `devtools` needs to be installed first, with:
 
-``` R
+``` R { .copy .select }
 > install.packages("devtools")
 ```
 
 And then, you can then install a R package directly from its GitHub repository.
 For instance, to install `dplyr` from <https://github.com/tidyverse/dplyr>:
 
-``` R
+``` R { .copy .select }
 > library(devtools)
 > install_github("tidyverse/dplyr")
 ```
@@ -339,7 +339,7 @@ Sometimes when installing R packages, other software is needed for the
 installation and/or compilation. For instance, when trying to install the `sf`
 package, you may encounter the following error messages:
 
-``` R
+``` R { .copy .select }
 > install.packages("sf")
 [...]
 Configuration failed because libudunits2.so was not found. Try installing:...
@@ -398,7 +398,7 @@ session.
 
 For instance, to update the `doParallel` package:
 
-``` R
+``` R { .copy .select }
 > update.packages('doParallel')
 ```
 
@@ -418,7 +418,7 @@ all the packages in your local R library are up to date.
 To remove a package from your local R library, you can use the
 `remove.packages()` function. For instance:
 
-``` R
+``` R { .copy .select }
 > remove.packages('doParallel')
 ```
 
@@ -454,13 +454,13 @@ We've tested this on 4.2 and 4.3, but you can try it on other versions as well.
 
 Once you're in R, first install Matrix manually from a tarball:
 
-``` R
+``` R { .copy .select }
 >>> install.packages("https://cran.r-project.org/src/contrib/Archive/Matrix/Matrix_1.6-5.tar.gz", repos=NULL, type="source", Ncpus=4)
 ```
 
 and finally, install and launch Seurat:
 
-``` R
+``` R { .copy .select }
 >>> install.packages("Seurat", Ncpus=4)
 >>> library(Seurat)
 ```
@@ -485,7 +485,7 @@ with 4 CPUs, load the modules for the necessary dependencies, and install
 `devtools` for R version 4.4.2. Note: these dependencies will also work for
 installing the popular library `tidyverse`.
 
-```none { .no-copy }
+``` none
 # Launch interactive dev session with 4 CPUs
 
 $ sh_dev -c 4
@@ -569,13 +569,13 @@ Save the two scripts below in a directory on Sherlock:
 
 And then submit the job with:
 
-``` shell
+``` none
 $ sbatch doParallel_test.sbatch
 ```
 
 Once the job has completed, the output file should contain something like this:
 
-``` shell
+``` none
 $ cat doParallel_test.out
 [1] "16"
 elapsed
@@ -585,7 +585,7 @@ elapsed
 **Bonus points**: observe the scalability of the `doParallel` loop by
 submitting the same script using a varying number of CPU cores:
 
-``` shell
+``` none
 $ for i in 2 4 8 16; do
     sbatch --out=doP_${i}.out --ntasks-per-node=$i doParallel_test.sbatch
 done
@@ -593,7 +593,7 @@ done
 
 When the jobs are done:
 
-``` shell
+``` none
 $ for i in 2 4 8 16; do
     printf "%2i cores: %4.1fs\n" $i $(tail -n1 doP_$i.out)
 done
@@ -612,7 +612,7 @@ To distribute parallel R tasks on multiple nodes, you can use the
 To install the `Rmpi` package, a module providing MPI library must first be
 loaded. For instance:
 
-``` shell
+``` none
 $ ml openmpi R
 $ R
 > install.packages("Rmpi")
@@ -668,13 +668,13 @@ Once the package is installed, the following scripts demonstrate a very basic
 You can save those scripts as `Rmpi-test.R` and
 `Rmpi-test.sbatch` and then submit your job with:
 
-``` shell
+``` none
 $ sbatch Rmpi-test.sbatch
 ```
 
 When the job is done, its output should look like this:
 
-``` shell
+``` none
 $ cat Rmpi-test.log
         3 slaves are spawned successfully. 0 failed.
 master (rank 0, comm 1) of size 4 is running on: sh-06-33
@@ -747,7 +747,7 @@ the [`gpuR`][url_gpuR] R package.
 After submitting the job with `sbatch gpuR-test.sbatch`, the output file should
 contain something like this:
 
-``` shell
+``` shell { .copy .select }
 [1] "CPU times"
 [1] "1  0.00"
 [1] "2  0.00"

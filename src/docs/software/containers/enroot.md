@@ -95,14 +95,14 @@ Pyxis handles image importing and container creation automatically, so you
 don't need to run `enroot import` or `enroot create` manually. You can specify
 a container image directly in your `srun` or `sbatch` commands:
 
-``` shell
+``` none
 $ srun --container-image ./debian+12.sqsh python3 my_script.py
 ```
 
 Or reference an image directly from Docker Hub (Pyxis will import it
 automatically on first use):
 
-``` shell
+``` none
 $ srun --container-image docker://debian:12 python3 my_script.py
 ```
 
@@ -110,7 +110,7 @@ Standard Sherlock filesystems are automatically mounted inside the container.
 To mount additional paths, use `--container-mounts` with a comma-separated
 list of `host:container` pairs:
 
-``` shell
+``` none
 $ srun --container-image ./debian+12.sqsh \
        --container-mounts /path/on/host:/path/in/container \
        python3 my_script.py
@@ -126,7 +126,7 @@ $ srun --container-image ./debian+12.sqsh \
 
 #### Example batch script
 
-``` shell
+``` shell { title="enroot_job.sbatch" .copy .select }
 #!/bin/bash
 #SBATCH --partition=normal
 #SBATCH --cpus-per-task=4

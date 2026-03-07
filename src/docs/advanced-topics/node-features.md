@@ -97,14 +97,14 @@ To specify a node feature as a job constraint, the `-C`/`--constraint`
 For instance, to submit a job that should only run on an AMD Rome CPU, you can
 add the following to your job submission options:
 
-``` none
+``` shell { .copy .select }
 #SBATCH -C CPU_GEN:RME
 ```
 
 Or to make sure that your training job will run on a GPU with 80GB of GPU
 memory:
 
-``` none
+``` shell { .copy .select }
 #SBATCH -G 1
 #SBATCH -C GPU_MEM:80GB
 ```
@@ -144,7 +144,7 @@ Some of the possible logical operations between constraints are listed below:
 Only nodes with all the requested features are eligible to run the job. The
 ampersand sign (`&`) is used as the `AND` operator. For example:
 
-``` none
+``` shell { .copy .select }
 #SBATCH -C 'GPU_MEM:32GB&IB:HDR'
 ```
 
@@ -160,7 +160,7 @@ the job. The pipe sign (`|`) is used as the `OR` operator.
 In multi-node jobs, it means that nodes allocated to the job may end up having
 different features.  For example, the following options:
 
-``` none
+``` shell { .copy .select }
 #SBATCH -N 1
 #SBATCH -C "CPU_GEN:RME|CPU_GEN:MLN"
 ```
@@ -178,7 +178,7 @@ brackets (`[`,`]`).
 For instance, the following options may be used to request a job to run on
 nodes with the same frequency, either 2.5 GHz or 2.75GHz:
 
-``` none
+``` shell { .copy .select }
 #SBATCH -C "[CPU_FRQ:2.50GHz|CPU_FRQ:2.75GHz]"
 ```
 

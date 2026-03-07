@@ -122,14 +122,14 @@ pulled directly on compute nodes, and Apptainer uses multiple CPU cores
 when assembling the image, so requesting multiple cores in your job can make
 the pull operation faster:
 
-``` shell
+``` none
 $ sh_dev -c 4
 ```
 
 We recommend storing Apptainer images in `$GROUP_HOME`, as container images
 can take significant space in your `$HOME` directory.
 
-``` shell
+``` none
 $ mkdir -p $GROUP_HOME/$USER/simg
 $ cd $GROUP_HOME/$USER/simg
 ```
@@ -137,7 +137,7 @@ $ cd $GROUP_HOME/$USER/simg
 Then, the OpenFOAM container could be pulled directly from
 [DockerHub][url_docker_hub] by Apptainer. This can take a moment to complete:
 
-``` shell
+``` none
 $ apptainer pull docker://openfoam/openfoam6-paraview54
 INFO:    Converting OCI blobs to SIF format
 INFO:    Starting build...
@@ -158,7 +158,7 @@ in a specific directory, you can use the `--pwd /path/` option. For instance,
 we'll create a `/tmp/openfoam_test/` directory to store our tests results (that
 will be wiped out at the end of the job), and start the container shell there:
 
-``` shell
+``` none
 $ mkdir /tmp/openfoam_test
 $ apptainer shell --pwd /tmp/openfoam_test openfoam6-paraview54_latest.sif
 Apptainer>
@@ -171,13 +171,13 @@ on the compute node (which usually looks like `[login]@[compute_node] [path]$`.
 OpenFOAM provides a convenience script that can be sourced to make OpenFOAM
 commands directly accessible and set a few useful environment variables:
 
-``` shell
+``` none
 > source /opt/openfoam6/etc/bashrc
 ```
 
 Now, we can run a simple example using OpenFOAM:
 
-``` shell
+``` none
 Apptainer> cp -r $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily .
 Apptainer> cd pitzDaily
 Apptainer> blockMesh
@@ -222,7 +222,7 @@ End
 
 When the simulation is done, you can exit the container with:
 
-``` shell
+``` none
 Apptainer> exit
 ```
 
@@ -230,7 +230,7 @@ Because the container can see all the compute node's filesystems, the
 simulation output will be available in `/tmp/openfoam_test` after you exit the
 container:
 
-``` shell
+``` none
 $ ls /tmp/openfoam_test/pitzDaily/postProcessing/
 sets
 ```
@@ -262,7 +262,7 @@ containers for the most popular HPC and deep-learning scientific applications.
 As before, we start by requesting an interactive shell with multiple CPU
 cores and moving to the directory where we'll save those images:
 
-``` shell
+``` none
 $ sh_dev -c 4
 $ cd $GROUP_HOME/simg
 ```
@@ -281,7 +281,7 @@ found in the [NGC Getting Started Guide][url_ngc_auth].
 You can then set the following environment variable to allow Apptainer to
 authenticate with NGC:
 
-``` shell
+``` none
 $ export APPTAINER_DOCKER_USERNAME='$oauthtoken'
 $ export APPTAINER_DOCKER_PASSWORD=<NVIDIA NGC API key>
 ```
@@ -301,7 +301,7 @@ apptainer pull docker://nvcr.io/<registry>/<app:tag>`
 For example to pull the [NAMD][url_namd] NGC container tagged with version
 `2.12-171025` the corresponding command would be:
 
-``` shell
+``` none
 $ apptainer pull docker://nvcr.io/hpc/namd:2.12-171025
 ```
 
@@ -330,7 +330,7 @@ the container.
 We also need to submit a job requesting a GPU to run GPU-enabled
 containers.  For instance:
 
-``` shell
+``` none
 $ srun -p gpu -c 4 --gres gpu:1 --pty bash
 ```
 
@@ -340,7 +340,7 @@ The NAMD container that was pulled just before can now be started with the
 following commands. We start by creating a temporary directory to hold the
 execution results, and start the container using this as the current directory:
 
-``` shell
+``` none
 $ mkdir /tmp/namd_test
 $ apptainer shell --nv --pwd /tmp/namd_test $GROUP_HOME/simg/namd-2.12-171025.simg
 Apptainer: Invoking an interactive shell within container...
@@ -351,7 +351,7 @@ Apptainer namd-2.12-171025.simg:/tmp/namd_test>
 From there, we can run a NAMD test to verify that everything is working as
 expected.
 
-``` shell
+``` none
 > cp -r /workspace/examples .
 > /opt/namd/namd-multicore +p4 +idlepoll examples/apoa1/apoa1.namd
 Charm++: standalone mode (not using charmrun)
@@ -387,7 +387,7 @@ The simulation should take a few seconds to run. You can verify that it
 correctly executed on a GPU in the output above. When it's done, you can exit
 the container with:
 
-``` shell
+``` none
 Apptainer> exit
 ```
 
@@ -395,7 +395,7 @@ Because the container can see all the compute node's filesystems, the
 simulation output will be available in `/tmp/named_test` after you exit the
 container:
 
-``` shell
+``` none
 $ cd /tmp/namd_test/examples/apoa1/
 $ ls apoa1-out*
 apoa1-out.coor  apoa1-out.vel  apoa1-out.xsc
