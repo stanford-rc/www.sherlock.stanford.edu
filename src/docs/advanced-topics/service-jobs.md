@@ -1,5 +1,4 @@
 ---
-title: Service jobs
 tags:
     - slurm
     - advanced

@@ -1,5 +1,4 @@
 ---
-title: Running jobs
 tags:
     - slurm
 ---
