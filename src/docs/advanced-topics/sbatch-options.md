@@ -1,5 +1,4 @@
 ---
-title: SBATCH options
 tags:
     - slurm
     - advanced
@@ -41,8 +40,9 @@ module load python/3.11.7
 python3 analysis.py
 ```
 
+## Common `#SBATCH` options
 
-## Resources
+### Resources
 
 | Option | Short | Description | Example |
 | ------ | :---: | ----------- | ------- |
@@ -56,7 +56,7 @@ python3 analysis.py
 | `--partition=<name>` | `-p` | [Partition][url_partition] to submit to (e.g. `normal`, `gpu`, `bigmem`, `owners`). | `#SBATCH --partition=gpu` |
 
 
-## Output
+### Output
 
 | Option | Short | Description | Example |
 | ------ | :---: | ----------- | ------- |
@@ -66,7 +66,7 @@ python3 analysis.py
 | `--open-mode=append` | | Append to output files instead of overwriting them. Useful for [recurring jobs][url_recurring]. | `#SBATCH --open-mode=append` |
 
 
-## Notifications
+### Notifications
 
 | Option | Short | Description | Example |
 | ------ | :---: | ----------- | ------- |
@@ -74,7 +74,7 @@ python3 analysis.py
 | `--mail-type=<events>` | | Comma-separated list of events that trigger an email. Common values: `BEGIN`, `END`, `FAIL`, `ALL`. | `#SBATCH --mail-type=END,FAIL` |
 
 
-## Job control
+### Job control
 
 | Option | Short | Description | Example |
 | ------ | :---: | ----------- | ------- |
@@ -84,7 +84,7 @@ python3 analysis.py
 | `--signal=<sig>@<n>` | | Send signal `<sig>` to the [job][url_job] `<n>` seconds before reaching the time limit. Useful to trigger graceful shutdown or resubmission in [persistent jobs][url_persistent]. | `#SBATCH --signal=B:SIGUSR1@90` |
 
 
-## Node selection
+### Node selection
 
 | Option | Short | Description | Example |
 | ------ | :---: | ----------- | ------- |
