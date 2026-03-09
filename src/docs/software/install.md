@@ -164,7 +164,7 @@ keep the source tree clean and make it easy to rebuild from scratch.
 
 [Meson][url_meson] is a modern build system increasingly adopted by scientific
 and system software projects (Mesa, GLib, HDF5, etc.) as a faster alternative
-to Autotools. It uses [Ninja][url_ninja] as its backend.
+to Autotools. It drives [Ninja][url_ninja] to perform the actual compilation.
 
 Load `meson` and `ninja` after all dependency modules:
 
