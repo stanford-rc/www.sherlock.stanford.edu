@@ -27,7 +27,7 @@ A typical batch job using the most common options:
 
 ``` shell { title="job.sbatch" .copy .select }
 #!/bin/bash
-#SBATCH --job-name=analysis          # job name (shown in squeue and notifications)
+#SBATCH --job-name=analysis         # job name (shown in squeue and notifications)
 #SBATCH --output=%x.%j.out          # stdout file (%x = job name, %j = job ID)
 #SBATCH --error=%x.%j.err           # stderr file
 #SBATCH --time=4:00:00              # wall-clock time limit (HH:MM:SS)

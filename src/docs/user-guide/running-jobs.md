@@ -494,7 +494,7 @@ including examples of recurring and persistent job scripts.
 [url_scancel]:      //slurm.schedmd.com/scancel.html
 [url_ruse]:         //github.com/JanneM/Ruse
 
-[url_sbatch_opts]:  ../advanced-topics/sbatch-options.md
+[url_sbatch_opts]:  ../advanced-topics/submission-options.md
 [url_service_jobs]: ../advanced-topics/service-jobs.md
 
 [anc_modules]:      ../software/modules.md
