@@ -29,7 +29,7 @@ tables below.
 
 Software modules on Sherlock are organized in *categories*, by scientific field
 or functional class. It means that you will have to first load a category
-module before getting access to individual modules.  The `math` and `devel`
+module before getting access to individual modules. The `math` and `devel`
 categories are loaded by default. See the [Modules page][url_modules] for
 further details and examples.
 

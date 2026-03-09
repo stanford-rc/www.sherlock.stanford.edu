@@ -5,7 +5,7 @@ tags:
 
 ## Introduction
 
-Apache Spark™ is a general engine for large-scale data processing.  This
+Apache Spark™ is a general engine for large-scale data processing. This
 document gives a quick introduction how to get a first test program in Spark
 running on Sherlock.
 
@@ -21,7 +21,7 @@ Spark documentation][url_spark].
 
 Running Apache Spark on Sherlock is a bit different from using a traditional
 Spark/Hadoop cluster in that it requires some level of integration with the
-scheduler.  In a sense, the computing resources (memory and CPU) need to be
+scheduler. In a sense, the computing resources (memory and CPU) need to be
 allocated twice. First, sufficient resources for the Spark application need to
 be allocated via Slurm ; and secondly, `spark-submit` resource allocation flags
 need to be properly specified.

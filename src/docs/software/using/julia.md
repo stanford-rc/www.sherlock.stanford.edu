@@ -159,7 +159,7 @@ julia> Pkg.status()
 
 !!! tip "Julia packages only need to be installed once"
 
-    You only need to install Julia packages once on Sherlock. Since fielsystems
+    You only need to install Julia packages once on Sherlock. Since filesystems
     are shared, packages installed on one node will immediately be available on
     all nodes on the cluster.
 
@@ -240,8 +240,8 @@ No packages installed.
 
 #### Parallel job
 
-Julia can natively spawn parallel workers across multiple compute nodes,
-without using MPI. There are two main modes of operation:
+Julia can spawn parallel workers across multiple compute nodes without using
+MPI. There are two main modes of operation:
 
 1. ClusterManager: in this mode, you can spawn workers from within the Julia
    interpreter, and each worker will actually submit jobs to the scheduler,

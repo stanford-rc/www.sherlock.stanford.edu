@@ -22,7 +22,8 @@ contact [Schrödinger support][url_schrodinger_support].
 ### Licensing
 
 [Stanford Libraries][url_sul] have purchased a site license for the Schrödinger
-suite.  Please contact Stanford Libraries at sciencelibrary@stanford.edu and CC
+suite. Please contact Stanford Libraries at
+[sciencelibrary@stanford.edu](mailto:sciencelibrary@stanford.edu) and CC
 {{ support_email }} if you would like to access Schrödinger on Sherlock: after
 we receive confirmation, your PI group will be granted access on Sherlock.
 

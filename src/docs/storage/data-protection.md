@@ -12,8 +12,8 @@ tags:
 
 ## Snapshots
 
-File system snapshots represent the state of the file system at a particular
-point in time. They allow accessing the file system contents as it was a
+Filesystem snapshots represent the state of the filesystem at a particular
+point in time. They allow accessing the filesystem contents as it was a
 different times in the past, and get back data that may have been deleted or
 modified since the snapshot was taken.
 
@@ -90,7 +90,7 @@ Examples:
 ### Snapshot policy
 
 The current[^snap_policy] policy is to take snapshots on an hourly, daily and
-weekly basis.  Older snapshots automatically expire after their retention
+weekly basis. Older snapshots automatically expire after their retention
 period. The snapshot policy applies to both `$HOME` and `$GROUP_HOME` storage
 spaces.
 

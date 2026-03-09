@@ -12,7 +12,7 @@ tags:
     projects maintain compatibility, and `singularity` commands remain available
     as aliases to `apptainer` commands on Sherlock.
 
-## Introdution
+## Introduction
 
 [Apptainer][url_apptainer] is an open source [container][url_containers]
 platform designed to run complex applications on high-performance computing
@@ -22,7 +22,8 @@ platform designed to run complex applications on high-performance computing
 ### Why not Docker?
 
 Docker has long been the reference and the most popular container framework in
-DevOps and Enterprise IT environments, so why not use Docker on Sherlock? Well,
+software development and enterprise IT environments, so why not use Docker on
+Sherlock? Well,
 for a variety of technical reasons, mostly related to security.
 
 Docker has never been designed nor developed to run in multi-tenants
@@ -33,9 +34,9 @@ environments, and even less on HPC clusters. Specifically:
 * all authenticated actions (such as `login`, `push` ...) are also executed as
   `root`, meaning that multiple users can't use those functions on the same
   node,
-* Docker uses cgroups to isolate containers, as does the Slurm scheduler, which
-  uses cgroups to allocate resources to jobs and enforce limits. Those uses are
-  unfortunately conflicting.
+* Docker uses [cgroups][url_cgroups] (Control Groups) to isolate containers,
+  as does the Slurm scheduler, which uses cgroups to allocate resources to jobs
+  and enforce limits. Those uses are unfortunately conflicting.
 * but most importantly, _allowing users to run Docker containers will give
   them_ `root` _privileges_ inside that container, which will in turn let them
   access any of the clusters' filesystems as `root`. This opens the door to
@@ -50,11 +51,11 @@ Docker on Sherlock.
 !!! tldr "Apptainer is Docker for HPC systems"
 
     Apptainer allows [running Docker containers
-    natively][url_apptainer_docker], and is a perfect replacement for Docker
+    directly][url_apptainer_docker], and is a perfect replacement for Docker
     on HPC systems such as Sherlock. That means that existing Docker containers
-    can be directly imported and natively run with Apptainer.
+    can be directly imported and run with Apptainer.
 
-Despite Docker's shortcomings on HPC systems, the appeal of containers for
+Despite these shortcomings on HPC systems, the appeal of containers for
 scientific computing is undeniable, which is why we provide
 [Apptainer][url_apptainer] on Sherlock. Apptainer is an alternative
 container framework, especially designed to run scientific applications on HPC
@@ -89,7 +90,7 @@ documentation][url_apptainer_docs].
 ## Apptainer on Sherlock
 
 Apptainer is an integral part of the Sherlock cluster, and Apptainer commands
-can be executed natively on any login or compute node, without the need to load
+can be executed directly on any login or compute node, without the need to load
 any additional module[^modules].
 
 ### Importing containers
@@ -107,7 +108,7 @@ Pre-built containers can be obtained from a variety of sources. For instance:
 
 
 To illustrate how Apptainer can import and run Docker containers, here's an
-example how to install and run the [OpenFOAM CFD solver][url_openfoam] using
+example how to install and run the [OpenFOAM][url_openfoam] solver using
 Apptainer. OpenFOAM can be quite difficult to install manually, but
 Apptainer makes it very easy.
 
@@ -328,7 +329,7 @@ be executed with the `--nv` Apptainer option, to enable GPU support within
 the container.
 
 We also need to submit a job requesting a GPU to run GPU-enabled
-containers.  For instance:
+containers. For instance:
 
 ``` none
 $ srun -p gpu -c 4 --gres gpu:1 --pty bash
@@ -415,6 +416,7 @@ the [Apptainer documentation][url_apptainer_build].
 [url_apptainer_docker]: //apptainer.org/docs/user/latest/docker_and_oci.html
 [url_apptainer_build]:  //apptainer.org/docs/user/latest/build_a_container.html
 [url_containers]:       //en.wikipedia.org/wiki/Linux_containers
+[url_cgroups]:          //en.wikipedia.org/wiki/Cgroups
 [url_docker]:           //www.docker.com
 [url_docker_hub]:       //hub.docker.com
 [url_ngc]:              //ngc.nvidia.com

@@ -33,10 +33,10 @@ tags:
 </style>
 
 
-!!! info "Scheduled maintenances"
+!!! info "Scheduled maintenance"
 
-    [Maintenance operations and upgrades][url_maintenances-and-upgrades] are
-    scheduled on Sherlock on a regular basis.  Per the University's [Minimum
+    [Maintenance operations and upgrades][url_maintenance-and-upgrades] are
+    scheduled on Sherlock on a regular basis. Per the University's [Minimum
     Security policies][url_minsec], we deploy security patches on Sherlock as
     required for compliance.
 
@@ -64,6 +64,6 @@ dashboard][url_status].
 [url_minsec]:                   //uit.stanford.edu/guide/securitystandards
 [url_status]:                   //status.sherlock.stanford.edu
 
-[url_maintenances-and-upgrades]:../concepts.md#maintenances-and-upgrades
+[url_maintenance-and-upgrades]:../concepts.md#maintenance-and-upgrades
 
 --8<--- "includes/_acronyms.md"

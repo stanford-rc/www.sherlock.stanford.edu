@@ -5,9 +5,9 @@ tags:
 
 # Storage <small>on Sherlock</small>
 
-Sherlock provides access to several file systems, each with distinct storage
+Sherlock provides access to several filesystems, each with distinct storage
 characteristics. Each user and PI group get access to a set of predefined
-directories in these file systems to store their data.
+directories in these filesystems to store their data.
 
 !!! danger "Sherlock is a compute cluster, not a storage system"
 
@@ -21,7 +21,7 @@ directories in these file systems to store their data.
     Stanford Research Computing offers the [Oak storage system][url_oak], which
     is specifically intended for this usage.
 
-Those file systems are shared with other users, and are subject to quota limits
+Those filesystems are shared with other users, and are subject to quota limits
 and for some of them, purge policies (time-residency limits).
 
 
@@ -58,7 +58,7 @@ same PI group. User locations are only accessible by the user.
 
     Quotas are applied on both volume (the amount of data stored in bytes) and
     inodes: an inode (index node) is a data structure in a Unix-style file
-    system that describes a file-system object such as a file or a directory.
+    system that describes a filesystem object such as a file or a directory.
     In practice, each filesystem entry (file, directory, link) counts as an
     inode.
 
@@ -93,9 +93,9 @@ Retention types:
 
 !!! info "Global fail-safe user and quota groups on `/scratch`"
 
-    To prevent potential issues which would result in the file system filling up
+    To prevent potential issues which would result in the filesystem filling up
     completely and making it unusable for everyone, additional user and
-    group-level quotas are in place on the `/scratch` file system, as a
+    group-level quotas are in place on the `/scratch` filesystem, as a
     fail-safe:
 
     * a user will not be able to use more than 250 TB (50M inodes) in total, in
@@ -232,10 +232,10 @@ when getting close to the quota limits. Some tools can help with that.
     !!! note "Apparent size vs. disk usage"
 
         By default, `du` and `ncdu` report **disk usage**, which is the actual
-        space allocated on disk. On some file systems, there could be some
+        space allocated on disk. On some filesystems, there could be some
         difference with the real size of your files, because of block
         allocation overhead. Data reported by `sh_quota` is based on real block
-        usage on the file system.
+        usage on the filesystem.
 
         To see the actual logical size of your files (i.e. what you would
         transfer or back up), you can use the `--apparent-size` flag:

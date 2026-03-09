@@ -218,7 +218,7 @@ apptainer run \
      --output_dir=/root/af_output
 ```
 
-1.  AlphaFold 3 reads and writes to fixed paths inside the container
+1. AlphaFold 3 reads and writes to fixed paths inside the container
     (`/root/af_input`, `/root/af_output`, `/root/models`,
     `/root/public_databases`). These `--bind` flags map your `$SCRATCH`
     directories to those internal paths. `--nv` passes through the host's NVIDIA
@@ -286,10 +286,10 @@ apptainer run \
      --output_dir=/root/af_output
 ```
 
-1.  AF3 requires CUDA capability ≥ 8.x. H100 and L40S give the fastest runtimes;
+1. AF3 requires CUDA capability ≥ 8.x. H100 and L40S are the fastest;
     A100, A40, and RTX 3090 also work (the RTX 3090 is memory-limited for longer
     sequences). To target multiple GPU types or compute capabilities, use
-    Slurm's `|` operator:
+    the Slurm `|` operator:
 
     ``` shell
     #SBATCH --constraint="GPU_SKU:H100_SXM5|GPU_SKU:L40S"
@@ -303,7 +303,7 @@ apptainer run \
 
     Run `sh_node_feat -h` to list all available node features.
 
-2.  On its first run, AF3 compiles GPU kernels via XLA, which can take several
+2. On its first run, AF3 compiles GPU kernels via XLA, which can take several
     minutes. Pointing the cache to `$SCRATCH` lets subsequent runs reuse those
     kernels and start significantly faster. Multiple parallel jobs can safely
     share the same cache directory.

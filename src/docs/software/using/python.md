@@ -23,7 +23,7 @@ the [Python documentation][url_python_docs].
 Sherlock features [multiple versions][url_module_python] of Python.
 
 Some applications only work with legacy features of version 2.x, while more
-recent code will require specific version 3.x features.  [Modules on
+recent code will require specific version 3.x features. [Modules on
 Sherlock][url_modules] may only be available in a single flavor (as denoted by
 their suffix: `_py27` or `_py36`, because the application only supports one or
 the other.
@@ -432,7 +432,7 @@ $ rm -rf myenv
 !!! warning "Concurrent jobs and virtual environments"
 
     Please also note that running multiple concurrent jobs using the same
-    virtual environment can generate a lot of I/O on file systems not designed
+    virtual environment can generate a lot of I/O on filesystems not designed
     to handle direct I/O from jobs (like `$HOME`, `$GROUP_HOME`, or `$OAK`). If
     you need to run multiple jobs using the same virtual environment, consider
     installing it on `$SCRATCH` (keeping in mind the [file expiration

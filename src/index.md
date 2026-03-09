@@ -72,9 +72,9 @@ info_subtext: All about Sherlock
 
 Sherlock is a shared computing cluster available for use by all Stanford
 Faculty members and their research teams, for sponsored or departmental faculty
-research.  All research teams on Sherlock have access to a base set of managed
+research. All research teams on Sherlock have access to a base set of managed
 computing resources, GPU-based servers, and a multi-petabyte, high-performance
-parallel file system for short-term storage.
+parallel filesystem for short-term storage.
 
 Faculty can supplement these shared nodes by purchasing additional servers, and
 become Sherlock owners. By investing in the cluster, PI groups not only receive
@@ -153,7 +153,7 @@ As of {{ git.date.strftime("%B %Y") }}, Sherlock features over {{
 "{:,}".format(public_cores) }} CPU cores available to all researchers, and more
 than {{ "{:,}".format(owner_cores) }} additional CPU cores available to
 Sherlock owners, faculty who have augmented the cluster with their own
-purchases. With a computing power over {{ pflops }} Petaflops, Sherlock would
+purchases. With a computing power over {{ pflops }} PFLOPs, Sherlock would
 have its place in the Top500 list of the 500 most powerful computer systems in
 the world.
 

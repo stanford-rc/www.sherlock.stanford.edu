@@ -27,7 +27,7 @@ Sherlock features over **{{ get_value("hardware", "compute nodes", rnd=-2)
 }}** compute nodes, **{{ get_value("computing", "CPU cores", rnd=-2) }}+** CPU
 cores and **{{ get_value("computing", "GPUs", rnd=-2) }}+** GPUs, for a total
 computing power of more than **{{ get_value("computing", "PFLOPs (FP64)", rnd=1) }}**
-Petaflops. That would rank it in the Top500 list of the most powerful
+PFLOPs. That would rank it in the Top500 list of the most powerful
 supercomputers in the world.
 
 The cluster currently extends {{ get_value("networking", "Infiniband switches",
@@ -76,6 +76,7 @@ th:nth-child(2)  { min-width: 0 !important;
 
 | Type  | Access | Nodes | CPU cores | Details |
 | ---   | :---:   | ---:  | ---:      | ---     |
+<!-- markdownlint-disable MD055 MD056 -->
 {%- set partitions = facts | selectattr("name", "==", "partitions") | first -%}
 {%- for part in partitions.fields %}
 | {{ part.desc }}<br/><small>**`{{ part.name }}`** partition</small>  | {{ part.access
@@ -95,6 +96,7 @@ th:nth-child(2)  { min-width: 0 !important;
     {%- endif -%}
 </small> |
 {%- endfor %}
+<!-- markdownlint-enable MD055 MD056 -->
 | **Total** | | **{{ get_value("hardware", "compute nodes") }} :octicons-server-24:** | **{{ get_value("computing", "CPU cores") }} :octicons-cpu-24:** | **{{ get_value("computing", "GPUs") }} :material-expansion-card:** |
 
 
@@ -106,7 +108,7 @@ th:nth-child(2)  { min-width: 0 !important;
     For more information about storage options on Sherlock, please refer to the
     [Storage section][url_storage] of the documentation.
 
-Sherlock is architected around shared storage components, meaning that users
+Sherlock is built around shared storage components, meaning that users
 can find the same files and directories from all of the Sherlock nodes.
 
 * Highly-available NFS filesystem for user and group home directories (with

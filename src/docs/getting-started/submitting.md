@@ -35,7 +35,7 @@ The scheduler provides three key functions:
     #slurm_logo { display: none; }
 }
 </style>
-![Slurm logo](https://slurm.schedmd.com/slurm_logo.png){: id=slurm_logo align=right width=115px loading=lazy :}
+![Slurm logo](https://slurm.schedmd.com/slurm_logo.png){: id=slurm_logo align=right width=115px loading=lazy :} <!-- markdownlint-disable-line MD013 -->
 
 
 Sherlock uses [Slurm][url_slurm], an open-source resource manager and job

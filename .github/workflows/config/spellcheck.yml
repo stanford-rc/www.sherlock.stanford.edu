@@ -13,17 +13,53 @@ matrix:
   - pyspelling.filters.context:
       context_visible_first: true
       delimiters:
+      # ignore YAML frontmatter --- ... ---
+      - open: '\A---'
+        content: '[\s\S]*?'
+        close: '\n---'
+      # ignore inline code spans `...` (must come before :...: to protect colons inside code)
+      - open: '`'
+        content: '[^`\n]+'
+        close: '`'
       - open: ':'
         content: '[\w-]+'
         close: ':'
-      # ignore attr_list {: .* :}
+      # ignore attr_list {: .* :} and MkDocs { .class } syntax
       - open: '{:'
         close: ':}'
+      - open: '\{[ \t]'
+        content: '[^}]*'
+        close: '\}'
+      # ignore Jinja2 template expressions {{ ... }} and {% ... %} (multi-line)
+      - open: '{{'
+        content: '[\s\S]*?'
+        close: '}}'
+      - open: '{%'
+        content: '[\s\S]*?'
+        close: '%}'
+      # ignore fenced code blocks (handles MkDocs Material info string format)
+      - open: '`{3}[^\n]*'
+        content: '[\s\S]*?'
+        close: '\n`{3}[ \t]*(?=\n|\Z)'
+      # ignore footnote references [^label] (label is not prose)
+      - open: '\[\^'
+        content: '[^\]]+'
+        close: '\]'
+      # ignore PyMdown Keys ++key++ bindings (content may contain single +)
+      - open: '\+\+'
+        content: '(?:[^+]|\+(?!\+))+'
+        close: '\+\+'
+      # ignore MkDocs Material tab labels === "..."
+      - open: '={3} "'
+        content: '[^"]*'
+        close: '"'
   - pyspelling.filters.markdown:
       markdown_extensions:
+      - meta
       - pymdownx.superfences
       - pymdownx.snippets
       - attr_list
+      - admonition
   - pyspelling.filters.html:
       comments: false
       attributes:
@@ -33,5 +69,5 @@ matrix:
       - 'code, pre, img'
   - pyspelling.filters.url:
   sources:
-  - '**/*.md'
+  - '**/*.md|!README.md'
   default_encoding: utf-8

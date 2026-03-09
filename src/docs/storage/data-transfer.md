@@ -7,7 +7,7 @@ tags:
 
 A number of methods allow transferring data in/out of Sherlock. For most cases,
 we recommend using [SSH-based file transfer commands](#ssh-based-protocols),
-such as `scp`, `sftp`, or `rsync`.  They will provide the best
+such as `scp`, `sftp`, or `rsync`. They will provide the best
 performance for data transfers from and to campus.
 
 
@@ -186,7 +186,7 @@ and then should not be typed in).
 
         SSHFS on macOS is known to try to automatically reconnect filesystem
         mounts after resuming from sleep or suspend, even without any valid
-        credentials.  As a result, it will generate a lot of failed connection
+        credentials. As a result, it will generate a lot of failed connection
         attempts and likely make your [IP address blacklisted][url_auth_fail]
         on login nodes.
 
@@ -220,9 +220,9 @@ and then should not be typed in).
     ```
 
     On Windows, once SSHFS is installed, you can mount the `$SCRATCH`
-    filesystem as a network drive through the windows file explorer.  To do
+    filesystem as a network drive through the windows file explorer. To do
     this, go to "This PC", right-click in the "Network Locations" section of
-    the window and select "Add a Network Drive".  Then, in the "Add Network
+    the window and select "Add a Network Drive". Then, in the "Add Network
     Location Wizard", you would use the following network address:
 
     ```

@@ -46,7 +46,7 @@ page][url_software_list].
     the following message:
     ```
     -----------------------------------------------------------------------
-    WARNING: running MATLAB directly on login nodes is not supported.  Please
+    WARNING: running MATLAB directly on login nodes is not supported. Please
     make sure you request an interactive session on a compute node with "sh_dev"
     for instance) before launching MATLAB interactively.
     -----------------------------------------------------------------------
@@ -141,7 +141,7 @@ matlab -nodisplay < example.m
 
 This simple job, named `matlab_test` will run a MATLAB script named `example.m`
 in the `normal` [partition][url_partition], for a duration of 10 minutes, and
-use 1 [CPU][url_cpu] and 8GB of RAM.  It will send you an email (to
+use 1 [CPU][url_cpu] and 8GB of RAM. It will send you an email (to
 whatever email you used wen you signed up for Sherlock) when it begins, ends or
 fails.
 
@@ -169,7 +169,7 @@ results.
 You can run your MATLAB code across multiple CPUs on Sherlock using
 [`parfor`][url_parfor] loops, to take advantage of the multiple CPU cores that
 each node features. You can submit a job requesting as many CPUs as there are
-on a node in a single job.  The key is to grab the [SLURM environment
+on a node in a single job. The key is to grab the [SLURM environment
 variable][url_slurm_env] `$SLURM_CPUS_PER_TASK` and create the worker pool in
 your MATLAB code with:
 

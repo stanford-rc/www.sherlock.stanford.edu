@@ -24,7 +24,7 @@ their own ideas into existing codes.
 ### More documentation
 
 The following documentation specifically intended for using Quantum Espresso on
-Sherlock.  For more complete documentation about Quantum Espresso in general,
+Sherlock. For more complete documentation about Quantum Espresso in general,
 please see the [Quantum Espresso documentation][url_qe_docs].
 
 
@@ -49,7 +49,7 @@ $ ml chemistry quantum-espresso_gpu
 
 ## Examples
 
-Here are a few examples showing how to run the AUSURF112 benchmark.
+Here are a few examples showing how to run the `AUSURF112` benchmark.
 
 ### Preparation
 
@@ -63,7 +63,7 @@ $ cd qe_benchmarks/AUSURF112
 
 ### CPU version
 
-To submit a Quantum Espresso job to run the AUSURF112 benchmark on CPU nodes,
+To submit a Quantum Espresso job to run the `AUSURF112` benchmark on CPU nodes,
 the following submission script can be used:
 
 === "qe-bench_cpu.sbatch"
@@ -221,7 +221,7 @@ $ sbatch qe-bench_gpu_apptainer.sbatch
 
 [url_qe]:           //www.quantum-espresso.org
 [url_qe_docs]:      //www.quantum-espresso.org/documentation/
-[url_spof_qe]:      ../list/#quantum-espresso
+[url_soft_qe]:      ../list/#quantum-espresso
 
 [url_ngc]:          //ngc.nvidia.com
 [url_ngc_qe]:       //ngc.nvidia.com/catalog/containers/hpc:quantum_espresso

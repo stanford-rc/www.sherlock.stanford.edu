@@ -49,7 +49,7 @@ modules locally.
 
 !!! tip "Perl modules installation is only necessary once"
 
-    You only need to install Perl modules once on Sherlock. Since fielsystems
+    You only need to install Perl modules once on Sherlock. Since filesystems
     are shared, modules installed on one node will immediately be available on
     all nodes on the cluster.
 
@@ -74,7 +74,7 @@ $ perl -MDateTime::TimeZone -e 'print $DateTime::TimeZone::VERSION . "\n"';
 2.13
 ```
 
-### Uninstallation
+### Uninstalling modules
 
 To uninstall a Perl module:
 

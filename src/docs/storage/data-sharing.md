@@ -205,7 +205,7 @@ $ nfs4_setfacl -a A::GROUP@:W file1
 ```
 
 This command switched the `GROUP@` permission field from `rtncy` to
-`rwatTnNcCoy`.  However, be aware that NFSv4 file permission shortcuts have a
+`rwatTnNcCoy`. However, be aware that NFSv4 file permission shortcuts have a
 different meanings than the traditional Unix `r`, `w`, and `x`. For example
 issuing `chmod g+w file1` will set `GROUP@` to `rwatncy`.
 
@@ -258,7 +258,7 @@ there are two possibilities:
 
   1. [sponsor a SUNet ID][url_susponsorship][^sunet_level] for these
      collaborators, and [contact us][url_contact] us to create a account for
-     them on Sherlock.  This will grant them access to your resources on
+     them on Sherlock. This will grant them access to your resources on
      Sherlock (compute as well as storage) and give them access to your group
      shared files, like any other user in your group.
 

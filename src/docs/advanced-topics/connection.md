@@ -212,7 +212,7 @@ Host login.sherlock.stanford.edu
     VPN][url_vpn] when connecting from untrusted networks.
 
 Access to Sherlock is not restricted to campus, meaning that you can connect to
-Sherlock from pretty much anywhere, including when traveling abroad.  We don't
+Sherlock from pretty much anywhere, including when traveling abroad. We don't
 restrict inbound SSH connections to any specific IP address range or
 geographical location, so you shouldn't have any issue to reach the login nodes
 from anywhere.

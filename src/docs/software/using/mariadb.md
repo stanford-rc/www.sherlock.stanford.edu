@@ -162,7 +162,7 @@ over the network rather than through a local socket.
 
     When running an networked instance of MariaDB, please keep in mind that any
     user on Sherlock will be able to connect to the TCP ports that `mysqld`
-    runs on, and that proper configuration must be done to prevent unauthrozied
+    runs on, and that proper configuration must be done to prevent unauthorized
     access.
 
 Like in the single-node case, you need to create a `~/.my.cnf` file, but

@@ -46,7 +46,7 @@ or even departmental basis.
 ### How much does it cost?
 
 Sherlock is **free** to use for anyone doing departmental or sponsored research
-at Stanford.  Any faculty member can request access for research purposes, and
+at Stanford. Any faculty member can request access for research purposes, and
 get an account with a base storage allocation and unlimited compute time on the
 global, shared pool of resources.
 
@@ -141,7 +141,7 @@ We offer regular onboarding sessions for new Sherlock users.
     1PM-2PM PST, via [Zoom][url_ob_zoom]
 
 These one-hour sessions are a brief introduction to Sherlock's layout, its
-scheduler, the different file systems available on the cluster, as well as some
+scheduler, the different filesystems available on the cluster, as well as some
 job submission and software installation best practices for new users. They are
 a good intro course if you are new to Sherlock or HPC in general.
 
@@ -178,7 +178,7 @@ so that you can then work self-sufficiently towards a solution on your own.
 
 You'll need a [full-service SUNet ID][url_sunet] (basically, a @stanford.edu
 email address) in order to [authenticate][url_zoom] and join Office Hours via
-Zoom.  If you do not have a full service account, please contact us at {{
+Zoom. If you do not have a full service account, please contact us at {{
 support_email }}.
 
 If you can't make any of the Office Hours sessions, you can also make an

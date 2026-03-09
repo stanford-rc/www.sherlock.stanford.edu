@@ -102,7 +102,7 @@ Passcode or option (1-3):
 !!! tip "Avoiding two-factor prompt on each connection"
 
     If you routinely open multiple sessions to Sherlock, having to confirm each
-    one of them with a second authentication factor could rapidely become
+    one of them with a second authentication factor could rapidly become
     cumbersome. To work around this, the OpenSSH client allows multiplexing
     channels and re-using existing authenticated for opening new sessions.
     Please see the [Advanced Connection Options][url_avoid_duo] page for more
@@ -156,8 +156,8 @@ minutes.
 !!! warning "SSHFS on macOS"
 
     SSHFS on macOS is known to try to [automatically reconnect][url_sshfs]
-    filesystem mounts after resuming from sleep or uspend, even without any
-    valid credentials.  As a result, it will generate a lot of failed
+    filesystem mounts after resuming from sleep or suspend, even without any
+    valid credentials. As a result, it will generate a lot of failed
     connection attempts and likely make your IP address blacklisted on login
     nodes.
 

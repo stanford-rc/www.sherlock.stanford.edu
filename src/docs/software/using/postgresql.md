@@ -88,8 +88,7 @@ node your job is running on.
 
 From another terminal on Sherlock, connect to your job's compute node (here,
 it's `sh-01-01`, as shown above), load the `postgresql` module, and then run
-the `createdb` command: it will create a database that you can use as a
-testbed:
+the `createdb` command: it will create a database that you can use for testing:
 
 ``` none
 $ ssh sh-01-01
@@ -140,8 +139,8 @@ in your `$DB_DIR/pg_hba.conf` file (see below).
 #### Secure access
 
 To allow network connections to the database server, a password will need to be
-defined for the PostgreSQL user.  That will allow this user to connect to the
-PostgreSQL instance from any node.  Please make sure to replace the
+defined for the PostgreSQL user. That will allow this user to connect to the
+PostgreSQL instance from any node. Please make sure to replace the
 `my-secure-password` string below by the actual password of your choice.
 
 !!! Danger "Choose a proper password"

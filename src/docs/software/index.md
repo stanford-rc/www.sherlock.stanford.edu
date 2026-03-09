@@ -24,7 +24,7 @@ Software Licensing office][url_software_lic].
 
     The Stanford Research Computing team installs, for general use, a set of
     libraries, tools and software applications that are commonly used across
-    many research groups.  However, our staff resources are quite limited and
+    many research groups. However, our staff resources are quite limited and
     don't allow us to build nor maintain custom software applications that may
     be requested by or be of use to a small number of users.
 

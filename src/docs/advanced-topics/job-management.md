@@ -23,15 +23,17 @@ optimal fashion, without being overloaded by a single user or group.
 
 To see the job submission limits on Sherlock run the `sh_part` command.
 
-To run longer than 2 days on the normal partition you will need to add the "long" QOS to your submission scripts.
-For example to run for exactly 3 days add the following two lines to your sbatch script:
+To run longer than 2 days on the normal partition you will need to add the
+"long" QOS to your submission scripts. For example to run for exactly 3 days
+add the following two lines to your sbatch script:
 
 ``` shell { .copy .select }
 #SBATCH --time=3-00:00:00
 #SBATCH --qos=long
 ```
 
-If you have access to an [owners][url_owners] partition you will not need to add this QOS since the MaxWall on owners is 7 days.
+If you have access to an [owners][url_owners] partition you will not need to
+add this QOS since the maximum wall-clock time on owners is 7 days.
 
 ### Minimizing the number of jobs in queue
 

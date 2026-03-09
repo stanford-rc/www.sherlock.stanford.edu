@@ -18,7 +18,7 @@ the Sherlock's filesystems.
 
 | Characteristics   |     |
 | ----------------- | --- |
-| **Type**          | high speed, distributed NFS file system |
+| **Type**          | high speed, distributed NFS filesystem |
 | **Quota**         | 15 GB for the whole `$HOME` directory |
 | **Snapshots**     | yes *(cf. [Snapshots][url_snapshots]) for more info)* |
 | **Backups**       | off-site replication |
@@ -32,7 +32,7 @@ reference files or datasets, source code and individual software installation
 
 When you log in, the system automatically sets the current working directory to
 `$HOME`: it's the location you'll end up when connecting to Sherlock. You can
-store your source code and build your executables there.
+store your source code and build your binaries there.
 
 We strongly recommend using `$HOME` to reference your home directory in
 scripts, rather than its explicit path.
@@ -58,11 +58,11 @@ See the [Checking Quotas][url_check_quotas] section for more details.
     provides snapshots and off-site replication. It is not meant to host data
     that will be actively read and written to by compute jobs.
 
-`$HOME` and `$GROUP_HOME` are based on the same physical file system.
+`$HOME` and `$GROUP_HOME` are based on the same physical filesystem.
 
 | Characteristics   |     |
 | ----------------- | --- |
-| **Type**          | high speed, distributed NFS file system |
+| **Type**          | high speed, distributed NFS filesystem |
 | **Quota**         | 1 TB for the whole `$GROUP_HOME` directory |
 | **Snapshots**     | yes *(cf. [Snapshots][url_snapshots]) for more info)* |
 | **Backups**       | off-site replication |
@@ -117,7 +117,7 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 
 | Characteristics   |   |
 | ----------------- | --- |
-| **Type**          | Parallel, high-performance Lustre file system |
+| **Type**          | Parallel, high-performance Lustre filesystem |
 | **Quota**         | 100 TB / 20,000,000 inodes[^inodes] |
 | **Snapshots**     | **NO** |
 | **Backups**       | **NO** |
@@ -128,7 +128,7 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 ### Recommended usage
 
 `$SCRATCH` is best suited for large files, such as raw job output, intermediate
-job files, unprocessed simulation results, and so on.  This is the recommended
+job files, unprocessed simulation results, and so on. This is the recommended
 location to run jobs from, and to store files that will be read or written to
 during job execution.
 
@@ -196,7 +196,7 @@ metadata, not the data, and as such, will not reset the purge countdown timer.
 
 Filesystem purges are a continuous process: they don't run at particular times,
 but are carried out in a permanent background fashion. Files are not
-necessarily deleted right away when they become eligible for deletion.  For
+necessarily deleted right away when they become eligible for deletion. For
 instance, if you create a file on February 1st and don't ever modify it
 afterwards, it will be automatically become eligible for deletion on May
 1st, and can be deleted anytime after this date.
@@ -209,7 +209,7 @@ be automatically cleaned up as well.
 
 ## `$GROUP_SCRATCH`
 
-`$SCRATCH` and `$GROUP_SCRATCH` are based on the same physical file system.
+`$SCRATCH` and `$GROUP_SCRATCH` are based on the same physical filesystem.
 
 !!! summary
 
@@ -225,7 +225,7 @@ be automatically cleaned up as well.
 
 | Characteristics   |     |
 | ----------------- | --- |
-| **Type**          | parallel, high-performance Lustre file system |
+| **Type**          | parallel, high-performance Lustre filesystem |
 | **Quota**         | 100 TB / 20,000,000 inodes[^inodes] |
 | **Snapshots**     | **NO** |
 | **Backups**       | **NO** |
@@ -236,7 +236,7 @@ be automatically cleaned up as well.
 ### Recommended usage
 
 `$GROUP_SCRATCH` is best suited for large files, such as raw job output,
-intermediate job files, unprocessed simulation results, and so on.  This is
+intermediate job files, unprocessed simulation results, and so on. This is
 the recommended location to run jobs from, and to store files that will be read
 or written to during job execution.
 
@@ -349,12 +349,12 @@ node until the last job from the user terminates.
 
 | Characteristics   |   |
 | ----------------- | --- |
-| **Type**          | parallel, capacitive Lustre filesystem |
+| **Type**          | parallel, high-capacity Lustre filesystem |
 | **Quota**         | amount purchased *(in 10 TB increments)* |
 | **Snapshots**     | **NO** |
-| **Backups**       | optional cloud backup available <br/>_please [contact us][url_contact] for details_ |
+| **Backups**       | optional cloud backup available <br/>*please [contact us][url_contact] for details* |
 | **Purge policy**  | not purged |
-| **Scope**         | all login and compute nodes <br/>_also available through gateways outside of Sherlock_ |
+| **Scope**         | all login and compute nodes <br/>*also available through gateways outside of Sherlock* |
 
 
 ### Recommended usage
@@ -414,7 +414,7 @@ See the [Checking Quotas][url_check_quotas] section for more details.
   permissions, etc.
 
 [^inodes]: An inode (index node) is a data structure in a Unix-style file
-  system that describes a file-system object such as a file or a directory.
+  system that describes a filesystem object such as a file or a directory.
 
 
 --8<--- "includes/_acronyms.md"

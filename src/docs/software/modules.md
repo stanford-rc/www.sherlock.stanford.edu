@@ -31,7 +31,7 @@ corresponding software module.
 When you load a module, the system will set or modify your user environment
 variables to enable access to the software package provided by that module. For
 instance, the `$PATH` environment variable might be updated so that appropriate
-executables for that package can be used.
+binaries for that package can be used.
 
 
 ## Module categories
@@ -121,7 +121,7 @@ properties are:
 * `S`: Module is sticky, requires `--force` to unload or purge
 * `L`: Indicate currently loaded module
 * `D`: Default module that will be loaded when multiple versions are available
-* `r`: Restricted access, typically software under license.  [Contact
+* `r`: Restricted access, typically software under license. [Contact
   us][url_contact] for details
 * `g`: GPU-accelerated software, will only run on GPU nodes
 * `m`: Software supports parallel execution using MPI

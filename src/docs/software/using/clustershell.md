@@ -8,9 +8,9 @@ tags:
 [ClusterShell][url_clush] is a command-line tool and library that helps running
 commands in parallel on multiple servers. It allows executing arbitrary
 commands across multiple hosts. On Sherlock, it provides an easy way to run
-commands on nodes your jobs are running on, and collect back information.  The
+commands on nodes your jobs are running on, and collect back information. The
 two most useful commands provided are `cluset`, which can manipulate lists of
-nodenames, and `clush`, which can run commands on multiple nodes at once.
+node names, and `clush`, which can run commands on multiple nodes at once.
 
 
 ### More documentation

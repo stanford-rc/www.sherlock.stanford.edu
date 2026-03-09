@@ -191,7 +191,7 @@ GPU 0: Tesla P100-SXM2-16GB (UUID: GPU-4f91f58f-f3ea-d414-d4ce-faf587c5c4d4)
 !!! warning "Unsatisfiable constraints"
 
     If you specify a constraint that can't be satisfied in the partition you're
-    submitting your job to, the job will be rejected by the scheduler.     For
+    submitting your job to, the job will be rejected by the scheduler. For
     instance, requesting a RTX3090 GPU in the `gpu` partition, which doesn't
     feature any, will result in an error:
 
@@ -308,7 +308,7 @@ documentation][url_slurm_srun].
 !!! warning "Conflicting options"
 
     Given the multitude of options, it's very easy to submit a job with
-    conflicting options.  In most cases the job will be rejected.
+    conflicting options. In most cases the job will be rejected.
 
     For instance:
     ``` none
@@ -333,8 +333,8 @@ $ ml load system nvtop
 
 
 `nvtop` provides an [`htop`][url_htop]-like interactive view of GPU
-utilization.  Users can monitor, estimate and fine tune their GPU resource
-requests with this tool.  Percent GPU and memory utilization is shown as a
+utilization. Users can monitor, estimate and fine tune their GPU resource
+requests with this tool. Percent GPU and memory utilization is shown as a
 user's GPU code is running.
 
 ![nvtop](images/nvtop.png)

@@ -23,7 +23,7 @@ provides the PI with much greater flexibility than owning a standalone cluster.
 
 !!! warning "Compute nodes are purchased for a duration of 4 years"
 
-    Compute nodes are purchased and maintained based on a 4-year lifecycle,
+    Compute nodes are purchased and maintained based on a 4-year life cycle,
     which is the duration of the equipment warranty and vendor support.
 
 Owners will be notified during the 4th year that their nodes' lifetime is about
@@ -96,7 +96,7 @@ below:
     bandwidth per core, which could be lower on higher core-count
     configurations like `CSCALE`. With multiple times more cores than `CBASE`,
     they still provide the same total amount of bandwidth to remote and local
-    storage, as well as, to a lesser extend, to memory.  Higher core-count CPUs
+    storage, as well as, to a lesser extend, to memory. Higher core-count CPUs
     also often offer lower core frequencies, which combined with less bandwidth
     per core, may result in lower performance for serial jobs.
 

@@ -82,7 +82,7 @@ definitions, presented in alphabetical order:
 coordinated functions, tasks, or activities for the benefit of the user. In the
 context of scientific computing, an application typically performs computations
 related to a scientific goal (molecular dynamics simulations, genome assembly,
-compuational fluid dynamics simulations, etc).
+computational fluid dynamics simulations, etc).
 
 ### Backfill
 
@@ -103,20 +103,21 @@ needs to be compiled by a compiler to produce the executable binary.
 
 : A resource scheduler ranks jobs by priority for execution. Each job's
 priority in queue is determined by multiple factors, among which
-one being the user's fairshare score.  A user's fairshare score is computed
+one being the user's fairshare score. A user's fairshare score is computed
 based on a target (the given portion of the resources that this user should be
-able to use) and the user's effetive usage, *ie* the amount of resources (s)he
-effectively used in the past.  As a result, the more resources past jobs have
-used, the lower the priority of the next jobs will be.  Past usage is computed
-based on a sliding window and progressively forgotten over time.  This enables
+able to use) and the user's effective usage, *ie* the amount of resources (s)he
+effectively used in the past. As a result, the more resources past jobs have
+used, the lower the priority of the next jobs will be. Past usage is computed
+based on a sliding window and progressively forgotten over time. This enables
 all users on a shared resource to get a fair portion of it for their own use,
-by giving higher priority to users who have been underserved in the past.
+by giving higher priority to users who used fewer resources than their
+target in the past.
 
 ### FLOPS
 
 : Floating-point Operations Per Second (FLOPS) are a measure of computing
 performance, and represent the number of floating-point operations that a CPU
-can perform each second. Modern CPUs and GPUs are capable of doing TeraFLOPS
+can perform each second. Modern CPUs and GPUs are capable of doing TFLOPs
 (10^12 floating-point operations per second), depending on the precision of
 those operations (half-precision: 16 bits, single-precision: 32 bits,
 double-precision: 64 bits).
@@ -124,7 +125,7 @@ double-precision: 64 bits).
 ### GPU
 
 : A Graphical Processing Unit (GPU) is a specialized device initially designed
-to generate graphical output.  On modern computing architecture, they are used
+to generate graphical output. On modern computing architecture, they are used
 to accelerate certain types of computation, which they are much faster than
 CPUs at. GPUs have their own memory, and are attached to CPUs, within a node.
 Each compute node can host one or more GPUs.
@@ -138,10 +139,10 @@ typical computer.
 ### Infiniband
 
 : Infiniband is a networking standard that features high bandwidth and low
-latency. The current Infiniband devices are capable of transferring data at up
-to 200 Gbits/sec with less than a microsecond latency. As of this writing, the
-popular Infiniband versions are HDR (High Data Rate) with 200 Gbits/sec and
-EDR (Enhanced Data Rate) with 100 Gbits/sec.
+latency. The current Infiniband devices are capable of transferring data with
+less than a microsecond latency. As of this writing, the
+popular Infiniband versions are EDR (Enhanced Data Rate, 100 Gbps), HDR (High
+Data Rate, 200 Gbps), and NDR (Next Data Rate, 400 Gbps).
 
 ### IOPS
 
@@ -151,8 +152,8 @@ system performance.
 
 ### Job
 
-: A job, or batch job, is the scheduler’s base unit of computing by which
-resources are allocated to a user for a specified amount of time. Users create
+: A job, or batch job, is the base unit of work the scheduler uses to allocate
+resources to a user for a specified amount of time. Users create
 job submission scripts to ask the scheduler for resources such as cores,
 memory, runtime, etc. The scheduler puts the requests in a queue and allocates
 requested resources based on jobs’ priority.
@@ -192,7 +193,7 @@ beyond a single compute node.
 ### OpenMP
 
 : Open Multi Processing (OpenMP) is a parallel programming model
-designed for shared memory architecture. It's based on pragmas that can be
+designed for shared memory architecture. It's based on directives that can be
 added in applications to let the compiler generate a code that
 can run on multiple cores, within the same node.
 
@@ -214,7 +215,7 @@ often referred to as a scheduler *queue*.
 
 ### Run time
 
-: The run time, or walltime, of a job is the time required to finish its
+: The run time, or wall-clock time, of a job is the time required to finish its
 execution.
 
 ### Scheduler
@@ -250,7 +251,7 @@ Threads are co-located on the same node.
 
 : In the Slurm context, a task is to be understood as a process. A
 multi-process program is made of several tasks. A task is typically used to
-schedule a MPI process, that in turn can use several CPUs.  By contrast, a
+schedule a MPI process, that in turn can use several CPUs. By contrast, a
 multi-threaded program is composed of only one task, which uses several CPUs.
 
 

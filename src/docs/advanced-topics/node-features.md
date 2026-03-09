@@ -117,7 +117,7 @@ ways, using logical operators.
 !!! danger "Many node feature combinations are impossible to satisfy"
 
     Many combinations will result in impossible conditions, and will make
-    jobs impossible to run on any node. The scheduler is usualyl able to detect
+    jobs impossible to run on any node. The scheduler is usually able to detect
     this and reject the job at submission time.
 
     For instance, submitting a job requesting an Intel CPU on the HDR IB
@@ -158,7 +158,7 @@ Only nodes with at least one of specified features will be eligible to run
 the job. The pipe sign (`|`) is used as the `OR` operator.
 
 In multi-node jobs, it means that nodes allocated to the job may end up having
-different features.  For example, the following options:
+different features. For example, the following options:
 
 ``` shell { .copy .select }
 #SBATCH -N 1
