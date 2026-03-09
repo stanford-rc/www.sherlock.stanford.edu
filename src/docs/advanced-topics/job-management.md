@@ -7,8 +7,16 @@ tags:
 ## Job submission limits
 
 Sherlock enforces limits on the number of jobs that can be in queue at any
-given time, to ensure fair access to resources for all users. When those limits
-are reached, job submissions will fail with errors like:
+given time, to ensure fair access to resources for all users.
+
+!!! tip "Checking current limits"
+
+    Run `sh_part` to see the current submission limits for each partition.
+
+### Queue limits
+
+When the per-user or per-group queue limit is reached, job submissions will
+fail with:
 
 ``` shell
 sbatch: error: MaxSubmitJobsPerAccount
@@ -18,10 +26,6 @@ sbatch: error: MaxSubmitJobsPerUser
 `MaxSubmitJobsPerUser` means the per-user limit has been reached;
 `MaxSubmitJobsPerAccount` means the limit for your group (Slurm account) has
 been reached, regardless of how many jobs you personally have in queue.
-
-!!! tip "Checking current limits"
-
-    Run `sh_part` to see the current submission limits for each partition.
 
 ### Wall-time limits
 
@@ -38,7 +42,8 @@ Jobs on the `normal` partition are limited to 2 days. To run longer, add the
     If you have access to an [owners][url_owners] partition, the maximum
     wall-clock time is 7 days and you do not need the `long` QOS.
 
-### Minimizing the number of jobs in queue
+
+## Minimizing the number of jobs in queue
 
 Reducing the number of jobs submitted to the scheduler is generally good
 practice. One effective approach is to pack more work into each job.
