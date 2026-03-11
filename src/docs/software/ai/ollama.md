@@ -1,6 +1,7 @@
 ---
 tags:
     - software
+    - AI
 ---
 
 ## Introduction
