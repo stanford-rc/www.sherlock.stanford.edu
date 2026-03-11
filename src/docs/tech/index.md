@@ -72,12 +72,12 @@ generations, with numerous contributions from many research groups on campus.
 
 
 <style>
-th:nth-child(2)  { min-width: 0 !important;
+th:nth-child(2)  { min-width: 0 !important; }
 </style>
 
-| Type  | Access | Nodes | CPU cores | Details |
-| ---   | :---:   | ---:  | ---:      | ---     |
 <!-- markdownlint-disable MD055 MD056 -->
+| Type  | Access | Nodes | CPU cores | Details |
+| ---   | :---:  | ---:  | ---:      | ---     |
 {%- set partitions = facts | selectattr("name", "==", "partitions") | first -%}
 {%- for part in partitions.fields %}
 | {{ part.desc }}<br/><small>**`{{ part.name }}`** partition</small>  | {{ part.access
