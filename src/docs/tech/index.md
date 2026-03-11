@@ -1,5 +1,4 @@
 ---
-icon: material/server-network
 tags: [tech]
 ---
 
@@ -76,6 +75,7 @@ th:nth-child(2)  { min-width: 0 !important; }
 </style>
 
 <!-- markdownlint-disable MD055 MD056 -->
+
 | Type  | Access | Nodes | CPU cores | Details |
 | ---   | :---:  | ---:  | ---:      | ---     |
 {%- set partitions = facts | selectattr("name", "==", "partitions") | first -%}
@@ -97,9 +97,9 @@ th:nth-child(2)  { min-width: 0 !important; }
     {%- endif -%}
 </small> |
 {%- endfor %}
-<!-- markdownlint-enable MD055 MD056 -->
 | **Total** | | **{{ get_value("hardware", "compute nodes") }} :octicons-server-24:** | **{{ get_value("computing", "CPU cores") }} :octicons-cpu-24:** | **{{ get_value("computing", "GPUs") }} :material-expansion-card:** |
 
+<!-- markdownlint-enable MD055 MD056 -->
 
 
 ### Storage

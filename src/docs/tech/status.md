@@ -1,4 +1,5 @@
 ---
+icon: material/pulse
 tags:
     - tech
 ---
