@@ -281,6 +281,17 @@ See the [Python page][url_python] for full details, including:
     the full rationale and alternatives.
 
 
+## Getting help with installations
+
+Build failures often come down to missing dependencies, incompatible flags, or
+environment issues that are tedious to debug by hand. [AI coding
+agents][url_coding_agents] available on Sherlock can help: point one at a
+build error or a failed `configure` run and ask it to diagnose the problem,
+suggest fixes, or adjust the build flags. They work directly in the terminal
+and can read log files, inspect the environment, and propose commands to try.
+This makes them a practical first step before opening a support ticket.
+
+
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_sw_list]:          list.md
@@ -302,6 +313,7 @@ See the [Python page][url_python] for full details, including:
 [url_venv]:             using/python.md#virtual-environments
 [url_uv]:               using/python.md#using-uv
 [url_anaconda]:         using/anaconda.md
+[url_coding_agents]:    ai/coding-agents.md
 
 
 --8<--- "includes/_acronyms.md"
