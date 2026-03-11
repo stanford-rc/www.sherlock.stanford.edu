@@ -15,7 +15,7 @@ The following datasets are currently available in `$COMMON_DATASETS`:
 | ------- | ---- | ----------- |
 | [AlphaFold 3][url_af3] | `$COMMON_DATASETS/alphafold3` | Genetic sequence and structural template databases for AlphaFold 3.<br><small>See our [AlphaFold documentation][url_af3_docs] for instructions on running it on Sherlock.</small> |
 | [NCBI BLAST databases][url_ncbi_blast] | `$COMMON_DATASETS/blast` | Sequence databases for use with NCBI BLAST and related tools.<br><small>[Copy the databases](#maintaining-local-copies) you need to `$SCRATCH`, then set `BLASTDB=$SCRATCH/blast` before running BLAST.</small> |
-| [Ollama models][url_ollama_lib] | `$COMMON_DATASETS/ollama` | Pre-downloaded LLM models for use with Ollama.<br><small>Automatically integrated with the `ollama` module — no manual setup needed. See our [Ollama documentation][url_ollama_docs] for more details.</small> |
+| [Ollama models][url_ollama_lib] | `$COMMON_DATASETS/ollama` | Pre-downloaded LLM models for use with Ollama.<br><small>Automatically integrated with the `ollama` module (no manual setup needed). See our [Ollama documentation][url_ollama_docs] for more details.</small> |
 
 To see the full and up-to-date list of available datasets, run:
 

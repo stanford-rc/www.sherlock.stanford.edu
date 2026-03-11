@@ -185,7 +185,7 @@ A comprehensive listing of allowable field strings is given in the manual page
 
 To see what permissions are set on a particular file, use the `nfs4_getfacl`
 command. For example, newly created `file1` may have default permissions listed
-by `ls -l` as `-rw-r—r—`. Listing the permissions with `nfs4_getfacl` would
+by `ls -l` as `-rw-r--r--`. Listing the permissions with `nfs4_getfacl` would
 display the following:
 
 ``` none

@@ -223,8 +223,8 @@ apptainer run \
     `/root/public_databases`). These `--bind` flags map your `$SCRATCH`
     directories to those internal paths. `--nv` passes through the host's NVIDIA
     drivers. The container executes AlphaFold 3 via its `%runscript` section
-    when invoked with `apptainer run` — no explicit command is needed after the
-    image filename.
+    when invoked with `apptainer run` (no explicit command is needed after the
+    image filename).
 
 !!! tip "8 CPUs is the sweet spot for the data pipeline"
 
