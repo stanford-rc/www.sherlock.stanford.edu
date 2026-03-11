@@ -281,6 +281,17 @@ See the [Python page][url_python] for full details, including:
     the full rationale and alternatives.
 
 
+## Containers
+
+For software that is difficult to compile, has complex system dependencies, or
+requires a specific OS environment, using a container image is often simpler
+than building from source. [Apptainer][url_apptainer] and [Enroot][url_enroot] are available on Sherlock
+and can run images from Docker Hub or other registries directly on compute
+nodes, without any installation step.
+
+See the [Containers page][url_containers] for details.
+
+
 ## Getting help with installations
 
 Build failures often come down to missing dependencies, incompatible flags, or
@@ -289,7 +300,7 @@ agents][url_coding_agents] available on Sherlock can help: point one at a
 build error or a failed `configure` run and ask it to diagnose the problem,
 suggest fixes, or adjust the build flags. They work directly in the terminal
 and can read log files, inspect the environment, and propose commands to try.
-This makes them a practical first step before opening a support ticket.
+This makes them a practical first step before [opening a support ticket][url_contact].
 
 
 [comment]: #  (link URLs -----------------------------------------------------)
@@ -314,6 +325,9 @@ This makes them a practical first step before opening a support ticket.
 [url_uv]:               using/python.md#using-uv
 [url_anaconda]:         using/anaconda.md
 [url_coding_agents]:    ai/coding-agents.md
+[url_containers]:       containers/index.md
+[url_apptainer]:        containers/apptainer.md
+[url_enroot]:           containers/enroot.md
 
 
 --8<--- "includes/_acronyms.md"
