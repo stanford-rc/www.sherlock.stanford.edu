@@ -97,7 +97,8 @@ Valley][url_sv] [Season 4 finale][url_ep38]!
 Yep, you got that right, [Richard Hendricks][url_richard] wanted to use our
 very own Sherlock!
 
-![compression_stars](images/compression_stars.png){ align=left style="height:160px; margin-top:0" } Kudos to the show's crew and a big thank
+![compression_stars](images/compression_stars.png){ align=left style="height:160px; margin-top:0" } <!-- markdownlint-disable-line MD013 -->
+Kudos to the show's crew and a big thank
 you to [HBO Data compression stars][url_ieee], Professor [Tsachy
 Weissman][url_tsachy] and Dmitri Pavlichin, for this incredible Sherlock
 shout-out. This has been an everlasting source of pride and amazement for the

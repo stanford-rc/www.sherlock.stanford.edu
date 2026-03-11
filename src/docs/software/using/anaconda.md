@@ -94,6 +94,7 @@ packages from it to use with a virtual environment:
 
 1. Open the `environment.yml` file and look for the `dependencies:` section.
    It will typically contain a mix of conda packages and a `pip:` subsection:
+
     ```yaml
     dependencies:
       - python=3.12
@@ -103,6 +104,7 @@ packages from it to use with a virtual environment:
       - pip:
         - somepackage==1.2  # <-- Python package, keep it
     ```
+
 2. Keep only the entries that are Python packages (i.e., packages you would
    normally find on [PyPI][url_pypi]), and discard system-level packages like
    `cudatoolkit`, `cudnn`, `mkl`, `openblas`, or compilers.
@@ -110,6 +112,7 @@ packages from it to use with a virtual environment:
    always Python packages.
 4. Use the resulting list to create a `requirements.txt` file, then install
    them in a [virtual environment][url_venv]:
+
     ```bash
     $ ml python/3.12.1
     $ python -m venv myenv

@@ -285,8 +285,9 @@ See the [Python page][url_python] for full details, including:
 
 For software that is difficult to compile, has complex system dependencies, or
 requires a specific OS environment, using a container image is often simpler
-than building from source. [Apptainer][url_apptainer] and [Enroot][url_enroot] are available on Sherlock
-and can run images from Docker Hub or other registries directly on compute
+than building from source. [Apptainer][url_apptainer] and [Enroot][url_enroot]
+are available on Sherlock and can run images from Docker Hub or other
+registries directly on compute
 nodes, without any installation step.
 
 See the [Containers page][url_containers] for details.

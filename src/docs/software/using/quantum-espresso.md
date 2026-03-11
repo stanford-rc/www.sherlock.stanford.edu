@@ -221,7 +221,7 @@ $ sbatch qe-bench_gpu_apptainer.sbatch
 
 [url_qe]:           //www.quantum-espresso.org
 [url_qe_docs]:      //www.quantum-espresso.org/documentation/
-[url_soft_qe]:      ../list/#quantum-espresso
+[url_soft_qe]:      ../list.md#quantum-espresso
 
 [url_ngc]:          //ngc.nvidia.com
 [url_ngc_qe]:       //ngc.nvidia.com/catalog/containers/hpc:quantum_espresso
