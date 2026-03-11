@@ -1,4 +1,5 @@
 ---
+icon: material/package
 tags:
     - software
 ---

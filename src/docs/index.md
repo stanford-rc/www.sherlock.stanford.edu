@@ -1,3 +1,7 @@
+---
+icon: material/home
+---
+
 # Sherlock <small>documentation</small>
 
 <!-- HTML interlude for the main page logo -->
