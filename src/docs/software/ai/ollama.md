@@ -1,4 +1,5 @@
 ---
+icon: simple/ollama
 tags:
     - software
     - AI

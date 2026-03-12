@@ -1,5 +1,4 @@
 ---
-icon: material/package-variant-closed
 title: Containers
 tags:
     - software

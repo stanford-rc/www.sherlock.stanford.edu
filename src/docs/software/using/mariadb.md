@@ -1,4 +1,5 @@
 ---
+icon: simple/mariadb
 tags:
     - software
 ---

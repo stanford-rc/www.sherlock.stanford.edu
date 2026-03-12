@@ -1,4 +1,5 @@
 ---
+icon: material/lan-connect
 tags:
     - connection
     - advanced

@@ -1,4 +1,5 @@
 ---
+icon: material/script-text-play-outline
 tags:
     - slurm
 ---

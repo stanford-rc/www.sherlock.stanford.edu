@@ -1,4 +1,5 @@
 ---
+icon: material/format-list-bulleted
 tags:
     - software
 ---

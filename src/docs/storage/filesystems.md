@@ -1,4 +1,5 @@
 ---
+icon: material/folder-multiple
 tags:
     - storage
 ---

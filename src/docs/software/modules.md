@@ -1,4 +1,5 @@
 ---
+icon: material/puzzle-outline
 tags:
     - software
 ---

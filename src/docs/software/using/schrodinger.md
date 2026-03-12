@@ -1,4 +1,5 @@
 ---
+icon: material/molecule
 tags:
     - software
 ---

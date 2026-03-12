@@ -1,8 +1,8 @@
 ---
+icon: material/server-outline
 tags:
   - slurm
   - advanced
-
 ---
 
 In heterogeneous environments, computing resources are often grouped together

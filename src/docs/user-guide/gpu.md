@@ -1,4 +1,5 @@
 ---
+icon: material/expansion-card
 tags:
     - gpu
 ---

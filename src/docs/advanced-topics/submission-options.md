@@ -1,4 +1,5 @@
 ---
+icon: material/format-list-text
 tags:
     - slurm
     - advanced

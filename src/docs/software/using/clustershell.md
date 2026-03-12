@@ -1,4 +1,5 @@
 ---
+icon: material/console
 tags:
     - software
 ---

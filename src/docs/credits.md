@@ -1,5 +1,4 @@
 ---
-icon: material/account-group
 tags:
     - overview
 ---

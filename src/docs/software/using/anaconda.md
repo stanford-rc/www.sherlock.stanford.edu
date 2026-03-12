@@ -1,4 +1,5 @@
 ---
+icon: simple/anaconda
 tags:
     - software
 ---

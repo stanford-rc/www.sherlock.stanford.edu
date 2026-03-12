@@ -1,4 +1,5 @@
 ---
+icon: material/cog-outline
 tags:
     - slurm
     - advanced

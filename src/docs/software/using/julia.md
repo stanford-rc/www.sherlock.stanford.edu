@@ -1,4 +1,5 @@
 ---
+icon: simple/julia
 tags:
     - software
 ---

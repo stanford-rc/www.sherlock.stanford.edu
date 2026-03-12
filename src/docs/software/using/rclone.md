@@ -1,4 +1,5 @@
 ---
+icon: simple/rclone
 tags:
     - software
 ---

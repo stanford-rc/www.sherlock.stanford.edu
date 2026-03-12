@@ -1,4 +1,5 @@
 ---
+icon: material/briefcase-check-outline
 tags:
     - slurm
     - advanced

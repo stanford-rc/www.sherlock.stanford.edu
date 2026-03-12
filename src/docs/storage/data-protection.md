@@ -1,4 +1,5 @@
 ---
+icon: material/shield-lock-outline
 tags:
     - storage
 ---

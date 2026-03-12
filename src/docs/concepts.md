@@ -1,4 +1,5 @@
 ---
+icon: material/lightbulb-outline
 tags:
     - overview
 ---

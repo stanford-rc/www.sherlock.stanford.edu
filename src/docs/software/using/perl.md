@@ -1,4 +1,5 @@
 ---
+icon: simple/perl
 tags:
     - software
 ---

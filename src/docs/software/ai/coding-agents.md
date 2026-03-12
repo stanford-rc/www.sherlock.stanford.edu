@@ -1,4 +1,5 @@
 ---
+icon: material/robot
 tags:
     - software
     - AI
@@ -84,7 +85,7 @@ $ export GEMINI_API_KEY=<your-api-key>
 ```
 
 
-### :brands-openai: Codex
+### :brands-openai: OpenAI Codex CLI
 
 [Codex][url_codex] is a CLI coding agent from OpenAI. It runs locally but
 sends code and prompts to the OpenAI API.
@@ -138,6 +139,25 @@ $ export MISTRAL_API_KEY=<your-api-key>
 ```
 
 
+### :brands-opencode: OpenCode
+
+[OpenCode][url_opencode] is an open-source terminal AI coding agent with a
+TUI interface. It supports a wide range of model providers (OpenAI, Anthropic,
+Gemini, Groq, and [many others][url_opencode_providers]), including local
+[Ollama][url_ollama] instances.
+
+``` none { .copy .select }
+$ ml opencode
+$ opencode
+```
+
+Providers and API keys are configured on first run via:
+
+``` none { .copy .select }
+$ opencode auth login
+```
+
+
 ### Crush
 
 [Crush][url_crush] is an open-source AI coding agent that supports multiple
@@ -176,6 +196,9 @@ including how to point it to a local Ollama endpoint.
 
 [url_mistral_vibe]:     //github.com/mistralai/mistral-vibe
 [url_mistral_api]:      //console.mistral.ai/
+
+[url_opencode]:           //github.com/sst/opencode
+[url_opencode_providers]: //opencode.ai/docs/providers/
 
 [url_crush]:            //github.com/charmbracelet/crush
 [url_crush_docs]:       //github.com/charmbracelet/crush#configuration

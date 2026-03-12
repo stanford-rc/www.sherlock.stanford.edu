@@ -1,4 +1,5 @@
 ---
+icon: material/server
 tags:
     - orders
 ---
