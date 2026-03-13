@@ -64,6 +64,48 @@ close any Sherlock account whose SUNet ID is expired.
 
 
 
+### Access duration
+
+Users retain access to Sherlock for as long as their [SUNet ID][url_sunet]
+remains active, or until their sponsoring PI requests account closure, whichever
+comes first. All account requests (new accounts, modifications, and closures)
+require PI approval.
+
+!!! tip "Graduating students and departing postdocs"
+
+    After graduation or the end of a postdoc appointment, SUNet IDs enter a
+    120-day grace period. After that, they transition to a
+    [base-level account][url_level] ([details][url_sunet_kb]), which is still sufficient for
+    Sherlock access, for up to 5 years. Sherlock access will end when the SUNet
+    ID becomes inactive.
+
+    If you need continued access after your SUNet ID expires (for example, to
+    finish up research), your PI can [sponsor a SUNet ID][url_sponsor] for you
+    at no cost.
+
+!!! warning "Plan ahead before leaving"
+
+    If you are leaving Stanford or moving to a different research group, make
+    sure to retrieve any data you need **before** your SUNet ID is deactivated
+    or your account is closed. Once an account is closed, self-service access
+    to your files is no longer possible.
+
+### Account closure
+
+When an account is closed:
+
+* `$HOME` is archived to `$SCRATCH`,
+* `$SCRATCH` is purged,
+* `$GROUP_HOME`, `$GROUP_SCRATCH`, and Oak are left unchanged.
+
+The `$HOME` archive is placed in `$SCRATCH` and subject to the standard
+[`$SCRATCH` purge policy][url_filesystems]: it will be deleted after 90 days
+unless the PI backs it up elsewhere beforehand. Data in group-shared locations
+(`$GROUP_HOME`, `$GROUP_SCRATCH`, and Oak) is not affected by individual account
+closures and remains accessible to the rest of the group.
+
+
+
 ## SSH clients
 
 
@@ -140,6 +182,7 @@ For an introduction to shell scripting, you can refer to:
 
 [url_sunet]:        //uit.stanford.edu/service/accounts/sunetids
 [url_level]:        //uit.stanford.edu/service/accounts/sunetids#services
+[url_sunet_kb]:     //stanford.service-now.com/student_services?id=kb_article&number=KB00011373
 [url_sponsor]:      //uit.stanford.edu/service/sponsorship/
 
 [url_openssh]:      //www.openssh.com/
@@ -149,6 +192,9 @@ For an introduction to shell scripting, you can refer to:
 [url_wsl_howto]:    //www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/
 [url_cygwin]:       //cygwin.com
 [url_ssh_clients]:  //en.wikipedia.org/wiki/Comparison_of_SSH_clients#Platform
+
+[url_src]:          //srcc.stanford.edu/
+[url_filesystems]:  ../storage/filesystems.md#scratch
 
 [url_request]:      #how-to-request-an-account
 [url_ssh]:          #ssh-clients
