@@ -8,7 +8,10 @@
 *[HPC]: High Performance Computing
 *[IB]: Infiniband
 *[I/O]: Input Output
+*[CI/CD]: Continuous Integration/Continuous Deployment
 *[IP]: Internet Protocol
+*[LLM]: Large Language Model
+*[MIG]: Multi-Instance GPU
 *[MPI]: Message Passing Interface
 *[NUMA]: Non-Uniform Memory Access
 *[OS]: Operating System
