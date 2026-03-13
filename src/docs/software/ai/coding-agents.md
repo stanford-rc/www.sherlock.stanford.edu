@@ -143,7 +143,7 @@ $ export MISTRAL_API_KEY=<your-api-key>
 
 [OpenCode][url_opencode] is an open-source terminal AI coding agent with a
 TUI interface. It supports a wide range of model providers (OpenAI, Anthropic,
-Gemini, Groq, and [many others][url_opencode_providers]), including local
+Gemini, and [many others][url_opencode_providers]), including local
 [Ollama][url_ollama] instances.
 
 ``` none { .copy .select }
