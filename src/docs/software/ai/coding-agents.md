@@ -173,6 +173,98 @@ See the [Crush documentation][url_crush_docs] for configuration details,
 including how to point it to a local Ollama endpoint.
 
 
+## Tips and tricks
+
+### Use agents in scripts
+
+Most agents support a non-interactive, single-prompt mode that works well in
+batch jobs or shell scripts. Pass your prompt directly on the command line
+instead of starting an interactive session:
+
+``` shell
+# Claude Code
+$ claude -p "review this Python script for numerical stability issues"
+
+# Gemini CLI
+$ gemini -p "suggest SLURM options to optimize this job for memory use"
+
+# Codex
+$ codex -q "refactor this MPI initialization code to handle edge cases"
+
+# Mistral Vibe
+$ vibe --prompt "explain what this CUDA kernel does and how to profile it"
+```
+
+This is particularly useful for automating repetitive tasks, such as
+post-processing job outputs or generating summaries of results. Most agents
+also accept input via `stdin`, so you can pipe data directly:
+
+``` shell
+$ cat slurm-${SLURM_JOB_ID}.out | claude -p "the simulation failed, explain the error and suggest a fix"
+$ cat results.csv | gemini -p "summarize the key trends in these simulation results"
+```
+
+### Resume sessions across SSH connections
+
+Since HPC work often spans multiple login sessions, it helps to be able to pick
+up where you left off. Claude Code saves session history automatically and lets
+you resume from the command line:
+
+``` { .shell .annotate }
+$ claude --continue          # (1)!
+$ claude --resume            # (2)!
+$ claude --resume my-session # (3)!
+```
+
+1. resume the most recent session
+2. open an interactive session picker
+3. resume a named session
+
+Name a session early with `/rename` so it's easy to find later. Sessions are
+stored per project directory, so they carry over across SSH connections as long
+as you work in the same directory.
+
+### Read before you write
+
+Before making any changes to an unfamiliar project, consider starting in a
+read-only or planning mode. Claude Code calls this Plan Mode, and can be
+started with:
+
+``` shell
+$ claude --permission-mode plan
+```
+
+In Plan Mode, Claude only reads files and asks questions, and makes no edits
+until you approve a plan. You can also switch into it during a session with
+**Shift+Tab**. This is a good habit when working on production code or shared
+group repositories.
+
+### Control output format for scripting
+
+When integrating an agent into an existing pipeline, check whether it supports
+structured output. Several agents have flags for this:
+
+``` shell
+# Claude Code: plain text response only
+$ claude -p "check this script for issues" --output-format text < my_script.sh
+
+# Claude Code: full JSON conversation log with cost and timing metadata
+$ claude -p "analyze this file" --output-format json < results.py
+
+# Gemini CLI
+$ gemini -p "check this script for issues" --output-format json < my_script.sh
+
+# Mistral Vibe
+$ vibe --prompt "check this script for issues" --output json < my_script.sh
+
+# Codex
+$ codex -q --json "check this script for issues" < my_script.sh
+```
+
+This makes it straightforward to capture and process the agent's output in
+a shell script or downstream tool.
+
+
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_modules]:          ../modules.md
