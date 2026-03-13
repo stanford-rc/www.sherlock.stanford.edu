@@ -28,7 +28,8 @@ traditional way, via a SSH terminal connection.
 
 [Open OnDemand][url_ood] was created by the [Ohio Supercomputer
 Center][url_osc].
-[![ood](images/ood_logo.png)][url_ood]{: .fl_right :}
+[![ood](images/ood_logo.svg#only-light)][url_ood]{: .fl_right :}
+[![ood](images/ood_logo_dark.svg#only-dark)][url_ood]{: .fl_right :}
 
 
 The following documentation is specifically intended for using OnDemand on

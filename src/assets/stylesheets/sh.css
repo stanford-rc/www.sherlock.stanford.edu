@@ -23,7 +23,27 @@
   --md-accent-fg-color--transparent:   #b1040e0a;
   /* https://github.com/squidfunk/mkdocs-material/issues/4755 */
   --md-typeset-a-color: var(--md-primary-fg-color--light);
+}
 
+/* hide dark-only images in the sherlock (light) scheme, mirroring Material's default scheme rule */
+[data-md-color-scheme="sherlock"] img[src$="#only-dark"] { display: none; }
+
+[data-md-color-scheme="slate"] {
+  /* checkmark columns in tables */
+  .chk_yes { color: #81c784; }
+  .chk_no  { color: #e57373; }
+
+  /* software list tags */
+  .sw_mpi  { color: #90caf9; }
+  .sw_gpu  { color: #81c784; }
+  .sw_lic  { color: #e57373; }
+  .sw_def  { color: #9e9e9e; }
+
+  /* sherlock admonition background — near-invisible at 0x10 opacity on slate */
+  .md-typeset .sherlock > .admonition-title,
+  .md-typeset .sherlock > summary {
+    background-color: #8c151525;
+  }
 }
 
 /* announce bar */

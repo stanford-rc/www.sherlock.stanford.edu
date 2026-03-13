@@ -41,7 +41,8 @@ The setup takes three steps, done once per session:
 
 After that, Zed's AI features work as if Ollama were running locally.
 
-![Zed assistant panel connected to Ollama on Sherlock](images/zed-ollama-sherlock.png)
+![Zed assistant panel connected to Ollama on Sherlock](images/zed-ollama-sherlock.png#only-light)
+![Zed assistant panel connected to Ollama on Sherlock](images/zed-ollama-sherlock_dark.png#only-dark)
 
 !!! info "Zed is available on macOS, Linux and Windows"
 
