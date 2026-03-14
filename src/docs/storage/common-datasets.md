@@ -54,7 +54,7 @@ $ srun dsync $COMMON_DATASETS/alphafold3 $SCRATCH/alphafold3
 [url_dsync]:            //mpifileutils.readthedocs.io/en/0.12-rtd/dsync.1.html
 
 [url_af3_docs]:         ../software/using/alphafold.md
-[url_ollama_docs]:      ../software/ai/ollama.md
+[url_ollama_docs]:      ../software/using/ollama.md
 [url_sh_rsync]:         data-transfer.md#rsync
 
 
