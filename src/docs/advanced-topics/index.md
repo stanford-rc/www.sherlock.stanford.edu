@@ -35,6 +35,15 @@ understanding of the underlying system.
 
     [:octicons-arrow-right-24: Job submission options](submission-options.md)
 
+- :material-calendar-clock: **[Scheduling](scheduling.md)**
+
+    ---
+
+    How Slurm decides when and where to run your jobs: the backfill algorithm,
+    job distribution across nodes, and practical tips for reducing wait times.
+
+    [:octicons-arrow-right-24: Scheduling](scheduling.md)
+
 </div>
 
 

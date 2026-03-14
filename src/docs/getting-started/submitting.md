@@ -53,9 +53,11 @@ the resources you need, you’ll be able to get your work done.
     resources your job requests (CPUs, GPUs, memory, nodes, and time), the
     longer it may have to wait in queue before it could start.
 
-    In other words:
-    accurately requesting resources to match your job's needs will minimize
-    your wait times.
+    In other words: accurately requesting resources to match your job's needs
+    will minimize your wait times.
+
+    See [Scheduling on Sherlock][url_scheduling] for a more detailed
+    explanation of how the scheduler prioritizes and places jobs.
 
 
 ## How to submit a job
@@ -182,8 +184,9 @@ there are many other options and areas to explore in the next sections:
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_slurm]:  //slurm.schedmd.com
-[url_top500]: //top500.org
+[url_slurm]:      //slurm.schedmd.com
+[url_top500]:     //top500.org
+[url_scheduling]: ../advanced-topics/scheduling.md
 
 [url_texteditors]:    index.md#text-editors
 [url_transfer]:       ../storage/data-transfer.md
