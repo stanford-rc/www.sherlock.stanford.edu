@@ -65,7 +65,7 @@ a large job may have to wait until enough nodes are free at the same time.
 [comment]: # (link URLs --------------------------------------------------------)
 
 [url_backfill]:   //slurm.schedmd.com/sched_config.html#backfill
-[url_job_arrays]: submission-options.md#job-arrays
+[url_job_arrays]: //slurm.schedmd.com/job_array.html
 
 
 --8<--- "includes/_acronyms.md"
