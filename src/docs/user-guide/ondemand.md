@@ -444,6 +444,33 @@ To start a VS Code session via Sherlock OnDemand:
 
 ![ood_code-server](images/ood_code-server.png)
 
+### AI coding assistant in code-server
+
+You can use the [Continue][url_continue] extension to connect code-server to
+an [Ollama][url_ollama] server running on a Sherlock GPU node, giving you an
+AI coding assistant without sending your code to external services.
+
+After installing Continue in code-server, the Continue icon will appear in the
+left-hand panel (or via ++ctrl+l++). Before it can be used, the extension needs
+to be [configured][url_continue_config] to point at the Ollama server.
+
+The Continue configuration file does not support environment variable
+interpolation, so the easiest approach is to set up SSH local port forwarding
+first (see [Connecting to the server][url_ollama_connect] on the Ollama page),
+then point Continue at `localhost`:
+
+``` yaml { .copy .select }
+models:
+  - name: Autodetect
+    apiBase: http://localhost:11434
+    provider: ollama
+    model: AUTODETECT
+```
+
+After that, in the Continue panel, you can start chatting with the model. More
+details are available in the [Ollama documentation][url_ollama_continue].
+
+
 ## Common Issues
 
 ### No Space Left on Device
@@ -565,6 +592,11 @@ To submit a ticket about your current or recent interactive session:
 [url_running_jobs]: running-jobs.md
 [url_connect]:      ../getting-started/connecting.md
 [url_r_packages]:   ../software/using/R.md#r-packages
+[url_ollama]:           ../software/using/ollama.md
+[url_ollama_connect]:   ../software/using/ollama.md#connecting-to-the-server
+[url_ollama_continue]:  //ollama.com/blog/continue-code-assistant
+[url_continue]:         //continue.dev/
+[url_continue_config]:  //docs.continue.dev/guides/ollama-guide#how-to-configure-ollama-with-continue
 
 [comment]: #  (footnotes -----------------------------------------------------)
 
