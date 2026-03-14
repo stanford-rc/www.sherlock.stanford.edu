@@ -15,8 +15,8 @@ for nightly builds, integration tests, and automated checks that do not require
 sub-minute response times.
 
 The runner contacts your CI server, picks up pending jobs, executes them, and
-exits. Scheduling is handled by Slurm's [`scrontab`][url_scrontab] rather than
-a long-running daemon.
+exits. Scheduling is handled by [`scrontab`][url_scrontab] rather than a
+long-running daemon.
 
 
 ## GitLab CI
@@ -63,7 +63,7 @@ Set the time limit long enough to cover your typical pipeline duration. If
 your pipeline runs GPU tests, add `--gpus 1` and switch to the `gpu`
 partition.
 
-### Automating with scrontab
+### Automating with `scrontab`
 
 To submit the runner automatically on a schedule, use
 [`scrontab`][url_scrontab_doc]:
@@ -91,7 +91,7 @@ GitHub Actions self-hosted runners are not available as a Sherlock module.
 The runner binary is tied to a specific repository or organization and must
 be downloaded directly from GitHub. The setup is done once.
 
-### Setting up the runner
+### Setting up the GitHub Actions runner
 
 Create a directory for the runner, then download and extract the binary from
 the [GitHub Actions runner releases page][url_gh_runner_releases]. Choose the
@@ -116,7 +116,7 @@ $ ./config.sh --url https://github.com/<owner>/<repo> \
 The registration is saved in the runner directory and persists across jobs.
 You only need a new token if you explicitly remove and re-register the runner.
 
-### Running as a batch job
+### Running the GitHub Actions runner as a batch job
 
 `./run.sh` starts a service that picks up pending workflow jobs and keeps
 running until the Slurm time limit is reached:
@@ -136,7 +136,7 @@ cd ~/actions-runner
 Set the time limit long enough to cover your typical workflow duration. The
 runner will process all queued jobs during that window.
 
-### Automating with scrontab
+### Automating the GitHub Actions runner with `scrontab`
 
 ``` none
 $ scrontab -e

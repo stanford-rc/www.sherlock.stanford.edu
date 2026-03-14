@@ -10,8 +10,9 @@ tags:
 [Ollama][url_ollama] provides a streamlined way to start using Large Language
 Models (LLMs). It allows users to easily swap and retrain popular models such
 as Llama, Gemma, Qwen, and Mistral on their local systems, enhancing the
-security of research data. Sherlock provides an Ollama module that handles the environment setup, and
-many popular models are cached on Sherlock so they can be pulled quickly
+security of research data. Sherlock provides an Ollama module that handles
+the environment setup, and many popular models are cached on Sherlock so they
+can be pulled quickly
 without downloading from the internet. Alternatively, users can
 pull and retrain models themselves for greater flexibility.
 
@@ -26,7 +27,7 @@ pull and retrain models themselves for greater flexibility.
       can run long agentic sessions, process large codebases, or repeat queries
       freely without watching a usage meter or hitting a cap mid-task
     - GPU allocations on Sherlock are free to use, and large open-source models
-      (32B+) that would be expensive to access through commercial APIs are
+      (32B+) that would be expensive to access through commercial API services are
       available at no cost
 
 ### More documentation
