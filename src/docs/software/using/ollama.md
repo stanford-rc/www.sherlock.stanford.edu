@@ -10,9 +10,24 @@ tags:
 [Ollama][url_ollama] provides a streamlined way to start using Large Language
 Models (LLMs). It allows users to easily swap and retrain popular models such
 as Llama, Gemma, Qwen, and Mistral on their local systems, enhancing the
-security of research data. For convenience, Sherlock provides a module that
-includes many of these models for seamless loading. Alternatively, users can
+security of research data. Sherlock provides an Ollama module that handles the environment setup, and
+many popular models are cached on Sherlock so they can be pulled quickly
+without downloading from the internet. Alternatively, users can
 pull and retrain models themselves for greater flexibility.
+
+!!! tip "Why run your own LLM on Sherlock?"
+
+    Running your own LLM instance on Sherlock GPU nodes has several advantages
+    over cloud-based AI services:
+
+    - your code, data, and prompts never leave Stanford's infrastructure, which
+      matters when working with unpublished results or sensitive research data
+    - there is no per-token cost, no subscription, and no rate limits, so you
+      can run long agentic sessions, process large codebases, or repeat queries
+      freely without watching a usage meter or hitting a cap mid-task
+    - GPU allocations on Sherlock are free to use, and large open-source models
+      (32B+) that would be expensive to access through commercial APIs are
+      available at no cost
 
 ### More documentation
 
@@ -42,8 +57,8 @@ Sherlock prompt, or refer to the [Software list page][url_software_list].
 Although not strictly required, Ollama runs best on GPUs, so you will likely
 need to request a GPU to support inference.
 
-For starters and basic testing, you can get a quick allocation on a lightweight
-GPU instance with:
+For starters and basic testing, you can get a quick allocation on a
+[lightweight GPU instance][url_gpu_instant] with:
 
 ``` none
 $ sh_dev -g 1
@@ -163,6 +178,9 @@ while (echo > /dev/tcp/localhost/$OLLAMA_PORT) &>/dev/null; do
     OLLAMA_PORT=$(( ( RANDOM % 60000 )  + 1024 ))
 done
 
+# Save endpoint to a known location for easy access from other sessions
+echo "$SLURM_NODELIST:$OLLAMA_PORT" > ~/.ollama_server
+
 # Start the Ollama server
 echo "-----------------------------------------------------------------"
 echo "Starting Ollama server on host $SLURM_NODELIST, port $OLLAMA_PORT"
@@ -196,19 +214,29 @@ use OLLAMA_HOST=sh03-16n12:18137 to connect
 
 ### Connecting to the server
 
-On another compute node (e.g. from another job or an interactive session), you
-can connect to the server using the `OLLAMA_HOST` environment variable,
-indicated by the output of the "ollama_server" server job.
+Once the job is running, the server endpoint is available in `~/.ollama_server`.
+Open a new terminal and export it:
 
-Open a new terminal, request an interactive session or connect to another job
-on Sherlock, and run:
+``` shell
+$ export OLLAMA_HOST=$(cat ~/.ollama_server)
+```
 
-``` none
+You can then use it directly with the Ollama CLI:
+
+``` shell
 $ ml ollama
-$ OLLAMA_HOST=sh03-16n12:18137 ollama run mistral:7b
+$ ollama run qwen2.5-coder:7b
 > In one word, what is the capital of France?
 Paris.
 > exit
+```
+
+Or set up SSH local port forwarding so the server is reachable at the standard
+`localhost:11434` endpoint (useful for tools that do not support environment
+variable interpolation in their configuration):
+
+``` shell
+$ ssh -NfL 11434:localhost:${OLLAMA_HOST#*:} ${OLLAMA_HOST%:*}
 ```
 
 
@@ -219,43 +247,55 @@ Paris.
     from multiple clients, as long as they can access the compute nodes
     (potentially through a SSH tunnel).
 
-
-#### Use your own coding assistant in `code-server`
-
-You can also use the Ollama server as a coding assistant in `code-server`, the
-[VS Code interactive application][url_code-server] available on Sherlock.
-
-In the IDE, you can install the [Continue][url_continue] extension, to connect
-to your local Ollama server.
-
-After installation, the Continue icon should be visible in the left-hand side
-panel, or via the ++ctrl+l++ key-binding. Before it could be used, the
-extension needs to be [configured][url_continue_config] to use the Ollama
-server.
-
-
-Here's an example configuration snippet, assuming the Ollama server is running
-on `sh03-16n12:18137`:
-
-``` yaml { .copy .select }
-models:
-  - name: Autodetect
-    apiBase: http://sh03-16n12:18137
-    provider: ollama
-    model: AUTODETECT
-```
-
-After that, in the Continue panel, you can start chatting with the model.
-
-More details and examples are also available in the [Ollama
-documentation][url_ollama_continue].
+    Ollama can be used as a local LLM provider in several contexts on Sherlock:
+    [AI coding agents][url_coding_agents], the [Zed editor][url_ai_ide], and
+    the [code-server AI assistant][url_code-server-ai].
 
 
 
 ## Advanced usage
 
-You can do things like customize a model with Ollama. Refer to ["Customize a
+### Customizing models
+
+You can customize a model with Ollama. Refer to ["Customize a
 model"][url_ollama_customize] in their documentation for instructions.
+
+### Increasing context window size { #num-ctx }
+
+Ollama caps the context window at 4k tokens for GPUs with less than 24GB of
+GPU memory, regardless of the model's native context size. Most coding agent
+workflows need much more than that (some agents, such as Claude Code, require
+64k tokens or more). Many modern models (including `qwen2.5-coder`, `llama3.1`,
+and `mistral-nemo`) have native support for up to 128k tokens, but Ollama will
+not use that capacity unless you explicitly configure it.
+
+The recommended way is to create a custom model via a Modelfile:
+
+``` none { .copy .select }
+FROM qwen2.5-coder:7b
+PARAMETER num_ctx 65536
+```
+
+Save that as `Modelfile`, then build and use the custom model:
+
+``` none { .copy .select }
+$ ollama create qwen2.5-coder-64k -f Modelfile
+$ ollama run qwen2.5-coder-64k
+```
+
+The custom model will appear in `ollama list` and can be referenced by name in
+any agent configuration. For more details, see the [Ollama Modelfile
+documentation][url_ollama_modelfile].
+
+Alternatively, you can set `OLLAMA_CONTEXT_LENGTH` when starting the server to
+apply a context size globally to all models:
+
+``` none { .copy .select }
+OLLAMA_CONTEXT_LENGTH=65536 ollama serve
+```
+
+This is convenient when running Ollama as a batch job, since the value can be
+set directly in the job script alongside `OLLAMA_HOST`.
 
 
 
@@ -265,10 +305,13 @@ model"][url_ollama_customize] in their documentation for instructions.
 [url_ollama_docs]:          //docs.ollama.com/
 [url_ollama_library]:       //ollama.com/library
 [url_ollama_customize]:     //github.com/ollama/ollama#customize-a-model
-[url_ollama_continue]:      //ollama.com/blog/continue-code-assistant
+[url_ollama_modelfile]:     //github.com/ollama/ollama/blob/main/docs/modelfile.md
 [url_continue]:             //continue.dev/
-[url_continue_config]:      //docs.continue.dev/guides/ollama-guide#how-to-configure-ollama-with-continue
 
+[url_gpu_instant]:          ../../user-guide/gpu.md#instant-lightweight-gpu-instances
 [url_software_list]:        ../list.md
 [url_modules]:              ../modules.md
 [url_code-server]:          ../../user-guide/ondemand.md#vs-code
+[url_code-server-ai]:       ../../user-guide/ondemand.md#ai-coding-assistant-in-code-server
+[url_coding_agents]:        ../ai/coding-agents.md#using-a-local-ollama-instance
+[url_ai_ide]:               ../ai/ai-ide.md
