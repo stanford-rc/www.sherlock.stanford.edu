@@ -173,6 +173,141 @@ See the [Crush documentation][url_crush_docs] for configuration details,
 including how to point it to a local Ollama endpoint.
 
 
+## Using a local Ollama instance
+
+Running a coding agent against a local [Ollama][url_ollama] instance on a GPU
+compute node is a privacy-friendly alternative to cloud API services: your code
+and prompts never leave Sherlock. See the [Ollama page][url_ollama] for
+instructions on starting an Ollama server as a batch job. The job script writes
+the current endpoint to `~/.ollama_server`. Read it once before launching any
+agent:
+
+``` shell
+$ export OLLAMA_HOST=$(cat ~/.ollama_server)
+$ export OLLAMA_BASE_URL=http://$OLLAMA_HOST/v1
+```
+
+For tools that do not support environment variable interpolation in their
+configuration files (such as Codex), SSH local port forwarding gives a static
+`localhost:11434` endpoint that never changes:
+
+``` shell
+$ ssh -NfL 11434:localhost:${OLLAMA_HOST#*:} ${OLLAMA_HOST%:*}
+```
+
+### Configuring OpenCode
+
+OpenCode can be configured with an `opencode.json` file in your project
+directory (or at `~/.config/opencode/config.json` for a global default).
+The `{env:VAR}` syntax substitutes environment variables at startup:
+
+``` json { .copy .select title="opencode.json" }
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (local)",
+      "options": {
+        "baseURL": "{env:OLLAMA_BASE_URL}"
+      },
+      "models": {
+        "qwen2.5-coder:7b": {
+          "name": "Qwen 2.5 Coder 7B"
+        }
+      }
+    }
+  }
+}
+```
+
+Replace the model ID and name with whichever model you have pulled in Ollama
+(see `ollama list`). Then select the provider on first run with:
+
+``` none
+$ opencode auth login
+```
+
+### Configuring Crush
+
+Crush reads its configuration from `~/.config/crush/crush.json`. It supports
+standard shell `$VAR` substitution in configuration values, including `base_url`:
+
+``` json { .copy .select title="~/.config/crush/crush.json" }
+{
+  "$schema": "https://charm.land/crush.json",
+  "providers": {
+    "ollama": {
+      "id": "ollama",
+      "name": "Local Ollama",
+      "base_url": "$OLLAMA_BASE_URL",
+      "type": "openai",
+      "api_key": "ollama",
+      "models": [
+        {
+          "id": "qwen2.5-coder:7b",
+          "name": "Qwen 2.5 Coder 7B"
+        }
+      ]
+    }
+  }
+}
+```
+
+The `api_key` field is required by the configuration format but not checked by
+Ollama, so any non-empty string works.
+
+### Other agents
+
+Codex does not support environment variable interpolation in its configuration file,
+so the cleanest approach is to use SSH local port forwarding (see above) and
+keep a static `localhost:11434` endpoint in `~/.codex/config.json`:
+
+``` json { .copy .select title="~/.codex/config.json" }
+{
+  "provider": "ollama",
+  "providers": {
+    "ollama": {
+      "name": "Ollama",
+      "baseURL": "http://localhost:11434/v1",
+      "envKey": "OLLAMA_API_KEY"
+    }
+  }
+}
+```
+
+The `envKey` field tells Codex which environment variable to read the API key
+from. Ollama does not check it, but the variable must be set and non-empty:
+
+``` shell
+$ export OLLAMA_API_KEY=ollama
+```
+
+Claude Code uses the Ollama Anthropic-compatible endpoint, which does not have
+the `/v1` suffix. Derive it from `OLLAMA_BASE_URL`:
+
+``` { .shell .annotate }
+$ ANTHROPIC_BASE_URL=http://$OLLAMA_HOST \
+  ANTHROPIC_AUTH_TOKEN=ollama \              # (1)!
+  ANTHROPIC_API_KEY="" \                     # (2)!
+  claude --model <model-name>
+```
+
+1. Ollama accepts any non-empty token value here.
+2. Overrides any real `ANTHROPIC_API_KEY` already set in your environment,
+   so Claude Code does not attempt to reach the Anthropic API.
+
+!!! tip "Context window size"
+
+    Claude Code requires a large context window (64k tokens or more). Ollama
+    defaults to 2k, so you will likely need to increase `num_ctx` before use.
+    See [Increasing context window size][url_ollama_num_ctx] on the Ollama page
+    for instructions.
+
+Gemini CLI and Mistral Vibe are tied to their respective cloud API services
+and do not support local model endpoints.
+
+
 ## Tips and tricks
 
 ### Use agents in scripts
@@ -269,7 +404,8 @@ a shell script or downstream tool.
 
 [url_modules]:          ../modules.md
 [url_sw_list]:          ../list.md
-[url_ollama]:           ollama.md
+[url_ollama]:           ../using/ollama.md
+[url_ollama_num_ctx]:   ../using/ollama.md#num-ctx
 
 [url_claude_code]:      //github.com/anthropics/claude-code
 [url_claude_code_docs]: //docs.anthropic.com/en/docs/claude-code
