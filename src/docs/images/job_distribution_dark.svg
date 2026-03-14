@@ -1,92 +1,122 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 335" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 315" font-family="sans-serif">
 
   <!-- Background and chart area -->
-  <rect width="490" height="335" fill="#1e1e2e"/>
-  <rect x="60" y="40" width="420" height="270" fill="#252535"/>
+  <!-- Chart: x=65–515 (450px = 9×50), y=40–280 (240px = 6×40) -->
+  <rect width="540" height="315" fill="#1e1e2e"/>
+  <rect x="65" y="40" width="450" height="240" fill="#252535"/>
 
   <!-- Free area fills -->
-  <rect x="271" y="41" width="68"  height="88"  fill="#2e2e42"/>
-  <rect x="131" y="221" width="278" height="28"  fill="#2e2e42"/>
+  <rect x="65"  y="160" width="150" height="40"  fill="#2e2e42"/>  <!-- Node 4, t=0–3 -->
+  <rect x="365" y="80"  width="50"  height="160" fill="#2e2e42"/>  <!-- Nodes 2–5, t=6–7 -->
 
   <!-- Title -->
-  <text x="245" y="20" text-anchor="middle" font-size="13" font-weight="bold" fill="#d0d0e8">Job distribution across nodes</text>
+  <text x="290" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#d0d0e8">Job distribution across nodes</text>
 
-  <!-- Node labels -->
-  <text x="95"  y="33" text-anchor="middle" font-size="11" fill="#9090b0">Node 1</text>
-  <text x="165" y="33" text-anchor="middle" font-size="11" fill="#9090b0">Node 2</text>
-  <text x="235" y="33" text-anchor="middle" font-size="11" fill="#9090b0">Node 3</text>
-  <text x="305" y="33" text-anchor="middle" font-size="11" fill="#9090b0">Node 4</text>
-  <text x="375" y="33" text-anchor="middle" font-size="11" fill="#9090b0">Node 5</text>
-  <text x="445" y="33" text-anchor="middle" font-size="11" fill="#9090b0">Node 6</text>
+  <!-- Vertical grid lines (time, every unit, x = 65 + t×50) -->
+  <line x1="65"  y1="40" x2="65"  y2="280" stroke="#404060" stroke-width="1"/>
+  <line x1="115" y1="40" x2="115" y2="280" stroke="#383858" stroke-width="1"/>
+  <line x1="165" y1="40" x2="165" y2="280" stroke="#383858" stroke-width="1"/>
+  <line x1="215" y1="40" x2="215" y2="280" stroke="#404060" stroke-width="1"/>
+  <line x1="265" y1="40" x2="265" y2="280" stroke="#383858" stroke-width="1"/>
+  <line x1="315" y1="40" x2="315" y2="280" stroke="#383858" stroke-width="1"/>
+  <line x1="365" y1="40" x2="365" y2="280" stroke="#404060" stroke-width="1"/>
+  <line x1="415" y1="40" x2="415" y2="280" stroke="#404060" stroke-width="1"/>
+  <line x1="465" y1="40" x2="465" y2="280" stroke="#383858" stroke-width="1"/>
+  <line x1="515" y1="40" x2="515" y2="280" stroke="#404060" stroke-width="1"/>
 
-  <!-- Vertical grid lines -->
-  <line x1="60"  y1="40" x2="60"  y2="310" stroke="#404060" stroke-width="1"/>
-  <line x1="130" y1="40" x2="130" y2="310" stroke="#404060" stroke-width="1"/>
-  <line x1="200" y1="40" x2="200" y2="310" stroke="#404060" stroke-width="1"/>
-  <line x1="270" y1="40" x2="270" y2="310" stroke="#404060" stroke-width="1"/>
-  <line x1="340" y1="40" x2="340" y2="310" stroke="#404060" stroke-width="1"/>
-  <line x1="410" y1="40" x2="410" y2="310" stroke="#404060" stroke-width="1"/>
-  <line x1="480" y1="40" x2="480" y2="310" stroke="#404060" stroke-width="1"/>
-
-  <!-- Horizontal grid lines -->
-  <line x1="60" y1="40"  x2="480" y2="40"  stroke="#404060" stroke-width="1"/>
-  <line x1="60" y1="130" x2="480" y2="130" stroke="#383858" stroke-width="1"/>
-  <line x1="60" y1="220" x2="480" y2="220" stroke="#383858" stroke-width="1"/>
-  <line x1="60" y1="250" x2="480" y2="250" stroke="#383858" stroke-width="1"/>
-  <line x1="60" y1="310" x2="480" y2="310" stroke="#404060" stroke-width="1"/>
+  <!-- Horizontal grid lines (nodes, every row, y = 40 + n×40) -->
+  <line x1="65" y1="40"  x2="515" y2="40"  stroke="#404060" stroke-width="1"/>
+  <line x1="65" y1="80"  x2="515" y2="80"  stroke="#383858" stroke-width="1"/>
+  <line x1="65" y1="120" x2="515" y2="120" stroke="#383858" stroke-width="1"/>
+  <line x1="65" y1="160" x2="515" y2="160" stroke="#383858" stroke-width="1"/>
+  <line x1="65" y1="200" x2="515" y2="200" stroke="#383858" stroke-width="1"/>
+  <line x1="65" y1="240" x2="515" y2="240" stroke="#383858" stroke-width="1"/>
+  <line x1="65" y1="280" x2="515" y2="280" stroke="#404060" stroke-width="1"/>
 
   <!-- ── Jobs ── -->
 
   <!-- Job A: nodes 1–3, t=0–3 -->
-  <rect x="61" y="41" width="208" height="88" rx="3" fill="#3d6fa8"/>
-  <text x="165" y="82" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">Job A</text>
-  <text x="165" y="96" text-anchor="middle" font-size="9"  fill="rgba(255,255,255,0.8)">3 nodes × 3 time units</text>
+  <rect x="66" y="41" width="148" height="118" rx="3" fill="#3d6fa8"/>
+  <text x="140" y="97"  text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">Job A</text>
+  <text x="140" y="111" text-anchor="middle" font-size="9"  fill="rgba(255,255,255,0.8)">3 nodes × 3 time units</text>
 
   <!-- Job B: nodes 5–6, t=0–3 -->
-  <rect x="341" y="41" width="138" height="88" rx="3" fill="#2e8a48"/>
-  <text x="410" y="82" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">Job B</text>
-  <text x="410" y="96" text-anchor="middle" font-size="9"  fill="rgba(255,255,255,0.8)">2 nodes × 3 units</text>
+  <rect x="66" y="201" width="148" height="78" rx="3" fill="#2e8a48"/>
+  <text x="140" y="237" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">Job B</text>
+  <text x="140" y="251" text-anchor="middle" font-size="9"  fill="rgba(255,255,255,0.8)">2 nodes × 3 units</text>
 
   <!-- Job C: node 1, t=3–7 -->
-  <rect x="61" y="131" width="68" height="118" rx="3" fill="#c06828"/>
-  <text x="95" y="193" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="bold">C</text>
+  <rect x="216" y="41" width="198" height="38" rx="3" fill="#c06828"/>
+  <text x="315" y="64" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="bold">Job C</text>
 
   <!-- Job D: nodes 2–5, t=3–6 -->
-  <rect x="131" y="131" width="278" height="88" rx="3" fill="#7c3fa0"/>
-  <text x="270" y="172" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">Job D</text>
-  <text x="270" y="186" text-anchor="middle" font-size="9"  fill="rgba(255,255,255,0.8)">4 nodes × 3 time units</text>
+  <rect x="216" y="81" width="148" height="158" rx="3" fill="#7c3fa0"/>
+  <text x="290" y="157" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">Job D</text>
+  <text x="290" y="171" text-anchor="middle" font-size="9"  fill="rgba(255,255,255,0.8)">4 nodes × 3 time units</text>
 
   <!-- Job E: node 6, t=3–7 -->
-  <rect x="411" y="131" width="68" height="118" rx="3" fill="#128070"/>
-  <text x="445" y="193" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="bold">E</text>
+  <rect x="216" y="241" width="198" height="38" rx="3" fill="#128070"/>
+  <text x="315" y="264" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="bold">Job E</text>
 
   <!-- Job F: all 6 nodes, t=7–9 -->
-  <rect x="61" y="251" width="418" height="58" rx="3" fill="#2a3550"/>
-  <text x="270" y="282" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">Job F</text>
-  <text x="270" y="296" text-anchor="middle" font-size="9"  fill="rgba(255,255,255,0.8)">6 nodes × 2 time units</text>
+  <rect x="416" y="41" width="98" height="238" rx="3" fill="#2a3550"/>
+  <text x="465" y="157" text-anchor="middle" font-size="12" fill="#ffffff" font-weight="bold">Job F</text>
+  <text x="465" y="171" text-anchor="middle" font-size="9"  fill="rgba(255,255,255,0.8)">6 nodes × 2 units</text>
 
   <!-- Free area labels -->
-  <text x="305" y="83"  text-anchor="middle" font-size="10" fill="#6060a0" font-style="italic">free</text>
-  <text x="270" y="238" text-anchor="middle" font-size="10" fill="#6060a0" font-style="italic">free</text>
+  <text x="140" y="184" text-anchor="middle" font-size="10" fill="#6060a0" font-style="italic">free</text>
+  <text x="390" y="163" text-anchor="middle" font-size="10" fill="#6060a0" font-style="italic">free</text>
+
+  <!-- Node axis -->
+  <line x1="65" y1="40" x2="65" y2="280" stroke="#7070a0" stroke-width="1.5"/>
+
+  <!-- Node ticks (at row midpoints, x=60–65) -->
+  <line x1="60" y1="60"  x2="65" y2="60"  stroke="#7070a0" stroke-width="1.5"/>
+  <line x1="60" y1="100" x2="65" y2="100" stroke="#7070a0" stroke-width="1.5"/>
+  <line x1="60" y1="140" x2="65" y2="140" stroke="#7070a0" stroke-width="1.5"/>
+  <line x1="60" y1="180" x2="65" y2="180" stroke="#7070a0" stroke-width="1.5"/>
+  <line x1="60" y1="220" x2="65" y2="220" stroke="#7070a0" stroke-width="1.5"/>
+  <line x1="60" y1="260" x2="65" y2="260" stroke="#7070a0" stroke-width="1.5"/>
+
+  <!-- Node labels -->
+  <text x="57" y="64"  text-anchor="end" font-size="10" fill="#9090b0">Node 1</text>
+  <text x="57" y="104" text-anchor="end" font-size="10" fill="#9090b0">Node 2</text>
+  <text x="57" y="144" text-anchor="end" font-size="10" fill="#9090b0">Node 3</text>
+  <text x="57" y="184" text-anchor="end" font-size="10" fill="#9090b0">Node 4</text>
+  <text x="57" y="224" text-anchor="end" font-size="10" fill="#9090b0">Node 5</text>
+  <text x="57" y="264" text-anchor="end" font-size="10" fill="#9090b0">Node 6</text>
+
+  <!-- "Nodes" axis label (rotated) -->
+  <text x="12" y="160" text-anchor="middle" font-size="11" fill="#9090b0" transform="rotate(-90,12,160)">Nodes</text>
 
   <!-- Time axis -->
-  <line x1="58" y1="40" x2="58" y2="310" stroke="#7070a0" stroke-width="1.5"/>
+  <line x1="65" y1="280" x2="515" y2="280" stroke="#7070a0" stroke-width="1.5"/>
 
-  <!-- Time ticks -->
-  <line x1="52" y1="40"  x2="58" y2="40"  stroke="#7070a0" stroke-width="1.5"/>
-  <line x1="52" y1="130" x2="58" y2="130" stroke="#7070a0" stroke-width="1.5"/>
-  <line x1="52" y1="220" x2="58" y2="220" stroke="#7070a0" stroke-width="1.5"/>
-  <line x1="52" y1="250" x2="58" y2="250" stroke="#7070a0" stroke-width="1.5"/>
-  <line x1="52" y1="310" x2="58" y2="310" stroke="#7070a0" stroke-width="1.5"/>
+  <!-- Time ticks (every unit, y=280–285) -->
+  <line x1="65"  y1="280" x2="65"  y2="285" stroke="#7070a0" stroke-width="1.5"/>
+  <line x1="115" y1="280" x2="115" y2="285" stroke="#7070a0" stroke-width="1.5"/>
+  <line x1="165" y1="280" x2="165" y2="285" stroke="#7070a0" stroke-width="1.5"/>
+  <line x1="215" y1="280" x2="215" y2="285" stroke="#7070a0" stroke-width="1.5"/>
+  <line x1="265" y1="280" x2="265" y2="285" stroke="#7070a0" stroke-width="1.5"/>
+  <line x1="315" y1="280" x2="315" y2="285" stroke="#7070a0" stroke-width="1.5"/>
+  <line x1="365" y1="280" x2="365" y2="285" stroke="#7070a0" stroke-width="1.5"/>
+  <line x1="415" y1="280" x2="415" y2="285" stroke="#7070a0" stroke-width="1.5"/>
+  <line x1="465" y1="280" x2="465" y2="285" stroke="#7070a0" stroke-width="1.5"/>
+  <line x1="515" y1="280" x2="515" y2="285" stroke="#7070a0" stroke-width="1.5"/>
 
   <!-- Time labels -->
-  <text x="47" y="44"  text-anchor="end" font-size="10" fill="#9090b0">0</text>
-  <text x="47" y="134" text-anchor="end" font-size="10" fill="#9090b0">3</text>
-  <text x="47" y="224" text-anchor="end" font-size="10" fill="#9090b0">6</text>
-  <text x="47" y="254" text-anchor="end" font-size="10" fill="#9090b0">7</text>
-  <text x="47" y="314" text-anchor="end" font-size="10" fill="#9090b0">9</text>
+  <text x="65"  y="296" text-anchor="middle" font-size="10" fill="#9090b0">0</text>
+  <text x="115" y="296" text-anchor="middle" font-size="10" fill="#9090b0">1</text>
+  <text x="165" y="296" text-anchor="middle" font-size="10" fill="#9090b0">2</text>
+  <text x="215" y="296" text-anchor="middle" font-size="10" fill="#9090b0">3</text>
+  <text x="265" y="296" text-anchor="middle" font-size="10" fill="#9090b0">4</text>
+  <text x="315" y="296" text-anchor="middle" font-size="10" fill="#9090b0">5</text>
+  <text x="365" y="296" text-anchor="middle" font-size="10" fill="#9090b0">6</text>
+  <text x="415" y="296" text-anchor="middle" font-size="10" fill="#9090b0">7</text>
+  <text x="465" y="296" text-anchor="middle" font-size="10" fill="#9090b0">8</text>
+  <text x="515" y="296" text-anchor="middle" font-size="10" fill="#9090b0">9</text>
 
-  <!-- "Time" axis label (rotated) -->
-  <text x="12" y="175" text-anchor="middle" font-size="11" fill="#9090b0" transform="rotate(-90,12,175)">Time</text>
+  <!-- "Time" axis label -->
+  <text x="290" y="312" text-anchor="middle" font-size="11" fill="#9090b0">Time</text>
 
 </svg>
