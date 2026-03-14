@@ -1,0 +1,21 @@
+{% if config.extra.social %}
+<div class="md-social">
+  {% set ns = namespace(institutional_started=false) %}
+  {% for social in config.extra.social %}
+    {% if social.institutional and not ns.institutional_started %}
+      {% set ns.institutional_started = true %}
+      <div class="md-social__institutional">
+    {% endif %}
+    <a
+      href="{{ social.link }}"
+      target="_blank"
+      rel="noopener"
+      title="{{ social.name | d(social.link, true) }}"
+      class="md-social__link"
+    >
+      {% include ".icons/" ~ social.icon ~ ".svg" %}
+    </a>
+  {% endfor %}
+  {% if ns.institutional_started %}</div>{% endif %}
+</div>
+{% endif %}
