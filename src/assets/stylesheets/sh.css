@@ -74,6 +74,15 @@
     color: var(--md-footer-fg-color--lighter);
 }
 
+/* Sherlock news and status links */
+.md-social .md-social__sherlock {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid var(--md-footer-fg-color--lighter);
+    margin-left: 0.2rem;
+    padding-left: 0.4rem;
+}
+
 /* Stanford institutional social links */
 .md-social .md-social__institutional {
     display: flex;
@@ -157,4 +166,11 @@
 }
 .rotate {
   animation: rotation 2s infinite linear;
+}
+
+/* blend Grafana iframe background with the page background in dark mode:
+   lighten picks the max of each channel, so Grafana's darker bg is replaced
+   by the page bg while brighter graph content is left unchanged */
+[data-md-color-scheme="slate"] .grafana-panel {
+  mix-blend-mode: lighten;
 }
