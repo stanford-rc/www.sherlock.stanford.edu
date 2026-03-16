@@ -52,6 +52,42 @@ time limit is much more likely to slip into a gap and start immediately, while
 a large job may have to wait until enough nodes are free at the same time.
 
 
+## Job priority and fairshare
+
+When a job is pending with the reason `Priority`, it means the scheduler has
+identified higher-priority jobs that need to start first before resources can
+be allocated to yours. This is the most common pending reason on a shared
+cluster.
+
+Job priority is determined by several factors, including job age, requested
+resources, partition, and **fairshare score**. The fairshare score accounts
+for each user's past resource consumption: the more CPU and GPU hours you have
+used recently, the lower your next jobs' priority will be. This effect decays
+over time, so past usage is progressively forgotten and your priority recovers
+as your recent consumption normalizes relative to other users.
+
+Pending times also depend on overall cluster load and can grow substantially
+during busy periods, regardless of your individual fairshare score. There is
+no fixed upper bound on how long a job may wait.
+
+!!! tip "Reducing wait time with accurate resource requests"
+
+    A job that requests fewer nodes, less memory, or a shorter time limit has
+    a higher chance of fitting into a gap between larger reservations via backfill
+    (see [Backfill scheduling](#backfill-scheduling) above). If your pending
+    times are long, review your resource requests and make sure they reflect
+    your job's actual needs rather than a conservative overestimate -- in
+    particular, an accurate time limit makes a significant difference.
+
+!!! info "Dedicated resources for persistent queue pressure"
+
+    If pending times consistently hinder your ability to get work done,
+    Stanford Research Computing offers faculty members the option to purchase
+    dedicated compute nodes on Sherlock. Owners get guaranteed priority access
+    to their nodes, and those nodes contribute to the shared pool when idle.
+    See [Investing in Sherlock][url_invest] for details.
+
+
 ## Implications for your jobs
 
 - Request only the nodes and time your job actually needs. Overestimating the
@@ -66,6 +102,7 @@ a large job may have to wait until enough nodes are free at the same time.
 
 [url_backfill]:   //slurm.schedmd.com/sched_config.html#backfill
 [url_job_arrays]: //slurm.schedmd.com/job_array.html
+[url_invest]:     ../concepts.md#investing-in-sherlock
 
 
 --8<--- "includes/_acronyms.md"
