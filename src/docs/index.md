@@ -115,6 +115,62 @@ performed on Sherlock acknowledge this. The following wording is suggested:
     that contributed to these research results.
 
 
+## Facilities statement
+
+{% set _c = facts | selectattr("name", "equalto", "computing") | first %}
+{% set _h = facts | selectattr("name", "equalto", "hardware") | first %}
+{% set _s = facts | selectattr("name", "equalto", "storage") | first %}
+{% set _u = facts | selectattr("name", "equalto", "users") | first %}
+{% set _nodes   = _h.fields | selectattr("name", "equalto", "compute nodes") | first %}
+{% set _cores   = _c.fields | selectattr("name", "equalto", "CPU cores") | first %}
+{% set _gpus    = _c.fields | selectattr("name", "equalto", "GPUs") | first %}
+{% set _pflops  = _c.fields | selectattr("name", "equalto", "PFLOPs (FP64)") | first %}
+{% set _scratch = _s.fields | selectattr("name", "equalto", "`$SCRATCH`") | first %}
+{% set _oak     = _s.fields | selectattr("name", "equalto", "`$OAK`") | first %}
+{% set _users   = _u.fields | selectattr("name", "equalto", "user accounts") | first %}
+{% set _groups  = _u.fields | selectattr("name", "equalto", "PI groups") | first %}
+
+For grant proposals that require a description of computational resources, the
+following statement can be included:
+
+!!! cite "Facilities statement"
+
+    Sherlock is a shared High-Performance Computing (HPC) cluster operated by
+    [Stanford Research Computing][url_srcc] and available to all Stanford
+    University researchers at no cost. The system currently comprises
+    approximately
+    **{{ "{:,}".format(_nodes.value | round(-2) | int) }} compute nodes**
+    providing **{{ "{:,}".format(_cores.value | round(-3) | int) }} CPU cores**
+    and **{{ "{:,}".format(_gpus.value | round(-2) | int) }} GPUs**, with a
+    peak performance of approximately
+    **{{ _pflops.value | round(0) | int }} petaFLOPs** (FP64).
+    High-performance parallel scratch storage
+    (**{{ _scratch.value | round(-6) | filesizeformat }}**) and long-term
+    research data storage (**{{ _oak.value | round(-6) | filesizeformat }}**)
+    are connected through a low-latency InfiniBand fabric.
+
+    Sherlock serves a community of over
+    **{{ "{:,}".format(_users.value | round(-2) | int) }} researchers** from
+    approximately
+    **{{ "{:,}".format(_groups.value | round(-2) | int) }} research groups**
+    across all of Stanford's seven Schools, using the Slurm workload manager.
+
+    The cluster is housed in the
+    [Stanford Research Computing Facility][url_srcf] (SRCF), a dedicated
+    research data center located on SLAC's land, providing UPS and
+    generator-protected power, energy-efficient cooling, and redundant network
+    connectivity including 100 Gbps external links. The facility is operated
+    around the clock by Stanford Research Computing's team of HPC specialists.
+
+    Access to Sherlock is provided free of charge to all Stanford researchers.
+    Faculty members may also invest in additional dedicated computing resources
+    through Sherlock's condominium model: participating faculty contribute nodes
+    to the cluster and receive guaranteed priority access to the resources they
+    purchased, as well as burst capacity beyond their contribution when those
+    resources are idle. System administration and operational support are
+    provided at no additional cost by Stanford Research Computing.
+
+
 ## Support
 
 ### Email <small>(recommended)</small>
@@ -278,6 +334,7 @@ Here's what it looks like in motion:
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_srcc]:          //srcc.stanford.edu
+[url_srcf]:          //srcc.stanford.edu/facilities
 [url_news]:          //news.sherlock.stanford.edu
 [url_status]:        //status.sherlock.stanford.edu
 [url_srcc_support]:  //srcc.stanford.edu/support
