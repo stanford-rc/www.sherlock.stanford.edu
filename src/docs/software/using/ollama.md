@@ -26,7 +26,7 @@ pull and retrain models themselves for greater flexibility.
     - there is no per-token cost, no subscription, and no rate limits, so you
       can run long agentic sessions, process large codebases, or repeat queries
       freely without watching a usage meter or hitting a cap mid-task
-    - GPU allocations on Sherlock are free to use, and large open-source models
+    - GPU allocations on Sherlock are free to use, and large open models
       (32B+) that would be expensive to access through commercial API services are
       available at no cost
 
