@@ -117,6 +117,7 @@ performed on Sherlock acknowledge this. The following wording is suggested:
 
 ## Facilities statement
 
+<!-- markdownlint-disable MD013 MD037 -->
 {% set _c = facts | selectattr("name", "equalto", "computing") | first %}
 {% set _h = facts | selectattr("name", "equalto", "hardware") | first %}
 {% set _s = facts | selectattr("name", "equalto", "storage") | first %}
@@ -129,6 +130,7 @@ performed on Sherlock acknowledge this. The following wording is suggested:
 {% set _oak     = _s.fields | selectattr("name", "equalto", "`$OAK`") | first %}
 {% set _users   = _u.fields | selectattr("name", "equalto", "user accounts") | first %}
 {% set _groups  = _u.fields | selectattr("name", "equalto", "PI groups") | first %}
+<!-- markdownlint-enable MD013 MD037 -->
 
 For grant proposals that require a description of computational resources, the
 following statement can be included:
@@ -143,7 +145,7 @@ following statement can be included:
     providing **{{ "{:,}".format(_cores.value | round(-3) | int) }} CPU cores**
     and **{{ "{:,}".format(_gpus.value | round(-2) | int) }} GPUs**, with a
     peak performance of approximately
-    **{{ _pflops.value | round(0) | int }} petaFLOPs** (FP64).
+    **{{ _pflops.value | round(0) | int }} PFLOPs** (FP64).
     High-performance parallel scratch storage
     (**{{ _scratch.value | round(-6) | filesizeformat }}**) and long-term
     research data storage (**{{ _oak.value | round(-6) | filesizeformat }}**)
@@ -157,7 +159,7 @@ following statement can be included:
 
     The cluster is housed in the
     [Stanford Research Computing Facility][url_srcf] (SRCF), a dedicated
-    research data center located on SLAC's land, providing UPS and
+    research data center co-located with SLAC, providing UPS and
     generator-protected power, energy-efficient cooling, and redundant network
     connectivity including 100 Gbps external links. The facility is operated
     around the clock by Stanford Research Computing's team of HPC specialists.
@@ -179,7 +181,7 @@ Research Computing support can be reached by sending an email to
 {{ support_email }} and **mentioning Sherlock**.
 
 
-!!! important "How to submit effective support requests"
+!!! tip "How to submit effective support requests"
 
     To ensure a timely and relevant response, please make sure to include some
     additional details, such as job ids, commands executed and error messages
