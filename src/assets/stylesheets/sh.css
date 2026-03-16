@@ -28,6 +28,10 @@
 /* hide dark-only images in the sherlock (light) scheme, mirroring Material's default scheme rule */
 [data-md-color-scheme="sherlock"] img[src$="#only-dark"] { display: none; }
 
+/* invert dark favicons so they're visible in dark mode */
+[data-md-color-scheme="slate"] img[src*="github.com/favicon"],
+[data-md-color-scheme="slate"] img[src*="mkdocs.org"] { filter: invert(1); }
+
 [data-md-color-scheme="slate"] {
   /* checkmark columns in tables */
   .chk_yes { color: #81c784; }
