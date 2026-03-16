@@ -168,9 +168,10 @@
   animation: rotation 2s infinite linear;
 }
 
-/* blend Grafana iframe background with the page background in dark mode:
-   lighten picks the max of each channel, so Grafana's darker bg is replaced
-   by the page bg while brighter graph content is left unchanged */
-[data-md-color-scheme="slate"] .grafana-panel {
+/* blend dark-mode content backgrounds with the page background:
+   lighten picks the max of each channel, so darker backgrounds are replaced
+   by the page bg while brighter content is left unchanged */
+[data-md-color-scheme="slate"] .grafana-panel,
+[data-md-color-scheme="slate"] img[src$="#only-dark"] {
   mix-blend-mode: lighten;
 }
