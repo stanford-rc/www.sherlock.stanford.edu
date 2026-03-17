@@ -340,7 +340,7 @@ $ globus transfer --recursive \
 !!! Warning "No shell"
 
     The DTNs don't provide any interactive shell, so connecting via SSH
-    directly won't work. It will only accept `scp`, `sftp`, `rsync` or `bbcp`
+    directly won't work. It will only accept `scp`, `sftp`, `rsync`, or `bbcp`
     connections.
 
 A pool of dedicated Data Transfer Nodes is available on Sherlock, to provide
