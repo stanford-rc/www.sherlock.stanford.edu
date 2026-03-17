@@ -1,0 +1,27 @@
+# lychee link checker configuration
+
+# base URL for resolving protocol-relative (//example.com) and root-relative (/path) URLs
+base_url = "https://www.sherlock.stanford.edu"
+
+# only check external http/https links
+scheme = ["https", "http"]
+
+# exclude patterns
+exclude = [
+  "\\{\\{",                    # template variables ({{ ... }})
+  "mailto:",                   # email links
+  "localhost",                 # local URLs
+  "127\\.0\\.0\\.1",           # loopback
+  "sherlock\\.stanford\\.edu", # internal links (checked by mkdocs build --strict)
+  "\\.md(#|$)",                # relative .md links (internal, resolved by mkdocs)
+]
+
+# accept these status codes as valid
+# 206: partial content, 303: redirect, 403: bot-blocking (mathworks, mysql, openai, etc.), 429: rate limited
+accept = [200, 206, 303, 403, 429]
+
+# timeout in seconds
+timeout = 30
+
+# max number of retries
+max_retries = 3
