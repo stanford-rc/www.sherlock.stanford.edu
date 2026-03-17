@@ -1,4 +1,5 @@
 # Sherlock on the web
+> [!NOTE]
 > This repository contains the source files for the Sherlock website and
 > documentation at https://www.sherlock.stanford.edu
 
