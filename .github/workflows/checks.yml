@@ -31,7 +31,7 @@ jobs:
         run: mkdocs build --strict
 
 
-  yamllint: # ----------------------------------------------------------------
+  yaml_lint: # ----------------------------------------------------------------
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
@@ -51,7 +51,7 @@ jobs:
           config_file: .github/workflows/config/yamllint.yml
 
 
-  mdlint: # ----------------------------------------------------------------
+  md_lint: # ----------------------------------------------------------------
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
@@ -69,7 +69,7 @@ jobs:
           config_file: .github/workflows/config/markdownlint.yml
 
 
-  spellcheck: # ----------------------------------------------------------------
+  spell_check: # ----------------------------------------------------------------
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
@@ -87,7 +87,7 @@ jobs:
           task_name: markdown
 
 
-  linkcheck: # ----------------------------------------------------------------
+  link_check: # ----------------------------------------------------------------
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
