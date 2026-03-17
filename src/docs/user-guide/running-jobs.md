@@ -301,6 +301,46 @@ example, the job can be canceled with the [`scancel`][url_scancel] command.
 After your job completes you can assess and fine-tune your resource requests
 (time, CPU/GPU, memory) with the [`sacct`][url_sacct] or `seff` commands.
 
+#### Long-running jobs
+
+Jobs in the `normal` partition are limited to 2 days by default, but can run
+up to 7 days with the `long` QOS[^long_qos]. To use it, add `--qos=long` and
+set `--time` accordingly:
+
+``` shell { title="long_job.sbatch" .copy .select }
+#!/bin/bash
+#SBATCH --job-name=long_job
+#SBATCH --time=7-00:00:00    (1)
+#SBATCH --qos=long           (2)
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=16GB
+
+srun ./my_application
+```
+
+1. Time limit in `days-HH:MM:SS` format; up to 7 days with `--qos=long`.
+2. Required to exceed the default 2-day limit in the `normal` partition.
+
+!!! warning "The `long` QOS is for non-owner users only"
+
+    If you are part of a PI group that has [invested in Sherlock][url_invest],
+    you can already run jobs for up to 7 days in your group's partition, without
+    needing the `long` QOS. The `long` QOS in `normal` is specifically intended
+    for users who do not have access to an owner partition.
+
+#### Command-line options
+
+`sbatch` options can also be passed directly on the command line instead of (or
+in addition to) `#SBATCH` directives in the script:
+
+``` none
+$ sbatch --job-name=quick_test --time=1:00:00 --mem=4GB my_script.sh
+```
+
+Any `#SBATCH` directives inside `my_script.sh` are merged with the
+command-line options, with command-line options taking precedence in case of
+conflicts.
+
 
 ### Estimating resources
 
@@ -476,6 +516,52 @@ Here are the main public partitions available to everyone on Sherlock:
 
 
 
+## Owner partitions
+
+Research groups that have [invested in Sherlock][url_invest] get access to a
+dedicated partition named after their PI SUNet ID. Jobs in owner partitions can
+run for up to 7 days without any special QOS, and owners get immediate access
+to their nodes with no wait time in queue.
+
+### The `owners` partition
+
+All members of owner groups also have access to the shared `owners` partition,
+which spans the nodes contributed by all PI groups. This makes a much larger
+pool of resources available, at the cost of potential **preemption**: when a
+node's purchasing group needs their resources back, any jobs from other owner
+groups running on that node are preempted (i.e. killed and requeued) to make
+room. Jobs that are preempted are automatically requeued and will restart when
+resources are available again, so it is important to make sure your jobs can
+handle being interrupted and restarted (e.g. by checkpointing regularly).
+
+!!! tip
+
+    The `owners` partition is a good choice when you need to scale out and can
+    tolerate occasional restarts. Use your group's dedicated partition when you
+    need guaranteed, uninterrupted access to resources.
+
+### High-priority QOS
+
+Within an owner partition, all jobs share the same priority by default. If you
+need to push a specific job ahead of others already in queue (for instance to
+meet a deadline, or to distinguish foreground work from background jobs), you
+can use the `high_p` QOS:
+
+``` shell { .copy .select }
+#SBATCH --partition=<PI_partition>
+#SBATCH --qos=high_p
+```
+
+Jobs submitted with `--qos=high_p` get a priority boost over other pending
+jobs in the same partition, so they will start sooner when resources become
+available.
+
+!!! info
+
+    The `high_p` QOS is only available in owner partitions. It has no effect
+    in public partitions like `normal` or `gpu`.
+
+
 ## Service jobs
 
 For lightweight, recurring, or persistent tasks (data transfers, backups,
@@ -497,6 +583,7 @@ including examples of recurring and persistent job scripts.
 
 [url_sbatch_opts]:  ../advanced-topics/submission-options.md
 [url_service_jobs]: ../advanced-topics/service-jobs.md
+[url_invest]:       ../concepts.md#investing-in-sherlock
 
 [anc_modules]:      ../software/modules.md
 [anc_partition]:    ../glossary.md#partition

@@ -28,6 +28,10 @@
 /* hide dark-only images in the sherlock (light) scheme, mirroring Material's default scheme rule */
 [data-md-color-scheme="sherlock"] img[src$="#only-dark"] { display: none; }
 
+/* invert dark favicons so they're visible in dark mode */
+[data-md-color-scheme="slate"] img[src*="github.com/favicon"],
+[data-md-color-scheme="slate"] img[src*="mkdocs.org"] { filter: invert(1); }
+
 [data-md-color-scheme="slate"] {
   /* checkmark columns in tables */
   .chk_yes { color: #81c784; }
@@ -72,6 +76,15 @@
 /* cookie consent link */
 .md-footer-meta.md-typeset .consent {
     color: var(--md-footer-fg-color--lighter);
+}
+
+/* Sherlock news and status links */
+.md-social .md-social__sherlock {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid var(--md-footer-fg-color--lighter);
+    margin-left: 0.2rem;
+    padding-left: 0.4rem;
 }
 
 /* Stanford institutional social links */
@@ -157,4 +170,12 @@
 }
 .rotate {
   animation: rotation 2s infinite linear;
+}
+
+/* blend dark-mode content backgrounds with the page background:
+   lighten picks the max of each channel, so darker backgrounds are replaced
+   by the page bg while brighter content is left unchanged */
+[data-md-color-scheme="slate"] .grafana-panel,
+[data-md-color-scheme="slate"] img[src$="#only-dark"] {
+  mix-blend-mode: lighten;
 }

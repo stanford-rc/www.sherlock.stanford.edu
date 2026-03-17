@@ -265,12 +265,6 @@ If you can't make any of the Office Hours sessions, you can also make an
   are constantly being monitored by our team. You can be sure that when
   Sherlock has an issue, we are aware of it and working on it.
 
-### Report accessibility issues
-
-Stanford is committed to providing an accessible digital environment. If you
-experience accessibility barriers on this site, please visit
-[Digital Accessibility at Stanford][url_accessibility].
-
 
 ## User community
 

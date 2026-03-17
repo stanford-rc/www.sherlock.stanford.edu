@@ -14,7 +14,7 @@ on:
 
 jobs:
 
-  build_check:  # -- limited build check (no Insiders) -----------------------
+  build_check:  # ------------------------------------------------------------
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
@@ -87,7 +87,21 @@ jobs:
           task_name: markdown
 
 
-#  linkcheck: # -------------------------------------------------------------
-#    runs-on: ubuntu-20.04
-#    steps:
-#      - uses: actions/checkout@v6
+  linkcheck: # ----------------------------------------------------------------
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v6
+      - name: list changed markdown files
+        id: changedfiles
+        uses: tj-actions/changed-files@v47
+        with:
+          files: '**.md'
+      - name: check links in changed files
+        uses: lycheeverse/lychee-action@v2
+        if: steps.changedfiles.outputs.any_changed == 'true'
+        with:
+          args: >-
+            --config .github/workflows/config/lychee.toml
+            ${{ steps.changedfiles.outputs.all_changed_files }}
+          fail: true

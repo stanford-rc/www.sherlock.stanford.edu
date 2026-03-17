@@ -50,14 +50,38 @@ dashboard][url_status].
 
 ## Current usage
 
-<iframe title="CPUs in use" style="float:left;"
-  src="https://srcc-lookout.stanford.edu/public/d-solo/000000006/sherlock-public-graphs?orgId=1&refresh=5m&theme=light&panelId=3"
+<iframe class="grafana-panel" title="CPUs in use" style="float:left;"
+  data-src="https://srcc-lookout.stanford.edu/public/d-solo/000000006/sherlock-public-graphs?orgId=1&refresh=5m&panelId=3"
   width="28%" height="200px" frameborder="0">
 </iframe>
-<iframe title="CPU usage" style="float:right;"
-  src="https://srcc-lookout.stanford.edu/public/d-solo/000000006/sherlock-public-graphs?orgId=1&refresh=5m&theme=light&panelId=11"
+<iframe class="grafana-panel" title="CPU usage" style="float:right;"
+  data-src="https://srcc-lookout.stanford.edu/public/d-solo/000000006/sherlock-public-graphs?orgId=1&refresh=5m&panelId=11"
   width="68%" height="200px" frameborder="0">
 </iframe>
+<div style="clear:both; margin-bottom:2rem;"></div>
+<script>
+(function() {
+  function getGrafanaTheme() {
+    var scheme = document.body.getAttribute('data-md-color-scheme');
+    if (scheme === 'slate') return 'dark';
+    if (scheme) return 'light';
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  function updateGrafanaTheme() {
+    var theme = getGrafanaTheme();
+    document.querySelectorAll('.grafana-panel').forEach(function(el) {
+      var url = new URL(el.getAttribute('data-src'));
+      url.searchParams.set('theme', theme);
+      if (el.src !== url.toString()) el.src = url.toString();
+    });
+  }
+  updateGrafanaTheme();
+  new MutationObserver(updateGrafanaTheme).observe(
+    document.body,
+    { attributes: true, attributeFilter: ['data-md-color-scheme'] }
+  );
+})();
+</script>
 
 
 [comment]: #  (link URLs -----------------------------------------------------)

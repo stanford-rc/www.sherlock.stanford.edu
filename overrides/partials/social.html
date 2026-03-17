@@ -1,8 +1,14 @@
 {% if config.extra.social %}
 <div class="md-social">
-  {% set ns = namespace(institutional_started=false) %}
+  {% set ns = namespace(sherlock_started=false, institutional_started=false) %}
   {% for social in config.extra.social %}
-    {% if social.institutional and not ns.institutional_started %}
+    {% if social.sherlock and not ns.sherlock_started %}
+      {% set ns.sherlock_started = true %}
+      <div class="md-social__sherlock">
+    {% elif social.institutional and not ns.institutional_started %}
+      {% if ns.sherlock_started and not ns.institutional_started %}
+        </div>
+      {% endif %}
       {% set ns.institutional_started = true %}
       <div class="md-social__institutional">
     {% endif %}
@@ -16,6 +22,6 @@
       {% include ".icons/" ~ social.icon ~ ".svg" %}
     </a>
   {% endfor %}
-  {% if ns.institutional_started %}</div>{% endif %}
+  {% if ns.institutional_started %}</div>{% elif ns.sherlock_started %}</div>{% endif %}
 </div>
 {% endif %}
