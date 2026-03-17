@@ -57,7 +57,7 @@ img[alt="screencap"] {
 
 The Sherlock website and documentation also rely on the following projects:
 
-* ![favicon](//www.mkdocs.org/img/favicon.ico) [MkDocs](//mkdocs.org/)
+* ![favicon](//www.mkdocs.org/img/favicon.ico) [MkDocs](//www.mkdocs.org/)
 * ![favicon](//squidfunk.github.io/mkdocs-material/assets/favicon.png)
   [Material for MkDocs](//squidfunk.github.io/mkdocs-material/)
 

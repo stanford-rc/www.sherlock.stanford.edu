@@ -340,7 +340,7 @@ $ globus transfer --recursive \
 !!! Warning "No shell"
 
     The DTNs don't provide any interactive shell, so connecting via SSH
-    directly won't work. It will only accept `scp`, `sftp`, `rsync` of `bbcp`
+    directly won't work. It will only accept `scp`, `sftp`, `rsync` or `bbcp`
     connections.
 
 A pool of dedicated Data Transfer Nodes is available on Sherlock, to provide
@@ -461,7 +461,7 @@ documentation][url_rclone].
 [url_globus_xfer_start]:    //app.globus.org/file-manager
 [url_globus_sherlock]:      //app.globus.org/file-manager?origin_id=6881ae2e-db26-11e5-9772-22000b9da45e
 [url_globus_oak]:           //app.globus.org/file-manager?origin_id=8b3a8b64-d4ab-4551-b37e-ca0092f769a7
-[url_bbcp]:                 //www.slac.stanford.edu/~abh/bbcp
+[url_bbcp]:                 //github.com/bbcp/bbcp
 [url_rclone]:               //rclone.org/
 [url_aws-cli]:              //aws.amazon.com/cli/
 [url_uit_gdrive]:           //uit.stanford.edu/service/googleapps/drive

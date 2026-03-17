@@ -776,7 +776,7 @@ which shows a decent speedup for running on a GPU for the largest matrix sizes.
 
 [url_r]:                //www.r-project.org/
 [url_r_docs]:           //stat.ethz.ch/R-manual/
-[url_s]:                //ect.bell-labs.com/sl/S/
+[url_s]:                //en.wikipedia.org/wiki/S_(programming_language)
 [url_heredoc]:          //en.wikipedia.org/wiki/Here_document
 [url_devtools]:         //cran.r-project.org/web/packages/devtools/index.html
 [url_doparallel]:       //cran.r-project.org/web/packages/doParallel/index.html
