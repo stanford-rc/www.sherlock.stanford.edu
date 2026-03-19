@@ -315,4 +315,4 @@ set directly in the job script alongside `OLLAMA_HOST`.
 [url_code-server]:          ../../user-guide/ondemand.md#vs-code
 [url_code-server-ai]:       ../../user-guide/ondemand.md#ai-coding-assistant-in-code-server
 [url_coding_agents]:        ../ai/coding-agents.md#using-a-local-ollama-instance
-[url_ai_ide]:               ../ai/ai-ide.md
+[url_ai_ide]:               ../ai/remote-dev.md
