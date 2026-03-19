@@ -223,7 +223,7 @@ when getting close to the quota limits. Some tools can help with that.
     ``` none
     $ sh_dev -c 4
     $ ml system ncdu
-    $ ncduf -t 4
+    $ ncdu -t 4
     ```
 
     You'll been then presented with an interactive file browser, showing
