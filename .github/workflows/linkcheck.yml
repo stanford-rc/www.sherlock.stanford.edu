@@ -36,7 +36,7 @@ jobs:
           result-encoding: string
       - name: create or update issue on failure
         if: steps.lychee.outputs.exit_code != 0
-        uses: peter-evans/create-issue-from-file@v5
+        uses: peter-evans/create-issue-from-file@v6
         with:
           title: "Link checker report"
           content-filepath: ./lychee/out.md
