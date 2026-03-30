@@ -105,13 +105,13 @@ for building your own container.
 To copy the prebuilt container for AlphaFold 3:
 
 ``` none
-$ cp /home/groups/sh_support/share/containers/af3_v301.sif $SCRATCH/af3_v301.sif
+$ cp /home/groups/sh_support/share/containers/alphafold/af3_v301.sif $SCRATCH/af3_v301.sif
 ```
 
 !!! tip "Check for the latest version"
 
     The container filename above may not reflect the latest available version.
-    Run `ls /home/groups/sh_support/share/containers/af3_*.sif` to see what
+    Run `ls /home/groups/sh_support/share/containers/alphafold/af3_*.sif` to see what
     is currently available.
 
 To build your own container:

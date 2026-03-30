@@ -23,7 +23,7 @@ jobs:
           fail: false
       - name: find existing linkcheck issue
         id: existing_issue
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const issues = await github.rest.issues.listForRepo({
@@ -36,7 +36,7 @@ jobs:
           result-encoding: string
       - name: create or update issue on failure
         if: steps.lychee.outputs.exit_code != 0
-        uses: peter-evans/create-issue-from-file@v5
+        uses: peter-evans/create-issue-from-file@v6
         with:
           title: "Link checker report"
           content-filepath: ./lychee/out.md
@@ -44,7 +44,7 @@ jobs:
           issue-number: ${{ steps.existing_issue.outputs.result }}
       - name: close issue on success
         if: steps.lychee.outputs.exit_code == 0 && steps.existing_issue.outputs.result != ''
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             await github.rest.issues.update({
