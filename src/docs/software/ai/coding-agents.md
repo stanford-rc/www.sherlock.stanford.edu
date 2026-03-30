@@ -173,6 +173,21 @@ See the [Crush documentation][url_crush_docs] for configuration details,
 including how to point it to a local Ollama endpoint.
 
 
+### pi
+
+[pi][url_pi] is a minimal, terminal-based AI coding agent with a TUI
+interface. It supports 15+ AI providers and hundreds of models, including
+local [Ollama][url_ollama] instances.
+
+``` none { .copy .select }
+$ ml pi-coding-agent
+$ pi
+```
+
+For the full list of supported providers and configuration options, see the
+[pi documentation][url_pi_docs].
+
+
 ## Using a local Ollama instance
 
 Running a coding agent against a local [Ollama][url_ollama] instance on a GPU
@@ -256,6 +271,12 @@ standard shell `$VAR` substitution in configuration values, including `base_url`
 
 The `api_key` field is required by the configuration format but not checked by
 Ollama, so any non-empty string works.
+
+### Configuring pi
+
+Pi stores model configuration in `~/.pi/agent/models.json`. See the
+[pi models documentation][url_pi_models] for the full configuration format,
+including how to add an Ollama provider and point it to a local endpoint.
 
 ### Other agents
 
@@ -430,6 +451,10 @@ a shell script or downstream tool.
 
 [url_crush]:            //github.com/charmbracelet/crush
 [url_crush_docs]:       //github.com/charmbracelet/crush#configuration
+
+[url_pi]:               //pi.dev
+[url_pi_docs]:          //pi.dev/docs
+[url_pi_models]:        //github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/models.md
 
 
 --8<--- "includes/_acronyms.md"
