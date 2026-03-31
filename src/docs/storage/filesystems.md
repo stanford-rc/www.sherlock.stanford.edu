@@ -35,6 +35,12 @@ When you log in, the system automatically sets the current working directory to
 `$HOME`: it's the location you'll end up when connecting to Sherlock. You can
 store your source code and build your binaries there.
 
+!!! warning "Not suitable for job I/O"
+
+    `$HOME` is not designed for parallel or high-throughput job I/O. Do not
+    use it as the working directory for compute jobs or to store large files
+    that jobs will read and write. Use `$SCRATCH` for that purpose instead.
+
 We strongly recommend using `$HOME` to reference your home directory in
 scripts, rather than its explicit path.
 
@@ -75,6 +81,13 @@ See the [Checking Quotas][url_check_quotas] section for more details.
 
 `$GROUP_HOME` is best suited for group shared source code, common software
 installations, shared data sets and scripts.
+
+!!! warning "Not suitable for job I/O"
+
+    `$GROUP_HOME` is not designed for parallel or high-throughput job I/O. Do
+    not use it as the working directory for compute jobs or to store large
+    files that jobs will read and write. Use `$SCRATCH` or `$GROUP_SCRATCH`
+    for that purpose instead.
 
 We strongly recommend using `$GROUP_HOME` to reference your group home
 directory in scripts, rather than its explicit path.

@@ -248,6 +248,14 @@ python3 mycode.py
     The example above covers the basics. For a curated list of commonly used
     directives with examples, see the [SBATCH options][url_sbatch_opts] page.
 
+!!! tip "Store job data on `$SCRATCH`, not `$HOME`"
+
+    Job input and output files should be stored on `$SCRATCH` or
+    `$GROUP_SCRATCH`, not on `$HOME` or `$GROUP_HOME`. The home filesystems
+    are not designed for parallel job I/O and running many jobs against them
+    degrades performance for all users. See [Where should I store my
+    files?][url_storage] for guidance.
+
 Here are the steps to create and submit this batch script:
 
 1. Create and edit the `sbatch` script with a [text editor][anc_texteditors]
@@ -582,6 +590,7 @@ including examples of recurring and persistent job scripts.
 [url_ruse]:         //github.com/JanneM/Ruse
 
 [url_sbatch_opts]:  ../advanced-topics/submission-options.md
+[url_storage]:      ../storage/index.md#where-should-i-store-my-files
 [url_service_jobs]: ../advanced-topics/service-jobs.md
 [url_invest]:       ../concepts.md#investing-in-sherlock
 

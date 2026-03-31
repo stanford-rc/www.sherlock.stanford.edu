@@ -273,11 +273,131 @@ when getting close to the quota limits. Some tools can help with that.
 Here is where we recommend storing different types of files and data on
 Sherlock:
 
-* personal scripts, configuration files and software installations --> `$HOME`
-* group-shared scripts, software installations and medium-sized datasets -->
-  `$GROUP_HOME`
-* temporary output of jobs, large checkpoint files --> `$SCRATCH`
-* curated output of job campaigns, large group-shared datasets, archives --> `$OAK`
+| Use case | Recommended filesystem |
+|---|---|
+| Personal scripts, configuration files, source code | `$HOME` |
+| Group-shared code, shared software installations | `$GROUP_HOME` |
+| Active job input/output, large temporary files, checkpoints | `$SCRATCH` / `$GROUP_SCRATCH` |
+| High-IOPS job I/O, node-local temporary files | `$L_SCRATCH` |
+| Long-term storage, large reference datasets, curated results | `$OAK` |
+
+
+### Choosing the right filesystem for job I/O
+
+`$HOME` and `$GROUP_HOME` are the right place for source code, scripts, and
+configuration files (not for performance, but because they offer snapshots,
+off-site replication, and long-term retention). They are NFS-based and not
+designed for large-file or parallel I/O: running many concurrent jobs against
+them degrades performance for all users on the cluster.
+
+`$SCRATCH` and `$GROUP_SCRATCH` are the right location for most active job
+I/O: a dedicated flash-backed Lustre filesystem connected via high-bandwidth
+InfiniBand, suited for large sequential and parallel I/O across many processes.
+
+`$L_SCRATCH` is local SSD on each compute node, offering the lowest latency
+and highest IOPS on the cluster. It is well suited for workloads with many
+small random reads and writes (ML training, frequent checkpointing). The
+trade-off is that it is node-local (not usable across nodes) and deleted at
+job end, so results must be copied out before the job completes.
+
+`$OAK` is optimized for large-capacity long-term storage and is used by a
+large number of Stanford researchers across many systems, well beyond Sherlock.
+It is not designed for bursty or parallel job I/O. If your workflow requires
+data on `$OAK`, stage it to `$SCRATCH` at the start of the job and copy
+results back at the end:
+
+``` shell { title="job.sbatch" .copy .select }
+#!/bin/bash
+#SBATCH --job-name=my_analysis
+#SBATCH --partition=normal
+#SBATCH --time=2:00:00
+
+# stage input data from Oak to scratch at the start of the job
+cp -r $OAK/data/my_dataset $SCRATCH/
+
+# run the analysis using data on scratch
+python my_analysis.py --input $SCRATCH/my_dataset --output $SCRATCH/results
+
+# copy results back to Oak at the end
+cp -r $SCRATCH/results $OAK/results/my_run
+```
+
+
+### Shell startup files and external filesystems { #startup-files }
+
+When you connect to Sherlock over SSH, and when Slurm starts a job on a
+compute node, your `~/.bashrc` is executed. If it references paths on
+filesystems that are slow to respond or temporarily unavailable, two problems
+can result:
+
+* **Slow or hanging login**: a slow or unresponsive filesystem referenced in
+  `~/.bashrc` will cause your SSH session to hang at login.
+
+* **Job holds**: when starting a job, the scheduler will initiate a shell on the
+  compute node to establish your environment. If it takes too long to start
+  because it is waiting on a slow or unresponsive filesystem, Slurm will give
+  up and hold the job with:
+
+    ``` none
+    (user env retrieval failed requeued held)
+    ```
+
+    The job will not start until the hold is manually cleared with `scontrol
+    release <jobid>`. A held job looks like this in `squeue`:
+
+    ``` none
+    $ squeue --me
+       JOBID  PARTITION  NAME      USER    ST  TIME  NODES  NODELIST(REASON)
+       123456    normal  my_job  kilian    PD  0:00      1  (user env retrieval failed requeued held)
+    ```
+
+    When a large job array is released or many jobs start at once, all the
+    shells are spawned simultaneously, each trying to access the same
+    filesystem. Even a transient slowdown can cause enough latency to trigger
+    the failure, resulting in dozens or hundreds of jobs being held at once.
+
+
+### What to avoid in `~/.bashrc` { #bashrc-antipatterns }
+
+* **Adding external references to `$PATH`**: adding software installed on an
+  external filesystem to `$PATH` in `~/.bashrc` means every shell start will
+  access that filesystem, including all concurrent job starts.
+* **Sourcing scripts** located on external filesystems.
+* **Activating Conda environments** automatically at shell startup.
+
+!!! warning "Check your `~/.bashrc` for a Conda initialization block"
+
+    The Conda installer prompts you to run `conda init`, which appends an
+    initialization block to `~/.bashrc`. By default, this activates the base
+    environment on every shell start. If the Conda installation lives on a
+    slow filesystem, every login and every job startup will be affected.
+
+    Check the bottom of your `~/.bashrc` for a `conda initialize` block and
+    verify where the referenced installation is located. To disable automatic
+    base activation:
+
+    ``` shell
+    $ conda config --set auto_activate_base false
+    ```
+
+Keep `~/.bashrc` lightweight. Software installations and virtual environments
+should be installed on `$HOME` or `$GROUP_HOME`. Sourcing scripts and
+activating environments should be done in job scripts, where they are really
+needed. Loading them on-demand will avoid affecting every login and impacting
+every job startup time.
+
+!!! tip "Testing your startup file speed"
+
+    You can check how long your shell initialization takes by timing a new
+    bash session from a login node:
+
+    ``` shell
+    $ time bash -i -c true
+    ```
+
+    If it takes more than a few seconds, your startup files are likely
+    referencing external resources.
+
 
 ## Accessing filesystems
 
