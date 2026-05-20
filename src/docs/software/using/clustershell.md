@@ -246,7 +246,7 @@ sh02-12n04: /share/software/user/open/python/3.6.1/bin/python3.6, 15943 MiB
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_clush]:        //cea-hpc.github.io/clustershell/
+[url_clush]:        //clustershell.github.io/clustershell/
 [url_clush_docs]:   //clustershell.readthedocs.io/
 [url_doc_cluset]:   //clustershell.readthedocs.io/en/latest/tools/cluset.html
 [url_doc_clush]:    //clustershell.readthedocs.io/en/latest/tools/clush.html
