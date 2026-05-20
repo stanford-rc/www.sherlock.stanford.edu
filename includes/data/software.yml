@@ -8131,14 +8131,14 @@ software_modules:
       versions:
       - {description: 'Scala combines object-oriented and functional programming in
           one concise, high-level language.', markedDefault: false, versionName: 2.12.6}
-    - categories: devel, compiler
-      defaultVersionName: '19.10'
-      description: PGI compilers and tools, including Open MPI (Community Edition).
-      package: pgi
-      url: https://developer.nvidia.com/legacy-pgi-support
+    - categories: devel, language
+      defaultVersionName: 2.4.3
+      description: LuaRocks is the package manager for Lua modules.
+      package: luarocks
+      url: https://luarocks.org/
       versions:
-      - {description: 'PGI compilers and tools, including Open MPI (Community Edition).',
-        family: mpi, markedDefault: false, versionName: '19.10'}
+      - {description: LuaRocks is the package manager for Lua modules., markedDefault: false,
+        versionName: 2.4.3}
     - categories: devel, data
       defaultVersionName: 1.0.0
       description: zfp is an open-source library for compressed floating-point and
@@ -8188,6 +8188,15 @@ software_modules:
       - {description: The libevent API provides a mechanism to execute a callback
           function when a specific event occurs on a file descriptor or after a timeout
           has been reached., markedDefault: false, versionName: 2.1.12}
+    - categories: devel, AI
+      defaultVersionName: 1.0.0
+      description: Antigravity CLI brings the core capabilities of Google Antigravity
+        2.0 to the terminal.
+      package: antigravity-cli
+      url: https://antigravity.google/product/antigravity-cli
+      versions:
+      - {description: Antigravity CLI brings the core capabilities of Google Antigravity
+          2.0 to the terminal., markedDefault: false, versionName: 1.0.0}
     - categories: devel, language
       defaultVersionName: 2.7.13
       description: Python is an interpreted, interactive, object-oriented programming
@@ -9089,24 +9098,17 @@ software_modules:
       - {description: SCons is an Open Source software construction tool., markedDefault: false,
         versionName: 4.7.0_py312}
     - categories: devel, lib
-      defaultVersionName: 2.7.1_py27
-      description: The h5py package is a Pythonic interface to the HDF5 binary data
-        format.
-      package: py-h5py
-      url: http://www.h5py.org
+      defaultVersionName: 0.5.1
+      description: Simplified Data Exchange for HPC Simulations.
+      package: conduit
+      url: https://software.llnl.gov/conduit/
       versions:
-      - {description: The h5py package is a Pythonic interface to the HDF5 binary
-          data format., markedDefault: false, versionName: 2.8.0_py36}
-      - {description: The h5py package is a Pythonic interface to the HDF5 binary
-          data format., markedDefault: false, versionName: 2.10.0_py36}
-      - {description: The h5py package is a Pythonic interface to the HDF5 binary
-          data format., markedDefault: false, versionName: 3.1.0_py36}
-      - {description: The h5py package is a Pythonic interface to the HDF5 binary
-          data format., markedDefault: false, versionName: 3.7.0_py39}
-      - {description: The h5py package is a Pythonic interface to the HDF5 binary
-          data format., markedDefault: false, versionName: 3.10.0_py312}
-      - {description: The h5py package is a Pythonic interface to the HDF5 binary
-          data format., markedDefault: true, versionName: 2.7.1_py27}
+      - description: Simplified Data Exchange for HPC Simulations.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 0.5.1
     - categories: devel, parser
       defaultVersionName: 3.2.1
       description: Xerces-C++ is a validating XML parser written in a portable subset
@@ -9116,17 +9118,14 @@ software_modules:
       versions:
       - {description: Xerces-C++ is a validating XML parser written in a portable
           subset of C++., markedDefault: false, versionName: 3.2.1}
-    - categories: devel, data
-      defaultVersionName: 6.6.2
-      description: NCL is a free interpreted language designed specifically for scientific
-        data processing and visualization.
-      package: ncl
-      url: http://www.ncl.ucar.edu/
+    - categories: devel, parser
+      defaultVersionName: 2.6.4
+      description: Flex is a fast lexical analyzer generator.
+      package: flex
+      url: https://github.com/westes/flex
       versions:
-      - {description: NCL is a free interpreted language designed specifically for
-          scientific data processing and visualization., markedDefault: false, versionName: 6.4.0}
-      - {description: NCL is a free interpreted language designed specifically for
-          scientific data processing and visualization., markedDefault: false, versionName: 6.6.2}
+      - {description: Flex is a fast lexical analyzer generator., markedDefault: false,
+        versionName: 2.6.4}
     - categories: devel, compiler
       defaultVersionName: 6.3.0
       description: The GNU Compiler Collection includes front ends for C, C++, Fortran,
@@ -9775,18 +9774,6 @@ software_modules:
       - {description: Cython is an optimising static compiler for both the Python
           programming language and the extended Cython programming language (based
           on Pyrex)., markedDefault: false, versionName: 3.1.4_py312}
-    - categories: devel, lib
-      defaultVersionName: 0.5.1
-      description: Simplified Data Exchange for HPC Simulations.
-      package: conduit
-      url: https://software.llnl.gov/conduit/
-      versions:
-      - description: Simplified Data Exchange for HPC Simulations.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 0.5.1
     - categories: devel, build
       defaultVersionName: 3.31.4
       description: CMake is an extensible, open-source system that manages the build
@@ -9812,13 +9799,29 @@ software_modules:
       - {description: 'CMake is an extensible, open-source system that manages the
           build process in an operating system and in a compiler-independent manner.',
         markedDefault: false, versionName: 3.31.4}
-    - categories: devel, static analysis
-      defaultVersionName: 0.11.0
-      description: A shell script static analysis tool
-      package: shellcheck
-      url: https://www.shellcheck.net/
+    - categories: devel, lib
+      defaultVersionName: 2.0.0
+      description: libtree prints shared object dependencies as a tree.
+      package: libtree
+      url: https://github.com/haampie/libtree
       versions:
-      - {description: A shell script static analysis tool, markedDefault: false, versionName: 0.11.0}
+      - {description: libtree prints shared object dependencies as a tree., markedDefault: false,
+        versionName: 2.0.0}
+    - categories: devel, language
+      defaultVersionName: 1.3.10
+      description: Bun is a fast JavaScript runtime, bundler, test runner, and package
+        manager – all in one.
+      package: bun
+      url: https://bun.com/
+      versions:
+      - {description: 'Bun is a fast JavaScript runtime, bundler, test runner, and
+          package manager – all in one.', markedDefault: false, versionName: 1.2.20}
+      - {description: 'Bun is a fast JavaScript runtime, bundler, test runner, and
+          package manager – all in one.', markedDefault: false, versionName: 1.3.2}
+      - {description: 'Bun is a fast JavaScript runtime, bundler, test runner, and
+          package manager – all in one.', markedDefault: false, versionName: 1.3.5}
+      - {description: 'Bun is a fast JavaScript runtime, bundler, test runner, and
+          package manager – all in one.', markedDefault: false, versionName: 1.3.10}
     - categories: devel, lib
       defaultVersionName: 0.35.0_py27
       description: Numba is a compiler for Python array and numerical functions that
@@ -9896,16 +9899,6 @@ software_modules:
       - {description: GNU Make is a tool which controls the generation of executables
           and other non-source files of a program from the program's source files.,
         markedDefault: false, versionName: '4.4'}
-    - categories: devel, language
-      defaultVersionName: 8.6.5
-      description: Haskell is a statically typed, purely functional programming language
-        with type inference and lazy evaluation.
-      package: haskell
-      url: https://www.haskell.org/
-      versions:
-      - {description: 'Haskell is a statically typed, purely functional programming
-          language with type inference and lazy evaluation.', markedDefault: false,
-        versionName: 8.6.5}
     - categories: devel, lib
       defaultVersionName: 0.5.1_py312
       description: The RAPIDS pynvjitlink library provides a Python binding for the
@@ -9919,21 +9912,6 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 0.5.1_py312
-    - categories: devel, AI
-      defaultVersionName: 1.0.5
-      description: GitHub Copilot CLI brings the power of Copilot coding agent directly
-        to your terminal.
-      package: copilot-cli
-      url: https://github.com/github/copilot-cli
-      versions:
-      - {description: GitHub Copilot CLI brings the power of Copilot coding agent
-          directly to your terminal., markedDefault: false, versionName: 0.0.354}
-      - {description: GitHub Copilot CLI brings the power of Copilot coding agent
-          directly to your terminal., markedDefault: false, versionName: 0.0.361}
-      - {description: GitHub Copilot CLI brings the power of Copilot coding agent
-          directly to your terminal., markedDefault: false, versionName: 0.0.393}
-      - {description: GitHub Copilot CLI brings the power of Copilot coding agent
-          directly to your terminal., markedDefault: false, versionName: 1.0.5}
     - categories: devel, mpi
       defaultVersionName: '2019'
       description: Intel® MPI Library is a multi-fabric message passing library that
@@ -9969,17 +9947,37 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: '2019'
-    - categories: devel, lib
-      defaultVersionName: 0.7.5
-      description: Library to manipulate tensors on the GPU.
-      package: libgpuarray
-      url: http://deeplearning.net/software/libgpuarray
+    - categories: devel, AI
+      defaultVersionName: 1.0.5
+      description: GitHub Copilot CLI brings the power of Copilot coding agent directly
+        to your terminal.
+      package: copilot-cli
+      url: https://github.com/github/copilot-cli
       versions:
-      - description: Library to manipulate tensors on the GPU.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-        versionName: 0.7.5
+      - {description: GitHub Copilot CLI brings the power of Copilot coding agent
+          directly to your terminal., markedDefault: false, versionName: 0.0.354}
+      - {description: GitHub Copilot CLI brings the power of Copilot coding agent
+          directly to your terminal., markedDefault: false, versionName: 0.0.361}
+      - {description: GitHub Copilot CLI brings the power of Copilot coding agent
+          directly to your terminal., markedDefault: false, versionName: 0.0.393}
+      - {description: GitHub Copilot CLI brings the power of Copilot coding agent
+          directly to your terminal., markedDefault: false, versionName: 1.0.5}
+    - categories: devel, lib
+      defaultVersionName: 2.6.2
+      description: A high-level Parallel I/O Library for structured grid applications.
+      package: pio
+      url: https://github.com/NCAR/ParallelIO
+      versions:
+      - {description: A high-level Parallel I/O Library for structured grid applications.,
+        markedDefault: false, versionName: 2.6.2}
+    - categories: devel, compiler
+      defaultVersionName: '19.10'
+      description: PGI compilers and tools, including Open MPI (Community Edition).
+      package: pgi
+      url: https://developer.nvidia.com/legacy-pgi-support
+      versions:
+      - {description: 'PGI compilers and tools, including Open MPI (Community Edition).',
+        family: mpi, markedDefault: false, versionName: '19.10'}
     - categories: devel, lib
       defaultVersionName: 0.13.0_py312
       description: Python bindings for CV_CUDA.
@@ -10308,25 +10306,30 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 9.0.176
-    - categories: devel, parser
-      defaultVersionName: 2.6.4
-      description: Flex is a fast lexical analyzer generator.
-      package: flex
-      url: https://github.com/westes/flex
+    - categories: devel, lib
+      defaultVersionName: 0.7.5
+      description: Library to manipulate tensors on the GPU.
+      package: libgpuarray
+      url: http://deeplearning.net/software/libgpuarray
       versions:
-      - {description: Flex is a fast lexical analyzer generator., markedDefault: false,
-        versionName: 2.6.4}
+      - description: Library to manipulate tensors on the GPU.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+        versionName: 0.7.5
     - categories: devel, analytics
-      defaultVersionName: 22.0.0_py314
-      description: Python library for Apache Arrow, a development platform for in-memory
-        analytics.
-      package: py-pyarrow
+      defaultVersionName: 22.0.0
+      description: Apache Arrow is a universal columnar format and multi-language
+        toolbox for fast data interchange and in-memory analytics.
+      package: arrow
       url: https://arrow.apache.org/
       versions:
-      - {description: 'Python library for Apache Arrow, a development platform for
-          in-memory analytics.', markedDefault: false, versionName: 18.1.0_py312}
-      - {description: 'Python library for Apache Arrow, a development platform for
-          in-memory analytics.', markedDefault: false, versionName: 22.0.0_py314}
+      - {description: Apache Arrow is a universal columnar format and multi-language
+          toolbox for fast data interchange and in-memory analytics., markedDefault: false,
+        versionName: 19.0.1}
+      - {description: Apache Arrow is a universal columnar format and multi-language
+          toolbox for fast data interchange and in-memory analytics., markedDefault: false,
+        versionName: 22.0.0}
     - categories: devel, lib
       defaultVersionName: 8.1.0
       description: C++ wrappers for SIMD intrinsics and parallelized, optimized mathematical
@@ -10341,18 +10344,16 @@ software_modules:
           mathematical functions (SSE, AVX, NEON, AVX512)', markedDefault: false,
         versionName: 8.1.0}
     - categories: devel, analytics
-      defaultVersionName: 22.0.0
-      description: Apache Arrow is a universal columnar format and multi-language
-        toolbox for fast data interchange and in-memory analytics.
-      package: arrow
+      defaultVersionName: 22.0.0_py314
+      description: Python library for Apache Arrow, a development platform for in-memory
+        analytics.
+      package: py-pyarrow
       url: https://arrow.apache.org/
       versions:
-      - {description: Apache Arrow is a universal columnar format and multi-language
-          toolbox for fast data interchange and in-memory analytics., markedDefault: false,
-        versionName: 19.0.1}
-      - {description: Apache Arrow is a universal columnar format and multi-language
-          toolbox for fast data interchange and in-memory analytics., markedDefault: false,
-        versionName: 22.0.0}
+      - {description: 'Python library for Apache Arrow, a development platform for
+          in-memory analytics.', markedDefault: false, versionName: 18.1.0_py312}
+      - {description: 'Python library for Apache Arrow, a development platform for
+          in-memory analytics.', markedDefault: false, versionName: 22.0.0_py314}
     - categories: devel, lib
       defaultVersionName: 3.1.0_py39
       description: Python interface for CUTLASS
@@ -10428,6 +10429,20 @@ software_modules:
       - {description: Apache Ant is a Java library and command-line tool whose mission
           is to drive processes described in build files as targets and extension
           points dependent upon each other., markedDefault: false, versionName: 1.10.1}
+    - categories: devel, lib
+      defaultVersionName: 2.2.2
+      description: Copy-hiding array abstraction to automatically migrate data between
+        memory spaces.
+      package: chai
+      url: https://github.com/LLNL/CHAI
+      versions:
+      - description: Copy-hiding array abstraction to automatically migrate data between
+          memory spaces.
+        markedDefault: false
+        properties:
+          arch: {gpu: 1}
+          parallel: {mpi: 1}
+        versionName: 2.2.2
     - categories: devel, compiler
       defaultVersionName: '2019'
       description: Intel C++ Compiler, also known as icc or icl, is a group of C and
@@ -10447,20 +10462,6 @@ software_modules:
       - {description: 'Intel C++ Compiler, also known as icc or icl, is a group of
           C and C++ compilers from Intel', family: compiler_c, markedDefault: false,
         versionName: '2019'}
-    - categories: devel, lib
-      defaultVersionName: 2.2.2
-      description: Copy-hiding array abstraction to automatically migrate data between
-        memory spaces.
-      package: chai
-      url: https://github.com/LLNL/CHAI
-      versions:
-      - description: Copy-hiding array abstraction to automatically migrate data between
-          memory spaces.
-        markedDefault: false
-        properties:
-          arch: {gpu: 1}
-          parallel: {mpi: 1}
-        versionName: 2.2.2
     - categories: devel, parser
       defaultVersionName: 0.0.2_py312
       description: Python tool for converting files and office documents to Markdown.
@@ -10527,6 +10528,34 @@ software_modules:
       - {description: Codex CLI is a coding agent from OpenAI that runs locally on
           your computer., markedDefault: false, versionName: 0.128.0}
     - categories: devel, lib
+      defaultVersionName: 2.7.1_py27
+      description: The h5py package is a Pythonic interface to the HDF5 binary data
+        format.
+      package: py-h5py
+      url: http://www.h5py.org
+      versions:
+      - {description: The h5py package is a Pythonic interface to the HDF5 binary
+          data format., markedDefault: false, versionName: 2.8.0_py36}
+      - {description: The h5py package is a Pythonic interface to the HDF5 binary
+          data format., markedDefault: false, versionName: 2.10.0_py36}
+      - {description: The h5py package is a Pythonic interface to the HDF5 binary
+          data format., markedDefault: false, versionName: 3.1.0_py36}
+      - {description: The h5py package is a Pythonic interface to the HDF5 binary
+          data format., markedDefault: false, versionName: 3.7.0_py39}
+      - {description: The h5py package is a Pythonic interface to the HDF5 binary
+          data format., markedDefault: false, versionName: 3.10.0_py312}
+      - {description: The h5py package is a Pythonic interface to the HDF5 binary
+          data format., markedDefault: true, versionName: 2.7.1_py27}
+    - categories: devel, data analytics
+      defaultVersionName: 0.48.0
+      description: xan is a command line tool that can be used to process CSV files
+        directly from the shell.
+      package: xan
+      url: https://github.com/medialab/xan
+      versions:
+      - {description: xan is a command line tool that can be used to process CSV files
+          directly from the shell., markedDefault: false, versionName: 0.48.0}
+    - categories: devel, lib
       defaultVersionName: '2019'
       description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
         C++ library for shared-memory parallel programming and heterogeneous computing
@@ -10546,23 +10575,6 @@ software_modules:
       - {description: Intel® Threading Building Blocks (Intel® TBB) is a widely used
           C++ library for shared-memory parallel programming and heterogeneous computing
           (intra-node distributed memory programming)., markedDefault: false, versionName: '2019'}
-    - categories: devel, data analytics
-      defaultVersionName: 0.48.0
-      description: xan is a command line tool that can be used to process CSV files
-        directly from the shell.
-      package: xan
-      url: https://github.com/medialab/xan
-      versions:
-      - {description: xan is a command line tool that can be used to process CSV files
-          directly from the shell., markedDefault: false, versionName: 0.48.0}
-    - categories: devel, language
-      defaultVersionName: 2.4.3
-      description: LuaRocks is the package manager for Lua modules.
-      package: luarocks
-      url: https://luarocks.org/
-      versions:
-      - {description: LuaRocks is the package manager for Lua modules., markedDefault: false,
-        versionName: 2.4.3}
     - categories: devel, lib
       defaultVersionName: 1.10.0
       description: CUB is a flexible library of cooperative threadblock primitives
@@ -10598,14 +10610,17 @@ software_modules:
         properties:
           arch: {gpu: 1}
         versionName: 25.8.0_py312
-    - categories: devel, lib
-      defaultVersionName: 2.6.2
-      description: A high-level Parallel I/O Library for structured grid applications.
-      package: pio
-      url: https://github.com/NCAR/ParallelIO
+    - categories: devel, data
+      defaultVersionName: 6.6.2
+      description: NCL is a free interpreted language designed specifically for scientific
+        data processing and visualization.
+      package: ncl
+      url: http://www.ncl.ucar.edu/
       versions:
-      - {description: A high-level Parallel I/O Library for structured grid applications.,
-        markedDefault: false, versionName: 2.6.2}
+      - {description: NCL is a free interpreted language designed specifically for
+          scientific data processing and visualization., markedDefault: false, versionName: 6.4.0}
+      - {description: NCL is a free interpreted language designed specifically for
+          scientific data processing and visualization., markedDefault: false, versionName: 6.6.2}
     - categories: devel, data
       defaultVersionName: 1.44.0_py312
       description: The NVIDIA Data Loading Library (DALI) is a GPU-accelerated library
@@ -10660,20 +10675,15 @@ software_modules:
       - {description: Bazelisk is a wrapper for Bazel written in Go., family: bazel,
         markedDefault: false, versionName: 1.27.0}
     - categories: devel, language
-      defaultVersionName: 1.3.10
-      description: Bun is a fast JavaScript runtime, bundler, test runner, and package
-        manager – all in one.
-      package: bun
-      url: https://bun.com/
+      defaultVersionName: 8.6.5
+      description: Haskell is a statically typed, purely functional programming language
+        with type inference and lazy evaluation.
+      package: haskell
+      url: https://www.haskell.org/
       versions:
-      - {description: 'Bun is a fast JavaScript runtime, bundler, test runner, and
-          package manager – all in one.', markedDefault: false, versionName: 1.2.20}
-      - {description: 'Bun is a fast JavaScript runtime, bundler, test runner, and
-          package manager – all in one.', markedDefault: false, versionName: 1.3.2}
-      - {description: 'Bun is a fast JavaScript runtime, bundler, test runner, and
-          package manager – all in one.', markedDefault: false, versionName: 1.3.5}
-      - {description: 'Bun is a fast JavaScript runtime, bundler, test runner, and
-          package manager – all in one.', markedDefault: false, versionName: 1.3.10}
+      - {description: 'Haskell is a statically typed, purely functional programming
+          language with type inference and lazy evaluation.', markedDefault: false,
+        versionName: 8.6.5}
     - categories: devel, data analytics
       defaultVersionName: 0.3_py27
       description: 'Launching and controlling spark on HPC clusters '
@@ -10682,6 +10692,13 @@ software_modules:
       versions:
       - {description: 'Launching and controlling spark on HPC clusters ', markedDefault: false,
         versionName: 0.3_py27}
+    - categories: devel, static analysis
+      defaultVersionName: 0.11.0
+      description: A shell script static analysis tool
+      package: shellcheck
+      url: https://www.shellcheck.net/
+      versions:
+      - {description: A shell script static analysis tool, markedDefault: false, versionName: 0.11.0}
     - categories: devel, data
       defaultVersionName: 4.9.0
       description: NetCDF is a set of software libraries and self-describing, machine-independent
@@ -10697,14 +10714,6 @@ software_modules:
         properties:
           parallel: {mpi: 1}
         versionName: 4.9.0
-    - categories: devel, lib
-      defaultVersionName: 2.0.0
-      description: libtree prints shared object dependencies as a tree.
-      package: libtree
-      url: https://github.com/haampie/libtree
-      versions:
-      - {description: libtree prints shared object dependencies as a tree., markedDefault: false,
-        versionName: 2.0.0}
     - categories: devel, lib
       defaultVersionName: '0.18'
       description: JSON-C implements a reference counting object model that allows
