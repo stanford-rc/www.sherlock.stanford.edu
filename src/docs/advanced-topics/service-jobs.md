@@ -202,7 +202,7 @@ scontrol requeue $SLURM_JOBID
 
 The updated script (highlighted line):
 
-``` shell title="persistent.sbatch" hl_lines="10" { .copy .select }
+``` shell { title="persistent.sbatch" hl_lines="10" .copy .select }
 #!/bin/bash
 #SBATCH --job-name=persistent
 #SBATCH --dependency=singleton
