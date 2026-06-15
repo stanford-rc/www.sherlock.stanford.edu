@@ -2,12 +2,12 @@ facts:
   - name: users
     fields:
       - name: user accounts
-        value: 8741
+        value: 8909
       - name: PI groups
-        value: 1287
+        value: 1299
         desc: "from all Stanford's seven Schools, SLAC, Stanford Institutes, _etc._"
       - name: owner groups
-        value: 220
+        value: 223
   - name: interfaces
     icon: sitemap
     fields:
@@ -20,28 +20,28 @@ facts:
     fields:
       - name: PFLOPs (FP64)
         fmt: "{:0.2f}"
-        value: 15.97
-        desc: 52.52 (FP32) PFLOPs
+        value: 17.76
+        desc: 56.11 (FP32) PFLOPs
       - name: CPU cores
-        value: 75472
+        value: 76196
         desc: "**7** CPU generations (**18** CPU models)"
       - name: GPUs
-        value: 1188
+        value: 1240
         desc: "**5** GPU generations (**14** GPU models)"
   - name: hardware
     icon: server
     fields:
       - name: compute nodes
-        value: 2106
+        value: 2073
         desc: "**25** server models (from **3** different manufacturers)"
       - name: racks
         value: 57
-        desc: "**1,633** rack units"
+        desc: "**1,676** rack units"
   - name: energy
     icon: plug
     fields:
       - name: kW
-        value: 999.92
+        value: 963.67
         desc: total power usage
       - name: PDUs
         value: 97
@@ -53,41 +53,41 @@ facts:
         value: 14622845167337472
       - name: "`$OAK`"
         desc: long term research data storage
-        value: 77427277540884480
+        value: 93928226702295040
   - name: networking
     icon: network-wired
     fields:
       - name: Infiniband switches
-        value: 140
+        value: 139
         desc: across **3** Infiniband fabrics (EDR, HDR, NDR)
       - name: Infiniband cables
-        value: 6797
-        desc: spanning about **32.07 km**
+        value: 6792
+        desc: spanning about **32.00 km**
       - name: Ethernet switches
         value: 75
   - name: scheduler
     icon: chart-bar
     fields:
       - name: Slurm partitions
-        value: 200
+        value: 203
       - name: CPU.hours/day
-        value: 63122
+        value: 65945
         desc: over **7 years** of computing in a single day
       - name: /month
         fmt: "${:,.0f}"
-        value: 4217623.1200
+        value: 4406196.5248
         desc: to run the same workload on t2.large on-demand cloud instances
 
   - name: partitions
     fields:
       - name: normal
-        nodes: 248
-        cores: 6568
+        nodes: 268
+        cores: 7048
         desc: compute nodes
         details: |
                 - 62 nodes w/ 20-core (Intel E5-2640v4), 128 GB RAM, EDR IB
                 - 71 nodes w/ 24-core (Intel 5118), 191 GB RAM, EDR IB
-                - 14 nodes w/ 24-core (AMD 8224P), 192 GB RAM, NDR IB
+                - 34 nodes w/ 24-core (AMD 8224P), 192 GB RAM, NDR IB
                 - 1 nodes w/ 24-core (Intel 5118), 384 GB RAM, EDR IB
                 - 28 nodes w/ 32-core (AMD 7543), 256 GB RAM, HDR IB
                 - 70 nodes w/ 32-core (AMD 7502), 256 GB RAM, HDR IB
@@ -141,28 +141,27 @@ facts:
                 - 1 nodes w/ 32-core (AMD 7502), 256 GB RAM, HDR IB
         access: public
       - name: owners
-        nodes: 1741
-        cores: 66272
+        nodes: 1732
+        cores: 66516
         desc: privately-owned nodes
         details: |
-                - 127 nodes w/ 20-core (Intel E5-2640v4), 128 GB RAM, EDR IB
+                - 103 nodes w/ 20-core (Intel E5-2640v4), 128 GB RAM, EDR IB
                 - 7 nodes w/ 20-core (Intel E5-2640v4), 128 GB RAM, EDR IB, 4x Geforce TITAN_Xp GPUs
-                - 93 nodes w/ 20-core (Intel E5-2640v4), 256 GB RAM, EDR IB
+                - 92 nodes w/ 20-core (Intel E5-2640v4), 256 GB RAM, EDR IB
                 - 2 nodes w/ 20-core (Intel E5-2640v4), 256 GB RAM, EDR IB, 4x Geforce TITAN_Xp GPUs
                 - 3 nodes w/ 20-core (Intel E5-2640v4), 256 GB RAM, EDR IB, 4x Geforce TITAN_V GPUs
                 - 1 nodes w/ 20-core (Intel E5-2640v4), 256 GB RAM, EDR IB, 4x Tesla P40 GPUs
                 - 2 nodes w/ 20-core (Intel E5-2640v4), 256 GB RAM, EDR IB, 4x Tesla P100 PCIe GPUs
                 - 3 nodes w/ 20-core (Intel E5-2640v4), 256 GB RAM, EDR IB, 4x Tesla V100_SXM2 GPUs
-                - 1 nodes w/ 20-core (Intel E5-2640v4), 256 GB RAM, EDR IB, 6x Geforce TITAN_Xp GPUs
-                - 7 nodes w/ 20-core (Intel E5-2640v4), 256 GB RAM, EDR IB, 8x Geforce TITAN_Xp GPUs
+                - 8 nodes w/ 20-core (Intel E5-2640v4), 256 GB RAM, EDR IB, 8x Geforce TITAN_Xp GPUs
                 - 7 nodes w/ 20-core (Intel E5-2640v4), 512 GB RAM, EDR IB
                 - 4 nodes w/ 20-core (Intel E5-2640v4), 512 GB RAM, EDR IB, 4x Geforce TITAN_Xp GPUs
                 - 2 nodes w/ 20-core (Intel E5-2640v4), 512 GB RAM, EDR IB, 4x Tesla P100 PCIe GPUs
                 - 1 nodes w/ 20-core (Intel E5-2640v4), 512 GB RAM, EDR IB, 8x Geforce TITAN_Xp GPUs
                 - 2 nodes w/ 20-core (Intel E5-2640v4), 512 GB RAM, EDR IB, 8x Geforce TITAN_V GPUs
-                - 311 nodes w/ 24-core (Intel 5118), 191 GB RAM, EDR IB
+                - 294 nodes w/ 24-core (Intel 5118), 191 GB RAM, EDR IB
                 - 2 nodes w/ 24-core (Intel 5118), 191 GB RAM, EDR IB, 4x Tesla V100 PCIe GPUs
-                - 188 nodes w/ 24-core (AMD 8224P), 192 GB RAM, NDR IB
+                - 212 nodes w/ 24-core (AMD 8224P), 192 GB RAM, NDR IB
                 - 73 nodes w/ 24-core (Intel 5118), 384 GB RAM, EDR IB
                 - 1 nodes w/ 24-core (Intel 5118), 512 GB RAM, EDR IB
                 - 1 nodes w/ 24-core (Intel 5118), 768 GB RAM, EDR IB, 8x Tesla V100_SXM2 GPUs
@@ -177,12 +176,12 @@ facts:
                 - 1 nodes w/ 32-core (Intel E5-2697Av4), 512 GB RAM, EDR IB
                 - 1 nodes w/ 32-core (Intel E5-2697Av4), 1536 GB RAM, EDR IB
                 - 2 nodes w/ 36-core (Intel 6150), 768 GB RAM, EDR IB
-                - 28 nodes w/ 64-core (AMD 9384X), 384 GB RAM, NDR IB
+                - 30 nodes w/ 64-core (AMD 9384X), 384 GB RAM, NDR IB
                 - 13 nodes w/ 64-core (AMD 7543), 512 GB RAM, HDR IB, 4x Tesla A100_SXM4 GPUs
                 - 5 nodes w/ 64-core (AMD 7502), 512 GB RAM, HDR IB, 4x Tesla A100_SXM4 GPUs
-                - 12 nodes w/ 64-core (Intel 8462Y+), 1024 GB RAM, NDR IB, 4x Tesla H100_SXM5 GPUs
-                - 11 nodes w/ 64-core (Intel 8462Y+), 2048 GB RAM, NDR IB, 8x Tesla H200_SXM5 GPUs
+                - 13 nodes w/ 64-core (Intel 8462Y+), 1024 GB RAM, NDR IB, 4x Tesla H100_SXM5 GPUs
                 - 16 nodes w/ 64-core (Intel 8462Y+), 2048 GB RAM, NDR IB, 8x Tesla H100_SXM5 GPUs
+                - 17 nodes w/ 64-core (Intel 8462Y+), 2048 GB RAM, NDR IB, 8x Tesla H200_SXM5 GPUs
                 - 3 nodes w/ 64-core (Intel 6130), 3072 GB RAM, EDR IB
                 - 1 nodes w/ 64-core (AMD 7502), 4096 GB RAM, HDR IB
                 - 4 nodes w/ 64-core (AMD 7543), 4096 GB RAM, HDR IB

@@ -84,6 +84,18 @@ run) or with a `GEMINI_API_KEY` environment variable:
 $ export GEMINI_API_KEY=<your-api-key>
 ```
 
+!!! note "Transitioning to Antigravity"
+
+    Google is transitioning Gemini CLI to [Antigravity][url_antigravity], its
+    new agentic development platform. The successor CLI is already available
+    on Sherlock as the `antigravity-cli` module:
+
+    ``` none { .copy .select }
+    $ ml antigravity-cli
+    ```
+
+    The `gemini-cli` module will remain available for now.
+
 
 ### :brands-openai: OpenAI Codex CLI
 
@@ -433,6 +445,7 @@ a shell script or downstream tool.
 [url_anthropic_api]:    //console.anthropic.com/
 
 [url_gemini_cli]:       //github.com/google-gemini/gemini-cli
+[url_antigravity]:      //antigravity.google
 
 [url_codex]:            //github.com/openai/codex
 [url_openai_api]:       //platform.openai.com/api-keys
