@@ -121,7 +121,7 @@ It requires an active [Cursor][url_cursor] account.
 
 ``` none { .copy .select }
 $ ml cursor-cli
-$ cursor
+$ cursor-agent
 ```
 
 
