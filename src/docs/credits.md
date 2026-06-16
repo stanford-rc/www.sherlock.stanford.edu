@@ -101,7 +101,7 @@ Kudos to the show's crew and a big thank
 you to [HBO Data compression stars][url_ieee], Professor [Tsachy
 Weissman][url_tsachy] and Dmitri Pavlichin, for this incredible Sherlock
 shout-out. This has been an everlasting source of pride and amazement for the
-whole SRCC team! :heart:{ .pulsate }
+whole Stanford Research Computing team! :heart:{ .pulsate }
 
 
 [comment]: #  (link URLs -----------------------------------------------------)

@@ -48,8 +48,8 @@ account and can connect to the cluster.
     ---
 
     When something isn't working as expected, this page covers how to diagnose
-    common problems and how to submit an effective support request to the SRCC
-    team.
+    common problems and how to submit an effective support request to the
+    Stanford Research Computing team.
 
     [:octicons-arrow-right-24: Troubleshooting](troubleshoot.md)
 

@@ -20,5 +20,5 @@
 *[PDU]: Power Distribution Unit
 *[RAM]: Random Access Memory
 *[SMP]: Shared Memory Parallelism
-*[SRCC]: Stanford Research Computing Center
+*[SRCC]: Stanford Research Computing
 *[SSH]: Secure Shell

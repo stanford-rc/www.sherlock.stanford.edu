@@ -22,8 +22,8 @@ icon: material/home
 
 ## Welcome to Sherlock!
 
-Sherlock is a High-Performance Computing (HPC) cluster, operated by the
-[Stanford Research Computing Center][url_srcc] to provide computing resources
+Sherlock is a High-Performance Computing (HPC) cluster, operated by
+[Stanford Research Computing][url_srcc] to provide computing resources
 to the Stanford community at large. You'll find all the documentation, tips,
 FAQs and information about Sherlock among these pages.
 
@@ -110,8 +110,8 @@ performed on Sherlock acknowledge this. The following wording is suggested:
 !!! cite "Acknowledgment"
 
     Some of the computing for this project was performed on the Sherlock
-    cluster. We would like to thank Stanford University and the Stanford
-    Research Computing Center for providing computational resources and support
+    cluster. We would like to thank Stanford University and Stanford
+    Research Computing for providing computational resources and support
     that contributed to these research results.
 
 
@@ -278,9 +278,9 @@ than welcome to join the following channels:
     Sherlock, want to reach out to other Sherlock users to share tips, good
     practices, tutorials or other info, please feel free to do so there.
 
-For more details about the SRCC Slack Workspace, and instructions on how to
-join this workspace and its channels, please see the Stanford Research
-Computing [support page][url_srcc_support].
+For more details about the Stanford Research Computing Slack Workspace, and
+instructions on how to join this workspace and its channels, please see
+the Stanford Research Computing [support page][url_srcc_support].
 
 !!! warning "Slack is not an official support channel"
 
