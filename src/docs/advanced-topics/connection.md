@@ -233,7 +233,7 @@ notifications are not available.
 [url_tmux]:         //github.com/tmux/tmux/wiki
 [url_kerberos]:     //uit.stanford.edu/service/kerberos
 [url_vpn]:          //uit.stanford.edu/service/vpn
-[url_alt2fa]:       //uit.stanford.edu/service/webauth/twostep
+[url_alt2fa]:       //uit.stanford.edu/service/authentication/twostep
 
 [comment]: #  (footnotes -----------------------------------------------------)
 

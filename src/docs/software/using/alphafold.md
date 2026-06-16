@@ -363,7 +363,7 @@ structure is copied to `my_protein_model.cif` at the top level.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_af]:             //deepmind.google/technologies/alphafold/
+[url_af]:             //deepmind.google/science/alphafold/
 [url_boltz]:          //github.com/jwohlwend/boltz
 [url_deepmind]:       //deepmind.google/
 [url_tou]:            //github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md
@@ -371,7 +371,7 @@ structure is copied to `my_protein_model.cif` at the top level.
 [url_release]:        //github.com/google-deepmind/alphafold3/releases
 [url_af3_input]:      //github.com/google-deepmind/alphafold3/blob/main/docs/input.md
 [url_oak_common]:     ../../storage/common-datasets.md
-[url_cuda_gpus]:      //developer.nvidia.com/cuda-gpus
+[url_cuda_gpus]:      //developer.nvidia.com/cuda/gpus
 [url_node_feat]:      ../../advanced-topics/node-features.md
 [url_mpifileutils]:   //github.com/hpc/mpifileutils
 

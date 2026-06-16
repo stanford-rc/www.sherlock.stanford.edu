@@ -209,5 +209,5 @@ documentation][url_constraints_doc].
 
 [url_node-class]:       ../orders.md#configurations
 [url_catalog]:          //www.sherlock.stanford.edu/catalog
-[url_gpu_cc]:           //developer.nvidia.com/cuda-gpus
+[url_gpu_cc]:           //developer.nvidia.com/cuda/gpus
 [url_constraints_doc]:  //slurm.schedmd.com/sbatch.html#OPT_constraint

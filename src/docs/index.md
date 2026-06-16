@@ -333,7 +333,7 @@ Here's what it looks like in motion:
 [url_srcf]:          //srcc.stanford.edu/facilities
 [url_news]:          //news.sherlock.stanford.edu
 [url_status]:        //status.sherlock.stanford.edu
-[url_srcc_support]:  //srcc.stanford.edu/support
+[url_srcc_support]:  //srcc.stanford.edu/support/slack
 [url_shu_ml]:        //mailman.stanford.edu/mailman/listinfo/sherlock-users
 [url_sha_ml]:        //mailman.stanford.edu/mailman/listinfo/sherlock-announce
 [url_polya]:         //campus-map.stanford.edu/?id=14-160&lat=37.42898333&lng=-122.17752929&zoom=17&srch=polya%20hall

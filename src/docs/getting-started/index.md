@@ -185,10 +185,10 @@ For an introduction to shell scripting, you can refer to:
 [url_sunet_kb]:     //stanford.service-now.com/student_services?id=kb_article&number=KB00011373
 [url_sponsor]:      //uit.stanford.edu/service/sponsorship/
 
-[url_openssh]:      //www.openssh.com/
+[url_openssh]:      //www.openssh.org/
 [url_ssh_windows]:  //learn.microsoft.com/en-us/windows/terminal/tutorials/ssh
 [url_wsl]:          //en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
-[url_wsl_doc]:      //msdn.microsoft.com/commandline/wsl
+[url_wsl_doc]:      //learn.microsoft.com/windows/wsl/
 [url_wsl_howto]:    //www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/
 [url_cygwin]:       //cygwin.com
 [url_ssh_clients]:  //en.wikipedia.org/wiki/Comparison_of_SSH_clients#Platform
@@ -207,7 +207,7 @@ For an introduction to shell scripting, you can refer to:
 [url_tuto_1]:       //www.doc.ic.ac.uk/~wjk/UnixIntro/
 [url_tuto_2]:       //swcarpentry.github.io/shell-novice/
 [url_tuto_3]:       //psteinb.github.io/hpc-in-a-day/
-[url_tuto_4]:       //hpc-carpentry.github.io/hpc-intro/
+[url_tuto_4]:       //www.hpc-carpentry.org/hpc-intro/
 [url_tuto_5]:       //ask.cyberinfrastructure.org/latest
 
 

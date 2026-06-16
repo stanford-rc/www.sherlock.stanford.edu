@@ -781,8 +781,8 @@ which shows a decent speedup for running on a GPU for the largest matrix sizes.
 [url_devtools]:         //cran.r-project.org/web/packages/devtools/index.html
 [url_doparallel]:       //cran.r-project.org/web/packages/doParallel/index.html
 [url_cran]:             //cran.r-project.org/
-[url_rmpi]:             //cran.r-project.org/web/packages/Rmpi
-[url_gpur]:             //cran.r-project.org/web/packages/gpuR
+[url_rmpi]:             //cran.r-project.org/web/packages/Rmpi/
+[url_gpur]:             //cran.r-project.org/web/packages/gpuR/
 [url_seurat]:           //satijalab.org/seurat/
 [url_contact]:          mailto:{{support_email}}
 

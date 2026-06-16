@@ -243,7 +243,7 @@ And we'll be in touch shortly!
 
 [url_catalog]:      //www.sherlock.stanford.edu/catalog
 [url_order_form]:   //www.sherlock.stanford.edu/order
-[url_pta]:          //web.stanford.edu/group/fms/fingate/staff/acctstructure/PTA_req_process.html
+[url_pta]:          //fingate.stanford.edu/account-structure/request-new-account-pta
 [email]:            mailto:{{support_email}}
 
 [^service_fee]:     **infrastructure fees** are considered non-capital for cost

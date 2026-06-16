@@ -164,7 +164,7 @@ errors in the job output and error files: `water.<jobid>.{out,err}`.
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_schrodinger]:          //www.schrodinger.com
-[url_schrodinger_support]:  //support.schrodinger.com/s/
+[url_schrodinger_support]:  //my.schrodinger.com/support
 [url_sul]:                  //library.stanford.edu/
 [url_x11]:                  //uit.stanford.edu/service/sharedcomputing/moreX
 

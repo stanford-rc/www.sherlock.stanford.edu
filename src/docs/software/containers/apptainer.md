@@ -413,16 +413,16 @@ the [Apptainer documentation][url_apptainer_build].
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_apptainer]:        //apptainer.org
-[url_apptainer_docs]:   //apptainer.org/docs
+[url_apptainer_docs]:   //apptainer.org/docs/
 [url_apptainer_docker]: //apptainer.org/docs/user/latest/docker_and_oci.html
 [url_apptainer_build]:  //apptainer.org/docs/user/latest/build_a_container.html
 [url_containers]:       //en.wikipedia.org/wiki/Linux_containers
 [url_cgroups]:          //en.wikipedia.org/wiki/Cgroups
 [url_docker]:           //www.docker.com
 [url_docker_hub]:       //hub.docker.com
-[url_ngc]:              //ngc.nvidia.com
+[url_ngc]:              //catalog.ngc.nvidia.com/
 [url_openfoam]:         //openfoam.org/
-[url_ngc_auth]:         //docs.nvidia.com/ngc/gpu-cloud/ngc-user-guide/index.html
+[url_ngc_auth]:         //docs.nvidia.com/ngc/latest/ngc-user-guide.html
 [url_namd]:             //www.ks.uiuc.edu/Research/namd/
 
 [url_modules]:          ../modules.md

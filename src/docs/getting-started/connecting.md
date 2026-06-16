@@ -250,7 +250,7 @@ section][url_submit].
 [url_suaccounts]:   //accounts.stanford.edu/
 [url_sunet]:        //uit.stanford.edu/service/accounts/sunetids
 [url_minsec]:       //uit.stanford.edu/guide/securitystandards
-[url_twostep]:      //uit.stanford.edu/service/webauth/twostep
+[url_twostep]:      //uit.stanford.edu/service/authentication/twostep
 [url_vpn]:          //uit.stanford.edu/service/vpn
 
 [url_contact]:      mailto:{{support_email}}

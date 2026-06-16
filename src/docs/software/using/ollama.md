@@ -307,7 +307,7 @@ set directly in the job script alongside `OLLAMA_HOST`.
 [url_ollama_library]:       //ollama.com/library
 [url_ollama_customize]:     //github.com/ollama/ollama#customize-a-model
 [url_ollama_modelfile]:     //github.com/ollama/ollama/blob/main/docs/modelfile.md
-[url_continue]:             //continue.dev/
+[url_continue]:             //www.continue.dev/
 
 [url_gpu_instant]:          ../../user-guide/gpu.md#instant-lightweight-gpu-instances
 [url_software_list]:        ../list.md

@@ -598,19 +598,19 @@ session.
 [comment]: #  (link URLs -----------------------------------------------------)
 
 [url_python]:           //www.python.org/
-[url_python_docs]:      //www.python.org/doc
+[url_python_docs]:      //www.python.org/doc/
 [url_pip]:              //pip.pypa.io/en/stable/
 [url_pip_docs]:         //pip.pypa.io/en/stable/user_guide/
-[url_pypi]:             //pypi.python.org/pypi
+[url_pypi]:             //pypi.org/
 [url_pep394]:           //www.python.org/dev/peps/pep-0394
 [url_venv_docs]:        //docs.python.org/3/library/venv.html
 
 [url_uv]:               //docs.astral.sh/uv/
 [url_uv_venv]:          //docs.astral.sh/uv/pip/environments/
 
-[url_numpy]:            //www.numpy.org/
-[url_scipy]:            //www.scipy.org/
-[url_httpie]:           //httpie.org/
+[url_numpy]:            //numpy.org/
+[url_scipy]:            //scipy.org/
+[url_httpie]:           //httpie.io/
 
 [url_modules]:          ../list.md
 [url_module_python]:    ../list.md#python

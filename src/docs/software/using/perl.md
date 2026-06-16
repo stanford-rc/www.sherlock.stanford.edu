@@ -15,8 +15,7 @@ Perl provides a framework allowing users to easily extend the language by
 installing new modules in their local environment. The Comprehensive Perl
 Archive Network (CPAN[^cpan]) is an archive of over 25,000 distributions of
 software written in Perl, as well as documentation for it. It is searchable at
-<http://metacpan.org> or <http://search.cpan.org> and mirrored in over 270
-locations around the world.
+<https://metacpan.org> and mirrored in over 270 locations around the world.
 
 
 ### More documentation

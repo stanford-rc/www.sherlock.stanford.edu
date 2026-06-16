@@ -441,8 +441,8 @@ a shell script or downstream tool.
 [url_ollama_num_ctx]:   ../using/ollama.md#num-ctx
 
 [url_claude_code]:      //github.com/anthropics/claude-code
-[url_claude_code_docs]: //docs.anthropic.com/en/docs/claude-code
-[url_anthropic_api]:    //console.anthropic.com/
+[url_claude_code_docs]: //code.claude.com/docs
+[url_anthropic_api]:    //platform.claude.com/
 
 [url_gemini_cli]:       //github.com/google-gemini/gemini-cli
 [url_antigravity]:      //antigravity.google
@@ -459,7 +459,7 @@ a shell script or downstream tool.
 [url_mistral_vibe]:     //github.com/mistralai/mistral-vibe
 [url_mistral_api]:      //console.mistral.ai/
 
-[url_opencode]:           //github.com/sst/opencode
+[url_opencode]:           //github.com/anomalyco/opencode
 [url_opencode_providers]: //opencode.ai/docs/providers/
 
 [url_crush]:            //github.com/charmbracelet/crush

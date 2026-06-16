@@ -26,7 +26,7 @@ and technologies.
 For more information, please see the [Stanford Research Computing
 website][url_srcc].
 
-[url_dor]:        //doresearch.stanford.edu/research-offices/dor-office-vice-provost-and-dean-research
+[url_dor]:        //doresearch.stanford.edu/who-we-are/office-vice-provost-and-dean-research
 [url_uit]:        //uit.stanford.edu
 [url_srcc]:       //srcc.stanford.edu
 

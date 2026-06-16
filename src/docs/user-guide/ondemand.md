@@ -578,7 +578,7 @@ To submit a ticket about your current or recent interactive session:
 [url_contact]:      mailto:{{support_email}}
 [url_oak]:          //uit.stanford.edu/service/oak-storage
 [url_osc]:          //www.osc.edu
-[url_ood]:          //openondemand.org
+[url_ood]:          //www.openondemand.org/
 [url_ood_docs]:     //www.osc.edu/resources/online_portals/ondemand
 [url_ood_logout]:   //login.sherlock.stanford.edu/logout
 
@@ -595,7 +595,7 @@ To submit a ticket about your current or recent interactive session:
 [url_ollama]:           ../software/using/ollama.md
 [url_ollama_connect]:   ../software/using/ollama.md#connecting-to-the-server
 [url_ollama_continue]:  //ollama.com/blog/continue-code-assistant
-[url_continue]:         //continue.dev/
+[url_continue]:         //www.continue.dev/
 [url_continue_config]:  //docs.continue.dev/guides/ollama-guide#how-to-configure-ollama-with-continue
 
 [comment]: #  (footnotes -----------------------------------------------------)

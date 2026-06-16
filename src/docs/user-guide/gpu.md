@@ -343,13 +343,13 @@ user's GPU code is running.
 
 [comment]: #  (link URLs -----------------------------------------------------)
 
-[url_gpu]:          //blogs.nvidia.com/blog/2009/12/16/whats-the-difference-between-a-cpu-and-a-gpu/
+[url_gpu]:          //blogs.nvidia.com/blog/whats-the-difference-between-a-cpu-and-a-gpu/
 [url_slurm_sbatch]: //slurm.schedmd.com/sbatch.html#OPT_constraint
 [url_slurm_srun]:   //slurm.schedmd.com/srun.html#OPT_gpus
 [url_gpu_cmodes]:   //docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-modes
 [url_mig]:          //www.nvidia.com/en-us/technologies/multi-instance-gpu/
 [url_nvtop]:        //github.com/Syllo/nvtop
-[url_htop]:         //hisham.hm/htop/
+[url_htop]:         //htop.dev/
 
 [url_investing]:    ../concepts.md#investing-in-sherlock
 [url_modules]:      ../software/modules.md
