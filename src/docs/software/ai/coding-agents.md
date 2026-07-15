@@ -39,12 +39,12 @@ be loaded and used directly in interactive sessions or batch jobs.
     code to external cloud services. Consider this when working with sensitive
     or unpublished research data.
 
-!!! warning "We recommend not use coding agents on the login nodes"
+!!! warning "We recommend not using coding agents on the login nodes"
 
-    These agents can use a significant CPU and memory, so you use them in
-    an interactive session when running anything more than light processes. 
+    These agents can use significant CPU and memory, so you should use them in
+    an interactive session when running anything more than light processes.
     A default session can be obtained with the `sh_dev`
-    command. More info on [running jobs][url_running_jobs]. 
+    command. More info on [running jobs][url_running_jobs].
 
 !!! info "Stanford AI services"
 
