@@ -468,7 +468,7 @@ a shell script or downstream tool.
 [url_sw_list]:          ../list.md
 [url_ollama]:           ../using/ollama.md
 [url_ollama_num_ctx]:   ../using/ollama.md#num-ctx
-[url_running_jobs]:	    ../../user-guide/running-jobs.md
+[url_running_jobs]:    ../../user-guide/running-jobs.md
 
 [url_stanford_ai]:      //uit.stanford.edu/ai
 [url_stanford_ai_api]:  //uit.stanford.edu/service/ai-api-gateway
