@@ -39,6 +39,13 @@ be loaded and used directly in interactive sessions or batch jobs.
     code to external cloud services. Consider this when working with sensitive
     or unpublished research data.
 
+!!! warning "We recommend not using coding agents on the login nodes"
+
+    These agents can use significant CPU and memory, so you should use them in
+    an interactive session when running anything more than light processes.
+    A default session can be obtained with the `sh_dev`
+    command. More info on [running jobs][url_running_jobs].
+
 !!! info "Stanford AI services"
 
     Stanford offers institutional access to these AI providers through
@@ -461,6 +468,7 @@ a shell script or downstream tool.
 [url_sw_list]:          ../list.md
 [url_ollama]:           ../using/ollama.md
 [url_ollama_num_ctx]:   ../using/ollama.md#num-ctx
+[url_running_jobs]:    ../../user-guide/running-jobs.md
 
 [url_stanford_ai]:      //uit.stanford.edu/ai
 [url_stanford_ai_api]:  //uit.stanford.edu/service/ai-api-gateway
