@@ -39,6 +39,24 @@ be loaded and used directly in interactive sessions or batch jobs.
     code to external cloud services. Consider this when working with sensitive
     or unpublished research data.
 
+!!! warning "We recommend not using coding agents on the login nodes"
+
+    These agents can use significant CPU and memory, so you should use them in
+    an interactive session when running anything more than light processes.
+    A default session can be obtained with the `sh_dev`
+    command. More info on [running jobs][url_running_jobs].
+
+!!! info "Stanford AI services"
+
+    Stanford offers institutional access to these AI providers through
+    [Stanford AI services][url_stanford_ai]. Faculty, students, postdocs and
+    staff can use Stanford's services instead of personal vendor accounts:
+    [Claude for Education][url_stanford_claude],
+    [ChatGPT Edu][url_stanford_chatgpt],
+    [Gemini Enterprise][url_stanford_gemini] and
+    [GitHub Copilot][url_stanford_github]. For programmatic API keys to use
+    with the agents below, see the [AI API Gateway][url_stanford_ai_api].
+
 !!! tip "Checking current versions"
 
     Run `ml spider <package>` to see the versions currently available on
@@ -58,7 +76,11 @@ $ ml claude-code
 $ claude
 ```
 
-Claude Code requires an [Anthropic API key][url_anthropic_api]:
+Claude Code is available to Stanford users through Stanford's
+[Claude for Education][url_stanford_claude] service.
+
+Alternatively, it can use an Anthropic API key from Stanford's
+[AI API Gateway][url_stanford_ai_api]:
 
 ``` none { .copy .select }
 $ export ANTHROPIC_API_KEY=<your-api-key>
@@ -77,8 +99,9 @@ $ ml gemini-cli
 $ gemini
 ```
 
-Gemini CLI can authenticate via a Google account (browser-based login on first
-run) or with a `GEMINI_API_KEY` environment variable:
+Gemini CLI is not covered by Stanford's
+[Gemini Enterprise][url_stanford_gemini] service. It authenticates with a
+`GEMINI_API_KEY` environment variable:
 
 ``` none { .copy .select }
 $ export GEMINI_API_KEY=<your-api-key>
@@ -94,7 +117,8 @@ $ export GEMINI_API_KEY=<your-api-key>
     $ ml antigravity-cli
     ```
 
-    The `gemini-cli` module will remain available for now.
+    The `gemini-cli` module will remain available for now. Antigravity is not
+    part of Stanford's Gemini Enterprise offering either.
 
 
 ### :brands-openai: OpenAI Codex CLI
@@ -107,7 +131,11 @@ $ ml codex
 $ codex
 ```
 
-Codex requires an [OpenAI API key][url_openai_api]:
+OpenAI models are available to Stanford users through Stanford's
+[ChatGPT Edu][url_stanford_chatgpt] service.
+
+Alternatively, Codex can use an OpenAI API key from Stanford's
+[AI API Gateway][url_stanford_ai_api]:
 
 ``` none { .copy .select }
 $ export OPENAI_API_KEY=<your-api-key>
@@ -128,7 +156,8 @@ $ cursor-agent
 ### :simple-githubcopilot: GitHub Copilot CLI
 
 [GitHub Copilot CLI][url_copilot_cli] brings Copilot's coding assistant to
-the terminal. It requires an active [GitHub Copilot][url_copilot] subscription.
+the terminal. It requires an active GitHub Copilot subscription, available to
+Stanford users through [Stanford's GitHub service][url_stanford_github].
 
 ``` none { .copy .select }
 $ ml copilot-cli
@@ -439,22 +468,27 @@ a shell script or downstream tool.
 [url_sw_list]:          ../list.md
 [url_ollama]:           ../using/ollama.md
 [url_ollama_num_ctx]:   ../using/ollama.md#num-ctx
+[url_running_jobs]:    ../../user-guide/running-jobs.md
+
+[url_stanford_ai]:      //uit.stanford.edu/ai
+[url_stanford_ai_api]:  //uit.stanford.edu/service/ai-api-gateway
 
 [url_claude_code]:      //github.com/anthropics/claude-code
 [url_claude_code_docs]: //code.claude.com/docs
-[url_anthropic_api]:    //platform.claude.com/
+[url_stanford_claude]:  //uit.stanford.edu/service/claude
 
 [url_gemini_cli]:       //github.com/google-gemini/gemini-cli
 [url_antigravity]:      //antigravity.google
+[url_stanford_gemini]:  //uit.stanford.edu/service/gemini-enterprise-ai
 
 [url_codex]:            //github.com/openai/codex
-[url_openai_api]:       //platform.openai.com/api-keys
+[url_stanford_chatgpt]: //uit.stanford.edu/service/openai-chatgpt-edu
 
 [url_cursor_cli]:       //cursor.com/cli
 [url_cursor]:           //cursor.com
 
 [url_copilot_cli]:      //github.com/github/copilot-cli
-[url_copilot]:          //github.com/features/copilot
+[url_stanford_github]:  //uit.stanford.edu/service/github
 
 [url_mistral_vibe]:     //github.com/mistralai/mistral-vibe
 [url_mistral_api]:      //console.mistral.ai/
