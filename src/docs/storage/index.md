@@ -99,10 +99,10 @@ Retention types:
     group-level quotas are in place on the `/scratch` filesystem, as a
     fail-safe:
 
-    * a user will not be able to use more than 250 TB (50M inodes) in total, in
+    * a user will not be able to use more than 125 TB (25M inodes) in total, in
       all the `/scratch` directories they have access to.
 
-    * a group will not be able to use more than 1 PB (200M inodes) in total
+    * a group will not be able to use more than 300 TB (60M inodes) in total
       across all the `/scratch` directories its group members have access to.
 
 
@@ -333,28 +333,12 @@ can result:
 * **Slow or hanging login**: a slow or unresponsive filesystem referenced in
   `~/.bashrc` will cause your SSH session to hang at login.
 
-* **Job holds**: when starting a job, the scheduler will initiate a shell on the
-  compute node to establish your environment. If it takes too long to start
-  because it is waiting on a slow or unresponsive filesystem, Slurm will give
-  up and hold the job with:
-
-    ``` none
-    (user env retrieval failed requeued held)
-    ```
-
-    The job will not start until the hold is manually cleared with `scontrol
-    release <jobid>`. A held job looks like this in `squeue`:
-
-    ``` none
-    $ squeue --me
-       JOBID  PARTITION  NAME      USER    ST  TIME  NODES  NODELIST(REASON)
-       123456    normal  my_job  kilian    PD  0:00      1  (user env retrieval failed requeued held)
-    ```
-
-    When a large job array is released or many jobs start at once, all the
-    shells are spawned simultaneously, each trying to access the same
-    filesystem. Even a transient slowdown can cause enough latency to trigger
-    the failure, resulting in dozens or hundreds of jobs being held at once.
+* **Job holds**: Slurm initiates a shell on the compute node to establish your
+  environment before starting a job. If the shell takes too long, Slurm holds
+  the job with `(user env retrieval failed requeued held)`, and it will not
+  start until manually released with `scontrol release <jobid>`. When many
+  jobs start at once, the resulting burst of concurrent shell startups can
+  trigger this even on a healthy filesystem.
 
 
 ### What to avoid in `~/.bashrc` { #bashrc-antipatterns }
