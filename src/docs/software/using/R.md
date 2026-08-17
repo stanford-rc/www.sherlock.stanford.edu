@@ -165,13 +165,13 @@ $ R
 R version 3.5.1 (2018-07-02) -- "Feather Spray"
 [...]
 
-> install.packages('doParallel', repos='http://cran.us.r-project.org')
+> install.packages('doParallel', repos='http://cran.r-project.org')
 ```
 
 It should give the following warning:
 
 ``` none
-Warning in install.packages("doParallel", repos = "http://cran.us.r-project.org") :
+Warning in install.packages("doParallel", repos = "http://cran.r-project.org") :
   'lib = "/share/software/user/open/R/3.5.1/lib64/R/library"' is not writable
 Would you like to use a personal library instead? (yes/No/cancel)
 Would you like to create a personal library
@@ -185,7 +185,7 @@ directory and instruct it to install future R packages there.
 The installation will then proceed:
 
 ``` none
-trying URL 'http://cran.us.r-project.org/src/contrib/doParallel_1.0.14.tar.gz'
+trying URL 'http://cran.r-project.org/src/contrib/doParallel_1.0.14.tar.gz'
 Content type 'application/x-gzip' length 173607 bytes (169 KB)
 ==================================================
 downloaded 169 KB
@@ -231,7 +231,7 @@ For instance, you can get an interactive session with 4 CPU cores with `sh_dev`:
 $ sh_dev -c 4
 $ ml R
 $ R
-> install.packages("dplyr", repos = "http://cran.us.r-project.org", Ncpus=4)
+> install.packages("dplyr", repos = "http://cran.r-project.org", Ncpus=4)
 ```
 
 ##### Alternative installation path
@@ -242,7 +242,7 @@ directory, and instruct R to install the packages there:
 ``` none
 $ mkdir ~/R_libs/
 $ R
-> install.packages('doParallel', repos='http://cran.us.r-project.org', lib="~/R_libs")
+> install.packages('doParallel', repos='http://cran.r-project.org', lib="~/R_libs")
 ```
 
 The installation will proceed normally and the `doParallel` package will be
@@ -500,7 +500,7 @@ $ ml libgit2/1.9.1 fribidi/1.0.12 libwebp/1.3.0 freetype/2.9.1 cmake/3.31.4
 # Launch R and install devtools
 
 $ R
-> install.packages("devtools", repos = "http://cran.us.r-project.org", Ncpus=4)
+> install.packages("devtools", repos = "http://cran.r-project.org", Ncpus=4)
 ```
 
 #### Single node
