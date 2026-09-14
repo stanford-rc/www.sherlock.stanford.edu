@@ -102,7 +102,7 @@ Retention types:
     * a user will not be able to use more than 125 TB (25M inodes) in total, in
       all the `/scratch` directories they have access to.
 
-    * a group will not be able to use more than 300 TB (60M inodes) in total
+    * a group will not be able to use more than 250 TB (50M inodes) in total
       across all the `/scratch` directories its group members have access to.
 
 
