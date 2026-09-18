@@ -113,7 +113,7 @@ See the [Checking Quotas][url_check_quotas] section for more details.
     temporary files, such as raw job output, intermediate files, unprocessed
     results, and so on.
 
-!!! danger "Purge policy"
+!!! warning "Purge policy"
 
     **Files are automatically purged from `$SCRATCH`** after an inactivity
     period:
@@ -128,6 +128,20 @@ See the [Checking Quotas][url_check_quotas] section for more details.
     for data associated with currently running jobs. It's not a target for
     backups, archived data, etc. See the [Expiration
     Policy](#expiration-policy) section for details.
+
+!!! danger "Attempts to circumvent the purge policy will result in account termination"
+
+    Any attempt to artificially extend the lifetime of files on `$SCRATCH` or
+    `$GROUP_SCRATCH` is a violation of Sherlock's usage policies. This includes
+    scripts or jobs that rewrite, copy over, touch or otherwise "refresh" files
+    for the purpose of resetting their modification time, whether or not the
+    method actually works, and whether it runs once or on a recurring schedule.
+
+    **Your account will be suspended on the first occurrence, without prior
+    warning.** The purge is not optional housekeeping: it is what keeps the
+    scratch filesystem usable for everyone.
+
+
 
 | Characteristics   |   |
 | ----------------- | --- |
@@ -231,11 +245,25 @@ be automatically cleaned up as well.
     store temporary files, such as raw job output, intermediate files, or
     unprocessed results that need to be shared among users within a group.
 
-!!! danger "`$GROUP_SCRATCH` is **NOT** a backup target"
+!!! warning "`$GROUP_SCRATCH` is **NOT** a backup target"
 
     `$GROUP_SCRATCH` is not meant to store permanent data, and should only be used
     for data associated with currently running jobs. It's not a target for
     backups, archived data, etc.
+
+!!! danger "Attempts to circumvent the purge policy will result in account termination"
+
+    Any attempt to artificially extend the lifetime of files on `$SCRATCH` or
+    `$GROUP_SCRATCH` is a violation of Sherlock's usage policies. This includes
+    scripts or jobs that rewrite, copy over, touch or otherwise "refresh" files
+    for the purpose of resetting their modification time, whether or not the
+    method actually works, and whether it runs once or on a recurring schedule.
+
+    **Your account will be suspended on the first occurrence, without prior
+    warning.** The purge is not optional housekeeping: it is what keeps the
+    scratch filesystem usable for everyone.
+
+
 
 | Characteristics   |     |
 | ----------------- | --- |
