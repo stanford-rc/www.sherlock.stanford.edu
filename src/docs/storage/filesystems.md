@@ -255,9 +255,9 @@ be automatically cleaned up as well.
 
     Any attempt to artificially extend the lifetime of files on `$SCRATCH` or
     `$GROUP_SCRATCH` is a violation of Sherlock's usage policies. This includes
-    scripts or jobs that rewrite, copy over, touch or otherwise "refresh" files
-    for the purpose of resetting their modification time, whether or not the
-    method actually works, and whether it runs once or on a recurring schedule.
+    any scripts or jobs that attempt to "refresh" files for the purpose of
+    resetting their last modification date, whether or not the method actually
+    works, and whether it runs once or on a recurring schedule.
 
     **Your account will be suspended on the first occurrence, without prior
     warning.** The purge is not optional housekeeping: it is what keeps the
