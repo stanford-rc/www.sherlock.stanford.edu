@@ -27,6 +27,26 @@ provides the PI with much greater flexibility than owning a standalone cluster.
     Compute nodes are purchased and maintained based on a 4-year life cycle,
     which is the duration of the equipment warranty and vendor support.
 
+Outside of exceptional circumstances, nodes purchased in Sherlock are not
+removed from the cluster before the end of their service term. Sherlock is a
+shared system, where node owners benefit from the scale of the infrastructure,
+delegated management of their equipment, and access to other owners' idle
+resources, in exchange for committing their nodes to the shared platform for a
+minimum period of time.
+
+!!! info "Ownership of purchased nodes"
+
+    Grants and awards are typically made to institutions rather than to
+    individual faculty members, so the equipment they fund usually belongs to
+    the University or the sponsor, not to the PI.
+
+    Details can be found in the University's
+    [Property Management Manual][url_ora_pmm], which indicates that
+    [title to equipment][url_ora_title] does not reside personally with
+    faculty or staff. The University delegates day-to-day
+    [control of that property][url_rph_property] to the PI, who remains
+    responsible for its proper use, inventory and disposal.
+
 Owners will be notified during the 4th year that their nodes' lifetime is about
 to reach its term, at which point they'll be welcome to either:
 
@@ -39,8 +59,20 @@ an additional year at most after the end of their service term, while PIs plan
 for equipment refresh. Nodes failing during this period may not be repaired,
 and failed hardware will be disabled or removed from the system.
 
-Please note that outside of exceptional circumstances, nodes purchased in
-Sherlock cannot be removed from cluster before the end of their service term.
+!!! important "Retirement of end-of-life nodes"
+
+    Once retired from the cluster, compute nodes are usually declared excess
+    and disposed of through the University's
+    [property disposition process][url_ora_disposal], rather than handed
+    back to their owners.
+
+    Datacenter space, power and cooling capacity are needed to accommodate
+    new systems, and cannot generally be allocated to end-of-life equipment.
+
+As part of the service, Stanford Research Computing takes care of the whole
+disposition process on behalf of node owners, so PIs don't need to handle the
+[equipment control][url_rph_equip] requirements (tagging, inventory and
+disposal of excess equipment) that come with managing their own hardware.
 
 ### Shared ownership
 
@@ -244,6 +276,11 @@ And we'll be in touch shortly!
 [url_catalog]:      //www.sherlock.stanford.edu/catalog
 [url_order_form]:   //www.sherlock.stanford.edu/order
 [url_pta]:          //fingate.stanford.edu/account-structure/request-new-account-pta
+[url_ora_pmm]:      //ora.stanford.edu/ora-units/property-management-office/property-management-manual
+[url_ora_title]:    //ora.stanford.edu/ora-units/property-management-office/property-management-manual/21-overview
+[url_ora_disposal]: //ora.stanford.edu/42-disposition-and-outgoing-transfers
+[url_rph_property]: //doresearch.stanford.edu/policies/research-policy-handbook/property-management/control-property
+[url_rph_equip]:    //doresearch.stanford.edu/policies/research-policy-handbook/conduct-research/rights-and-responsibilities-conduct-research
 [email]:            mailto:{{support_email}}
 
 [^service_fee]:     **infrastructure fees** are considered non-capital for cost
