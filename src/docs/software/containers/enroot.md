@@ -30,6 +30,8 @@ Enroot and Pyxis are available on Sherlock and work alongside
 particularly well-suited for workflows that rely on images from [Docker
 Hub][url_dockerhub] or the [NVIDIA GPU Cloud (NGC)][url_ngc].
 
+--8<--- "includes/_container_sshd.md"
+
 ### Importing images
 
 The first step is to import a container image using `enroot import`. This

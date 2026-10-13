@@ -94,6 +94,8 @@ Apptainer is an integral part of the Sherlock cluster, and Apptainer commands
 can be executed directly on any login or compute node, without the need to load
 any additional module[^modules].
 
+--8<--- "includes/_container_sshd.md"
+
 ### Importing containers
 
 Pre-built containers can be obtained from a variety of sources. For instance:

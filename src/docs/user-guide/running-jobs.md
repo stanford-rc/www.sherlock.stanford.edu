@@ -151,6 +151,20 @@ Once you have a job running on a node, you can SSH directly to it and
 run additional processes[^ssh_job_limits], or observe how your application
 behaves, debug issues, and so on.
 
+!!! danger "Running SSH servers is strictly prohibited"
+
+    Users must not run their own SSH server on any Sherlock node, login or
+    compute. This applies to any SSH server implementation, whatever its name
+    or port, including when it only listens on `localhost`, and including
+    when it runs inside a job or a container.
+
+    SSH servers started by users will be automatically terminated, and running
+    one is considered an unauthorized access service, which can lead to the
+    suspension of your account.
+
+    To reach a compute node, use the method described above: SSH to it from a
+    login node while you have a job running there.
+
 The `salloc` command supports the same parameters as `sbatch`, and can override
 any default configuration. Note that any `#SBATCH` directive in your job script
 will not be interpreted by `salloc` when it is executed in this way. You must
