@@ -2,7 +2,7 @@
 
     Some container images, especially desktop and notebook environments,
     start an SSH server automatically when they run, from their startup
-    scripts or entrypoint. [Running your own SSH server is not allowed on
+    scripts or entry point. [Running your own SSH server is not allowed on
     Sherlock][url_no_sshd], including inside a container, and such servers
     are automatically terminated.
 
@@ -11,4 +11,4 @@
     container runs, SSH to that node from a login node while your job is
     running.
 
-[url_no_sshd]:	/docs/user-guide/running-jobs.md#connecting-to-nodes
+[url_no_sshd]:  /docs/user-guide/running-jobs.md#connecting-to-nodes
