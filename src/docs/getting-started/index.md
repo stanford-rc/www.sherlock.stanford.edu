@@ -114,9 +114,10 @@ When an account is closed:
 
 The `$HOME` archive is placed in `$SCRATCH` and subject to the standard
 [`$SCRATCH` purge policy][url_filesystems]: it will be deleted after 90 days
-unless the sponsoring faculty member backs it up elsewhere beforehand. Data in group-shared locations
-(`$GROUP_HOME`, `$GROUP_SCRATCH`, and Oak) is not affected by individual account
-closures and remains accessible to the rest of the group.
+unless the sponsoring faculty member backs it up elsewhere beforehand. Data in
+group-shared locations (`$GROUP_HOME`, `$GROUP_SCRATCH`, and Oak) is not
+affected by individual account closures and remains accessible to the rest of
+the group.
 
 
 
