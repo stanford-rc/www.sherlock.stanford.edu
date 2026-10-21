@@ -29,10 +29,11 @@ To start using Sherlock, you will need:
     !!! tip "SUNet ID [service levels][url_level] and external collaborators"
 
         Base-level service is sufficient for Sherlock accounts. External
-        collaborators, or users without a SUNet ID, can be sponsored by a PI a
-        get a sponsored SUNet ID at no cost. Please see the [sponsorship
+        collaborators, or users without a SUNet ID, can be sponsored by a
+        faculty member and get a sponsored SUNet ID at no cost. Please see the [sponsorship
         page][url_sponsor] for more information.
 
+* a sponsoring faculty member (see [eligibility][url_eligibility]),
 * a [Sherlock account][url_request],
 * a [SSH client][url_ssh],
 * good understanding of the [concepts][url_concepts] and [terms][url_glossary]
@@ -42,15 +43,27 @@ To start using Sherlock, you will need:
 
 
 
+## Eligibility
+
+Sherlock is open to the Stanford community as a computing resource to support
+departmental or sponsored research. Access is organized in groups, each led by
+a faculty member who sponsors the accounts of their research team. Sherlock
+policies require that each group be led by a member of the Stanford University
+Faculty (University Tenure Line for School of Medicine positions).
+
+* Eligible faculty members can request a group on Sherlock, for themselves
+  and their research team.
+* All other researchers (students, postdocs, research staff, visiting scholars,
+  etc.) cannot request a group of their own, and need to be sponsored by a
+  faculty member to get an account in that faculty member's group.
+
 ## How to request an account
 
 To request an account, the sponsoring Stanford faculty member should email
 {{ support_email }}, specifying the names and SUNet IDs of
 his/her research team members needing an account.
 
-Sherlock is open to the Stanford community as a computing resource to support
-departmental or sponsored research, thus a faculty member's explicit consent is
-required for account requests.
+A faculty member's explicit consent is required for all account requests.
 
 !!! danger "Sherlock is a resource for research"
 
@@ -59,7 +72,8 @@ required for account requests.
 
 There is no fee associated with using Sherlock, and no limit in the amount of
 accounts each faculty member can request. We will periodically ensure that all
-accounts associated with each PI are still active, and reserve the right to
+accounts associated with each faculty member are still active, and reserve the
+right to
 close any Sherlock account whose SUNet ID is expired.
 
 
@@ -67,9 +81,9 @@ close any Sherlock account whose SUNet ID is expired.
 ### Access duration
 
 Users retain access to Sherlock for as long as their [SUNet ID][url_sunet]
-remains active, or until their sponsoring PI requests account closure, whichever
-comes first. All account requests (new accounts, modifications, and closures)
-require PI approval.
+remains active, or until their sponsoring faculty member requests account
+closure, whichever comes first. All account requests (new accounts,
+modifications, and closures) require the sponsoring faculty member's approval.
 
 !!! tip "Graduating students and departing postdocs"
 
@@ -80,8 +94,8 @@ require PI approval.
     ID becomes inactive.
 
     If you need continued access after your SUNet ID expires (for example, to
-    finish up research), your PI can [sponsor a SUNet ID][url_sponsor] for you
-    at no cost.
+    finish up research), your sponsoring faculty member can [sponsor a SUNet
+    ID][url_sponsor] for you at no cost.
 
 !!! warning "Plan ahead before leaving"
 
@@ -100,7 +114,7 @@ When an account is closed:
 
 The `$HOME` archive is placed in `$SCRATCH` and subject to the standard
 [`$SCRATCH` purge policy][url_filesystems]: it will be deleted after 90 days
-unless the PI backs it up elsewhere beforehand. Data in group-shared locations
+unless the sponsoring faculty member backs it up elsewhere beforehand. Data in group-shared locations
 (`$GROUP_HOME`, `$GROUP_SCRATCH`, and Oak) is not affected by individual account
 closures and remains accessible to the rest of the group.
 
@@ -196,6 +210,7 @@ For an introduction to shell scripting, you can refer to:
 [url_src]:          //srcc.stanford.edu/
 [url_filesystems]:  ../storage/filesystems.md#scratch
 
+[url_eligibility]:  #eligibility
 [url_request]:      #how-to-request-an-account
 [url_ssh]:          #ssh-clients
 [url_unix]:         #unixlinux-resources

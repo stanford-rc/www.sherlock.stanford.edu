@@ -8,14 +8,15 @@ tags:
 
 
 For research groups needing access to additional, dedicated computing resources
-on Sherlock, we offer the possibility for PIs to purchase their own compute
+on Sherlock, we offer the possibility for faculty members to purchase their own
+compute
 nodes to add to the cluster.
 
-Operating costs for managing and housing PI-purchased compute nodes are waived
-in exchange for letting other users make use of any idle compute cycles on the
-PI-owned nodes. Owners have priority access to the computing resources they
+Operating costs for managing and housing owner-purchased compute nodes are
+waived in exchange for letting other users make use of any idle compute cycles
+on those nodes. Owners have priority access to the computing resources they
 purchase, but can access more nodes for their research if they need to. This
-provides the PI with much greater flexibility than owning a standalone cluster.
+provides owners with much greater flexibility than owning a standalone cluster.
 
 
 ## Conditions
@@ -38,13 +39,14 @@ minimum period of time.
 
     Grants and awards are typically made to institutions rather than to
     individual faculty members, so the equipment they fund usually belongs to
-    the University or the sponsor, not to the PI.
+    the University or the sponsor, not to the faculty member.
 
     Details can be found in the University's
     [Property Management Manual][url_ora_pmm], which indicates that
     [title to equipment][url_ora_title] does not reside personally with
     faculty or staff. The University delegates day-to-day
-    [control of that property][url_rph_property] to the PI, who remains
+    [control of that property][url_rph_property] to the faculty member, who
+    remains
     responsible for its proper use, inventory and disposal.
 
 Owners will be notified during the 4th year that their nodes' lifetime is about
@@ -55,8 +57,8 @@ to reach its term, at which point they'll be welcome to either:
 
 At the end of their service term, compute nodes are physically retired from the
 cluster, to make room for new equipment. Compute nodes may be kept running for
-an additional year at most after the end of their service term, while PIs plan
-for equipment refresh. Nodes failing during this period may not be repaired,
+an additional year at most after the end of their service term, while owners
+plan for equipment refresh. Nodes failing during this period may not be repaired,
 and failed hardware will be disabled or removed from the system.
 
 !!! important "Retirement of end-of-life nodes"
@@ -70,13 +72,13 @@ and failed hardware will be disabled or removed from the system.
     new systems, and cannot generally be allocated to end-of-life equipment.
 
 As part of the service, Stanford Research Computing takes care of the whole
-disposition process on behalf of node owners, so PIs don't need to handle the
+disposition process on behalf of node owners, so they don't need to handle the
 [equipment control][url_rph_equip] requirements (tagging, inventory and
 disposal of excess equipment) that come with managing their own hardware.
 
 ### Shared ownership
 
-!!! warning "Minimum order of one node per PI"
+!!! warning "Minimum order of one node per group"
 
     The number of nodes in a shared order must be greater or equal to the
     number of purchasing PI groups.
@@ -180,7 +182,7 @@ There are two components in the cost of a compute node purchase:
 
     Currently, there are no user, administrative or management fees associated
     with ongoing system administration of the Sherlock environment. However,
-    PIs should anticipate the eventuality of modest system administration and
+    owners should anticipate the eventuality of modest system administration and
     support fees being  levied within the 4 year lifetime of their compute
     nodes.
 
@@ -190,35 +192,36 @@ There are two components in the cost of a compute node purchase:
 !!! warning "Minimum purchase"
 
     Please note that the minimum purchase is one physical server per PI group.
-    We cannot accommodate multiple PIs pooling funds for a single node.
+    We cannot accommodate multiple groups pooling funds for a single node.
 
 !!! info "Single-node orders may incur additional delays"
 
     Some node configurations need to be ordered from the vendor in
     fully-populated chassis of 4 nodes (see the [Sherlock catalog][url_catalog]
     for details). So orders for quantities non-multiples of 4 need will to be
-    grouped with other PI's orders, which may incur additional delays.
+    grouped with other groups' orders, which may incur additional delays.
 
 Purchasing nodes on Sherlock is usually a 5-step process:
 
-  1. the PI use the [order form][url_order_form] to submit an order,
+  1. the faculty member uses the [order form][url_order_form] to submit an
+     order,
   2. Stanford Research Computing requests a formal vendor quote to finalize
-     pricing and communicate it back to the PI for approval,
+     pricing and communicate it back to the faculty member for approval,
   3. Stanford Research Computing submits a Stanford PO to the vendor,
   4. Stanford Research Computing takes delivery of the hardware and proceeds to
      its installation,
-  5. Stanford Research Computing notifies the PI that their nodes are ready to
-     be used.
+  5. Stanford Research Computing notifies the faculty member that their nodes
+     are ready to be used.
 
 The typical delay between a PO submission to the vendor and the availability of
-the compute nodes to the PIs is usually between 4 and 8 weeks.
+the compute nodes to the owners is usually between 4 and 8 weeks.
 
 
 ### Required information
 
 To place an order, we'll need the following information:
 
-* The SUNet ID of the PI making the purchase request
+* The SUNet ID of the faculty member making the purchase request
 * A PTA[^PTA] number to charge the hardware (capital) portion of the purchase
 * A PTA[^PTA] number to charge the per-node infrastructure fees (non-capital)
     <br/>_It could be the same PTA used for the capital portion of the

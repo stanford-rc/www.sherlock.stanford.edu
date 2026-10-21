@@ -23,6 +23,12 @@ It is open to the Stanford community as a computing resource to support
 departmental or sponsored research, thus a faculty member's sponsorship is
 required for all user accounts.
 
+!!! note "Eligibility"
+
+    Sherlock policies require that each group be led by a member of the
+    Stanford University Faculty (University Tenure Line for School of Medicine
+    positions). See [eligibility][url_eligibility] for details.
+
 !!! danger "Usage policy"
 
     Please note that your use of this system falls under the "Computer and
@@ -71,12 +77,12 @@ Sherlock also offers Faculty members the possibility to invest in additional,
 dedicated computing resources.
 
 Unlike traditional clusters, Sherlock is a collaborative system where the
-majority of nodes are purchased and shared by the cluster users. When a user
-(typically a PI) purchases one or more nodes, they become an *owner*. Owners
+majority of nodes are purchased and shared by the cluster users. When a faculty
+member purchases one or more nodes, they become an *owner*. Owners
 choose from a standard set of server configurations supported by Stanford
 Research Computing (known as the Sherlock *catalog*) to add to the cluster.
 
-When they're not in use, PI-purchased compute nodes can be used by other
+When they're not in use, purchased compute nodes can be used by other
 owners. This model also allows Sherlock owners to benefit from the scale of the
 cluster by giving them access to more compute nodes than their individual
 purchase, which gives them much greater flexibility than owning a standalone
@@ -85,7 +91,8 @@ cluster.
 !!! info "The majority of Sherlock nodes are owners nodes"
 
     The vast majority of Sherlock's compute nodes have been purchased by
-    individual PIs and groups, and PI purchases are the main driver behind the
+    individual faculty members and groups, and those purchases are the main
+    driver behind the
     rapid expansion of the cluster, which went from 120 nodes to more than
     1,000 nodes in less than 3 years.
 
@@ -173,8 +180,8 @@ the duration of a job and cannot be used to store long-term data.
 
 :fontawesome-solid-xmark:{ .chk_no } **additional storage space**: purchasing
 compute nodes on Sherlock does not provide additional storage space. Please
-note that Stanford Research Computing does offer the possibility for PIs to
-purchase their own storage space on [Oak][url_oak], for their long-term
+note that Stanford Research Computing does offer the possibility for faculty
+members to purchase their own storage space on [Oak][url_oak], for their long-term
 research data needs.
 
 
@@ -304,6 +311,7 @@ lost when the maintenance starts.
 [url_admin]:      //adminguide.stanford.edu
 [url_fairshare]:  //slurm.schedmd.com/fair_tree.html
 [url_orders]:     orders.md
+[url_eligibility]: getting-started/index.md#eligibility
 [url_recurring]:  advanced-topics/service-jobs.md#recurring-jobs
 [url_persistent]: advanced-topics/service-jobs.md#persistent-jobs
 [url_lscratch]:   storage/filesystems.md#l_scratch
