@@ -92,9 +92,8 @@ cluster.
 
     The vast majority of Sherlock's compute nodes have been purchased by
     individual faculty members and groups, and those purchases are the main
-    driver behind the
-    rapid expansion of the cluster, which went from 120 nodes to more than
-    1,000 nodes in less than 3 years.
+    driver behind the expansion of the cluster, which grew from 120 nodes at
+    its launch to about 2,000 compute nodes today.
 
 The resource scheduler configuration works like this:
 
@@ -208,9 +207,9 @@ resources to run them.
 
 Another key component of Sherlock is the interconnect network that links all of
 Sherlock's compute nodes together and act as a backbone for the whole cluster.
-This network fabric is of finite capacity, and based on the individual
-networking switches characteristics and the typical research computing
-workflows, it can accommodate up to about 850 compute nodes.
+This network fabric is of finite capacity: based on the individual networking
+switches characteristics and the typical research computing workflows, it can
+only accommodate a limited number of compute nodes.
 
 As nodes get added to Sherlock, the number of available ports decreases, and at
 some point, the fabric gets full and no more nodes can be added. Sherlock
@@ -220,18 +219,19 @@ installation of a whole new fabric, to allow for further system expansion.
 This kind of evolution is the perfect opportunity to upgrade other components
 too: management software, ancillary services architecture and user
 applications. In January 2017, those components were completely overhauled and
-a new, completely separate cluster was kick-started, using using a different
-set of hardware and software, while conserving the same storage infrastructure,
-to ease the transition process.
+a new, completely separate cluster was kick-started, using a different set of
+hardware and software, while conserving the same storage infrastructure, to
+ease the transition process.
 
 After a transition period, the older Sherlock hardware, compute and login
-nodes, have been be merged in the new cluster, and from a logical perspective
+nodes, were merged in the new cluster, and from a logical perspective
 (connection, job scheduling and computing resources), nodes attached to each of
-the fabrics have been reunited to form a single cluster again.
+the fabrics were reunited to form a single cluster again.
 
-As Sherlock continues to evolve and grow, the new fabric will also approach
-capacity again, and the same process will happen again to start the next
-generation of Sherlock.
+The same process has repeated since then, each time a fabric reached capacity,
+to start a new generation of Sherlock. Today, Sherlock's compute nodes are
+spread over three InfiniBand fabrics (EDR, HDR and NDR), which all form a
+single cluster.
 
 
 ## Maintenance and upgrades
