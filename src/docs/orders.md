@@ -140,15 +140,6 @@ below:
     `G8TF64` nodes are designed for applications that span multiple GPUs and
     need fast GPU-to-GPU communication.
 
-    *Resources availability*
-
-    : Another important factor to take into account is that less nodes for a
-    given number of cores offers less resilience against potential hardware
-    failures: if a 128-core node becomes unavailable for some reason, that's
-    128 cores that nobody can use while the node is being repaired. But with
-    128 cores in 4x 32-core nodes, if a node fails, there are still 96 cores
-    that can be used.
-
     We'll be happy to help you determine the best configuration for your
     computing needs, feel free to [reach out][email] to schedule a
     consultation.
