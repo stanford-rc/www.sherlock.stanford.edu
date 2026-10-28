@@ -34,7 +34,7 @@ The table below lists the possible features defined for each node.
 
 | Feature name  | Description | Examples |
 | ------------- | ----------- | -------- |
-| `CLASS:xxx`   | Node type, as defined in the [Sherlock catalog][url_catalog] | `CLASS:SH3_CBASE`, `CLASS:SH3_G4TF64` |
+| `CLASS:xxx`   | Node type, as defined in the [Sherlock catalog][url_catalog] | `CLASS:SH4_CBASE`, `CLASS:SH4_G8TF64` |
 | `CPU_MNF:xxx` | CPU manufacturer | `CPU_MNF:INTEL`, `CPU_MNF:AMD` |
 | `CPU_GEN:xxx` | CPU generation | `CPU_GEN:RME` for AMD Rome<br/>`CPU_GEN:SKX` for Intel Skylake|
 | `CPU_SKU:xxx` | CPU name | `CPU_SKU:5118`, `CPU_SKU:7502P` |

@@ -541,7 +541,8 @@ Here are the main public partitions available to everyone on Sherlock:
 ## Owner partitions
 
 Research groups that have [invested in Sherlock][url_invest] get access to a
-dedicated partition named after their PI SUNet ID. Jobs in owner partitions can
+dedicated partition named after the SUNet ID of their sponsoring faculty
+member. Jobs in owner partitions can
 run for up to 7 days without any special QOS, and owners get immediate access
 to their nodes with no wait time in queue.
 

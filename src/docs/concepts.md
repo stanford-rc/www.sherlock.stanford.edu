@@ -23,6 +23,12 @@ It is open to the Stanford community as a computing resource to support
 departmental or sponsored research, thus a faculty member's sponsorship is
 required for all user accounts.
 
+!!! note "Eligibility"
+
+    Sherlock policies require that each group be led by a member of the
+    Stanford University Faculty (University Tenure Line for School of Medicine
+    positions). See [eligibility][url_eligibility] for details.
+
 !!! danger "Usage policy"
 
     Please note that your use of this system falls under the "Computer and
@@ -71,12 +77,12 @@ Sherlock also offers Faculty members the possibility to invest in additional,
 dedicated computing resources.
 
 Unlike traditional clusters, Sherlock is a collaborative system where the
-majority of nodes are purchased and shared by the cluster users. When a user
-(typically a PI) purchases one or more nodes, they become an *owner*. Owners
+majority of nodes are purchased and shared by the cluster users. When a faculty
+member purchases one or more nodes, they become an *owner*. Owners
 choose from a standard set of server configurations supported by Stanford
 Research Computing (known as the Sherlock *catalog*) to add to the cluster.
 
-When they're not in use, PI-purchased compute nodes can be used by other
+When they're not in use, purchased compute nodes can be used by other
 owners. This model also allows Sherlock owners to benefit from the scale of the
 cluster by giving them access to more compute nodes than their individual
 purchase, which gives them much greater flexibility than owning a standalone
@@ -85,9 +91,9 @@ cluster.
 !!! info "The majority of Sherlock nodes are owners nodes"
 
     The vast majority of Sherlock's compute nodes have been purchased by
-    individual PIs and groups, and PI purchases are the main driver behind the
-    rapid expansion of the cluster, which went from 120 nodes to more than
-    1,000 nodes in less than 3 years.
+    individual faculty members and groups, and those purchases are the main
+    driver behind the expansion of the cluster, which grew from 120 nodes at
+    its launch to about 2,000 compute nodes today.
 
 The resource scheduler configuration works like this:
 
@@ -173,8 +179,8 @@ the duration of a job and cannot be used to store long-term data.
 
 :fontawesome-solid-xmark:{ .chk_no } **additional storage space**: purchasing
 compute nodes on Sherlock does not provide additional storage space. Please
-note that Stanford Research Computing does offer the possibility for PIs to
-purchase their own storage space on [Oak][url_oak], for their long-term
+note that Stanford Research Computing does offer the possibility for faculty
+members to purchase their own storage space on [Oak][url_oak], for their long-term
 research data needs.
 
 
@@ -201,9 +207,9 @@ resources to run them.
 
 Another key component of Sherlock is the interconnect network that links all of
 Sherlock's compute nodes together and act as a backbone for the whole cluster.
-This network fabric is of finite capacity, and based on the individual
-networking switches characteristics and the typical research computing
-workflows, it can accommodate up to about 850 compute nodes.
+This network fabric is of finite capacity: based on the individual networking
+switches characteristics and the typical research computing workflows, it can
+only accommodate a limited number of compute nodes.
 
 As nodes get added to Sherlock, the number of available ports decreases, and at
 some point, the fabric gets full and no more nodes can be added. Sherlock
@@ -213,18 +219,19 @@ installation of a whole new fabric, to allow for further system expansion.
 This kind of evolution is the perfect opportunity to upgrade other components
 too: management software, ancillary services architecture and user
 applications. In January 2017, those components were completely overhauled and
-a new, completely separate cluster was kick-started, using using a different
-set of hardware and software, while conserving the same storage infrastructure,
-to ease the transition process.
+a new, completely separate cluster was kick-started, using a different set of
+hardware and software, while conserving the same storage infrastructure, to
+ease the transition process.
 
 After a transition period, the older Sherlock hardware, compute and login
-nodes, have been be merged in the new cluster, and from a logical perspective
+nodes, were merged in the new cluster, and from a logical perspective
 (connection, job scheduling and computing resources), nodes attached to each of
-the fabrics have been reunited to form a single cluster again.
+the fabrics were reunited to form a single cluster again.
 
-As Sherlock continues to evolve and grow, the new fabric will also approach
-capacity again, and the same process will happen again to start the next
-generation of Sherlock.
+The same process has repeated since then, each time a fabric reached capacity,
+to start a new generation of Sherlock. Today, Sherlock's compute nodes are
+spread over three InfiniBand fabrics (EDR, HDR and NDR), which all form a
+single cluster.
 
 
 ## Maintenance and upgrades
@@ -304,6 +311,7 @@ lost when the maintenance starts.
 [url_admin]:      //adminguide.stanford.edu
 [url_fairshare]:  //slurm.schedmd.com/fair_tree.html
 [url_orders]:     orders.md
+[url_eligibility]: getting-started/index.md#eligibility
 [url_recurring]:  advanced-topics/service-jobs.md#recurring-jobs
 [url_persistent]: advanced-topics/service-jobs.md#persistent-jobs
 [url_lscratch]:   storage/filesystems.md#l_scratch
